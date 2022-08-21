@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DockingPaneLayouts CompactMode="1">
+	<HRLadderPrj>
+		<Summary Panes="10" TopContainer="5" Client="9"/>
+		<Pane-1 Type="0" DockingCX="1142" DockingCY="120" Title="Result\n\n" ID="4020" Options="2" DockingHolder="10" LastHolder="10"/>
+		<Pane-2 Type="0" DockingCX="1142" DockingCY="120" Title="Find Results\n\n" ID="4022" Options="2" DockingHolder="10" LastHolder="10"/>
+		<Pane-3 Type="0" DockingCX="520" DockingCY="400" Title="Workspace\n\n" ID="4030" Options="2" DockingHolder="6" LastHolder="6"/>
+		<Pane-4 Type="0" DockingCX="520" DockingCY="400" Title="X\n\n" ID="4000" Options="2" DockingHolder="6" LastHolder="6" Tag="37948736"/>
+		<Pane-5 Type="2" DockingCX="1243" Horiz="1" Panes="2" Pane-1="6" Pane-2="7"/>
+		<Pane-6 Type="1" DockingCX="261" DockingCY="400" Panes="2" Selected="3" Pane-1="3" Pane-2="4"/>
+		<Pane-7 Type="2" DockingCX="978" Panes="2" Pane-1="8" Pane-2="10"/>
+		<Pane-8 Type="2" DockingCY="487" Horiz="1" Panes="1" Pane-1="9"/>
+		<Pane-9 Type="4"/>
+		<Pane-10 Type="1" DockingCX="1142" DockingCY="120" Panes="2" Selected="1" Pane-1="1" Pane-2="2"/>
+	</HRLadderPrj>
+</DockingPaneLayouts>

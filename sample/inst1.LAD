@@ -1,0 +1,11 @@
+Ladder File Format Version: 1.00
+RUNG 1			'
+XIC X2			'
+XIC M5			'
+OTE Y5			'
+RUNG 2			'
+XIO X1			'
+OTE Y8			'
+RUNG 3			'
+RUNG 4			'
+RUNG 5			'

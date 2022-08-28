@@ -1,4 +1,4 @@
-﻿# 5. 명령 (instruction)
+﻿# 4. 명령 (instruction)
 
 
 래더 프로그램은 다수의 rung으로 구성되며, 각 rung은 다수의 명령들로 구성됩니다.

@@ -1,4 +1,4 @@
-﻿# 5.2 XIC(Examine if Closed) : Close 검사
+﻿# 4.2 XIC(Examine if Closed) : Close 검사
 
 
 ### 설명

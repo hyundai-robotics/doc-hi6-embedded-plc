@@ -1,0 +1,288 @@
+Ladder File Format Version: 4.00
+RUNG 1		'**** HAND TYPE : TP MAIN DISPLAY LAMP
+XIC K821		'핸드 사용\n(SET)
+BST		'
+XIC R38		'종합 에어 이상  보조
+OTE R215		'종합 에어 이상  \n(GP)
+NXB		'
+BST		'
+BST		'
+XIC DI1		'파트감지\n확인\n(RB)
+OTE R216		'파트감지\n(GP)
+NXB		'
+XIC DI2		'핸드1\n클램프잠김확인\n(RB)
+OTE R217		'핸드\n클램프\n(GP)
+BND		'
+NXB		'
+BST		'
+XIC DI3		'핸드1\n클램프풀림확인\n(RB)
+OTE R218		'핸드\n언클램프\n(GP)
+NXB		'
+BST		'
+BST		'
+BST		'
+XIC DI33		'핸드2\n클램프잠김확인\n(RB)
+OTE R219		'SPARE\nDISPLAY\nLAMP\n(GP)
+NXB		'
+XIC DI34		'핸드2\n클램프풀림확인\n(RB)
+OTE R220		'SPARE\nDISPLAY\nLAMP\n(GP)
+BND		'
+NXB		'
+XIC R41		'종합 L/S  이상 보조
+OTE R221		'L/S\n이상\n(GP)
+BND		'
+NXB		'
+BST		'
+BST		'
+XIC SP2		'항시 OFF\n(SPECIAL)
+OTE R222		'SPARE\nDISPLAY\nLAMP\n(GP)
+NXB		'
+XIC SP2		'항시 OFF\n(SPECIAL)
+OTE R223		'SPARE\nDISPLAY\nLAMP\n(GP)
+BND		'
+NXB		'
+XIC SP2		'항시 OFF\n(SPECIAL)
+OTE R224		'SPARE\nDISPLAY\nLAMP\n(GP)
+BND		'
+BND		'
+BND		'
+BND		'
+BND		'
+RUNG 2		'**** HAND MANUAL CONTROL LAMP
+XIC K821		'핸드 사용\n(SET)
+BST		'
+XIC FN7.X3		'핸드\n클램프\n잠김단
+XIO FN7.X4		'핸드\n클램프\n풀림단1
+OTE R721		'핸드\n클램프 1\n(GP)
+NXB		'
+BST		'
+XIO FN7.X3		'핸드\n클램프\n잠김단
+XIC FN7.X4		'핸드\n클램프\n풀림단1
+OTE R722		'핸드\n언클램프 1(GP)
+NXB		'
+BST		'
+BST		'
+XIC SP2		'항시 OFF\n(SPECIAL)
+OTE R723		'핸드\n클램프 2\n(GP)
+NXB		'
+XIC SP2		'항시 OFF\n(SPECIAL)
+OTE R724		'핸드\n언클램프 2(GP)
+BND		'
+NXB		'
+BST		'
+BST		'
+BST		'
+BST		'
+XIC SP2		'항시 OFF\n(SPECIAL)
+OTE R725		'핸드\n클램프 3\n(GP)
+NXB		'
+XIC SP2		'항시 OFF\n(SPECIAL)
+OTE R726		'핸드\n언클램프 3(GP)
+BND		'
+NXB		'
+XIC SP2		'항시 OFF\n(SPECIAL)
+OTE R727		'핸드\n클램프 4\n(GP)
+BND		'
+NXB		'
+XIC SP2		'항시 OFF\n(SPECIAL)
+OTE R728		'핸드\n언클램프 4(GP)
+BND		'
+NXB		'
+BST		'
+BST		'
+BST		'
+BST		'
+BST		'
+XIC SP2		'항시 OFF\n(SPECIAL)
+OTE R729		'핸드\n클램프 5\n(GP)
+NXB		'
+XIC SP2		'항시 OFF\n(SPECIAL)
+OTE R730		'핸드\n언클램프 5(GP)
+BND		'
+NXB		'
+XIC SP2		'항시 OFF\n(SPECIAL)
+OTE R731		'핸드\n차종변환1\n(GP)
+BND		'
+NXB		'
+XIC SP2		'항시 OFF\n(SPECIAL)
+OTE R732		'핸드\n차종변환2\n(GP)
+BND		'
+NXB		'
+XIC SP2		'항시 OFF\n(SPECIAL)
+OTE R733		'핸드\n핀전진\n(GP)
+BND		'
+NXB		'
+BST		'
+XIC SP2		'항시 OFF\n(SPECIAL)
+OTE R734		'핸드\n핀후진\n(GP)
+NXB		'
+BST		'
+BST		'
+BST		'
+BST		'
+BST		'
+XIC SP2		'항시 OFF\n(SPECIAL)
+OTE R735		'핸드\n진공흡착\n(GP)
+NXB		'
+XIC SP2		'항시 OFF\n(SPECIAL)
+OTE R736		'핸드\n진공탈착\n(GP)
+BND		'
+NXB		'
+XIC SP2		'항시 OFF\n(SPECIAL)
+OTE R737		'HAND\nSPARE\n(GP)
+BND		'
+NXB		'
+XIC SP2		'항시 OFF\n(SPECIAL)
+OTE R738		'HAND\nSPARE\n(GP)
+BND		'
+NXB		'
+XIC SP2		'항시 OFF\n(SPECIAL)
+OTE R739		'HAND\nSPARE\n(GP)
+BND		'
+NXB		'
+XIC SP2		'항시 OFF\n(SPECIAL)
+OTE R740		'HAND\nSPARE\n(GP)
+BND		'
+BND		'
+BND		'
+BND		'
+BND		'
+BND		'
+BND		'
+RUNG 3		'**** ROBOT INPUT : PART CHECK 1 (DI1)
+XIC K821		'핸드 사용\n(SET)
+BST		'
+XIC FN7.X1		'파트감지1
+XIC FN7.X2		'파트감지2
+NXB		'
+XIC FB5.X11		'무부하    시운전 모드(LINE)
+BND		'
+OTE DI1		'파트감지\n확인\n(RB)
+RUNG 4		'**** ROBOT INPUT : HAND1 CLAMP (DI2)
+XIC K821		'핸드 사용\n(SET)
+XIC R721		'핸드\n클램프 1\n(GP)
+OTE DI2		'핸드1\n클램프잠김확인\n(RB)
+RUNG 5		'**** ROBOT INPUT : HAND1  UNCLAMP (DI3)
+XIC K821		'핸드 사용\n(SET)
+XIC R722		'핸드\n언클램프 1(GP)
+OTE DI3		'핸드1\n클램프풀림확인\n(RB)
+RUNG 6		'**** ROBOT INPUT : HAND2 CLAMP (DI33)
+XIC K821		'핸드 사용\n(SET)
+XIC R723		'핸드\n클램프 2\n(GP)
+OTE DI33		'핸드2\n클램프잠김확인\n(RB)
+RUNG 7		'**** ROBOT INPUT : HAND2  UNCLAMP (DI34)
+XIC K821		'핸드 사용\n(SET)
+XIC R724		'핸드\n언클램프 2(GP)
+OTE DI34		'핸드2\n클램프풀림확인\n(RB)
+RUNG 8		'**** ROBOT INPUT : HAND2 CLAMP (DI35)
+XIC K821		'핸드 사용\n(SET)
+XIC R733		'핸드\n핀전진\n(GP)
+OTE DI35		'핸드\n핀전진\n확인\n(RB)
+RUNG 9		'**** ROBOT INPUT : HAND2  UNCLAMP (DI36)
+XIC K821		'핸드 사용\n(SET)
+XIC R734		'핸드\n핀후진\n(GP)
+OTE DI36		'핸드\n핀후진\n확인\n(RB)
+RUNG 10		'**** ROBOT INPUT : HAND2 CLAMP (DI35)
+XIC K821		'핸드 사용\n(SET)
+XIC R735		'핸드\n진공흡착\n(GP)
+OTE DI37		'핸드\n진공흡착\n확인\n(RB)
+RUNG 11		'**** ROBOT INPUT : HAND2 CLAMP (DI35)
+XIC K821		'핸드 사용\n(SET)
+XIC R736		'핸드\n진공탈착\n(GP)
+OTE DI38		'핸드\n진공탈착\n확인\n(RB)
+RUNG 12		'**** HAND CLAMP 1
+XIC K821		'핸드 사용\n(SET)
+BST		'
+XIC DO2		'핸드1\n클램프잠김요구\n(RB)
+XIO DO3		'핸드1\n클램프풀림요구\n(RB)
+NXB		'
+XIC K2		'수동      모드\n(OP)
+XIC R521		'수동\n핸드1\n클램프잠김(GP)
+XIC R515		'트리거\nENABLE\n(GP)
+XIO DO29		'로보트    기동중    (RB)
+BND		'
+OTE FN7.Y1		'핸드1\n클램프잠김\nSOL
+RUNG 13		'**** HAND UNCLAMP 1
+XIC K821		'핸드 사용\n(SET)
+BST		'
+XIC DO3		'핸드1\n클램프풀림요구\n(RB)
+XIO DO2		'핸드1\n클램프잠김요구\n(RB)
+NXB		'
+XIC K2		'수동      모드\n(OP)
+XIC R522		'수동\n핸드1\n클램프풀림(GP)
+XIC R515		'트리거\nENABLE\n(GP)
+XIO DO29		'로보트    기동중    (RB)
+BND		'
+OTE FN7.Y2		'핸드1\n클램프풀림\nSOL
+RUNG 14		'**** HAND CLAMP 2
+XIC K821		'핸드 사용\n(SET)
+BST		'
+XIC DO33		'핸드2\n클램프잠김요구\n(RB)
+XIO DO34		'핸드2\n클램프풀림요구\n(RB)
+NXB		'
+XIC K2		'수동      모드\n(OP)
+XIC R523		'수동\n핸드2\n클램프잠김(GP)
+XIC R515		'트리거\nENABLE\n(GP)
+XIO DO29		'로보트    기동중    (RB)
+BND		'
+OTE FN7.Y3		'핸드2\n클램프잠김\nSOL
+RUNG 15		'**** HAND UNCLAMP 2
+XIC K821		'핸드 사용\n(SET)
+BST		'
+XIC DO34		'핸드2\n클램프풀림요구\n(RB)
+XIO DO33		'핸드2\n클램프잠김요구\n(RB)
+NXB		'
+XIC K2		'수동      모드\n(OP)
+XIC R524		'수동\n핸드2\n클램프풀림(GP)
+XIC R515		'트리거\nENABLE\n(GP)
+XIO DO29		'로보트    기동중    (RB)
+BND		'
+OTE FN7.Y4		'핸드2\n클램프풀림\nSOL
+RUNG 16		'**** HAND CLAMP 2
+XIC K821		'핸드 사용\n(SET)
+BST		'
+XIC DO35		'핸드\n핀전진\n요구\n(RB)
+XIO DO36		'핸드\n핀후진\n요구\n(RB)
+NXB		'
+XIC K2		'수동      모드\n(OP)
+XIC R525		'수동\n핸드\n핀전진     (GP)
+XIC R515		'트리거\nENABLE\n(GP)
+XIO DO29		'로보트    기동중    (RB)
+BND		'
+OTE FN7.Y5		'핸드\n핀전진\n\n(SOL)
+RUNG 17		'**** HAND UNCLAMP 2
+XIC K821		'핸드 사용\n(SET)
+BST		'
+XIC DO36		'핸드\n핀후진\n요구\n(RB)
+XIO DO35		'핸드\n핀전진\n요구\n(RB)
+NXB		'
+XIC K2		'수동      모드\n(OP)
+XIC R526		'수동\n핸드\n핀후진     (GP)
+XIC R515		'트리거\nENABLE\n(GP)
+XIO DO29		'로보트    기동중    (RB)
+BND		'
+OTE FN7.Y6		'핸드\n핀후진\n\n(SOL)
+RUNG 18		'**** HAND CLAMP 2
+XIC K821		'핸드 사용\n(SET)
+BST		'
+XIC DO37		'핸드\n진공흡착\n요구\n(RB)
+XIO DO38		'핸드\n진공탈착\n요구\n(RB)
+NXB		'
+XIC K2		'수동      모드\n(OP)
+XIC SP2		'항시 OFF\n(SPECIAL)
+XIC R515		'트리거\nENABLE\n(GP)
+XIO DO29		'로보트    기동중    (RB)
+BND		'
+OTE FN7.Y7		'핸드\n진공흡착\n\nSOL
+RUNG 19		'**** HAND UNCLAMP 2
+XIC K821		'핸드 사용\n(SET)
+BST		'
+XIC DO38		'핸드\n진공탈착\n요구\n(RB)
+XIO DO37		'핸드\n진공흡착\n요구\n(RB)
+NXB		'
+XIC K2		'수동      모드\n(OP)
+XIC SP2		'항시 OFF\n(SPECIAL)
+XIC R515		'트리거\nENABLE\n(GP)
+XIO DO29		'로보트    기동중    (RB)
+BND		'
+OTE FN7.Y8		'핸드\n진공탈착\n\nSOL

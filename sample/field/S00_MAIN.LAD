@@ -1,0 +1,1629 @@
+Ladder File Format Version: 4.00
+RUNG 1		'**** Hi5 TP PLC Standard
+XIO DO25		'티칭모드  (RB)
+XIC DO30		'자동모드  (RB)
+XIC DO31		'운전준비  (RB)
+XIO FN1.X2		'단독자동  (GP)
+XIO FN1.X3		'정상/고장\n(GP.SS)
+OTE K1		'전자동    모드\n(OP)
+RUNG 2		'**** MANUAL MODE
+XIC DO25		'티칭모드  (RB)
+XIO DO30		'자동모드  (RB)
+XIO DO31		'운전준비  (RB)
+OTE K2		'수동      모드\n(OP)
+RUNG 3		'**** SINGLE AUTO MODE
+XIO DO25		'티칭모드  (RB)
+XIC FN1.X2		'단독자동  (GP)
+OTE K3		'단독자동  모드\n(OP)
+RUNG 4		'**** TRIGGER ENABLE UNLATCH (ROBOT AUTO MODE)
+XIC DO30		'자동모드  (RB)
+OSR R900		'자동모드  펄스
+RUNG 5		'
+BST		'
+XIC K1		'전자동    모드\n(OP)
+NXB		'
+XIC R900		'자동모드  펄스
+BND		'
+OTU R515		'트리거\nENABLE\n(GP)
+RUNG 6		'**** Dummy Aux Body Type OK Auxla
+GRT MW90,0		'
+OTE R1		'공정 차종 보조
+RUNG 7		'
+XIO DI25		'프로그램\n선택 1
+XIO DI26		'프로그램\n선택 2
+XIO DI27		'프로그램\n선택 4
+XIO DI28		'프로그램\n선택 8
+XIO DI29		'프로그램\n선택 16
+XIO DI30		'프로그램\n선택 32
+INV		'
+OTE R10		'공정 차종\n있음
+RUNG 8		'**** Home Position Aux
+XIC DO32		'로보트    원위치    (RB)
+XIC DO26		'프로그램  종료      (RB)
+XIO DO29		'로보트    기동중    (RB)
+OTE R2		'로보트    원위치    보조
+RUNG 9		'**** Robot External Start Aux
+BST		'
+XIC K1		'전자동    모드\n(OP)
+BST		'
+XIC FB5.X24		'로보트    초기기동  (LINE)
+XIO K10		'최종 작업 완료셋    보조
+XIC R1		'공정 차종 보조
+XIC R10		'공정 차종\n있음
+XIC R2		'로보트    원위치    보조
+NXB		'
+XIC FB5.X6		'로보트    재기동    (LINE)
+XIO R2		'로보트    원위치    보조
+XIO DO29		'로보트    기동중    (RB)
+BND		'
+NXB		'
+BST		'
+XIC K3		'단독자동  모드\n(OP)
+XIC FN1.X9		'로보트    재기동    (GP)
+XIO R2		'로보트    원위치    보조
+XIO DO29		'로보트    기동중    (RB)
+NXB		'
+XIC R22		'팁드레서  기동 보조
+XIC R10		'공정 차종\n있음
+BND		'
+BND		'
+XIO FN1.X3		'정상/고장\n(GP.SS)
+XIC DI24		'외부 일시 정지      (LINE)
+XIO DO29		'로보트    기동중    (RB)
+XIC DO31		'운전준비  (RB)
+OTE R3		'로보트    기동 \n보조
+RUNG 10		'**** Work Complement Aux
+XIC SP2		'항시 OFF\n(SPECIAL)
+BST		'
+XIO T4		'최종작업  완료 OFF
+OTE R4		'최종작업  완료 보조
+NXB		'
+TON T4,100,2		'최종작업  완료 OFF
+BND		'
+RUNG 11		'**** Work Complement Set Aux
+BST		'
+XIC FB5.X40		'최종 작업 완료 리셋 (LINE)
+NXB		'
+XIC K2		'수동      모드\n(OP)
+XIC R501		'작업완료  RST       (GP)
+XIC R515		'트리거\nENABLE\n(GP)
+XIC R2		'로보트    원위치    보조
+BND		'
+OSR R901		'최종 작업 완료 리셋 펄스 보조
+RUNG 12		'
+BST		'
+XIC R4		'최종작업  완료 보조
+XIC DO31		'운전준비  (RB)
+NXB		'
+BST		'
+XIC K2		'수동      모드\n(OP)
+XIC R500		'최종 작업 완료 SET   (GP)
+XIC R515		'트리거\nENABLE\n(GP)
+XIC R2		'로보트    원위치    보조
+NXB		'
+XIC K10		'최종 작업 완료셋    보조
+BND		'
+BND		'
+XIO R901		'최종 작업 완료 리셋 펄스 보조
+XIO FN1.X3		'정상/고장\n(GP.SS)
+OTE K10		'최종 작업 완료셋    보조
+RUNG 13		'**** ERROR RESET AUX
+BST		'
+XIC FN1.X4		'이상해제  (GP PB)
+NXB		'
+BST		'
+XIC FB5.X5		'이상해제\n(LINE)
+NXB		'
+XIC DO112		'이상해제  (TP KEY)
+BND		'
+BND		'
+OTE R6		'이상해제  보조\n
+RUNG 14		'
+XIC R6		'이상해제  보조\n
+OTE DI97		'Error/\nAlarm\nSignal\nClear
+RUNG 15		'**** ROBOT EXTERNAL READY (MOTOR ON)
+BST		'
+XIC FN1.X6		'외부운전  준비      (GP PB)
+NXB		'
+BST		'
+XIC FB5.X8		'외부 운전 준비\n(LINE)
+NXB		'
+XIC R7		'운전준비  ON 보조
+BND		'
+BND		'
+XIO DO31		'운전준비  (RB)
+BST		'
+XIO T7		'운전준비  펄스 ON
+OTE R7		'운전준비  ON 보조
+NXB		'
+TON T7,100,2		'운전준비  펄스 ON
+BND		'
+RUNG 16		'**** LAMP CHECK AUX
+BST		'
+XIC R513		'램프      테스트 \n(GP)
+NXB		'
+XIC R8		'램프 체크 보조
+BND		'
+BST		'
+XIO T8		'램프테스트 OFF
+OTE R8		'램프 체크 보조
+NXB		'
+TON T8,100,1		'램프테스트 OFF
+BND		'
+RUNG 17		'**** COMMON BUZZER STOP AUX
+BST		'
+XIC FN1.X7		'부저 정지\n(GP PB)
+NXB		'
+XIC R9		'부저 정지  보조
+BND		'
+XIO R6		'이상해제  보조\n
+XIC R30		'부저 조건 보조
+OTE R9		'부저 정지  보조
+RUNG 18		'**** WELDING CONDITION OK AUX
+GRT RW61,0		'
+OTE R15		'용접 조건 카운터\nOK 보조
+RUNG 19		'**** ATD WELDING CONDITION OK AUX
+XIC R181		'용접건    사용 보조
+BST		'
+XIC DO81		'용접조건  카운터 1
+XIC DO82		'용접조건  카운터 2
+XIC DO83		'용접조건  카운터 4
+XIC DO84		'용접조건  카운터 8
+XIC DO85		'용접조건  카운터 16
+XIC DO86		'용접조건  카운터 32
+XIC DO87		'용접조건  카운터 64
+XIC DO88		'용접조건  카운터 128
+NXB		'
+BST		'
+XIC DO89		'용접조건  카운터 1
+XIC DO90		'용접조건  카운터 2
+XIC DO91		'용접조건  카운터 4
+XIC DO92		'용접조건  카운터 8
+XIC DO93		'용접조건  카운터 16
+XIC DO94		'용접조건  카운터 16
+XIC DO95		'용접조건  카운터 16
+XIC DO96		'용접조건  카운터 16
+NXB		'
+XIC DO161		'용접조건  카운터 1
+XIC DO162		'용접조건  카운터 2
+XIC DO163		'용접조건  카운터 4
+XIC DO164		'용접조건  카운터 8
+XIC DO165		'용접조건  카운터 16
+XIC DO166		'용접조건  카운터 16
+XIC DO167		'용접조건  카운터 16
+XIC DO168		'용접조건  카운터 16
+BND		'
+BND		'
+OTE R16		'용접카운터보조 OK
+RUNG 20		'**** WELDING POSSIBLE AUX
+BST		'
+XIC FN5.X4		'용접 가능\n(R TC)
+XIC K801		'로보트 건1용접 사용\n(SET)
+NXB		'
+XIC FB5.X11		'무부하    시운전 모드(LINE)
+BND		'
+OTE R17		'로봇건    용접 가능 상태 보조
+RUNG 21		'**** WELDING POSSIBLE AUX
+BST		'
+XIC FN10.X4		'용접 가능\n(P1 TC)
+XIC K861		'정치건1\n사용\n(SET)
+NXB		'
+XIC FB5.X11		'무부하    시운전 모드(LINE)
+BND		'
+OTE R97		'정치건 1  용접 가능 상태 보조
+RUNG 22		'**** WELDING POSSIBLE AUX
+BST		'
+XIC FN12.X4		'용접 가능\n(P2 TC)
+XIC K871		'정치건2\n사용\n(SET)
+NXB		'
+XIC FB5.X11		'무부하    시운전 모드(LINE)
+BND		'
+OTE R98		'정치건 2  용접 가능 상태 보조
+RUNG 23		'**** WELDING POSSIBLE AUX
+BST		'
+XIC FN20.X3		'용접가능\n(볼트TC)
+XIC K921		'볼트      프로젝트\n사용      (SET)
+NXB		'
+XIC FB5.X11		'무부하    시운전 모드(LINE)
+BND		'
+OTE R99		'볼트\n용접 가능\n상태 보조
+RUNG 24		'**** Servo Gun ATD RUN
+BST		'
+XIC DO77		'팁드레서1  모터 ON
+NXB		'
+XIC DO78		'팁드레서2  모터 ON
+BND		'
+OTE R18		'로보트 건 팁드레서  모터 ON
+RUNG 25		'**** ATD PROGRAM SELECT AUX
+BST		'
+BST		'
+XIC K1		'전자동    모드\n(OP)
+BST		'
+XIC K801		'로보트 건1용접 사용\n(SET)
+NXB		'
+XIC K971		'아크용접  사용\n(SET)
+BND		'
+BST		'
+BST		'
+BST		'
+XIC R25		'건1\n팁드레싱  카운터    보조
+NXB		'
+XIC R26		'건2\n팁드레싱  카운터    보조
+BND		'
+NXB		'
+BST		'
+XIC R55		'ARC NOZZLECLEANR    COUNT
+NXB		'
+XIC R117		'팁체인지  완료드레싱요구 보조
+BND		'
+BND		'
+NXB		'
+XIC FB5.X25		'팁드레서  기동      (LINE)
+BND		'
+NXB		'
+XIC K3		'단독자동  모드\n(OP)
+BST		'
+XIC K801		'로보트 건1용접 사용\n(SET)
+NXB		'
+XIC K971		'아크용접  사용\n(SET)
+BND		'
+BST		'
+XIC R504		'로보트건  팁드레싱  기동\n(GP)
+XIC R515		'트리거\nENABLE\n(GP)
+NXB		'
+XIC FN1.X5		'팁드레서  기동\n(GP)
+BND		'
+BND		'
+XIC R2		'로보트    원위치    보조
+NXB		'
+XIC R21		'팁드레서  프로그램  기동 보조
+BND		'
+XIC DO31		'운전준비  (RB)
+XIO FN1.X3		'정상/고장\n(GP.SS)
+XIC DI24		'외부 일시 정지      (LINE)
+BST		'
+XIO T21		'팁드레서  프로그램  기동 OFF
+OTE R21		'팁드레서  프로그램  기동 보조
+NXB		'
+TON T21,100,2		'팁드레서  프로그램  기동 OFF
+BND		'
+RUNG 26		'
+XIC K801		'로보트 건1용접 사용\n(SET)
+BST		'
+XIC FB5.X45		'냉각수    차단      (LINE)
+XIC R345		'로보트 건\n냉각수 이상보조
+NXB		'
+XIC R345		'로보트 건\n냉각수 이상보조
+BND		'
+BST		'
+OTL R117		'팁체인지  완료드레싱요구 보조
+NXB		'
+TON T117,10,2		'팁체인지\n완료드레싱\n요구지연
+BND		'
+RUNG 27		'
+XIC K801		'로보트 건1용접 사용\n(SET)
+XIC R18		'로보트 건 팁드레서  모터 ON
+OTU R117		'팁체인지  완료드레싱요구 보조
+RUNG 28		'**** ATD PROGRAM START AUX
+BST		'
+XIC R181		'용접건    사용 보조
+NXB		'
+XIC K971		'아크용접  사용\n(SET)
+BND		'
+XIC R21		'팁드레서  프로그램  기동 보조
+BST		'
+TON T22,10,3		'팁드레싱 기동 지연
+NXB		'
+XIC T22		'팁드레싱 기동 지연
+OTE R22		'팁드레서  기동 보조
+BND		'
+RUNG 29		'**** ATD PROGRAM SET AUX
+BST		'
+XIC R181		'용접건    사용 보조
+NXB		'
+XIC K971		'아크용접  사용\n(SET)
+BND		'
+XIC R21		'팁드레서  프로그램  기동 보조
+XIO R31		'이상      데이타    디스플레이보조
+OTL R23		'팁드레서  프로그램 \nSET\n보조
+RUNG 30		'**** ATD PROGRAM SET AUX
+BST		'
+XIC R181		'용접건    사용 보조
+NXB		'
+XIC K971		'아크용접  사용\n(SET)
+BND		'
+BST		'
+XIO R21		'팁드레서  프로그램  기동 보조
+XIC R2		'로보트    원위치    보조
+NXB		'
+XIC R2		'로보트    원위치    보조
+XIC R23		'팁드레서  프로그램 \nSET\n보조
+XIO R21		'팁드레서  프로그램  기동 보조
+XIO R22		'팁드레서  기동 보조
+BND		'
+BST		'
+XIO T23		'팁드레서 프로그램  선택 OFF
+OTU R23		'팁드레서  프로그램 \nSET\n보조
+NXB		'
+TON T23,100,2		'팁드레서 프로그램  선택 OFF
+BND		'
+RUNG 31		'**** 1CYCLE WELD COUNT
+BST		'
+BST		'
+BST		'
+XIC R12		'ROBOT GUN1용접 완료 보조
+NXB		'
+XIC R14		'ROBOT GUN2용접 완료 보조
+BND		'
+NXB		'
+XIC R122		'PED1 GUN\n용접완료  보조
+BND		'
+NXB		'
+BST		'
+XIC R124		'PED2 GUN\n용접완료  보조
+NXB		'
+BST		'
+XIC R126		'PED3 GUN\n용접 완료 보조
+NXB		'
+XIC R128		'PED4 GUN\n용접 완료 보조
+BND		'
+BND		'
+BND		'
+XIO R2		'로보트    원위치    보조
+XIO K10		'최종 작업 완료셋    보조
+OSR R902		'작업 완료 SET 보조\nPLS
+RUNG 32		'
+XIC R181		'용접건    사용 보조
+XIC R902		'작업 완료 SET 보조\nPLS
+ADD 1,MW201,MW201		'
+RUNG 33		'
+XIC R2		'로보트    원위치    보조
+XIC R3		'로보트    기동 \n보조
+MOV 0,MW201		'
+RUNG 34		'**** GUN COMMON ATD FORWARD/REVERSE TIME
+XIC R181		'용접건    사용 보조
+BST		'
+XIC K1024		'ATD\nMOTOR\nCW/CCW\n(SET)
+ADD MW133,MW134,MW115		'
+ADD MW115,10,MW115		'
+NXB		'
+XIC K1023		'ATD\nMOTOR\nCW\n(SET)
+ADD MW133,10,MW115		'
+BND		'
+RUNG 35		'**** ATD  TIME SETTING
+XIC R181		'용접건    사용 보조
+BST		'
+BST		'
+LEQ MW132,MW133		'
+NXB		'
+GRT MW131,MW133		'
+BND		'
+MOV MW131,MW133		'
+NXB		'
+BST		'
+LEQ MW132,MW134		'
+NXB		'
+GRT MW131,MW134		'
+BND		'
+MOV MW131,MW134		'
+BND		'
+RUNG 36		'**** TP MAIN DISPLAY WELDING CONDITION AUX
+BST		'
+XIO DO81		'용접조건  카운터 1
+XIO DO82		'용접조건  카운터 2
+XIO DO83		'용접조건  카운터 4
+XIO DO84		'용접조건  카운터 8
+XIO DO85		'용접조건  카운터 16
+XIO DO86		'용접조건  카운터 32
+XIO DO87		'용접조건  카운터 64
+XIO DO88		'용접조건  카운터 128
+INV		'
+COP DO81,R961,8		'
+NXB		'
+BST		'
+XIO DO89		'용접조건  카운터 1
+XIO DO90		'용접조건  카운터 2
+XIO DO91		'용접조건  카운터 4
+XIO DO92		'용접조건  카운터 8
+XIO DO93		'용접조건  카운터 16
+XIO DO94		'용접조건  카운터 16
+XIO DO95		'용접조건  카운터 16
+XIO DO96		'용접조건  카운터 16
+INV		'
+COP DO89,R961,8		'
+NXB		'
+XIO DO161		'용접조건  카운터 1
+XIO DO162		'용접조건  카운터 2
+XIO DO163		'용접조건  카운터 4
+XIO DO164		'용접조건  카운터 8
+XIO DO165		'용접조건  카운터 16
+XIO DO166		'용접조건  카운터 16
+XIO DO167		'용접조건  카운터 16
+XIO DO168		'용접조건  카운터 16
+INV		'
+COP DO161,R961,8		'
+BND		'
+BND		'
+MOV RW61,MW91		'
+RUNG 37		'**** COMMON I/L PNL TOWER LAMP & RELAY
+BST		'
+XIC R8		'램프 체크 보조
+NXB		'
+XIC R31		'이상      데이타    디스플레이보조
+XIC SP6		'1초 세컨  펄스 보조\n(SPECIAL)
+BND		'
+OTE FN3.Y1		'시스템     이상\n(타울램프)
+RUNG 38		'
+BST		'
+XIC R8		'램프 체크 보조
+NXB		'
+BST		'
+XIC DO29		'로보트    기동중    (RB)
+XIO R23		'팁드레서  프로그램 \nSET\n보조
+NXB		'
+XIO R23		'팁드레서  프로그램 \nSET\n보조
+XIO S4145		'멀티테스크2번 동작중
+XIO S4305		'멀티테스크3번 동작중
+XIO R301		'COUNT UP\nCOMPLETE\nWARNING\nAUX
+INV		'
+XIC SP6		'1초 세컨  펄스 보조\n(SPECIAL)
+BND		'
+BND		'
+OTE FN3.Y2		'로보트    기동중 \n(타울램프)
+RUNG 39		'
+BST		'
+XIC R8		'램프 체크 보조
+NXB		'
+XIC R2		'로보트    원위치    보조
+BND		'
+OTE FN3.Y3		'로보트    원위치    (타울램프)
+RUNG 40		'
+BST		'
+XIC R8		'램프 체크 보조
+NXB		'
+XIC R30		'부저 조건 보조
+XIO T31		'부저 정지 타임
+XIO R9		'부저 정지  보조
+BND		'
+OTE FN3.Y4		'부저\n(타울램프)
+RUNG 41		'**** COMMON EXTERNAL MOTOR ON
+XIC R7		'운전준비  ON 보조
+OTE FN3.Y5		'로보트    모터ON    보조\n(R1)
+RUNG 42		'**** GUN COMMON - GUN USE/NOT USE
+XIO K801		'로보트 건1용접 사용\n(SET)
+XIO K861		'정치건1\n사용\n(SET)
+XIO K871		'정치건2\n사용\n(SET)
+XIO K881		'정치건3\n사용\n(SET)
+XIO K891		'정치건4\n사용\n(SET)
+INV		'
+OTE R181		'용접건    사용 보조
+RUNG 43		'
+XIO K861		'정치건1\n사용\n(SET)
+XIO K871		'정치건2\n사용\n(SET)
+XIO K881		'정치건3\n사용\n(SET)
+XIO K891		'정치건4\n사용\n(SET)
+INV		'
+OTE R182		'정치건    사용 체크\n(GUN)
+RUNG 44		'**** TP MAIN DISPLAY LAMP
+XIC K1		'전자동    모드\n(OP)
+XIC DO31		'운전준비  (RB)
+XIC DO30		'자동모드  (RB)
+XIO FN1.X3		'정상/고장\n(GP.SS)
+OTE R200		'FULL 오토  (GP)
+RUNG 45		'
+XIC R1		'공정 차종 보조
+OTE R201		'공정 차종\nOK\n(GP)
+RUNG 46		'
+XIC DO30		'자동모드  (RB)
+XIC DO31		'운전준비  (RB)
+XIO FN1.X3		'정상/고장\n(GP.SS)
+OTE R202		'운전준비\n(GP)
+RUNG 47		'
+XIC R2		'로보트    원위치    보조
+OTE R203		'로보트    원위치\n(GP)
+RUNG 48		'
+XIC K10		'최종 작업 완료셋    보조
+OTE R204		'최종 작업 완료\n(GP)
+RUNG 49		'
+XIC DO29		'로보트    기동중    (RB)
+OTE R205		'로보트    기동중\n(GP)
+RUNG 50		'
+XIC R181		'용접건    사용 보조
+BST		'
+BST		'
+BST		'
+XIC R11		'ROBOT\nGUN1\n가압\n보조
+NXB		'
+XIC R13		'ROBOT\nGUN2\n가압\n보조
+BND		'
+NXB		'
+XIC R121		'PED1\nGUN\n가압      보조
+BND		'
+NXB		'
+BST		'
+XIC R123		'PED2\n가압      보조
+NXB		'
+BST		'
+XIC R125		'PED3\n가압      보조
+NXB		'
+XIC R127		'PED4\n가압      보조
+BND		'
+BND		'
+BND		'
+OTE R206		'건 가압\n(GP)
+RUNG 51		'
+XIC R181		'용접건    사용 보조
+BST		'
+XIC R23		'팁드레서  프로그램 \nSET\n보조
+NXB		'
+BST		'
+XIC R101		'PED1 GUN\n팁드레서  기동 보조
+NXB		'
+BST		'
+XIC R106		'PED2 GUN\n팁드레서  기동 보조
+NXB		'
+BST		'
+XIC R111		'PED3 GUN\n팁드레서  기동 보조
+NXB		'
+XIC R116		'PED4 GUN\n팁드레서  기동 보조
+BND		'
+BND		'
+BND		'
+BND		'
+OTE R207		'팁드레서  기동중\n(GP)
+RUNG 52		'
+XIC SP2		'항시 OFF\n(SPECIAL)
+OTE R208		'SPARE\n(GP)
+RUNG 53		'
+XIC R181		'용접건    사용 보조
+BST		'
+BST		'
+BST		'
+XIO R17		'로봇건    용접 가능 상태 보조
+XIC K801		'로보트 건1용접 사용\n(SET)
+NXB		'
+BST		'
+XIO R97		'정치건 1  용접 가능 상태 보조
+XIC K861		'정치건1\n사용\n(SET)
+NXB		'
+XIO R98		'정치건 2  용접 가능 상태 보조
+XIC K871		'정치건2\n사용\n(SET)
+BND		'
+BND		'
+NXB		'
+XIC R335		'서보건    WELLD OFF 이상 보조
+BND		'
+XIC SP6		'1초 세컨  펄스 보조\n(SPECIAL)
+NXB		'
+BST		'
+XIC R17		'로봇건    용접 가능 상태 보조
+NXB		'
+XIO K801		'로보트 건1용접 사용\n(SET)
+BND		'
+BST		'
+XIC R97		'정치건 1  용접 가능 상태 보조
+NXB		'
+XIO K861		'정치건1\n사용\n(SET)
+BND		'
+BST		'
+XIC R98		'정치건 2  용접 가능 상태 보조
+NXB		'
+XIO K871		'정치건2\n사용\n(SET)
+BND		'
+XIO R335		'서보건    WELLD OFF 이상 보조
+BND		'
+OTE R209		'용접      가능 상태\n(GP)
+RUNG 54		'
+XIC FN1.X3		'정상/고장\n(GP.SS)
+XIC SP6		'1초 세컨  펄스 보조\n(SPECIAL)
+OTE R210		'로보트 고장(GP)
+RUNG 55		'
+XIC R318		'스텝위치  이상 보조
+XIC SP6		'1초 세컨  펄스 보조\n(SPECIAL)
+OTE R211		'스텝위치  SET\nALARM (GP)
+RUNG 56		'
+BST		'
+XIC DO100		'Fildbus\nTrouble   (RB)
+NXB		'
+XIC DO101		'Fildbus   Idle      (RB)
+BND		'
+XIC SP6		'1초 세컨  펄스 보조\n(SPECIAL)
+OTE R212		'필트버스  통신\nERROR (GP)
+RUNG 57		'
+XIC R384		'로보트    인터록    이상보조
+XIC SP6		'1초 세컨  펄스 보조\n(SPECIAL)
+OTE R213		'로보트 인터록 이상\n(GP)
+RUNG 58		'
+XIC R181		'용접건    사용 보조
+BST		'
+BST		'
+XIC R25		'건1\n팁드레싱  카운터    보조
+NXB		'
+XIC R26		'건2\n팁드레싱  카운터    보조
+BND		'
+NXB		'
+BST		'
+XIC R27		'정치건1   팁드레싱  카운터    보조
+NXB		'
+BST		'
+XIC R28		'정치건2   팁드레싱  카운터    보조
+NXB		'
+XIC R29		'건5       팁드레싱  카운터    보조
+BND		'
+BND		'
+BND		'
+XIC SP6		'1초 세컨  펄스 보조\n(SPECIAL)
+OTE R214		'카운터 업 완료 (GP)
+RUNG 59		'**** COMMON ROBOT INPUT : ROBOT EXTERNAL START
+XIC R3		'로보트    기동 \n보조
+OTE DI23		'로보트    기동      (RB)
+RUNG 60		'**** COMMON ROBOT INPUT : ROBOT EXTERNAL STOP
+BST		'
+BST		'
+XIO R32		'외부 \n로보트 정지보조
+XIO R33		'시스텝 이상보조
+NXB		'
+XIC DO160		'작업중\n(Co2,Stud,Sealer)\n외부정지
+BND		'
+NXB		'
+XIO FB5.X1		'즉시 정지 (LINE)
+XIO FB5.X2		'외부 정지\n(LINE)
+XIC FN1.X3		'정상/고장\n(GP.SS)
+BND		'
+OTE DI24		'외부 일시 정지      (LINE)
+RUNG 61		'**** ROBOT INPUT : PROGRAM SELECT
+BST		'
+XIO R23		'팁드레서  프로그램 \nSET\n보조
+COP FB5.X17,DI25,6		'프로그램\n선택 1
+NXB		'
+XIC R23		'팁드레서  프로그램 \nSET\n보조
+MOV 63,DIB4		'ATD PROGRAM SEL_1
+BND		'
+RUNG 62		'**** COMMON ROBOT WORK IN &  INTERLOCK
+XIO K981		'포지셔너 \n사용\n(SET)
+CCOP FB5.X13,0,DI113,2		'PLT RACK A LINE     INPUT
+RUNG 63		'**** COMMON ROBOT WORK IN &  INTERLOCK
+XIO K981		'포지셔너 \n사용\n(SET)
+CCOP FB5.X15,0,DI116,2		'PLT RACK B LINE     INPUT
+RUNG 64		'**** COMMON ROBOT WORK IN &  INTERLOCK
+XIC SP1		'항시 ON\n(SPECIAL)
+CCOP FB5.X26,0,DI12,4		'#JIG"A,B,C,D 1ST work in ok
+RUNG 65		'**** COMMON ROBOT WORK IN &  INTERLOCK
+XIC SP1		'항시 ON\n(SPECIAL)
+CCOP FB5.X30,0,DI17,3		'#JIG A work in ok
+RUNG 66		'**** COMMON ROBOT WORK IN &  INTERLOCK
+XIC SP1		'항시 ON\n(SPECIAL)
+CCOP FB5.X33,0,DI20,3		'#JIG B work in ok
+RUNG 67		'**** COMMON ROBOT WORK IN &  INTERLOCK
+XIC SP1		'항시 ON\n(SPECIAL)
+CCOP FB5.X37,0,DI65,3		'#JIG C work in ok
+RUNG 68		'**** COMMON ROBOT WORK IN &  INTERLOCK
+XIC SP1		'항시 ON\n(SPECIAL)
+CCOP FB5.X49,0,DI6,6		'로보트 \n상호간\n인터록 1
+RUNG 69		'**** COMMON ROBOT WORK IN &  INTERLOCK
+XIC SP1		'항시 ON\n(SPECIAL)
+CCOP FB5.X55,0,DI4,2		'로보트 \n상호간\n인터록 7
+RUNG 70		'**** COMMON ROBOT WORK IN &  INTERLOCK
+XIC SP1		'항시 ON\n(SPECIAL)
+CCOP FB5.X57,0,DI69,3		'#JIG D work in ok
+RUNG 71		'**** COMMON ROBOT WORK IN &  INTERLOCK
+XIC SP1		'항시 ON\n(SPECIAL)
+BST		'
+BST		'
+BST		'
+XIC FB5.X42		'PLT\n1번장\n확인
+OTE DI161		'PLT\n1번장\n확인
+NXB		'
+XIC FB5.X43		'PLT\n2번장\n확인
+OTE DI162		'PLT\n2번장\n확인
+BND		'
+NXB		'
+XIC FB5.X44		'PLT\n4번장\n확인
+OTE DI163		'PLT\n4번장\n확인
+BND		'
+NXB		'
+XIC FB5.X46		'PLT\n8번장\n확인
+OTE DI164		'PLT\n8번장\n확인
+BND		'
+RUNG 72		'
+XIC SP1		'항시 ON\n(SPECIAL)
+XIC FB5.X60		'컬러 센서 이상 무시 (LINE)
+OTE DI110		'컬러 센서 이상 무시 (RB)
+RUNG 73		'
+XIC SP1		'항시 ON\n(SPECIAL)
+XIC FB5.X48		'팁체인지  완료      (LINE)
+OTE DI107		'팁체인지  완료      (RB)
+RUNG 74		'
+XIC SP1		'항시 ON\n(SPECIAL)
+XIC FB5.X61		'라인 청소 모드 완료 (LINE)
+OTE DI108		'라인 청소 모드(RB)
+RUNG 75		'
+XIC SP1		'항시 ON\n(SPECIAL)
+XIC FB5.X41		'CO2 원점  완료      (LINE)
+OTE DI109		'CO2 원점  완료       (RB)
+RUNG 76		'**** COMMON BODY TYPE DISPLAY (GP)
+XIC SP1		'항시 ON\n(SPECIAL)
+COP DI25,R945,8		'
+MOV RW60,MW90		'
+RUNG 77		'*****LINE OUTPUT
+XIO DO25		'티칭모드  (RB)
+XIC DO30		'자동모드  (RB)
+XIC DO31		'운전준비  (RB)
+OTE FB5.Y1		'리모트    모드\n(LINE)
+RUNG 78		'
+XIC DO23		'로보트    모터 ON   (RB)
+OTE FB5.Y2		'로보트    모터ON\n(LINE)
+RUNG 79		'
+BST		'
+XIC DO29		'로보트    기동중    (RB)
+NXB		'
+XIC DO73		'정치건    팁드레싱  기동중    TASK2
+BND		'
+OTE FB5.Y3		'로보트    동작중\n(LINE)
+RUNG 80		'
+XIO DI24		'외부 일시 정지      (LINE)
+OTE FB5.Y4		'로보트    프로그램  정지중\n(LINE)
+RUNG 81		'
+BST		'
+XIO R25		'건1\n팁드레싱  카운터    보조
+XIO R26		'건2\n팁드레싱  카운터    보조
+XIO R27		'정치건1   팁드레싱  카운터    보조
+XIO R28		'정치건2   팁드레싱  카운터    보조
+XIO R29		'건5       팁드레싱  카운터    보조
+INV		'
+NXB		'
+XIO R117		'팁체인지  완료드레싱요구 보조
+XIO R118		'팁체인지  완료드레싱요구 보조
+XIO R119		'팁체인지  완료드레싱요구 보조
+INV		'
+BND		'
+OTL R300		'다음차종\n팁드레서\n세트
+RUNG 82		'
+XIO DO77		'팁드레서1  모터 ON
+XIO DO78		'팁드레서2  모터 ON
+XIO DO79		'정치건1\n팁드레서  모터ON	\n(RB)
+XIO DO80		'정치건2\n팁드레서  모터ON	\n(RB)
+INV		'
+OTU R300		'다음차종\n팁드레서\n세트
+RUNG 83		'
+BST		'
+XIC S4145		'멀티테스크2번 동작중
+NXB		'
+BST		'
+BST		'
+XIC S4305		'멀티테스크3번 동작중
+NXB		'
+EQU SW20,61		'
+BST		'
+XIC DO79		'정치건1\n팁드레서  모터ON	\n(RB)
+NXB		'
+XIC DO80		'정치건2\n팁드레서  모터ON	\n(RB)
+BND		'
+XIC DO29		'로보트    기동중    (RB)
+BND		'
+NXB		'
+BST		'
+EQU SW20,63		'현재프로그램
+BST		'
+XIC DO77		'팁드레서1  모터 ON
+NXB		'
+XIC DO78		'팁드레서2  모터 ON
+BND		'
+XIC DO29		'로보트    기동중    (RB)
+NXB		'
+XIC R300		'다음차종\n팁드레서\n세트
+BND		'
+BND		'
+BND		'
+OTE FB5.Y5		'팁드레서  기동중    (LINE)
+RUNG 84		'
+XIC DO27		'로보트    시스템이상 (RB)
+OTE FB5.Y6		'시스템    이상      (LINE)
+RUNG 85		'
+XIC R2		'로보트    원위치    보조
+OTE FB5.Y7		'로보트    원위치\n(LINE)
+RUNG 86		'
+XIC DO25		'티칭모드  (RB)
+OTE FB5.Y8		'로보트    티칭 모드\n(LINE)
+RUNG 87		'
+XIC DO12		'A 지그    최종작업  완료\n(RB)
+OTE FB5.Y9		'A 지그    최종작업  완료\n(LINE)
+RUNG 88		'
+XIC DO13		'B 지그    최종작업  완료\n(RB)
+OTE FB5.Y10		'B 지그    최종작업  완료\n(LINE)
+RUNG 89		'
+XIC DO14		'C 지그    최종작업  완료\n(RB)
+OTE FB5.Y11		'C 지그    최종작업  완료\n(LINE)
+RUNG 90		'
+XIC DO15		'D 지그    최종작업  완료\n(RB)
+OTE FB5.Y12		'D 지그    최종작업  완료\n(LINE)
+RUNG 91		'
+BST		'
+XIC DO153		'포시셔너  위치A     기동중
+XIC K981		'포지셔너 \n사용\n(SET)
+NXB		'
+XIC DO113		'파레트 A  카운터    리셋      (RB)
+XIO K981		'포지셔너 \n사용\n(SET)
+BND		'
+OTE FB5.Y13		'포지셔너  OR 파레트  작업완료
+RUNG 92		'
+BST		'
+XIC R157		'독립실행\nA지그 턴\n위치완료
+XIC K981		'포지셔너 \n사용\n(SET)
+NXB		'
+XIC DO114		'파레트 A  최종 적재 완료      (RB)
+XIO K981		'포지셔너 \n사용\n(SET)
+BND		'
+OTE FB5.Y14		'포지셔너  OR 파레트  작업완료
+RUNG 93		'
+BST		'
+XIC DO154		'포시셔너  위치B     기동중
+XIC K981		'포지셔너 \n사용\n(SET)
+NXB		'
+XIC DO116		'파레트 B  카운터    리셋      (RB)
+XIO K981		'포지셔너 \n사용\n(SET)
+BND		'
+OTE FB5.Y15		'포지셔너  OR 파레트  작업완료
+RUNG 94		'
+BST		'
+XIC R158		'독립실행\nB지그 턴\n위치완료
+XIC K981		'포지셔너 \n사용\n(SET)
+NXB		'
+XIC DO117		'파레트 B  최종 적재 완료      (RB)
+XIO K981		'포지셔너 \n사용\n(SET)
+BND		'
+OTE FB5.Y16		'포지셔너  OR 파레트  작업완료
+RUNG 95		'
+XIC FB5.X9		'팁체인지\n모드선택\n (LINE)
+XIC DO107		'팁교환 위치완료      (RB)
+OTE FB5.Y17		'팁교환 위치완료      (LINE)
+RUNG 96		'
+XIC DO108		'청소 위치 완료      (RB)
+OTE FB5.Y18		'청소 위치 완료      (LINE)
+RUNG 97		'
+BST		'
+XIO K971		'아크용접  사용\n(SET)
+XIC DO115		'PLT A\n간섭무
+NXB		'
+XIC K971		'아크용접  사용\n(SET)
+XIC DO109		'CO2 원점위치      (RB)
+BND		'
+OTE FB5.Y19		'PLT A\n간섭무\n(LINE)
+RUNG 98		'
+XIC DO118		'PLT B\n간섭무
+OTE FB5.Y20		'PLT B\n간섭무\n(LINE)
+RUNG 99		'
+EQU SW20,63		'현재프로그램
+XIO DO32		'로보트    원위치    (RB)
+XIC K811		'로보트 건2용접 사용\n(SET)
+XIC DO78		'팁드레서2  모터 ON
+XIC DO29		'로보트    기동중    (RB)
+OTE FB5.Y21		'팁드레서  기동중\n쌍두X건    (LINE)
+RUNG 100		'
+XIC DO144		'실러비전\n체크이상
+OTE FB5.Y22		'실러비전\n체크이상\n(LINE)
+RUNG 101		'
+XIC R49		'실러 종합 이상 보조
+OTE FB5.Y23		'실러 종합 이상 보조\n(LINE)
+RUNG 102		'
+XIC R46		'종합 스터드이상 보조
+OTE FB5.Y24		'종합 스터드이상 보조\n(LINE)
+RUNG 103		'
+XIC DO120		'현재 PLT\n변수값\n비교이상
+OTE FB5.Y25		'현재 PLT\n변수값\n비교이상\n(LINE)
+RUNG 104		'**** Fixture   intrference JIGA,B,C,D
+XIC SP1		'항시 ON\n(SPECIAL)
+BST		'
+BST		'
+XIC DO61		'JIG A     지그 간섭무 (RB)
+NXB		'
+XIC DO32		'로보트    원위치    (RB)
+BND		'
+OTE FB5.Y26		'JIG A     지그 간섭무\n(LINE)
+NXB		'
+BST		'
+BST		'
+XIC DO62		'JIG B     지그 간섭무 (RB)
+NXB		'
+XIC DO32		'로보트    원위치    (RB)
+BND		'
+OTE FB5.Y27		'JIG B     지그 간섭무\n(LINE)
+NXB		'
+BST		'
+BST		'
+XIC DO63		'JIG C     지그 간섭무 (RB)
+NXB		'
+XIC DO32		'로보트    원위치    (RB)
+BND		'
+OTE FB5.Y28		'JIG C     지그 간섭무\n(LINE)
+NXB		'
+BST		'
+XIC DO64		'JIG D     지그 간섭무 (RB)
+NXB		'
+XIC DO32		'로보트    원위치    (RB)
+BND		'
+OTE FB5.Y29		'JIG D     지그 간섭무\n(LINE)
+BND		'
+BND		'
+BND		'
+RUNG 105		'
+XIC SP1		'항시 ON\n(SPECIAL)
+CCOP DO17,0,FB5.Y30,3		'#JIG A WORK COMPLET OUPT Signal
+RUNG 106		'
+XIC SP1		'항시 ON\n(SPECIAL)
+CCOP DO20,0,FB5.Y33,3		'#JIG B WORK COMPLET OUPT Signal
+RUNG 107		'
+BST		'
+BST		'
+XIO S469		'비상정지  (OP)
+NXB		'
+XIO S470		'비상정지  (TP)
+BND		'
+INV		'
+NXB		'
+XIO DO24		'비상정지  (RB)
+BST		'
+XIC S469		'비상정지  (OP)
+NXB		'
+XIC S470		'비상정지  (TP)
+BND		'
+BND		'
+OTE FB5.Y36		'로보트    비상정지중(LINE)
+RUNG 108		'
+XIC SP1		'항시 ON\n(SPECIAL)
+CCOP DO65,0,FB5.Y37,3		'#JIG C WORK COMPLET OUPT Signal
+RUNG 109		'
+XIC R35		'종합 통신 이상  보조
+OTE FB5.Y40		'종합 통신 이상      (LINE)
+RUNG 110		'
+XIC R34		'종합 시스템이상 보조
+OTE FB5.Y41		'로보트    시스템 이상(LINE)
+RUNG 111		'
+XIC R41		'종합 L/S  이상 보조
+OTE FB5.Y42		'종합 L/S  이상      (LINE)
+RUNG 112		'
+XIC R384		'로보트    인터록    이상보조
+OTE FB5.Y43		'로보트    인터록 이상(LINE)
+RUNG 113		'
+XIC R38		'종합 에어 이상  보조
+OTE FB5.Y44		'종합 에어 이상      (LINE)
+RUNG 114		'
+XIC R39		'종합 냉각수이상 보조
+OTE FB5.Y45		'종합 냉각수이상      (LINE)
+RUNG 115		'
+BST		'
+XIC R181		'용접건    사용 보조
+XIC R37		'종합 용접 관련 이상 보조
+NXB		'
+XIC K971		'아크용접  사용\n(SET)
+XIC R47		'종합\nARC 이상\n보조
+BND		'
+OTE FB5.Y46		'종합  용접이상      (LINE)
+RUNG 116		'
+XIO R309		'건 팁마모 경보 보조
+INV		'
+OTE FB5.Y47		'건 팁마모 경보      (LINE)
+RUNG 117		'
+XIC R40		'팁드레서  관련 종합 이상보조
+OTE FB5.Y48		'팁드레서  관련 종합 이상보조  (LINE
+RUNG 118		'
+XIC SP1		'항시 ON\n(SPECIAL)
+CCOP DO6,0,FB5.Y49,6		'로보트 \n상호간\n인터록 1
+RUNG 119		'
+XIC SP1		'항시 ON\n(SPECIAL)
+CCOP DO4,0,FB5.Y55,2		'로보트 \n상호간\n인터록 7
+RUNG 120		'
+XIC SP1		'항시 ON\n(SPECIAL)
+CCOP DO69,0,FB5.Y57,3		'#JIG D WORK COMPLET OUPT Signal
+RUNG 121		'
+XIC DO110		'칼라 센서 이상\n(RB)
+XIO DI110		'컬러 센서 이상 무시 (RB)
+OTE FB5.Y60		'칼라 센서 이상      (LINE)
+RUNG 122		'
+XIC K801		'로보트 건1용접 사용\n(SET)
+XIC R12		'ROBOT GUN1용접 완료 보조
+BST		'
+XIO K981		'포지셔너 \n사용\n(SET)
+GRT SW47,-50		'
+NXB		'
+XIC K981		'포지셔너 \n사용\n(SET)
+GRT SW48,-50		'
+BND		'
+OTE FB5.Y61		'GUN1\n용접완료  (LINE)
+RUNG 123		'
+BST		'
+XIC K811		'로보트 건2용접 사용\n(SET)
+BST		'
+XIC R14		'ROBOT GUN2용접 완료 보조
+XIO K981		'포지셔너 \n사용\n(SET)
+GRT SW48,-50		'
+NXB		'
+XIC R12		'ROBOT GUN1용접 완료 보조
+XIO K981		'포지셔너 \n사용\n(SET)
+GRT SW48,-50		'
+BND		'
+NXB		'
+XIC R122		'PED1 GUN\n용접완료  보조
+BND		'
+OTE FB5.Y62		'GUN2\n용접완료  (LINE)
+RUNG 124		'
+BST		'
+XIC R124		'PED2 GUN\n용접완료  보조
+NXB		'
+BST		'
+XIC R131		'스터드1   용접완료 \n보조
+NXB		'
+XIC R135		'볼트\n용접완료\n보조
+BND		'
+BND		'
+OTE FB5.Y63		'GUN3\n용접완료  (LINE)
+RUNG 125		'
+XIC DO111		'용접관련  하이비스  체크 요구 (RB)
+OTE FB5.Y64		'용접관련  하이비스  체크 요구 (LINE
+RUNG 126		'**** Applet Set
+XIC DO30		'자동모드  (RB)
+XIC DO31		'운전준비  (RB)
+BST		'
+OSR R911		'Applet\nActive\nSet\nPLS
+NXB		'
+XIC R911		'Applet\nActive\nSet\nPLS
+EQU SB270,2		'
+EQU SB272,0		'
+MOV 1,SB272		'
+BND		'
+RUNG 127		'
+XIO DO30		'자동모드  (RB)
+XIO DO31		'운전준비  (RB)
+BST		'
+OSR R912		'Applet\nInActive\nSet\nPLS
+NXB		'
+XIC R912		'Applet\nInActive\nSet\nPLS
+EQU SB270,1		'
+EQU SB272,0		'
+MOV 2,SB272		'
+BND		'
+RUNG 128		'
+XIC FN1.X7		'부저 정지\n(GP PB)
+XIC FN1.X4		'이상해제  (GP PB)
+EQU SB272,0		'
+EQU SB270,0		'
+BST		'
+OSR R913		'Applet\nExecute\nSet\nPLS
+NXB		'
+XIC R913		'Applet\nExecute\nSet\nPLS
+BST		'
+MOV 7,SB271		'
+NXB		'
+MOV 8,SB272		'
+BND		'
+BND		'
+RUNG 129		'
+NEQ SW136,0		'
+BST		'
+XIC T252		'Applet\nCommand\nClear
+OSR R914		'Applet\nCommand\nClear\nPLS
+NXB		'
+BST		'
+BST		'
+XIC R914		'Applet\nCommand\nClear\nPLS
+NXB		'
+XIC T252		'Applet\nCommand\nClear
+BND		'
+MOV 0,SW136		'
+NXB		'
+TON T252,100,3		'Applet\nCommand\nClear
+BND		'
+BND		'
+RUNG 130		'
+XIC FN1.X8		'LAMP\nCHECK\n(PB)
+XIC FN1.X4		'이상해제  (GP PB)
+BST		'
+EQU SB270,1		'
+NXB		'
+EQU SB270,2		'
+BND		'
+MOV 3,SB272		'
+RUNG 131		'**** Fieldbus Master Status Check
+XIC SP1		'항시 ON\n(SPECIAL)
+BST		'
+XIC S2289		'Fieldbus  Master    Status    Check
+OTE R465		'
+NXB		'
+BST		'
+BST		'
+XIC S2290		'Fieldbus  Master    Status    Check
+OTE R466		'
+NXB		'
+XIC S2291		'Fieldbus  Master    Status    Check
+OTE R467		'
+BND		'
+NXB		'
+XIC S2292		'Fieldbus  Master    Status    Check
+OTE R468		'
+BND		'
+BND		'
+RUNG 132		'
+XIC SP1		'항시 ON\n(SPECIAL)
+MOV RW30,MW70		'
+RUNG 133		'**** MW1 AUTO/MANUAL SCREEN CONTROL
+XIC SP1		'항시 ON\n(SPECIAL)
+EQU SB270,1		'
+BST		'
+XIC K1		'전자동    모드\n(OP)
+BST		'
+OSR R991		'MAIN\nDISPLAY\SCREEN\PLS
+NXB		'
+XIC R991		'MAIN\nDISPLAY\SCREEN\PLS
+MOV 1,MW1		'SCREEN\nCONTROL
+BND		'
+NXB		'
+XIC K2		'수동      모드\n(OP)
+BST		'
+OSR R992		'MANUAL\nCONTROL\nSCREEN\nPLS
+NXB		'
+XIC R992		'MANUAL\nCONTROL\nSCREEN\nPLS
+MOV 10,MW1		'SCREEN\nCONTROL
+BND		'
+BND		'
+RUNG 134		'**** MW1 TP SCREEN CONTROL
+XIC SP1		'항시 ON\n(SPECIAL)
+EQU SB270,1		'
+BST		'
+XIC S2090		'TP\n[F1] KEY\nPRESS
+BST		'
+OSR R993		'TP\n[F1] KEY\nPRESS\nPLS
+NXB		'
+XIC R993		'TP\n[F1] KEY\nPRESS\nPLS
+MOV 1,MW1		'SCREEN\nCONTROL
+BND		'
+NXB		'
+BST		'
+BST		'
+BST		'
+BST		'
+BST		'
+XIC S2091		'TP\n[F2] KEY\nPRESS
+BST		'
+OSR R994		'TP\n[F2] KEY\nPRESS\nPLS
+NXB		'
+XIC R994		'TP\n[F2] KEY\nPRESS\nPLS
+MOV 10,MW1		'SCREEN\nCONTROL
+BND		'
+NXB		'
+XIC S2092		'TP\n[F3] KEY\nPRESS
+BST		'
+OSR R995		'TP\n[F3] KEY\nPRESS\nPLS
+NXB		'
+XIC R995		'TP\n[F3] KEY\nPRESS\nPLS
+MOV 30,MW1		'SCREEN\nCONTROL
+BND		'
+BND		'
+NXB		'
+XIC S2093		'TP\n[F4] KEY\nPRESS
+BST		'
+OSR R996		'TP\n[F4] KEY\nPRESS\nPLS
+NXB		'
+XIC R996		'TP\n[F4] KEY\nPRESS\nPLS
+MOV 40,MW1		'SCREEN\nCONTROL
+BND		'
+BND		'
+NXB		'
+XIC S2094		'TP\n[F5] KEY\nPRESS
+BST		'
+OSR R997		'TP\n[F5] KEY\nPRESS\nPLS
+NXB		'
+XIC R997		'TP\n[F5] KEY\nPRESS\nPLS
+MOV 100,MW1		'SCREEN\nCONTROL
+BND		'
+BND		'
+NXB		'
+XIC S2095		'TP\n[F6] KEY\nPRESS
+BST		'
+OSR R998		'TP\n[F6] KEY\nPRESS\nPLS
+NXB		'
+XIC R998		'TP\n[F6] KEY\nPRESS\nPLS
+MOV 300,MW1		'SCREEN\nCONTROL
+BND		'
+BND		'
+NXB		'
+XIC S2096		'TP\n[F7] KEY\nPRESS
+BST		'
+OSR R999		'TP\n[F7] KEY\nPRESS\nPLS
+NXB		'
+XIC R999		'TP\n[F7] KEY\nPRESS\nPLS
+MOV 911,MW1		'SCREEN\nCONTROL
+BND		'
+BND		'
+BND		'
+RUNG 135		'**** COMMON ROBOT MUTUAL INTERLOCK & NON INTEFERENCE
+XIC SP1		'항시 ON\n(SPECIAL)
+BST		'
+XIO FN1.X3		'정상/고장\n(GP.SS)
+XIC DO32		'로보트    원위치    (RB)
+COP 1,R977,8		'
+NXB		'
+XIC FN1.X3		'정상/고장\n(GP.SS)
+XIC FN1.X3		'정상/고장\n(GP.SS)
+COP 0,R977,8		'
+BND		'
+RUNG 136		'**** COMMON ROBOT 1 CYCLE TIME SW70 = 1
+XIC SP1		'항시 ON\n(SPECIAL)
+MOV 3,SW70		'ROBOT\n1 CYCLE\nTIME
+RUNG 137		'**** ERROR_DUMMY AUX
+BST		'
+XIC R32		'외부 \n로보트 정지보조
+NXB		'
+XIC R33		'시스텝 이상보조
+BND		'
+BST		'
+OTE R30		'부저 조건 보조
+NXB		'
+XIO R6		'이상해제  보조\n
+TON T31,100,3		'부저 정지 타임
+BND		'
+RUNG 138		'
+XIO R32		'외부 \n로보트 정지보조
+XIO R33		'시스텝 이상보조
+XIO R305		'로보트    배터리 드롭경보 보조
+XIO R306		'로보트    배터리 드롭경보 보조
+XIO R309		'건 팁마모 경보 보조
+INV		'
+OTE R31		'이상      데이타    디스플레이보조
+RUNG 139		'
+BST		'
+BST		'
+XIO R34		'종합 시스템이상 보조
+XIO R35		'종합 통신 이상  보조
+XIO R36		'종합 비젼 이상 보조
+XIO R37		'종합 용접 관련 이상 보조
+XIO R38		'종합 에어 이상  보조
+INV		'
+NXB		'
+XIO R39		'종합 냉각수이상 보조
+XIO R40		'팁드레서  관련 종합 이상보조
+INV		'
+BND		'
+NXB		'
+BST		'
+XIO R41		'종합 L/S  이상 보조
+XIO R42		'종합\nATC 용접\n이상
+XIO R43		'종합 외부 이상보조
+XIO R44		'TOTAL\nSEALER\nERROR AUX
+XIO R45		'TOTAL\nARC\nERROR AUX
+INV		'
+NXB		'
+XIO R46		'종합 스터드이상 보조
+XIO R47		'종합\nARC 이상\n보조
+XIO R48		'볼트 종합 이상
+XIO R49		'실러 종합 이상 보조
+INV		'
+BND		'
+BND		'
+OTE R60		'로보트    정지\nCOLLECTION
+RUNG 140		'
+XIO R60		'로보트    정지\nCOLLECTION
+BST		'
+XIO R380		'외부 \n일시정지  이상보조
+XIO R381		'로보트 차종비교      이상 보조
+INV		'
+OTE R32		'외부 \n로보트 정지보조
+NXB		'
+XIO R385		'로보트\n고장 \n이상보조
+INV		'
+OTE R33		'시스텝 이상보조
+BND		'
+RUNG 141		'
+XIO R305		'로보트    배터리 드롭경보 보조
+XIO R312		'로보트    시스템    이상 보조
+XIO R313		'로보트 \n락 모드 \n이상 보조
+XIO R316		'로보트\n긴급정지\n이상보조
+XIO R317		'로보트    조작      이상 보조
+XIO R318		'스텝위치  이상 보조
+XIO R384		'로보트    인터록    이상보조
+XIO R388		'현재 PLT\n변수값\n비교이상
+INV		'
+OTE R34		'종합 시스템이상 보조
+RUNG 142		'
+XIO R320		'REMOTE\nI/O\nSTATION\n이상 보조
+XIO R321		'FIELDBUS\nTROUBLE\nERROR AUX
+XIO R322		'필드버스\nIDLE\n이상보조
+XIO R323		'필드버스\nTROUBLE\n이상보조
+INV		'
+OTE R35		'종합 통신 이상  보조
+RUNG 143		'
+BST		'
+BST		'
+XIO R330		'ROBOT\nTC\n용접기 이상보조
+XIO R331		'PED1\nTC\n용접기 이상보조
+XIO R332		'PED2\nTC\n용접기 이상보조
+XIO R333		'PED3\nTC\n용접기 이상보조
+XIO R334		'PED4\nTC\n용접기 이상보조
+INV		'
+NXB		'
+XIO R355		'로보트건\nT/R 온도  이상 보조
+XIO R356		'정치건 1\nT/R 온도  이상 보조
+XIO R357		'정치건 2\nT/R 온도  이상 보조
+XIO R358		'정치건 3\nT/R 온도  이상 보조
+INV		'
+BND		'
+NXB		'
+XIO R335		'서보건    WELLD OFF 이상 보조
+XIO R336		'건가압 이상보조
+XIO R337		'용접완료  이상 보조
+XIO R338		'용접가능  이상 보조
+XIO R339		'용접조건  미설정 이상보조
+INV		'
+BND		'
+OTE R37		'종합 용접 관련 이상 보조
+RUNG 144		'
+XIO R340		'로보트\n공기압\n이상보조
+XIO R341		'정치건1\n공기압\n이상 보조
+XIO R342		'정치건2\n공기압\n이상 보조
+XIO R343		'정치건3\n공기압\n이상 보조
+XIO R344		'정치건4\n공기압\n이상 보조
+XIO R421		'볼트\n공기압\n이상보조
+INV		'
+OTE R38		'종합 에어 이상  보조
+RUNG 145		'
+XIO R345		'로보트 건\n냉각수 이상보조
+XIO R346		'정치건 1\n냉각수 이상보조
+XIO R347		'정치건 2\n냉각수 이상보조
+XIO R348		'정치건 3\n냉각수\n이상보조
+XIO R349		'정치건 4\n냉각수\n이상보조
+XIO R420		'볼트\n냉각수\n이상보조
+INV		'
+OTE R39		'종합 냉각수이상 보조
+RUNG 146		'
+BST		'
+XIO R350		'로보트 ATD모터 과부하이상
+XIO R351		'정치건1   ATD 모터  과부하 이상
+XIO R352		'정치건2   ATD 모터  과부하 이상
+XIO R353		'정치건3   ATD 모터  과부하 이상
+XIO R364		'팁드레서  전원 NFB\n트립이상
+INV		'
+NXB		'
+XIO R378		'ATD\n모터\n회전 감지 이상보조
+XIO R379		'용접팁    저항 검출 이상보조
+XIO R389		'칼라센서\n이상보조
+INV		'
+BND		'
+OTE R40		'팁드레서  관련 종합 이상보조
+RUNG 147		'
+BST		'
+XIO R360		'핸드      파트 감지 이상보조
+XIO R361		'핸드      L/S 감지  이상보조
+XIO R362		'핸드 진공 흡작 센서 이상
+XIO R363		'핸드      핀 L/S 감지이상보조
+XIO R365		'정치건1   ATD 전/후진L/S 이상
+XIO R366		'정치건2   ATD 전/후진L/S 이상
+XIO R368		'정치건1   ATD 전/후진L/S 이상
+XIO R376		'정치건1   ATD SHIFT L/S 이상
+XIO R369		'정치건2   ATD SHIFT L/S 이상
+XIO R387		'버큠 충돌 감지 이상
+INV		'
+NXB		'
+XIO R370		'AIR RB\nGUN\nL/S\n이상 보조
+XIO R371		'AIR정치건1L/S\n이상 보조
+XIO R372		'AIR정치건2L/S\n이상 보조
+XIO R373		'AIR PED3\nGUN\nL/S\n이상 보조
+XIO R374		'AIR PED4\nGUN\nL/S\n이상 보조
+XIO R375		'정치건1   GUN SHIFT L/S 이상
+XIO R412		'스터드1 건스윙 L/S  이상보조
+INV		'
+BND		'
+OTE R41		'종합 L/S  이상 보조
+RUNG 148		'
+XIO R381		'로보트 차종비교      이상 보조
+XIO R382		'외부 기동 이상보조
+XIO R383		'외부\n이상해제  시간초과\n이상보조
+INV		'
+OTE R43		'종합 외부 이상보조
+RUNG 149		'
+XIO R410		'스터드    종합\n이상보조
+XIO R411		'스터드    볼트 감지 이상
+XIO R412		'스터드1 건스윙 L/S  이상보조
+XIO R413		'스터드2 건스윙 L/S  이상보조
+INV		'
+OTE R46		'종합 스터드이상 보조
+RUNG 150		'
+XIO R430		'CO2\n용접기\n이상보조
+XIO R431		'ARC\n충돌센서\n이상보조
+XIO R432		'ARC\n용접기\n사용가능\n이상보조
+INV		'
+OTE R47		'종합\nARC 이상\n보조
+RUNG 151		'
+XIO R422		'볼트\n용접기\n이상보조
+XIO R423		'볼트감지\n이상
+XIO R424		'볼트\n건L/S\n이상
+INV		'
+OTE R48		'볼트 종합 이상
+RUNG 152		'
+XIO R392		'실러      누락 감지 이상
+XIO R393		'실러비전\n체크이상\n(구조용)
+XIO R394		'실러 종합 이상 보조 (SWIRL)
+XIO R398		'마스틱 실러펌프 압력 이상
+XIO R399		'실러 노즐 파손 이상\n보조
+INV		'
+OTE R49		'실러 종합 이상 보조
+RUNG 153		'**** ALARM KILL RESET
+XIC SP1		'항시 ON\n(SPECIAL)
+BST		'
+XIO FN1.X3		'정상/고장\n(GP.SS)
+OSR R930		'정상/고장  펄스
+NXB		'
+XIC R930		'정상/고장  펄스
+COP 0,K301,140		'COUNT UP\nCOMPLETE\nFORCE\nOFF
+BND		'
+RUNG 154		'******AXISCTRL ON****
+XIC SP1		'항시 ON\n(SPECIAL)
+MOV SW23,MW700		'
+RUNG 155		'**** REMOTE I/O ABNORMAL AUX & TOUCH MONITOR
+XIC SP1		'항시 ON\n(SPECIAL)
+MOV 1,SW40		'ROBOT POSITION
+RUNG 156		'**** PLC CALL DATA SET
+XIC SP1		'항시 ON\n(SPECIAL)
+BST		'
+EQU MW989,1		'
+OTE K801		'로보트 건1용접 사용\n(SET)
+NXB		'
+BST		'
+EQU MW990,1		'
+OTE K811		'로보트 건2용접 사용\n(SET)
+NXB		'
+BST		'
+EQU MW991,1		'
+OTE K821		'핸드 사용\n(SET)
+NXB		'
+BST		'
+EQU MW992,1		'
+OTE K861		'정치건1\n사용\n(SET)
+NXB		'
+BST		'
+EQU MW993,1		'
+OTE K871		'정치건2\n사용\n(SET)
+NXB		'
+BST		'
+EQU MW994,1		'
+OTE K881		'정치건3\n사용\n(SET)
+NXB		'
+BST		'
+EQU MW995,1		'
+OTE K872		'쌍두 정치건사용\n(SET)
+NXB		'
+BST		'
+EQU MW996,1		'
+OTE K901		'스터드 1\n사용\n(SET)
+NXB		'
+BST		'
+EQU MW997,1		'
+OTE K911		'스터드 2\n사용\n(SET)
+NXB		'
+BST		'
+EQU MW998,1		'
+OTE K931		'실러      사용\n(SET)
+NXB		'
+BST		'
+EQU MW999,1		'
+OTE K921		'볼트      프로젝트\n사용      (SET)
+NXB		'
+BST		'
+EQU MW1000,1		'
+OTE K981		'포지셔너 \n사용\n(SET)
+NXB		'
+EQU MW950,1		'
+OTE K971		'아크용접  사용\n(SET)
+BND		'
+BND		'
+BND		'
+BND		'
+BND		'
+BND		'
+BND		'
+BND		'
+BND		'
+BND		'
+BND		'
+BND		'
+RUNG 157		'**** PLC CALL DATA RST
+XIC SP1		'항시 ON\n(SPECIAL)
+BST		'
+EQU MW989,0		'
+OTU K801		'로보트 건1용접 사용\n(SET)
+NXB		'
+BST		'
+EQU MW990,0		'
+OTU K811		'로보트 건2용접 사용\n(SET)
+NXB		'
+BST		'
+EQU MW991,0		'
+OTU K821		'핸드 사용\n(SET)
+NXB		'
+BST		'
+EQU MW992,0		'
+OTU K861		'정치건1\n사용\n(SET)
+NXB		'
+BST		'
+EQU MW993,0		'
+OTU K871		'정치건2\n사용\n(SET)
+NXB		'
+BST		'
+EQU MW994,0		'
+OTU K881		'정치건3\n사용\n(SET)
+NXB		'
+BST		'
+EQU MW995,0		'
+OTU K872		'쌍두 정치건사용\n(SET)
+NXB		'
+BST		'
+EQU MW996,0		'
+OTU K901		'스터드 1\n사용\n(SET)
+NXB		'
+BST		'
+EQU MW997,0		'
+OTU K911		'스터드 2\n사용\n(SET)
+NXB		'
+BST		'
+EQU MW998,0		'
+OTU K931		'실러      사용\n(SET)
+NXB		'
+BST		'
+EQU MW999,0		'
+OTU K951		'MARKER\nUSE/\nNOT USE\n(SET)
+NXB		'
+BST		'
+EQU MW1000,0		'
+OTU K981		'포지셔너 \n사용\n(SET)
+NXB		'
+EQU MW950,0		'
+OTU K971		'아크용접  사용\n(SET)
+BND		'
+BND		'
+BND		'
+BND		'
+BND		'
+BND		'
+BND		'
+BND		'
+BND		'
+BND		'
+BND		'
+BND		'
+RUNG 158		'
+XIC K801		'로보트 건1용접 사용\n(SET)
+CALL 1		'
+RUNG 159		'
+XIC K821		'핸드 사용\n(SET)
+CALL 6		'
+RUNG 160		'
+XIC K861		'정치건1\n사용\n(SET)
+CALL 2		'
+RUNG 161		'
+XIC K871		'정치건2\n사용\n(SET)
+CALL 3		'
+RUNG 162		'
+XIC K881		'정치건3\n사용\n(SET)
+CALL 4		'
+RUNG 163		'
+XIC SP2		'항시 OFF\n(SPECIAL)
+CALL 5		'
+RUNG 164		'
+XIC K901		'스터드 1\n사용\n(SET)
+CALL 8		'
+RUNG 165		'
+XIC K911		'스터드 2\n사용\n(SET)
+CALL 9		'
+RUNG 166		'
+XIC K931		'실러      사용\n(SET)
+CALL 7		'
+RUNG 167		'
+XIC K921		'볼트      프로젝트\n사용      (SET)
+CALL 10		'
+RUNG 168		'
+XIC K971		'아크용접  사용\n(SET)
+CALL 13		'
+RUNG 169		'
+XIC K981		'포지셔너 \n사용\n(SET)
+CALL 14		'
+RUNG 170		'
+XIC SP1		'항시 ON\n(SPECIAL)
+CALL 30		'

@@ -1,0 +1,1735 @@
+Ladder File Format Version: 4.00
+RUNG 1		'**** ERROR CHECK START
+XIO R25		'건1\n팁드레싱  카운터    보조
+XIO R26		'건2\n팁드레싱  카운터    보조
+XIO R27		'정치건1   팁드레싱  카운터    보조
+XIO R28		'정치건2   팁드레싱  카운터    보조
+XIO R29		'건5       팁드레싱  카운터    보조
+INV		'
+XIC R181		'용접건    사용 보조\n
+XIO K301		'COUNT UP\nCOMPLETE\nFORCE\nOFF
+BST		'
+OTE R301		'COUNT UP\nCOMPLETE\nWARNING\nAUX
+NXB		'
+MOV 1,MW301		'
+BND		'
+RUNG 2		'**** COMMON BATTERY DROP ERROR AUX
+BST		'
+XIC DO102		'배터리\n드롭 경보\n(RB)
+NXB		'
+XIC R306		'로보트    배터리 드롭경보 보조
+XIO R6		'이상해제  보조\n
+BND		'
+XIO K306		'배터리\n드롭 경보\n해제
+BST		'
+OTE R306		'로보트    배터리 드롭경보 보조
+NXB		'
+MOV 6,MW306		'
+BND		'
+RUNG 3		'**** COMMON INTERLOCK ERROR AUX
+XIC SP2		'항시 OFF\n(SPECIAL)
+XIO K307		'인터록    ABNORMAL\nWARNING\n해제
+BST		'
+OTE R307		'인터록    ABNORMAL\nWARNING\nAUX
+NXB		'
+MOV 7,MW307		'
+BND		'
+RUNG 4		'**** ATD COUNT NOT SETTING AUX
+BST		'
+LEQ MW100,0		'
+XIC K801		'로보트 건1용접 사용\n(SET)
+NXB		'
+BST		'
+LEQ MW102,0		'
+XIC K811		'로보트 건2용접 사용\n(SET)
+NXB		'
+BST		'
+LEQ MW104,0		'
+XIC K861		'정치건1\n사용\n(SET)
+NXB		'
+BST		'
+LEQ MW106,0		'
+XIC K871		'정치건2\n사용\n(SET)
+NXB		'
+LEQ MW108,0		'
+XIC K881		'정치건3\n사용\n(SET)
+BND		'
+BND		'
+BND		'
+BND		'
+XIO K308		'팁드레서\n카운터\n미설정\n알람해제
+XIO FB5.X11		'무부하    시운전 모드(LINE)
+BST		'
+OTE R308		'팁드레서\n카운터\n미설정\n알람
+NXB		'
+MOV 8,MW308		'
+BND		'
+RUNG 5		'**** GUN TIP CONSUMP WARNING AUX
+XIO DO104		'건1\n팁마모경보
+XIO DO105		'건2\n팁마모경보
+XIO DO106		'건3\n팁마모경보
+INV		'
+XIO K309		'팁마보경보패스
+BST		'
+OTE R309		'건 팁마모 경보 보조
+NXB		'
+MOV 9,MW309		'
+BND		'
+RUNG 6		'**** COMMON EMERGEYCY STOP ERROR
+BST		'
+XIC DO24		'비상정지  (RB)
+NXB		'
+XIC R310		'로보트\n비상정지중이상
+XIO R6		'이상해제  보조\n
+BND		'
+XIO K310		'비상정지중패스
+BST		'
+OTE R310		'로보트\n비상정지중이상
+NXB		'
+MOV 10,MW310		'
+BND		'
+RUNG 7		'**** COMMON SAFETY PLUG ERROR AUX
+BST		'
+XIO S487		'안전플러그오픈중 \n
+XIC DO30		'자동모드  (RB)
+NXB		'
+XIC R311		'안전플러그오픈중\n이상보조
+XIO R6		'이상해제  보조\n
+BND		'
+XIO K311		'안전플러그이상\n패스
+XIC SP2		'항시 OFF\n(SPECIAL)
+BST		'
+XIC T135		'안전플러그\n이상지연
+BST		'
+OTE R311		'안전플러그오픈중\n이상보조
+NXB		'
+MOV 11,MW311		'
+BND		'
+NXB		'
+TON T135,100,1		'안전플러그\n이상지연
+BND		'
+RUNG 8		'**** COMMON ROBOT TOTAL ERROR AUX
+BST		'
+XIC DO27		'로보트    시스템이상 (RB)
+NXB		'
+XIC R312		'로보트    시스템    이상 보조
+XIO R6		'이상해제  보조\n
+BND		'
+XIO K312		'로보트 \n시스템이상패스
+BST		'
+OTE R312		'로보트    시스템    이상 보조
+NXB		'
+MOV 12,MW312		'
+BND		'
+RUNG 9		'**** COMMON ROBOT LOCK STATUS ERROR AUX
+BST		'
+XIC DO99		'로보트\n락모드
+XIC DO31		'운전준비  (RB)
+XIO FN1.X3		'정상/고장\n(GP.SS)
+NXB		'
+XIC R313		'로보트 \n락 모드 \n이상 보조
+XIO R6		'이상해제  보조\n
+BND		'
+XIO K313		'로보트 \n락모드\n패스
+BST		'
+OTE R313		'로보트 \n락 모드 \n이상 보조
+NXB		'
+MOV 13,MW313		'
+BND		'
+RUNG 10		'**** PED GUN 1 SEARCH  ERROR AUX
+XIC K861		'정치건1\n사용\n(SET)
+BST		'
+XIC DO27		'로보트    시스템이상 (RB)
+XIC DO74		'정치건1   서치중
+NXB		'
+XIC R314		'건서치    이상보조
+XIO R6		'이상해제  보조\n
+BND		'
+XIO K314		'정치건1\n서치\n이상패스
+BST		'
+OTE R314		'건서치    이상보조
+NXB		'
+MOV 14,MW314		'
+BND		'
+RUNG 11		'**** PED GUN 2 SEARCH  ERROR AUX
+XIC K871		'정치건2\n사용\n(SET)
+BST		'
+XIC DO27		'로보트    시스템이상 (RB)
+XIC DO76		'정치건2   건시치중
+NXB		'
+XIC R315		'정치건2\n서치\n이상보조
+XIO R6		'이상해제  보조\n
+BND		'
+XIO K315		'정치건2\n서치\n이상패스
+BST		'
+OTE R315		'정치건2\n서치\n이상보조
+NXB		'
+MOV 15,MW315		'
+BND		'
+RUNG 12		'**** COMMON ROBOT QUICK STOP ERROR AUX
+BST		'
+XIC DO60		'긴급정지  (RB)
+NXB		'
+XIC R316		'로보트\n긴급정지\n이상보조
+XIO R6		'이상해제  보조\n
+BND		'
+XIO K316		'로보트\n긴급정지\n이상패스
+BST		'
+OTE R316		'로보트\n긴급정지\n이상보조
+NXB		'
+MOV 16,MW316		'
+BND		'
+RUNG 13		'**** COMMON ROBOT OPERATION ERROR AUX
+BST		'
+XIC K1		'전자동    모드\n(OP)
+XIC DO31		'운전준비  (RB)
+XIC DO97		'로보트 \n조작이상\n(RB)
+NXB		'
+XIC R317		'로보트    조작      이상 보조\n
+XIO R6		'이상해제  보조\n
+BND		'
+XIO K317		'로보트    조작      이상 패스\n
+BST		'
+OTE R317		'로보트    조작      이상 보조\n
+NXB		'
+MOV 17,MW317		'
+BND		'
+RUNG 14		'**** COMMON STEP SET ERROR AUX
+BST		'
+XIC DO31		'운전준비  (RB)
+XIC DO98		'스텝 SET\n알람
+NXB		'
+XIC R318		'스텝위치  이상 보조
+XIO R6		'이상해제  보조\n
+BND		'
+XIO K318		'스텝위치  이상 패스
+BST		'
+OTE R318		'스텝위치  이상 보조
+NXB		'
+MOV 18,MW318		'
+BND		'
+RUNG 15		'**** COMMON FIELDBUS ERROR AUX
+BST		'
+EQU SW140,0		'
+EQU SW141,0		'
+EQU SW142,0		'
+EQU SW143,0		'
+INV		'
+XIO S2297		'
+NXB		'
+XIC R320		'REMOTE\nI/O\nSTATION\n이상 보조\n
+XIO R6		'이상해제  보조\n
+BND		'
+XIO K320		'REMOTE\nI/O\nSTATION\n이상패스\n
+BST		'
+OTE R320		'REMOTE\nI/O\nSTATION\n이상 보조\n
+NXB		'
+MOV 20,MW320		'
+BND		'
+RUNG 16		'**** COMMON FIELDBUS IDLE ERROR AUX
+BST		'
+XIC DO101		'Fildbus   Idle      (RB)
+NXB		'
+XIC R322		'필드버스\nIDLE\n이상보조
+XIO R6		'이상해제  보조\n
+BND		'
+XIO K322		'필드버스\n통신이상\n패스
+BST		'
+OTE R322		'필드버스\nIDLE\n이상보조
+NXB		'
+MOV 22,MW322		'
+BND		'
+RUNG 17		'**** COMMON FIELDBUS TROUBLE ERROR AUX
+BST		'
+XIC DO100		'Fildbus\nTrouble   (RB)
+NXB		'
+XIC R323		'필드버스\nTROUBLE\n이상보조\n
+XIO R6		'이상해제  보조\n
+BND		'
+XIO K323		'필드버스\n통신이상\n패스
+BST		'
+OTE R323		'필드버스\nTROUBLE\n이상보조\n
+NXB		'
+MOV 23,MW323		'
+BND		'
+RUNG 18		'**** ROBOT GUN WELDER POWER ERROR AUX
+BST		'
+XIC FN5.X2		'용접기\n이상\n(R1 TC)
+NXB		'
+XIC R330		'ROBOT\nTC\n용접기 이상보조
+XIO R6		'이상해제  보조\n
+BND		'
+XIO K330		'ROBOT\nTC\n용접기 이상패스
+BST		'
+OTE R330		'ROBOT\nTC\n용접기 이상보조
+NXB		'
+MOV 30,MW330		'
+BND		'
+RUNG 19		'**** PED GUN 1 WELDER POWER ERROR AUX
+XIC K861		'정치건1\n사용\n(SET)
+BST		'
+XIC FN10.X2		'용접기\n이상\n(P1 TC)
+NXB		'
+XIC R331		'PED1\nTC\n용접기 이상보조
+XIO R6		'이상해제  보조\n
+BND		'
+XIO K331		'PED1\nTC\n용접기 이상패스
+BST		'
+OTE R331		'PED1\nTC\n용접기 이상보조
+NXB		'
+MOV 31,MW331		'
+BND		'
+RUNG 20		'**** PED GUN 2  WELDER POWER ERROR AUX
+XIC K871		'정치건2\n사용\n(SET)
+BST		'
+XIC FN12.X2		'용접기\n이상\n(P2 TC)
+NXB		'
+XIC R332		'PED2\nTC\n용접기 이상보조
+XIO R6		'이상해제  보조\n
+BND		'
+XIO K332		'PED2\nTC\n용접기 이상패스
+BST		'
+OTE R332		'PED2\nTC\n용접기 이상보조
+NXB		'
+MOV 32,MW332		'
+BND		'
+RUNG 21		'**** COMMON FIELDBUS TROUBLE ERROR AUX
+BST		'
+BST		'
+XIC K801		'로보트 건1용접 사용\n(SET)
+NXB		'
+BST		'
+XIC K861		'정치건1\n사용\n(SET)
+NXB		'
+XIC K871		'정치건2\n사용\n(SET)
+BND		'
+BND		'
+XIO DO103		'서보건    WELLD OFF (RB)
+NXB		'
+XIC R335		'서보건    WELLD OFF 이상 보조
+XIO R6		'이상해제  보조\n
+BND		'
+XIO K335		'서보건    WELLD OFF 이상패스
+BST		'
+OTE R335		'서보건    WELLD OFF 이상 보조
+NXB		'
+MOV 35,MW335		'
+BND		'
+RUNG 22		'****  GUN PRESSING OFF ERROR AUX
+BST		'
+BST		'
+BST		'
+XIC T11		'건1 가압  OFF
+XIC K801		'로보트 건1용접 사용\n(SET)
+NXB		'
+XIC T61		'정치건1  건가압 OFF
+XIC K861		'정치건1\n사용\n(SET)
+BND		'
+NXB		'
+BST		'
+XIC T63		'정치건2  건가압 OFF
+XIC K871		'정치건2\n사용\n(SET)
+NXB		'
+BST		'
+XIC SP2		'항시 OFF\n(SPECIAL)
+XIC K881		'정치건3\n사용\n(SET)
+NXB		'
+BST		'
+XIC SP2		'항시 OFF\n(SPECIAL)
+XIC K891		'정치건4\n사용\n(SET)
+NXB		'
+XIC T98		'볼트\n건가압\nOFF
+XIC K921		'볼트      프로젝트\n사용      (SET)
+BND		'
+BND		'
+BND		'
+BND		'
+NXB		'
+XIC R336		'건가압 이상보조
+XIO R6		'이상해제  보조\n
+BND		'
+XIO K336		'건가압 이상패스
+BST		'
+OTE R336		'건가압 이상보조
+NXB		'
+MOV 36,MW336		'
+BND		'
+RUNG 23		'**** WELDING ERROR AUX
+XIC SP1		'항시 ON\n(SPECIAL)
+XIO K337		'용접기 \n이상 패스
+BST		'
+BST		'
+XIC FN5.X2		'용접기\n이상\n(R1 TC)
+XIC K801		'로보트 건1용접 사용\n(SET)
+NXB		'
+BST		'
+XIC FN10.X2		'용접기\n이상\n(P1 TC)
+XIC K861		'정치건1\n사용\n(SET)
+NXB		'
+BST		'
+XIC FN12.X2		'용접기\n이상\n(P2 TC)
+XIC K871		'정치건2\n사용\n(SET)
+NXB		'
+BST		'
+XIC FN14.X2		'용접기\n이상\n(P3 TC)
+XIC K881		'정치건3\n사용\n(SET)
+NXB		'
+XIC FN16.X2		'용접기\n이상\n(P4 TC)
+XIC K891		'정치건4\n사용\n(SET)
+BND		'
+BND		'
+BND		'
+BND		'
+TON T34,100,5		'TC 용접기\n이상 지연
+NXB		'
+BST		'
+XIC T34		'TC 용접기\n이상 지연
+NXB		'
+XIC R337		'용접완료  이상 보조
+XIO R6		'이상해제  보조\n
+BND		'
+BST		'
+OTE R337		'용접완료  이상 보조
+NXB		'
+MOV 37,MW337		'
+BND		'
+BND		'
+RUNG 24		'**** WELDING POSSIBLE ERROR
+BST		'
+BST		'
+BST		'
+XIO DO1		'용접 시험 모드      (TP KEY)
+XIO DO77		'팁드레서1  모터 ON
+XIO DO78		'팁드레서2  모터 ON
+XIO DO79		'정치건1\n팁드레서  모터ON	\n(RB)
+XIO DO80		'정치건2\n팁드레서  모터ON	\n(RB)
+INV		'
+NXB		'
+BST		'
+XIO R17		'로봇건    용접 가능 상태 보조
+XIC K801		'로보트 건1용접 사용\n(SET)
+NXB		'
+BST		'
+XIO R97		'정치건 1  용접 가능 상태 보조\n
+XIC K861		'정치건1\n사용\n(SET)
+NXB		'
+BST		'
+XIO R98		'정치건 2  용접 가능 상태 보조\n
+XIC K871		'정치건2\n사용\n(SET)
+NXB		'
+XIO R99		'볼트\n용접 가능\n상태 보조\n
+XIC K921		'볼트      프로젝트\n사용      (SET)
+BND		'
+BND		'
+BND		'
+XIC R181		'용접건    사용 보조\n
+BND		'
+XIC DO31		'운전준비  (RB)
+NEQ SW23,63		'현재프로그램
+NEQ SW261,61		'
+NEQ SW271,62		'
+NXB		'
+XIC K801		'로보트 건1용접 사용\n(SET)
+XIC DO77		'팁드레서1  모터 ON
+XIC DO30		'자동모드  (RB)
+XIO R23		'팁드레서  프로그램 \nSET\n보조
+NEQ SW23,63		'현재프로그램
+NEQ SW23,31		'
+BND		'
+NXB		'
+XIC R338		'용접가능  이상 보조
+XIO R6		'이상해제  보조\n
+BND		'
+XIO K338		'용접가능  이상 패스
+BST		'
+XIC T36		'용접가능\n이상지연
+OTE R338		'용접가능  이상 보조
+NXB		'
+BST		'
+MOV 38,MW338		'
+NXB		'
+TON T36,10,5		'용접가능\n이상지연
+BND		'
+BND		'
+RUNG 25		'**** WELDING CONDITION ERROR AUX
+BST		'
+BST		'
+XIC R181		'용접건    사용 보조\n
+BST		'
+XIC DO43		'로보트건1 용접 요구 (RB)
+NXB		'
+XIC DO44		'로보트건2 용접 요구 (RB)
+BND		'
+NXB		'
+XIC R182		'정치건    사용 체크\n(GUN)
+BST		'
+XIC DO45		'정치건1\n용접 요구 (RB)
+NXB		'
+BST		'
+XIC DO46		'정치건2\n용접 요구 (RB)
+NXB		'
+XIC DO47		'정치건3\n용접 요구 (RB)
+BND		'
+BND		'
+BND		'
+EQU RW59,0		'
+EQU RW61,0		'
+NXB		'
+XIC R339		'용접조건  미설정 이상보조
+XIO R6		'이상해제  보조\n
+BND		'
+XIO K339		'용접조건\n미설정 \n이상패스
+BST		'
+BST		'
+XIC T39		'용접조건  미설정 이상지연
+OTE R339		'용접조건  미설정 이상보조
+NXB		'
+TON T39,100,1		'용접조건  미설정 이상지연
+BND		'
+NXB		'
+MOV 39,MW339		'
+BND		'
+RUNG 26		'**** ROBOT GUN AIR ERROR AUX
+XIC K821		'핸드 사용\n(SET)
+BST		'
+XIO FN3.X4		'로보트\n공기압\n정상
+NXB		'
+XIC R340		'로보트\n공기압\n이상보조
+XIO R6		'이상해제  보조\n
+BND		'
+XIO K340		'로보트\n공기압\n이상패스
+BST		'
+OTE R340		'로보트\n공기압\n이상보조
+NXB		'
+MOV 40,MW340		'
+BND		'
+RUNG 27		'**** ROBOT GUN AIR ERROR AUX
+XIC K861		'정치건1\n사용\n(SET)
+BST		'
+XIO FN9.X4		'정치건1\n공기압\n정상
+NXB		'
+XIC R341		'정치건1\n공기압\n이상 보조
+XIO R6		'이상해제  보조\n
+BND		'
+XIO K341		'정치건1\n공기압\n이상패스
+BST		'
+OTE R341		'정치건1\n공기압\n이상 보조
+NXB		'
+MOV 41,MW341		'
+BND		'
+RUNG 28		'**** PED GUN 2 AIR ERROR AUX
+XIC K871		'정치건2\n사용\n(SET)
+XIO K872		'쌍두 정치건사용\n(SET)
+BST		'
+XIO FN11.X4		'정치건2\n공기압\n정상
+NXB		'
+XIC R342		'정치건2\n공기압\n이상 보조
+XIO R6		'이상해제  보조\n
+BND		'
+XIO K342		'정치건2\n공기압\n이상패스
+BST		'
+OTE R342		'정치건2\n공기압\n이상 보조
+NXB		'
+MOV 42,MW342		'
+BND		'
+RUNG 29		'**** ROBOT GUN WATER CUTOFF ERROR AUX
+XIC K801		'로보트 건1용접 사용\n(SET)
+BST		'
+BST		'
+BST		'
+XIO FN3.X5		'로보트건\n냉각수\n정상
+NXB		'
+XIC FB5.X45		'냉각수    차단      (LINE)
+BND		'
+XIO FB5.X12		'용접 ON   시운전모드(LINE)
+NXB		'
+XIC K2		'수동      모드\n(OP)
+XIC R508		'수동\n냉각수\n차단\n(GP)
+XIC R515		'트리거\nENABLE\n(GP)
+XIO DO29		'로보트    기동중    (RB)
+BND		'
+NXB		'
+XIC R345		'로보트 건\n냉각수 이상보조
+XIO R6		'이상해제  보조\n
+BND		'
+XIO K345		'로보트 건\n냉각수\n이상패스
+BST		'
+OTE R345		'로보트 건\n냉각수 이상보조
+NXB		'
+MOV 45,MW345		'
+BND		'
+RUNG 30		'**** PED GUN 1 WATER CUTOFF ERROR AUX
+XIC K861		'정치건1\n사용\n(SET)
+BST		'
+BST		'
+BST		'
+BST		'
+XIO FN9.X5		'정치건1\n냉각수\n정상
+NXB		'
+XIC K872		'쌍두 정치건사용\n(SET)
+XIO FN9.X6		'정치건2\n냉각수 \n정상
+BND		'
+NXB		'
+XIC FB5.X45		'냉각수    차단      (LINE)
+BND		'
+XIO FB5.X12		'용접 ON   시운전모드(LINE)
+NXB		'
+XIC K2		'수동      모드\n(OP)
+XIC R549		'수동\n냉각수\n차단\n(GP)
+XIC R515		'트리거\nENABLE\n(GP)
+XIO DO29		'로보트    기동중    (RB)
+BND		'
+NXB		'
+XIC R346		'정치건 1\n냉각수 이상보조
+XIO R6		'이상해제  보조\n
+BND		'
+XIO K346		'정치건 1\n냉각수 이상패스
+BST		'
+OTE R346		'정치건 1\n냉각수 이상보조
+NXB		'
+MOV 46,MW346		'
+BND		'
+RUNG 31		'**** PED GUN 2 WATER CUTOFF ERROR AUX
+XIC K871		'정치건2\n사용\n(SET)
+XIO K872		'쌍두 정치건사용\n(SET)
+BST		'
+BST		'
+BST		'
+XIO FN11.X5		'정치건2\n냉각수 \n정상
+NXB		'
+XIC FB5.X45		'냉각수    차단      (LINE)
+BND		'
+XIO FB5.X12		'용접 ON   시운전모드(LINE)
+NXB		'
+XIC K2		'수동      모드\n(OP)
+XIC R564		'수동\n냉각수\n차단\n(GP)
+XIC R515		'트리거\nENABLE\n(GP)
+XIO DO29		'로보트    기동중    (RB)
+BND		'
+NXB		'
+XIC R347		'정치건 2\n냉각수 이상보조
+XIO R6		'이상해제  보조\n
+BND		'
+XIO K347		'정치건 2\n냉각수 이상패스
+BST		'
+OTE R347		'정치건 2\n냉각수 이상보조
+NXB		'
+MOV 47,MW347		'
+BND		'
+RUNG 32		'**** ROBOT GUN ATD OVERLOAD ERROR AUX
+XIC K801		'로보트 건1용접 사용\n(SET)
+BST		'
+XIO FN3.X7		'로보트 건\nATD모터 \n과부하
+NXB		'
+XIC R350		'로보트 ATD모터 과부하이상
+XIO R6		'이상해제  보조\n
+BND		'
+XIO K350		'로보트 ATD모터 과부하이상패스
+BST		'
+OTE R350		'로보트 ATD모터 과부하이상
+NXB		'
+MOV 50,MW350		'
+BND		'
+RUNG 33		'**** PED GUN 1 ATD OVERLOAD ERROR AUX
+XIC K861		'정치건1\n사용\n(SET)
+BST		'
+XIO FN9.X7		'정치건1\nATD모터 \n과부하
+NXB		'
+XIC R351		'정치건1   ATD 모터  과부하 이상
+XIO R6		'이상해제  보조\n
+BND		'
+XIO K351		'정치건1   ATD 모터  과부하 이상패스
+BST		'
+OTE R351		'정치건1   ATD 모터  과부하 이상
+NXB		'
+MOV 51,MW351		'
+BND		'
+RUNG 34		'**** PED GUN 2 ATD OVERLOAD ERROR AUX
+XIC K871		'정치건2\n사용\n(SET)
+XIO K872		'쌍두 정치건사용\n(SET)
+BST		'
+XIO FN11.X7		'정치건2\nATD모터 \n과부하
+NXB		'
+XIC R352		'정치건2   ATD 모터  과부하 이상
+XIO R6		'이상해제  보조\n
+BND		'
+XIO K352		'정치건2   ATD 모터  과부하 이상패스
+BST		'
+OTE R352		'정치건2   ATD 모터  과부하 이상
+NXB		'
+MOV 52,MW352		'
+BND		'
+RUNG 35		'**** RB GUN 1 TR OVERLOAD ERROR AUX
+XIC K801		'로보트 건1용접 사용\n(SET)
+BST		'
+XIO FN4.X3		'로보트건\nT/R 온도  정상
+NXB		'
+XIC R355		'로보트건\nT/R 온도  이상 보조
+XIO R6		'이상해제  보조\n
+BND		'
+XIO K355		'로보트건\nT/R 온도  이상 패스
+XIC SP2		'항시 OFF\n(SPECIAL)
+BST		'
+OTE R355		'로보트건\nT/R 온도  이상 보조
+NXB		'
+MOV 55,MW355		'
+BND		'
+RUNG 36		'**** PED GUN 1 TR OVERLOAD ERROR AUX
+XIC K861		'정치건1\n사용\n(SET)
+BST		'
+XIO FN9.X3		'정치건1\nT/R 온도  정상
+NXB		'
+XIC R356		'정치건 1\nT/R 온도  이상 보조
+XIO R6		'이상해제  보조\n
+BND		'
+XIO K356		'정치건 1\nT/R 온도  이상 패스
+XIC SP2		'항시 OFF\n(SPECIAL)
+BST		'
+OTE R356		'정치건 1\nT/R 온도  이상 보조
+NXB		'
+MOV 56,MW356		'
+BND		'
+RUNG 37		'**** HAND PART CHECK ERROR AUX
+XIC K821		'핸드 사용\n(SET)
+BST		'
+BST		'
+XIC DI2		'핸드1\n클램프잠김확인\n(RB)
+NXB		'
+XIC DI37		'핸드\n진공흡착\n확인\n(RB)
+BND		'
+XIO DI1		'파트감지\n확인\n(RB)
+XIO DO40		'파트감지  패스      (RB)
+NXB		'
+XIC R360		'핸드      파트 감지 이상보조
+XIO R6		'이상해제  보조\n
+BND		'
+XIO K360		'핸드      파트 감지 이상패스
+XIO FB5.X11		'무부하    시운전 모드(LINE)
+BST		'
+XIC T160		'핸드      파트 감지 이상지연
+BST		'
+OTE R360		'핸드      파트 감지 이상보조
+NXB		'
+MOV 60,MW360		'
+BND		'
+NXB		'
+TON T160,100,3		'핸드      파트 감지 이상지연
+BND		'
+RUNG 38		'**** HAND L/S ERROR AUX
+XIC K821		'핸드 사용\n(SET)
+BST		'
+BST		'
+BST		'
+XIC DO2		'핸드1\n클램프잠김요구\n(RB)
+NXB		'
+XIC DO3		'핸드1\n클램프풀림요구\n(RB)
+BND		'
+BST		'
+XIC DO2		'핸드1\n클램프잠김요구\n(RB)
+XIO DI2		'핸드1\n클램프잠김확인\n(RB)
+NXB		'
+BST		'
+BST		'
+XIC DO3		'핸드1\n클램프풀림요구\n(RB)
+XIO DI3		'핸드1\n클램프풀림확인\n(RB)
+NXB		'
+XIO DI2		'핸드1\n클램프잠김확인\n(RB)
+XIO DI3		'핸드1\n클램프풀림확인\n(RB)
+BND		'
+NXB		'
+XIC DI2		'핸드1\n클램프잠김확인\n(RB)
+XIC DI3		'핸드1\n클램프풀림확인\n(RB)
+BND		'
+BND		'
+NXB		'
+BST		'
+XIC DO33		'핸드2\n클램프잠김요구\n(RB)
+NXB		'
+XIC DO34		'핸드2\n클램프풀림요구\n(RB)
+BND		'
+BST		'
+BST		'
+BST		'
+XIC DO33		'핸드2\n클램프잠김요구\n(RB)
+XIO DI33		'핸드2\n클램프잠김확인\n(RB)
+NXB		'
+XIC DO34		'핸드2\n클램프풀림요구\n(RB)
+XIO DI34		'핸드2\n클램프풀림확인\n(RB)
+BND		'
+NXB		'
+XIO DI33		'핸드2\n클램프잠김확인\n(RB)
+XIO DI34		'핸드2\n클램프풀림확인\n(RB)
+BND		'
+NXB		'
+XIC DI33		'핸드2\n클램프잠김확인\n(RB)
+XIC DI34		'핸드2\n클램프풀림확인\n(RB)
+BND		'
+BND		'
+NXB		'
+XIC R361		'핸드      L/S 감지  이상보조
+XIO R6		'이상해제  보조\n
+BND		'
+XIO K361		'핸드      L/S 감지  이상패스
+BST		'
+XIC T161		'핸드      L/S 감지  이상지연
+BST		'
+OTE R361		'핸드      L/S 감지  이상보조
+NXB		'
+MOV 61,MW361		'
+BND		'
+NXB		'
+TON T161,100,3		'핸드      L/S 감지  이상지연
+BND		'
+RUNG 39		'**** HAND VACUM  ERROR AUX
+XIC K821		'핸드 사용\n(SET)
+BST		'
+BST		'
+XIC DO37		'핸드\n진공흡착\n요구\n(RB)
+NXB		'
+XIC DO38		'핸드\n진공탈착\n요구\n(RB)
+BND		'
+BST		'
+BST		'
+XIC DO37		'핸드\n진공흡착\n요구\n(RB)
+XIO DI37		'핸드\n진공흡착\n확인\n(RB)
+NXB		'
+XIC DO38		'핸드\n진공탈착\n요구\n(RB)
+XIO DI38		'핸드\n진공탈착\n확인\n(RB)
+BND		'
+NXB		'
+BST		'
+XIO DI37		'핸드\n진공흡착\n확인\n(RB)
+XIO DI38		'핸드\n진공탈착\n확인\n(RB)
+NXB		'
+XIC DI37		'핸드\n진공흡착\n확인\n(RB)
+XIC DI38		'핸드\n진공탈착\n확인\n(RB)
+BND		'
+BND		'
+NXB		'
+XIC R362		'핸드 진공 흡작 센서 이상
+XIO R6		'이상해제  보조\n
+BND		'
+XIO K362		'핸드 진공 흡작 센서 이상패스
+BST		'
+XIC T162		'핸드 진공 흡작 센서 이상지연
+BST		'
+OTE R362		'핸드 진공 흡작 센서 이상
+NXB		'
+MOV 62,MW362		'
+BND		'
+NXB		'
+TON T162,100,3		'핸드 진공 흡작 센서 이상지연
+BND		'
+RUNG 40		'**** HAND L/S ERROR AUX
+XIC K821		'핸드 사용\n(SET)
+BST		'
+BST		'
+XIC DO35		'핸드\n핀전진\n요구\n(RB)
+NXB		'
+XIC DO36		'핸드\n핀후진\n요구\n(RB)
+BND		'
+BST		'
+BST		'
+XIC DO35		'핸드\n핀전진\n요구\n(RB)
+XIO DI35		'핸드\n핀전진\n확인\n(RB)
+NXB		'
+XIC DO36		'핸드\n핀후진\n요구\n(RB)
+XIO DI36		'핸드\n핀후진\n확인\n(RB)
+BND		'
+NXB		'
+BST		'
+XIO DI35		'핸드\n핀전진\n확인\n(RB)
+XIO DI36		'핸드\n핀후진\n확인\n(RB)
+NXB		'
+XIC DI35		'핸드\n핀전진\n확인\n(RB)
+XIC DI36		'핸드\n핀후진\n확인\n(RB)
+BND		'
+BND		'
+NXB		'
+XIC R363		'핸드      핀 L/S 감지이상보조
+XIO R6		'이상해제  보조\n
+BND		'
+XIO K363		'핸드      핀 L/S 감지이상패스
+BST		'
+XIC T163		'핸드      핀 L/S 감지이상지연
+BST		'
+OTE R363		'핸드      핀 L/S 감지이상보조
+NXB		'
+MOV 63,MW363		'
+BND		'
+NXB		'
+TON T163,100,3		'핸드      핀 L/S 감지이상지연
+BND		'
+RUNG 41		'**** COMMON OP NFB TRIP ERROR AUX
+XIC R181		'용접건    사용 보조\n
+BST		'
+XIC FN3.X9		'팁드레서  전원 NFB  트립
+NXB		'
+XIC R364		'팁드레서  전원 NFB\n트립이상
+XIO R6		'이상해제  보조\n
+BND		'
+XIO K364		'팁드레서  전원 NFB\n트립이상\n패스
+BST		'
+OTE R364		'팁드레서  전원 NFB\n트립이상
+NXB		'
+MOV 64,MW364		'
+BND		'
+RUNG 42		'**** PED1 ATD  L/S ERROR
+XIC K861		'정치건1\n사용\n(SET)
+BST		'
+BST		'
+XIC DO49		'정치건1\nATD전진\n요구\n(RB)
+NXB		'
+XIC DO50		'정치건1\nATD후진\n요구\n(RB)
+BND		'
+BST		'
+BST		'
+XIC DO49		'정치건1\nATD전진\n요구\n(RB)
+XIO DI49		'정치건1\nATD 전진\n확인\n(RB)
+NXB		'
+XIC DO50		'정치건1\nATD후진\n요구\n(RB)
+XIO DI50		'정치건1\nATD 후진  확인\n(RB)
+BND		'
+NXB		'
+BST		'
+XIO DI49		'정치건1\nATD 전진\n확인\n(RB)
+XIO DI50		'정치건1\nATD 후진  확인\n(RB)
+NXB		'
+XIC DI49		'정치건1\nATD 전진\n확인\n(RB)
+XIC DI50		'정치건1\nATD 후진  확인\n(RB)
+BND		'
+BND		'
+NXB		'
+XIC R365		'정치건1   ATD 전/후진L/S 이상
+XIO R6		'이상해제  보조\n
+BND		'
+XIO K365		'ATD1\n전/후진\nL/S 이상\n패스
+BST		'
+XIC T165		'ATD1\n전/후진\nL/S 이상\n지연
+BST		'
+OTE R365		'정치건1   ATD 전/후진L/S 이상
+NXB		'
+MOV 65,MW365		'
+BND		'
+NXB		'
+TON T165,100,10		'ATD1\n전/후진\nL/S 이상\n지연
+BND		'
+RUNG 43		'**** PED GUN 2 ATD L/S ERROR
+XIC K871		'정치건2\n사용\n(SET)
+XIO K872		'쌍두 정치건사용\n(SET)
+BST		'
+BST		'
+XIC DO51		'정치건2\nATD전진\n요구\n(RB)
+NXB		'
+XIC DO52		'정치건2\nATD후진\n요구\n(RB)
+BND		'
+BST		'
+XIC DO51		'정치건2\nATD전진\n요구\n(RB)
+XIO DI51		'정치건2\nATD 전진  확인\n(RB)
+NXB		'
+BST		'
+BST		'
+XIC DO52		'정치건2\nATD후진\n요구\n(RB)
+XIO DI52		'정치건2\nATD 후진  확인\n(RB)
+NXB		'
+XIO DI51		'정치건2\nATD 전진  확인\n(RB)
+XIO DI52		'정치건2\nATD 후진  확인\n(RB)
+BND		'
+NXB		'
+XIC DI51		'정치건2\nATD 전진  확인\n(RB)
+XIC DI52		'정치건2\nATD 후진  확인\n(RB)
+BND		'
+BND		'
+NXB		'
+XIC R366		'정치건2   ATD 전/후진L/S 이상
+XIO R6		'이상해제  보조\n
+BND		'
+XIO K366		'ATD2\n전/후진\nL/S 이상\n패스
+BST		'
+XIC T166		'ATD2\n전/후진\nL/S 이상\n지연
+BST		'
+OTE R366		'정치건2   ATD 전/후진L/S 이상
+NXB		'
+MOV 66,MW366		'
+BND		'
+NXB		'
+TON T166,100,10		'ATD2\n전/후진\nL/S 이상\n지연
+BND		'
+RUNG 44		'**** PED ATD SHIFT L/S ERROR
+XIC K861		'정치건1\n사용\n(SET)
+XIC K871		'정치건2\n사용\n(SET)
+BST		'
+BST		'
+XIC DO53		'정치건1\nATD 쉬프트전진\n(RB)
+NXB		'
+XIC DO54		'정치건1\nATD 쉬프트후진\n(RB)
+BND		'
+BST		'
+XIC DO53		'정치건1\nATD 쉬프트전진\n(RB)
+XIO DI53		'정치건1\nATD 쉬프트전진 확인\n(RB)
+NXB		'
+BST		'
+BST		'
+XIC DO54		'정치건1\nATD 쉬프트후진\n(RB)
+XIO DI54		'정치건1\nATD 쉬프트후진 확인\n(RB)
+NXB		'
+XIO DI53		'정치건1\nATD 쉬프트전진 확인\n(RB)
+XIO DI54		'정치건1\nATD 쉬프트후진 확인\n(RB)
+BND		'
+NXB		'
+XIC DI53		'정치건1\nATD 쉬프트전진 확인\n(RB)
+XIC DI54		'정치건1\nATD 쉬프트후진 확인\n(RB)
+BND		'
+BND		'
+NXB		'
+XIC R369		'정치건2   ATD SHIFT L/S 이상
+XIO R6		'이상해제  보조\n
+BND		'
+XIO K369		'정치건2\nATD SHIFT\nL/S 이상\n패스
+BST		'
+XIC T169		'정치건2\nATD SHIFT\nL/S 이상\n지연
+BST		'
+OTE R369		'정치건2   ATD SHIFT L/S 이상
+NXB		'
+MOV 69,MW369		'
+BND		'
+NXB		'
+TON T169,100,10		'정치건2\nATD SHIFT\nL/S 이상\n지연
+BND		'
+RUNG 45		'**** PED GUN SHIFT L/S  ERROR
+XIC K861		'정치건1\n사용\n(SET)
+XIC K871		'정치건2\n사용\n(SET)
+BST		'
+BST		'
+XIC DO57		'정치건1\n건 쉬프트 전진\n(RB)
+NXB		'
+XIC DO58		'정치건1\n건 쉬프트 후진\n(RB)
+BND		'
+BST		'
+BST		'
+BST		'
+XIC DO57		'정치건1\n건 쉬프트 전진\n(RB)
+XIO DI57		'정치건1\n건 쉬프트 전진 확인\n(RB)
+NXB		'
+XIC DO58		'정치건1\n건 쉬프트 후진\n(RB)
+XIO DI58		'정치건1\n건 쉬프트 후진 확인\n(RB)
+BND		'
+NXB		'
+XIO DI57		'정치건1\n건 쉬프트 전진 확인\n(RB)
+XIO DI58		'정치건1\n건 쉬프트 후진 확인\n(RB)
+BND		'
+NXB		'
+XIC DI57		'정치건1\n건 쉬프트 전진 확인\n(RB)
+XIC DI58		'정치건1\n건 쉬프트 후진 확인\n(RB)
+BND		'
+NXB		'
+XIC R375		'정치건1   GUN SHIFT L/S 이상
+XIO R6		'이상해제  보조\n
+BND		'
+XIO K375		'정치건1   GUN SHIFT L/S 이상\n패스
+BST		'
+XIC T175		'정치건1   GUN SHIFT L/S 이상\n지연
+BST		'
+OTE R375		'정치건1   GUN SHIFT L/S 이상
+NXB		'
+MOV 75,MW375		'
+BND		'
+NXB		'
+TON T175,100,10		'정치건1   GUN SHIFT L/S 이상\n지연
+BND		'
+RUNG 46		'**** ATD ROTATE  L/S ERROR
+BST		'
+XIC R181		'용접건    사용 보조\n
+BST		'
+XIC T78		'로보트건\n모터회전\nOFF시간\n초과
+NXB		'
+BST		'
+BST		'
+BST		'
+BST		'
+XIC T79		'로보트건\n모터회전\nON시간\n초과
+NXB		'
+XIC T80		'정치건1\n모터회전\nOFF시간\n초과
+BND		'
+NXB		'
+XIC T81		'정치건1\n모터회전\nON시간\n초과
+BND		'
+NXB		'
+XIC T82		'정치건2\n모터회전\nOFF시간\n초과
+BND		'
+NXB		'
+XIC T83		'정치건2\n모터회전\nON시간\n초과
+BND		'
+BND		'
+NXB		'
+XIC R378		'ATD\n모터\n회전 감지 이상보조
+XIO FN1.X4		'이상해제  (GP PB)
+XIO DO112		'이상해제  (TP KEY)
+BND		'
+XIO FB5.X11		'무부하    시운전 모드(LINE)
+BST		'
+OTE R378		'ATD\n모터\n회전 감지 이상보조
+NXB		'
+MOV 78,MW378		'
+BND		'
+RUNG 47		'
+BST		'
+XIO DO77		'팁드레서1  모터 ON
+XIO DO78		'팁드레서2  모터 ON
+INV		'
+NXB		'
+XIC FN3.Y7		'ATD1 모터 정회전\n(ATD1)
+BND		'
+EQU SW23,63		'현재프로그램
+XIC R181		'용접건    사용 보조\n
+XIC K801		'로보트 건1용접 사용\n(SET)
+XIC DO29		'로보트    기동중    (RB)
+BST		'
+XIO FN3.X11		'로보트건1\n모터회전\n감지센서
+TON T78,10,20		'로보트건\n모터회전\nOFF시간\n초과
+NXB		'
+XIC FN3.X11		'로보트건1\n모터회전\n감지센서
+TON T79,10,20		'로보트건\n모터회전\nON시간\n초과
+BND		'
+RUNG 48		'
+BST		'
+XIO DO79		'정치건1\n팁드레서  모터ON	\n(RB)
+XIO DO80		'정치건2\n팁드레서  모터ON	\n(RB)
+INV		'
+NXB		'
+XIC FN9.Y7		'정치건1   ATD\nMOTOR ON  (P1)
+BND		'
+EQU SW261,61		'
+XIC R181		'용접건    사용 보조\n
+XIC K861		'정치건1\n사용\n(SET)
+XIC DO73		'정치건    팁드레싱  기동중    TASK2
+BST		'
+XIO FN9.X11		'정치건1\n모터회전\n감지센서\n
+TON T80,10,20		'정치건1\n모터회전\nOFF시간\n초과
+NXB		'
+XIC FN9.X11		'정치건1\n모터회전\n감지센서\n
+TON T81,10,20		'정치건1\n모터회전\nON시간\n초과
+BND		'
+RUNG 49		'
+BST		'
+XIO DO79		'정치건1\n팁드레서  모터ON	\n(RB)
+XIO DO80		'정치건2\n팁드레서  모터ON	\n(RB)
+INV		'
+NXB		'
+XIC FN11.Y7		'정치건2   ATD\nMOTOR ON  (P2)
+BND		'
+EQU SW271,62		'
+XIC R181		'용접건    사용 보조\n
+XIC K871		'정치건2\n사용\n(SET)
+XIO K872		'쌍두 정치건사용\n(SET)
+XIC DO75		'정치건    팁드레싱  기동중    TASK3
+BST		'
+XIO FN11.X11		'정치건2\n모터회전\n감지센서
+TON T82,10,20		'정치건2\n모터회전\nOFF시간\n초과
+NXB		'
+XIC FN11.X11		'정치건2\n모터회전\n감지센서
+TON T83,10,20		'정치건2\n모터회전\nON시간\n초과
+BND		'
+RUNG 50		'**** ROBOT GUN WELDER POWER ERROR AUX
+BST		'
+BST		'
+XIC K861		'정치건1\n사용\n(SET)
+XIC FN10.X2		'용접기\n이상\n(P1 TC)
+NXB		'
+XIC K871		'정치건2\n사용\n(SET)
+XIC FN12.X2		'용접기\n이상\n(P2 TC)
+BND		'
+BST		'
+XIC S4145		'멀티테스크2번 동작중
+NXB		'
+XIC S4305		'멀티테스크3번 동작중
+BND		'
+NXB		'
+XIC R379		'용접팁    저항 검출 이상보조
+XIO R6		'이상해제  보조\n
+BND		'
+XIO K379		'용접팁    저항 검출 이상해제
+BST		'
+OTE R379		'용접팁    저항 검출 이상보조
+NXB		'
+MOV 79,MW379		'
+BND		'
+RUNG 51		'**** COMMON LINE TEMP STOP ERROR AUX
+XIC FB5.X1		'즉시 정지 (LINE)
+XIC FB5.X2		'외부 정지\n(LINE)
+INV		'
+XIO FN1.X3		'정상/고장\n(GP.SS)
+BST		'
+OTE R380		'외부 \n일시정지  이상보조
+NXB		'
+MOV 80,MW380		'
+BND		'
+RUNG 52		'**** BODY TYPE ERROR
+BST		'
+XIC DO29		'로보트    기동중    (RB)
+XIC DO30		'자동모드  (RB)
+XIC DO31		'운전준비  (RB)
+XIC R1		'공정 차종 보조
+NEQ MW90,SW23		'
+NEQ SW20,63		'현재프로그램
+NEQ SW20,64		'
+NXB		'
+XIC R381		'로보트 차종비교      이상 보조
+XIO R6		'이상해제  보조\n
+BND		'
+XIO K381		'로보트 차종비교      이상 패스
+BST		'
+XIC T181		'로보트 차종비교      이상지연
+BST		'
+OTE R381		'로보트 차종비교      이상 보조
+NXB		'
+MOV 81,MW381		'
+BND		'
+NXB		'
+TON T181,100,1		'로보트 차종비교      이상지연
+BND		'
+RUNG 53		'**** COMMON EXTERNAL START ERROR AUX
+BST		'
+XIO R1		'공정 차종 보조
+XIC R2		'로보트    원위치    보조
+XIC FB5.X24		'로보트    초기기동  (LINE)
+NXB		'
+XIC R382		'외부 기동 이상보조
+XIO R6		'이상해제  보조\n
+BND		'
+XIO K382		'외부 기동 이상보조\n패스
+BST		'
+OTE R382		'외부 기동 이상보조
+NXB		'
+MOV 82,MW382		'
+BND		'
+RUNG 54		'**** COMMON ERROR RESET AUX
+XIC R6		'이상해제  보조\n
+TON T44,100,30		'이상해제\n펄스 \n시간초과
+RUNG 55		'
+BST		'
+XIC T44		'이상해제\n펄스 \n시간초과
+NXB		'
+XIC R383		'외부\n이상해제  시간초과\n이상보조
+XIO R6		'이상해제  보조\n
+BND		'
+XIO K383		'외부\n이상해제  시간초과\n이상패스
+BST		'
+OTE R383		'외부\n이상해제  시간초과\n이상보조
+NXB		'
+MOV 83,MW383		'
+BND		'
+RUNG 56		'**** COMMON ROBOT MUTUAL ERROR
+BST		'
+XIO FN1.X3		'정상/고장\n(GP.SS)
+XIC DO31		'운전준비  (RB)
+XIO DO32		'로보트    원위치    (RB)
+BST		'
+BST		'
+XIO DO6		'로보트 \n상호간\n인터록 1
+XIO DI6		'로보트 \n상호간\n인터록 1
+NXB		'
+XIO DO7		'로보트 \n상호간\n인터록 2
+XIO DI7		'로보트 \n상호간\n인터록 2
+BND		'
+NXB		'
+BST		'
+BST		'
+XIO DO8		'로보트 \n상호간\n인터록 3
+XIO DI8		'로보트 \n상호간\n인터록 3
+NXB		'
+XIO DO9		'로보트 \n상호간\n인터록 4
+XIO DI9		'로보트 \n상호간\n인터록 4
+BND		'
+NXB		'
+BST		'
+XIO DO10		'로보트 \n상호간\n인터록 5
+XIO DI10		'로보트 \n상호간\n인터록 5
+NXB		'
+BST		'
+BST		'
+XIO DO11		'로보트 \n상호간\n인터록 6
+XIO DI11		'로보트 \n상호간\n인터록 6
+NXB		'
+XIO DO4		'로보트 \n상호간\n인터록 7
+XIO DI4		'로보트 \n상호간\n인터록 7
+BND		'
+NXB		'
+XIO DO5		'로보트 \n상호간\n인터록 8
+XIO DI5		'로보트 \n상호간\n인터록 8
+BND		'
+BND		'
+BND		'
+BND		'
+NXB		'
+XIC R384		'로보트    인터록    이상보조
+XIO R6		'이상해제  보조\n
+BND		'
+BST		'
+OTE R384		'로보트    인터록    이상보조
+NXB		'
+MOV 84,MW384		'
+BND		'
+RUNG 57		'**** COMMON ROBOT SEPARETE ERROR
+XIC FN1.X3		'정상/고장\n(GP.SS)
+XIO K385		'로보트\n고장 \n이상패스
+BST		'
+OTE R385		'로보트\n고장 \n이상보조
+NXB		'
+MOV 85,MW385		'
+BND		'
+RUNG 58		'**** COMMON ROBOT SEPARETE ERROR
+XIC FN1.X2		'단독자동  (GP)
+XIO K386		'단독자동\n이상 알람\n패스
+BST		'
+OTE R386		'단독자동\n이상 알람\n패스
+NXB		'
+MOV 86,MW386		'
+BND		'
+RUNG 59		'**** COMMON ROBOT SEPARETE ERROR
+XIC DO120		'현재 PLT\n변수값\n비교이상
+BST		'
+OTE R388		'현재 PLT\n변수값\n비교이상
+NXB		'
+MOV 88,MW388		'
+BND		'
+RUNG 60		'**** COMMON ROBOT SEPARETE ERROR
+XIC DO110		'칼라 센서 이상\n(RB)
+BST		'
+OTE R389		'칼라센서\n이상보조
+NXB		'
+MOV 89,MW389		'
+BND		'
+RUNG 61		'**** SEALER  SEALER NOZZLE BROKEN
+BST		'
+XIC K932		'스폿실러  사용\n(SET)
+XIC DO139		'실러 누락 감지 체크 ON\n(RB)
+XIO DI139		'실러누락  감지 OK\n(RB)
+NXB		'
+XIC R392		'실러      누락 감지 이상
+XIO R6		'이상해제  보조\n
+BND		'
+XIO K392		'실러      누락 감지 이상패스
+BST		'
+XIC T192		'실러      누락 감지 이상지연
+BST		'
+OTE R392		'실러      누락 감지 이상
+NXB		'
+MOV 392,MW392		'
+BND		'
+NXB		'
+TON T192,100,5		'실러      누락 감지 이상지연
+BND		'
+RUNG 62		'**** SEALER  SEALER MASTIC  SEALER ERROR
+BST		'
+XIC K933		'구조용\n실러사용\n(SET)
+XIC DO144		'실러비전\n체크이상
+NXB		'
+XIC R393		'실러비전\n체크이상\n(구조용)
+XIO R6		'이상해제  보조\n
+BND		'
+XIO K393		'실러비전\n체크이상\n패스
+XIO FB5.X11		'무부하    시운전 모드(LINE)
+BST		'
+OTE R393		'실러비전\n체크이상\n(구조용)
+NXB		'
+MOV 393,MW393		'
+BND		'
+RUNG 63		'**** SEALER  SEALER MASTIC  SEALER ERROR
+BST		'
+XIC K933		'구조용\n실러사용\n(SET)
+XIO FN23.X1		'구조용\n실러정상\n(구조용)
+XIC K1		'전자동    모드\n(OP)
+NXB		'
+XIC R394		'실러 종합 이상 보조 (SWIRL)
+XIO R6		'이상해제  보조\n
+BND		'
+XIO K394		'실러 종합 이상 패스
+XIO FB5.X11		'무부하    시운전 모드(LINE)
+BST		'
+OTE R394		'실러 종합 이상 보조 (SWIRL)
+NXB		'
+MOV 394,MW394		'
+BND		'
+RUNG 64		'**** SEALER  SEALER MASTIC  SEALER PUMP EMPTY
+BST		'
+XIC K932		'스폿실러  사용\n(SET)
+XIO FN21.X6		'스폿실러\n펌프\n정상
+XIO FB5.X11		'무부하    시운전 모드(LINE)
+NXB		'
+XIC R397		'스폿실러\n펌프\n이상보조
+XIO R6		'이상해제  보조\n
+BND		'
+XIO K397		'스폿실러\n펌프\n이상패스
+BST		'
+OTE R397		'스폿실러\n펌프\n이상보조
+NXB		'
+MOV 397,MW397		'
+BND		'
+RUNG 65		'**** SEALER  SEALER NOZZLE BROKEN
+BST		'
+XIC K932		'스폿실러  사용\n(SET)
+XIO FN21.X1		'스폿 실러 노즐파손  확인단
+XIO FB5.X11		'무부하    시운전 모드(LINE)
+NXB		'
+XIC R399		'실러 노즐 파손 이상\n보조
+XIO R6		'이상해제  보조\n
+BND		'
+XIO K399		'실러 노즐 파손 이상\n패스
+BST		'
+OTE R399		'실러 노즐 파손 이상\n보조
+NXB		'
+MOV 399,MW399		'
+BND		'
+RUNG 66		'*** CP TRIP
+BST		'
+XIO FN3.X16		'GUN&BJ1\nREMOTE\nI/O\nCP TRIP
+NXB		'
+XIC R400		'GUN&BJ1\nREMOTE\nI/O\nCP TRIP
+XIO R6		'이상해제  보조\n
+BND		'
+XIO K400		'GUN&BJ1\nREMOTE\nI/O\nCP TRIP\n패스
+BST		'
+OTE R400		'GUN&BJ1\nREMOTE\nI/O\nCP TRIP
+NXB		'
+MOV 100,MW400		'
+BND		'
+RUNG 67		'
+BST		'
+XIC K821		'핸드 사용\n(SET)
+XIC SP2		'항시 OFF\n(SPECIAL)
+XIO FN7.X16		'HAND\nREMOTE\nI/O\nCP TRIP
+NXB		'
+XIC R401		'HAND\nREMOTE\nI/O\nCP TRIP
+XIO R6		'이상해제  보조\n
+BND		'
+XIO K401		'HAND\nREMOTE\nI/O\nCP TRIP   패스
+BST		'
+OTE R401		'HAND\nREMOTE\nI/O\nCP TRIP
+NXB		'
+MOV 101,MW401		'
+BND		'
+RUNG 68		'
+BST		'
+XIC K861		'정치건1\n사용\n(SET)
+XIO FN9.X16		'PED GUN1\nREMOTE\nI/O\nCP TRIP
+NXB		'
+XIC R402		'PED GUN1\nREMOTE\nI/O\nCP TRIP
+XIO R6		'이상해제  보조\n
+BND		'
+XIO K402		'PED GUN1\nREMOTE\nI/O\nCP TRIP
+BST		'
+OTE R402		'PED GUN1\nREMOTE\nI/O\nCP TRIP
+NXB		'
+MOV 102,MW402		'
+BND		'
+RUNG 69		'
+BST		'
+XIC K871		'정치건2\n사용\n(SET)
+XIO K872		'쌍두 정치건사용\n(SET)
+XIO FN11.X16		'PED GUN2\nREMOTE\nI/O\nCP TRIP
+NXB		'
+XIC R403		'PED GUN2\nREMOTE\nI/O\nCP TRIP
+XIO R6		'이상해제  보조\n
+BND		'
+XIO K403		'PED GUN2\nREMOTE\nI/O\nCP TRIP
+BST		'
+OTE R403		'PED GUN2\nREMOTE\nI/O\nCP TRIP
+NXB		'
+MOV 103,MW403		'
+BND		'
+RUNG 70		'
+BST		'
+XIC K881		'정치건3\n사용\n(SET)
+XIO FN13.X16		'PED GUN3\nREMOTE\nI/O\nCP TRIP
+NXB		'
+XIC R404		'PED GUN3\nREMOTE\nI/O\nCP TRIP
+XIO R6		'이상해제  보조\n
+BND		'
+XIO K404		'PED GUN3\nREMOTE\nI/O\nCP TRIP
+BST		'
+OTE R404		'PED GUN3\nREMOTE\nI/O\nCP TRIP
+NXB		'
+MOV 104,MW404		'
+BND		'
+RUNG 71		'
+BST		'
+XIC K891		'정치건4\n사용\n(SET)
+XIO FN15.X16		'PED GUN4\nREMOTE\nI/O\nCP TRIP
+NXB		'
+XIC R405		'PED GUN4\nREMOTE\nI/O\nCP TRIP
+XIO R6		'이상해제  보조\n
+BND		'
+XIO K405		'PED GUN4\nREMOTE\nI/O\nCP TRIP
+BST		'
+OTE R405		'PED GUN4\nREMOTE\nI/O\nCP TRIP
+NXB		'
+MOV 105,MW405		'
+BND		'
+RUNG 72		'
+BST		'
+XIC K901		'스터드 1\n사용\n(SET)
+BST		'
+XIC SP2		'항시 OFF\n(SPECIAL)
+XIO FN17.X16		'STUD2\nREMOTE\nI/O\nCP TRIP
+NXB		'
+XIC SP2		'항시 OFF\n(SPECIAL)
+XIO FN18.X16		'STUD2\nREMOTE\nI/O\nCP TRIP
+BND		'
+NXB		'
+XIC R406		'STUD\nREMOTE\nI/O\nCP TRIP
+XIO R6		'이상해제  보조\n
+BND		'
+XIO K406		'STUD\nREMOTE\nI/O\nCP TRIP
+BST		'
+OTE R406		'STUD\nREMOTE\nI/O\nCP TRIP
+NXB		'
+MOV 106,MW406		'
+BND		'
+RUNG 73		'
+BST		'
+XIC K921		'볼트      프로젝트\n사용      (SET)
+XIC SP2		'항시 OFF\n(SPECIAL)
+XIO FN19.X16		'NUT\nWELDER\nREMOTE\nI/O\nCP TRIP
+NXB		'
+XIC R407		'NUT\nWELDER\nREMOTE\nI/O\nCP TRIP
+XIO R6		'이상해제  보조\n
+BND		'
+XIO K407		'NUT\nWELDER\nREMOTE\nI/O\nCP TRIP
+BST		'
+OTE R407		'NUT\nWELDER\nREMOTE\nI/O\nCP TRIP
+NXB		'
+MOV 107,MW407		'
+BND		'
+RUNG 74		'
+BST		'
+XIC K931		'실러      사용\n(SET)
+XIO FN21.X16		'SEALER\nREMOTE\nI/O\nCP TRIP
+XIC SP2		'항시 OFF\n(SPECIAL)
+NXB		'
+XIC R408		'SEALER\nREMOTE\nI/O\nCP TRIP
+XIO R6		'이상해제  보조\n
+BND		'
+XIO K408		'SEALER\nREMOTE\nI/O\nCP TRIP
+BST		'
+OTE R408		'SEALER\nREMOTE\nI/O\nCP TRIP
+NXB		'
+MOV 108,MW408		'
+BND		'
+RUNG 75		'**** STUD TC  ERROR AUX
+BST		'
+BST		'
+XIC K901		'스터드 1\n사용\n(SET)
+XIO FN17.X2		'스터드1\n용접기 \n이상
+NXB		'
+XIC K911		'스터드 2\n사용\n(SET)
+XIO FN18.X2		'스터드2\n용접기 \n이상
+BND		'
+XIO FB5.X12		'용접 ON   시운전모드(LINE)
+NXB		'
+XIC R410		'스터드    종합\n이상보조\n
+XIO R6		'이상해제  보조\n
+BND		'
+XIO K410		'스터드    종합이상\n패스
+BST		'
+OTE R410		'스터드    종합\n이상보조\n
+NXB		'
+MOV 110,MW410		'
+BND		'
+RUNG 76		'**** STUD SWING L/S ERROR AUX
+XIC K901		'스터드 1\n사용\n(SET)
+BST		'
+BST		'
+XIC DO127		'스터드1\n포스트    상승\n(RB)
+XIO DI127		'스터드1\n건 포스트\n상승확인\n(RB)
+NXB		'
+XIC DO128		'스터드1\n포스트    하강\n(RB)
+XIO DI128		'스터드1\n건 포스트\n하강확인\n(RB)
+BND		'
+NXB		'
+XIC R412		'스터드1 건스윙 L/S  이상보조
+XIO R6		'이상해제  보조\n
+BND		'
+XIO K412		'스터드1 건스윙 L/S  이상패스
+BST		'
+XIC T112		'스터드1\n건스윙 L/S이상지연
+BST		'
+OTE R412		'스터드1 건스윙 L/S  이상보조
+NXB		'
+MOV 112,MW412		'
+BND		'
+NXB		'
+TON T112,100,5		'스터드1\n건스윙 L/S이상지연
+BND		'
+RUNG 77		'**** STUD SWING L/S ERROR AUX
+XIC K911		'스터드 2\n사용\n(SET)
+BST		'
+BST		'
+XIC DO135		'스터드2\n포스트    상승\n(RB)
+NXB		'
+XIC DO136		'스터드2\n포스트    하강\n(RB)
+BND		'
+BST		'
+BST		'
+XIC DO135		'스터드2\n포스트    상승\n(RB)
+XIO DI135		'스터드2\n건 포스트\n상승확인\n(RB)
+NXB		'
+XIC DO136		'스터드2\n포스트    하강\n(RB)
+XIO DI136		'스터드2\n건 포스트\n하강확인\n(RB)
+BND		'
+NXB		'
+BST		'
+XIO DI135		'스터드2\n건 포스트\n상승확인\n(RB)
+XIO DI136		'스터드2\n건 포스트\n하강확인\n(RB)
+NXB		'
+XIC DI135		'스터드2\n건 포스트\n상승확인\n(RB)
+XIC DI136		'스터드2\n건 포스트\n하강확인\n(RB)
+BND		'
+BND		'
+NXB		'
+XIC R413		'스터드2 건스윙 L/S  이상보조
+XIO R6		'이상해제  보조\n
+BND		'
+XIO K413		'스터드2 건스윙 L/S  이상패스
+BST		'
+XIC T113		'스터드2\n건스윙 L/S 이상지연
+BST		'
+OTE R413		'스터드2 건스윙 L/S  이상보조
+NXB		'
+MOV 113,MW413		'
+BND		'
+NXB		'
+TON T113,100,3		'스터드2\n건스윙 L/S 이상지연
+BND		'
+RUNG 78		'**** BOLT GUN  WATER CUTOFF ERROR AUX
+XIC K921		'볼트      프로젝트\n사용      (SET)
+BST		'
+BST		'
+XIO FN20.X5		'볼트\n냉각수\n정상
+NXB		'
+XIC FB5.X45		'냉각수    차단      (LINE)
+BND		'
+XIO FB5.X12		'용접 ON   시운전모드(LINE)
+NXB		'
+XIC R420		'볼트\n냉각수\n이상보조
+XIO R6		'이상해제  보조\n
+BND		'
+XIO K420		'볼트\n냉각수\n이상패스
+BST		'
+OTE R420		'볼트\n냉각수\n이상보조
+NXB		'
+MOV 120,MW420		'
+BND		'
+RUNG 79		'**** BOLT GUN AIR ERROR AUX
+XIC K921		'볼트      프로젝트\n사용      (SET)
+BST		'
+XIO FN20.X4		'볼트\n공기압\n정상
+NXB		'
+XIC R421		'볼트\n공기압\n이상보조
+XIO R6		'이상해제  보조\n
+BND		'
+XIO K421		'볼트\n공기압\n이상패스
+BST		'
+OTE R421		'볼트\n공기압\n이상보조
+NXB		'
+MOV 121,MW421		'
+BND		'
+RUNG 80		'**** BOLT GUN  WELDER  ERROR AUX
+XIC K921		'볼트      프로젝트\n사용      (SET)
+BST		'
+XIC FN20.X2		'용접기\n이상\n(볼트)
+NXB		'
+XIC R422		'볼트\n용접기\n이상보조
+XIO R6		'이상해제  보조\n
+BND		'
+XIO K422		'볼트\nTC\n용접기\n이상패스
+BST		'
+OTE R422		'볼트\n용접기\n이상보조
+NXB		'
+MOV 122,MW422		'
+BND		'
+RUNG 81		'**** CO2 WELDER ERROR AUX
+BST		'
+XIC K971		'아크용접  사용\n(SET)
+GRT MW250,0		'
+XIO FB5.X12		'용접 ON   시운전모드(LINE)
+NXB		'
+XIC R430		'CO2\n용접기\n이상보조
+XIO R6		'이상해제  보조\n
+BND		'
+XIO K430		'CO2\n용접기\n이상패스
+BST		'
+OTE R430		'CO2\n용접기\n이상보조
+NXB		'
+MOV 130,MW430		'
+BND		'
+RUNG 82		'
+BST		'
+XIC K971		'아크용접  사용\n(SET)
+XIO FN27.X5		'ARC\n충돌센서\n(RB)
+NXB		'
+XIC R431		'ARC\n충돌센서\n이상보조
+XIO R6		'이상해제  보조\n
+BND		'
+XIO K431		'ARC\n충돌센서\n이상패스
+BST		'
+OTE R431		'ARC\n충돌센서\n이상보조
+NXB		'
+MOV 131,MW431		'
+BND		'
+RUNG 83		'
+BST		'
+XIC K971		'아크용접  사용\n(SET)
+XIO FN27.X6		'ARC\n용접기\n사용가능\n(RB)
+XIO FB5.X12		'용접 ON   시운전모드(LINE)
+NXB		'
+XIC R432		'ARC\n용접기\n사용가능\n이상보조
+XIO R6		'이상해제  보조\n
+BND		'
+XIO K432		'ARC\n용접기\n사용가능\n이상패스
+BST		'
+OTE R432		'ARC\n용접기\n사용가능\n이상보조
+NXB		'
+MOV 132,MW432		'
+BND		'
+RUNG 84		'**** COMMON ERROR CODE TP DISPLAY
+ROT MW300,140,T32,100,MW501,R498,MW510		'
+RUNG 85		'
+BST		'
+BST		'
+EQU MW501,0		'
+NXB		'
+XIC R6		'이상해제  보조\n
+BND		'
+NXB		'
+XIC R498		'ERROR\nROTATION\nRESET\nRELAY
+BND		'
+XIO T199		'ERROR\nROTATION\nRESET\nDELAY
+BST		'
+OTE R498		'ERROR\nROTATION\nRESET\nRELAY
+NXB		'
+XIO R6		'이상해제  보조\n
+TON T199,100,1		'ERROR\nROTATION\nRESET\nDELAY
+BND		'
+RUNG 86		'**** COMMON ALARM SETTING CHECK
+BST		'
+EQU KW19,0		'
+EQU KW20,0		'
+EQU KW21,0		'
+EQU KW22,0		'
+INV		'
+NXB		'
+EQU KW23,0		'
+EQU KW24,0		'
+EQU KW25,0		'
+EQU KW26,0		'
+INV		'
+BND		'
+OTE R499		'ALARM\nKILL\nALL\nRESET\n(GP)
+RUNG 87		'**** COMMON ALARM SETTING TP DISPLAY
+BST		'
+XIC R6		'이상해제  보조\n
+NXB		'
+XIO R31		'이상      데이타    디스플레이보조
+BND		'
+COP 0,MW300,140		'

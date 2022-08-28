@@ -1,0 +1,453 @@
+Ladder File Format Version: 4.00
+RUNG 1		'
+XIC DO1		'용접 시험 모드      (TP KEY)
+BST		'
+XIC R11		'ROBOT\nGUN1\n가압\n보조
+NXB		'
+XIC R13		'ROBOT\nGUN2\n가압\n보조
+BND		'
+TON T218,100,1		'용접 시험 모드 완료 펄스
+RUNG 2		'
+XIC SP1		'항시 ON\n(SPECIAL)
+BST		'
+EQU MW986,1		'
+OTE K806		'더블 ATD  모터 사용
+NXB		'
+EQU MW986,0		'
+OTU K806		'더블 ATD  모터 사용
+BND		'
+RUNG 3		'**** ROBOT GUN : GUN PRESSING AUX
+XIC K801		'로보트 건1용접 사용\n(SET)
+XIC DO43		'로보트건1 용접 요구 (RB)
+XIC R15		'용접 조건 카운터\nOK 보조
+XIO R37		'종합 용접 관련 이상 보조
+XIO T11		'건1 가압  OFF
+OTE R11		'ROBOT\nGUN1\n가압\n보조
+RUNG 4		'**** GUN PRESSING ERROR AUX
+XIC K801		'로보트 건1용접 사용\n(SET)
+XIC R11		'ROBOT\nGUN1\n가압\n보조
+XIO R19		'팁드레서  모터 회전 보조1
+TON T11,100,4		'건1 가압  OFF
+RUNG 5		'**** ROBOT GUN AUX : WELDING COMPLETE AUX
+XIC K801		'로보트 건1용접 사용\n(SET)
+XIO DO29		'로보트    기동중    (RB)
+XIO DO30		'자동모드  (RB)
+XIC R11		'ROBOT\nGUN1\n가압\n보조
+XIO R12		'ROBOT GUN1용접 완료 보조
+XIO R17		'로봇건    용접 가능 상태 보조
+TON T170,100,2		'용접 완료 이상 펄스
+RUNG 6		'**** ROBOT GUN AUX : WELDING COMPLETE AUX
+XIC K801		'로보트 건1용접 사용\n(SET)
+BST		'
+BST		'
+XIC FN5.X1		'용접완료\n(R1 TC)
+NXB		'
+XIC T218		'용접 시험 모드 완료 펄스
+BND		'
+NXB		'
+BST		'
+XIC T170		'용접 완료 이상 펄스
+NXB		'
+XIC K2		'수동      모드\n(OP)
+XIC R530		'수동 용접 완료      (GP)
+XIC R515		'트리거\nENABLE\n(GP)
+XIO DO29		'로보트    기동중    (RB)
+BND		'
+BND		'
+BST		'
+XIO T12		'용접완료  펄스
+OTE R12		'ROBOT GUN1용접 완료 보조
+NXB		'
+TON T12,10,3		'용접완료  펄스
+BND		'
+RUNG 7		'***ROBOT GUN 2 AUX : GUN PRES
+XIC K811		'로보트 건2용접 사용\n(SET)
+XIC DO44		'로보트건2 용접 요구 (RB)
+XIC R15		'용접 조건 카운터\nOK 보조
+XIO R37		'종합 용접 관련 이상 보조
+XIO T13		'건2 건가압 OFF
+OTE R13		'ROBOT\nGUN2\n가압\n보조
+RUNG 8		'**** GUN PRESSING ERROR AUX
+XIC K811		'로보트 건2용접 사용\n(SET)
+XIC R13		'ROBOT\nGUN2\n가압\n보조
+XIO R19		'팁드레서  모터 회전 보조1
+TON T13,100,4		'건2 건가압 OFF
+RUNG 9		'**** ROBOT AIR GUN 2 AUX : WELDIN
+XIC K811		'로보트 건2용접 사용\n(SET)
+BST		'
+BST		'
+XIC FN5.X1		'용접완료\n(R1 TC)
+NXB		'
+XIC T218		'용접 시험 모드 완료 펄스
+BND		'
+NXB		'
+XIC K2		'수동      모드\n(OP)
+XIC R530		'수동 용접 완료      (GP)
+XIC R515		'트리거\nENABLE\n(GP)
+XIO DO29		'로보트    기동중    (RB)
+BND		'
+BST		'
+XIO T14		'용접 완료 펄스
+OTE R14		'ROBOT GUN2용접 완료 보조
+NXB		'
+TON T14,10,3		'용접 완료 펄스
+BND		'
+RUNG 10		'**** ROBOT GUN AUX : ATD MOTOR ROTATION
+XIC K801		'로보트 건1용접 사용\n(SET)
+BST		'
+XIC DO77		'팁드레서1  모터 ON
+NXB		'
+XIC DO78		'팁드레서2  모터 ON
+BND		'
+XIO FB5.X12		'용접 ON   시운전모드(LINE)
+OTE R19		'팁드레서  모터 회전 보조1
+RUNG 11		'**** ROBOT GUN AUX : ATD MOTOR ROTATION
+XIC K801		'로보트 건1용접 사용\n(SET)
+BST		'
+XIC DO29		'로보트    기동중    (RB)
+XIC R19		'팁드레서  모터 회전 보조1
+XIO R2		'로보트    원위치    보조
+NXB		'
+XIC K2		'수동      모드\n(OP)
+XIC R502		'수동 ATD  모터 테스트(GP)
+XIC R515		'트리거\nENABLE\n(GP)
+XIO DO29		'로보트    기동중    (RB)
+BND		'
+XIO R351		'정치건1   ATD 모터  과부하 이상
+OTE R20		'팁드레서  모터 회전 보조2
+RUNG 12		'**** ROBOT GUN ATD COUNT UP COMPLETE AUX
+XIC K801		'로보트 건1용접 사용\n(SET)
+GRT MW100,0		'
+GEQ MW101,MW100		'
+OTE R25		'건1\n팁드레싱  카운터    보조
+RUNG 13		'**** ROBOT GUN ATD COUNT UP COMPLETE AUX
+XIC K811		'로보트 건2용접 사용\n(SET)
+GRT MW102,0		'
+GEQ MW103,MW102		'
+OTE R26		'건2\n팁드레싱  카운터    보조
+RUNG 14		'**** ATD COUNT1 PRESENT AUX
+XIC K801		'로보트 건1용접 사용\n(SET)
+XIO DO77		'팁드레서1  모터 ON
+XIC DO43		'로보트건1 용접 요구 (RB)
+XIC R12		'ROBOT GUN1용접 완료 보조
+XIC DO31		'운전준비  (RB)
+XIO FN1.X3		'정상/고장\n(GP.SS)
+BST		'
+XIO K981		'포지셔너 \n사용\n(SET)
+GRT SW47,-50		'
+NXB		'
+XIC K981		'포지셔너 \n사용\n(SET)
+GRT SW48,-50		'
+BND		'
+BST		'
+OSR R903		'건1 드레싱카운터    펄스
+NXB		'
+XIC R903		'건1 드레싱카운터    펄스
+ADD MW101,1,MW101		'
+BND		'
+RUNG 15		'
+XIC K801		'로보트 건1용접 사용\n(SET)
+BST		'
+XIC DO29		'로보트    기동중    (RB)
+XIC DO30		'자동모드  (RB)
+XIC DO77		'팁드레서1  모터 ON
+NXB		'
+XIC K2		'수동      모드\n(OP)
+XIC R507		'수동      팁드레싱  카운터 리셋
+XIC R515		'트리거\nENABLE\n(GP)
+XIO DO29		'로보트    기동중    (RB)
+BND		'
+MOV 0,MW101		'
+RUNG 16		'**** ATD COUNT2 PRESENT AUX
+XIC K811		'로보트 건2용접 사용\n(SET)
+XIO DO78		'팁드레서2  모터 ON
+BST		'
+XIC DO44		'로보트건2 용접 요구 (RB)
+XIC R14		'ROBOT GUN2용접 완료 보조
+XIC DO31		'운전준비  (RB)
+XIO FN1.X3		'정상/고장\n(GP.SS)
+XIO K981		'포지셔너 \n사용\n(SET)
+GRT SW48,-50		'
+NXB		'
+XIC DO43		'로보트건1 용접 요구 (RB)
+XIC R12		'ROBOT GUN1용접 완료 보조
+XIC DO31		'운전준비  (RB)
+XIO FN1.X3		'정상/고장\n(GP.SS)
+XIO K981		'포지셔너 \n사용\n(SET)
+GRT SW48,-50		'
+BND		'
+BST		'
+OSR R904		'정치건1\n카운터 \n펄스
+NXB		'
+XIC R904		'정치건1\n카운터 \n펄스
+ADD MW103,1,MW103		'
+BND		'
+RUNG 17		'
+XIC K811		'로보트 건2용접 사용\n(SET)
+BST		'
+XIC DO29		'로보트    기동중    (RB)
+XIC DO30		'자동모드  (RB)
+XIC DO78		'팁드레서2  모터 ON
+NXB		'
+XIC K2		'수동      모드\n(OP)
+XIC R507		'수동      팁드레싱  카운터 리셋
+XIC R515		'트리거\nENABLE\n(GP)
+XIO DO29		'로보트    기동중    (RB)
+BND		'
+MOV 0,MW103		'
+RUNG 18		'FN4.
+XIC K801		'로보트 건1용접 사용\n(SET)
+BST		'
+XIC K10		'최종 작업 완료셋    보조
+OTE R700		'WORK\nCOMPLETE\nSET(GP)
+NXB		'
+BST		'
+XIC FN3.Y7		'ATD1 모터 정회전\n(ATD1)
+OTE R702		'R_GUN\nATD\nCW\n(GP)
+NXB		'
+BST		'
+BST		'
+XIC FN3.Y8		'ATD2 모터 정회전\n(ATD1)
+OTE R703		'R_GUN\nATD\nCCW\n(GP)
+NXB		'
+XIC R101		'PED1 GUN\n팁드레서  기동 보조
+OTE R704		'R_GUN\nATD\nSTART\n(GP)
+BND		'
+NXB		'
+BST		'
+BST		'
+XIC R102		'PED1 GUN\n팁드레서  테스트    보조
+OTE R705		'R_GUN\nATD\nTEST\n(GP)
+NXB		'
+XIC R11		'ROBOT\nGUN1\n가압\n보조
+OTE R706		'R_GUN\nPRESSING\n(GP)
+BND		'
+NXB		'
+BST		'
+BST		'
+BST		'
+XIC FN5.Y11		'스텝완료\n(R1 TC)
+OTE R707		'R_GUN\nT/C STEP\nRESET\n(GP)
+NXB		'
+XIC FN3.Y6		'로보트    냉각수    차단밸브\n(R1)
+OTE R708		'R_GUN\nWATER\nCUTOFF\n(GP)
+BND		'
+NXB		'
+XIC FN5.Y9		'용접      시험 \nOn/Off\n(R1 TC)
+OTE R709		'R_GUN\nWELD\nPOWER\nON/OFF\n(GP)
+BND		'
+NXB		'
+XIC FN5.X4		'용접 가능\n(R TC)
+OTE R710		'R_GUN\nWELDING\nPOSSIBLE\n(GP)
+BND		'
+BND		'
+BND		'
+BND		'
+BND		'
+RUNG 19		'**** ROBOT GUN WATER CUTOFF VALVE
+XIC K801		'로보트 건1용접 사용\n(SET)
+BST		'
+XIC R345		'로보트 건\n냉각수 이상보조
+NXB		'
+XIC FB5.X45		'냉각수    차단      (LINE)
+BND		'
+XIO R6		'이상해제  보조\n
+OTE FN3.Y6		'로보트    냉각수    차단밸브\n(R1)
+RUNG 20		'**** ROBOT GUN ATD MOTOR FORWARD
+XIC K801		'로보트 건1용접 사용\n(SET)
+BST		'
+XIC R20		'팁드레서  모터 회전 보조2
+BST		'
+XIC DO77		'팁드레서1  모터 ON
+NXB		'
+XIC DO78		'팁드레서2  모터 ON
+XIO K806		'더블 ATD  모터 사용
+BND		'
+XIO FB5.X11		'무부하    시운전 모드(LINE)
+NXB		'
+XIC K2		'수동      모드\n(OP)
+XIC R502		'수동 ATD  모터 테스트(GP)
+XIC R515		'트리거\nENABLE\n(GP)
+XIO DO29		'로보트    기동중    (RB)
+BND		'
+OTE FN3.Y7		'ATD1 모터 정회전\n(ATD1)
+RUNG 21		'**** ROBOT GUN ATD MOTOR FORWARD
+XIC K801		'로보트 건1용접 사용\n(SET)
+BST		'
+XIC R20		'팁드레서  모터 회전 보조2
+XIC DO78		'팁드레서2  모터 ON
+XIC K806		'더블 ATD  모터 사용
+NXB		'
+XIC K2		'수동      모드\n(OP)
+XIC R502		'수동 ATD  모터 테스트(GP)
+XIC R515		'트리거\nENABLE\n(GP)
+XIO DO29		'로보트    기동중    (RB)
+BND		'
+OTE FN3.Y8		'ATD2 모터 정회전\n(ATD1)
+RUNG 22		'**** ROBOT GUN ATD AIR BLOW
+XIC K801		'로보트 건1용접 사용\n(SET)
+BST		'
+XIC FN3.Y7		'ATD1 모터 정회전\n(ATD1)
+NXB		'
+BST		'
+XIC FN3.Y8		'ATD2 모터 정회전\n(ATD1)
+NXB		'
+EQU SW23,63		'현재프로그램
+XIC DO29		'로보트    기동중    (RB)
+BND		'
+BND		'
+OTE FN3.Y9		'팁드레싱  에어 BLOW  SOL
+RUNG 23		'
+XIC R13		'ROBOT\nGUN2\n가압\n보조
+XIO DO78		'팁드레서2  모터 ON
+OTE FN3.Y16		'팁드레서2 모터 ON
+RUNG 24		'****RB AIR GUN SOL
+XIC DO77		'팁드레서1  모터 ON
+OTE FN4.Y1		'가압변경  SOL (G1)
+RUNG 25		'
+XIC R11		'ROBOT\nGUN1\n가압\n보조
+OTE FN4.Y2		'건가압    SOL (G1)
+RUNG 26		'
+XIO DO173		'건대/소구    (MX1)
+OTE FN4.Y3		'건대구    SOL (G1)
+RUNG 27		'
+XIC DO173		'건대/소구    (MX1)
+BST		'
+OTE FN4.Y4		'건소구    SOL (G1)
+NXB		'
+BST		'
+XIO T15		'건소구 펄스
+OTE FN4.Y5		'건 후압   방지 SOL  (G1)
+NXB		'
+TON T15,10,8		'건소구 펄스
+BND		'
+BND		'
+RUNG 28		'
+XIC R13		'ROBOT\nGUN2\n가압\n보조
+OTE FN4.Y6		'가압변경  SOL (G2)
+RUNG 29		'
+XIO DO174		'건대/소구    (MX2)
+OTE FN4.Y7		'건가압    SOL (G2)
+RUNG 30		'
+XIC DO174		'건대/소구    (MX2)
+BST		'
+OTE FN4.Y8		'건소구    SOL (G2)
+NXB		'
+BST		'
+XIO T16		'건소구 펄스
+OTE FN4.Y9		'건 후압   방지 SOL  (G2)
+NXB		'
+TON T16,10,8		'건소구 펄스
+BND		'
+BND		'
+RUNG 31		'**** WELDING CONEITION(DO18~DO22)
+BST		'
+XIC K801		'로보트 건1용접 사용\n(SET)
+XIC R11		'ROBOT\nGUN1\n가압\n보조
+NXB		'
+XIC K811		'로보트 건2용접 사용\n(SET)
+XIC R13		'ROBOT\nGUN2\n가압\n보조
+BND		'
+CCOP DO81,0,FN5.Y1,8		'
+RUNG 32		'**** ROBOT GUN T/C WELDING POWER
+XIC K801		'로보트 건1용접 사용\n(SET)
+XIO FN1.X3		'정상/고장\n(GP.SS)
+XIO DO1		'용접 시험 모드      (TP KEY)
+XIO DO77		'팁드레서1  모터 ON
+XIO FB5.X12		'용접 ON   시운전모드(LINE)
+OTE FN5.Y9		'용접      시험 \nOn/Off\n(R1 TC)
+RUNG 33		'**** ROBOT GUN TC ERROR RESET AUX
+XIC K801		'로보트 건1용접 사용\n(SET)
+XIC R6		'이상해제  보조\n
+OTE FN5.Y10		'이상해제\n(R1 TC)
+RUNG 34		'**** ROBOT GUN T/C STEPPER RESET
+XIC K801		'로보트 건1용접 사용\n(SET)
+BST		'
+BST		'
+XIC R23		'팁드레서  프로그램 \nSET\n보조
+NXB		'
+XIC R19		'팁드레서  모터 회전 보조1
+BND		'
+NXB		'
+XIC K2		'수동      모드\n(OP)
+XIC R507		'수동      팁드레싱  카운터 리셋
+XIC R515		'트리거\nENABLE\n(GP)
+XIO DO29		'로보트    기동중    (RB)
+BND		'
+OTE FN5.Y11		'스텝완료\n(R1 TC)
+RUNG 35		'**** ROBOT GUN T/C WELDING READY INPUT
+XIO DO1		'용접 시험 모드      (TP KEY)
+XIO DO77		'팁드레서1  모터 ON
+XIO FB5.X12		'용접 ON   시운전모드(LINE)
+OTE FN5.Y12		'마그네트  ON\n(R1 TC)
+RUNG 36		'
+XIC R12		'ROBOT GUN1용접 완료 보조
+OTE DI43		'ROBOT GUN1용접 완료
+RUNG 37		'
+XIC R14		'ROBOT GUN2용접 완료 보조
+OTE DI44		'ROBOT GUN2용접 완료
+RUNG 38		'
+XIC K801		'로보트 건1용접 사용\n(SET)
+BST		'
+XIC R25		'건1\n팁드레싱  카운터    보조
+NXB		'
+BST		'
+BST		'
+XIC R117		'팁체인지  완료드레싱요구 보조
+NXB		'
+XIC K3		'단독자동  모드\n(OP)
+XIC R504		'로보트건  팁드레싱  기동\n(GP)
+XIC R515		'트리거\nENABLE\n(GP)
+BND		'
+NXB		'
+XIC FB5.X25		'팁드레서  기동      (LINE)
+BND		'
+BND		'
+OTL DI77		'건1\n팁드레싱  카운터\n완료
+RUNG 39		'
+XIC K801		'로보트 건1용접 사용\n(SET)
+XIC DO77		'팁드레서1  모터 ON
+OTU DI77		'건1\n팁드레싱  카운터\n완료
+RUNG 40		'
+XIC K811		'로보트 건2용접 사용\n(SET)
+BST		'
+BST		'
+XIC R26		'건2\n팁드레싱  카운터    보조
+NXB		'
+BST		'
+XIC R117		'팁체인지  완료드레싱요구 보조
+NXB		'
+XIC K3		'단독자동  모드\n(OP)
+XIC R504		'로보트건  팁드레싱  기동\n(GP)
+XIC R515		'트리거\nENABLE\n(GP)
+BND		'
+BND		'
+NXB		'
+XIC FB5.X25		'팁드레서  기동      (LINE)
+BND		'
+OTL DI78		'건2\n팁드레싱  카운터\n완료
+RUNG 41		'
+XIC K811		'로보트 건2용접 사용\n(SET)
+XIC DO78		'팁드레서2  모터 ON
+OTU DI78		'건2\n팁드레싱  카운터\n완료
+RUNG 42		'
+BST		'
+XIC K801		'로보트 건1용접 사용\n(SET)
+NXB		'
+XIC K811		'로보트 건2용접 사용\n(SET)
+BND		'
+BST		'
+BST		'
+XIC FN3.X14		'ATD\n컬러센서 이동극
+NXB		'
+XIC FB5.X11		'무부하    시운전 모드(LINE)
+BND		'
+OTE DI79		'ATD\n컬러센서\n이동극\n체크확인
+NXB		'
+BST		'
+XIC FN3.X15		'ATD\n컬러센서 고정극
+NXB		'
+XIC FB5.X11		'무부하    시운전 모드(LINE)
+BND		'
+OTE DI80		'ATD\n컬러센서\n고정극\n체크확인
+BND		'

@@ -1,0 +1,283 @@
+Ladder File Format Version: 4.00
+RUNG 1		'SEALER USE PLC SET
+BST		'
+EQU MW982,0		'
+OTU K932		'스폿실러  사용\n(SET)
+NXB		'
+EQU MW983,0		'
+OTU K933		'구조용\n실러사용\n(SET)
+BND		'
+RUNG 2		'
+XIC K931		'실러      사용\n(SET)
+BST		'
+EQU MW982,1		'
+OTL K932		'스폿실러  사용\n(SET)
+NXB		'
+EQU MW983,1		'
+OTL K933		'구조용\n실러사용\n(SET)
+BND		'
+RUNG 3		'**** SEALER  : TP MAIN DISPLAY LAMP
+BST		'
+XIC SP2		'항시 OFF\n(SPECIAL)
+XIC K933		'구조용\n실러사용\n(SET)
+NXB		'
+XIC SP2		'항시 OFF\n(SPECIAL)
+XIC K935		'BPR실러\n사용\n(SET)
+BND		'
+OTE R231		'실러초기  기동\n(GP)
+RUNG 4		'
+BST		'
+XIC FN23.Y10		'구조용\n실러토출\n(구조용)
+XIC K933		'구조용\n실러사용\n(SET)
+NXB		'
+BST		'
+XIC FN23.Y9		'로보트 \n간섭무    (구조용)
+XIC K935		'BPR실러\n사용\n(SET)
+NXB		'
+BST		'
+XIC FN21.Y2		'스폿실러  건밸브 ON
+XIC K932		'스폿실러  사용\n(SET)
+NXB		'
+XIC FN21.Y8		'SPOT\nGUN\nV/V\n(SL)
+XIC K933		'구조용\n실러사용\n(SET)
+BND		'
+BND		'
+BND		'
+OTE R232		'실러도포  ON\n(GP)
+RUNG 5		'
+BST		'
+XIC FN23.Y11		'구조용\n실러\n작업완료  (구조용)
+XIC K933		'구조용\n실러사용\n(SET)
+NXB		'
+XIC SP2		'항시 OFF\n(SPECIAL)
+XIC K935		'BPR실러\n사용\n(SET)
+BND		'
+OTE R233		'실러 토포 완료\n(GP)
+RUNG 6		'
+BST		'
+BST		'
+XIC FN23.X1		'구조용\n실러정상\n(구조용)
+XIC K933		'구조용\n실러사용\n(SET)
+NXB		'
+BST		'
+XIC SP2		'항시 OFF\n(SPECIAL)
+XIC K935		'BPR실러\n사용\n(SET)
+NXB		'
+XIC FN21.X5		'스폿실러\n펌프정상
+XIC K932		'스폿실러  사용\n(SET)
+BND		'
+BND		'
+NXB		'
+BST		'
+BST		'
+XIO FN23.X1		'구조용\n실러정상\n(구조용)
+INV		'
+XIC K933		'구조용\n실러사용\n(SET)
+NXB		'
+XIO SP1		'항시 ON\n(SPECIAL)
+INV		'
+XIC K935		'BPR실러\n사용\n(SET)
+BND		'
+NXB		'
+XIO FN21.X5		'스폿실러\n펌프정상
+INV		'
+XIC K932		'스폿실러  사용\n(SET)
+BND		'
+XIC SP6		'1초 세컨  펄스 보조\n(SPECIAL)
+BND		'
+OTE R234		'실러 사용 가능\n(GP)
+RUNG 7		'
+XIC R49		'실러 종합 이상 보조
+OTE R235		'실러이상\n(GP)
+RUNG 8		'**** MASTIC SEALER MANUAL CONTROL
+XIC K932		'스폿실러  사용\n(SET)
+XIC FN21.Y2		'스폿실러  건밸브 ON
+OTE R861		'MASTIC\nGUN V/V\nON\n(GP)
+RUNG 9		'
+XIC K932		'스폿실러  사용\n(SET)
+XIC FN21.Y1		'스폿실러  셧업밸브  ON
+OTE R862		'MASTIC\nSHUT OFF\nV/V\nON\n(GP)
+RUNG 10		'
+XIC K932		'스폿실러  사용\n(SET)
+XIC FN21.Y2		'스폿실러  건밸브 ON
+OTE R863		'MASTIC\nSPRAY\n(GP)
+RUNG 11		'**** SPOT  SEALER MANUAL CONTROL
+XIC K932		'스폿실러  사용\n(SET)
+XIC FN21.Y8		'SPOT\nGUN\nV/V\n(SL)
+OTE R866		'SPOT\nGUN V/V\nON\n(GP)
+RUNG 12		'
+XIC K932		'스폿실러  사용\n(SET)
+XIC FN21.Y7		'SPOT\nSHUT OFF\nV/V(SL)
+OTE R867		'SPOT\nSHUT OFF\nV/V\nON\n(GP)
+RUNG 13		'
+XIC K932		'스폿실러  사용\n(SET)
+XIC FN21.Y8		'SPOT\nGUN\nV/V\n(SL)
+OTE R868		'SPOT\nSPRAY\n(GP)
+RUNG 14		'**** SWIRL SEALER MANUAL CONTROL
+XIC K933		'구조용\n실러사용\n(SET)
+XIC FN23.Y10		'구조용\n실러토출\n(구조용)
+OTE R871		'구조용\n1'ST\nSTART\n(GP)
+RUNG 15		'**** BPR SEALER MANUAL CONTROL
+XIC SP2		'항시 OFF\n(SPECIAL)
+XIC FN23.Y9		'로보트 \n간섭무    (구조용)
+OTE R876		'BPR\n1'ST\nSTART\n(GP)
+RUNG 16		'**** SPOT  SEALER  CONTROL
+XIC K932		'스폿실러  사용\n(SET)
+BST		'
+XIC DO137		'스폿실러  토출 ON   (RB)
+XIC DO29		'로보트    기동중    (RB)
+NXB		'
+XIC R141		'자동 \n토출 ON \n보조
+BND		'
+XIO FB5.X11		'무부하    시운전 모드(LINE)
+XIC DO30		'자동모드  (RB)
+BST		'
+OTE FN21.Y1		'스폿실러  셧업밸브  ON
+NXB		'
+XIC FN21.Y1		'스폿실러  셧업밸브  ON
+OTE FN21.Y2		'스폿실러  건밸브 ON
+BND		'
+RUNG 17		'
+XIC K932		'스폿실러  사용\n(SET)
+XIC R2		'로보트    원위치    보조
+XIO DO29		'로보트    기동중    (RB)
+BST		'
+BST		'
+XIC T70		'자동 토출 지연시간
+NXB		'
+XIC FB5.X42		'실러 수동 토출      (LINE)
+BND		'
+OTL R140		'자동  \n토출 기동 SET
+NXB		'
+XIO R140		'자동  \n토출 기동 SET
+TON T70,18000,100		'자동 토출 지연시간
+BND		'
+RUNG 18		'
+XIC K932		'스폿실러  사용\n(SET)
+XIC R140		'자동  \n토출 기동 SET
+BST		'
+XIC FN21.X4		'실러\n포스트 \n후진단\n
+XIO FN21.X3		'실러 \n포스트 \n전진단
+OTE FN21.Y5		'실러포스트전진 \n(SOL)
+NXB		'
+XIC FN21.X3		'실러 \n포스트 \n전진단
+BST		'
+BST		'
+XIC T91		'실러 \n토출대기  시간
+OTL R141		'자동 \n토출 ON \n보조
+NXB		'
+BST		'
+TON T91,100,2		'실러 \n토출대기  시간
+NXB		'
+XIC R141		'자동 \n토출 ON \n보조
+TON T92,100,8		'실러      토출 타임
+BND		'
+BND		'
+NXB		'
+XIC T92		'실러      토출 타임
+BST		'
+OTL R142		'실러 자동  토출 완료
+NXB		'
+OTU R141		'자동 \n토출 ON \n보조
+BND		'
+BND		'
+BND		'
+RUNG 19		'
+XIC K932		'스폿실러  사용\n(SET)
+XIC R142		'실러 자동  토출 완료
+BST		'
+BST		'
+BST		'
+XIC T73		'실러 \n포스트 \n후진 지연
+OTE FN21.Y6		'실러포스트후진 \n(SOl)
+NXB		'
+TON T73,100,2		'실러 \n포스트 \n후진 지연
+BND		'
+NXB		'
+OTU R140		'자동  \n토출 기동 SET
+BND		'
+NXB		'
+XIC FN21.X4		'실러\n포스트 \n후진단\n
+OTU R142		'실러 자동  토출 완료
+BND		'
+RUNG 20		'**** SPOT  SEALER CONTROL
+XIC K932		'스폿실러  사용\n(SET)
+XIC FN21.X1		'스폿 실러 노즐파손  확인단
+XIO FN21.X5		'스폿실러\n펌프정상
+XIC FN21.X4		'실러\n포스트 \n후진단\n
+OTE DI137		'스폿실러  진입조건  OK (RB)
+RUNG 21		'**** SPOT  SEALER
+XIC K932		'스폿실러  사용\n(SET)
+XIO FN21.X2		'스폿실러 \n누락감지  레이져센서
+OTE DI139		'실러누락  감지 OK\n(RB)
+RUNG 22		'**** SPOT  SEALER
+XIC K932		'스폿실러  사용\n(SET)
+XIC FN21.X4		'실러\n포스트 \n후진단\n
+OTE DI140		'실러 \n포스트\n후진확인  OK(RB)
+RUNG 23		'**** STRUCTRE SEALER  PETUN
+XIC K933		'구조용\n실러사용\n(SET)
+CCOP DO145,0,FN23.Y1,8		'실러 패턴
+RUNG 24		'**** STRUCTRE SEALER NON INT
+XIC K933		'구조용\n실러사용\n(SET)
+XIC DO143		'구조용\n실러\n간섭무\n(RB)
+OTE FN23.Y9		'로보트 \n간섭무    (구조용)
+RUNG 25		'**** STRUCTRE SEALER  DESPENSE
+XIC K933		'구조용\n실러사용\n(SET)
+BST		'
+XIC DO141		'구조용\n실러도포\nON\n(RB)
+XIC DO29		'로보트    기동중    (RB)
+XIC DO30		'자동모드  (RB)
+NXB		'
+XIC DO141		'구조용\n실러도포\nON\n(RB)
+XIC DO32		'로보트    원위치    (RB)
+BND		'
+XIO FB5.X11		'무부하    시운전 모드(LINE)
+OTE FN23.Y10		'구조용\n실러토출\n(구조용)
+RUNG 26		'**** STRUCTRE SEALER  WORK COMPL
+XIC K933		'구조용\n실러사용\n(SET)
+XIC DO142		'구조용\n실러\n작업완료\n(RB)
+OTE FN23.Y11		'구조용\n실러\n작업완료  (구조용)
+RUNG 27		'**** STRUCTRE SEALER ERROR RESET
+XIC K933		'구조용\n실러사용\n(SET)
+XIC R6		'이상해제  보조\n
+OTE FN23.Y12		'이상해제  (구조용)
+RUNG 28		'**** STRUCTRE SEALER CAR TYPE
+XIC K933		'구조용\n실러사용\n(SET)
+XIC DO140		'구조용\n실러차종\n전송
+BST		'
+BST		'
+BST		'
+XIC DI25		'프로그램\n선택 1
+OTE FN23.Y13		'프로그램\n선택 1\n(구조용)
+NXB		'
+XIC DI26		'프로그램\n선택 2
+OTE FN23.Y14		'프로그램\n선택 2\n(구조용)
+BND		'
+NXB		'
+XIC DI27		'프로그램\n선택 4
+OTE FN23.Y15		'프로그램\n선택 4\n(구조용)
+BND		'
+NXB		'
+XIC DI28		'프로그램\n선택 8
+OTE FN23.Y16		'프로그램\n선택 8\n(구조용)
+BND		'
+RUNG 29		'**** STRUCTRE SEALER
+XIC K933		'구조용\n실러사용\n(SET)
+XIC FN23.X1		'구조용\n실러정상\n(구조용)
+OTE DI145		'구조용\n실러정상\n(RB)
+RUNG 30		'**** STRUCTRE SEALER
+XIC K933		'구조용\n실러사용\n(SET)
+XIC FN23.X2		'구조용\n실러\n압조정 \n완료\n
+OTE DI146		'구조용\n실러\n압조정\n완료\n(RB)
+RUNG 31		'**** STRUCTRE SEALER
+XIC K933		'구조용\n실러사용\n(SET)
+XIC FN23.X3		'구조용\n실러\n부스터 \n원위치
+OTE DI147		'구조용\n실러\n부스터 \n원위치확인
+RUNG 32		'**** STRUCTRE SEALER
+XIC K933		'구조용\n실러사용\n(SET)
+XIC FN23.X7		'비젼 검사 OK  \n(구조용)
+OTE DI148		'비젼검사  OK\n(RB)
+RUNG 33		'**** STRUCTRE SEALER
+XIC K933		'구조용\n실러사용\n(SET)
+XIC FN23.X8		'비젼 검사 NG  \n(구조용)
+OTE DI149		'비젼검사  NG\n(RB)

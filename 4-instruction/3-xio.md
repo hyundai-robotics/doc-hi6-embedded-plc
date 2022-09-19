@@ -1,4 +1,4 @@
-﻿# 4.2 XIO(Examine if Open) : Open 검사
+﻿# 4.3 XIO(Examine if Open) : Open 검사
 
 
 ### 설명

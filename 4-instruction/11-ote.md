@@ -1,8 +1,8 @@
-﻿# 4.2 XIO(Examine if Open) : Open 검사
+﻿# 4.11 OTE(Output Energize) : 일반 출력
 
 
 ### 설명
-오퍼랜드의 bit 값이 0이면 Rung을 활성(active), 1이면 비활성 합니다.
+Rung상태에 따라 출력합니다. 즉, Rung이 활성이면 on(high)으로, 비활성이면 off(low)로 출력합니다.
 
 <br>
 
@@ -38,7 +38,7 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 <tbody>
   <tr>
     <td class='hd'>oprd1</td>
-    <td></td>
+    <td>X</td>
     <td>X</td>
     <td></td>
     <td>X</td>
@@ -53,6 +53,6 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 
 ### 사용 예
 
-B접점 입력 X1인 "중지(PAUSE)" 버튼이 눌린 상태(0=Active)이면, 브레이크 출력 Y8을 on합니다.
+입력 DO12의 상태로 Y12를 출력합니다.
 
-![](../_assets/xio.png)
+![](../_assets/ote.png)

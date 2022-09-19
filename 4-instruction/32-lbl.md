@@ -1,8 +1,9 @@
-﻿# 4.2 XIO(Examine if Open) : Open 검사
+﻿# 4.32 LBL(Label) : 레이블 지정
 
 
 ### 설명
-오퍼랜드의 bit 값이 0이면 Rung을 활성(active), 1이면 비활성 합니다.
+JMP명령으로 jump할 레이블의 위치를 0보다 큰 숫자(const)로 번호를 지정합니다.  
+LBL명령은 Rung이 활성/비활성에 무관하게 위치가 지정됩니다.
 
 <br>
 
@@ -37,14 +38,14 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 </thead>
 <tbody>
   <tr>
-    <td class='hd'>oprd1</td>
-    <td></td>
+    <td class='hd'>label</td>
+    <td>X</td>
+    <td>X</td>
+    <td>X</td>
+    <td>X</td>
+    <td>X</td>
     <td>X</td>
     <td></td>
-    <td>X</td>
-    <td></td>
-    <td>X</td>
-    <td>X</td>
   </tr>
 </tbody>
 </table>
@@ -53,6 +54,4 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 
 ### 사용 예
 
-B접점 입력 X1인 "중지(PAUSE)" 버튼이 눌린 상태(0=Active)이면, 브레이크 출력 Y8을 on합니다.
-
-![](../_assets/xio.png)
+JMP명령과 함께 사용하므로 JMP명령 설명을 참고하십시오.

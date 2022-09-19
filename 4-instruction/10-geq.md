@@ -1,8 +1,8 @@
-﻿# 4.2 XIO(Examine if Open) : Open 검사
+﻿# 4.10 GEQ(Greater Than or Equal) : 크거나 같은지 검사
 
 
 ### 설명
-오퍼랜드의 bit 값이 0이면 Rung을 활성(active), 1이면 비활성 합니다.
+"source a"의 값이 "source b" 의 값보다 크거나 같으면, Rung이 활성 됩니다. (접점활성)
 
 <br>
 
@@ -37,14 +37,26 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 </thead>
 <tbody>
   <tr>
-    <td class='hd'>oprd1</td>
-    <td></td>
+    <td class='hd'>source a</td>
     <td>X</td>
     <td></td>
     <td>X</td>
     <td></td>
     <td>X</td>
+    <td></td>
+    <td></td>
+  </tr>
+</tbody>
+<tbody>
+  <tr>
+    <td class='hd'>source b</td>
     <td>X</td>
+    <td></td>
+    <td>X</td>
+    <td></td>
+    <td>X</td>
+    <td></td>
+    <td></td>
   </tr>
 </tbody>
 </table>
@@ -53,6 +65,6 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 
 ### 사용 예
 
-B접점 입력 X1인 "중지(PAUSE)" 버튼이 눌린 상태(0=Active)이면, 브레이크 출력 Y8을 on합니다.
+입력 XB9의 값이 100보다 크거나 같으면 출력 Y12를 on하고, 작으면 off 합니다.
 
-![](../_assets/xio.png)
+![](../_assets/geq.png)

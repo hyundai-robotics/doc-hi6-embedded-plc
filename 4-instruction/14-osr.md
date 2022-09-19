@@ -1,8 +1,9 @@
-﻿# 4.2 XIO(Examine if Open) : Open 검사
+﻿# 4.14 OSR(One Shot Rising) : 원 샷 출력
 
 
 ### 설명
-오퍼랜드의 bit 값이 0이면 Rung을 활성(active), 1이면 비활성 합니다.
+Rung이 활성이면, 한scan 동안만 On(high)으로 출력합니다.  
+즉, Rung이 비활성이었다가 활성으로 될 때 한 scan동안만 해당 릴레이가 On됩니다.
 
 <br>
 
@@ -38,7 +39,7 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 <tbody>
   <tr>
     <td class='hd'>oprd1</td>
-    <td></td>
+    <td>X</td>
     <td>X</td>
     <td></td>
     <td>X</td>
@@ -53,6 +54,6 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 
 ### 사용 예
 
-B접점 입력 X1인 "중지(PAUSE)" 버튼이 눌린 상태(0=Active)이면, 브레이크 출력 Y8을 on합니다.
+입력 X17이 on되면 내부 상태 M17를 on합니다. M17은 해당 scan이 종료할 때 까지만 on을 유지하고 새로운 scan이 시작되면 off 됩니다.
 
-![](../_assets/xio.png)
+![](../_assets/osr.png)

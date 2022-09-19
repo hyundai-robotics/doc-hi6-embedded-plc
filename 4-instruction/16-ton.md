@@ -1,0 +1,92 @@
+﻿# 4.16 TON(Time On Delay) : 타이머
+
+
+### 설명
+Rung이 활성인 시간을 계산하여 설정한 시간(timer base x preset x 10) [ms]이후에 해당 타이머 릴레이가 On(high)으로 됩니다. 그러나 Rung이 비활성이면, 즉시 클리어(-1) 설정됩니다.  
+참고) T의 값은 1ms단위이며, 타이머의 인덱스로는 반드시 4의 배수를 사용해야 합니다. (T0, T4, T8 ...)
+
+<br>
+
+### 오퍼랜드로 사용할 수 있는 type
+(X는 불가)
+<style type="text/css">
+table  {border-collapse:collapse;}
+th {background-color:#efefef; border-style:solid;border-width:1px;color:black;text-align:center;}
+td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
+.hd{background-color:#efefef;color:black;font-weight:bold;}
+</style>
+
+<table>
+<thead>
+  <tr>
+    <th>relay type</th>
+    <th colspan="2">input<br>X, DO</th>
+    <th colspan="2">output<br>Y, DI</th>
+    <th colspan="2">memory<br>M, S</th>
+    <th colspan="2">timer<br>T</th>
+    <th>const.<br>32bit</th>
+  </tr>
+  <tr>
+    <th>data-type</th>
+    <th>bit</th>
+    <th>B,W,L,F</th>
+    <th>bit</th>
+    <th>B,W,L,F</th>
+    <th>bit</th>
+    <th>B,W,L,F</th>
+    <th>bit</th>
+    <th>B,W,L,F</th>
+    <th>L,F</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class='hd'>timer</td>
+    <td>X</td>
+    <td>X</td>
+    <td>X</td>
+    <td>X</td>
+    <td>X</td>
+    <td>X</td>
+    <td></td>
+    <td>X</td>
+    <td>X</td>
+  </tr>
+</tbody>
+<tbody>
+  <tr>
+    <td class='hd'>timer base(1/100s)</td>
+    <td>X</td>
+    <td></td>
+    <td>X</td>
+    <td></td>
+    <td>X</td>
+    <td></td>
+    <td>X</td>
+    <td>X</td>
+    <td></td>
+  </tr>
+</tbody>
+<tbody>
+  <tr>
+    <td class='hd'>preset</td>
+    <td>X</td>
+    <td></td>
+    <td>X</td>
+    <td></td>
+    <td>X</td>
+    <td></td>
+    <td>X</td>
+    <td>X</td>
+    <td></td>
+  </tr>
+</tbody>
+</table>
+
+<br>
+
+### 사용 예
+
+입력 DO34가 on된 후 1초가 경과하면 T32의 타이머 릴레이가 on 됩니다. 이때 출력 Y34가 on 됩니다. 
+
+![](../_assets/ton.png)

@@ -1,8 +1,11 @@
-﻿# 4.2 XIO(Examine if Open) : Open 검사
+﻿# 4.26 MOV(Move) : 이동
 
 
 ### 설명
-오퍼랜드의 bit 값이 0이면 Rung을 활성(active), 1이면 비활성 합니다.
+Rung이 활성이면, "source"의 값을 "destination"에 복사합니다.  
+만일, "source"가 워드(W)형식이고 "destination"이 바이트(B)형식이면, "source"의 값 중 하위 바이트만 "destination"에 복사됩니다.  
+그리고, 내장 PLC의 모든 데이터는 부호가 있는 데이터로 처리하고 있기 때문에, "source"가 바이트(B) 형식이고 값이 -1(&Hff)인 경우 워드(W)형식의 "destination"으로 복사하면, -1(&HFFFF)로 복사합니다.(&H00ff는 255의 값이 됩니다.)
+
 
 <br>
 
@@ -37,13 +40,25 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 </thead>
 <tbody>
   <tr>
-    <td class='hd'>oprd1</td>
-    <td></td>
+    <td class='hd'>source</td>
     <td>X</td>
     <td></td>
     <td>X</td>
     <td></td>
     <td>X</td>
+    <td></td>
+    <td></td>
+  </tr>
+</tbody>
+<tbody>
+  <tr>
+    <td class='hd'>destination</td>
+    <td>X</td>
+    <td>X</td>
+    <td>X</td>
+    <td></td>
+    <td>X</td>
+    <td></td>
     <td>X</td>
   </tr>
 </tbody>
@@ -53,6 +68,6 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 
 ### 사용 예
 
-B접점 입력 X1인 "중지(PAUSE)" 버튼이 눌린 상태(0=Active)이면, 브레이크 출력 Y8을 on합니다.
+입력 DO55가 활성화되면 내부 상태 MB2에 55가 설정됩니다.
 
-![](../_assets/xio.png)
+![](../_assets/mov.png)

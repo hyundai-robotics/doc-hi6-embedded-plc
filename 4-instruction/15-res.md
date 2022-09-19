@@ -1,8 +1,8 @@
-﻿# 4.2 XIO(Examine if Open) : Open 검사
+﻿# 4.15 RES(Reset) : 리셋
 
 
 ### 설명
-오퍼랜드의 bit 값이 0이면 Rung을 활성(active), 1이면 비활성 합니다.
+Rung이 활성이면, 타이머(T)나 카운터(C) 릴레이 값을 클리어(-1)시킵니다.
 
 <br>
 
@@ -22,10 +22,16 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
     <th colspan="2">input<br>X, DO</th>
     <th colspan="2">output<br>Y, DI</th>
     <th colspan="2">memory<br>M, S</th>
+    <th colspan="2">timer<br>T</th>
+    <th colspan="2">count<br>C</th>
     <th>const.<br>32bit</th>
   </tr>
   <tr>
     <th>data-type</th>
+    <th>bit</th>
+    <th>B,W,L,F</th>
+    <th>bit</th>
+    <th>B,W,L,F</th>
     <th>bit</th>
     <th>B,W,L,F</th>
     <th>bit</th>
@@ -38,7 +44,11 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 <tbody>
   <tr>
     <td class='hd'>oprd1</td>
-    <td></td>
+    <td>X</td>
+    <td>X</td>
+    <td>X</td>
+    <td>X</td>
+    <td>X</td>
     <td>X</td>
     <td></td>
     <td>X</td>
@@ -53,6 +63,6 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 
 ### 사용 예
 
-B접점 입력 X1인 "중지(PAUSE)" 버튼이 눌린 상태(0=Active)이면, 브레이크 출력 Y8을 on합니다.
+내부 상태 M18이 on되면 T28의 타이머 릴레이를 -1로 클리어 합니다.
 
-![](../_assets/xio.png)
+![](../_assets/res.png)

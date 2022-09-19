@@ -1,8 +1,8 @@
-﻿# 4.2 XIO(Examine if Open) : Open 검사
+﻿# 4.19 SUB(Subtract) : 빼기
 
 
 ### 설명
-오퍼랜드의 bit 값이 0이면 Rung을 활성(active), 1이면 비활성 합니다.
+Rung이 활성이면, "source a"의 값에서 "source b" 의 값을 빼서 "destination" 릴레이에 값을 설정합니다.
 
 <br>
 
@@ -37,13 +37,37 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 </thead>
 <tbody>
   <tr>
-    <td class='hd'>oprd1</td>
-    <td></td>
+    <td class='hd'>source a</td>
     <td>X</td>
     <td></td>
     <td>X</td>
     <td></td>
     <td>X</td>
+    <td></td>
+    <td></td>
+  </tr>
+</tbody>
+<tbody>
+  <tr>
+    <td class='hd'>source b</td>
+    <td>X</td>
+    <td></td>
+    <td>X</td>
+    <td></td>
+    <td>X</td>
+    <td></td>
+    <td></td>
+  </tr>
+</tbody>
+<tbody>
+  <tr>
+    <td class='hd'>destination</td>
+    <td>X</td>
+    <td>X</td>
+    <td>X</td>
+    <td></td>
+    <td>X</td>
+    <td></td>
     <td>X</td>
   </tr>
 </tbody>
@@ -53,6 +77,6 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 
 ### 사용 예
 
-B접점 입력 X1인 "중지(PAUSE)" 버튼이 눌린 상태(0=Active)이면, 브레이크 출력 Y8을 on합니다.
+입력 DO37이 활성화 되면 XB3의 값에 10을 빼서 그 결과를 내부 상태 MB3에 설정합니다.
 
-![](../_assets/xio.png)
+![](../_assets/sub.png)

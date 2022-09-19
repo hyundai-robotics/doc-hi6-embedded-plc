@@ -1,4 +1,4 @@
-﻿# 4.4.8 S 릴레이 - CUR_SPOTGUN_NO
+﻿# 3.4.8 S 릴레이 - CUR_SPOTGUN_NO
 
 <style type="text/css">
 table  {border-collapse:collapse;}

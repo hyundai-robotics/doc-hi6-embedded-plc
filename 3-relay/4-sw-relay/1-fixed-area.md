@@ -9,6 +9,8 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 .bit { width: 10%; }
 </style>
 
+### 특수 플래그 (special flags) 영역
+
 <table class="tg">
 <thead>
 	<tr>
@@ -65,6 +67,8 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 </table>
 
 <br>
+
+### 기본 정보 (basic information) 영역
 
 <table class="tg">
 <thead>

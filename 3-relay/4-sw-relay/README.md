@@ -30,12 +30,12 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 
 <br>
 
-### 고정 영역
+### 고정 영역 (fixed area)
 자주 사용되는 기본적인 항목들이 미리 정해진 주소로 배치되어 있습니다. 설정을 통한 항목 변경과 배치가 불가능합니다. 다음 절에서 고정영역의 맵이 설명됩니다.
 
 <br>
 
-### 선택 항목 영역
+### 선택 항목 영역 (optional items area)
 20byte 크기의 slot들 900개로 구성되어 있습니다. 각 slot은 선두 word에 어떤 command 값을 넣느냐에 따라 구성이 결정됩니다. 각 command별 맵이 이어지는 절에서 설명됩니다.
 
 <table class="tg">

@@ -1,4 +1,4 @@
-﻿# 1. 개요
+﻿# 1. Overview
 
 Hi6 제어기의 내장PLC(Embedded PLC)는 PLC(Programmable Logic Controller)의 기능을 제어기 내부에 소프트웨어적으로 탑재한 것입니다. PLC에서 흔히 사용되는 래더(ladder) 프로그램을 사용자가 작성하여 구동시킬 수 있습니다.
 

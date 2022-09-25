@@ -1,4 +1,4 @@
-﻿# 1.1 래더 로직(Ladder Logic)
+﻿# 1.1 Ladder Logic
 
 래더 로직(Ladder Logic)은 내장PLC의 주요 프로그래밍 방식입니다. 이를 래더 다이어그램(Ladder Diagram, 줄여서 LD)이라고도 부릅니다. (LD 외에도 ST, FBD, SFC 같은 다른 방식도 있지만 내장PLC가 지원하지 않으므로 설명하지 않겠습니다.)
 
@@ -19,10 +19,10 @@ PLC를 RUN 모드로 전환하면 래더 다이어그램이 반복적으로 수�
 
 ![](../_assets/ladder-add.png)
 
-* 니모닉 : ADD
-* 오퍼랜드1 : MW5
-* 오퍼랜드2 : DOW2
-* 오퍼랜드3 : MW6
+* Mnemonic : ADD
+* Operand1 : MW5
+* Operand2 : DOW2
+* Operand3 : MW6
 
 <br>
 
@@ -32,7 +32,7 @@ PLC를 RUN 모드로 전환하면 래더 다이어그램이 반복적으로 수�
 
 <br>
 
-## 접점형 명령 (Contact Instruction)
+## Contact Instruction
 
 접점 명령으로 분류되는 XIC(eXamine If Closed)는 오퍼랜드가 1개만 있는 단순한 명령입니다. -| |- 기호 위에 오퍼랜드가 표기된 형태로 rung에 표시됩니다.
 
@@ -56,7 +56,7 @@ X1 AND (X2 OR (NOT X3))
 <br>
 
 
-## 출력 코일형 명령 (Output-coil Instruction)
+## Output-coil Instruction
 
 OTE(OuTput Energize)는 출력 코일 명령으로 분류됩니다. 항상 rung의 가장 마지막인 오른쪽에 배치되며 -( )- 기호로 표시됩니다. 왼쪽에서 전달받은 값을 오퍼랜드 릴레이로 출력합니다.
 
@@ -71,7 +71,7 @@ Y8 = X1 AND (X2 OR (NOT X3))
 
 <br>
 
-## 함수형 명령 (Function Instruction)
+## Function Instruction
 
 왼쪽이 active되면 주어진 오퍼랜드들에 대해 특정한 동작을 수행합니다. 가령 아래 다이어그램은 DO3가 active 되었을 때 MW5와 DOW2 릴레이의 값을 더해 MW6 릴레이에 대입하는 산술 연산 ADD(+)를 수행합니다.
 

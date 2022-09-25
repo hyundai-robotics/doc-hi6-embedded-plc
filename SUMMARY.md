@@ -1,7 +1,7 @@
 ﻿# Table of contents
 
-* [Hi6 로봇제어기 기능설명서 - 내장PLC (Embedded PLC)](README.md)
-* [1. 개요](1-intro/README.md)
+* [Hi6 Robot Controller Function Manual - Embedded PLC](README.md)
+* [1. Overview](1-intro/README.md)
   * [1.1 래더 로직(Ladder Logic)](1-intro/1-ladder-logic.md)
 
 * [2. 제어기 설정](2-rc-setting/README.md)

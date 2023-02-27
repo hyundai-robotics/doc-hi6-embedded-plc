@@ -19,12 +19,12 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<th>내용</th>
 	</tr>
 	<tr>
-		<th>SB00000 ~ SB01999</th>
-		<th>고정 항목 영역</th>
+		<td>SB00000 ~ SB01999</td>
+		<td>고정 항목 영역</td>
 	</tr>
 	<tr>
-		<th>SB02000 ~ SB19999</th>
-		<th>선택 항목 영역 (slots)</th>
+		<td>SB02000 ~ SB19999</td>
+		<td>선택 항목 영역 (slots)</td>
 	</tr>
 </table>
 

@@ -151,11 +151,17 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 거의 모니터링 항목에 각기 정해진 SW릴레이 인덱스 주소가 있습니다.  
 단, 인덱스 주소 중 SW220~249는 10개의 다용도 슬롯(slot)이며, 시스템변수, 메인보드 저장공간, 아날로그 입출력, 날짜/시간, GE변수 중 원하는 코드를 원하는 슬롯에 넣어 모니터링합니다.
 
+- 대부분 항목 : 고정영역
+- 일부 항목 : 선택 항목 영역 (slot)
+
 <br>
 
 ### Hi6
 
 SB0~SB1999 영역은 Hi5a와 같이 항목마다 정해진 인덱스 주소를 갖는 [S 릴레이 고정 영역](https://hrbook-hrc.web.app/#/view/doc-hi6-embedded-plc/korean/3-relay/4-sw-relay/1-fixed-area)입니다.
 
-반면 SB2000~ 영역은 900개의 다용도 슬롯(slot)으로 구성되어 있어서 원하는 항목의 command를 널어 사용할 수 있는 [선택 항목 영역](https://hrbook-hrc.web.app/#/view/doc-hi6-embedded-plc/korean/3-relay/4-sw-relay/README)입니다.
+반면 SB2000~ 의 영역의 900개의 다용도 슬롯(slot)으로 구성되어 있어서 원하는 항목의 command를 넣어 사용할 수 있는 [선택 항목 영역](https://hrbook-hrc.web.app/#/view/doc-hi6-embedded-plc/korean/3-relay/4-sw-relay/README)입니다.  
+거의 대부분의 항목을 선택 항목 영역을 통해 모니터링합니다.
 
+- 대부분 항목 : 선택 항목 영역 (slot)
+- 일부 항목 : 고정영역

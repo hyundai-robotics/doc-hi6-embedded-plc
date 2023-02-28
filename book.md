@@ -24,7 +24,17 @@ Hi6 제어기의 내장PLC(Embedded PLC)는 PLC(Programmable Logic Controller)�
 * HRLadder는 Hi4~Hi5a의 구모델 제어기용으로도 사용 가능합니다. 다만 래더 프로그램은 Hi6와 구모델 간 차이가 있어 호환되지 않음을 유의하십시오.
 
 Hi6제어기의 I/O는 필드버스나 리모트I/O 장치를 통해 필드버스 마스터를 가진 상위 공정PLC, 혹은 하위 필드버스 슬레이브 장치들과 연결할 수 있습니다. 내장PLC 기능은 이렇게 연결된 I/O 신호들을 Ladder Logic으로 제어하는 기능입니다.
-# 1.1 래더 로직(Ladder Logic)
+
+
+Hi6의 내장PLC 기능은 Hi5a의 내장PLC 기능과 유사하며, 동일한 래더 편집기 HRLadder를 사용합니다.
+따라서 이미 Hi5a의 내장PLC 기능에 익숙한 사용자는, Hi6제어기에서 달라진 부분만을 확인하는 방식으로 이 설명서를 빠르게 학습할 수 있습니다.
+
+
+{% hint style="info" %}
+이미 Hi5a의 내장PLC 기능에 익숙한 사용자는, Hi6제어기에서 달라진 부분만을 확인하는 방식으로 이 설명서를 빠르게 학습할 수 있습니다. 아래 링크를 확인하시기 바랍니다.  
+[5. Hi5a와 Hi6의 내장PLC 차이점](../5-diff-hi5a-hi6.md)
+
+{% endhint %}# 1.1 래더 로직(Ladder Logic)
 
 래더 로직(Ladder Logic)은 내장PLC의 주요 프로그래밍 방식입니다. 이를 래더 다이어그램(Ladder Diagram, 줄여서 LD)이라고도 부릅니다. (LD 외에도 ST, FBD, SFC 같은 다른 방식도 있지만 내장PLC가 지원하지 않으므로 설명하지 않겠습니다.)
 
@@ -123,17 +133,17 @@ Y20 = DO6 AND (MW8 > 120)
 내장 PLC의 동작모드는 "[F7:조건설정] - PLC 동작 모드" 에서 <Off, Stop, R-Stop, R-Run, Run>중 하나를 선택할 수 있습니다.  
 R-Stop, R-Run은 Remote-Stop, Remote-Run, 즉 이더넷으로 연결된 PC의 HRLadder 등에서 원격으로 모드변경이 가능한 상태를 의미합니다.
 
-![](../_assets/plc_run_mode.png)
-그림 2.1 내장 PLC모드 설정
+![그림 2.1 내장 PLC모드 설정](../_assets/plc_run_mode.png)
+
 <br>
 <br>
 선택된 모드에 따라 TP화면 우측상단에 아이콘으로 상태를 표시합니다. 즉, PLC=<R-Run이나 Run>상태이면 상기 그림과 같이 PLC 아이콘이 표시되고, PLC=Off인 경우에는 하기 그림과 같이 아이콘이 사라지며, PLC=STOP상태이면 PLC 아이콘에 적색금지마크가 표시됩니다.
 
-![](../_assets/plc_mode_off.png)
-그림 2.2 내장 PLC Off 상태
+![그림 2.2 내장 PLC Off 상태](../_assets/plc_mode_off.png)
+
  
-![](../_assets/plc_mode_stop.png)
-그림 2.3 내장 PLC STOP상태
+![그림 2.3 내장 PLC STOP상태](../_assets/plc_mode_stop.png)
+
 
 * Off  
 내장 PLC의 기능이 꺼집니다. 이 경우, 로봇제어기의 논리적 출력(Logical Output)인 FB0.DO0~FB9.DO959이 물리적 출력(Physical Output)인 FB0.Y0~FB9.Y959로 자동 출력(bypass)되고, 물리적 입력인 FB0.X0~FB9.X959가 논리적 입력인 FB0.DI0~FB9.DI595로 자동 입력됩니다.
@@ -338,12 +348,12 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<th>내용</th>
 	</tr>
 	<tr>
-		<th>SB00000 ~ SB01999</th>
-		<th>고정 항목 영역</th>
+		<td>SB00000 ~ SB01999</td>
+		<td>고정 항목 영역</td>
 	</tr>
 	<tr>
-		<th>SB02000 ~ SB19999</th>
-		<th>선택 항목 영역 (slots)</th>
+		<td>SB02000 ~ SB19999</td>
+		<td>선택 항목 영역 (slots)</td>
 	</tr>
 </table>
 
@@ -2727,7 +2737,7 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 
 ### 설명
 Rung이 활성인 시간을 계산하여 설정한 시간(timer base x preset x 10) [ms]이후에 해당 타이머 릴레이가 On(high)으로 됩니다. 그러나 Rung이 비활성이면, 즉시 클리어(-1) 설정됩니다.  
-참고) T의 값은 1ms단위이며, 타이머의 인덱스로는 반드시 4의 배수를 사용해야 합니다. (T0, T4, T8 ...)
+참고) T의 값은 1ms단위입니다.
 
 <br>
 
@@ -2822,7 +2832,6 @@ Rung의 상승(비활성에서 활성)을 다운-카운트합니다.
 해당 C의 값이 0이 되면 해당 카운터가 on(high)으로 되고, 더 이상 카운트 하지 않습니다.
 Rung이 활성일 때, 해당 C의 값이 음수이면, preset값을 C에 저장합니다.  
 참고) Rung이 비활성이라도 C는 클리어(-1) 하지 않으며 클리어 하기 위해서는 RES 명령어를 실행해야 합니다.  
-참고) 카운터의 인덱스로는 반드시 4의 배수를 사용해야 합니다. (C0, C4, C8 ...)
 
 <br>
 
@@ -4279,3 +4288,170 @@ Rung이 활성이면, 현재 실행되고 있는 래더를 종료합니다.
 
 
 ![](../_assets/end.png)
+# 5. Hi5a와 Hi6의 내장PLC 차이점
+
+Hi6의 내장PLC 기능은 Hi5a의 내장PLC 기능과 유사하며, 동일한 래더 편집기 HRLadder를 사용합니다.
+따라서 이미 Hi5a의 내장PLC 기능에 익숙한 사용자는, Hi6제어기에서 달라진 부분만을 확인하는 방식으로 이 설명서를 빠르게 학습할 수 있습니다.
+
+아래는 달라진 부분의 리스트입니다.
+
+<br>
+
+## HRLadder online 연결
+
+HRLadder v2.80부터 Hi6제어기를 지원합니다.  
+HRLadder v2.80 미만 버전에서는 online 버튼을 누르면 제어기 종류(Hi4~Hi5a)를 자동 인식하여 원격 연결이 수행합니다.  
+반면 HRLadder v2.80 이상 버전에서는 먼저 프로젝트의 속성에서 제어기 종류를 선택한 후 online 버튼을 누르십시오.
+
+![](_assets/hrladder-prj-prop.png)
+
+![](_assets/hrladder-prj-prop2.png)
+
+<br>
+
+## 릴레이 종류
+
+### Hi5a
+
+보조릴레이 R, 보존릴레이 K, 특수릴레이 SP가 존재합니다.
+M릴레이는 MW1~1000을 지원합니다.
+
+### Hi6
+
+보조릴레이 R, 보존릴레이 K가 폐기되었습니다.
+M릴레이가 MW0~MW19998 로 대폭 확대되었으므로, M릴레이로 대체하여 사용하십시오.
+SP릴레이는 [S 릴레이 - 고정영역](https://hrbook-hrc.web.app/#/view/doc-hi6-embedded-plc/korean/3-relay/4-sw-relay/1-fixed-area)의 특수 플래그 영역로서 통합되었습니다.  
+
+<br>
+
+
+## 인덱스(index)
+
+### Hi5a
+index가 1부터 시작합니다.
+word, long, float 의 index가 1씩 증가합니다. 
+예를 들어 DOW1 따라서, DO16~DO23은 DOW1과 같습니다.
+
+
+<style type="text/css">
+table  {border-collapse:collapse;}
+td {border-color:gray;border-style:solid;border-width:1px;}
+.tg-kftd{background-color:#efefef;}
+</style>
+
+<table class="tg">
+<tbody>
+  <tr>
+    <td class="tg-kftd">bit</td>
+    <td>DO1~DO8</td>
+    <td>DO9~DO16</td>
+    <td>DO17~DO24</td>
+    <td>DO25~DO32</td>
+    <td>...</td>
+  </tr>
+  <tr>
+    <td class="tg-kftd">byte</td>
+    <td>DOB1</td>
+    <td>DOB2</td>
+    <td>DOB3</td>
+    <td>DOB4</td>
+    <td>...</td>
+  </tr>
+  <tr>
+    <td class="tg-kftd">word</td>
+    <td colspan="2">DOW1</td>
+    <td colspan="2">DOW2</td>
+    <td>...</td>
+  </tr>
+  <tr>
+    <td class="tg-kftd">long</td>
+    <td colspan="4">DOL1</td>
+    <td>...</td>
+  </tr>
+  <tr>
+    <td class="tg-kftd">float</td>
+    <td colspan="4">DOF1</td>
+    <td>...</td>
+  </tr>
+</tbody>
+</table>
+
+<br>
+
+### Hi6
+index가 0부터 시작합니다.
+word, long, float 의 index가 byte 위치에 맞추어 증가합니다.
+가령 DOW는 DOW0, DOW2, DOW4, DOW6...의 식으로 증가하고, DOL은 DOL0, DOL4, DOL8...의 식의 증가합니다.
+아래 그림에서, 볼 수 있듯이 DO16~DO23은 DOW2와 같습니다.
+
+[3.2 릴레이의 표기](https://hrbook-hrc.web.app/#/view/doc-hi6-embedded-plc/korean/3-relay/2-relay-expression)를 참조하십시오.
+
+<br>
+
+<style type="text/css">
+table  {border-collapse:collapse;}
+td {border-color:gray;border-style:solid;border-width:1px;}
+.tg-kftd{background-color:#efefef;}
+</style>
+
+<table class="tg">
+<tbody>
+  <tr>
+    <td class="tg-kftd">bit</td>
+    <td>DO0~DO7</td>
+    <td>DO8~DO15</td>
+    <td>DO16~DO23</td>
+    <td>DO24~DO31</td>
+    <td>...</td>
+  </tr>
+  <tr>
+    <td class="tg-kftd">byte</td>
+    <td>DOB0</td>
+    <td>DOB1</td>
+    <td>DOB2</td>
+    <td>DOB3</td>
+    <td>...</td>
+  </tr>
+  <tr>
+    <td class="tg-kftd">word</td>
+    <td colspan="2">DOW0</td>
+    <td colspan="2">DOW2</td>
+    <td>...</td>
+  </tr>
+  <tr>
+    <td class="tg-kftd">long</td>
+    <td colspan="4">DOL0</td>
+    <td>...</td>
+  </tr>
+  <tr>
+    <td class="tg-kftd">float</td>
+    <td colspan="4">DOF0</td>
+    <td>...</td>
+  </tr>
+</tbody>
+</table>
+
+<br>
+
+
+## 시스템 릴레이 (SW relay)
+
+### Hi5a
+
+거의 모니터링 항목에 각기 정해진 SW릴레이 인덱스 주소가 있습니다.  
+단, 인덱스 주소 중 SW220~249는 10개의 다용도 슬롯(slot)이며, 시스템변수, 메인보드 저장공간, 아날로그 입출력, 날짜/시간, GE변수 중 원하는 코드를 원하는 슬롯에 넣어 모니터링합니다.
+
+- 대부분 항목 : 고정영역
+- 일부 항목 : 선택 항목 영역 (slot)
+
+<br>
+
+### Hi6
+
+SB0~SB1999 영역은 Hi5a와 같이 항목마다 정해진 인덱스 주소를 갖는 [S 릴레이 고정 영역](https://hrbook-hrc.web.app/#/view/doc-hi6-embedded-plc/korean/3-relay/4-sw-relay/1-fixed-area)입니다.
+
+반면 SB2000~ 의 영역의 900개의 다용도 슬롯(slot)으로 구성되어 있어서 원하는 항목의 command를 넣어 사용할 수 있는 [선택 항목 영역](https://hrbook-hrc.web.app/#/view/doc-hi6-embedded-plc/korean/3-relay/4-sw-relay/README)입니다.  
+거의 대부분의 항목을 선택 항목 영역을 통해 모니터링합니다.
+
+- 대부분 항목 : 선택 항목 영역 (slot)
+- 일부 항목 : 고정영역

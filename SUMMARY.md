@@ -62,3 +62,5 @@
   * [4.33 JMP(Jump) : 점프](4-instruction/33-jmp.md)
   * [4.34 CALL(Call) : 서브래더 호출](4-instruction/34-call.md)
   * [4.35 END(End) : 래더 종료](4-instruction/35-end.md)
+
+* [5. Hi5a와 Hi6의 내장PLC 차이점](5-diff-hi5a-hi6.md)

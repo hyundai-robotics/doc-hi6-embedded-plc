@@ -88,6 +88,36 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	</tr>
 	<tr class='grayed'><td>-</td><td>-</td><td>-</td></tr>
 	<tr>
+		<td>SW6</td>
+		<td>날짜/시간 : 년</td>
+	</tr>
+	<tr>
+		<td>SB8</td>
+		<td>날짜/시간 : 월</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>SB9</td>
+		<td>날짜/시간 : 일</td>
+		<td></td>
+	</tr>	
+	<tr>
+		<td>SB10</td>
+		<td>날짜/시간 : 시</td>
+		<td></td>
+	</tr>	
+	<tr>
+		<td>SB11</td>
+		<td>날짜/시간 : 분</td>
+		<td></td>
+	</tr>	
+	<tr>
+		<td>SB12</td>
+		<td>날짜/시간 : 초</td>
+		<td></td>
+	</tr>	
+	<tr class='grayed'><td>-</td><td>-</td><td>-</td></tr>
+	<tr>
 		<td>SB14</td>
 		<td>소프트웨어 버전 : first<br>
 		e.g. V60.05-08인 경우, SB14:60, SB15:5, SB16:8</td>
@@ -224,13 +254,152 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	</tr>
 	<tr class='grayed'><td>-</td><td>-</td><td>-</td></tr>
 	<tr>
-		<td>SB720<br>~<br>SB839</td>
-		<td>sib[0~119]<br>(system input)</td>
+		<td>SB88</br>
+		...</br>
+		SB99</td>
+		<td>T/P키 입력상태</td>
+		<td></td>
+	</tr>
+	<tr class='grayed'><td>-</td><td>-</td><td>-</td></tr>
+	<tr>
+		<td>SW100</td>
+		<td>프로그램 번호</td>
+		<td>메인태스크</td>
+	</tr>
+	<tr>
+		<td>SW102</td>
+		<td>스텝 번호</td>
+		<td>메인태스크</td>
+	</tr>
+	<tr>
+		<td>SW104</td>
+		<td>펑션 번호</td>
+		<td>메인태스크</td>
+	</tr>
+	<tr>
+		<td>SW106</td>
+		<td>메인 프로그램 번호</td>
+		<td>메인태스크</td>
+	</tr>
+	<tr class='grayed'><td>-</td><td>-</td><td>-</td></tr>
+	<tr>
+		<td>SB109</td>
+		<td>가동시간 선택<br>
+		(1=통산(초기화 후), 2=통산(전원투입 후), 3=마지막사이클, 4=현재사이클</td>
 		<td></td>
 	</tr>
 	<tr>
-		<td>SB840<br>~<br>SB959</td>
-		<td>sob[0~119]<br>(system output)</td>
+		<td>SL110</td>
+		<td>모터 on (day)</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>SL114</td>
+		<td>모터 on (ms)</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>SL118</td>
+		<td>가동시간 (day)</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>SL122</td>
+		<td>가동시간 (ms)</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>SL126</td>
+		<td>이동시간 (day)</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>SL130</td>
+		<td>이동시간 (ms)</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>SL134</td>
+		<td>사이클 회수</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>SL138</td>
+		<td>wait, di 대기시간 (day)</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>SL142</td>
+		<td>wait, di 대기시간 (ms)</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>SL146</td>
+		<td>delay 대기시간 (day)</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>SL150</td>
+		<td>delay 대기시간 (ms)</td>
+		<td></td>
+	</tr>
+	<tr class='grayed'><td>-</td><td>-</td><td>-</td></tr>
+	<tr>
+		<td>SB159</td>
+		<td>축정보 선택<br>
+		(1=현재위치(축각도), 2=현재위치(베이스좌표), 6=축속도, 7=모터속도<br>
+		 10=부하율(I/Ir), 11=부하율(I/Ip), 13=부하율(연속), 15=엔코더온도<br>
+		 18=축별누적거리</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>SF160</td>
+		<td>1축 해당값</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>SF164</td>
+		<td>2축 해당값</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>SF168</td>
+		<td>3축 해당값</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>SF172</td>
+		<td>4축 해당값</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>SF176</td>
+		<td>5축 해당값</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>SF180</td>
+		<td>6축 해당값</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>SF184</td>
+		<td>7축 해당값</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>SF188</td>
+		<td>8축 해당값</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>SF192</td>
+		<td>9축 해당값</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>SF196</td>
+		<td>10축 해당값</td>
 		<td></td>
 	</tr>
 	<tr class='grayed'><td>-</td><td>-</td><td>-</td></tr>

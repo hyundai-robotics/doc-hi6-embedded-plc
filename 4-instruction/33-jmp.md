@@ -26,7 +26,7 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
   <tr>
     <th>relay type</th>
     <th colspan="2">input<br>X, DO</th>
-    <th colspan="2">output<br>Y, DI</th>
+    <th colspan="2">output<br>Y, DI, R, K</th>
     <th colspan="2">memory<br>M, S</th>
     <th>const.<br>32bit</th>
   </tr>

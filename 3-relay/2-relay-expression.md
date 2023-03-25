@@ -14,20 +14,25 @@ FB3.DIW21
 하나의 FB의 크기는 입출력 각각 120 바이트(=960 bit)입니다.
 
 * relay-type  
-아래와 같이 총 6가지 type이 있습니다.
+아래와 같이 총 8가지 type이 있습니다.
 각각의 type은 뒤에서 자세히 설명됩니다.
 
   1) DI (Digital Input) : HRScript나 각종 입력 할당에서 사용할 수 있는 논리적인 입력(Logical Input) 신호입니다.
 
   2) DO (Digital Output) : HRScript나 각종 출력 할당에서 사용할 수 있는 논리적인 출력(Logical Output) 신호입니다.
 
-  3) X : 필드버스 장치를 통해 제어기 외부로부터 입력되는 물리적인 입력(Physical Input) 신호입니다.
+  3) SI (System Input) : 당사 시스템 보드와 인터페이스 되는 전용입력 신호입니다.
 
-  4) Y : 필드버스 장치를 통해 제어기 외부로 출력되는 물리적인 출력(Physical Output) 신호입니다. 
+  4) SO (System Output) : 당사 시스템 보드와 인터페이스 되는 전용출력 신호입니다.
 
-  5) M (Memory) : Data를 저장할 때 사용하며, HRScript에서도 access할 수 있습니다.
+  5) X : 필드버스 장치를 통해 제어기 외부로부터 입력되는 물리적인 입력(Physical Input) 신호입니다.
 
-  6) S (System) : 제어기 내의 시스템 값을 읽거나 쓰는 용도입니다. 4.3절을 @@@링크 참조하세요.
+  6) Y : 필드버스 장치를 통해 제어기 외부로 출력되는 물리적인 출력(Physical Output) 신호입니다. 
+
+  7) M (Memory) : Data를 저장할 때 사용하며, HRScript에서도 access할 수 있습니다.
+
+  8) S (System) : 제어기 내의 시스템 값을 읽거나 쓰는 용도입니다. 3.4절을 참조하세요.
+
 
 
 * data-type  

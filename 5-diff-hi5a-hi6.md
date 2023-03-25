@@ -23,14 +23,16 @@ HRLadder v2.80 미만 버전에서는 online 버튼을 누르면 제어기 종�
 
 ### Hi5a
 
-보조릴레이 R, 보존릴레이 K, 특수릴레이 SP가 존재합니다.
 M릴레이는 MW1~1000을 지원합니다.
+특수릴레이 SP가 존재합니다.
+전용입력, 전용출력 신호가 SW에 포함되어 있습니다.
 
 ### Hi6
 
-보조릴레이 R, 보존릴레이 K가 폐기되었습니다.
 M릴레이가 MW0~MW19998 로 대폭 확대되었으므로, M릴레이로 대체하여 사용하십시오.
 SP릴레이는 [S 릴레이 - 고정영역](https://hrbook-hrc.web.app/#/view/doc-hi6-embedded-plc/korean/3-relay/4-sw-relay/1-fixed-area)의 특수 플래그 영역로서 통합되었습니다.  
+전용입력, 전용출력 신호에 대해 SI, SO로 지원됩니다.
+
 
 <br>
 

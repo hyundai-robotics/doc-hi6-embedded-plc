@@ -38,6 +38,18 @@ FB3.DIW21
   10) K (Keep) : Obsolete. 값을 임시로 보관하기 위한 보조 릴레이이며 전원을 꺼도 값이 보관됩니다. Hi5a 래더파일의 이식 편의를 위해 제공됩니다. 신규 래더 파일에서는 M 릴레이 사용을 권장합니다.
 
 
+    | ** 릴레이 명칭** | ** 점 수 ** | ** 릴레이(bit) ** |** 릴레이(byte) ** |
+    | :--- | :--- | :--- | :--- |
+    | DI | 9600 bit (1280 byte) | FB0.DI0 ~ FB9.DI959 | FB0.DIB0 ~ FB9.DIB127 |
+    | DO | 9600 bit (1280 byte) | FB0.DO0 ~ FB9.DO959 | FB0.DOB0 ~ FB9.DOB127 |
+    | SI | 960 bit (128 byte) | SI0 ~ SI959 | SIB0 ~ SIB127 |
+    | SO | 960 bit (128 byte) | SO0 ~ SO959 | SOB0 ~ SOB127 |
+    | X | 9600 bit (1280 byte) | FB0.X0 ~ FB9.X959 | FB0.XB0 ~ FB9.XB127 |
+    | Y | 9600 bit (1280 byte) | FB0.Y0 ~ FB9.Y959 | FB0.YB0 ~ FB9.YB127 |
+    | M | 160000 bit (20000 byte) | M0 ~ M159999 | MB0 ~ MB19999 |
+    | S | 160000 bit (20000 byte) | S0 ~ S159999 | SB0 ~ SB19999 |
+    | R | 960 bit (128 byte) | R0 ~ R959 | RB0 ~ RB127 |
+    | K | 960 bit (128 byte) | K0 ~ K959 | KB0 ~ KB127 |
 
 * data-type  
 아래와 같이 5가지 type이 있습니다.

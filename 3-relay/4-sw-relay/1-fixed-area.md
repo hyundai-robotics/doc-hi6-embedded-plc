@@ -283,63 +283,63 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	</tr>
 	<tr class='grayed'><td>-</td><td>-</td><td>-</td></tr>
 	<tr>
-		<td>SB109</td>
+		<td>SB111</td>
 		<td>가동시간 선택<br>
 		(1=통산(초기화 후), 2=통산(전원투입 후), 3=마지막사이클, 4=현재사이클</td>
 		<td></td>
 	</tr>
 	<tr>
-		<td>SL110</td>
+		<td>SL112</td>
 		<td>모터 on (day)</td>
 		<td></td>
 	</tr>
 	<tr>
-		<td>SL114</td>
+		<td>SL116</td>
 		<td>모터 on (ms)</td>
 		<td></td>
 	</tr>
 	<tr>
-		<td>SL118</td>
+		<td>SL120</td>
 		<td>가동시간 (day)</td>
 		<td></td>
 	</tr>
 	<tr>
-		<td>SL122</td>
+		<td>SL124</td>
 		<td>가동시간 (ms)</td>
 		<td></td>
 	</tr>
 	<tr>
-		<td>SL126</td>
+		<td>SL128</td>
 		<td>이동시간 (day)</td>
 		<td></td>
 	</tr>
 	<tr>
-		<td>SL130</td>
+		<td>SL132</td>
 		<td>이동시간 (ms)</td>
 		<td></td>
 	</tr>
 	<tr>
-		<td>SL134</td>
+		<td>SL136</td>
 		<td>사이클 회수</td>
 		<td></td>
 	</tr>
 	<tr>
-		<td>SL138</td>
+		<td>SL140</td>
 		<td>wait, di 대기시간 (day)</td>
 		<td></td>
 	</tr>
 	<tr>
-		<td>SL142</td>
+		<td>SL144</td>
 		<td>wait, di 대기시간 (ms)</td>
 		<td></td>
 	</tr>
 	<tr>
-		<td>SL146</td>
+		<td>SL148</td>
 		<td>delay 대기시간 (day)</td>
 		<td></td>
 	</tr>
 	<tr>
-		<td>SL150</td>
+		<td>SL152</td>
 		<td>delay 대기시간 (ms)</td>
 		<td></td>
 	</tr>
@@ -400,6 +400,12 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	<tr>
 		<td>SF196</td>
 		<td>10축 해당값</td>
+		<td></td>
+	</tr>
+	<tr class='grayed'><td>-</td><td>-</td><td>-</td></tr>
+	<tr>
+		<td>SL200</td>
+		<td>각 축별 제어상태 (0=off, 1=on)</td>
 		<td></td>
 	</tr>
 	<tr class='grayed'><td>-</td><td>-</td><td>-</td></tr>

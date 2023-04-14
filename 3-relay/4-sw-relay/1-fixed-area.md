@@ -262,27 +262,6 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	</tr>
 	<tr class='grayed'><td>-</td><td>-</td><td>-</td></tr>
 	<tr>
-		<td>SW100</td>
-		<td>프로그램 번호</td>
-		<td>메인태스크</td>
-	</tr>
-	<tr>
-		<td>SW102</td>
-		<td>스텝 번호</td>
-		<td>메인태스크</td>
-	</tr>
-	<tr>
-		<td>SW104</td>
-		<td>펑션 번호</td>
-		<td>메인태스크</td>
-	</tr>
-	<tr>
-		<td>SW106</td>
-		<td>메인 프로그램 번호</td>
-		<td>메인태스크</td>
-	</tr>
-	<tr class='grayed'><td>-</td><td>-</td><td>-</td></tr>
-	<tr>
 		<td>SB111</td>
 		<td>가동시간 선택<br>
 		(1=통산(초기화 후), 2=통산(전원투입 후), 3=마지막사이클, 4=현재사이클</td>
@@ -409,5 +388,72 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td></td>
 	</tr>
 	<tr class='grayed'><td>-</td><td>-</td><td>-</td></tr>
+	<tr>
+		<td>SW210</br>
+		...</br>
+		SW280</td>
+		<td>프로그램 번호</br>
+		(main task = sw210, subtask 1 = sw220, subtask 2 = sw230, subtask 3 = sw240,</br>
+		subtask 4 = sw250, subtask 5 = sw260, subtask 6 = sw270, subtask 7 = sw280)</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>SW212</br>
+		...</br>
+		SW282</td>
+		<td>스텝 번호</br>
+		(main task = sw212, subtask 1 = sw222, subtask 2 = sw232, subtask 3 = sw242,</br>
+		subtask 4 = sw252, subtask 5 = sw262, subtask 6 = sw272, subtask 7 = sw282)</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>SW214</br>
+		...</br>
+		SW284</td>
+		<td>펑션 번호</br>
+		(main task = sw214, subtask 1 = sw224, subtask 2 = sw234, subtask 3 = sw244,</br>
+		subtask 4 = sw254, subtask 5 = sw264, subtask 6 = sw274, subtask 7 = sw284)</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>SW216</br>
+		...</br>
+		SW286</td>
+		<td>메인 프로그램 번호</br>
+		(main task = sw216, subtask 1 = sw226, subtask 2 = sw236, subtask 3 = sw246,</br>
+		subtask 4 = sw256, subtask 5 = sw266, subtask 6 = sw276, subtask 7 = sw286)</td>
+		<td></td>
+	</tr>
+	<tr class='grayed'><td>-</td><td>-</td><td>-</td></tr>
+	<tr>
+		<td>SW500</td>
+		<td>건번호 (0=현재 선택된 건번호, 1~16)</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>SW502</td>
+		<td>건서치 상태 (1=완료, 0=미완료)</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>SW504</td>
+		<td>이동전극 마모량 x 100</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>SW506</td>
+		<td>고정전극 마모량 x 100</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>SW508</td>
+		<td>가압력 지령값 x 10</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>SW510</td>
+		<td>가압력 현재값 x 10</td>
+		<td></td>
+	</tr>
 </tbody>
 </table>

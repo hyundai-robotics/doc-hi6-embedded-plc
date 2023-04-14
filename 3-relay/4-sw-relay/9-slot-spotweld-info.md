@@ -32,7 +32,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	<tr>
 		<td>4</td>
 		<td>param 2</td>
-		<td>gun_no (1~4)</td>
+		<td>gun_no (0=현재 선택된 건번호, 1~16)</td>
 		<td>s2</td>
 	</tr>
 	<tr>
@@ -43,12 +43,12 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	</tr>
 	<tr>
 		<td>8</td>
-		<td>이동전극 마모량 x 10</td>
+		<td>이동전극 마모량 x 100</td>
 		<td>s2</td>
 	</tr>
 	<tr>
 		<td>10</td>
-		<td>고정전극 마모량 x 10</td>
+		<td>고정전극 마모량 x 100</td>
 		<td>s2</td>
 	</tr>
 	<tr>

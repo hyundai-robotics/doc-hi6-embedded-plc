@@ -1,4 +1,4 @@
-﻿# 3.4.2 S 릴레이 - TASK_INFO
+﻿# 3.4.2 S relay - TASK_INFO
 
 <style type="text/css">
 table  {border-collapse:collapse;}
@@ -26,33 +26,33 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	<tr>
 		<td>2</td>
 		<td>param. 1</td>
-		<td>task_no (0~7)</td>
+		<td>task_no (0–7)</td>
 		<td>s2</td>
 	</tr>
 	<tr>
 		<td>4</td>
 		<td rowspan=5>result</td>
-		<td>task 활성화 상태</td>
+		<td>task in activated state</td>
 		<td>s2</td>
 	</tr>
 	<tr>
 		<td>6</td>
-		<td>task 프로그램 번호</td>
+		<td>task program number</td>
 		<td>s2</td>
 	</tr>
 	<tr>
 		<td>8</td>
-		<td>task 스텝 번호</td>
+		<td>task step number</td>
 		<td>s2</td>
 	</tr>
 	<tr>
 		<td>10</td>
-		<td>task 펑션 번호</td>
+		<td>task function number</td>
 		<td>s2</td>
 	</tr>
 	<tr>
 		<td>12</td>
-		<td>task 메인 프로그램 번호</td>
+		<td>task main program number</td>
 		<td>s2</td>
 	</tr>	
 </tbody>

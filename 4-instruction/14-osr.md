@@ -1,14 +1,13 @@
-﻿# 4.14 OSR(One Shot Rising) : 원 샷 출력
+﻿# 4.14 OSR (One Shot Rising): One-Shot-Rising Output
 
 
-### 설명
-Rung이 활성이면, 한scan 동안만 On(high)으로 출력합니다.  
-즉, Rung이 비활성이었다가 활성으로 될 때 한 scan동안만 해당 릴레이가 On됩니다.
+### Description
+If the rung is active, the output signal will be outputted only for the duration of one scan. In other words, the relevant relay will be in the ON state only for the duration of one scan when the rung switches from the inactive state to the active state.
 
 <br>
 
-### 오퍼랜드로 사용할 수 있는 type
-(X는 불가)
+### Types that can be used as an operand
+(not possible for X)
 <style type="text/css">
 table  {border-collapse:collapse;}
 th {background-color:#efefef; border-style:solid;border-width:1px;color:black;text-align:center;}
@@ -21,12 +20,12 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
   <tr>
     <th>relay type</th>
     <th colspan="2">input<br>X, DO</th>
-    <th colspan="2">output<br>Y, DI</th>
+    <th colspan="2">output<br>Y, DI, R, K</th>
     <th colspan="2">memory<br>M, S</th>
     <th>const.<br>32bit</th>
   </tr>
   <tr>
-    <th>data-type</th>
+    <th>data type</th>
     <th>bit</th>
     <th>B,W,L,F</th>
     <th>bit</th>
@@ -52,8 +51,8 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 
 <br>
 
-### 사용 예
+### Example of use
 
-입력 X17이 on되면 내부 상태 M17를 on합니다. M17은 해당 scan이 종료할 때 까지만 on을 유지하고 새로운 scan이 시작되면 off 됩니다.
+If the input X17 is in the ON state, the internal state relay M17 will be in the ON state. M17 will stay in the ON state until the relevant scan is complete, and it will be switched to the OFF state if a new scan starts.
 
 ![](../_assets/osr.png)

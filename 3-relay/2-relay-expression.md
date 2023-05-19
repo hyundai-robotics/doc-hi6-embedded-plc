@@ -1,46 +1,67 @@
-﻿# 3.2 릴레이의 표기
+﻿# 3.2 Designating a relay
 
-Hi6 로봇제어기 내장PLC에서의 릴레이 표기는 아래와 같습니다.
+The following shows how the relays are designated in the embedded programmable logic controller (PLC) of the Hi6 robot controller.
 
 [FB{block-index}.]{relay-type}[{data-type}]{signal-index}
 
-예를 들어, 아래와 같이 표기됩니다.
+For example, relays can be designated as below.
 
 Y1501
 FB3.DIW21
 
 * block-index  
-입력과 출력 릴레이는 객체명이 FB0 ~ FB9인 10개의 필드버스 블럭(fieldbus block)으로 그룹핑되어 있습니다. 물리적인 입출력의 경우 각 블럭은 각기 개별적인 필드버스 장치에 매핑됩니다.
-하나의 FB의 크기는 입출력 각각 120 바이트(=960 bit)입니다.
+Input and output relays are grouped into 10 fieldbus blocks with their object names ranging from FB0 to FB9. For physical inputs and outputs, each block will be mapped to each fieldbus device.
+The size of one fieldbus block is 120 bytes (=960 bits) for the input and output, respectively.
 
 * relay-type  
-아래와 같이 총 6가지 type이 있습니다.
-각각의 type은 뒤에서 자세히 설명됩니다.
+There are 10 different types, as shown below.
+Each will be explained in detail later.
 
-  1) DI (Digital Input) : HRScript나 각종 입력 할당에서 사용할 수 있는 논리적인 입력(Logical Input) 신호입니다.
+  1) Digital Input (DI): This is a logical input signal that can be used in HRScript or for assigning various inputs.
 
-  2) DO (Digital Output) : HRScript나 각종 출력 할당에서 사용할 수 있는 논리적인 출력(Logical Output) 신호입니다.
+  2) Digital Output (DO): This is a logical output signal that can be used in HRScript or for assigning various outputs.
 
-  3) X : 필드버스 장치를 통해 제어기 외부로부터 입력되는 물리적인 입력(Physical Input) 신호입니다.
+  3) System Input (SI): This is a dedicated input signal that interfaces with the company’s system board.
 
-  4) Y : 필드버스 장치를 통해 제어기 외부로 출력되는 물리적인 출력(Physical Output) 신호입니다. 
+  4) System Output (SO): This is a dedicated output signal that interfaces with the company’s system board.
 
-  5) M (Memory) : Data를 저장할 때 사용하며, HRScript에서도 access할 수 있습니다.
+  5) X: This is a physical input signal that is inputted from the outside of the controller via a fieldbus device.
 
-  6) S (System) : 제어기 내의 시스템 값을 읽거나 쓰는 용도입니다. 4.3절을 @@@링크 참조하세요.
+  6) Y: This is a physical output signal that is outputted to the outside of the controller via a fieldbus device. 
 
+  7) Memory (M): This can be used for storing data and can be accessed from HRScript.
+
+  8) System (S): This is used to read or write system values in the controller. Refer to [3.4 S relay](./4-sw-relay/README.md).
+
+  9) AuxiliaRy (R): This is an auxiliary relay for temporarily storing the Obsolete. value and is provided for the convenience of porting the Hi5a ladder file. It is recommended to use the M relay in new ladder files.
+
+  10) Keep (K): This is an auxiliary relay for temporarily storing the Obsolete. value. The value will be stored even when the power is turned off. This is provided for the convenience of porting the Hi5a ladder file. It is recommended to use the M relay in new ladder files.
+
+
+    | ** Relay name** | ** Number of points ** | ** Relay (bit) ** |** Relay (byte) ** |
+    | :--- | :--- | :--- | :--- |
+    | DI | 9600 bits (1280 bytes) | FB0.DI0–FB9.DI959 | FB0.DIB0–FB9.DIB127 |
+    | DO | 9600 bits (1280 bytes) | FB0.DO0–FB9.DO959 | FB0.DOB0–FB9.DOB127 |
+    | SI | 960 bits (128 bytes) | SI0–SI959 | SIB0–SIB127 |
+    | SO | 960 bits (128 bytes) | SO0–SO959 | SOB0–SOB127 |
+    | X | 9600 bits (1280 bytes) | FB0.X0–FB9.X959 | FB0.XB0–FB9.XB127 |
+    | Y | 9600 bits (1280 bytes) | FB0.Y0–FB9.Y959 | FB0.YB0–FB9.YB127 |
+    | M | 160000 bits (20000 bytes) | M0–M159999 | MB0–MB19999 |
+    | S | 160000 bits (20000 bytes) | S0–S159999 | SB0–SB19999 |
+    | R | 960 bits (128 bytes) | R0–R959 | RB0–RB127 |
+    | K | 960 bits (128 bytes) | K0–K959 | KB0–KB127 |
 
 * data-type  
-아래와 같이 5가지 type이 있습니다.
+There are five different types, as shown below.
 
-  * 표기없음 : 비트 (bit), 1bit
-  * B : 부호있는 바이트 (signed-byte), 8bit
-  * W : 부호있는 워드 (signed-word), 16bit
-  * L : 부호있는 롱 (signed-long), 32bit
-  * F : 부동소수점 실수 (floating-point real), 32bit
+  * No designation: bit, 1 bit
+  * B: signed-byte, 8 bits
+  * W: signed-word, 16 bits
+  * L: signed-long, 32 bits
+  * F: floating-point real, 32 bits
 
   <br>
-  이들은 별개의 메모리 공간이 아니라 같은 960 bit의 공간을 서로 다른 데이터형으로 표현한 것입니다. 예를 들어 DO[0~15]와 DOB[0~1], DOW[0]은 모두 동일한 출력신호입니다.
+  They are just different data types representing the same memory space of 960 bit rather than separate memory spaces. For example, DO[0–15], DOB[0–1], and DOW[0] are all the same output signals.
 
 <br>
 
@@ -54,10 +75,10 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 <tbody>
   <tr>
     <td class="tg-kftd">bit</td>
-    <td>DO0~DO7</td>
-    <td>DO8~DO15</td>
-    <td>DO16~DO23</td>
-    <td>DO24~DO31</td>
+    <td>DO0–DO7</td>
+    <td>DO8–DO15</td>
+    <td>DO16–DO23</td>
+    <td>DO24–DO31</td>
     <td>...</td>
   </tr>
   <tr>
@@ -90,27 +111,26 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 <br>
 
 * signal-index
-relay-type 내에서의 0-based 인덱스입니다.  
-인덱스는 DO는 bit단위, DOB, DOW, DOL, DOF는 byte단위로 매겨집니다.
+
+ This is a 0-based index within the relay type. The index will be given in bit units for DO and in byte units for DOB, DOW, DOL, and DOF.
 
 <br>
 <br>
 
-FB 객체명은 아래와 같이 생략할 수도 있습니다. 예를 들어 DO961은 FB1.DO1과 동일한 표기입니다.
+The fieldbus object name can be partially skipped, as shown below. For example, DO961 is the same designation as FB1.DO1.
 
-| **객체명** | **DO 표기** | **FB.DO 표기** |
+| **Object name** | **DO designation** | **FB.DO designation** |
 | :--- | :--- | :--- |
-| FB0 | DO0 ~ DO959 | FB0.DO0 ~ FB0.DO959 |
-| FB1 | DO960 ~ DO1919 | FB1.DO0 ~ FB1.DO959 |
-| FB2 | DO1920 ~ DO2879 | FB2.DO0 ~ FB2.DO959 |
-| FB3 | DO2880 ~ DO3839 | FB3.DO0 ~ FB3.DO959 |
-| FB4 | DO3840 ~ DO4799 | FB4.DO0 ~ FB4.DO959 |
-| FB5 | DO4800 ~ DO5759 | FB5.DO0 ~ FB5.DO959 |
-| FB6 | DO5760 ~ DO6719 | FB6.DO0 ~ FB6.DO959 |
-| FB7 | DO6720 ~ DO7679 | FB7.DO0 ~ FB7.DO959 |
-| FB8 | DO7680 ~ DO8639 | FB8.DO0 ~ FB8.DO959 |
-| FB9 | DO8640 ~ DO9599 | FB9.DO0 ~ FB9.DO959 |
+| FB0 | DO0–DO959 | FB0.DO0–FB0.DO959 |
+| FB1 | DO960–DO1919 | FB1.DO0–FB1.DO959 |
+| FB2 | DO1920–DO2879 | FB2.DO0–FB2.DO959 |
+| FB3 | DO2880–DO3839 | FB3.DO0–FB3.DO959 |
+| FB4 | DO3840–DO4799 | FB4.DO0–FB4.DO959 |
+| FB5 | DO4800–DO5759 | FB5.DO0–FB5.DO959 |
+| FB6 | DO5760–DO6719 | FB6.DO0–FB6.DO959 |
+| FB7 | DO6720–DO7679 | FB7.DO0–FB7.DO959 |
+| FB8 | DO7680–DO8639 | FB8.DO0–FB8.DO959 |
+| FB9 | DO8640–DO9599 | FB9.DO0–FB9.DO959 |
 
 
-DI, DO는 각기 논리적인 입력과 출력으로서 로봇언어와 입출력 할당에서 접근할 수 있습니다.
-
+DI and DO are logical inputs and outputs, respectively, and can be accessed through the robot language and I/O assignment.

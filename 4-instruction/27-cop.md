@@ -1,16 +1,17 @@
-﻿# 4.27 COP(Copy data) : 복사
+﻿# 4.27 Copy Data (COP): Copying
 
 
-### 설명
-Rung이 활성이면, "source"의 위치에서부터 "length"수 만큼 "destination"의 위치로 값들을 복사합니다.  
-"source"가 숫자인 경우, "destination"에서부터 "length"수 만큼의 "source"값으로 채워집니다. 이 경우 "destination"가 bit형식이면, "source"의 숫자가 0이면 OFF, 0이 아니면 ON으로 채워집니다.  
-"source"가 릴레이인 경우, "source"와 "destination"의 데이터 형은 같아야 합니다. 즉, "source"가 비트이면 "destination"도 비트, "source"가 바이트(B)이면 "destination"도 바이트(B), "source"가 워드(W)이면 "destination"도 워드(W)라야 합니다.  
-만일 "source"+"length"이 "source" 릴레이 최대개수보다 크거나, "destination"+"length"이 "destination" 릴레이 최대개수보다 큰 경우, 릴레이 최대개수까지만 복사를 진행합니다.
+### Description
+If the rung is active, values will be copied from the location of the “source” to the location of the “destination” as many as the number of the “length.”
+If the “source” is a number, the “destination” will be filled with the value of the “source” as much as the number of the “length.” In this case, when the “destination” is in bit format, if the value of the “source” is 0, the “destination” will be filled with OFFs, and if the value of the “source” is not 0, the “destination” will be filled with ONs.
+If the “source” is a relay, the data types of the “source” and “destination” should be the same. That is, if the “source” is in the bit format, the “destination” should be in the bit format; if the “source” is in the byte (B) format, then the “destination” should be in the byte (B) format; if the “source” is in the word (W) format, then the “destination” should also be in the word (W) format.
+If the “source” + “length” is greater than the maximum number of the “source” relays or the “destination” + “length” is greater than the maximum number of “destination” relays, copying will be performed only up to the maximum number of relays.
+
 
 <br>
 
-### 오퍼랜드로 사용할 수 있는 type
-(X는 불가)
+### Types that can be used as an operand
+(not possible for X)
 <style type="text/css">
 table  {border-collapse:collapse;}
 th {background-color:#efefef; border-style:solid;border-width:1px;color:black;text-align:center;}
@@ -23,7 +24,7 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
   <tr>
     <th>relay type</th>
     <th colspan="2">input<br>X, DO</th>
-    <th colspan="2">output<br>Y, DI</th>
+    <th colspan="2">output<br>Y, DI, R, K</th>
     <th colspan="2">memory<br>M, S</th>
     <th>const.<br>32bit</th>
   </tr>
@@ -78,8 +79,8 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 
 <br>
 
-### 사용 예
+### Example of use
 
-입력 DO56이 활성화되면 입력 DOB2부터 8바이트에 해당하는 값을 출력 YB2부터 8바이트로 복사합니다.
+If the input DO56 is active, the value corresponding to 8 bytes will be copied from the input DOB2 to the output YB2 as a value corresponding to 8 bytes.
 
 ![](../_assets/cop.png)

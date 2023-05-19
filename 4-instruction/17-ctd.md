@@ -1,17 +1,16 @@
-﻿# 4.17 CTD(Count Down) : 카운터
+﻿# 4.17 Count Down (CTD): Counter
 
 
-### 설명
-Rung의 상승(비활성에서 활성)을 다운-카운트합니다.
-해당 C의 값이 0이 되면 해당 카운터가 on(high)으로 되고, 더 이상 카운트 하지 않습니다.
-Rung이 활성일 때, 해당 C의 값이 음수이면, preset값을 C에 저장합니다.  
-참고) Rung이 비활성이라도 C는 클리어(-1) 하지 않으며 클리어 하기 위해서는 RES 명령어를 실행해야 합니다.  
-참고) 카운터의 인덱스로는 반드시 4의 배수를 사용해야 합니다. (C0, C4, C8 ...)
+### Description
+The rise of the rung (from being inactive to being active) will be counted down.
+If the value of the relevant C becomes 0, the relevant counter will be in the ON (high) state, performing no more counting.
+When the rung is active but the value of the relevant C is negative, the preset value will be stored in C.
+Note) Even if the rung is inactive, C will not be cleared (-1). For clearing, the RES instruction should be executed.
 
 <br>
 
-### 오퍼랜드로 사용할 수 있는 type
-(X는 불가)
+### Types that can be used as an operand
+(not possible for X)
 <style type="text/css">
 table  {border-collapse:collapse;}
 th {background-color:#efefef; border-style:solid;border-width:1px;color:black;text-align:center;}
@@ -74,8 +73,8 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 
 <br>
 
-### 사용 예
+### Example of use
 
-내부 상태 M19가 off에서 on으로 변경되면 C20의 값이 3에서 시작해서 1씩 감소합니다. C20의 값이 0이 되면 카운터 릴레이가 on 됩니다. 이때 출력 Y35가 on 됩니다. 
+If the internal state relay M19 switches from the OFF state to the ON state, the value of C20 starts at 3 and continues to decrease by 1. When the value of C20 becomes 0, the counter relay will be in the ON state. At this time, the output Y35 will be in the ON state.
 
 ![](../_assets/ctd.png)

@@ -1,4 +1,4 @@
-﻿# 4.1 명령어 일람
+﻿# 4.1 List of Instructions
 
 
 <style type="text/css">
@@ -8,16 +8,16 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 .tg-kftd{background-color:#efefef;}
 </style>
 
-### * Rung과 Branch
+### * Rung and branch
 <br>
 
 <table>
 <thead>
   <tr>
-    <th>니모닉</th>
-    <th>이름</th>
-    <th>심볼</th>
-    <th>설명</th>
+    <th>Mnemonic</th>
+    <th>Name</th>
+    <th>Symbol</th>
+    <th>Description</th>
   </tr>
 </thead>
 <tbody>
@@ -31,35 +31,35 @@ td {border-color:gray;border-style:solid;border-width:1px;}
     <td>BST</td>
     <td>Branch Start</td>
     <td>┬─</td>
-    <td>브렌치(branch)의 시작</td>
+    <td>start of a branch</td>
   </tr>
   <tr>
     <td>BND</td>
     <td>Branch End</td>
     <td>─┬</td>
-    <td>브렌치(branch)의 끝</td>
+    <td>end of a branch</td>
   </tr>
   <tr>
     <td>NXB</td>
     <td>Nested Branch</td>
     <td>└,├</td>
-    <td>브렌치(branch)의 내포</td>
+    <td>nest of a branch</td>
   </tr>
 </tbody>
 </table>
 
 <br><br>  
 
-### * logic 검사 명령: 검사결과, 참이면 Rung 활성, 거짓이면 비활성
+### * Logic examination instructions: If the examination result is true, the rung is active. If false, the rung is inactive. 
 <br>
 
 <table>
 <thead>
 	<tr>
-		<th>니모닉</th>
-		<th>이름</th>
-		<th>심볼</th>
-		<th>설명</th>
+		<th>Mnemonic</th>
+		<th>Name</th>
+		<th>Symbol</th>
+		<th>Description</th>
 	</tr>
 </thead>
 <tbody>
@@ -67,104 +67,104 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>XIC</td>
 		<td>Examine if Closed</td>
 		<td>-| |-</td>
-		<td>접점이 닫혔는가를 검사(A접점)</td>
+		<td>examines if the contact is closed (contact A)</td>
 	</tr>
 	<tr>
 		<td>XIO</td>
 		<td>Examine if Open</td>
 		<td>-|/|-</td>
-		<td>접점이 열렸는가를 검사(B접점)</td>
+		<td>examines if the contact is open (contact B)</td>
 	</tr>
 	<tr>
 		<td>INV</td>
 		<td>Inverting</td>
 		<td>-//-</td>
-		<td>Rung의 결과 반전(inverting)</td>
+		<td>inverts the result of the rung (inverting)</td>
 	</tr>
 	<tr>
 		<td>EQU</td>
 		<td>Inverting</td>
 		<td>-[&nbsp;&nbsp;&nbsp;]-</td>
-		<td>같은지(=) 검사</td>
+		<td>examines if equal (=)</td>
 	</tr>
 	<tr>
 		<td>NEQ</td>
 		<td>Inverting</td>
 		<td>-[&nbsp;&nbsp;&nbsp;]-</td>
-		<td>다른지(<>) 검사</td>
+		<td>examines if not equal (<>)</td>
 	</tr>
 	<tr>
 		<td>LES</td>
 		<td>Less Than</td>
 		<td>-[&nbsp;&nbsp;&nbsp;]-</td>
-		<td>작은지(<) 검사</td>
+		<td>examines if less than (<)</td>
 	</tr>
 	<tr>
 		<td>GRT</td>
 		<td>Greater Than</td>
 		<td>-[&nbsp;&nbsp;&nbsp;]-</td>
-		<td>큰지(>) 검사</td>
+		<td>examines if greater than (>)</td>
 	</tr>
 	<tr>
 		<td>LEQ</td>
 		<td>Less Than or Equal</td>
 		<td>-[&nbsp;&nbsp;&nbsp;]-</td>
-		<td>작거나 같은지(<=) 검사</td>
+		<td>examines if less than or equal (<=)</td>
 	</tr>
 	<tr>
 		<td>GEQ</td>
 		<td>Greater Than or Equal</td>
 		<td>-[&nbsp;&nbsp;&nbsp;]-</td>
-		<td>크거나 같은지(>=) 검사</td>
+		<td>examines if greater than or equal (>=)</td>
 	</tr>
 </tbody>
 </table>
 
 <br><br>  
 
-### * 출력명령
+### * Output instructions
 
 <br>
 
 <table>
 <thead>
 	<tr>
-		<th>니모닉</th>
-		<th>이름</th>
-		<th>심볼</th>
-		<th>설명</th>
+		<th>Mnemonic</th>
+		<th>Name</th>
+		<th>Symbol</th>
+		<th>Description</th>
 	</tr>
 </thead>
 <tbody>
 	<tr>
 		<td>OTE</td>
-		<td>OuTput Energize</td>
+		<td>Output Energize</td>
 		<td>-( )-</td>
-		<td>Rung의 상태를 출력(활성:ON/비활성:OFF)</td>
+		<td>the state of the rung (active: ON/inactive: OFF) will be outputted</td>
 	</tr>
 	<tr>
 		<td>OTL</td>
-		<td>OuTput Latch</td>
+		<td>Output Latch</td>
 		<td>-(L)-</td>
-		<td>Rung이 활성이면, ON(high)으로 출력</td>
+		<td>if the rung is active, the output signal will be outputted in the ON (high) state</td>
 	</tr>
 	<tr>
 		<td>OTU</td>
-		<td>OuTput Unlatch</td>
+		<td>Output Unlatch</td>
 		<td>-(U)-</td>
-		<td>Rung이 활성이면, OFF(low)로 출력</td>
+		<td>if the rung is active, the output signal will be outputted in the OFF (low) state</td>
 	</tr>
 	<tr>
 		<td>OSR</td>
 		<td>One Shot Rising</td>
 		<td>-(OSR)-</td>
-		<td>Rung이 활성이면, 한 scan동안만 ON출력</td>
+		<td>if the rung is active, the output signal will be outputed in the ON state only for the duration of one scan</td>
 	</tr>
 	<tr>
 		<td>RES</td>
-		<td>RESet</td>
+		<td>Reset</td>
 		<td>-(RES)-</td>
-		<td>Rung이 활성이면, 타이머나 카운터를 리셋</td>
+		<td>if the rung is active, the timer or counter will be reset</td>
 	</tr>
 </tbody>
 </table>
@@ -173,17 +173,17 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 
 <br><br>  
 
-### * 타이머 및 카운터 명령
+### * Timer and counter instructions
 
 <br>
 
 <table>
 <thead>
 	<tr>
-		<th>니모닉</th>
-		<th>이름</th>
-		<th>심볼</th>
-		<th>설명</th>
+		<th>Mnemonic</th>
+		<th>Name</th>
+		<th>Symbol</th>
+		<th>Description</th>
 	</tr>
 </thead>
 <tbody>
@@ -191,13 +191,13 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>TON</td>
 		<td>Time ON delay</td>
 		<td>-[&nbsp;&nbsp;&nbsp;]-</td>
-		<td>Rung이 활성인 동안 타이머 동작</td>
+		<td>the timer operates only while the rung is active</td>
 	</tr>
 	<tr>
 		<td>CTD</td>
-		<td>CounT Down</td>
+		<td>Count Down</td>
 		<td>-[&nbsp;&nbsp;&nbsp;]-</td>
-		<td>Rung의 활성(비활성->활성)을 다운-카운트</td>
+		<td>the rung's activation (inactive -> active) will be counted down</td>
 	</tr>
 </tbody>
 </table>
@@ -205,17 +205,17 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 
 <br><br>  
 
-### * 산술연산 명령
+### * Arithmetic operation instructions
 
 <br>
 
 <table>
 <thead>
 	<tr>
-		<th>니모닉</th>
-		<th>이름</th>
-		<th>심볼</th>
-		<th>설명</th>
+		<th>Mnemonic</th>
+		<th>Name</th>
+		<th>Symbol</th>
+		<th>Description</th>
 	</tr>
 </thead>
 <tbody>
@@ -223,31 +223,31 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>ADD</td>
 		<td>Add</td>
 		<td>-[&nbsp;&nbsp;&nbsp;]-</td>
-		<td>Rung이 활성이면, (+)연산</td>
+		<td>addition (+) operation if the rung is active</td>
 	</tr>
 	<tr>
 		<td>SUB</td>
-		<td>SUBtract</td>
+		<td>Subtract</td>
 		<td>-[&nbsp;&nbsp;&nbsp;]-</td>
-		<td>Rung이 활성이면, (-)연산</td>
+		<td>subtraction (-) operation if the rung is active</td>
 	</tr>
 	<tr>
 		<td>MUL</td>
-		<td>MULtiply</td>
+		<td>Multiply</td>
 		<td>-[&nbsp;&nbsp;&nbsp;]-</td>
-		<td>Rung이 활성이면, (x)연산</td>
+		<td>multiplication (x) operation if the rung is active</td>
 	</tr>
 	<tr>
 		<td>DIV</td>
-		<td>DIVide</td>
+		<td>Divide</td>
 		<td>-[&nbsp;&nbsp;&nbsp;]-</td>
-		<td>Rung이 활성이면, (/)연산</td>
+		<td>division (/) operation if the rung is active</td>
 	</tr>
 	<tr>
 		<td>POW</td>
-		<td>POWer</td>
+		<td>Power</td>
 		<td>-[&nbsp;&nbsp;&nbsp;]-</td>
-		<td>Rung이 활성이면, (^: 거듭제곱)연산</td>
+		<td>power (^) operation if the rung is active</td>
 	</tr>
 </tbody>
 </table>
@@ -257,37 +257,37 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 
 <br><br>  
 
-### * 데이터 변환 명령
+### * Data conversion instructions
 
 <br>
 
 <table>
 <thead>
 	<tr>
-		<th>니모닉</th>
-		<th>이름</th>
-		<th>심볼</th>
-		<th>설명</th>
+		<th>Mnemonic</th>
+		<th>Name</th>
+		<th>Symbol</th>
+		<th>Description</th>
 	</tr>
 </thead>
 <tbody>
 	<tr>
 		<td>TOD</td>
-		<td>convert integer TO BCD</td>
+		<td>convert an integer to BCD</td>
 		<td>-[&nbsp;&nbsp;&nbsp;]-</td>
-		<td>Rung이 활성이면, integer를 BCD로 변환</td>
+		<td>if the rung is active, the integer will be converted to BCD</td>
 	</tr>
 	<tr>
 		<td>FRD</td>
-		<td>convert FRom BCD to inetger</td>
+		<td>convert BCD to an inetger</td>
 		<td>-[&nbsp;&nbsp;&nbsp;]-</td>
-		<td>Rung이 활성이면, BCD를 integer로 변환.</td>
+		<td>if the rung is active, BCD will be converted to an integer</td>
 	</tr>
 	<tr>
 		<td>SEG</td>
-		<td>7'SEGment</td>
+		<td>7-segment</td>
 		<td>-[&nbsp;&nbsp;&nbsp;]-</td>
-		<td>Rung이 활성이면, 7'세그먼트 값으로 변환.</td>
+		<td>if the rung is active, conversion to a 7-segment value will occur</td>
 	</tr>
 </tbody>
 </table>
@@ -295,43 +295,43 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 
 <br><br>  
 
-### * 이동 및 복사 명령
+### * Move and Copy instructions
 
 <br>
 
 <table>
 <thead>
 	<tr>
-		<th>니모닉</th>
-		<th>이름</th>
-		<th>심볼</th>
-		<th>설명</th>
+		<th>Mnemonic</th>
+		<th>Name</th>
+		<th>Symbol</th>
+		<th>Description</th>
 	</tr>
 </thead>
 <tbody>
 	<tr>
 		<td>MOV</td>
-		<td>MOVe</td>
+		<td>Move</td>
 		<td>-[&nbsp;&nbsp;&nbsp;]-</td>
-		<td>Rung이 활성이면, 데이터 한 개를 복사</td>
+		<td>if the rung is active, one piece of data will be copied</td>
 	</tr>
 	<tr>
 		<td>COP</td>
-		<td>COPy data</td>
+		<td>Copy data</td>
 		<td>-[&nbsp;&nbsp;&nbsp;]-</td>
-		<td>Rung이 활성이면, 데이터 여러 개를 복사.</td>
+		<td>if the rung is active, multiple pieces of data will be copied</td>
 	</tr>
 	<tr>
 		<td>CCOP</td>
-		<td>Conditional COPy data</td>
+		<td>Conditional copy data</td>
 		<td>-[&nbsp;&nbsp;&nbsp;]-</td>
-		<td>Rung 상태에 따라, 데이터 여러 개를 복사.</td>
+		<td>multiple pieces of data will be copied depending on the state of the rung</td>
 	</tr>
 	<tr>
 		<td>ROT</td>
-		<td>ROTating output</td>
+		<td>Rotating output</td>
 		<td>-[&nbsp;&nbsp;&nbsp;]-</td>
-		<td>Rung이 활성이면, 순차적으로 출력.</td>
+		<td>if the rung is active, sequential outputting will occur</td>
 	</tr>
 </tbody>
 </table>
@@ -339,17 +339,17 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 <br><br>  
 
 
-### * 블록 제어 명령
+### * Block control instructions
 
 <br>
 
 <table>
 <thead>
 	<tr>
-		<th>니모닉</th>
-		<th>이름</th>
-		<th>심볼</th>
-		<th>설명</th>
+		<th>Mnemonic</th>
+		<th>Name</th>
+		<th>Symbol</th>
+		<th>Description</th>
 	</tr>
 </thead>
 <tbody>
@@ -357,38 +357,38 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>FOR</td>
 		<td>FOR loop</td>
 		<td>-[&nbsp;&nbsp;&nbsp;]-</td>
-		<td>Rung이 활성이면, NEXT까지 반복 실행</td>
+		<td>if the rung is active, execution in repetition will occur until Next</td>
 	</tr>
 	<tr>
 		<td>NEXT</td>
 		<td>NEXT loop</td>
 		<td>-[&nbsp;&nbsp;&nbsp;]-</td>
-		<td>반복횟수 이내이면, FOR문으로 분기(jump).</td>
+		<td>jumping to the FOR instruction will occur if the count is within the repetition count</td>
 	</tr>
 	<tr>
 		<td>LBL</td>
-		<td>LaBeL</td>
+		<td>LabeL</td>
 		<td>-[&nbsp;&nbsp;&nbsp;]-</td>
-		<td>JMP 명령으로 분기(jump)할 위치 지정.</td>
+		<td>a position to jump to according to the JMP instruction will be designated</td>
 	</tr>
 	<tr>
 		<td>JMP</td>
-		<td>JuMP</td>
+		<td>Jump</td>
 		<td>-[&nbsp;&nbsp;&nbsp;]-</td>
-		<td>Rung이 활성이면, LBL 위치로 분기.<br>
-		(Label&lt;0이면, -n개의 NEXT까지 건너뜀.)</td>
+		<td>if the rung is active, jumping to the LBL position will occur<br>
+		(skipping to -n NEXTs if Label&lt;0)</td>
 	</tr>
 	<tr>
 		<td>CALL</td>
-		<td>CALL</td>
+		<td>Call</td>
 		<td>-[&nbsp;&nbsp;&nbsp;]-</td>
-		<td>Rung이 활성이면, sub-ladder 호출.</td>
+		<td>if the rung is active, a sub-ladder will be called</td>
 	</tr>
 	<tr>
 		<td>END</td>
-		<td>END</td>
+		<td>End</td>
 		<td>-[&nbsp;&nbsp;&nbsp;]-</td>
-		<td>Rung이 활성이면, sub-ladder end.</td>
+		<td>if the rung is active, the sub-ladder will end</td>
 	</tr>
 </tbody>
 </table>

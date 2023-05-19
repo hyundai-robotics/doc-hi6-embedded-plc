@@ -1,5 +1,5 @@
-﻿# 3.1 릴레이의 의미
+﻿# 3.1 The meaning of a relay
 
-전기신호를 전달할 지, 전달하지 않을 지를 결정하는 ON/OFF 접점(contact) 상태를 가진 장치를 스위치(switch)라고 부릅니다. 릴레이(relay)란 수동이 아닌 전기를 이용해 자동으로 작동시키는 스위치를 의미합니다.  
+A device in a state equivalent to an on/off contact that determines whether to transfer an electrical signal is called a switch. Meanwhile, a relay is a switch that can operate automatically by using electricity rather than manually.  
 
-본래 릴레이는 코일(coil)의 자기적인 힘으로 접점을 제어하던 물리적인 장치입니다. 하지만 컴퓨터화된 PLC에서의 릴레이는 소프트웨어에 의해 제어되는 논리적인 개념으로서, 1bit의 ON/OFF 상태 뿐만 아니라 여러 bit로 구성된 byte, word, double word 값이나 실수값까지도 저장할 수 있는 변수와 같은 의미로 사용되고 있습니다.
+Originally, a relay was a physical device that controls contacts using the magnetic force of a coil. However, a relay in a computerized programmable logic controller (PLC) is a logical concept that is controlled by software. In terms of the meaning, a relay has been used as a variable that can store not only an on/off state consisting of 1 bit but also a byte, word, double word, or real value consisting of several bits.

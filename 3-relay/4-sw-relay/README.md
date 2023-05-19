@@ -1,10 +1,10 @@
-﻿# 3.4 S 릴레이
+﻿# 3.4 S relays
 
-Hi6 제어기 내의 다양한 상태값이 S릴레이에 매핑되어 있습니다. 또한 일부 S릴레이에 값을 써서 Hi6의 상태를 바꿀 수 있습니다.
+The values ​​for various states in the Hi6 controller are mapped to the S relays. It is also possible to change the state of Hi6 by writing values ​​to some of the S relays.
 
-따라서, 공정 PLC나 PC 같은 외부 장치는 필드버스, MODBUS 등을 통해 S 릴레이 값을 읽어 Hi6 제어기의 상태를 원격 모니터링할 수 있으며, S 릴레이에 값을 써서 Hi6 제어기를 원격 제어할 수 있습니다. 
+Therefore, an external device, such as a process programmable logic controller (PLC) or personal computer (PC), can remotely monitor the states of the Hi6 controller by reading the values of the S relays through fieldbus, Modbus, etc. and can remotely control the Hi6 controller by writing values to the S relays.  
 
-S릴레이 영역은 아래와 같이 크게 2부분으로 나뉩니다.
+The area of the S relays can be largely divided into two parts as follows.
 
 
 <style type="text/css">
@@ -15,28 +15,28 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 
 <table class="tg">
 	<tr>
-		<th>주소</th>
-		<th>내용</th>
+		<th>address</th>
+		<th>content</th>
 	</tr>
 	<tr>
-		<th>SB00000 ~ SB01999</th>
-		<th>고정 항목 영역</th>
+		<td>SB00000–SB01999</td>
+		<td>fixed area</td>
 	</tr>
 	<tr>
-		<th>SB02000 ~ SB19999</th>
-		<th>선택 항목 영역 (slots)</th>
+		<td>SB02000–SB19999</td>
+		<td>optional items area (slots)</td>
 	</tr>
 </table>
 
 <br>
 
-### 고정 영역 (fixed area)
-자주 사용되는 기본적인 항목들이 미리 정해진 주소로 배치되어 있습니다. 설정을 통한 항목 변경과 배치가 불가능합니다. 다음 절에서 고정영역의 맵이 설명됩니다.
+### Fixed area
+Basic items that are frequently used are allocated to predetermined addresses. It is not possible to change or allocate items through settings. The map of the fixed area will be described in the next section.
 
 <br>
 
-### 선택 항목 영역 (optional items area)
-20byte 크기의 slot들 900개로 구성되어 있습니다. 각 slot은 선두 word에 어떤 command 값을 넣느냐에 따라 구성이 결정됩니다. 각 command별 맵이 이어지는 절에서 설명됩니다.
+### Optional items area
+This area consists of a total of 900 slots, with each slot of 20 bytes. The configuration of each slot will be determined by what command value is to be put into the leading word. The map for each command is described in the following section.
 
 <table class="tg">
 <thead>
@@ -50,7 +50,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	<tr>
 		<td rowspan=10>slot 0</td>
 		<td>2000:0</td>
-		<td>command (관례: 짝수는 get, 홀수는 set)</td>
+		<td>command (conventional practice: get is for even numbers, set is for odd numbers)</td>
 	</tr>
 	<tr>
 		<td>:2</td>

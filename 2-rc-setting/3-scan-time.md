@@ -1,3 +1,3 @@
-﻿# 2.3. scan time
+﻿# 2.3. Scan time
 
-내장PLC에서 래더 파일이 1cycle 수행하는데 소요된 시간은 HRLadder의 하단 상태 바에 "scan time"으로 표시됩니다. 래더 프로그램의 스텝수가 증가할 수록 이 시간이 증가하면서 I/O 의 응답성이 느려집니다.
+The time taken for the one-cycle execution of the ladder file in the embedded PLC will be indicated as “scan time” on the status bar at the bottom of the HRLadder. As the number of steps in the ladder program increases, the time for execution increases, slowing down the I/O responsiveness accordingly.

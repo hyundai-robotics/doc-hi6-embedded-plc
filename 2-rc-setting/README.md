@@ -1,2 +1,2 @@
-﻿# 2. 제어기 설정
+﻿# 2. Setting up the controller
 

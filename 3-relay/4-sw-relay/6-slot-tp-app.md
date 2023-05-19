@@ -1,4 +1,4 @@
-﻿# 3.4.6 S 릴레이 - TP_APP
+﻿# 3.4.6 S relay - TP_APP
 
 <style type="text/css">
 table  {border-collapse:collapse;}
@@ -26,27 +26,27 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	<tr>
 		<td>2</td>
 		<td>get</td>
-		<td>현재 TP app의 단축키 번호 (1~9)</td>
+		<td>the shortcut key number for the teach pendant’s current app (1–9)</td>
 		<td>s2</td>
 	</tr>
 	<tr>
 		<td>4</td>
 		<td>set</td>
-		<td>상태를 읽거나 제어할 대상 TP app의 단축키 번호 (1~9)</td>
+		<td>the shortcut key number for the teach pendant’s target app whose state needs to be read or controlled (1–9)</td>
 		<td>s2</td>
 	</tr>
 	<tr>
 		<td>6</td>
 		<td>get</td>
-		<td>대상 TP app의 상태 현재값<br>(-1=없음, 0=미실행, 1=활성, 2=비활성)</td>
+		<td>the current state value of the teach pendant’s target app<br>(-1=no operation, 0=not executed, 1=activated, 2=inactivated)</td>
 		<td>s2</td>
 	</tr>
 	<tr>
 		<td>8</td>
 		<td>set</td>
-		<td>대상 TP app 상태 제어<br>
-(0:동작없음, 1:활성, 2:비활성, 8: 실행, 9:강제종료)<br>
-* 값이 변할 때마다 1번씩만 수행됨.</td>
+		<td>controlling of the teach pendant’s target app<br>
+(0: no operation, 1: activated, 2: inactivated, 8: executed, 9:forced ending)<br>
+* will be performed once every time the value changes.</td>
 		<td>s2</td>
 	</tr>
 </tbody>

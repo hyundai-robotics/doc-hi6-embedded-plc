@@ -1,13 +1,13 @@
-﻿# 4.3 XIO(Examine if Open) : Open 검사
+﻿# 4.3 XIO (Examine if Open): Examining if Open
 
 
-### 설명
-오퍼랜드의 bit 값이 0이면 Rung을 활성(active), 1이면 비활성 합니다.
+### Description
+If the bit value of the operand is 0, the rung will be made active. If 1, it will be made inactive.
 
 <br>
 
-### 오퍼랜드로 사용할 수 있는 type
-(X는 불가)
+### Types that can be used as an operand
+(not possible for X)
 <style type="text/css">
 table  {border-collapse:collapse;}
 th {background-color:#efefef; border-style:solid;border-width:1px;color:black;text-align:center;}
@@ -20,12 +20,12 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
   <tr>
     <th>relay type</th>
     <th colspan="2">input<br>X, DO</th>
-    <th colspan="2">output<br>Y, DI</th>
+    <th colspan="2">output<br>Y, DI, R, K</th>
     <th colspan="2">memory<br>M, S</th>
     <th>const.<br>32bit</th>
   </tr>
   <tr>
-    <th>data-type</th>
+    <th>data type</th>
     <th>bit</th>
     <th>B,W,L,F</th>
     <th>bit</th>
@@ -51,8 +51,8 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 
 <br>
 
-### 사용 예
+### Example of use
 
-B접점 입력 X1인 "중지(PAUSE)" 버튼이 눌린 상태(0=Active)이면, 브레이크 출력 Y8을 on합니다.
+When the "Pause" button, which is the contact B of input X1, is in the pressed state (0 = active), the brake output Y8 will be switched on.  
 
 ![](../_assets/xio.png)

@@ -1,13 +1,13 @@
-﻿# 4.12 OTL(Output Latch) : 래치 출력
+﻿# 4.12 OTL (Output Latch): Latched Output
 
 
-### 설명
-Rung이 활성이면, 출력신호를 On(high)으로 출력합니다. 그러나 Rung이 비활성이면, 출력은 변하지 않습니다.
+### Description
+If the rung is active, the output signal will be outputted in the ON (high) state. However, if the rung is inactive, the output will remain the same. 
 
 <br>
 
-### 오퍼랜드로 사용할 수 있는 type
-(X는 불가)
+### Types that can be used as an operand
+(not possible for X)
 <style type="text/css">
 table  {border-collapse:collapse;}
 th {background-color:#efefef; border-style:solid;border-width:1px;color:black;text-align:center;}
@@ -20,12 +20,12 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
   <tr>
     <th>relay type</th>
     <th colspan="2">input<br>X, DO</th>
-    <th colspan="2">output<br>Y, DI</th>
+    <th colspan="2">output<br>Y, DI, R, K</th>
     <th colspan="2">memory<br>M, S</th>
     <th>const.<br>32bit</th>
   </tr>
   <tr>
-    <th>data-type</th>
+    <th>data type</th>
     <th>bit</th>
     <th>B,W,L,F</th>
     <th>bit</th>
@@ -51,8 +51,8 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 
 <br>
 
-### 사용 예
+### Example of use
 
-입력 DO13이 on되면 Y13를 on합니다. 이후 DO13이 off 되더라도 Y13은 on을 계속 유지합니다.
+If the input DO13 is in the ON state, Y13 will be in the ON state. Even if DO13 is switched to the OFF state afterward, Y13 will remain in the ON state.
 
 ![](../_assets/otl.png)

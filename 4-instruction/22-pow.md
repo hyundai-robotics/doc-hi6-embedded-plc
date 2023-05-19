@@ -1,13 +1,13 @@
-﻿# 4.22 POW(Power) : 거듭제곱
+﻿# 4.22 Power (POW): Power
 
 
-### 설명
-Rung이 활성이면, "source a"의 값을 "source b" 의 값으로 거듭제곱하여 "destination" 릴레이에 값을 설정합니다. 만일, 연산결과에 오버플로우가 발생하면 S7=1로 설정합니다.
+### Description
+If the rung is active, the value of “source a” will be raised to the power of the value of “source b,” and the result value will be set in the “destination” relay. If the operation result has an overflow, the setting S7=1 will occur.
 
 <br>
 
-### 오퍼랜드로 사용할 수 있는 type
-(X는 불가)
+### Types that can be used as an operand
+(not possible for X)
 <style type="text/css">
 table  {border-collapse:collapse;}
 th {background-color:#efefef; border-style:solid;border-width:1px;color:black;text-align:center;}
@@ -20,7 +20,7 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
   <tr>
     <th>relay type</th>
     <th colspan="2">input<br>X, DO</th>
-    <th colspan="2">output<br>Y, DI</th>
+    <th colspan="2">output<br>Y, DI, R, K</th>
     <th colspan="2">memory<br>M, S</th>
     <th>const.<br>32bit</th>
   </tr>
@@ -75,8 +75,8 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 
 <br>
 
-### 사용 예
+### Use of example
 
-입력 DO40이 활성화 되면 XB3의 값을 2로 거듭제곱하여 그 결과를 내부 상태 MB3에 설정합니다.
+If the input DO40 is active, the value of XB3 will be raised to the power of 2, and the result value will be set in the internal state relay MB3. 
 
 ![](../_assets/pow.png)

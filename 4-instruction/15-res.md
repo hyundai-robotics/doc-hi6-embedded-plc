@@ -1,13 +1,13 @@
-﻿# 4.15 RES(Reset) : 리셋
+﻿# 4.15 Reset (RES): Resetting
 
 
-### 설명
-Rung이 활성이면, 타이머(T)나 카운터(C) 릴레이 값을 클리어(-1)시킵니다.
+### Description
+ If the rung is active, the timer (T) or counter (C) relay value will be cleared (-1).
 
 <br>
 
-### 오퍼랜드로 사용할 수 있는 type
-(X는 불가)
+### Types that can be used as an operand
+(not possible for X)
 <style type="text/css">
 table  {border-collapse:collapse;}
 th {background-color:#efefef; border-style:solid;border-width:1px;color:black;text-align:center;}
@@ -20,7 +20,7 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
   <tr>
     <th>relay type</th>
     <th colspan="2">input<br>X, DO</th>
-    <th colspan="2">output<br>Y, DI</th>
+    <th colspan="2">output<br>Y, DI, R, K</th>
     <th colspan="2">memory<br>M, S</th>
     <th colspan="2">timer<br>T</th>
     <th colspan="2">count<br>C</th>
@@ -61,8 +61,8 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 
 <br>
 
-### 사용 예
+### Example of use
 
-내부 상태 M18이 on되면 T28의 타이머 릴레이를 -1로 클리어 합니다.
+If the internal state relay M18 is in the ON state, the timer relay of T28 will be cleared to -1.
 
 ![](../_assets/res.png)

@@ -1,13 +1,13 @@
-﻿# 4.2 XIC(Examine if Closed) : Close 검사
+﻿# 4.2 XIC (Examine if Closed): Examining if Closed
 
 
-### 설명
-오퍼랜드의 bit 값이 1이면 Rung을 활성(active), 0이면 비활성 합니다.
+### Description
+If the bit value of the operand is 1, the rung will be made active. If 0, it will be made inactive.
 
 <br>
 
-### 오퍼랜드로 사용할 수 있는 type
-(X는 불가)
+### Types that can be used as an operand
+(not possible for X)
 <style type="text/css">
 table  {border-collapse:collapse;}
 th {background-color:#efefef; border-style:solid;border-width:1px;color:black;text-align:center;}
@@ -20,12 +20,12 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
   <tr>
     <th>relay type</th>
     <th colspan="2">input<br>X, DO</th>
-    <th colspan="2">output<br>Y, DI</th>
+    <th colspan="2">output<br>Y, DI, R, K</th>
     <th colspan="2">memory<br>M, S</th>
     <th>const.<br>32bit</th>
   </tr>
   <tr>
-    <th>data-type</th>
+    <th>data type</th>
     <th>bit</th>
     <th>B,W,L,F</th>
     <th>bit</th>
@@ -51,8 +51,8 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 
 <br>
 
-### 사용 예
+### Example of use
 
-A접점 입력 X2인 가동 스위치가 눌린 상태(1=Active)이고, 내부상태 M5가 정상(1)이면 "가동 중 (RUN)" 램프 출력 Y5를 on합니다.
+When the Run switch, which is the contact A of input X2, is in the pressed state (1 = active) and the internal state relay M5 is normal (1), the "Run" lamp output Y5 will be switched on. 
 
 ![](../_assets/xic.png)

@@ -1,13 +1,13 @@
-﻿# 4.8 GRT(Greater Than) : 큰지 검사
+﻿# 4.8 GRT (Greater Than): Examining if Greater Than
 
 
-### 설명
-"source a"의 값이 "source b" 의 값보다 크면, Rung이 활성 됩니다. (접점활성)
+### Description
+If the value of "source a" is greater than the value of "source b," the rung will be made active (contact active).
 
 <br>
 
-### 오퍼랜드로 사용할 수 있는 type
-(X는 불가)
+### Types that can be used as an operand
+(not possible for X)
 <style type="text/css">
 table  {border-collapse:collapse;}
 th {background-color:#efefef; border-style:solid;border-width:1px;color:black;text-align:center;}
@@ -20,12 +20,12 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
   <tr>
     <th>relay type</th>
     <th colspan="2">input<br>X, DO</th>
-    <th colspan="2">output<br>Y, DI</th>
+    <th colspan="2">output<br>Y, DI, R, K</th>
     <th colspan="2">memory<br>M, S</th>
     <th>const.<br>32bit</th>
   </tr>
   <tr>
-    <th>data-type</th>
+    <th>data type</th>
     <th>bit</th>
     <th>B,W,L,F</th>
     <th>bit</th>
@@ -63,8 +63,8 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 
 <br>
 
-### 사용 예
+### Example of use
 
-입력 XB8의 값이 80보다 크면 출력 Y10를 on하고, 작거나 같으면 off 합니다.
+If the value of the input XB8 is greater than 80, the output Y10 will be switched on. If it is less than or equal to 80, the output will be switched off.
 
 ![](../_assets/grt.png)

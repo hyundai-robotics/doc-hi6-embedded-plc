@@ -1,4 +1,4 @@
-﻿# 3.4.10 S 릴레이 - CONVEYOR_INFO
+﻿# 3.4.10 S relay - CONVEYOR_INFO
 
 <style type="text/css">
 table  {border-collapse:collapse;}
@@ -26,43 +26,43 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	<tr>
 		<td>2</td>
 		<td>param 1</td>
-		<td>conv_no (0~7)</td>
+		<td>conv_no (0–7)</td>
 		<td>s2</td>
 	</tr>
 	<tr>
 		<td>4</td>
 		<td rowspan=7>result</td>
-		<td>컨베이어 펄스</td>
+		<td>conveyor pulse</td>
 		<td>s2</td>
 	</tr>
 	<tr>
 		<td>6</td>
-		<td>작업물 위치</td>
+		<td>workpiece position</td>
 		<td>s2</td>
 	</tr>
 	<tr>
 		<td>8</td>
-		<td>컨베이어 속도</td>
+		<td>conveyor speed</td>
 		<td>s2</td>
 	</tr>
 	<tr>
 		<td>10</td>
-		<td>작업물 개수</td>
+		<td>workpiece count</td>
 		<td>s2</td>
 	</tr>
 	<tr>
 		<td>12</td>
-		<td>리밋스위치 입력</td>
+		<td>limit switch input</td>
 		<td>s2</td>
 	</tr>
 	<tr>
 		<td>14</td>
-		<td>raw 펄스</td>
+		<td>raw pulse</td>
 		<td>s2</td>
 	</tr>
 	<tr>
 		<td>14</td>
-		<td>엔코더 분해능</td>
+		<td>encoder resolution</td>
 		<td>s4</td>
 	</tr>
 </tbody>
@@ -90,18 +90,18 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	<tr>
 		<td>2</td>
 		<td>param 1</td>
-		<td>conv_no (0~7)</td>
+		<td>conv_no (0–7)</td>
 		<td>s2</td>
 	</tr>
 	<tr>
 		<td>4</td>
 		<td rowspan=2>result</td>
-		<td>직선컨베이어 수평각도</td>
+		<td>linear conveyor horizontal angle</td>
 		<td>f4</td>
 	</tr>
 	<tr>
 		<td>8</td>
-		<td>직선컨베이어 수직각도</td>
+		<td>linear conveyor vertical angle</td>
 		<td>f4</td>
 	</tr>
 </tbody>
@@ -129,18 +129,18 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	<tr>
 		<td>2</td>
 		<td>param 1</td>
-		<td>conv_no (0~7)</td>
+		<td>conv_no (0–7)</td>
 		<td>s2</td>
 	</tr>
 	<tr>
 		<td>4</td>
 		<td rowspan=2>result</td>
-		<td>원형컨베이어 각도(X축)</td>
+		<td>circular conveyor angle (X axis)</td>
 		<td>f4</td>
 	</tr>
 	<tr>
 		<td>8</td>
-		<td>원형컨베이어 각도(Y축)</td>
+		<td>circular conveyor angle (Y axis)</td>
 		<td>f4</td>
 	</tr>
 </tbody>
@@ -168,23 +168,23 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	<tr>
 		<td>2</td>
 		<td>param 1</td>
-		<td>conv_no (0~7)</td>
+		<td>conv_no (0–7)</td>
 		<td>s2</td>
 	</tr>
 	<tr>
 		<td>4</td>
 		<td rowspan=3>result</td>
-		<td>원형컨베이어 중심(X)</td>
+		<td>circular conveyor center (X)</td>
 		<td>f4</td>
 	</tr>
 	<tr>
 		<td>8</td>
-		<td>원형컨베이어 중심(Y)</td>
+		<td>circular conveyor center (Y)</td>
 		<td>f4</td>
 	</tr>
 	<tr>
 		<td>12</td>
-		<td>원형컨베이어 중심(Z)</td>
+		<td>circular conveyor center (Z)</td>
 		<td>f4</td>
 	</tr>
 </tbody>

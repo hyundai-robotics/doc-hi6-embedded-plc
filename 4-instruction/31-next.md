@@ -1,17 +1,17 @@
-﻿# 4.31 NEXT(NEXT) : 블록 next
+﻿# 4.31 NEXT (NEXT): Next Block
 
 
-### 설명
-FOR명령의 "step"에 따라 다음과 같이 동작합니다.  
-"step"이 0보다 큰 경우, "idx" 릴레이 값이 "final" 값보다 적거나 같을 때까지 반복 실행합니다.  
-"step"이 0보다 작은 경우, "idx" 릴레이 값이 "final" 값보다 크거나 같을 때까지 반복 실행합니다.  
-FOR문이 없이 NEXT문이 실행되는 경우, NEXT명령이 무시됩니다.  
-주의)  
-FOR/NEXT명령은 브랜치를 위한 별도의 처리를 하지 않고 있으므로, 브랜치 내에 FOR명령을 기록하고, 브랜치 밖에 혹은 다른 브랜치 내에 NEXT를 기록하면 FOR명령이 잘못 동작합니다.  
-참고) FOR 명령에 대한 내용은 [4.30 FOR(FOR)](./30-for)를 참조하십시오.
+### Description
+The operation will be performed according to the "step" of the FOR instructions.
+If the "step" value is greater than 0, the execution will occur repeatedly until the "idx" relay value becomes less than or equal to the "final" value.
+If the "step" value is less than 0, the execution will occur repeatedly until the "idx" relay value becomes greater than or equal to the "final" value.
+If a NEXT instruction is executed without a FOR instruction, the NEXT instruction will be ignored.
+Caution:  
+The FOR/NEXT instruction does not have any additional processing for branching. As such, if a FOR instruction is recorded inside a branch, and a NEXT instruction is recorded outside the branch or inside another branch, the FOR instructions will not operate correctly.
+Note: For more details on the FOR instructions, refer to [4.30 FOR (FOR)](./30-for)
 
 <br>
 
-### 사용 예
+### Example of use
 
-FOR 명령의 사용예를 참고합니다.
+Refer to the example on the use of the FOR instructions.

@@ -1,11 +1,12 @@
-﻿# 3.5 릴레이 간접 주소 지정
+﻿# 3.5 Designating indirect addresses for relays
 
-SW62~SW79는 간접 주소 지정을 위한 시스템 메모리입니다. 릴레이 형식에 관계없이 릴레이 번지를 -2 ~ -18 의 값으로 
-지정하면 SW62~SW79에 저장된 값의 번지로 지정됩니다.
+SW62–SW79 are system memories for designating indirect addresses. Regardless of the relay type, if a value between -2 and -18 is designated for a relay address, the set value will lead to a designated relay address stored in SW62–SW79.
+
+
 
 ![](../_assets/rel-addr-concept.png)
 
-예를 들어 SW62~79의 값이 아래와 같을 때,
+For example, when some of the values for SW62–SW79 are as below,
 
 | **relay** | **value** |
 | :---      | :---      |
@@ -13,13 +14,13 @@ SW62~SW79는 간접 주소 지정을 위한 시스템 메모리입니다. 릴레
 | SW70      | 3         |
 | SW78      | 56        |
 
-간접 주소 릴레이 표기는 아래와 같이 해석됩니다.
+the notation of an indirect address can be interpreted as follows.
 
 *	MW-2 -> MW12
 *	FB-10.X3 -> FB3.X3
 *	X-18 -> X56
 *	FB-10.YW-2 -> FB3.YW12
 
-아래 내장 PLC 예제는 X1~X128까지의 입력 신호에 해당하는 Y1~128신호를 출력하는 동작을 FOR/NEXT 문과 간접 주소 지정방식을 활용해 작성한 예입니다.
+The embedded programmable logic controller (PLC) example presented below is an example in which the operation of outputting signals Y1–Y128 corresponding to input signals X1–X128 is created using the FOR/NEXT instructions and indirect address designation method.
 
 ![](../_assets/rel-addr-for-next.png)

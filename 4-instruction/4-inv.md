@@ -1,14 +1,14 @@
-﻿# 4.4 INV(Inverting) : 인버팅
+﻿# 4.4 INV (Inverting): Inverting
 
 
-### 설명
-Rung의 이전까지의 결과를 반전(활성 <-> 비활성)시킵니다.
+### Description
+Inverts (active <-> inactive) the previous result of the rung.
 
 <br>
 
-### 사용 예
+### Example of use
 
-이 처리는 드모르강의 법칙에 따라 /(AxB)=/A+/B, 또는 /(A+B)=/Ax/B로 되기 때문에, 여러 개의 브랜치로 OR로직을 구성해야 하는 것을 브랜치 없이, 간단하게 AND로직으로 구성할 수 있습니다.  
-즉, (X1+X2+X3) = /(/X1x/X2x/X3)이므로 하기 두 rung의 로직은 같은 결과가 됩니다.
+According to DeMorgand's law, processing an invert will make /(AxB) equal to /A+/B or /(A+B) equal to /Ax/B, allowing a simple configuration that uses the AND logic that has no branches instead of a configuration that uses the OR logic, which has multiple branches.
+As such, the logic of the two rungs below will have the same result because (X1+X2+X3) equals to /(/X1x/X2x/X3).
 
 ![](../_assets/inv.png)

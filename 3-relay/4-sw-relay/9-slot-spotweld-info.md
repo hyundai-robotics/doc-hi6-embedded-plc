@@ -1,4 +1,4 @@
-﻿# 3.4.9 S 릴레이 - SPOTWELD_INFO
+﻿# 3.4.9 S realy - SPOTWELD_INFO
 
 <style type="text/css">
 table  {border-collapse:collapse;}
@@ -26,39 +26,39 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	<tr>
 		<td>2</td>
 		<td>param 1</td>
-		<td>task_no (0~7)</td>
+		<td>task_no (0–7)</td>
 		<td>s2</td>
 	</tr>
 	<tr>
 		<td>4</td>
 		<td>param 2</td>
-		<td>gun_no (1~4)</td>
+		<td>gun_no (1–4)</td>
 		<td>s2</td>
 	</tr>
 	<tr>
 		<td>6</td>
 		<td rowspan=5>result</td>
-		<td>건서치 상태 (1=완료, 0=미완료)</td>
+		<td>gun search state (1=complete, 0=incomplete)</td>
 		<td>s2</td>
 	</tr>
 	<tr>
 		<td>8</td>
-		<td>이동전극 마모량 x 10</td>
+		<td>moving electrode consumption amount × 10</td>
 		<td>s2</td>
 	</tr>
 	<tr>
 		<td>10</td>
-		<td>고정전극 마모량 x 10</td>
+		<td>fixed electrode consumption amount × 10</td>
 		<td>s2</td>
 	</tr>
 	<tr>
 		<td>12</td>
-		<td>가압력 지령값 x 10</td>
+		<td>squeeze force instruction value × 10</td>
 		<td>s2</td>
 	</tr>
 	<tr>
 		<td>14</td>
-		<td>가압력 현재값 x 10</td>
+		<td>squeeze force current value × 10</td>
 		<td>s2</td>
 	</tr>
 </tbody>

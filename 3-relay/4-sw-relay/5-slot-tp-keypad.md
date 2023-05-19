@@ -1,4 +1,4 @@
-﻿# 3.4.5 S 릴레이 - TP_KEYPAD
+﻿# 3.4.5 S relay - TP_KEYPAD
 
 <style type="text/css">
 table  {border-collapse:collapse;}
@@ -32,7 +32,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	<tr>
 		<td>3</td>
 		<td>[0]</td>
-		<td rowspan=12>keypad[0~11]</td>
+		<td rowspan=12>keypad[0–11]</td>
 		<td>u1</td>
 	</tr>
 	<tr>

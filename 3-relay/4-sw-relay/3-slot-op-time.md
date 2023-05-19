@@ -1,4 +1,4 @@
-﻿# 3.4.3 S 릴레이 - OP_TIME
+﻿# 3.4.3 S relay - OP_TIME
 
 <style type="text/css">
 table  {border-collapse:collapse;}
@@ -26,7 +26,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	<tr>
 		<td>2</td>
 		<td>param. 1</td>
-		<td>task_no (0~7)</td>
+		<td>task_no (0–7)</td>
 		<td>s2</td>
 	</tr>
 	<tr>

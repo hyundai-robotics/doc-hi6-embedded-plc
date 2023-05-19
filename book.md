@@ -209,6 +209,18 @@ FB3.DIW21
   10) K (Keep) : Obsolete. 값을 임시로 보관하기 위한 보조 릴레이이며 전원을 꺼도 값이 보관됩니다. Hi5a 래더파일의 이식 편의를 위해 제공됩니다. 신규 래더 파일에서는 M 릴레이 사용을 권장합니다.
 
 
+    | ** 릴레이 명칭** | ** 점 수 ** | ** 릴레이(bit) ** |** 릴레이(byte) ** |
+    | :--- | :--- | :--- | :--- |
+    | DI | 9600 bit (1280 byte) | FB0.DI0 ~ FB9.DI959 | FB0.DIB0 ~ FB9.DIB127 |
+    | DO | 9600 bit (1280 byte) | FB0.DO0 ~ FB9.DO959 | FB0.DOB0 ~ FB9.DOB127 |
+    | SI | 960 bit (128 byte) | SI0 ~ SI959 | SIB0 ~ SIB127 |
+    | SO | 960 bit (128 byte) | SO0 ~ SO959 | SOB0 ~ SOB127 |
+    | X | 9600 bit (1280 byte) | FB0.X0 ~ FB9.X959 | FB0.XB0 ~ FB9.XB127 |
+    | Y | 9600 bit (1280 byte) | FB0.Y0 ~ FB9.Y959 | FB0.YB0 ~ FB9.YB127 |
+    | M | 160000 bit (20000 byte) | M0 ~ M159999 | MB0 ~ MB19999 |
+    | S | 160000 bit (20000 byte) | S0 ~ S159999 | SB0 ~ SB19999 |
+    | R | 960 bit (128 byte) | R0 ~ R959 | RB0 ~ RB127 |
+    | K | 960 bit (128 byte) | K0 ~ K959 | KB0 ~ KB127 |
 
 * data-type  
 아래와 같이 5가지 type이 있습니다.
@@ -725,84 +737,63 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	</tr>
 	<tr class='grayed'><td>-</td><td>-</td><td>-</td></tr>
 	<tr>
-		<td>SW100</td>
-		<td>프로그램 번호</td>
-		<td>메인태스크</td>
-	</tr>
-	<tr>
-		<td>SW102</td>
-		<td>스텝 번호</td>
-		<td>메인태스크</td>
-	</tr>
-	<tr>
-		<td>SW104</td>
-		<td>펑션 번호</td>
-		<td>메인태스크</td>
-	</tr>
-	<tr>
-		<td>SW106</td>
-		<td>메인 프로그램 번호</td>
-		<td>메인태스크</td>
-	</tr>
-	<tr class='grayed'><td>-</td><td>-</td><td>-</td></tr>
-	<tr>
-		<td>SB109</td>
+		<td>SB111</td>
 		<td>가동시간 선택<br>
 		(1=통산(초기화 후), 2=통산(전원투입 후), 3=마지막사이클, 4=현재사이클</td>
 		<td></td>
 	</tr>
 	<tr>
-		<td>SL110</td>
+		<td>SL112</td>
 		<td>모터 on (day)</td>
 		<td></td>
 	</tr>
 	<tr>
-		<td>SL114</td>
+		<td>SL116</td>
 		<td>모터 on (ms)</td>
 		<td></td>
 	</tr>
 	<tr>
-		<td>SL118</td>
+		<td>SL120</td>
 		<td>가동시간 (day)</td>
 		<td></td>
 	</tr>
 	<tr>
-		<td>SL122</td>
+		<td>SL124</td>
 		<td>가동시간 (ms)</td>
 		<td></td>
 	</tr>
 	<tr>
-		<td>SL126</td>
+		<td>SL128</td>
 		<td>이동시간 (day)</td>
 		<td></td>
 	</tr>
 	<tr>
-		<td>SL130</td>
+		<td>SL132</td>
 		<td>이동시간 (ms)</td>
 		<td></td>
 	</tr>
 	<tr>
-		<td>SL134</td>
+		<td>SL136</td>
 		<td>사이클 회수</td>
 		<td></td>
 	</tr>
 	<tr>
-		<td>SL138</td>
+		<td>SL140</td>
 		<td>wait, di 대기시간 (day)</td>
 		<td></td>
 	</tr>
 	<tr>
-		<td>SL142</td>
+		<td>SL144</td>
 		<td>wait, di 대기시간 (ms)</td>
 		<td></td>
 	</tr>
 	<tr>
-		<td>SL146</td>
+		<td>SL148</td>
 		<td>delay 대기시간 (day)</td>
 		<td></td>
 	</tr>
 	<tr>
-		<td>SL150</td>
+		<td>SL152</td>
 		<td>delay 대기시간 (ms)</td>
 		<td></td>
 	</tr>
@@ -866,6 +857,79 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td></td>
 	</tr>
 	<tr class='grayed'><td>-</td><td>-</td><td>-</td></tr>
+	<tr>
+		<td>SL200</td>
+		<td>각 축별 제어상태 (0=off, 1=on)</td>
+		<td></td>
+	</tr>
+	<tr class='grayed'><td>-</td><td>-</td><td>-</td></tr>
+	<tr>
+		<td>SW210</br>
+		...</br>
+		SW280</td>
+		<td>프로그램 번호</br>
+		(main task = sw210, subtask 1 = sw220, subtask 2 = sw230, subtask 3 = sw240,</br>
+		subtask 4 = sw250, subtask 5 = sw260, subtask 6 = sw270, subtask 7 = sw280)</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>SW212</br>
+		...</br>
+		SW282</td>
+		<td>스텝 번호</br>
+		(main task = sw212, subtask 1 = sw222, subtask 2 = sw232, subtask 3 = sw242,</br>
+		subtask 4 = sw252, subtask 5 = sw262, subtask 6 = sw272, subtask 7 = sw282)</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>SW214</br>
+		...</br>
+		SW284</td>
+		<td>펑션 번호</br>
+		(main task = sw214, subtask 1 = sw224, subtask 2 = sw234, subtask 3 = sw244,</br>
+		subtask 4 = sw254, subtask 5 = sw264, subtask 6 = sw274, subtask 7 = sw284)</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>SW216</br>
+		...</br>
+		SW286</td>
+		<td>메인 프로그램 번호</br>
+		(main task = sw216, subtask 1 = sw226, subtask 2 = sw236, subtask 3 = sw246,</br>
+		subtask 4 = sw256, subtask 5 = sw266, subtask 6 = sw276, subtask 7 = sw286)</td>
+		<td></td>
+	</tr>
+	<tr class='grayed'><td>-</td><td>-</td><td>-</td></tr>
+	<tr>
+		<td>SW500</td>
+		<td>건번호 (0=현재 선택된 건번호, 1~16)</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>SW502</td>
+		<td>건서치 상태 (1=완료, 0=미완료)</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>SW504</td>
+		<td>이동전극 마모량 x 100</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>SW506</td>
+		<td>고정전극 마모량 x 100</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>SW508</td>
+		<td>가압력 지령값 x 10</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>SW510</td>
+		<td>가압력 현재값 x 10</td>
+		<td></td>
+	</tr>
 </tbody>
 </table># 3.4.2 S 릴레이 - TASK_INFO
 
@@ -1336,7 +1400,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	<tr>
 		<td>4</td>
 		<td>param 2</td>
-		<td>gun_no (1~4)</td>
+		<td>gun_no (0=현재 선택된 건번호, 1~16)</td>
 		<td>s2</td>
 	</tr>
 	<tr>
@@ -1347,12 +1411,12 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	</tr>
 	<tr>
 		<td>8</td>
-		<td>이동전극 마모량 x 10</td>
+		<td>이동전극 마모량 x 100</td>
 		<td>s2</td>
 	</tr>
 	<tr>
 		<td>10</td>
-		<td>고정전극 마모량 x 10</td>
+		<td>고정전극 마모량 x 100</td>
 		<td>s2</td>
 	</tr>
 	<tr>

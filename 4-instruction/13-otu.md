@@ -53,6 +53,6 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 
 ### 사용 예
 
-입력 DO14이 on되면 Y14를 off합니다. 이후 DO13이 off 되더라도 Y13은 off을 계속 유지합니다.
+입력 DO14이 on되면 Y14를 off합니다. 이후 DO14이 off 되더라도 Y14은 off을 계속 유지합니다.
 
 ![](../_assets/otu.png)

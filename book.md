@@ -187,7 +187,7 @@ The size of one fieldbus block is 120 bytes (=960 bits) for the input and output
   You can also map some areas of FB to object names from FN0 to FN63.
   See the link below for instructions on how to set up the FN region.
 
-  [Operation manual: 7.3.2.12 fn block allocation](https://hrbook-hrc.web.app/#/view/doc-hi6-operation/english-tp630/7-setting/3-control-parameter/2-io-signal-setting/12-fn-block)
+  [Operation manual: 7.3.2.12 fn block allocation](https://hrbook-hrc.web.app/#/view/doc-hi6-operation/english-tp630/7-system/3-control-parameter/2-io-signal-setting/12-fn-block)
 
 
 * relay-type  

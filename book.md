@@ -173,7 +173,7 @@ R-Stop, R-Run은 Remote-Stop, Remote-Run, 즉 이더넷으로 연결된 PC의 HR
 
 Hi6 로봇제어기 내장PLC에서의 릴레이 표기는 아래와 같습니다.
 
-[FB{block-index}.]{relay-type}[{data-type}]{signal-index}
+`[FB{block-index}.]{relay-type}[{data-type}]{signal-index}`
 
 예를 들어, 아래와 같이 표기됩니다.
 
@@ -181,8 +181,12 @@ Y1501
 FB3.DIW21
 
 * block-index  
-입력과 출력 릴레이는 객체명이 FB0 ~ FB9인 10개의 필드버스 블럭(fieldbus block)으로 그룹핑되어 있습니다. 물리적인 입출력의 경우 각 블럭은 각기 개별적인 필드버스 장치에 매핑됩니다.
+입출력 릴레이(DI, DO, X, Y)는 객체명이 FB0 ~ FB9인 10개의 필드버스 블럭(fieldbus block)으로 그룹핑되어 있습니다. 물리적인 입출력의 경우 각 블럭은 각기 개별적인 필드버스 장치에 매핑됩니다.
 하나의 FB의 크기는 입출력 각각 120 바이트(=960 bit)입니다.
+
+  FB의 일부 영역을 FN0 ~ FN63의 객체명으로 매핑해 사용할 수도 있습니다. FN영역을 설정하는 방법은 아래 링크를 참조하십시오.
+
+  [조작설명서: 7.3.2.12 fn 블럭 할당](https://hrbook-hrc.web.app/#/view/doc-hi6-operation/korean-tp630/7-setting/3-control-parameter/2-io-signal-setting/12-fn-block)
 
 * relay-type  
 아래와 같이 총 10가지 type이 있습니다.
@@ -2844,7 +2848,7 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 
 ### 사용 예
 
-입력 DO14이 on되면 Y14를 off합니다. 이후 DO13이 off 되더라도 Y13은 off을 계속 유지합니다.
+입력 DO14이 on되면 Y14를 off합니다. 이후 DO14이 off 되더라도 Y14은 off을 계속 유지합니다.
 
 ![](../_assets/otu.png)
 # 4.14 OSR(One Shot Rising) : 원 샷 출력

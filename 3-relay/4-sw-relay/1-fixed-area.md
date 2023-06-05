@@ -203,53 +203,48 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	</tr>
 	<tr class='grayed'><td>-</td><td>-</td><td>-</td></tr>
 	<tr>
-		<td>SW60</td>
-		<td>간접주소지정 1</td>
-		<td></td>
-	</tr>
-	<tr>
 		<td>SW62</td>
-		<td>간접주소지정 2</td>
+		<td>간접주소지정 (relay-2)</td>
 		<td></td>
 	</tr>
 	<tr>
 		<td>SW64</td>
-		<td>간접주소지정 3</td>
+		<td>간접주소지정 (relay-4)</td>
 		<td></td>
 	</tr>
 	<tr>
 		<td>SW66</td>
-		<td>간접주소지정 4</td>
+		<td>간접주소지정 (relay-6)</td>
 		<td></td>
 	</tr>
 	<tr>
 		<td>SW68</td>
-		<td>간접주소지정 5</td>
+		<td>간접주소지정 (relay-8)</td>
 		<td></td>
 	</tr>
 	<tr>
 		<td>SW70</td>
-		<td>간접주소지정 6</td>
+		<td>간접주소지정 (relay-10)</td>
 		<td></td>
 	</tr>
 	<tr>
 		<td>SW72</td>
-		<td>간접주소지정 7</td>
+		<td>간접주소지정 (relay-12)</td>
 		<td></td>
 	</tr>
 	<tr>
 		<td>SW74</td>
-		<td>간접주소지정 8</td>
+		<td>간접주소지정 (relay-14)</td>
 		<td></td>
 	</tr>
 	<tr>
 		<td>SW76</td>
-		<td>간접주소지정 9</td>
+		<td>간접주소지정 (relay-16)</td>
 		<td></td>
 	</tr>
 	<tr>
 		<td>SW78</td>
-		<td>간접주소지정 10</td>
+		<td>간접주소지정 (relay-18)</td>
 		<td></td>
 	</tr>
 	<tr class='grayed'><td>-</td><td>-</td><td>-</td></tr>

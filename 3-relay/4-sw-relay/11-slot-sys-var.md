@@ -8,6 +8,13 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 
 
 ### 시스템 변수 (system variable) 설정
+
+{% hint style="info" %}
+시스템 변수 설정을 위해서는 command 가 변경된 것을 확인하고 동작합니다. <br>
+즉, command 값이 161로 변경된 순간에 1회 동작합니다.  
+
+{% endhint %}
+
 <table class="tg">
 <thead>
 	<tr>

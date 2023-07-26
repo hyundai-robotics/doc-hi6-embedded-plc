@@ -67,5 +67,5 @@ ex 1) 재생속도 설정
 	</tr>
 </tbody>
 </table>
-![](../_assets/playback_speed.png)
 
+![](../../_assets/playback_speed.png)

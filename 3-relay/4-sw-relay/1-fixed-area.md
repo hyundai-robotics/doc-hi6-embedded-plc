@@ -63,6 +63,18 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>Scan time이 5초를 초과할때 on</td>
 		<td></td>
 	</tr>
+	<tr>
+		<td>SB3</td>
+		<td class='grayed'></td>
+		<td class='grayed'></td>
+		<td class='grayed'></td>
+		<td class='grayed'></td>
+		<td class='grayed'></td>
+		<td class='grayed'></td>
+		<td class='grayed'></td>
+		<td>T/P 부팅 완료시 on</td>
+		<td></td>
+	</tr>
 </tbody>
 </table>
 

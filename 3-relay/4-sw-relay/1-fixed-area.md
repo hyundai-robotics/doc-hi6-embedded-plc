@@ -178,6 +178,13 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	</tr>
 	<tr class='grayed'><td>-</td><td>-</td><td>-</td></tr>
 	<tr>
+		<td>SB30</td>
+		<td>로봇 상태 정보 1
+		</br>(b0 = 건 출력)</br>
+		</td>
+		<td></td>
+	</tr>
+	<tr>
 		<td>SB40</td>
 		<td>현재 툴번호</td>
 		<td></td>

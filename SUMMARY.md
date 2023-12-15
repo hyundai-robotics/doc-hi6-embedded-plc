@@ -25,6 +25,7 @@
     * [3.4.9 S 릴레이 - SPOTWELD_INFO](3-relay/4-sw-relay/9-slot-spotweld-info.md)
     * [3.4.10 S 릴레이 - CONVEYOR_INFO](3-relay/4-sw-relay/10-slot-conveyor-info.md)
     * [3.4.11 S 릴레이 - SYSTEM_VARIABLE](3-relay/4-sw-relay/11-slot-sys-var.md)
+    * [3.4.12 S 릴레이 - HW_INFO](3-relay/4-sw-relay/12-slot-hw-info.md)    
   * [3.5 릴레이 간접 주소 지정](3-relay/5-relative-addr.md)
 
 * [4. 명령 (instruction)](4-instruction/README.md)

@@ -27,7 +27,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>2</td>
 		<td>param. 1</td>
 		<td>type<br>1 = 현재위치(축각도), 2 = 현재위치(베이스좌표계), 6 = 축속도,
-7 = 모터속도, 10 = 부하율(I/Ir), 11 = 부하율(I/Ip), 12 = 부하율(연속),
+7 = 모터속도, 8 = 부가축 속도제어시 모터속도(rpm) 지령값, 10 = 부하율(I/Ir), 11 = 부하율(I/Ip), 12 = 부하율(연속),
 15 = 엔코더(온도), 18 = 축별누적거리</td>
 		<td>s2</td>
 	</tr>
@@ -56,6 +56,66 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	</tr>
 	<tr>
 		<td>16</td>
+		<td>(시작축 + 2축) 해당값</td>
+		<td>f4</td>
+	</tr>
+</tbody>
+</table>
+
+<br>
+<br>
+<br>
+
+<table class="tg">
+<thead>
+	<tr>
+		<th>S offset</th>
+		<th>field</th>
+		<th>description</th>
+		<th>type</th>
+	</tr>
+</thead>
+
+<tbody>
+	<tr>
+		<td>0</td>
+		<td>command</td>
+		<td>SET_AXIS_INFO (121)</td>
+		<td>s2</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>param. 1</td>
+		<td>type<br> 8 = 부가축 속도제어시 모터속도(rpm) 지령값</td>
+		<td>s2</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td>param. 2</td>
+		<td>시작 축 번호 (1~)</td>
+		<td>s2</td>
+	</tr>
+	<tr>
+		<td>6</td>
+		<td>-</td>
+		<td class='grayed'></td>
+		<td class='grayed'></td>
+	</tr>
+	<tr>
+		<td>8</td>
+		<td>param. 3</td>
+		<td>(시작축 + 0축) 해당값</td>
+		<td>f4</td>
+	</tr>
+	<tr>
+		<td>12</td>
+		<td>param. 4</td>
+		<td>(시작축 + 1축) 해당값</td>
+		<td>f4</td>
+	</tr>
+	<tr>
+		<td>16</td>
+		<td>param. 5</td>
 		<td>(시작축 + 2축) 해당값</td>
 		<td>f4</td>
 	</tr>

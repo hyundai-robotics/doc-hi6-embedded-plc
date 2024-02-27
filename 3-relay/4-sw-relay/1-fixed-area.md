@@ -486,7 +486,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 <table class="tg">
 <thead>
 	<tr>
-		<td colspan=2>SB</td>
+		<th colspan=2>SB Offset</th>
 		<th>이름</th>
 		<th colspan=8>설명 or Bit Index</th>
 	</tr>
@@ -494,8 +494,8 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 
 <tbody>
 	<tr>
-		<th>시작</th>
-		<th>크기</th>
+		<td class='powderblued'>시작</td>
+		<td class='powderblued'>크기</td>
 		<td class='powderblued'>릴레이</td>
 		<td class='powderblued'>Bit 7</td>
 		<td class='powderblued'>Bit 6</td>

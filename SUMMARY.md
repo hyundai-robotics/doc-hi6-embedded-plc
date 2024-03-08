@@ -23,9 +23,10 @@
     * [3.4.7 S 릴레이 - DATE_TIME](3-relay/4-sw-relay/7-slot-date-time.md)
     * [3.4.8 S 릴레이 - CUR_SPOTGUN_NO](3-relay/4-sw-relay/8-slot-cur-spotgun-no.md)
     * [3.4.9 S 릴레이 - SPOTWELD_INFO](3-relay/4-sw-relay/9-slot-spotweld-info.md)
-    * [3.4.10 S 릴레이 - CONVEYOR_INFO](3-relay/4-sw-relay/10-slot-conveyor-info.md)
-    * [3.4.11 S 릴레이 - SYSTEM_VARIABLE](3-relay/4-sw-relay/11-slot-sys-var.md)
-    * [3.4.12 S 릴레이 - HW_INFO](3-relay/4-sw-relay/12-slot-hw-info.md)    
+    * [3.4.10 S 릴레이 - ARCWELD_INFO](3-relay/4-sw-relay/10-slot-arcweld-info.md)
+    * [3.4.11 S 릴레이 - CONVEYOR_INFO](3-relay/4-sw-relay/11-slot-conveyor-info.md)
+    * [3.4.12 S 릴레이 - SYSTEM_VARIABLE](3-relay/4-sw-relay/12-slot-sys-var.md)
+    * [3.4.13 S 릴레이 - HW_INFO](3-relay/4-sw-relay/13-slot-hw-info.md)    
   * [3.5 릴레이 간접 주소 지정](3-relay/5-relative-addr.md)
 
 * [4. 명령 (instruction)](4-instruction/README.md)

@@ -485,6 +485,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 table  {border-collapse:collapse;}
 td {border-color:gray;border-style:solid;border-width:1px;}
 .grayed {background-color:lightgray;}
+.powderblued {background-color:powderblue;}
 .bit { width: 10%; }
 </style>
 
@@ -949,7 +950,334 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td></td>
 	</tr>
 </tbody>
-</table># 3.4.2 S 릴레이 - TASK_INFO
+</table>
+
+
+<br>
+
+### 산업용 통신 상태 (CIFX PCI Status) 영역
+
+##### Slot 1 : SB 1000 ~ SB 1199
+##### Slot 2 : SB 1200 ~ SB 1399
+##### Slot 3 : SB 1400 ~ SB 1599
+
+
+<table class="tg">
+<thead>
+	<tr>
+		<th colspan=2>SB Offset</th>
+		<th>이름</th>
+		<th colspan=8>설명 or Bit Index</th>
+	</tr>
+</thead>
+
+<tbody>
+	<tr>
+		<td class='powderblued'>시작</td>
+		<td class='powderblued'>크기</td>
+		<td class='powderblued'>릴레이</td>
+		<td class='powderblued'>Bit 7</td>
+		<td class='powderblued'>Bit 6</td>
+		<td class='powderblued'>Bit 5</td>
+		<td class='powderblued'>Bit 4</td>
+		<td class='powderblued'>Bit 3</td>
+		<td class='powderblued'>Bit 2</td>
+		<td class='powderblued'>Bit 1</td>
+		<td class='powderblued'>Bit 0</td>
+	</tr>
+	<tr>
+		<td>0</td>
+		<td>4</td>
+		<td>채널 상태</td>
+		<td class='grayed'></td>
+		<td>Restart 가능</td>
+		<td>Restart 필요</td>
+		<td>Config New</td>
+		<td>Config Lock</td>
+		<td>Bus On</td>
+		<td>Run</td>
+		<td>Ready</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td>4</td>
+		<td>채널 상태</td>
+		<td colspan=8>0 = Unknown, <br> 1 =  Not Configured, <br> 2 = Stop, <br> 3 = Idle, <br> 4 = Operate</td>
+	</tr>
+	<tr>
+		<td>8</td>
+		<td>4</td>
+		<td>통신 에러 코드</td>
+		<td colspan=8>0 = 정상, <br> 그외 =  Error Code (32Bit Hexa)</td>
+	</tr>
+	<tr>
+		<td>12</td>
+		<td>2</td>
+		<td>상태 진단 버전</td>
+		<td colspan=8></td>
+	</tr>
+	<tr>
+		<td>14</td>
+		<td>2</td>
+		<td>Watchdog Timeout (ms)</td>
+		<td colspan=8></td>
+	</tr>
+	<tr>
+		<td>16</td>
+		<td>1</td>
+		<td>Input Data Handshake Mode</td>
+		<td colspan=8></td>
+	</tr>
+	<tr>
+		<td>17</td>
+		<td>-</td>
+		<td></td>
+		<td colspan=8></td>
+	</tr>
+	<tr>
+		<td>18</td>
+		<td>1</td>
+		<td>Output Data Handshake Mode</td>
+		<td colspan=8></td>
+	</tr>
+	<tr>
+		<td>19</td>
+		<td>-</td>
+		<td></td>
+		<td colspan=8></td>
+	</tr>
+	<tr>
+		<td>20</td>
+		<td>4</td>
+		<td>Host System Watchdog</td>
+		<td colspan=8></td>
+	</tr>
+	<tr>
+		<td>24</td>
+		<td>4</td>
+		<td>통신에러 누적 횟수</td>
+		<td colspan=8></td>
+	</tr>
+	<tr>
+		<td>28</td>
+		<td>-</td>
+		<td></td>
+		<td colspan=8></td>
+	</tr>
+	<tr>
+		<td>29</td>
+		<td>1</td>
+		<td>Input Data Handshake Error</td>
+		<td colspan=8></td>
+	</tr>
+	<tr>
+		<td>30</td>
+		<td>1</td>
+		<td>Output Data Handshake Error</td>
+		<td colspan=8></td>
+	</tr>
+	<tr>
+		<td colspan=11>Status (Master Only)</td>
+	</tr>
+	<tr>
+		<td>40</td>
+		<td>4</td>
+		<td>슬레이브 통신 상태</td>
+		<td colspan=8>0 = Unknown, <br> 1 = OK, <br> 2 = FAILED</td>
+	</tr>
+	<tr>
+		<td>48</td>
+		<td>4</td>
+		<td>연결된 슬레이브 수</td>
+		<td colspan=8></td>
+	</tr>
+	<tr>
+		<td>52</td>
+		<td>4</td>
+		<td>정상동작 슬레이브 수</td>
+		<td colspan=8></td>
+	</tr>
+	<tr>
+		<td>56</td>
+		<td>4</td>
+		<td>진단 슬레이브 수</td>
+		<td colspan=8></td>
+	</tr>
+	<tr>
+		<td>64</td>
+		<td>1</td>
+		<td>Global Bits <br> (DeviceNet Master)</td>
+		<td>중복 MAC ID 확인중</td>
+		<td>중복된 MAC ID</td>
+		<td>Host 준비 안됨</td>
+		<td>Bus Event Error</td>
+		<td rowspan=2>Fatal Error</td>
+		<td rowspan=2>Not Exchange Error</td>
+		<td rowspan=2>Auto Clear Error</td>
+		<td rowspan=2>Control Error</td>
+	</tr>
+	<tr>
+		<td>64</td>
+		<td>1</td>
+		<td>Global Bits <br> (Profibus Master)</td>
+		<td class='grayed'></td>
+		<td class='grayed'></td>
+		<td>TimeOut</td>
+		<td>Host 준비 안됨</td>
+	</tr>
+	<tr>
+		<td>64</td>
+		<td>4</td>
+		<td>알람 횟수</td>
+		<td colspan=8>EtherNet/IP Master Only</td>
+	</tr>
+	<tr>
+		<td>65</td>
+		<td>1</td>
+		<td>마스터 상태</td>
+		<td colspan=8>DeviceNet <br> 0x00 = Offline, <br> 0x40 = Stop, <br> 0x80 = Idle, <br> 0xC0 = Run <br> Profibus <br> 0x00 = Offline, <br> 0x40 = Stop, <br> 0x80 = Clear, <br> 0xC0 = Operate</td>
+	</tr>
+	<tr>
+		<td>66</td>
+		<td>1</td>
+		<td>에러 스테이션 번호</td>
+		<td colspan=8>DeviceNet Master Only</td>
+	</tr>
+	<tr>
+		<td>67</td>
+		<td>1</td>
+		<td>에러 코드</td>
+		<td colspan=8>DeviceNet Master Only <br> 52 = Unknown process data handshake mode, <br> 53 = Baudrate 에러, <br> 54 = MAC ID 에러, <br> 57 = 중복된 MAC ID, <br> 58 = 디바이스 없음, <br> 210 = 통신 설정 없음, <br> 212 = 통신 설정 읽기 실패, <br> 220 = User Watchdog Fail, <br> 221 = User Data 응답 없음, <br> 223 = 마스터 Stop (CAN Bus Off), <br> 226 = 해당 장치가 마스터 장치가 아님</td>
+	</tr>
+	<tr>
+		<td>68</td>
+		<td>2</td>
+		<td>Bus Data 송수신 이상 횟수</td>
+		<td colspan=8>DeviceNet Master Only</td>
+	</tr>
+	<tr>
+		<td>68</td>
+		<td>4</td>
+		<td>경고 횟수</td>
+		<td colspan=8>EtherNet/IP Master Only</td>
+	</tr>
+	<tr>
+		<td>70</td>
+		<td>2</td>
+		<td>Bus Off 에러 횟수</td>
+		<td colspan=8>DeviceNet Master Only</td>
+	</tr>
+	<tr>
+		<td>72</td>
+		<td>4</td>
+		<td>Bus 에러 코드</td>
+		<td colspan=8>DeviceNet Master Only</td>
+	</tr>
+	<tr>
+		<td>72</td>
+		<td>4</td>
+		<td>에러 횟수</td>
+		<td colspan=8>EtherNet/IP Master Only</td>
+	</tr>
+	<tr>
+		<td>76</td>
+		<td>4</td>
+		<td>에러 레벨</td>
+		<td colspan=8>EtherNet/IP Master Only <br> 알람, 경고, 에러</td>
+	</tr>
+	<tr>
+		<td>80</td>
+		<td>4</td>
+		<td>에러 코드</td>
+		<td colspan=8>EtherNet/IP Master Only </td>
+	</tr>
+	<tr>
+		<td>84</td>
+		<td>4</td>
+		<td>에러 코드 파라미터</td>
+		<td colspan=8>EtherNet/IP Master Only </td>
+	</tr>
+	<tr>
+		<td>88</td>
+		<td>4</td>
+		<td>에러 발생 Source Line</td>
+		<td colspan=8>EtherNet/IP Master Only </td>
+	</tr>
+	<tr>
+		<td>92</td>
+		<td>12</td>
+		<td>에러 발생 Source Identifier</td>
+		<td colspan=8>EtherNet/IP Master Only </td>
+	</tr>
+	<tr>
+		<td colspan=11>Slave Node Status (Master Only)</td>
+	</tr>
+	<tr>
+		<td>80</td>
+		<td>8</td>
+		<td>슬레이브 리스트 1</td>
+		<td colspan=8>(DeviceNet Master) 활성 슬레이브  (0 ~ 63) <br>  <br>(Profibus Master) 연결된 슬레이브 (0 ~ 63) </td>
+	</tr>
+	<tr>
+		<td>88</td>
+		<td>8</td>
+		<td>슬레이브 리스트 2</td>
+		<td colspan=8>(DeviceNet Master) 비활성된 슬레이브  (0 ~ 63) <br>  <br>(Profibus Master) 연결된 슬레이브 (64 ~ 127) </td>
+	</tr>
+	<tr>
+		<td>96</td>
+		<td>8</td>
+		<td>슬레이브 리스트 3</td>
+		<td colspan=8>(DeviceNet Master) Explicit Message 가능한 슬레이브  (0 ~ 63) <br>  <br>(Profibus Master) IO 교환 중인 슬레이브 (0 ~ 63) </td>
+	</tr>
+	<tr>
+		<td>104</td>
+		<td>8</td>
+		<td>슬레이브 리스트 4</td>
+		<td colspan=8>(DeviceNet Master) IO 교환 중인 슬레이브  (0 ~ 63) <br>  <br>(Profibus Master) IO 교환 중인 슬레이브 (64 ~ 127) </td>
+	</tr>
+	<tr>
+		<td>112</td>
+		<td>8</td>
+		<td>슬레이브 리스트 5</td>
+		<td colspan=8>(DeviceNet Master) 진단 중인 슬레이브  (0 ~ 63) <br>  <br>(Profibus Master) 진단 중인 슬레이브 (0 ~ 63) </td>
+	</tr>
+	<tr>
+		<td>120</td>
+		<td>8</td>
+		<td>슬레이브 리스트 6</td>
+		<td colspan=8>(Profibus Master) 진단 중인 슬레이브 (64 ~ 127) </td>
+	</tr>
+	<tr>
+		<td colspan=11>Slave Node Status (Extended Status Field) (Master Only)</td>
+	</tr>
+	<tr>
+		<td>128</td>
+		<td>16</td>
+		<td>슬레이브 리스트 7</td>
+		<td colspan=8>(DeviceNet Master) 연결된 슬레이브  (0 ~ 63) <br>  <br>(Profibus / EtherNet IP / Profinet IO / EtherCAT Master) <br> 연결된 슬레이브 (0 ~ 127) </td>
+	</tr>
+	<tr>
+		<td>144</td>
+		<td>16</td>
+		<td>슬레이브 리스트 8</td>
+		<td colspan=8>(DeviceNet Master) 활성 슬레이브  (0 ~ 63) <br>  <br> (Profibus / EtherNet IP / Profinet IO / EtherCAT Master) <br> IO 교환 중인 슬레이브 (0 ~ 127) </td>
+	</tr>
+	<tr>
+		<td>160</td>
+		<td>16</td>
+		<td>슬레이브 리스트 9</td>
+		<td colspan=8>(DeviceNet Master) 진단 중인 슬레이브  (0 ~ 63) <br>  <br> (Profibus / EtherNet IP / Profinet IO / EtherCAT Master) <br> 진단 중인 슬레이브 (0 ~ 127) </td>
+	</tr>
+	<tr>
+		<td>176</td>
+		<td>16</td>
+		<td>슬레이브 리스트 10</td>
+		<td colspan=8>(Profibus Master) Slave 최신 Input Data Update (0 ~ 127) </td>
+	</tr>
+</tbody>
+</table>
+# 3.4.2 S 릴레이 - TASK_INFO
 
 <style type="text/css">
 table  {border-collapse:collapse;}
@@ -1096,7 +1424,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>2</td>
 		<td>param. 1</td>
 		<td>type<br>1 = 현재위치(축각도), 2 = 현재위치(베이스좌표계), 6 = 축속도,
-7 = 모터속도, 10 = 부하율(I/Ir), 11 = 부하율(I/Ip), 12 = 부하율(연속),
+7 = 모터속도, 8 = 부가축 속도제어시 모터속도(rpm) 지령값, 10 = 부하율(I/Ir), 11 = 부하율(I/Ip), 12 = 부하율(연속),
 15 = 엔코더(온도), 18 = 축별누적거리</td>
 		<td>s2</td>
 	</tr>
@@ -1129,7 +1457,68 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>f4</td>
 	</tr>
 </tbody>
-</table># 3.4.5 S 릴레이 - TP_KEYPAD
+</table>
+
+<br>
+<br>
+<br>
+
+<table class="tg">
+<thead>
+	<tr>
+		<th>S offset</th>
+		<th>field</th>
+		<th>description</th>
+		<th>type</th>
+	</tr>
+</thead>
+
+<tbody>
+	<tr>
+		<td>0</td>
+		<td>command</td>
+		<td>SET_AXIS_INFO (121)</td>
+		<td>s2</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>param. 1</td>
+		<td>type<br> 8 = 부가축 속도제어시 모터속도(rpm) 지령값</td>
+		<td>s2</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td>param. 2</td>
+		<td>시작 축 번호 (1~)</td>
+		<td>s2</td>
+	</tr>
+	<tr>
+		<td>6</td>
+		<td>-</td>
+		<td class='grayed'></td>
+		<td class='grayed'></td>
+	</tr>
+	<tr>
+		<td>8</td>
+		<td>param. 3</td>
+		<td>(시작축 + 0축) 해당값</td>
+		<td>f4</td>
+	</tr>
+	<tr>
+		<td>12</td>
+		<td>param. 4</td>
+		<td>(시작축 + 1축) 해당값</td>
+		<td>f4</td>
+	</tr>
+	<tr>
+		<td>16</td>
+		<td>param. 5</td>
+		<td>(시작축 + 2축) 해당값</td>
+		<td>f4</td>
+	</tr>
+</tbody>
+</table>
+# 3.4.5 S 릴레이 - TP_KEYPAD
 
 <style type="text/css">
 table  {border-collapse:collapse;}
@@ -1448,7 +1837,66 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>s2</td>
 	</tr>
 </tbody>
-</table># 3.4.10 S 릴레이 - CONVEYOR_INFO
+</table># 3.4.10 S 릴레이 - ARCWELD_INFO
+
+<style type="text/css">
+table  {border-collapse:collapse;}
+td {border-color:gray;border-style:solid;border-width:1px;}
+.grayed {background-color:lightgray;}
+</style>
+
+<table class="tg">
+<thead>
+	<tr>
+		<th>S offset</th>
+		<th>field</th>
+		<th>description</th>
+		<th>type</th>
+	</tr>
+</thead>
+
+<tbody>
+	<tr>
+		<td>0</td>
+		<td>command</td>
+		<td>GET_ARCTWELD_INFO (3000)</td>
+		<td>s2</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>param 1</td>
+		<td>welder_no (0~1)</td>
+		<td>s1</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>param 2</td>
+		<td>twin_no (0~1)</td>
+		<td>s1</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td rowspan=5>result</td>
+		<td>용접 전류</td>
+		<td>f4</td>
+	</tr>
+	<tr>
+		<td>8</td>
+		<td>용접 전압</td>
+		<td>f4</td>
+	</tr>
+	<tr>
+		<td>12</td>
+		<td>용접기 에러</td>
+		<td>s4</td>
+	</tr>
+	<tr>
+		<td>16</td>
+		<td>와이어 피딩속도</td>
+		<td>f4</td>
+	</tr>
+</tbody>
+</table># 3.4.11 S 릴레이 - CONVEYOR_INFO
 
 <style type="text/css">
 table  {border-collapse:collapse;}
@@ -1639,127 +2087,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	</tr>
 </tbody>
 </table>
-# 3.4.7 S 릴레이 - SYSTEM_VARIABLE
-
-<style type="text/css">
-table  {border-collapse:collapse;}
-td {border-color:gray;border-style:solid;border-width:1px;}
-.grayed {background-color:lightgray;}
-</style>
-
-
-### 시스템 변수 (system variable) 설정
-
-{% hint style="info" %}
-시스템 변수 설정을 위해서는 command 가 변경된 것을 확인하고 동작합니다. <br>
-즉, command 값이 161로 변경된 순간에 1회 동작합니다.  
-
-{% endhint %}
-
-<table class="tg">
-<thead>
-	<tr>
-		<th>S offset</th>
-		<th>field</th>
-		<th>description</th>
-		<th>type</th>
-	</tr>
-</thead>
-
-<tbody>
-	<tr>
-		<td>0</td>
-		<td>command</td>
-		<td>SET_SYS_VAR (161)</td>
-		<td>s2</td>
-	</tr>
-	<tr>
-		<td>2</td>
-		<td>param 1</td>
-		<td>item (of set data)</td>
-		<td>s2</td>
-	</tr>
-	<tr>
-		<td>4 ~ 18</td>
-		<td>param n</td>
-		<td>value</td>
-		<td></td>
-	</tr>
-</tbody>
-</table>
-
-<br>
-<br>
-ex 1) 재생속도 설정
-<table class="tg">
-<thead>
-	<tr>
-		<th>S offset</th>
-		<th>field</th>
-		<th>description</th>
-		<th>type</th>
-	</tr>
-</thead>
-<tbody>
-	<tr>
-		<td>2</td>
-		<td>param 1</td>
-		<td>42 = 재생속도</td>
-		<td>s2</td>
-	</tr>
-	<tr>
-		<td>4</td>
-		<td>param 1</td>
-		<td>value</td>
-		<td>s1</td>
-	</tr>
-</tbody>
-</table>
-
-![](../../_assets/playback_speed.png)
-# 3.4.12 S 릴레이 - HW_INFO
-
-<style type="text/css">
-table  {border-collapse:collapse;}
-td {border-color:gray;border-style:solid;border-width:1px;}
-.grayed {background-color:lightgray;}
-</style>
-
-<table class="tg">
-<thead>
-	<tr>
-		<th>S offset</th>
-		<th>field</th>
-		<th>description</th>
-		<th>type</th>
-	</tr>
-</thead>
-
-<tbody>
-	<tr>
-		<td>0</td>
-		<td>command</td>
-		<td>GET_HW_INFO (170)</td>
-		<td>s2</td>
-	</tr>
-	<tr>
-		<td>2</td>
-		<td rowspan=6>result</td>
-		<td>cpu 온도 * 10</td>
-		<td>s2</td>
-	</tr>
-	<tr>
-		<td>4</td>
-		<td>메인보드 온도 * 10</td>
-		<td>s2</td>
-	</tr>
-	<tr>
-		<td>6</td>
-		<td>시스템보드 온도 * 10</td>
-		<td>s2</td>
-	</tr>
-</tbody>
-</table># 3.5 릴레이 간접 주소 지정
+# 3.5 릴레이 간접 주소 지정
 
 SW62~SW79는 간접 주소 지정을 위한 시스템 메모리입니다. 릴레이 형식에 관계없이 릴레이 번지를 -2 ~ -18 의 값으로 
 지정하면 SW62~SW79에 저장된 값의 번지로 지정됩니다.

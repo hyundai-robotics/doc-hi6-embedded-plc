@@ -1,4 +1,4 @@
-﻿# 3.4.12 S 릴레이 - HW_INFO
+﻿# 3.4.13 S 릴레이 - HW_INFO
 
 <style type="text/css">
 table  {border-collapse:collapse;}

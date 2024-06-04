@@ -31,24 +31,64 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	</tr>
 	<tr>
 		<td>4</td>
-		<td rowspan=4>result</td>
-		<td>현재 스폿건 번호 (용접기 1, master gun)</td>
+		<td rowspan=12>result</td>
+		<td>현재 스폿건 번호 (master gun)</td>
+		<td>s1</td>
+	</tr>
+	<tr>
+		<td>5</td>
+		<td>현재 조건 번호 (master cnd)</td>
 		<td>s2</td>
 	</tr>
 	<tr>
-		<td>6</td>
-		<td>현재 스폿건 번호 (용접기 2, slave gun #1)</td>
-		<td>s2</td>
+		<td>7</td>
+		<td>현재 시퀀스 번호 (master seq)</td>
+		<td>s1</td>
 	</tr>
 	<tr>
 		<td>8</td>
-		<td>현재 스폿건 번호 (용접기 3, slave gun #2)</td>
+		<td>현재 스폿건 번호 (slave gun #1)</td>
+		<td>s1</td>
+	</tr>
+	<tr>
+		<td>9</td>
+		<td>현재 조건 번호 (slave cnd #1)</td>
 		<td>s2</td>
 	</tr>
 	<tr>
-		<td>10</td>
-		<td>현재 스폿건 번호 (용접기 4, slave gun #3)</td>
+		<td>11</td>
+		<td>현재 시퀀스 번호 (slave gun #1)</td>
+		<td>s1</td>
+	</tr>
+	<tr>
+		<td>12</td>
+		<td>현재 스폿건 번호 (slave gun #2)</td>
+		<td>s1</td>
+	</tr>
+	<tr>
+		<td>13</td>
+		<td>현재 조건 번호 (slave cnd #2)</td>
 		<td>s2</td>
+	</tr>
+	<tr>
+		<td>15</td>
+		<td>현재 시퀀스 번호 (slave gun #2)</td>
+		<td>s1</td>
+	</tr>
+	<tr>
+		<td>16</td>
+		<td>현재 스폿건 번호 (slave gun #3)</td>
+		<td>s1</td>
+	</tr>
+	<tr>
+		<td>17</td>
+		<td>현재 조건 번호 (slave cnd #3)</td>
+		<td>s2</td>
+	</tr>
+	<tr>
+		<td>19</td>
+		<td>현재 시퀀스 번호 (slave gun #3)</td>
+		<td>s1</td>
 	</tr>
 </tbody>
 </table>

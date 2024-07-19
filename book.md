@@ -2567,6 +2567,18 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>-[&nbsp;&nbsp;&nbsp;]-</td>
 		<td>Rung이 활성이면, (^: 거듭제곱)연산</td>
 	</tr>
+	<tr>
+		<td>AND</td>
+		<td>Bitwise AND</td>
+		<td>-[&nbsp;&nbsp;&nbsp;]-</td>
+		<td>Rung이 활성이면, (&)연산</td>
+	</tr>
+	<tr>
+		<td>OR</td>
+		<td>Bitwise OR</td>
+		<td>-[&nbsp;&nbsp;&nbsp;]-</td>
+		<td>Rung이 활성이면, (|)연산</td>
+	</tr>
 </tbody>
 </table>
 

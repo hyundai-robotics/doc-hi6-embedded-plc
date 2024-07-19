@@ -1299,24 +1299,64 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	</tr>
 	<tr>
 		<td>4</td>
-		<td rowspan=4>result</td>
-		<td>current spot gun number (welder #1, master gun)</td>
+		<td rowspan=12>result</td>
+		<td>current spot gun number (master gun)</td>
+		<td>s1</td>
+	</tr>
+	<tr>
+		<td>5</td>
+		<td>current condition number (master cnd)</td>
 		<td>s2</td>
 	</tr>
 	<tr>
-		<td>6</td>
-		<td>current spot gun number (welder #2, slave gun #1)</td>
-		<td>s2</td>
+		<td>7</td>
+		<td>current sequence number (master seq)</td>
+		<td>s1</td>
 	</tr>
 	<tr>
 		<td>8</td>
-		<td>current spot gun number (welder #3, slave gun #2)</td>
+		<td>current spot gun number (slave gun #1)</td>
+		<td>s1</td>
+	</tr>
+	<tr>
+		<td>9</td>
+		<td>current condition number (slave cnd #1)</td>
 		<td>s2</td>
 	</tr>
 	<tr>
-		<td>10</td>
-		<td>current spot gun number (welder #4, slave gun #3)</td>
+		<td>11</td>
+		<td>current sequence number (slave seq #1)</td>
+		<td>s1</td>
+	</tr>
+	<tr>
+		<td>12</td>
+		<td>current spot gun number (slave gun #2)</td>
+		<td>s1</td>
+	</tr>
+	<tr>
+		<td>13</td>
+		<td>current condition number (slave cnd #2)</td>
 		<td>s2</td>
+	</tr>
+	<tr>
+		<td>15</td>
+		<td>current sequence number (slave seq #2)</td>
+		<td>s1</td>
+	</tr>
+	<tr>
+		<td>16</td>
+		<td>current spot gun number (slave gun #3)</td>
+		<td>s1</td>
+	</tr>
+	<tr>
+		<td>17</td>
+		<td>current condition number (slave cnd #3)</td>
+		<td>s2</td>
+	</tr>
+	<tr>
+		<td>19</td>
+		<td>current sequence number (slave seq #3)</td>
+		<td>s1</td>
 	</tr>
 </tbody>
 </table># 3.4.9 S realy - SPOTWELD_INFO
@@ -1935,6 +1975,18 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>Power</td>
 		<td>-[&nbsp;&nbsp;&nbsp;]-</td>
 		<td>power (^) operation if the rung is active</td>
+	</tr>
+	<tr>
+		<td>AND</td>
+		<td>Bitwise AND</td>
+		<td>-[&nbsp;&nbsp;&nbsp;]-</td>
+		<td>bitwise and (&) operation if the rung is active</td>
+	</tr>
+	<tr>
+		<td>OR</td>
+		<td>Bitwise OR</td>
+		<td>-[&nbsp;&nbsp;&nbsp;]-</td>
+		<td>bitwise or (|) operation if the rung is active</td>
 	</tr>
 </tbody>
 </table>
@@ -4488,6 +4540,170 @@ If the input DO22 is inactive, the END instruction will not be executed, allowin
 
 
 ![](../_assets/end.png)
+# 4.36 Bitwise AND (AND): Bit operation and
+
+
+### Description
+If the rung is active, the value of “source a” and the value of “source b” will be bitwise and operated together, and the result value will be set in the “destination” relay. (Support version is 60.28-00 and HRLadder v2.86b1)
+
+<br>
+
+### Types that can be used as an operand
+(not possible for X)
+<style type="text/css">
+table  {border-collapse:collapse;}
+th {background-color:#efefef; border-style:solid;border-width:1px;color:black;text-align:center;}
+td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
+.hd{background-color:#efefef;color:black;font-weight:bold;}
+</style>
+
+<table>
+<thead>
+  <tr>
+    <th>relay type</th>
+    <th colspan="2">input<br>X, DO</th>
+    <th colspan="2">output<br>Y, DI, R, K</th>
+    <th colspan="2">memory<br>M, S</th>
+    <th>const.<br>32bit</th>
+  </tr>
+  <tr>
+    <th>data-type</th>
+    <th>bit</th>
+    <th>B,W,L,F</th>
+    <th>bit</th>
+    <th>B,W,L,F</th>
+    <th>bit</th>
+    <th>B,W,L,F</th>
+    <th>L,F</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class='hd'>source a</td>
+    <td>X</td>
+    <td></td>
+    <td>X</td>
+    <td></td>
+    <td>X</td>
+    <td></td>
+    <td></td>
+  </tr>
+</tbody>
+<tbody>
+  <tr>
+    <td class='hd'>source b</td>
+    <td>X</td>
+    <td></td>
+    <td>X</td>
+    <td></td>
+    <td>X</td>
+    <td></td>
+    <td></td>
+  </tr>
+</tbody>
+<tbody>
+  <tr>
+    <td class='hd'>destination</td>
+    <td>X</td>
+    <td>X</td>
+    <td>X</td>
+    <td></td>
+    <td>X</td>
+    <td></td>
+    <td>X</td>
+  </tr>
+</tbody>
+</table>
+
+<br>
+
+### Example of use
+
+When the input DO36 is active, MB0 will be bitwise and operated to the value of &HFF, and the result value will be set in the internal state relay MW8.
+
+![](../_assets/and.png)
+# 4.37 Bitwise OR (OR): Bit operation or
+
+
+### Description
+If the rung is active, the value of “source a” and the value of “source b” will be bitwise or operated together, and the result value will be set in the “destination” relay. (Support version is 60.28-00 and HRLadder v2.86b1)
+
+<br>
+
+### Types that can be used as an operand
+(not possible for X)
+<style type="text/css">
+table  {border-collapse:collapse;}
+th {background-color:#efefef; border-style:solid;border-width:1px;color:black;text-align:center;}
+td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
+.hd{background-color:#efefef;color:black;font-weight:bold;}
+</style>
+
+<table>
+<thead>
+  <tr>
+    <th>relay type</th>
+    <th colspan="2">input<br>X, DO</th>
+    <th colspan="2">output<br>Y, DI, R, K</th>
+    <th colspan="2">memory<br>M, S</th>
+    <th>const.<br>32bit</th>
+  </tr>
+  <tr>
+    <th>data-type</th>
+    <th>bit</th>
+    <th>B,W,L,F</th>
+    <th>bit</th>
+    <th>B,W,L,F</th>
+    <th>bit</th>
+    <th>B,W,L,F</th>
+    <th>L,F</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class='hd'>source a</td>
+    <td>X</td>
+    <td></td>
+    <td>X</td>
+    <td></td>
+    <td>X</td>
+    <td></td>
+    <td></td>
+  </tr>
+</tbody>
+<tbody>
+  <tr>
+    <td class='hd'>source b</td>
+    <td>X</td>
+    <td></td>
+    <td>X</td>
+    <td></td>
+    <td>X</td>
+    <td></td>
+    <td></td>
+  </tr>
+</tbody>
+<tbody>
+  <tr>
+    <td class='hd'>destination</td>
+    <td>X</td>
+    <td>X</td>
+    <td>X</td>
+    <td></td>
+    <td>X</td>
+    <td></td>
+    <td>X</td>
+  </tr>
+</tbody>
+</table>
+
+<br>
+
+### Example of use
+
+When the input DO36 is active, DOW2 will be bitwise or operated to the value of &H0F0F, and the result value will be set in the internal state relay DIL8.
+
+![](../_assets/or.png)
 # 5. Difference in the Embedded PLC between Hi5a and Hi6
 
 The functions of the Hi6 controller's embedded PLC are similar to those of the Hi5a controller's embedded PLC, and the same HRLadder, or the same ladder editor, is used. 

@@ -249,6 +249,18 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>-[&nbsp;&nbsp;&nbsp;]-</td>
 		<td>power (^) operation if the rung is active</td>
 	</tr>
+	<tr>
+		<td>AND</td>
+		<td>Bitwise AND</td>
+		<td>-[&nbsp;&nbsp;&nbsp;]-</td>
+		<td>bitwise and (&) operation if the rung is active</td>
+	</tr>
+	<tr>
+		<td>OR</td>
+		<td>Bitwise OR</td>
+		<td>-[&nbsp;&nbsp;&nbsp;]-</td>
+		<td>bitwise or (|) operation if the rung is active</td>
+	</tr>
 </tbody>
 </table>
 

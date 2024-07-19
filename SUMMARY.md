@@ -62,5 +62,7 @@
   * [4.33 JMP (Jump): Jumping](4-instruction/33-jmp.md)
   * [4.34 CALL (Call): Calling a Sub-ladder Program](4-instruction/34-call.md)
   * [4.35 END (End):  Ending the Ladder Program](4-instruction/35-end.md)
+  * [4.36 AND (Bitwise AND): Bit operation and](4-instruction/36-and.md)
+  * [4.37 OR (Bitwise OR): Bit operation or](4-instruction/37-or.md)
 
 * [5. Difference in the Embedded PLC between Hi5a and Hi6](5-diff-hi5a-hi6.md)

@@ -112,6 +112,13 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	
 <br>
 
+{% hint style="info" %}
+\.      슬레이브의 통신 연결 여부를 모니터링하는 경우 "IO 교환 슬레이브 리스트"를 확인해 주십시오.
+{% endhint %}
+
+<br>
+
+
 <table class="tg">
 <thead>
 	<tr>

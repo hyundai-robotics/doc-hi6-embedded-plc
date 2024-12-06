@@ -1,4 +1,4 @@
-﻿# 3.4.12 S 릴레이 - SYSTEM_VARIABLE
+﻿# 3.4.12 S realy - SYSTEM_VARIABLE
 
 <style type="text/css">
 table  {border-collapse:collapse;}
@@ -7,11 +7,11 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 </style>
 
 
-### 시스템 변수 (system variable) 설정
+### System variable setting
 
 {% hint style="info" %}
-시스템 변수 설정을 위해서는 command 가 변경된 것을 확인하고 동작합니다. <br>
-즉, command 값이 161로 변경된 순간에 1회 동작합니다.  
+To set system variables, check that the command has changed and operate. <br>
+In other words, it operates once at the moment the command value changes to 161.  
 
 {% endhint %}
 
@@ -49,7 +49,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 
 <br>
 <br>
-ex 1) 재생속도 설정
+ex 1) Playback speed setting
 <table class="tg">
 <thead>
 	<tr>
@@ -63,7 +63,7 @@ ex 1) 재생속도 설정
 	<tr>
 		<td>2</td>
 		<td>param 1</td>
-		<td>42 = 재생속도</td>
+		<td>42 = Playback speed</td>
 		<td>s2</td>
 	</tr>
 	<tr>

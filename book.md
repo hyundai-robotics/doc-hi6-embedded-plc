@@ -1423,6 +1423,65 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>s2</td>
 	</tr>
 </tbody>
+</table># 3.4.10 S realy - ARCWELD_INFO
+
+<style type="text/css">
+table  {border-collapse:collapse;}
+td {border-color:gray;border-style:solid;border-width:1px;}
+.grayed {background-color:lightgray;}
+</style>
+
+<table class="tg">
+<thead>
+	<tr>
+		<th>S offset</th>
+		<th>field</th>
+		<th>description</th>
+		<th>type</th>
+	</tr>
+</thead>
+
+<tbody>
+	<tr>
+		<td>0</td>
+		<td>command</td>
+		<td>GET_ARCTWELD_INFO (3000)</td>
+		<td>s2</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>param 1</td>
+		<td>welder_no (0~1)</td>
+		<td>s1</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>param 2</td>
+		<td>twin_no (0~1)</td>
+		<td>s1</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td rowspan=5>result</td>
+		<td>welding current</td>
+		<td>f4</td>
+	</tr>
+	<tr>
+		<td>8</td>
+		<td>welding voltage</td>
+		<td>f4</td>
+	</tr>
+	<tr>
+		<td>12</td>
+		<td>welder error</td>
+		<td>s4</td>
+	</tr>
+	<tr>
+		<td>16</td>
+		<td>wire feeding speed</td>
+		<td>f4</td>
+	</tr>
+</tbody>
 </table># 3.4.10 S relay - CONVEYOR_INFO
 
 <style type="text/css">
@@ -1614,7 +1673,5666 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	</tr>
 </tbody>
 </table>
-# 3.5 Designating indirect addresses for relays
+# 3.4.12 S realy - SYSTEM_VARIABLE
+
+<style type="text/css">
+table  {border-collapse:collapse;}
+td {border-color:gray;border-style:solid;border-width:1px;}
+.grayed {background-color:lightgray;}
+</style>
+
+
+### System variable setting
+
+{% hint style="info" %}
+To set system variables, check that the command has changed and operate. <br>
+In other words, it operates once at the moment the command value changes to 161.  
+
+{% endhint %}
+
+<table class="tg">
+<thead>
+	<tr>
+		<th>S offset</th>
+		<th>field</th>
+		<th>description</th>
+		<th>type</th>
+	</tr>
+</thead>
+
+<tbody>
+	<tr>
+		<td>0</td>
+		<td>command</td>
+		<td>SET_SYS_VAR (161)</td>
+		<td>s2</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>param 1</td>
+		<td>item (of set data)</td>
+		<td>s2</td>
+	</tr>
+	<tr>
+		<td>4 ~ 18</td>
+		<td>param n</td>
+		<td>value</td>
+		<td></td>
+	</tr>
+</tbody>
+</table>
+
+<br>
+<br>
+ex 1) Playback speed setting
+<table class="tg">
+<thead>
+	<tr>
+		<th>S offset</th>
+		<th>field</th>
+		<th>description</th>
+		<th>type</th>
+	</tr>
+</thead>
+<tbody>
+	<tr>
+		<td>2</td>
+		<td>param 1</td>
+		<td>42 = Playback speed</td>
+		<td>s2</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td>param 1</td>
+		<td>value</td>
+		<td>s1</td>
+	</tr>
+</tbody>
+</table>
+
+![](../../_assets/playback_speed.png)
+# 3.4.13 S realy - HW_INFO
+
+<style type="text/css">
+table  {border-collapse:collapse;}
+td {border-color:gray;border-style:solid;border-width:1px;}
+.grayed {background-color:lightgray;}
+</style>
+
+<table class="tg">
+<thead>
+	<tr>
+		<th>S offset</th>
+		<th>field</th>
+		<th>description</th>
+		<th>type</th>
+	</tr>
+</thead>
+
+<tbody>
+	<tr>
+		<td>0</td>
+		<td>command</td>
+		<td>GET_HW_INFO (170)</td>
+		<td>s2</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td rowspan=6>result</td>
+		<td>cpu temperature * 10</td>
+		<td>s2</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td>main board temperature * 10</td>
+		<td>s2</td>
+	</tr>
+	<tr>
+		<td>6</td>
+		<td>system board temperature * 10</td>
+		<td>s2</td>
+	</tr>
+</tbody>
+</table># 3.4.14 S 릴레이 - CIFX 산업용 통신 상태 릴레이
+
+<style type="text/css">
+table  {border-collapse:collapse;}
+td {border-color:gray;border-style:solid;border-width:1px;}
+.grayed {background-color:lightgray;}
+.powderblued {background-color:powderblue;}
+</style>
+
+<br>
+
+### 산업용 통신 상태 (CIFX PCI Status) 영역
+
+<br>
+
+
+<table class="tg">
+<thead>
+	<tr>
+		<th colspan=2>S Offset</th>
+		<th>이름</th>
+		<th colspan=8>설명 or Bit Index</th>
+	</tr>
+</thead>
+
+<tbody>
+	<tr>
+		<td class='powderblued'>시작</td>
+		<td class='powderblued'>크기</td>
+		<td class='powderblued'>릴레이</td>
+		<td class='powderblued'>Bit 7</td>
+		<td class='powderblued'>Bit 6</td>
+		<td class='powderblued'>Bit 5</td>
+		<td class='powderblued'>Bit 4</td>
+		<td class='powderblued'>Bit 3</td>
+		<td class='powderblued'>Bit 2</td>
+		<td class='powderblued'>Bit 1</td>
+		<td class='powderblued'>Bit 0</td>
+	</tr>
+	<tr>
+		<td>0</td>
+		<td>2</td>
+		<td>command</td>
+		<td colspan=8>Get CIFX Status = 1000</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>1</td>
+		<td>param. 1</td>
+		<td colspan=8>Slot 번호 = 1 ~ 3</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>1</td>
+		<td>param. 2</td>
+		<td colspan=8>상태 1 = 1</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td>4</td>
+		<td>채널 상태</td>
+		<td class='grayed'></td>
+		<td>Restart 가능</td>
+		<td>Restart 필요</td>
+		<td>Config New</td>
+		<td>Config Lock</td>
+		<td>Bus On</td>
+		<td>Run</td>
+		<td>Ready</td>
+	</tr>
+	<tr>
+		<td>8</td>
+		<td>4</td>
+		<td>통신 상태</td>
+		<td colspan=8>0 = Unknown, <br> 1 =  Not Configured, <br> 2 = Stop, <br> 3 = Idle, <br> 4 = Operate</td>
+	</tr>
+	<tr>
+		<td>12</td>
+		<td>4</td>
+		<td>통신 에러 코드</td>
+		<td colspan=8>0 = 정상, <br> 그외 =  Error Code (32Bit Hexa)</td>
+	</tr>
+	<tr>
+		<td>16</td>
+		<td>2</td>
+		<td>상태 진단 버전</td>
+		<td colspan=8></td>
+	</tr>
+	<tr>
+		<td>18</td>
+		<td>2</td>
+		<td>Watchdog Timeout (ms)</td>
+		<td colspan=8></td>
+	</tr>
+</tbody>
+</table>
+
+
+<br>
+
+
+<table class="tg">
+<thead>
+	<tr>
+		<th colspan=2>S Offset</th>
+		<th>이름</th>
+		<th colspan=8>설명 or Bit Index</th>
+	</tr>
+</thead>
+
+<tbody>
+	<tr>
+		<td class='powderblued'>시작</td>
+		<td class='powderblued'>크기</td>
+		<td class='powderblued'>릴레이</td>
+		<td class='powderblued'>Bit 7</td>
+		<td class='powderblued'>Bit 6</td>
+		<td class='powderblued'>Bit 5</td>
+		<td class='powderblued'>Bit 4</td>
+		<td class='powderblued'>Bit 3</td>
+		<td class='powderblued'>Bit 2</td>
+		<td class='powderblued'>Bit 1</td>
+		<td class='powderblued'>Bit 0</td>
+	</tr>
+	<tr>
+		<td>0</td>
+		<td>2</td>
+		<td>command</td>
+		<td colspan=8>Get CIFX Status = 1000</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>1</td>
+		<td>param. 1</td>
+		<td colspan=8>Slot 번호 = 1 ~ 3</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>1</td>
+		<td>param. 2</td>
+		<td colspan=8>상태 2 = 2</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td>1</td>
+		<td>Input Data Handshake Mode</td>
+		<td colspan=8></td>
+	</tr>
+	<tr>
+		<td>5</td>
+		<td>-</td>
+		<td></td>
+		<td colspan=8></td>
+	</tr>
+	<tr>
+		<td>6</td>
+		<td>1</td>
+		<td>Output Data Handshake Mode</td>
+		<td colspan=8></td>
+	</tr>
+	<tr>
+		<td>7</td>
+		<td>-</td>
+		<td></td>
+		<td colspan=8></td>
+	</tr>
+	<tr>
+		<td>8</td>
+		<td>4</td>
+		<td>Host System Watchdog</td>
+		<td colspan=8></td>
+	</tr>
+	<tr>
+		<td>12</td>
+		<td>4</td>
+		<td>통신에러 누적 횟수</td>
+		<td colspan=8></td>
+	</tr>
+	<tr>
+		<td>16</td>
+		<td>-</td>
+		<td></td>
+		<td colspan=8></td>
+	</tr>
+	<tr>
+		<td>17</td>
+		<td>1</td>
+		<td>Input Data Handshake Error</td>
+		<td colspan=8></td>
+	</tr>
+	<tr>
+		<td>18</td>
+		<td>1</td>
+		<td>Output Data Handshake Error</td>
+		<td colspan=8></td>
+	</tr>
+	<tr>
+		<td>19</td>
+		<td>-</td>
+		<td></td>
+		<td colspan=8></td>
+	</tr>
+</tbody>
+</table>
+
+
+<br>
+
+
+<table class="tg">
+<thead>
+	<tr>
+		<th colspan=2>S Offset</th>
+		<th>이름</th>
+		<th colspan=8>설명 or Bit Index</th>
+	</tr>
+</thead>
+
+<tbody>
+	<tr>
+		<td class='powderblued'>시작</td>
+		<td class='powderblued'>크기</td>
+		<td class='powderblued'>릴레이</td>
+		<td class='powderblued'>Bit 7</td>
+		<td class='powderblued'>Bit 6</td>
+		<td class='powderblued'>Bit 5</td>
+		<td class='powderblued'>Bit 4</td>
+		<td class='powderblued'>Bit 3</td>
+		<td class='powderblued'>Bit 2</td>
+		<td class='powderblued'>Bit 1</td>
+		<td class='powderblued'>Bit 0</td>
+	</tr>
+	<tr>
+		<td>0</td>
+		<td>2</td>
+		<td>command</td>
+		<td colspan=8>Get CIFX Status = 1000</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>1</td>
+		<td>param. 1</td>
+		<td colspan=8>Slot 번호 = 1 ~ 3</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>1</td>
+		<td>param. 2</td>
+		<td colspan=8>상태 3 = 3</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td>16</td>
+		<td>Reserved</td>
+		<td colspan=8></td>
+	</tr>
+</tbody>
+</table>
+
+<br>
+
+### 산업용 통신 상태 (Master Only) 영역
+
+<br>
+
+<table class="tg">
+<thead>
+	<tr>
+		<th colspan=2>S Offset</th>
+		<th>이름</th>
+		<th colspan=8>설명 or Bit Index</th>
+	</tr>
+</thead>
+
+<tbody>
+	<tr>
+		<td class='powderblued'>시작</td>
+		<td class='powderblued'>크기</td>
+		<td class='powderblued'>릴레이</td>
+		<td class='powderblued'>Bit 7</td>
+		<td class='powderblued'>Bit 6</td>
+		<td class='powderblued'>Bit 5</td>
+		<td class='powderblued'>Bit 4</td>
+		<td class='powderblued'>Bit 3</td>
+		<td class='powderblued'>Bit 2</td>
+		<td class='powderblued'>Bit 1</td>
+		<td class='powderblued'>Bit 0</td>
+	</tr>
+	<tr>
+		<td>0</td>
+		<td>2</td>
+		<td>command</td>
+		<td colspan=8>Get CIFX Status = 1000</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>1</td>
+		<td>param. 1</td>
+		<td colspan=8>Slot 번호 = 1 ~ 3</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>1</td>
+		<td>param. 2</td>
+		<td colspan=8>상태 4 = 4</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td>4</td>
+		<td>슬레이브 통신 상태</td>
+		<td colspan=8>0 = Unknown, <br> 1 = OK, <br> 2 = FAILED</td>
+	</tr>
+	<tr>
+		<td>8</td>
+		<td>4</td>
+		<td>Reserved</td>
+		<td colspan=8></td>
+	</tr>
+	<tr>
+		<td>12</td>
+		<td>4</td>
+		<td>연결된 슬레이브 수</td>
+		<td colspan=8></td>
+	</tr>
+	<tr>
+		<td>16</td>
+		<td>4</td>
+		<td>정상동작 슬레이브 수</td>
+		<td colspan=8></td>
+	</tr>
+</tbody>
+</table>
+
+<br>
+
+<table class="tg">
+<thead>
+	<tr>
+		<th colspan=2>S Offset</th>
+		<th>이름</th>
+		<th colspan=8>설명 or Bit Index</th>
+	</tr>
+</thead>
+
+<tbody>
+	<tr>
+		<td class='powderblued'>시작</td>
+		<td class='powderblued'>크기</td>
+		<td class='powderblued'>릴레이</td>
+		<td class='powderblued'>Bit 7</td>
+		<td class='powderblued'>Bit 6</td>
+		<td class='powderblued'>Bit 5</td>
+		<td class='powderblued'>Bit 4</td>
+		<td class='powderblued'>Bit 3</td>
+		<td class='powderblued'>Bit 2</td>
+		<td class='powderblued'>Bit 1</td>
+		<td class='powderblued'>Bit 0</td>
+	</tr>
+	<tr>
+		<td>0</td>
+		<td>2</td>
+		<td>command</td>
+		<td colspan=8>Get CIFX Status = 1000</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>1</td>
+		<td>param. 1</td>
+		<td colspan=8>Slot 번호 = 1 ~ 3</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>1</td>
+		<td>param. 2</td>
+		<td colspan=8>상태 5 = 5</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td>4</td>
+		<td>진단 슬레이브 수</td>
+		<td colspan=8></td>
+	</tr>
+	<tr>
+		<td>8</td>
+		<td>12</td>
+		<td>Reserved</td>
+		<td colspan=8></td>
+	</tr>
+</tbody>
+</table>	# 3.4.14.1 S 릴레이 - Profibus-DP Master 상태 릴레이
+
+<style type="text/css">
+table  {border-collapse:collapse;}
+td {border-color:gray;border-style:solid;border-width:1px;}
+.grayed {background-color:lightgray;}
+.powderblued {background-color:powderblue;}
+</style>
+
+
+<br>
+
+<table class="tg">
+<thead>
+	<tr>
+		<th colspan=2>S Offset</th>
+		<th>이름</th>
+		<th colspan=8>설명 or Bit Index</th>
+	</tr>
+</thead>
+
+<tbody>
+	<tr>
+		<td class='powderblued'>시작</td>
+		<td class='powderblued'>크기</td>
+		<td class='powderblued'>릴레이</td>
+		<td class='powderblued'>Bit 7</td>
+		<td class='powderblued'>Bit 6</td>
+		<td class='powderblued'>Bit 5</td>
+		<td class='powderblued'>Bit 4</td>
+		<td class='powderblued'>Bit 3</td>
+		<td class='powderblued'>Bit 2</td>
+		<td class='powderblued'>Bit 1</td>
+		<td class='powderblued'>Bit 0</td>
+	</tr>
+	<tr>
+		<td>0</td>
+		<td>2</td>
+		<td>command</td>
+		<td colspan=8>Get Profibus-DP Status = 1010</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>1</td>
+		<td>param. 1</td>
+		<td colspan=8>Slot 번호 = 1 ~ 3</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>1</td>
+		<td>param. 2</td>
+		<td colspan=8>상태  = 1</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td>1</td>
+		<td>Global Bits <br> (Profibus Master)</td>
+		<td class='grayed'></td>
+		<td class='grayed'></td>
+		<td>TimeOut</td>
+		<td>Host 준비 안됨</td>
+		<td>Fatal Error</td>
+		<td>Not Exchange Error</td>
+		<td>Auto Clear Error</td>
+		<td>Control Error</td>
+	</tr>
+	<tr>
+		<td>5</td>
+		<td>1</td>
+		<td>마스터 상태</td>
+		<td colspan=8>0x00 = Offline, <br> 0x40 = Stop, <br> 0x80 = Clear, <br> 0xC0 = Operate</td>
+	</tr>
+	<tr>
+		<td>6</td>
+		<td>1</td>
+		<td>Reserved</td>
+		<td colspan=8></td>
+	</tr>
+	<tr>
+		<td>7</td>
+		<td>1</td>
+		<td>Reserved</td>
+		<td colspan=8></td>
+	</tr>
+	<tr>
+		<td>8</td>
+		<td>2</td>
+		<td>Reserved</td>
+		<td colspan=8></td>
+	</tr>
+	<tr>
+		<td>10</td>
+		<td>2</td>
+		<td>Reserved</td>
+		<td colspan=8></td>
+	</tr>
+	<tr>
+		<td>12</td>
+		<td>8</td>
+		<td>Reserved</td>
+		<td colspan=8></td>
+	</tr>
+</tbody>
+</table>
+
+	
+<br>
+
+{% hint style="info" %}
+\.      슬레이브의 통신 연결 여부를 모니터링하는 경우 "IO 교환 슬레이브 리스트"를 확인해 주십시오.
+{% endhint %}
+
+<br>
+
+
+<table class="tg">
+<thead>
+	<tr>
+		<th colspan=2>S Offset</th>
+		<th>이름</th>
+		<th colspan=8>설명 or Bit Index</th>
+	</tr>
+</thead>
+
+<tbody>
+	<tr>
+		<td class='powderblued'>시작</td>
+		<td class='powderblued'>크기</td>
+		<td class='powderblued'>릴레이</td>
+		<td class='powderblued'>Bit 7</td>
+		<td class='powderblued'>Bit 6</td>
+		<td class='powderblued'>Bit 5</td>
+		<td class='powderblued'>Bit 4</td>
+		<td class='powderblued'>Bit 3</td>
+		<td class='powderblued'>Bit 2</td>
+		<td class='powderblued'>Bit 1</td>
+		<td class='powderblued'>Bit 0</td>
+	</tr>
+	<tr>
+		<td>0</td>
+		<td>2</td>
+		<td>command</td>
+		<td colspan=8>Get Profibus-DP Status = 1010</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>1</td>
+		<td>param. 1</td>
+		<td colspan=8>Slot 번호 = 1 ~ 3</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>1</td>
+		<td>param. 2</td>
+		<td colspan=8>연결된 슬레이브 리스트 = 2</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td rowspan=16>16</td>
+		<td rowspan=16>슬레이브 리스트</td>
+		<td>Node 7</td>
+		<td>Node 6</td>
+		<td>Node 5</td>
+		<td>Node 4</td>
+		<td>Node 3</td>
+		<td>Node 2</td>
+		<td>Node 1</td>
+		<td>Node 0</td>
+	</tr>
+	<tr>
+		<td>5</td>
+		<td>Node 15</td>
+		<td>Node 14</td>
+		<td>Node 13</td>
+		<td>Node 12</td>
+		<td>Node 11</td>
+		<td>Node 10</td>
+		<td>Node 9</td>
+		<td>Node 8</td>
+	</tr>
+	<tr>
+		<td>6</td>
+		<td>Node 23</td>
+		<td>Node 22</td>
+		<td>Node 21</td>
+		<td>Node 20</td>
+		<td>Node 19</td>
+		<td>Node 18</td>
+		<td>Node 17</td>
+		<td>Node 16</td>
+	</tr>
+	<tr>
+		<td>7</td>
+		<td>Node 31</td>
+		<td>Node 30</td>
+		<td>Node 29</td>
+		<td>Node 28</td>
+		<td>Node 27</td>
+		<td>Node 26</td>
+		<td>Node 25</td>
+		<td>Node 24</td>
+	</tr>
+	<tr>
+		<td>8</td>
+		<td>Node 39</td>
+		<td>Node 38</td>
+		<td>Node 37</td>
+		<td>Node 36</td>
+		<td>Node 35</td>
+		<td>Node 34</td>
+		<td>Node 33</td>
+		<td>Node 32</td>
+	</tr>
+	<tr>
+		<td>9</td>
+		<td>Node 47</td>
+		<td>Node 46</td>
+		<td>Node 45</td>
+		<td>Node 44</td>
+		<td>Node 43</td>
+		<td>Node 42</td>
+		<td>Node 41</td>
+		<td>Node 40</td>
+	</tr>
+	<tr>
+		<td>10</td>
+		<td>Node 55</td>
+		<td>Node 54</td>
+		<td>Node 53</td>
+		<td>Node 52</td>
+		<td>Node 51</td>
+		<td>Node 50</td>
+		<td>Node 49</td>
+		<td>Node 48</td>
+	</tr>
+	<tr>
+		<td>11</td>
+		<td>Node 63</td>
+		<td>Node 62</td>
+		<td>Node 61</td>
+		<td>Node 60</td>
+		<td>Node 59</td>
+		<td>Node 58</td>
+		<td>Node 57</td>
+		<td>Node 56</td>
+	</tr>
+	<tr>
+		<td>12</td>
+		<td>Node 71</td>
+		<td>Node 70</td>
+		<td>Node 69</td>
+		<td>Node 68</td>
+		<td>Node 67</td>
+		<td>Node 66</td>
+		<td>Node 65</td>
+		<td>Node 64</td>
+	</tr>
+	<tr>
+		<td>13</td>
+		<td>Node 79</td>
+		<td>Node 78</td>
+		<td>Node 77</td>
+		<td>Node 76</td>
+		<td>Node 75</td>
+		<td>Node 74</td>
+		<td>Node 73</td>
+		<td>Node 72</td>
+	</tr>
+	<tr>
+		<td>14</td>
+		<td>Node 87</td>
+		<td>Node 86</td>
+		<td>Node 85</td>
+		<td>Node 84</td>
+		<td>Node 83</td>
+		<td>Node 82</td>
+		<td>Node 81</td>
+		<td>Node 80</td>
+	</tr>
+	<tr>
+		<td>15</td>
+		<td>Node 95</td>
+		<td>Node 94</td>
+		<td>Node 93</td>
+		<td>Node 92</td>
+		<td>Node 91</td>
+		<td>Node 90</td>
+		<td>Node 89</td>
+		<td>Node 88</td>
+	</tr>
+	<tr>
+		<td>16</td>
+		<td>Node 103</td>
+		<td>Node 102</td>
+		<td>Node 101</td>
+		<td>Node 100</td>
+		<td>Node 99</td>
+		<td>Node 98</td>
+		<td>Node 97</td>
+		<td>Node 96</td>
+	</tr>
+	<tr>
+		<td>17</td>
+		<td>Node 111</td>
+		<td>Node 110</td>
+		<td>Node 109</td>
+		<td>Node 108</td>
+		<td>Node 107</td>
+		<td>Node 106</td>
+		<td>Node 105</td>
+		<td>Node 104</td>
+	</tr>
+	<tr>
+		<td>18</td>
+		<td>Node 119</td>
+		<td>Node 118</td>
+		<td>Node 117</td>
+		<td>Node 116</td>
+		<td>Node 115</td>
+		<td>Node 114</td>
+		<td>Node 113</td>
+		<td>Node 112</td>
+	</tr>
+	<tr>
+		<td>19</td>
+		<td>Node 127</td>
+		<td>Node 126</td>
+		<td>Node 125</td>
+		<td>Node 124</td>
+		<td>Node 123</td>
+		<td>Node 122</td>
+		<td>Node 121</td>
+		<td>Node 120</td>
+	</tr>
+</tbody>
+</table>
+
+
+<br>
+
+<table class="tg">
+<thead>
+	<tr>
+		<th colspan=2>S Offset</th>
+		<th>이름</th>
+		<th colspan=8>설명 or Bit Index</th>
+	</tr>
+</thead>
+
+<tbody>
+	<tr>
+		<td class='powderblued'>시작</td>
+		<td class='powderblued'>크기</td>
+		<td class='powderblued'>릴레이</td>
+		<td class='powderblued'>Bit 7</td>
+		<td class='powderblued'>Bit 6</td>
+		<td class='powderblued'>Bit 5</td>
+		<td class='powderblued'>Bit 4</td>
+		<td class='powderblued'>Bit 3</td>
+		<td class='powderblued'>Bit 2</td>
+		<td class='powderblued'>Bit 1</td>
+		<td class='powderblued'>Bit 0</td>
+	</tr>
+	<tr>
+		<td>0</td>
+		<td>2</td>
+		<td>command</td>
+		<td colspan=8>Get Profibus-DP Status = 1010</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>1</td>
+		<td>param. 1</td>
+		<td colspan=8>Slot 번호 = 1 ~ 3</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>1</td>
+		<td>param. 2</td>
+		<td colspan=8>IO 교환 슬레이브 리스트 = 3</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td rowspan=16>16</td>
+		<td rowspan=16>슬레이브 리스트</td>
+		<td>Node 7</td>
+		<td>Node 6</td>
+		<td>Node 5</td>
+		<td>Node 4</td>
+		<td>Node 3</td>
+		<td>Node 2</td>
+		<td>Node 1</td>
+		<td>Node 0</td>
+	</tr>
+	<tr>
+		<td>5</td>
+		<td>Node 15</td>
+		<td>Node 14</td>
+		<td>Node 13</td>
+		<td>Node 12</td>
+		<td>Node 11</td>
+		<td>Node 10</td>
+		<td>Node 9</td>
+		<td>Node 8</td>
+	</tr>
+	<tr>
+		<td>6</td>
+		<td>Node 23</td>
+		<td>Node 22</td>
+		<td>Node 21</td>
+		<td>Node 20</td>
+		<td>Node 19</td>
+		<td>Node 18</td>
+		<td>Node 17</td>
+		<td>Node 16</td>
+	</tr>
+	<tr>
+		<td>7</td>
+		<td>Node 31</td>
+		<td>Node 30</td>
+		<td>Node 29</td>
+		<td>Node 28</td>
+		<td>Node 27</td>
+		<td>Node 26</td>
+		<td>Node 25</td>
+		<td>Node 24</td>
+	</tr>
+	<tr>
+		<td>8</td>
+		<td>Node 39</td>
+		<td>Node 38</td>
+		<td>Node 37</td>
+		<td>Node 36</td>
+		<td>Node 35</td>
+		<td>Node 34</td>
+		<td>Node 33</td>
+		<td>Node 32</td>
+	</tr>
+	<tr>
+		<td>9</td>
+		<td>Node 47</td>
+		<td>Node 46</td>
+		<td>Node 45</td>
+		<td>Node 44</td>
+		<td>Node 43</td>
+		<td>Node 42</td>
+		<td>Node 41</td>
+		<td>Node 40</td>
+	</tr>
+	<tr>
+		<td>10</td>
+		<td>Node 55</td>
+		<td>Node 54</td>
+		<td>Node 53</td>
+		<td>Node 52</td>
+		<td>Node 51</td>
+		<td>Node 50</td>
+		<td>Node 49</td>
+		<td>Node 48</td>
+	</tr>
+	<tr>
+		<td>11</td>
+		<td>Node 63</td>
+		<td>Node 62</td>
+		<td>Node 61</td>
+		<td>Node 60</td>
+		<td>Node 59</td>
+		<td>Node 58</td>
+		<td>Node 57</td>
+		<td>Node 56</td>
+	</tr>
+	<tr>
+		<td>12</td>
+		<td>Node 71</td>
+		<td>Node 70</td>
+		<td>Node 69</td>
+		<td>Node 68</td>
+		<td>Node 67</td>
+		<td>Node 66</td>
+		<td>Node 65</td>
+		<td>Node 64</td>
+	</tr>
+	<tr>
+		<td>13</td>
+		<td>Node 79</td>
+		<td>Node 78</td>
+		<td>Node 77</td>
+		<td>Node 76</td>
+		<td>Node 75</td>
+		<td>Node 74</td>
+		<td>Node 73</td>
+		<td>Node 72</td>
+	</tr>
+	<tr>
+		<td>14</td>
+		<td>Node 87</td>
+		<td>Node 86</td>
+		<td>Node 85</td>
+		<td>Node 84</td>
+		<td>Node 83</td>
+		<td>Node 82</td>
+		<td>Node 81</td>
+		<td>Node 80</td>
+	</tr>
+	<tr>
+		<td>15</td>
+		<td>Node 95</td>
+		<td>Node 94</td>
+		<td>Node 93</td>
+		<td>Node 92</td>
+		<td>Node 91</td>
+		<td>Node 90</td>
+		<td>Node 89</td>
+		<td>Node 88</td>
+	</tr>
+	<tr>
+		<td>16</td>
+		<td>Node 103</td>
+		<td>Node 102</td>
+		<td>Node 101</td>
+		<td>Node 100</td>
+		<td>Node 99</td>
+		<td>Node 98</td>
+		<td>Node 97</td>
+		<td>Node 96</td>
+	</tr>
+	<tr>
+		<td>17</td>
+		<td>Node 111</td>
+		<td>Node 110</td>
+		<td>Node 109</td>
+		<td>Node 108</td>
+		<td>Node 107</td>
+		<td>Node 106</td>
+		<td>Node 105</td>
+		<td>Node 104</td>
+	</tr>
+	<tr>
+		<td>18</td>
+		<td>Node 119</td>
+		<td>Node 118</td>
+		<td>Node 117</td>
+		<td>Node 116</td>
+		<td>Node 115</td>
+		<td>Node 114</td>
+		<td>Node 113</td>
+		<td>Node 112</td>
+	</tr>
+	<tr>
+		<td>19</td>
+		<td>Node 127</td>
+		<td>Node 126</td>
+		<td>Node 125</td>
+		<td>Node 124</td>
+		<td>Node 123</td>
+		<td>Node 122</td>
+		<td>Node 121</td>
+		<td>Node 120</td>
+	</tr>
+</tbody>
+</table>
+
+
+<br>
+
+<table class="tg">
+<thead>
+	<tr>
+		<th colspan=2>S Offset</th>
+		<th>이름</th>
+		<th colspan=8>설명 or Bit Index</th>
+	</tr>
+</thead>
+
+<tbody>
+	<tr>
+		<td class='powderblued'>시작</td>
+		<td class='powderblued'>크기</td>
+		<td class='powderblued'>릴레이</td>
+		<td class='powderblued'>Bit 7</td>
+		<td class='powderblued'>Bit 6</td>
+		<td class='powderblued'>Bit 5</td>
+		<td class='powderblued'>Bit 4</td>
+		<td class='powderblued'>Bit 3</td>
+		<td class='powderblued'>Bit 2</td>
+		<td class='powderblued'>Bit 1</td>
+		<td class='powderblued'>Bit 0</td>
+	</tr>
+	<tr>
+		<td>0</td>
+		<td>2</td>
+		<td>command</td>
+		<td colspan=8>Get Profibus-DP Status = 1010</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>1</td>
+		<td>param. 1</td>
+		<td colspan=8>Slot 번호 = 1 ~ 3</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>1</td>
+		<td>param. 2</td>
+		<td colspan=8>진단 슬레이브 리스트 = 4</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td rowspan=16>16</td>
+		<td rowspan=16>슬레이브 리스트</td>
+		<td>Node 7</td>
+		<td>Node 6</td>
+		<td>Node 5</td>
+		<td>Node 4</td>
+		<td>Node 3</td>
+		<td>Node 2</td>
+		<td>Node 1</td>
+		<td>Node 0</td>
+	</tr>
+	<tr>
+		<td>5</td>
+		<td>Node 15</td>
+		<td>Node 14</td>
+		<td>Node 13</td>
+		<td>Node 12</td>
+		<td>Node 11</td>
+		<td>Node 10</td>
+		<td>Node 9</td>
+		<td>Node 8</td>
+	</tr>
+	<tr>
+		<td>6</td>
+		<td>Node 23</td>
+		<td>Node 22</td>
+		<td>Node 21</td>
+		<td>Node 20</td>
+		<td>Node 19</td>
+		<td>Node 18</td>
+		<td>Node 17</td>
+		<td>Node 16</td>
+	</tr>
+	<tr>
+		<td>7</td>
+		<td>Node 31</td>
+		<td>Node 30</td>
+		<td>Node 29</td>
+		<td>Node 28</td>
+		<td>Node 27</td>
+		<td>Node 26</td>
+		<td>Node 25</td>
+		<td>Node 24</td>
+	</tr>
+	<tr>
+		<td>8</td>
+		<td>Node 39</td>
+		<td>Node 38</td>
+		<td>Node 37</td>
+		<td>Node 36</td>
+		<td>Node 35</td>
+		<td>Node 34</td>
+		<td>Node 33</td>
+		<td>Node 32</td>
+	</tr>
+	<tr>
+		<td>9</td>
+		<td>Node 47</td>
+		<td>Node 46</td>
+		<td>Node 45</td>
+		<td>Node 44</td>
+		<td>Node 43</td>
+		<td>Node 42</td>
+		<td>Node 41</td>
+		<td>Node 40</td>
+	</tr>
+	<tr>
+		<td>10</td>
+		<td>Node 55</td>
+		<td>Node 54</td>
+		<td>Node 53</td>
+		<td>Node 52</td>
+		<td>Node 51</td>
+		<td>Node 50</td>
+		<td>Node 49</td>
+		<td>Node 48</td>
+	</tr>
+	<tr>
+		<td>11</td>
+		<td>Node 63</td>
+		<td>Node 62</td>
+		<td>Node 61</td>
+		<td>Node 60</td>
+		<td>Node 59</td>
+		<td>Node 58</td>
+		<td>Node 57</td>
+		<td>Node 56</td>
+	</tr>
+	<tr>
+		<td>12</td>
+		<td>Node 71</td>
+		<td>Node 70</td>
+		<td>Node 69</td>
+		<td>Node 68</td>
+		<td>Node 67</td>
+		<td>Node 66</td>
+		<td>Node 65</td>
+		<td>Node 64</td>
+	</tr>
+	<tr>
+		<td>13</td>
+		<td>Node 79</td>
+		<td>Node 78</td>
+		<td>Node 77</td>
+		<td>Node 76</td>
+		<td>Node 75</td>
+		<td>Node 74</td>
+		<td>Node 73</td>
+		<td>Node 72</td>
+	</tr>
+	<tr>
+		<td>14</td>
+		<td>Node 87</td>
+		<td>Node 86</td>
+		<td>Node 85</td>
+		<td>Node 84</td>
+		<td>Node 83</td>
+		<td>Node 82</td>
+		<td>Node 81</td>
+		<td>Node 80</td>
+	</tr>
+	<tr>
+		<td>15</td>
+		<td>Node 95</td>
+		<td>Node 94</td>
+		<td>Node 93</td>
+		<td>Node 92</td>
+		<td>Node 91</td>
+		<td>Node 90</td>
+		<td>Node 89</td>
+		<td>Node 88</td>
+	</tr>
+	<tr>
+		<td>16</td>
+		<td>Node 103</td>
+		<td>Node 102</td>
+		<td>Node 101</td>
+		<td>Node 100</td>
+		<td>Node 99</td>
+		<td>Node 98</td>
+		<td>Node 97</td>
+		<td>Node 96</td>
+	</tr>
+	<tr>
+		<td>17</td>
+		<td>Node 111</td>
+		<td>Node 110</td>
+		<td>Node 109</td>
+		<td>Node 108</td>
+		<td>Node 107</td>
+		<td>Node 106</td>
+		<td>Node 105</td>
+		<td>Node 104</td>
+	</tr>
+	<tr>
+		<td>18</td>
+		<td>Node 119</td>
+		<td>Node 118</td>
+		<td>Node 117</td>
+		<td>Node 116</td>
+		<td>Node 115</td>
+		<td>Node 114</td>
+		<td>Node 113</td>
+		<td>Node 112</td>
+	</tr>
+	<tr>
+		<td>19</td>
+		<td>Node 127</td>
+		<td>Node 126</td>
+		<td>Node 125</td>
+		<td>Node 124</td>
+		<td>Node 123</td>
+		<td>Node 122</td>
+		<td>Node 121</td>
+		<td>Node 120</td>
+	</tr>
+</tbody>
+</table>
+
+
+<br>
+
+<table class="tg">
+<thead>
+	<tr>
+		<th colspan=2>S Offset</th>
+		<th>이름</th>
+		<th colspan=8>설명 or Bit Index</th>
+	</tr>
+</thead>
+
+<tbody>
+	<tr>
+		<td class='powderblued'>시작</td>
+		<td class='powderblued'>크기</td>
+		<td class='powderblued'>릴레이</td>
+		<td class='powderblued'>Bit 7</td>
+		<td class='powderblued'>Bit 6</td>
+		<td class='powderblued'>Bit 5</td>
+		<td class='powderblued'>Bit 4</td>
+		<td class='powderblued'>Bit 3</td>
+		<td class='powderblued'>Bit 2</td>
+		<td class='powderblued'>Bit 1</td>
+		<td class='powderblued'>Bit 0</td>
+	</tr>
+	<tr>
+		<td>0</td>
+		<td>2</td>
+		<td>command</td>
+		<td colspan=8>Get Profibus-DP Status = 1010</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>1</td>
+		<td>param. 1</td>
+		<td colspan=8>Slot 번호 = 1 ~ 3</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>1</td>
+		<td>param. 2</td>
+		<td colspan=8> 연결된 슬레이브 리스트 = 5</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td rowspan=16>16</td>
+		<td rowspan=16>슬레이브 리스트</td>
+		<td>Node 7</td>
+		<td>Node 6</td>
+		<td>Node 5</td>
+		<td>Node 4</td>
+		<td>Node 3</td>
+		<td>Node 2</td>
+		<td>Node 1</td>
+		<td>Node 0</td>
+	</tr>
+	<tr>
+		<td>5</td>
+		<td>Node 15</td>
+		<td>Node 14</td>
+		<td>Node 13</td>
+		<td>Node 12</td>
+		<td>Node 11</td>
+		<td>Node 10</td>
+		<td>Node 9</td>
+		<td>Node 8</td>
+	</tr>
+	<tr>
+		<td>6</td>
+		<td>Node 23</td>
+		<td>Node 22</td>
+		<td>Node 21</td>
+		<td>Node 20</td>
+		<td>Node 19</td>
+		<td>Node 18</td>
+		<td>Node 17</td>
+		<td>Node 16</td>
+	</tr>
+	<tr>
+		<td>7</td>
+		<td>Node 31</td>
+		<td>Node 30</td>
+		<td>Node 29</td>
+		<td>Node 28</td>
+		<td>Node 27</td>
+		<td>Node 26</td>
+		<td>Node 25</td>
+		<td>Node 24</td>
+	</tr>
+	<tr>
+		<td>8</td>
+		<td>Node 39</td>
+		<td>Node 38</td>
+		<td>Node 37</td>
+		<td>Node 36</td>
+		<td>Node 35</td>
+		<td>Node 34</td>
+		<td>Node 33</td>
+		<td>Node 32</td>
+	</tr>
+	<tr>
+		<td>9</td>
+		<td>Node 47</td>
+		<td>Node 46</td>
+		<td>Node 45</td>
+		<td>Node 44</td>
+		<td>Node 43</td>
+		<td>Node 42</td>
+		<td>Node 41</td>
+		<td>Node 40</td>
+	</tr>
+	<tr>
+		<td>10</td>
+		<td>Node 55</td>
+		<td>Node 54</td>
+		<td>Node 53</td>
+		<td>Node 52</td>
+		<td>Node 51</td>
+		<td>Node 50</td>
+		<td>Node 49</td>
+		<td>Node 48</td>
+	</tr>
+	<tr>
+		<td>11</td>
+		<td>Node 63</td>
+		<td>Node 62</td>
+		<td>Node 61</td>
+		<td>Node 60</td>
+		<td>Node 59</td>
+		<td>Node 58</td>
+		<td>Node 57</td>
+		<td>Node 56</td>
+	</tr>
+	<tr>
+		<td>12</td>
+		<td>Node 71</td>
+		<td>Node 70</td>
+		<td>Node 69</td>
+		<td>Node 68</td>
+		<td>Node 67</td>
+		<td>Node 66</td>
+		<td>Node 65</td>
+		<td>Node 64</td>
+	</tr>
+	<tr>
+		<td>13</td>
+		<td>Node 79</td>
+		<td>Node 78</td>
+		<td>Node 77</td>
+		<td>Node 76</td>
+		<td>Node 75</td>
+		<td>Node 74</td>
+		<td>Node 73</td>
+		<td>Node 72</td>
+	</tr>
+	<tr>
+		<td>14</td>
+		<td>Node 87</td>
+		<td>Node 86</td>
+		<td>Node 85</td>
+		<td>Node 84</td>
+		<td>Node 83</td>
+		<td>Node 82</td>
+		<td>Node 81</td>
+		<td>Node 80</td>
+	</tr>
+	<tr>
+		<td>15</td>
+		<td>Node 95</td>
+		<td>Node 94</td>
+		<td>Node 93</td>
+		<td>Node 92</td>
+		<td>Node 91</td>
+		<td>Node 90</td>
+		<td>Node 89</td>
+		<td>Node 88</td>
+	</tr>
+	<tr>
+		<td>16</td>
+		<td>Node 103</td>
+		<td>Node 102</td>
+		<td>Node 101</td>
+		<td>Node 100</td>
+		<td>Node 99</td>
+		<td>Node 98</td>
+		<td>Node 97</td>
+		<td>Node 96</td>
+	</tr>
+	<tr>
+		<td>17</td>
+		<td>Node 111</td>
+		<td>Node 110</td>
+		<td>Node 109</td>
+		<td>Node 108</td>
+		<td>Node 107</td>
+		<td>Node 106</td>
+		<td>Node 105</td>
+		<td>Node 104</td>
+	</tr>
+	<tr>
+		<td>18</td>
+		<td>Node 119</td>
+		<td>Node 118</td>
+		<td>Node 117</td>
+		<td>Node 116</td>
+		<td>Node 115</td>
+		<td>Node 114</td>
+		<td>Node 113</td>
+		<td>Node 112</td>
+	</tr>
+	<tr>
+		<td>19</td>
+		<td>Node 127</td>
+		<td>Node 126</td>
+		<td>Node 125</td>
+		<td>Node 124</td>
+		<td>Node 123</td>
+		<td>Node 122</td>
+		<td>Node 121</td>
+		<td>Node 120</td>
+	</tr>
+</tbody>
+</table>
+
+
+<br>
+
+<table class="tg">
+<thead>
+	<tr>
+		<th colspan=2>S Offset</th>
+		<th>이름</th>
+		<th colspan=8>설명 or Bit Index</th>
+	</tr>
+</thead>
+
+<tbody>
+	<tr>
+		<td class='powderblued'>시작</td>
+		<td class='powderblued'>크기</td>
+		<td class='powderblued'>릴레이</td>
+		<td class='powderblued'>Bit 7</td>
+		<td class='powderblued'>Bit 6</td>
+		<td class='powderblued'>Bit 5</td>
+		<td class='powderblued'>Bit 4</td>
+		<td class='powderblued'>Bit 3</td>
+		<td class='powderblued'>Bit 2</td>
+		<td class='powderblued'>Bit 1</td>
+		<td class='powderblued'>Bit 0</td>
+	</tr>
+	<tr>
+		<td>0</td>
+		<td>2</td>
+		<td>command</td>
+		<td colspan=8>Get Profibus-DP Status = 1010</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>1</td>
+		<td>param. 1</td>
+		<td colspan=8>Slot 번호 = 1 ~ 3</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>1</td>
+		<td>param. 2</td>
+		<td colspan=8>IO 교환 슬레이브 리스트 = 6</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td rowspan=16>16</td>
+		<td rowspan=16>슬레이브 리스트</td>
+		<td>Node 7</td>
+		<td>Node 6</td>
+		<td>Node 5</td>
+		<td>Node 4</td>
+		<td>Node 3</td>
+		<td>Node 2</td>
+		<td>Node 1</td>
+		<td>Node 0</td>
+	</tr>
+	<tr>
+		<td>5</td>
+		<td>Node 15</td>
+		<td>Node 14</td>
+		<td>Node 13</td>
+		<td>Node 12</td>
+		<td>Node 11</td>
+		<td>Node 10</td>
+		<td>Node 9</td>
+		<td>Node 8</td>
+	</tr>
+	<tr>
+		<td>6</td>
+		<td>Node 23</td>
+		<td>Node 22</td>
+		<td>Node 21</td>
+		<td>Node 20</td>
+		<td>Node 19</td>
+		<td>Node 18</td>
+		<td>Node 17</td>
+		<td>Node 16</td>
+	</tr>
+	<tr>
+		<td>7</td>
+		<td>Node 31</td>
+		<td>Node 30</td>
+		<td>Node 29</td>
+		<td>Node 28</td>
+		<td>Node 27</td>
+		<td>Node 26</td>
+		<td>Node 25</td>
+		<td>Node 24</td>
+	</tr>
+	<tr>
+		<td>8</td>
+		<td>Node 39</td>
+		<td>Node 38</td>
+		<td>Node 37</td>
+		<td>Node 36</td>
+		<td>Node 35</td>
+		<td>Node 34</td>
+		<td>Node 33</td>
+		<td>Node 32</td>
+	</tr>
+	<tr>
+		<td>9</td>
+		<td>Node 47</td>
+		<td>Node 46</td>
+		<td>Node 45</td>
+		<td>Node 44</td>
+		<td>Node 43</td>
+		<td>Node 42</td>
+		<td>Node 41</td>
+		<td>Node 40</td>
+	</tr>
+	<tr>
+		<td>10</td>
+		<td>Node 55</td>
+		<td>Node 54</td>
+		<td>Node 53</td>
+		<td>Node 52</td>
+		<td>Node 51</td>
+		<td>Node 50</td>
+		<td>Node 49</td>
+		<td>Node 48</td>
+	</tr>
+	<tr>
+		<td>11</td>
+		<td>Node 63</td>
+		<td>Node 62</td>
+		<td>Node 61</td>
+		<td>Node 60</td>
+		<td>Node 59</td>
+		<td>Node 58</td>
+		<td>Node 57</td>
+		<td>Node 56</td>
+	</tr>
+	<tr>
+		<td>12</td>
+		<td>Node 71</td>
+		<td>Node 70</td>
+		<td>Node 69</td>
+		<td>Node 68</td>
+		<td>Node 67</td>
+		<td>Node 66</td>
+		<td>Node 65</td>
+		<td>Node 64</td>
+	</tr>
+	<tr>
+		<td>13</td>
+		<td>Node 79</td>
+		<td>Node 78</td>
+		<td>Node 77</td>
+		<td>Node 76</td>
+		<td>Node 75</td>
+		<td>Node 74</td>
+		<td>Node 73</td>
+		<td>Node 72</td>
+	</tr>
+	<tr>
+		<td>14</td>
+		<td>Node 87</td>
+		<td>Node 86</td>
+		<td>Node 85</td>
+		<td>Node 84</td>
+		<td>Node 83</td>
+		<td>Node 82</td>
+		<td>Node 81</td>
+		<td>Node 80</td>
+	</tr>
+	<tr>
+		<td>15</td>
+		<td>Node 95</td>
+		<td>Node 94</td>
+		<td>Node 93</td>
+		<td>Node 92</td>
+		<td>Node 91</td>
+		<td>Node 90</td>
+		<td>Node 89</td>
+		<td>Node 88</td>
+	</tr>
+	<tr>
+		<td>16</td>
+		<td>Node 103</td>
+		<td>Node 102</td>
+		<td>Node 101</td>
+		<td>Node 100</td>
+		<td>Node 99</td>
+		<td>Node 98</td>
+		<td>Node 97</td>
+		<td>Node 96</td>
+	</tr>
+	<tr>
+		<td>17</td>
+		<td>Node 111</td>
+		<td>Node 110</td>
+		<td>Node 109</td>
+		<td>Node 108</td>
+		<td>Node 107</td>
+		<td>Node 106</td>
+		<td>Node 105</td>
+		<td>Node 104</td>
+	</tr>
+	<tr>
+		<td>18</td>
+		<td>Node 119</td>
+		<td>Node 118</td>
+		<td>Node 117</td>
+		<td>Node 116</td>
+		<td>Node 115</td>
+		<td>Node 114</td>
+		<td>Node 113</td>
+		<td>Node 112</td>
+	</tr>
+	<tr>
+		<td>19</td>
+		<td>Node 127</td>
+		<td>Node 126</td>
+		<td>Node 125</td>
+		<td>Node 124</td>
+		<td>Node 123</td>
+		<td>Node 122</td>
+		<td>Node 121</td>
+		<td>Node 120</td>
+	</tr>
+</tbody>
+</table>
+
+
+<br>
+
+<table class="tg">
+<thead>
+	<tr>
+		<th colspan=2>S Offset</th>
+		<th>이름</th>
+		<th colspan=8>설명 or Bit Index</th>
+	</tr>
+</thead>
+
+<tbody>
+	<tr>
+		<td class='powderblued'>시작</td>
+		<td class='powderblued'>크기</td>
+		<td class='powderblued'>릴레이</td>
+		<td class='powderblued'>Bit 7</td>
+		<td class='powderblued'>Bit 6</td>
+		<td class='powderblued'>Bit 5</td>
+		<td class='powderblued'>Bit 4</td>
+		<td class='powderblued'>Bit 3</td>
+		<td class='powderblued'>Bit 2</td>
+		<td class='powderblued'>Bit 1</td>
+		<td class='powderblued'>Bit 0</td>
+	</tr>
+	<tr>
+		<td>0</td>
+		<td>2</td>
+		<td>command</td>
+		<td colspan=8>Get Profibus-DP Status = 1010</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>1</td>
+		<td>param. 1</td>
+		<td colspan=8>Slot 번호 = 1 ~ 3</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>1</td>
+		<td>param. 2</td>
+		<td colspan=8>진단 슬레이브 리스트 = 7</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td rowspan=16>16</td>
+		<td rowspan=16>슬레이브 리스트</td>
+		<td>Node 7</td>
+		<td>Node 6</td>
+		<td>Node 5</td>
+		<td>Node 4</td>
+		<td>Node 3</td>
+		<td>Node 2</td>
+		<td>Node 1</td>
+		<td>Node 0</td>
+	</tr>
+	<tr>
+		<td>5</td>
+		<td>Node 15</td>
+		<td>Node 14</td>
+		<td>Node 13</td>
+		<td>Node 12</td>
+		<td>Node 11</td>
+		<td>Node 10</td>
+		<td>Node 9</td>
+		<td>Node 8</td>
+	</tr>
+	<tr>
+		<td>6</td>
+		<td>Node 23</td>
+		<td>Node 22</td>
+		<td>Node 21</td>
+		<td>Node 20</td>
+		<td>Node 19</td>
+		<td>Node 18</td>
+		<td>Node 17</td>
+		<td>Node 16</td>
+	</tr>
+	<tr>
+		<td>7</td>
+		<td>Node 31</td>
+		<td>Node 30</td>
+		<td>Node 29</td>
+		<td>Node 28</td>
+		<td>Node 27</td>
+		<td>Node 26</td>
+		<td>Node 25</td>
+		<td>Node 24</td>
+	</tr>
+	<tr>
+		<td>8</td>
+		<td>Node 39</td>
+		<td>Node 38</td>
+		<td>Node 37</td>
+		<td>Node 36</td>
+		<td>Node 35</td>
+		<td>Node 34</td>
+		<td>Node 33</td>
+		<td>Node 32</td>
+	</tr>
+	<tr>
+		<td>9</td>
+		<td>Node 47</td>
+		<td>Node 46</td>
+		<td>Node 45</td>
+		<td>Node 44</td>
+		<td>Node 43</td>
+		<td>Node 42</td>
+		<td>Node 41</td>
+		<td>Node 40</td>
+	</tr>
+	<tr>
+		<td>10</td>
+		<td>Node 55</td>
+		<td>Node 54</td>
+		<td>Node 53</td>
+		<td>Node 52</td>
+		<td>Node 51</td>
+		<td>Node 50</td>
+		<td>Node 49</td>
+		<td>Node 48</td>
+	</tr>
+	<tr>
+		<td>11</td>
+		<td>Node 63</td>
+		<td>Node 62</td>
+		<td>Node 61</td>
+		<td>Node 60</td>
+		<td>Node 59</td>
+		<td>Node 58</td>
+		<td>Node 57</td>
+		<td>Node 56</td>
+	</tr>
+	<tr>
+		<td>12</td>
+		<td>Node 71</td>
+		<td>Node 70</td>
+		<td>Node 69</td>
+		<td>Node 68</td>
+		<td>Node 67</td>
+		<td>Node 66</td>
+		<td>Node 65</td>
+		<td>Node 64</td>
+	</tr>
+	<tr>
+		<td>13</td>
+		<td>Node 79</td>
+		<td>Node 78</td>
+		<td>Node 77</td>
+		<td>Node 76</td>
+		<td>Node 75</td>
+		<td>Node 74</td>
+		<td>Node 73</td>
+		<td>Node 72</td>
+	</tr>
+	<tr>
+		<td>14</td>
+		<td>Node 87</td>
+		<td>Node 86</td>
+		<td>Node 85</td>
+		<td>Node 84</td>
+		<td>Node 83</td>
+		<td>Node 82</td>
+		<td>Node 81</td>
+		<td>Node 80</td>
+	</tr>
+	<tr>
+		<td>15</td>
+		<td>Node 95</td>
+		<td>Node 94</td>
+		<td>Node 93</td>
+		<td>Node 92</td>
+		<td>Node 91</td>
+		<td>Node 90</td>
+		<td>Node 89</td>
+		<td>Node 88</td>
+	</tr>
+	<tr>
+		<td>16</td>
+		<td>Node 103</td>
+		<td>Node 102</td>
+		<td>Node 101</td>
+		<td>Node 100</td>
+		<td>Node 99</td>
+		<td>Node 98</td>
+		<td>Node 97</td>
+		<td>Node 96</td>
+	</tr>
+	<tr>
+		<td>17</td>
+		<td>Node 111</td>
+		<td>Node 110</td>
+		<td>Node 109</td>
+		<td>Node 108</td>
+		<td>Node 107</td>
+		<td>Node 106</td>
+		<td>Node 105</td>
+		<td>Node 104</td>
+	</tr>
+	<tr>
+		<td>18</td>
+		<td>Node 119</td>
+		<td>Node 118</td>
+		<td>Node 117</td>
+		<td>Node 116</td>
+		<td>Node 115</td>
+		<td>Node 114</td>
+		<td>Node 113</td>
+		<td>Node 112</td>
+	</tr>
+	<tr>
+		<td>19</td>
+		<td>Node 127</td>
+		<td>Node 126</td>
+		<td>Node 125</td>
+		<td>Node 124</td>
+		<td>Node 123</td>
+		<td>Node 122</td>
+		<td>Node 121</td>
+		<td>Node 120</td>
+	</tr>
+</tbody>
+</table>
+
+
+<br>
+
+<table class="tg">
+<thead>
+	<tr>
+		<th colspan=2>S Offset</th>
+		<th>이름</th>
+		<th colspan=8>설명 or Bit Index</th>
+	</tr>
+</thead>
+
+<tbody>
+	<tr>
+		<td class='powderblued'>시작</td>
+		<td class='powderblued'>크기</td>
+		<td class='powderblued'>릴레이</td>
+		<td class='powderblued'>Bit 7</td>
+		<td class='powderblued'>Bit 6</td>
+		<td class='powderblued'>Bit 5</td>
+		<td class='powderblued'>Bit 4</td>
+		<td class='powderblued'>Bit 3</td>
+		<td class='powderblued'>Bit 2</td>
+		<td class='powderblued'>Bit 1</td>
+		<td class='powderblued'>Bit 0</td>
+	</tr>
+	<tr>
+		<td>0</td>
+		<td>2</td>
+		<td>command</td>
+		<td colspan=8>Get Profibus-DP Status = 1010</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>1</td>
+		<td>param. 1</td>
+		<td colspan=8>Slot 번호 = 1 ~ 3</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>1</td>
+		<td>param. 2</td>
+		<td colspan=8>Input Update 슬레이브 리스트 = 8</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td rowspan=16>16</td>
+		<td rowspan=16>슬레이브 리스트</td>
+		<td>Node 7</td>
+		<td>Node 6</td>
+		<td>Node 5</td>
+		<td>Node 4</td>
+		<td>Node 3</td>
+		<td>Node 2</td>
+		<td>Node 1</td>
+		<td>Node 0</td>
+	</tr>
+	<tr>
+		<td>5</td>
+		<td>Node 15</td>
+		<td>Node 14</td>
+		<td>Node 13</td>
+		<td>Node 12</td>
+		<td>Node 11</td>
+		<td>Node 10</td>
+		<td>Node 9</td>
+		<td>Node 8</td>
+	</tr>
+	<tr>
+		<td>6</td>
+		<td>Node 23</td>
+		<td>Node 22</td>
+		<td>Node 21</td>
+		<td>Node 20</td>
+		<td>Node 19</td>
+		<td>Node 18</td>
+		<td>Node 17</td>
+		<td>Node 16</td>
+	</tr>
+	<tr>
+		<td>7</td>
+		<td>Node 31</td>
+		<td>Node 30</td>
+		<td>Node 29</td>
+		<td>Node 28</td>
+		<td>Node 27</td>
+		<td>Node 26</td>
+		<td>Node 25</td>
+		<td>Node 24</td>
+	</tr>
+	<tr>
+		<td>8</td>
+		<td>Node 39</td>
+		<td>Node 38</td>
+		<td>Node 37</td>
+		<td>Node 36</td>
+		<td>Node 35</td>
+		<td>Node 34</td>
+		<td>Node 33</td>
+		<td>Node 32</td>
+	</tr>
+	<tr>
+		<td>9</td>
+		<td>Node 47</td>
+		<td>Node 46</td>
+		<td>Node 45</td>
+		<td>Node 44</td>
+		<td>Node 43</td>
+		<td>Node 42</td>
+		<td>Node 41</td>
+		<td>Node 40</td>
+	</tr>
+	<tr>
+		<td>10</td>
+		<td>Node 55</td>
+		<td>Node 54</td>
+		<td>Node 53</td>
+		<td>Node 52</td>
+		<td>Node 51</td>
+		<td>Node 50</td>
+		<td>Node 49</td>
+		<td>Node 48</td>
+	</tr>
+	<tr>
+		<td>11</td>
+		<td>Node 63</td>
+		<td>Node 62</td>
+		<td>Node 61</td>
+		<td>Node 60</td>
+		<td>Node 59</td>
+		<td>Node 58</td>
+		<td>Node 57</td>
+		<td>Node 56</td>
+	</tr>
+	<tr>
+		<td>12</td>
+		<td>Node 71</td>
+		<td>Node 70</td>
+		<td>Node 69</td>
+		<td>Node 68</td>
+		<td>Node 67</td>
+		<td>Node 66</td>
+		<td>Node 65</td>
+		<td>Node 64</td>
+	</tr>
+	<tr>
+		<td>13</td>
+		<td>Node 79</td>
+		<td>Node 78</td>
+		<td>Node 77</td>
+		<td>Node 76</td>
+		<td>Node 75</td>
+		<td>Node 74</td>
+		<td>Node 73</td>
+		<td>Node 72</td>
+	</tr>
+	<tr>
+		<td>14</td>
+		<td>Node 87</td>
+		<td>Node 86</td>
+		<td>Node 85</td>
+		<td>Node 84</td>
+		<td>Node 83</td>
+		<td>Node 82</td>
+		<td>Node 81</td>
+		<td>Node 80</td>
+	</tr>
+	<tr>
+		<td>15</td>
+		<td>Node 95</td>
+		<td>Node 94</td>
+		<td>Node 93</td>
+		<td>Node 92</td>
+		<td>Node 91</td>
+		<td>Node 90</td>
+		<td>Node 89</td>
+		<td>Node 88</td>
+	</tr>
+	<tr>
+		<td>16</td>
+		<td>Node 103</td>
+		<td>Node 102</td>
+		<td>Node 101</td>
+		<td>Node 100</td>
+		<td>Node 99</td>
+		<td>Node 98</td>
+		<td>Node 97</td>
+		<td>Node 96</td>
+	</tr>
+	<tr>
+		<td>17</td>
+		<td>Node 111</td>
+		<td>Node 110</td>
+		<td>Node 109</td>
+		<td>Node 108</td>
+		<td>Node 107</td>
+		<td>Node 106</td>
+		<td>Node 105</td>
+		<td>Node 104</td>
+	</tr>
+	<tr>
+		<td>18</td>
+		<td>Node 119</td>
+		<td>Node 118</td>
+		<td>Node 117</td>
+		<td>Node 116</td>
+		<td>Node 115</td>
+		<td>Node 114</td>
+		<td>Node 113</td>
+		<td>Node 112</td>
+	</tr>
+	<tr>
+		<td>19</td>
+		<td>Node 127</td>
+		<td>Node 126</td>
+		<td>Node 125</td>
+		<td>Node 124</td>
+		<td>Node 123</td>
+		<td>Node 122</td>
+		<td>Node 121</td>
+		<td>Node 120</td>
+	</tr>
+</tbody>
+</table># 3.4.14.2 S 릴레이 - DeviceNet Master 상태 릴레이
+
+<style type="text/css">
+table  {border-collapse:collapse;}
+td {border-color:gray;border-style:solid;border-width:1px;}
+.grayed {background-color:lightgray;}
+.powderblued {background-color:powderblue;}
+</style>
+
+
+<br>
+
+<table class="tg">
+<thead>
+	<tr>
+		<th colspan=2>S Offset</th>
+		<th>이름</th>
+		<th colspan=8>설명 or Bit Index</th>
+	</tr>
+</thead>
+
+<tbody>
+	<tr>
+		<td class='powderblued'>시작</td>
+		<td class='powderblued'>크기</td>
+		<td class='powderblued'>릴레이</td>
+		<td class='powderblued'>Bit 7</td>
+		<td class='powderblued'>Bit 6</td>
+		<td class='powderblued'>Bit 5</td>
+		<td class='powderblued'>Bit 4</td>
+		<td class='powderblued'>Bit 3</td>
+		<td class='powderblued'>Bit 2</td>
+		<td class='powderblued'>Bit 1</td>
+		<td class='powderblued'>Bit 0</td>
+	</tr>
+	<tr>
+		<td>0</td>
+		<td>2</td>
+		<td>command</td>
+		<td colspan=8>Get DeviceNet Status = 1012</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>1</td>
+		<td>param. 1</td>
+		<td colspan=8>Slot 번호 = 1 ~ 3</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>1</td>
+		<td>param. 2</td>
+		<td colspan=8>상태  = 1</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td>1</td>
+		<td>Global Bits <br> (Profibus Master)</td>
+		<td>중복 MAC ID 확인중</td>
+		<td>중복된 MAC ID</td>
+		<td>Host 준비 안됨</td>
+		<td>Bus Event Error</td>
+		<td>Fatal Error</td>
+		<td>Not Exchange Error</td>
+		<td>Auto Clear Error</td>
+		<td>Control Error</td>
+	</tr>
+	<tr>
+		<td>5</td>
+		<td>1</td>
+		<td>마스터 상태</td>
+		<td colspan=8>0x00 = Offline, <br> 0x40 = Stop, <br> 0x80 = Idle, <br> 0xC0 = Run</td>
+	</tr>
+	<tr>
+		<td>6</td>
+		<td>1</td>
+		<td>에러 스테이션 번호</td>
+		<td colspan=8></td>
+	</tr>
+	<tr>
+		<td>7</td>
+		<td>1</td>
+		<td>에러 코드</td>
+		<td colspan=8>DeviceNet Master Only <br> 52 = Unknown process data handshake mode, <br> 53 = Baudrate 에러, <br> 54 = MAC ID 에러, <br> 57 = 중복된 MAC ID, <br> 58 = 디바이스 없음, <br> 210 = 통신 설정 없음, <br> 212 = 통신 설정 읽기 실패, <br> 220 = User Watchdog Fail, <br> 221 = User Data 응답 없음, <br> 223 = 마스터 Stop (CAN Bus Off), <br> 226 = 해당 장치가 마스터 장치가 아님</td>
+	</tr>
+	<tr>
+		<td>8</td>
+		<td>2</td>
+		<td>Bus Data 송수신 이상 횟수</td>
+		<td colspan=8></td>
+	</tr>
+	<tr>
+		<td>10</td>
+		<td>2</td>
+		<td>Bus Off 에러 횟수</td>
+		<td colspan=8></td>
+	</tr>
+	<tr>
+		<td>12</td>
+		<td>4</td>
+		<td>Bus 에러 코드</td>
+		<td colspan=8></td>
+	</tr>
+	<tr>
+		<td>16</td>
+		<td>4</td>
+		<td>Reserved</td>
+		<td colspan=8></td>
+	</tr>
+</tbody>
+</table>
+
+	
+<br>
+
+{% hint style="info" %}
+\.      슬레이브의 통신 연결 여부를 모니터링하는 경우 "IO 교환 슬레이브 리스트"를 확인해 주십시오.
+{% endhint %}
+
+<br>
+
+
+<table class="tg">
+<thead>
+	<tr>
+		<th colspan=2>S Offset</th>
+		<th>이름</th>
+		<th colspan=8>설명 or Bit Index</th>
+	</tr>
+</thead>
+
+<tbody>
+	<tr>
+		<td class='powderblued'>시작</td>
+		<td class='powderblued'>크기</td>
+		<td class='powderblued'>릴레이</td>
+		<td class='powderblued'>Bit 7</td>
+		<td class='powderblued'>Bit 6</td>
+		<td class='powderblued'>Bit 5</td>
+		<td class='powderblued'>Bit 4</td>
+		<td class='powderblued'>Bit 3</td>
+		<td class='powderblued'>Bit 2</td>
+		<td class='powderblued'>Bit 1</td>
+		<td class='powderblued'>Bit 0</td>
+	</tr>
+	<tr>
+		<td>0</td>
+		<td>2</td>
+		<td>command</td>
+		<td colspan=8>Get DeviceNet Status = 1012</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>1</td>
+		<td>param. 1</td>
+		<td colspan=8>Slot 번호 = 1 ~ 3</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>1</td>
+		<td>param. 2</td>
+		<td colspan=8>활성 / 비활성 슬레이브 리스트 = 2</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td rowspan=8>8</td>
+		<td rowspan=8>활성 슬레이브 리스트</td>
+		<td>Node 7</td>
+		<td>Node 6</td>
+		<td>Node 5</td>
+		<td>Node 4</td>
+		<td>Node 3</td>
+		<td>Node 2</td>
+		<td>Node 1</td>
+		<td>Node 0</td>
+	</tr>
+	<tr>
+		<td>5</td>
+		<td>Node 15</td>
+		<td>Node 14</td>
+		<td>Node 13</td>
+		<td>Node 12</td>
+		<td>Node 11</td>
+		<td>Node 10</td>
+		<td>Node 9</td>
+		<td>Node 8</td>
+	</tr>
+	<tr>
+		<td>6</td>
+		<td>Node 23</td>
+		<td>Node 22</td>
+		<td>Node 21</td>
+		<td>Node 20</td>
+		<td>Node 19</td>
+		<td>Node 18</td>
+		<td>Node 17</td>
+		<td>Node 16</td>
+	</tr>
+	<tr>
+		<td>7</td>
+		<td>Node 31</td>
+		<td>Node 30</td>
+		<td>Node 29</td>
+		<td>Node 28</td>
+		<td>Node 27</td>
+		<td>Node 26</td>
+		<td>Node 25</td>
+		<td>Node 24</td>
+	</tr>
+	<tr>
+		<td>8</td>
+		<td>Node 39</td>
+		<td>Node 38</td>
+		<td>Node 37</td>
+		<td>Node 36</td>
+		<td>Node 35</td>
+		<td>Node 34</td>
+		<td>Node 33</td>
+		<td>Node 32</td>
+	</tr>
+	<tr>
+		<td>9</td>
+		<td>Node 47</td>
+		<td>Node 46</td>
+		<td>Node 45</td>
+		<td>Node 44</td>
+		<td>Node 43</td>
+		<td>Node 42</td>
+		<td>Node 41</td>
+		<td>Node 40</td>
+	</tr>
+	<tr>
+		<td>10</td>
+		<td>Node 55</td>
+		<td>Node 54</td>
+		<td>Node 53</td>
+		<td>Node 52</td>
+		<td>Node 51</td>
+		<td>Node 50</td>
+		<td>Node 49</td>
+		<td>Node 48</td>
+	</tr>
+	<tr>
+		<td>11</td>
+		<td>Node 63</td>
+		<td>Node 62</td>
+		<td>Node 61</td>
+		<td>Node 60</td>
+		<td>Node 59</td>
+		<td>Node 58</td>
+		<td>Node 57</td>
+		<td>Node 56</td>
+	</tr>
+	<tr>
+		<td>12</td>
+		<td rowspan=8>8</td>
+		<td rowspan=8>비활성 슬레이브 리스트</td>
+		<td>Node 7</td>
+		<td>Node 6</td>
+		<td>Node 5</td>
+		<td>Node 4</td>
+		<td>Node 3</td>
+		<td>Node 2</td>
+		<td>Node 1</td>
+		<td>Node 0</td>
+	</tr>
+	<tr>
+		<td>13</td>
+		<td>Node 15</td>
+		<td>Node 14</td>
+		<td>Node 13</td>
+		<td>Node 12</td>
+		<td>Node 11</td>
+		<td>Node 10</td>
+		<td>Node 9</td>
+		<td>Node 8</td>
+	</tr>
+	<tr>
+		<td>14</td>
+		<td>Node 23</td>
+		<td>Node 22</td>
+		<td>Node 21</td>
+		<td>Node 20</td>
+		<td>Node 19</td>
+		<td>Node 18</td>
+		<td>Node 17</td>
+		<td>Node 16</td>
+	</tr>
+	<tr>
+		<td>15</td>
+		<td>Node 31</td>
+		<td>Node 30</td>
+		<td>Node 29</td>
+		<td>Node 28</td>
+		<td>Node 27</td>
+		<td>Node 26</td>
+		<td>Node 25</td>
+		<td>Node 24</td>
+	</tr>
+	<tr>
+		<td>16</td>
+		<td>Node 39</td>
+		<td>Node 38</td>
+		<td>Node 37</td>
+		<td>Node 36</td>
+		<td>Node 35</td>
+		<td>Node 34</td>
+		<td>Node 33</td>
+		<td>Node 32</td>
+	</tr>
+	<tr>
+		<td>17</td>
+		<td>Node 47</td>
+		<td>Node 46</td>
+		<td>Node 45</td>
+		<td>Node 44</td>
+		<td>Node 43</td>
+		<td>Node 42</td>
+		<td>Node 41</td>
+		<td>Node 40</td>
+	</tr>
+	<tr>
+		<td>18</td>
+		<td>Node 55</td>
+		<td>Node 54</td>
+		<td>Node 53</td>
+		<td>Node 52</td>
+		<td>Node 51</td>
+		<td>Node 50</td>
+		<td>Node 49</td>
+		<td>Node 48</td>
+	</tr>
+	<tr>
+		<td>19</td>
+		<td>Node 63</td>
+		<td>Node 62</td>
+		<td>Node 61</td>
+		<td>Node 60</td>
+		<td>Node 59</td>
+		<td>Node 58</td>
+		<td>Node 57</td>
+		<td>Node 56</td>
+	</tr>
+</tbody>
+</table>
+
+
+<br>
+
+<table class="tg">
+<thead>
+	<tr>
+		<th colspan=2>S Offset</th>
+		<th>이름</th>
+		<th colspan=8>설명 or Bit Index</th>
+	</tr>
+</thead>
+
+<tbody>
+	<tr>
+		<td class='powderblued'>시작</td>
+		<td class='powderblued'>크기</td>
+		<td class='powderblued'>릴레이</td>
+		<td class='powderblued'>Bit 7</td>
+		<td class='powderblued'>Bit 6</td>
+		<td class='powderblued'>Bit 5</td>
+		<td class='powderblued'>Bit 4</td>
+		<td class='powderblued'>Bit 3</td>
+		<td class='powderblued'>Bit 2</td>
+		<td class='powderblued'>Bit 1</td>
+		<td class='powderblued'>Bit 0</td>
+	</tr>
+		<tr>
+		<td>0</td>
+		<td>2</td>
+		<td>command</td>
+		<td colspan=8>Get DeviceNet Status = 1012</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>1</td>
+		<td>param. 1</td>
+		<td colspan=8>Slot 번호 = 1 ~ 3</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>1</td>
+		<td>param. 2</td>
+		<td colspan=8>Explicit Message / IO 교환 슬레이브 리스트 = 3</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td rowspan=8>8</td>
+		<td rowspan=8>Explicit Message 활성 슬레이브 리스트</td>
+		<td>Node 7</td>
+		<td>Node 6</td>
+		<td>Node 5</td>
+		<td>Node 4</td>
+		<td>Node 3</td>
+		<td>Node 2</td>
+		<td>Node 1</td>
+		<td>Node 0</td>
+	</tr>
+	<tr>
+		<td>5</td>
+		<td>Node 15</td>
+		<td>Node 14</td>
+		<td>Node 13</td>
+		<td>Node 12</td>
+		<td>Node 11</td>
+		<td>Node 10</td>
+		<td>Node 9</td>
+		<td>Node 8</td>
+	</tr>
+	<tr>
+		<td>6</td>
+		<td>Node 23</td>
+		<td>Node 22</td>
+		<td>Node 21</td>
+		<td>Node 20</td>
+		<td>Node 19</td>
+		<td>Node 18</td>
+		<td>Node 17</td>
+		<td>Node 16</td>
+	</tr>
+	<tr>
+		<td>7</td>
+		<td>Node 31</td>
+		<td>Node 30</td>
+		<td>Node 29</td>
+		<td>Node 28</td>
+		<td>Node 27</td>
+		<td>Node 26</td>
+		<td>Node 25</td>
+		<td>Node 24</td>
+	</tr>
+	<tr>
+		<td>8</td>
+		<td>Node 39</td>
+		<td>Node 38</td>
+		<td>Node 37</td>
+		<td>Node 36</td>
+		<td>Node 35</td>
+		<td>Node 34</td>
+		<td>Node 33</td>
+		<td>Node 32</td>
+	</tr>
+	<tr>
+		<td>9</td>
+		<td>Node 47</td>
+		<td>Node 46</td>
+		<td>Node 45</td>
+		<td>Node 44</td>
+		<td>Node 43</td>
+		<td>Node 42</td>
+		<td>Node 41</td>
+		<td>Node 40</td>
+	</tr>
+	<tr>
+		<td>10</td>
+		<td>Node 55</td>
+		<td>Node 54</td>
+		<td>Node 53</td>
+		<td>Node 52</td>
+		<td>Node 51</td>
+		<td>Node 50</td>
+		<td>Node 49</td>
+		<td>Node 48</td>
+	</tr>
+	<tr>
+		<td>11</td>
+		<td>Node 63</td>
+		<td>Node 62</td>
+		<td>Node 61</td>
+		<td>Node 60</td>
+		<td>Node 59</td>
+		<td>Node 58</td>
+		<td>Node 57</td>
+		<td>Node 56</td>
+	</tr>
+	<tr>
+		<td>12</td>
+		<td rowspan=8>8</td>
+		<td rowspan=8>IO 교환 슬레이브 리스트</td>
+		<td>Node 7</td>
+		<td>Node 6</td>
+		<td>Node 5</td>
+		<td>Node 4</td>
+		<td>Node 3</td>
+		<td>Node 2</td>
+		<td>Node 1</td>
+		<td>Node 0</td>
+	</tr>
+	<tr>
+		<td>13</td>
+		<td>Node 15</td>
+		<td>Node 14</td>
+		<td>Node 13</td>
+		<td>Node 12</td>
+		<td>Node 11</td>
+		<td>Node 10</td>
+		<td>Node 9</td>
+		<td>Node 8</td>
+	</tr>
+	<tr>
+		<td>14</td>
+		<td>Node 23</td>
+		<td>Node 22</td>
+		<td>Node 21</td>
+		<td>Node 20</td>
+		<td>Node 19</td>
+		<td>Node 18</td>
+		<td>Node 17</td>
+		<td>Node 16</td>
+	</tr>
+	<tr>
+		<td>15</td>
+		<td>Node 31</td>
+		<td>Node 30</td>
+		<td>Node 29</td>
+		<td>Node 28</td>
+		<td>Node 27</td>
+		<td>Node 26</td>
+		<td>Node 25</td>
+		<td>Node 24</td>
+	</tr>
+	<tr>
+		<td>16</td>
+		<td>Node 39</td>
+		<td>Node 38</td>
+		<td>Node 37</td>
+		<td>Node 36</td>
+		<td>Node 35</td>
+		<td>Node 34</td>
+		<td>Node 33</td>
+		<td>Node 32</td>
+	</tr>
+	<tr>
+		<td>17</td>
+		<td>Node 47</td>
+		<td>Node 46</td>
+		<td>Node 45</td>
+		<td>Node 44</td>
+		<td>Node 43</td>
+		<td>Node 42</td>
+		<td>Node 41</td>
+		<td>Node 40</td>
+	</tr>
+	<tr>
+		<td>18</td>
+		<td>Node 55</td>
+		<td>Node 54</td>
+		<td>Node 53</td>
+		<td>Node 52</td>
+		<td>Node 51</td>
+		<td>Node 50</td>
+		<td>Node 49</td>
+		<td>Node 48</td>
+	</tr>
+	<tr>
+		<td>19</td>
+		<td>Node 63</td>
+		<td>Node 62</td>
+		<td>Node 61</td>
+		<td>Node 60</td>
+		<td>Node 59</td>
+		<td>Node 58</td>
+		<td>Node 57</td>
+		<td>Node 56</td>
+	</tr>
+</tbody>
+</table>
+
+
+<br>
+
+<table class="tg">
+<thead>
+	<tr>
+		<th colspan=2>S Offset</th>
+		<th>이름</th>
+		<th colspan=8>설명 or Bit Index</th>
+	</tr>
+</thead>
+
+<tbody>
+	<tr>
+		<td class='powderblued'>시작</td>
+		<td class='powderblued'>크기</td>
+		<td class='powderblued'>릴레이</td>
+		<td class='powderblued'>Bit 7</td>
+		<td class='powderblued'>Bit 6</td>
+		<td class='powderblued'>Bit 5</td>
+		<td class='powderblued'>Bit 4</td>
+		<td class='powderblued'>Bit 3</td>
+		<td class='powderblued'>Bit 2</td>
+		<td class='powderblued'>Bit 1</td>
+		<td class='powderblued'>Bit 0</td>
+	</tr>
+	<tr>
+		<td>0</td>
+		<td>2</td>
+		<td>command</td>
+		<td colspan=8>Get DeviceNet Status = 1012</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>1</td>
+		<td>param. 1</td>
+		<td colspan=8>Slot 번호 = 1 ~ 3</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>1</td>
+		<td>param. 2</td>
+		<td colspan=8>진단 슬레이브 리스트 = 4</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td rowspan=8>8</td>
+		<td rowspan=8>진단 슬레이브 리스트</td>
+		<td>Node 7</td>
+		<td>Node 6</td>
+		<td>Node 5</td>
+		<td>Node 4</td>
+		<td>Node 3</td>
+		<td>Node 2</td>
+		<td>Node 1</td>
+		<td>Node 0</td>
+	</tr>
+	<tr>
+		<td>5</td>
+		<td>Node 15</td>
+		<td>Node 14</td>
+		<td>Node 13</td>
+		<td>Node 12</td>
+		<td>Node 11</td>
+		<td>Node 10</td>
+		<td>Node 9</td>
+		<td>Node 8</td>
+	</tr>
+	<tr>
+		<td>6</td>
+		<td>Node 23</td>
+		<td>Node 22</td>
+		<td>Node 21</td>
+		<td>Node 20</td>
+		<td>Node 19</td>
+		<td>Node 18</td>
+		<td>Node 17</td>
+		<td>Node 16</td>
+	</tr>
+	<tr>
+		<td>7</td>
+		<td>Node 31</td>
+		<td>Node 30</td>
+		<td>Node 29</td>
+		<td>Node 28</td>
+		<td>Node 27</td>
+		<td>Node 26</td>
+		<td>Node 25</td>
+		<td>Node 24</td>
+	</tr>
+	<tr>
+		<td>8</td>
+		<td>Node 39</td>
+		<td>Node 38</td>
+		<td>Node 37</td>
+		<td>Node 36</td>
+		<td>Node 35</td>
+		<td>Node 34</td>
+		<td>Node 33</td>
+		<td>Node 32</td>
+	</tr>
+	<tr>
+		<td>9</td>
+		<td>Node 47</td>
+		<td>Node 46</td>
+		<td>Node 45</td>
+		<td>Node 44</td>
+		<td>Node 43</td>
+		<td>Node 42</td>
+		<td>Node 41</td>
+		<td>Node 40</td>
+	</tr>
+	<tr>
+		<td>10</td>
+		<td>Node 55</td>
+		<td>Node 54</td>
+		<td>Node 53</td>
+		<td>Node 52</td>
+		<td>Node 51</td>
+		<td>Node 50</td>
+		<td>Node 49</td>
+		<td>Node 48</td>
+	</tr>
+	<tr>
+		<td>11</td>
+		<td>Node 63</td>
+		<td>Node 62</td>
+		<td>Node 61</td>
+		<td>Node 60</td>
+		<td>Node 59</td>
+		<td>Node 58</td>
+		<td>Node 57</td>
+		<td>Node 56</td>
+	</tr>
+	<tr>
+		<td>12</td>
+		<td>8</td>
+		<td>Reserved</td>
+		<td colspan=8></td>
+	</tr>
+</tbody>
+</table>
+
+
+<br>
+
+<table class="tg">
+<thead>
+	<tr>
+		<th colspan=2>S Offset</th>
+		<th>이름</th>
+		<th colspan=8>설명 or Bit Index</th>
+	</tr>
+</thead>
+
+<tbody>
+	<tr>
+		<td class='powderblued'>시작</td>
+		<td class='powderblued'>크기</td>
+		<td class='powderblued'>릴레이</td>
+		<td class='powderblued'>Bit 7</td>
+		<td class='powderblued'>Bit 6</td>
+		<td class='powderblued'>Bit 5</td>
+		<td class='powderblued'>Bit 4</td>
+		<td class='powderblued'>Bit 3</td>
+		<td class='powderblued'>Bit 2</td>
+		<td class='powderblued'>Bit 1</td>
+		<td class='powderblued'>Bit 0</td>
+	</tr>
+	<tr>
+		<td>0</td>
+		<td>2</td>
+		<td>command</td>
+		<td colspan=8>Get DeviceNet Status = 1012</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>1</td>
+		<td>param. 1</td>
+		<td colspan=8>Slot 번호 = 1 ~ 3</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>1</td>
+		<td>param. 2</td>
+		<td colspan=8> 연결된 슬레이브 리스트 = 5</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td rowspan=8>8</td>
+		<td rowspan=8>슬레이브 리스트</td>
+		<td>Node 7</td>
+		<td>Node 6</td>
+		<td>Node 5</td>
+		<td>Node 4</td>
+		<td>Node 3</td>
+		<td>Node 2</td>
+		<td>Node 1</td>
+		<td>Node 0</td>
+	</tr>
+	<tr>
+		<td>5</td>
+		<td>Node 15</td>
+		<td>Node 14</td>
+		<td>Node 13</td>
+		<td>Node 12</td>
+		<td>Node 11</td>
+		<td>Node 10</td>
+		<td>Node 9</td>
+		<td>Node 8</td>
+	</tr>
+	<tr>
+		<td>6</td>
+		<td>Node 23</td>
+		<td>Node 22</td>
+		<td>Node 21</td>
+		<td>Node 20</td>
+		<td>Node 19</td>
+		<td>Node 18</td>
+		<td>Node 17</td>
+		<td>Node 16</td>
+	</tr>
+	<tr>
+		<td>7</td>
+		<td>Node 31</td>
+		<td>Node 30</td>
+		<td>Node 29</td>
+		<td>Node 28</td>
+		<td>Node 27</td>
+		<td>Node 26</td>
+		<td>Node 25</td>
+		<td>Node 24</td>
+	</tr>
+	<tr>
+		<td>8</td>
+		<td>Node 39</td>
+		<td>Node 38</td>
+		<td>Node 37</td>
+		<td>Node 36</td>
+		<td>Node 35</td>
+		<td>Node 34</td>
+		<td>Node 33</td>
+		<td>Node 32</td>
+	</tr>
+	<tr>
+		<td>9</td>
+		<td>Node 47</td>
+		<td>Node 46</td>
+		<td>Node 45</td>
+		<td>Node 44</td>
+		<td>Node 43</td>
+		<td>Node 42</td>
+		<td>Node 41</td>
+		<td>Node 40</td>
+	</tr>
+	<tr>
+		<td>10</td>
+		<td>Node 55</td>
+		<td>Node 54</td>
+		<td>Node 53</td>
+		<td>Node 52</td>
+		<td>Node 51</td>
+		<td>Node 50</td>
+		<td>Node 49</td>
+		<td>Node 48</td>
+	</tr>
+	<tr>
+		<td>11</td>
+		<td>Node 63</td>
+		<td>Node 62</td>
+		<td>Node 61</td>
+		<td>Node 60</td>
+		<td>Node 59</td>
+		<td>Node 58</td>
+		<td>Node 57</td>
+		<td>Node 56</td>
+	</tr>
+	<tr>
+		<td>12</td>
+		<td>8</td>
+		<td>Reserved</td>
+		<td colspan=8></td>
+	</tr>
+</tbody>
+</table>
+
+
+<br>
+
+<table class="tg">
+<thead>
+	<tr>
+		<th colspan=2>S Offset</th>
+		<th>이름</th>
+		<th colspan=8>설명 or Bit Index</th>
+	</tr>
+</thead>
+
+<tbody>
+	<tr>
+		<td class='powderblued'>시작</td>
+		<td class='powderblued'>크기</td>
+		<td class='powderblued'>릴레이</td>
+		<td class='powderblued'>Bit 7</td>
+		<td class='powderblued'>Bit 6</td>
+		<td class='powderblued'>Bit 5</td>
+		<td class='powderblued'>Bit 4</td>
+		<td class='powderblued'>Bit 3</td>
+		<td class='powderblued'>Bit 2</td>
+		<td class='powderblued'>Bit 1</td>
+		<td class='powderblued'>Bit 0</td>
+	</tr>
+	<tr>
+		<td>0</td>
+		<td>2</td>
+		<td>command</td>
+		<td colspan=8>Get DeviceNet Status = 1012</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>1</td>
+		<td>param. 1</td>
+		<td colspan=8>Slot 번호 = 1 ~ 3</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>1</td>
+		<td>param. 2</td>
+		<td colspan=8>활성 슬레이브 리스트 = 6</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td rowspan=8>8</td>
+		<td rowspan=8>슬레이브 리스트</td>
+		<td>Node 7</td>
+		<td>Node 6</td>
+		<td>Node 5</td>
+		<td>Node 4</td>
+		<td>Node 3</td>
+		<td>Node 2</td>
+		<td>Node 1</td>
+		<td>Node 0</td>
+	</tr>
+	<tr>
+		<td>5</td>
+		<td>Node 15</td>
+		<td>Node 14</td>
+		<td>Node 13</td>
+		<td>Node 12</td>
+		<td>Node 11</td>
+		<td>Node 10</td>
+		<td>Node 9</td>
+		<td>Node 8</td>
+	</tr>
+	<tr>
+		<td>6</td>
+		<td>Node 23</td>
+		<td>Node 22</td>
+		<td>Node 21</td>
+		<td>Node 20</td>
+		<td>Node 19</td>
+		<td>Node 18</td>
+		<td>Node 17</td>
+		<td>Node 16</td>
+	</tr>
+	<tr>
+		<td>7</td>
+		<td>Node 31</td>
+		<td>Node 30</td>
+		<td>Node 29</td>
+		<td>Node 28</td>
+		<td>Node 27</td>
+		<td>Node 26</td>
+		<td>Node 25</td>
+		<td>Node 24</td>
+	</tr>
+	<tr>
+		<td>8</td>
+		<td>Node 39</td>
+		<td>Node 38</td>
+		<td>Node 37</td>
+		<td>Node 36</td>
+		<td>Node 35</td>
+		<td>Node 34</td>
+		<td>Node 33</td>
+		<td>Node 32</td>
+	</tr>
+	<tr>
+		<td>9</td>
+		<td>Node 47</td>
+		<td>Node 46</td>
+		<td>Node 45</td>
+		<td>Node 44</td>
+		<td>Node 43</td>
+		<td>Node 42</td>
+		<td>Node 41</td>
+		<td>Node 40</td>
+	</tr>
+	<tr>
+		<td>10</td>
+		<td>Node 55</td>
+		<td>Node 54</td>
+		<td>Node 53</td>
+		<td>Node 52</td>
+		<td>Node 51</td>
+		<td>Node 50</td>
+		<td>Node 49</td>
+		<td>Node 48</td>
+	</tr>
+	<tr>
+		<td>11</td>
+		<td>Node 63</td>
+		<td>Node 62</td>
+		<td>Node 61</td>
+		<td>Node 60</td>
+		<td>Node 59</td>
+		<td>Node 58</td>
+		<td>Node 57</td>
+		<td>Node 56</td>
+	</tr>
+	<tr>
+		<td>12</td>
+		<td>8</td>
+		<td>Reserved</td>
+		<td colspan=8></td>
+	</tr>
+</tbody>
+</table>
+
+
+<br>
+
+<table class="tg">
+<thead>
+	<tr>
+		<th colspan=2>S Offset</th>
+		<th>이름</th>
+		<th colspan=8>설명 or Bit Index</th>
+	</tr>
+</thead>
+
+<tbody>
+	<tr>
+		<td class='powderblued'>시작</td>
+		<td class='powderblued'>크기</td>
+		<td class='powderblued'>릴레이</td>
+		<td class='powderblued'>Bit 7</td>
+		<td class='powderblued'>Bit 6</td>
+		<td class='powderblued'>Bit 5</td>
+		<td class='powderblued'>Bit 4</td>
+		<td class='powderblued'>Bit 3</td>
+		<td class='powderblued'>Bit 2</td>
+		<td class='powderblued'>Bit 1</td>
+		<td class='powderblued'>Bit 0</td>
+	</tr>
+	<tr>
+		<td>0</td>
+		<td>2</td>
+		<td>command</td>
+		<td colspan=8>Get DeviceNet Status = 1012</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>1</td>
+		<td>param. 1</td>
+		<td colspan=8>Slot 번호 = 1 ~ 3</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>1</td>
+		<td>param. 2</td>
+		<td colspan=8>진단 슬레이브 리스트 = 7</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td rowspan=8>8</td>
+		<td rowspan=8>슬레이브 리스트</td>
+		<td>Node 7</td>
+		<td>Node 6</td>
+		<td>Node 5</td>
+		<td>Node 4</td>
+		<td>Node 3</td>
+		<td>Node 2</td>
+		<td>Node 1</td>
+		<td>Node 0</td>
+	</tr>
+	<tr>
+		<td>5</td>
+		<td>Node 15</td>
+		<td>Node 14</td>
+		<td>Node 13</td>
+		<td>Node 12</td>
+		<td>Node 11</td>
+		<td>Node 10</td>
+		<td>Node 9</td>
+		<td>Node 8</td>
+	</tr>
+	<tr>
+		<td>6</td>
+		<td>Node 23</td>
+		<td>Node 22</td>
+		<td>Node 21</td>
+		<td>Node 20</td>
+		<td>Node 19</td>
+		<td>Node 18</td>
+		<td>Node 17</td>
+		<td>Node 16</td>
+	</tr>
+	<tr>
+		<td>7</td>
+		<td>Node 31</td>
+		<td>Node 30</td>
+		<td>Node 29</td>
+		<td>Node 28</td>
+		<td>Node 27</td>
+		<td>Node 26</td>
+		<td>Node 25</td>
+		<td>Node 24</td>
+	</tr>
+	<tr>
+		<td>8</td>
+		<td>Node 39</td>
+		<td>Node 38</td>
+		<td>Node 37</td>
+		<td>Node 36</td>
+		<td>Node 35</td>
+		<td>Node 34</td>
+		<td>Node 33</td>
+		<td>Node 32</td>
+	</tr>
+	<tr>
+		<td>9</td>
+		<td>Node 47</td>
+		<td>Node 46</td>
+		<td>Node 45</td>
+		<td>Node 44</td>
+		<td>Node 43</td>
+		<td>Node 42</td>
+		<td>Node 41</td>
+		<td>Node 40</td>
+	</tr>
+	<tr>
+		<td>10</td>
+		<td>Node 55</td>
+		<td>Node 54</td>
+		<td>Node 53</td>
+		<td>Node 52</td>
+		<td>Node 51</td>
+		<td>Node 50</td>
+		<td>Node 49</td>
+		<td>Node 48</td>
+	</tr>
+	<tr>
+		<td>11</td>
+		<td>Node 63</td>
+		<td>Node 62</td>
+		<td>Node 61</td>
+		<td>Node 60</td>
+		<td>Node 59</td>
+		<td>Node 58</td>
+		<td>Node 57</td>
+		<td>Node 56</td>
+	</tr>
+	<tr>
+		<td>12</td>
+		<td>8</td>
+		<td>Reserved</td>
+		<td colspan=8></td>
+	</tr>
+</tbody>
+</table># 3.4.14.3 S 릴레이 - EtherNet/IP Master 상태 릴레이
+
+<style type="text/css">
+table  {border-collapse:collapse;}
+td {border-color:gray;border-style:solid;border-width:1px;}
+.grayed {background-color:lightgray;}
+.powderblued {background-color:powderblue;}
+</style>
+
+
+<br>
+
+<table class="tg">
+<thead>
+	<tr>
+		<th colspan=2>S Offset</th>
+		<th>이름</th>
+		<th colspan=8>설명 or Bit Index</th>
+	</tr>
+</thead>
+
+<tbody>
+	<tr>
+		<td class='powderblued'>시작</td>
+		<td class='powderblued'>크기</td>
+		<td class='powderblued'>릴레이</td>
+		<td class='powderblued'>Bit 7</td>
+		<td class='powderblued'>Bit 6</td>
+		<td class='powderblued'>Bit 5</td>
+		<td class='powderblued'>Bit 4</td>
+		<td class='powderblued'>Bit 3</td>
+		<td class='powderblued'>Bit 2</td>
+		<td class='powderblued'>Bit 1</td>
+		<td class='powderblued'>Bit 0</td>
+	</tr>
+	<tr>
+		<td>0</td>
+		<td>2</td>
+		<td>command</td>
+		<td colspan=8>Get EtherNet/IP Status = 1014</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>1</td>
+		<td>param. 1</td>
+		<td colspan=8>Slot 번호 = 1 ~ 3</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>1</td>
+		<td>param. 2</td>
+		<td colspan=8>상태  = 1</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td>4</td>
+		<td>알람 횟수</td>
+		<td colspan=8></td>
+	</tr>
+	<tr>
+		<td>8</td>
+		<td>4</td>
+		<td>경고 횟수</td>
+		<td colspan=8></td>
+	</tr>
+	<tr>
+		<td>12</td>
+		<td>4</td>
+		<td>에러 횟수</td>
+		<td colspan=8></td>
+	</tr>
+	<tr>
+		<td>16</td>
+		<td>4</td>
+		<td>에러 레벨</td>
+		<td colspan=8>알람, 경고, 에러</td>
+	</tr>
+</tbody>
+</table>
+
+	
+<br>
+
+<table class="tg">
+<thead>
+	<tr>
+		<th colspan=2>S Offset</th>
+		<th>이름</th>
+		<th colspan=8>설명 or Bit Index</th>
+	</tr>
+</thead>
+
+<tbody>
+	<tr>
+		<td class='powderblued'>시작</td>
+		<td class='powderblued'>크기</td>
+		<td class='powderblued'>릴레이</td>
+		<td class='powderblued'>Bit 7</td>
+		<td class='powderblued'>Bit 6</td>
+		<td class='powderblued'>Bit 5</td>
+		<td class='powderblued'>Bit 4</td>
+		<td class='powderblued'>Bit 3</td>
+		<td class='powderblued'>Bit 2</td>
+		<td class='powderblued'>Bit 1</td>
+		<td class='powderblued'>Bit 0</td>
+	</tr>
+	<tr>
+		<td>0</td>
+		<td>2</td>
+		<td>command</td>
+		<td colspan=8>Get EtherNet/IP Status = 1014</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>1</td>
+		<td>param. 1</td>
+		<td colspan=8>Slot 번호 = 1 ~ 3</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>1</td>
+		<td>param. 2</td>
+		<td colspan=8>상태  = 2</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td>4</td>
+		<td>에러 코드</td>
+		<td colspan=8></td>
+	</tr>
+	<tr>
+		<td>8</td>
+		<td>4</td>
+		<td>에러 코드 파라미터</td>
+		<td colspan=8></td>
+	</tr>
+	<tr>
+		<td>12</td>
+		<td>4</td>
+		<td>에러 발생 Source Line</td>
+		<td colspan=8></td>
+	</tr>
+	<tr>
+		<td>16</td>
+		<td>4</td>
+		<td>Reserved</td>
+		<td colspan=8></td>
+	</tr>
+</tbody>
+</table>
+
+
+<br>
+
+<table class="tg">
+<thead>
+	<tr>
+		<th colspan=2>S Offset</th>
+		<th>이름</th>
+		<th colspan=8>설명 or Bit Index</th>
+	</tr>
+</thead>
+
+<tbody>
+	<tr>
+		<td class='powderblued'>시작</td>
+		<td class='powderblued'>크기</td>
+		<td class='powderblued'>릴레이</td>
+		<td class='powderblued'>Bit 7</td>
+		<td class='powderblued'>Bit 6</td>
+		<td class='powderblued'>Bit 5</td>
+		<td class='powderblued'>Bit 4</td>
+		<td class='powderblued'>Bit 3</td>
+		<td class='powderblued'>Bit 2</td>
+		<td class='powderblued'>Bit 1</td>
+		<td class='powderblued'>Bit 0</td>
+	</tr>
+	<tr>
+		<td>0</td>
+		<td>2</td>
+		<td>command</td>
+		<td colspan=8>Get EtherNet/IP Status = 1014</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>1</td>
+		<td>param. 1</td>
+		<td colspan=8>Slot 번호 = 1 ~ 3</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>1</td>
+		<td>param. 2</td>
+		<td colspan=8>상태  = 3</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td>12</td>
+		<td>에러 발생 Source Identifier</td>
+		<td colspan=8></td>
+	</tr>
+	<tr>
+		<td>16</td>
+		<td>4</td>
+		<td>Reserved</td>
+		<td colspan=8></td>
+	</tr>
+</tbody>
+</table>
+
+
+<br>
+
+{% hint style="info" %}
+\.      슬레이브의 통신 연결 여부를 모니터링하는 경우 "IO 교환 슬레이브 리스트"를 확인해 주십시오.
+{% endhint %}
+
+<br>
+
+
+<table class="tg">
+<thead>
+	<tr>
+		<th colspan=2>S Offset</th>
+		<th>이름</th>
+		<th colspan=8>설명 or Bit Index</th>
+	</tr>
+</thead>
+
+<tbody>
+	<tr>
+		<td class='powderblued'>시작</td>
+		<td class='powderblued'>크기</td>
+		<td class='powderblued'>릴레이</td>
+		<td class='powderblued'>Bit 7</td>
+		<td class='powderblued'>Bit 6</td>
+		<td class='powderblued'>Bit 5</td>
+		<td class='powderblued'>Bit 4</td>
+		<td class='powderblued'>Bit 3</td>
+		<td class='powderblued'>Bit 2</td>
+		<td class='powderblued'>Bit 1</td>
+		<td class='powderblued'>Bit 0</td>
+	</tr>
+	<tr>
+		<td>0</td>
+		<td>2</td>
+		<td>command</td>
+		<td colspan=8>Get EtherNet/IP Status = 1014</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>1</td>
+		<td>param. 1</td>
+		<td colspan=8>Slot 번호 = 1 ~ 3</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>1</td>
+		<td>param. 2</td>
+		<td colspan=8> 연결된 슬레이브 리스트 = 5</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td rowspan=16>16</td>
+		<td rowspan=16>슬레이브 리스트</td>
+		<td>Node 7</td>
+		<td>Node 6</td>
+		<td>Node 5</td>
+		<td>Node 4</td>
+		<td>Node 3</td>
+		<td>Node 2</td>
+		<td>Node 1</td>
+		<td>Node 0</td>
+	</tr>
+	<tr>
+		<td>5</td>
+		<td>Node 15</td>
+		<td>Node 14</td>
+		<td>Node 13</td>
+		<td>Node 12</td>
+		<td>Node 11</td>
+		<td>Node 10</td>
+		<td>Node 9</td>
+		<td>Node 8</td>
+	</tr>
+	<tr>
+		<td>6</td>
+		<td>Node 23</td>
+		<td>Node 22</td>
+		<td>Node 21</td>
+		<td>Node 20</td>
+		<td>Node 19</td>
+		<td>Node 18</td>
+		<td>Node 17</td>
+		<td>Node 16</td>
+	</tr>
+	<tr>
+		<td>7</td>
+		<td>Node 31</td>
+		<td>Node 30</td>
+		<td>Node 29</td>
+		<td>Node 28</td>
+		<td>Node 27</td>
+		<td>Node 26</td>
+		<td>Node 25</td>
+		<td>Node 24</td>
+	</tr>
+	<tr>
+		<td>8</td>
+		<td>Node 39</td>
+		<td>Node 38</td>
+		<td>Node 37</td>
+		<td>Node 36</td>
+		<td>Node 35</td>
+		<td>Node 34</td>
+		<td>Node 33</td>
+		<td>Node 32</td>
+	</tr>
+	<tr>
+		<td>9</td>
+		<td>Node 47</td>
+		<td>Node 46</td>
+		<td>Node 45</td>
+		<td>Node 44</td>
+		<td>Node 43</td>
+		<td>Node 42</td>
+		<td>Node 41</td>
+		<td>Node 40</td>
+	</tr>
+	<tr>
+		<td>10</td>
+		<td>Node 55</td>
+		<td>Node 54</td>
+		<td>Node 53</td>
+		<td>Node 52</td>
+		<td>Node 51</td>
+		<td>Node 50</td>
+		<td>Node 49</td>
+		<td>Node 48</td>
+	</tr>
+	<tr>
+		<td>11</td>
+		<td>Node 63</td>
+		<td>Node 62</td>
+		<td>Node 61</td>
+		<td>Node 60</td>
+		<td>Node 59</td>
+		<td>Node 58</td>
+		<td>Node 57</td>
+		<td>Node 56</td>
+	</tr>
+	<tr>
+		<td>12</td>
+		<td>Node 71</td>
+		<td>Node 70</td>
+		<td>Node 69</td>
+		<td>Node 68</td>
+		<td>Node 67</td>
+		<td>Node 66</td>
+		<td>Node 65</td>
+		<td>Node 64</td>
+	</tr>
+	<tr>
+		<td>13</td>
+		<td>Node 79</td>
+		<td>Node 78</td>
+		<td>Node 77</td>
+		<td>Node 76</td>
+		<td>Node 75</td>
+		<td>Node 74</td>
+		<td>Node 73</td>
+		<td>Node 72</td>
+	</tr>
+	<tr>
+		<td>14</td>
+		<td>Node 87</td>
+		<td>Node 86</td>
+		<td>Node 85</td>
+		<td>Node 84</td>
+		<td>Node 83</td>
+		<td>Node 82</td>
+		<td>Node 81</td>
+		<td>Node 80</td>
+	</tr>
+	<tr>
+		<td>15</td>
+		<td>Node 95</td>
+		<td>Node 94</td>
+		<td>Node 93</td>
+		<td>Node 92</td>
+		<td>Node 91</td>
+		<td>Node 90</td>
+		<td>Node 89</td>
+		<td>Node 88</td>
+	</tr>
+	<tr>
+		<td>16</td>
+		<td>Node 103</td>
+		<td>Node 102</td>
+		<td>Node 101</td>
+		<td>Node 100</td>
+		<td>Node 99</td>
+		<td>Node 98</td>
+		<td>Node 97</td>
+		<td>Node 96</td>
+	</tr>
+	<tr>
+		<td>17</td>
+		<td>Node 111</td>
+		<td>Node 110</td>
+		<td>Node 109</td>
+		<td>Node 108</td>
+		<td>Node 107</td>
+		<td>Node 106</td>
+		<td>Node 105</td>
+		<td>Node 104</td>
+	</tr>
+	<tr>
+		<td>18</td>
+		<td>Node 119</td>
+		<td>Node 118</td>
+		<td>Node 117</td>
+		<td>Node 116</td>
+		<td>Node 115</td>
+		<td>Node 114</td>
+		<td>Node 113</td>
+		<td>Node 112</td>
+	</tr>
+	<tr>
+		<td>19</td>
+		<td>Node 127</td>
+		<td>Node 126</td>
+		<td>Node 125</td>
+		<td>Node 124</td>
+		<td>Node 123</td>
+		<td>Node 122</td>
+		<td>Node 121</td>
+		<td>Node 120</td>
+	</tr>
+</tbody>
+</table>
+
+
+<br>
+
+<table class="tg">
+<thead>
+	<tr>
+		<th colspan=2>S Offset</th>
+		<th>이름</th>
+		<th colspan=8>설명 or Bit Index</th>
+	</tr>
+</thead>
+
+<tbody>
+	<tr>
+		<td class='powderblued'>시작</td>
+		<td class='powderblued'>크기</td>
+		<td class='powderblued'>릴레이</td>
+		<td class='powderblued'>Bit 7</td>
+		<td class='powderblued'>Bit 6</td>
+		<td class='powderblued'>Bit 5</td>
+		<td class='powderblued'>Bit 4</td>
+		<td class='powderblued'>Bit 3</td>
+		<td class='powderblued'>Bit 2</td>
+		<td class='powderblued'>Bit 1</td>
+		<td class='powderblued'>Bit 0</td>
+	</tr>
+	<tr>
+		<td>0</td>
+		<td>2</td>
+		<td>command</td>
+		<td colspan=8>Get EtherNet/IP Status = 1014</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>1</td>
+		<td>param. 1</td>
+		<td colspan=8>Slot 번호 = 1 ~ 3</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>1</td>
+		<td>param. 2</td>
+		<td colspan=8>IO 교환 슬레이브 리스트 = 6</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td rowspan=16>16</td>
+		<td rowspan=16>슬레이브 리스트</td>
+		<td>Node 7</td>
+		<td>Node 6</td>
+		<td>Node 5</td>
+		<td>Node 4</td>
+		<td>Node 3</td>
+		<td>Node 2</td>
+		<td>Node 1</td>
+		<td>Node 0</td>
+	</tr>
+	<tr>
+		<td>5</td>
+		<td>Node 15</td>
+		<td>Node 14</td>
+		<td>Node 13</td>
+		<td>Node 12</td>
+		<td>Node 11</td>
+		<td>Node 10</td>
+		<td>Node 9</td>
+		<td>Node 8</td>
+	</tr>
+	<tr>
+		<td>6</td>
+		<td>Node 23</td>
+		<td>Node 22</td>
+		<td>Node 21</td>
+		<td>Node 20</td>
+		<td>Node 19</td>
+		<td>Node 18</td>
+		<td>Node 17</td>
+		<td>Node 16</td>
+	</tr>
+	<tr>
+		<td>7</td>
+		<td>Node 31</td>
+		<td>Node 30</td>
+		<td>Node 29</td>
+		<td>Node 28</td>
+		<td>Node 27</td>
+		<td>Node 26</td>
+		<td>Node 25</td>
+		<td>Node 24</td>
+	</tr>
+	<tr>
+		<td>8</td>
+		<td>Node 39</td>
+		<td>Node 38</td>
+		<td>Node 37</td>
+		<td>Node 36</td>
+		<td>Node 35</td>
+		<td>Node 34</td>
+		<td>Node 33</td>
+		<td>Node 32</td>
+	</tr>
+	<tr>
+		<td>9</td>
+		<td>Node 47</td>
+		<td>Node 46</td>
+		<td>Node 45</td>
+		<td>Node 44</td>
+		<td>Node 43</td>
+		<td>Node 42</td>
+		<td>Node 41</td>
+		<td>Node 40</td>
+	</tr>
+	<tr>
+		<td>10</td>
+		<td>Node 55</td>
+		<td>Node 54</td>
+		<td>Node 53</td>
+		<td>Node 52</td>
+		<td>Node 51</td>
+		<td>Node 50</td>
+		<td>Node 49</td>
+		<td>Node 48</td>
+	</tr>
+	<tr>
+		<td>11</td>
+		<td>Node 63</td>
+		<td>Node 62</td>
+		<td>Node 61</td>
+		<td>Node 60</td>
+		<td>Node 59</td>
+		<td>Node 58</td>
+		<td>Node 57</td>
+		<td>Node 56</td>
+	</tr>
+	<tr>
+		<td>12</td>
+		<td>Node 71</td>
+		<td>Node 70</td>
+		<td>Node 69</td>
+		<td>Node 68</td>
+		<td>Node 67</td>
+		<td>Node 66</td>
+		<td>Node 65</td>
+		<td>Node 64</td>
+	</tr>
+	<tr>
+		<td>13</td>
+		<td>Node 79</td>
+		<td>Node 78</td>
+		<td>Node 77</td>
+		<td>Node 76</td>
+		<td>Node 75</td>
+		<td>Node 74</td>
+		<td>Node 73</td>
+		<td>Node 72</td>
+	</tr>
+	<tr>
+		<td>14</td>
+		<td>Node 87</td>
+		<td>Node 86</td>
+		<td>Node 85</td>
+		<td>Node 84</td>
+		<td>Node 83</td>
+		<td>Node 82</td>
+		<td>Node 81</td>
+		<td>Node 80</td>
+	</tr>
+	<tr>
+		<td>15</td>
+		<td>Node 95</td>
+		<td>Node 94</td>
+		<td>Node 93</td>
+		<td>Node 92</td>
+		<td>Node 91</td>
+		<td>Node 90</td>
+		<td>Node 89</td>
+		<td>Node 88</td>
+	</tr>
+	<tr>
+		<td>16</td>
+		<td>Node 103</td>
+		<td>Node 102</td>
+		<td>Node 101</td>
+		<td>Node 100</td>
+		<td>Node 99</td>
+		<td>Node 98</td>
+		<td>Node 97</td>
+		<td>Node 96</td>
+	</tr>
+	<tr>
+		<td>17</td>
+		<td>Node 111</td>
+		<td>Node 110</td>
+		<td>Node 109</td>
+		<td>Node 108</td>
+		<td>Node 107</td>
+		<td>Node 106</td>
+		<td>Node 105</td>
+		<td>Node 104</td>
+	</tr>
+	<tr>
+		<td>18</td>
+		<td>Node 119</td>
+		<td>Node 118</td>
+		<td>Node 117</td>
+		<td>Node 116</td>
+		<td>Node 115</td>
+		<td>Node 114</td>
+		<td>Node 113</td>
+		<td>Node 112</td>
+	</tr>
+	<tr>
+		<td>19</td>
+		<td>Node 127</td>
+		<td>Node 126</td>
+		<td>Node 125</td>
+		<td>Node 124</td>
+		<td>Node 123</td>
+		<td>Node 122</td>
+		<td>Node 121</td>
+		<td>Node 120</td>
+	</tr>
+</tbody>
+</table>
+
+
+<br>
+
+<table class="tg">
+<thead>
+	<tr>
+		<th colspan=2>S Offset</th>
+		<th>이름</th>
+		<th colspan=8>설명 or Bit Index</th>
+	</tr>
+</thead>
+
+<tbody>
+	<tr>
+		<td class='powderblued'>시작</td>
+		<td class='powderblued'>크기</td>
+		<td class='powderblued'>릴레이</td>
+		<td class='powderblued'>Bit 7</td>
+		<td class='powderblued'>Bit 6</td>
+		<td class='powderblued'>Bit 5</td>
+		<td class='powderblued'>Bit 4</td>
+		<td class='powderblued'>Bit 3</td>
+		<td class='powderblued'>Bit 2</td>
+		<td class='powderblued'>Bit 1</td>
+		<td class='powderblued'>Bit 0</td>
+	</tr>
+	<tr>
+		<td>0</td>
+		<td>2</td>
+		<td>command</td>
+		<td colspan=8>Get EtherNet/IP Status = 1014</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>1</td>
+		<td>param. 1</td>
+		<td colspan=8>Slot 번호 = 1 ~ 3</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>1</td>
+		<td>param. 2</td>
+		<td colspan=8>진단 슬레이브 리스트 = 7</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td rowspan=16>16</td>
+		<td rowspan=16>슬레이브 리스트</td>
+		<td>Node 7</td>
+		<td>Node 6</td>
+		<td>Node 5</td>
+		<td>Node 4</td>
+		<td>Node 3</td>
+		<td>Node 2</td>
+		<td>Node 1</td>
+		<td>Node 0</td>
+	</tr>
+	<tr>
+		<td>5</td>
+		<td>Node 15</td>
+		<td>Node 14</td>
+		<td>Node 13</td>
+		<td>Node 12</td>
+		<td>Node 11</td>
+		<td>Node 10</td>
+		<td>Node 9</td>
+		<td>Node 8</td>
+	</tr>
+	<tr>
+		<td>6</td>
+		<td>Node 23</td>
+		<td>Node 22</td>
+		<td>Node 21</td>
+		<td>Node 20</td>
+		<td>Node 19</td>
+		<td>Node 18</td>
+		<td>Node 17</td>
+		<td>Node 16</td>
+	</tr>
+	<tr>
+		<td>7</td>
+		<td>Node 31</td>
+		<td>Node 30</td>
+		<td>Node 29</td>
+		<td>Node 28</td>
+		<td>Node 27</td>
+		<td>Node 26</td>
+		<td>Node 25</td>
+		<td>Node 24</td>
+	</tr>
+	<tr>
+		<td>8</td>
+		<td>Node 39</td>
+		<td>Node 38</td>
+		<td>Node 37</td>
+		<td>Node 36</td>
+		<td>Node 35</td>
+		<td>Node 34</td>
+		<td>Node 33</td>
+		<td>Node 32</td>
+	</tr>
+	<tr>
+		<td>9</td>
+		<td>Node 47</td>
+		<td>Node 46</td>
+		<td>Node 45</td>
+		<td>Node 44</td>
+		<td>Node 43</td>
+		<td>Node 42</td>
+		<td>Node 41</td>
+		<td>Node 40</td>
+	</tr>
+	<tr>
+		<td>10</td>
+		<td>Node 55</td>
+		<td>Node 54</td>
+		<td>Node 53</td>
+		<td>Node 52</td>
+		<td>Node 51</td>
+		<td>Node 50</td>
+		<td>Node 49</td>
+		<td>Node 48</td>
+	</tr>
+	<tr>
+		<td>11</td>
+		<td>Node 63</td>
+		<td>Node 62</td>
+		<td>Node 61</td>
+		<td>Node 60</td>
+		<td>Node 59</td>
+		<td>Node 58</td>
+		<td>Node 57</td>
+		<td>Node 56</td>
+	</tr>
+	<tr>
+		<td>12</td>
+		<td>Node 71</td>
+		<td>Node 70</td>
+		<td>Node 69</td>
+		<td>Node 68</td>
+		<td>Node 67</td>
+		<td>Node 66</td>
+		<td>Node 65</td>
+		<td>Node 64</td>
+	</tr>
+	<tr>
+		<td>13</td>
+		<td>Node 79</td>
+		<td>Node 78</td>
+		<td>Node 77</td>
+		<td>Node 76</td>
+		<td>Node 75</td>
+		<td>Node 74</td>
+		<td>Node 73</td>
+		<td>Node 72</td>
+	</tr>
+	<tr>
+		<td>14</td>
+		<td>Node 87</td>
+		<td>Node 86</td>
+		<td>Node 85</td>
+		<td>Node 84</td>
+		<td>Node 83</td>
+		<td>Node 82</td>
+		<td>Node 81</td>
+		<td>Node 80</td>
+	</tr>
+	<tr>
+		<td>15</td>
+		<td>Node 95</td>
+		<td>Node 94</td>
+		<td>Node 93</td>
+		<td>Node 92</td>
+		<td>Node 91</td>
+		<td>Node 90</td>
+		<td>Node 89</td>
+		<td>Node 88</td>
+	</tr>
+	<tr>
+		<td>16</td>
+		<td>Node 103</td>
+		<td>Node 102</td>
+		<td>Node 101</td>
+		<td>Node 100</td>
+		<td>Node 99</td>
+		<td>Node 98</td>
+		<td>Node 97</td>
+		<td>Node 96</td>
+	</tr>
+	<tr>
+		<td>17</td>
+		<td>Node 111</td>
+		<td>Node 110</td>
+		<td>Node 109</td>
+		<td>Node 108</td>
+		<td>Node 107</td>
+		<td>Node 106</td>
+		<td>Node 105</td>
+		<td>Node 104</td>
+	</tr>
+	<tr>
+		<td>18</td>
+		<td>Node 119</td>
+		<td>Node 118</td>
+		<td>Node 117</td>
+		<td>Node 116</td>
+		<td>Node 115</td>
+		<td>Node 114</td>
+		<td>Node 113</td>
+		<td>Node 112</td>
+	</tr>
+	<tr>
+		<td>19</td>
+		<td>Node 127</td>
+		<td>Node 126</td>
+		<td>Node 125</td>
+		<td>Node 124</td>
+		<td>Node 123</td>
+		<td>Node 122</td>
+		<td>Node 121</td>
+		<td>Node 120</td>
+	</tr>
+</tbody>
+</table># 3.4.14.4 S 릴레이 - Profinet IO Master 상태 릴레이
+
+<style type="text/css">
+table  {border-collapse:collapse;}
+td {border-color:gray;border-style:solid;border-width:1px;}
+.grayed {background-color:lightgray;}
+.powderblued {background-color:powderblue;}
+</style>
+
+
+<br>
+
+<br>
+
+{% hint style="info" %}
+\.      슬레이브의 통신 연결 여부를 모니터링하는 경우 "IO 교환 슬레이브 리스트"를 확인해 주십시오.
+{% endhint %}
+
+<br>
+
+<table class="tg">
+<thead>
+	<tr>
+		<th colspan=2>S Offset</th>
+		<th>이름</th>
+		<th colspan=8>설명 or Bit Index</th>
+	</tr>
+</thead>
+
+<tbody>
+	<tr>
+		<td class='powderblued'>시작</td>
+		<td class='powderblued'>크기</td>
+		<td class='powderblued'>릴레이</td>
+		<td class='powderblued'>Bit 7</td>
+		<td class='powderblued'>Bit 6</td>
+		<td class='powderblued'>Bit 5</td>
+		<td class='powderblued'>Bit 4</td>
+		<td class='powderblued'>Bit 3</td>
+		<td class='powderblued'>Bit 2</td>
+		<td class='powderblued'>Bit 1</td>
+		<td class='powderblued'>Bit 0</td>
+	</tr>
+	<tr>
+		<td>0</td>
+		<td>2</td>
+		<td>command</td>
+		<td colspan=8>Get Profinet IO Status = 1016</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>1</td>
+		<td>param. 1</td>
+		<td colspan=8>Slot 번호 = 1 ~ 3</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>1</td>
+		<td>param. 2</td>
+		<td colspan=8> 연결된 슬레이브 리스트 = 5</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td rowspan=16>16</td>
+		<td rowspan=16>슬레이브 리스트</td>
+		<td>Node 7</td>
+		<td>Node 6</td>
+		<td>Node 5</td>
+		<td>Node 4</td>
+		<td>Node 3</td>
+		<td>Node 2</td>
+		<td>Node 1</td>
+		<td>Node 0</td>
+	</tr>
+	<tr>
+		<td>5</td>
+		<td>Node 15</td>
+		<td>Node 14</td>
+		<td>Node 13</td>
+		<td>Node 12</td>
+		<td>Node 11</td>
+		<td>Node 10</td>
+		<td>Node 9</td>
+		<td>Node 8</td>
+	</tr>
+		<tr>
+		<td>6</td>
+		<td>Node 23</td>
+		<td>Node 22</td>
+		<td>Node 21</td>
+		<td>Node 20</td>
+		<td>Node 19</td>
+		<td>Node 18</td>
+		<td>Node 17</td>
+		<td>Node 16</td>
+	</tr>
+		<tr>
+		<td>7</td>
+		<td>Node 31</td>
+		<td>Node 30</td>
+		<td>Node 29</td>
+		<td>Node 28</td>
+		<td>Node 27</td>
+		<td>Node 26</td>
+		<td>Node 25</td>
+		<td>Node 24</td>
+	</tr>
+		<tr>
+		<td>8</td>
+		<td>Node 39</td>
+		<td>Node 38</td>
+		<td>Node 37</td>
+		<td>Node 36</td>
+		<td>Node 35</td>
+		<td>Node 34</td>
+		<td>Node 33</td>
+		<td>Node 32</td>
+	</tr>
+		<tr>
+		<td>9</td>
+		<td>Node 47</td>
+		<td>Node 46</td>
+		<td>Node 45</td>
+		<td>Node 44</td>
+		<td>Node 43</td>
+		<td>Node 42</td>
+		<td>Node 41</td>
+		<td>Node 40</td>
+	</tr>
+		<tr>
+		<td>10</td>
+		<td>Node 55</td>
+		<td>Node 54</td>
+		<td>Node 53</td>
+		<td>Node 52</td>
+		<td>Node 51</td>
+		<td>Node 50</td>
+		<td>Node 49</td>
+		<td>Node 48</td>
+	</tr>
+		<tr>
+		<td>11</td>
+		<td>Node 63</td>
+		<td>Node 62</td>
+		<td>Node 61</td>
+		<td>Node 60</td>
+		<td>Node 59</td>
+		<td>Node 58</td>
+		<td>Node 57</td>
+		<td>Node 56</td>
+	</tr>
+		<tr>
+		<td>12</td>
+		<td>Node 71</td>
+		<td>Node 70</td>
+		<td>Node 69</td>
+		<td>Node 68</td>
+		<td>Node 67</td>
+		<td>Node 66</td>
+		<td>Node 65</td>
+		<td>Node 64</td>
+	</tr>
+		<tr>
+		<td>13</td>
+		<td>Node 79</td>
+		<td>Node 78</td>
+		<td>Node 77</td>
+		<td>Node 76</td>
+		<td>Node 75</td>
+		<td>Node 74</td>
+		<td>Node 73</td>
+		<td>Node 72</td>
+	</tr>
+		<tr>
+		<td>14</td>
+		<td>Node 87</td>
+		<td>Node 86</td>
+		<td>Node 85</td>
+		<td>Node 84</td>
+		<td>Node 83</td>
+		<td>Node 82</td>
+		<td>Node 81</td>
+		<td>Node 80</td>
+	</tr>
+		<tr>
+		<td>15</td>
+		<td>Node 95</td>
+		<td>Node 94</td>
+		<td>Node 93</td>
+		<td>Node 92</td>
+		<td>Node 91</td>
+		<td>Node 90</td>
+		<td>Node 89</td>
+		<td>Node 88</td>
+	</tr>
+		<tr>
+		<td>16</td>
+		<td>Node 103</td>
+		<td>Node 102</td>
+		<td>Node 101</td>
+		<td>Node 100</td>
+		<td>Node 99</td>
+		<td>Node 98</td>
+		<td>Node 97</td>
+		<td>Node 96</td>
+	</tr>
+		<tr>
+		<td>17</td>
+		<td>Node 111</td>
+		<td>Node 110</td>
+		<td>Node 109</td>
+		<td>Node 108</td>
+		<td>Node 107</td>
+		<td>Node 106</td>
+		<td>Node 105</td>
+		<td>Node 104</td>
+	</tr>
+		<tr>
+		<td>18</td>
+		<td>Node 119</td>
+		<td>Node 118</td>
+		<td>Node 117</td>
+		<td>Node 116</td>
+		<td>Node 115</td>
+		<td>Node 114</td>
+		<td>Node 113</td>
+		<td>Node 112</td>
+	</tr>
+		<tr>
+		<td>19</td>
+		<td>Node 127</td>
+		<td>Node 126</td>
+		<td>Node 125</td>
+		<td>Node 124</td>
+		<td>Node 123</td>
+		<td>Node 122</td>
+		<td>Node 121</td>
+		<td>Node 120</td>
+	</tr>
+</tbody>
+</table>
+
+
+<br>
+
+<table class="tg">
+<thead>
+	<tr>
+		<th colspan=2>S Offset</th>
+		<th>이름</th>
+		<th colspan=8>설명 or Bit Index</th>
+	</tr>
+</thead>
+
+<tbody>
+	<tr>
+		<td class='powderblued'>시작</td>
+		<td class='powderblued'>크기</td>
+		<td class='powderblued'>릴레이</td>
+		<td class='powderblued'>Bit 7</td>
+		<td class='powderblued'>Bit 6</td>
+		<td class='powderblued'>Bit 5</td>
+		<td class='powderblued'>Bit 4</td>
+		<td class='powderblued'>Bit 3</td>
+		<td class='powderblued'>Bit 2</td>
+		<td class='powderblued'>Bit 1</td>
+		<td class='powderblued'>Bit 0</td>
+	</tr>
+	<tr>
+		<td>0</td>
+		<td>2</td>
+		<td>command</td>
+		<td colspan=8>Get Profinet IO Status = 1016</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>1</td>
+		<td>param. 1</td>
+		<td colspan=8>Slot 번호 = 1 ~ 3</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>1</td>
+		<td>param. 2</td>
+		<td colspan=8>IO 교환 슬레이브 리스트 = 6</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td rowspan=16>16</td>
+		<td rowspan=16>슬레이브 리스트</td>
+		<td>Node 7</td>
+		<td>Node 6</td>
+		<td>Node 5</td>
+		<td>Node 4</td>
+		<td>Node 3</td>
+		<td>Node 2</td>
+		<td>Node 1</td>
+		<td>Node 0</td>
+	</tr>
+	<tr>
+		<td>5</td>
+		<td>Node 15</td>
+		<td>Node 14</td>
+		<td>Node 13</td>
+		<td>Node 12</td>
+		<td>Node 11</td>
+		<td>Node 10</td>
+		<td>Node 9</td>
+		<td>Node 8</td>
+	</tr>
+		<tr>
+		<td>6</td>
+		<td>Node 23</td>
+		<td>Node 22</td>
+		<td>Node 21</td>
+		<td>Node 20</td>
+		<td>Node 19</td>
+		<td>Node 18</td>
+		<td>Node 17</td>
+		<td>Node 16</td>
+	</tr>
+		<tr>
+		<td>7</td>
+		<td>Node 31</td>
+		<td>Node 30</td>
+		<td>Node 29</td>
+		<td>Node 28</td>
+		<td>Node 27</td>
+		<td>Node 26</td>
+		<td>Node 25</td>
+		<td>Node 24</td>
+	</tr>
+		<tr>
+		<td>8</td>
+		<td>Node 39</td>
+		<td>Node 38</td>
+		<td>Node 37</td>
+		<td>Node 36</td>
+		<td>Node 35</td>
+		<td>Node 34</td>
+		<td>Node 33</td>
+		<td>Node 32</td>
+	</tr>
+		<tr>
+		<td>9</td>
+		<td>Node 47</td>
+		<td>Node 46</td>
+		<td>Node 45</td>
+		<td>Node 44</td>
+		<td>Node 43</td>
+		<td>Node 42</td>
+		<td>Node 41</td>
+		<td>Node 40</td>
+	</tr>
+		<tr>
+		<td>10</td>
+		<td>Node 55</td>
+		<td>Node 54</td>
+		<td>Node 53</td>
+		<td>Node 52</td>
+		<td>Node 51</td>
+		<td>Node 50</td>
+		<td>Node 49</td>
+		<td>Node 48</td>
+	</tr>
+		<tr>
+		<td>11</td>
+		<td>Node 63</td>
+		<td>Node 62</td>
+		<td>Node 61</td>
+		<td>Node 60</td>
+		<td>Node 59</td>
+		<td>Node 58</td>
+		<td>Node 57</td>
+		<td>Node 56</td>
+	</tr>
+		<tr>
+		<td>12</td>
+		<td>Node 71</td>
+		<td>Node 70</td>
+		<td>Node 69</td>
+		<td>Node 68</td>
+		<td>Node 67</td>
+		<td>Node 66</td>
+		<td>Node 65</td>
+		<td>Node 64</td>
+	</tr>
+		<tr>
+		<td>13</td>
+		<td>Node 79</td>
+		<td>Node 78</td>
+		<td>Node 77</td>
+		<td>Node 76</td>
+		<td>Node 75</td>
+		<td>Node 74</td>
+		<td>Node 73</td>
+		<td>Node 72</td>
+	</tr>
+		<tr>
+		<td>14</td>
+		<td>Node 87</td>
+		<td>Node 86</td>
+		<td>Node 85</td>
+		<td>Node 84</td>
+		<td>Node 83</td>
+		<td>Node 82</td>
+		<td>Node 81</td>
+		<td>Node 80</td>
+	</tr>
+		<tr>
+		<td>15</td>
+		<td>Node 95</td>
+		<td>Node 94</td>
+		<td>Node 93</td>
+		<td>Node 92</td>
+		<td>Node 91</td>
+		<td>Node 90</td>
+		<td>Node 89</td>
+		<td>Node 88</td>
+	</tr>
+		<tr>
+		<td>16</td>
+		<td>Node 103</td>
+		<td>Node 102</td>
+		<td>Node 101</td>
+		<td>Node 100</td>
+		<td>Node 99</td>
+		<td>Node 98</td>
+		<td>Node 97</td>
+		<td>Node 96</td>
+	</tr>
+		<tr>
+		<td>17</td>
+		<td>Node 111</td>
+		<td>Node 110</td>
+		<td>Node 109</td>
+		<td>Node 108</td>
+		<td>Node 107</td>
+		<td>Node 106</td>
+		<td>Node 105</td>
+		<td>Node 104</td>
+	</tr>
+		<tr>
+		<td>18</td>
+		<td>Node 119</td>
+		<td>Node 118</td>
+		<td>Node 117</td>
+		<td>Node 116</td>
+		<td>Node 115</td>
+		<td>Node 114</td>
+		<td>Node 113</td>
+		<td>Node 112</td>
+	</tr>
+		<tr>
+		<td>19</td>
+		<td>Node 127</td>
+		<td>Node 126</td>
+		<td>Node 125</td>
+		<td>Node 124</td>
+		<td>Node 123</td>
+		<td>Node 122</td>
+		<td>Node 121</td>
+		<td>Node 120</td>
+	</tr>
+</tbody>
+</table>
+
+
+<br>
+
+<table class="tg">
+<thead>
+	<tr>
+		<th colspan=2>S Offset</th>
+		<th>이름</th>
+		<th colspan=8>설명 or Bit Index</th>
+	</tr>
+</thead>
+
+<tbody>
+	<tr>
+		<td class='powderblued'>시작</td>
+		<td class='powderblued'>크기</td>
+		<td class='powderblued'>릴레이</td>
+		<td class='powderblued'>Bit 7</td>
+		<td class='powderblued'>Bit 6</td>
+		<td class='powderblued'>Bit 5</td>
+		<td class='powderblued'>Bit 4</td>
+		<td class='powderblued'>Bit 3</td>
+		<td class='powderblued'>Bit 2</td>
+		<td class='powderblued'>Bit 1</td>
+		<td class='powderblued'>Bit 0</td>
+	</tr>
+	<tr>
+		<td>0</td>
+		<td>2</td>
+		<td>command</td>
+		<td colspan=8>Get Profinet IO Status = 1016</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>1</td>
+		<td>param. 1</td>
+		<td colspan=8>Slot 번호 = 1 ~ 3</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>1</td>
+		<td>param. 2</td>
+		<td colspan=8>진단 슬레이브 리스트 = 7</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td rowspan=16>16</td>
+		<td rowspan=16>슬레이브 리스트</td>
+		<td>Node 7</td>
+		<td>Node 6</td>
+		<td>Node 5</td>
+		<td>Node 4</td>
+		<td>Node 3</td>
+		<td>Node 2</td>
+		<td>Node 1</td>
+		<td>Node 0</td>
+	</tr>
+	<tr>
+		<td>5</td>
+		<td>Node 15</td>
+		<td>Node 14</td>
+		<td>Node 13</td>
+		<td>Node 12</td>
+		<td>Node 11</td>
+		<td>Node 10</td>
+		<td>Node 9</td>
+		<td>Node 8</td>
+	</tr>
+		<tr>
+		<td>6</td>
+		<td>Node 23</td>
+		<td>Node 22</td>
+		<td>Node 21</td>
+		<td>Node 20</td>
+		<td>Node 19</td>
+		<td>Node 18</td>
+		<td>Node 17</td>
+		<td>Node 16</td>
+	</tr>
+		<tr>
+		<td>7</td>
+		<td>Node 31</td>
+		<td>Node 30</td>
+		<td>Node 29</td>
+		<td>Node 28</td>
+		<td>Node 27</td>
+		<td>Node 26</td>
+		<td>Node 25</td>
+		<td>Node 24</td>
+	</tr>
+		<tr>
+		<td>8</td>
+		<td>Node 39</td>
+		<td>Node 38</td>
+		<td>Node 37</td>
+		<td>Node 36</td>
+		<td>Node 35</td>
+		<td>Node 34</td>
+		<td>Node 33</td>
+		<td>Node 32</td>
+	</tr>
+		<tr>
+		<td>9</td>
+		<td>Node 47</td>
+		<td>Node 46</td>
+		<td>Node 45</td>
+		<td>Node 44</td>
+		<td>Node 43</td>
+		<td>Node 42</td>
+		<td>Node 41</td>
+		<td>Node 40</td>
+	</tr>
+		<tr>
+		<td>10</td>
+		<td>Node 55</td>
+		<td>Node 54</td>
+		<td>Node 53</td>
+		<td>Node 52</td>
+		<td>Node 51</td>
+		<td>Node 50</td>
+		<td>Node 49</td>
+		<td>Node 48</td>
+	</tr>
+		<tr>
+		<td>11</td>
+		<td>Node 63</td>
+		<td>Node 62</td>
+		<td>Node 61</td>
+		<td>Node 60</td>
+		<td>Node 59</td>
+		<td>Node 58</td>
+		<td>Node 57</td>
+		<td>Node 56</td>
+	</tr>
+		<tr>
+		<td>12</td>
+		<td>Node 71</td>
+		<td>Node 70</td>
+		<td>Node 69</td>
+		<td>Node 68</td>
+		<td>Node 67</td>
+		<td>Node 66</td>
+		<td>Node 65</td>
+		<td>Node 64</td>
+	</tr>
+		<tr>
+		<td>13</td>
+		<td>Node 79</td>
+		<td>Node 78</td>
+		<td>Node 77</td>
+		<td>Node 76</td>
+		<td>Node 75</td>
+		<td>Node 74</td>
+		<td>Node 73</td>
+		<td>Node 72</td>
+	</tr>
+		<tr>
+		<td>14</td>
+		<td>Node 87</td>
+		<td>Node 86</td>
+		<td>Node 85</td>
+		<td>Node 84</td>
+		<td>Node 83</td>
+		<td>Node 82</td>
+		<td>Node 81</td>
+		<td>Node 80</td>
+	</tr>
+		<tr>
+		<td>15</td>
+		<td>Node 95</td>
+		<td>Node 94</td>
+		<td>Node 93</td>
+		<td>Node 92</td>
+		<td>Node 91</td>
+		<td>Node 90</td>
+		<td>Node 89</td>
+		<td>Node 88</td>
+	</tr>
+		<tr>
+		<td>16</td>
+		<td>Node 103</td>
+		<td>Node 102</td>
+		<td>Node 101</td>
+		<td>Node 100</td>
+		<td>Node 99</td>
+		<td>Node 98</td>
+		<td>Node 97</td>
+		<td>Node 96</td>
+	</tr>
+		<tr>
+		<td>17</td>
+		<td>Node 111</td>
+		<td>Node 110</td>
+		<td>Node 109</td>
+		<td>Node 108</td>
+		<td>Node 107</td>
+		<td>Node 106</td>
+		<td>Node 105</td>
+		<td>Node 104</td>
+	</tr>
+		<tr>
+		<td>18</td>
+		<td>Node 119</td>
+		<td>Node 118</td>
+		<td>Node 117</td>
+		<td>Node 116</td>
+		<td>Node 115</td>
+		<td>Node 114</td>
+		<td>Node 113</td>
+		<td>Node 112</td>
+	</tr>
+		<tr>
+		<td>19</td>
+		<td>Node 127</td>
+		<td>Node 126</td>
+		<td>Node 125</td>
+		<td>Node 124</td>
+		<td>Node 123</td>
+		<td>Node 122</td>
+		<td>Node 121</td>
+		<td>Node 120</td>
+	</tr>
+</tbody>
+</table># 3.4.14.5 S 릴레이 - EtherCAT Master 상태 릴레이
+
+<style type="text/css">
+table  {border-collapse:collapse;}
+td {border-color:gray;border-style:solid;border-width:1px;}
+.grayed {background-color:lightgray;}
+.powderblued {background-color:powderblue;}
+</style>
+
+
+<br>
+
+<br>
+
+{% hint style="info" %}
+\.      슬레이브의 통신 연결 여부를 모니터링하는 경우 "IO 교환 슬레이브 리스트"를 확인해 주십시오.
+{% endhint %}
+
+<br>
+
+<table class="tg">
+<thead>
+	<tr>
+		<th colspan=2>S Offset</th>
+		<th>이름</th>
+		<th colspan=8>설명 or Bit Index</th>
+	</tr>
+</thead>
+
+<tbody>
+	<tr>
+		<td class='powderblued'>시작</td>
+		<td class='powderblued'>크기</td>
+		<td class='powderblued'>릴레이</td>
+		<td class='powderblued'>Bit 7</td>
+		<td class='powderblued'>Bit 6</td>
+		<td class='powderblued'>Bit 5</td>
+		<td class='powderblued'>Bit 4</td>
+		<td class='powderblued'>Bit 3</td>
+		<td class='powderblued'>Bit 2</td>
+		<td class='powderblued'>Bit 1</td>
+		<td class='powderblued'>Bit 0</td>
+	</tr>
+	<tr>
+		<td>0</td>
+		<td>2</td>
+		<td>command</td>
+		<td colspan=8>Get EtherCAT Status = 1018</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>1</td>
+		<td>param. 1</td>
+		<td colspan=8>Slot 번호 = 1 ~ 3</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>1</td>
+		<td>param. 2</td>
+		<td colspan=8> 연결된 슬레이브 리스트 = 5</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td rowspan=16>16</td>
+		<td rowspan=16>슬레이브 리스트</td>
+		<td>Node 7</td>
+		<td>Node 6</td>
+		<td>Node 5</td>
+		<td>Node 4</td>
+		<td>Node 3</td>
+		<td>Node 2</td>
+		<td>Node 1</td>
+		<td>Node 0</td>
+	</tr>
+	<tr>
+		<td>5</td>
+		<td>Node 15</td>
+		<td>Node 14</td>
+		<td>Node 13</td>
+		<td>Node 12</td>
+		<td>Node 11</td>
+		<td>Node 10</td>
+		<td>Node 9</td>
+		<td>Node 8</td>
+	</tr>
+		<tr>
+		<td>6</td>
+		<td>Node 23</td>
+		<td>Node 22</td>
+		<td>Node 21</td>
+		<td>Node 20</td>
+		<td>Node 19</td>
+		<td>Node 18</td>
+		<td>Node 17</td>
+		<td>Node 16</td>
+	</tr>
+		<tr>
+		<td>7</td>
+		<td>Node 31</td>
+		<td>Node 30</td>
+		<td>Node 29</td>
+		<td>Node 28</td>
+		<td>Node 27</td>
+		<td>Node 26</td>
+		<td>Node 25</td>
+		<td>Node 24</td>
+	</tr>
+		<tr>
+		<td>8</td>
+		<td>Node 39</td>
+		<td>Node 38</td>
+		<td>Node 37</td>
+		<td>Node 36</td>
+		<td>Node 35</td>
+		<td>Node 34</td>
+		<td>Node 33</td>
+		<td>Node 32</td>
+	</tr>
+		<tr>
+		<td>9</td>
+		<td>Node 47</td>
+		<td>Node 46</td>
+		<td>Node 45</td>
+		<td>Node 44</td>
+		<td>Node 43</td>
+		<td>Node 42</td>
+		<td>Node 41</td>
+		<td>Node 40</td>
+	</tr>
+		<tr>
+		<td>10</td>
+		<td>Node 55</td>
+		<td>Node 54</td>
+		<td>Node 53</td>
+		<td>Node 52</td>
+		<td>Node 51</td>
+		<td>Node 50</td>
+		<td>Node 49</td>
+		<td>Node 48</td>
+	</tr>
+		<tr>
+		<td>11</td>
+		<td>Node 63</td>
+		<td>Node 62</td>
+		<td>Node 61</td>
+		<td>Node 60</td>
+		<td>Node 59</td>
+		<td>Node 58</td>
+		<td>Node 57</td>
+		<td>Node 56</td>
+	</tr>
+		<tr>
+		<td>12</td>
+		<td>Node 71</td>
+		<td>Node 70</td>
+		<td>Node 69</td>
+		<td>Node 68</td>
+		<td>Node 67</td>
+		<td>Node 66</td>
+		<td>Node 65</td>
+		<td>Node 64</td>
+	</tr>
+		<tr>
+		<td>13</td>
+		<td>Node 79</td>
+		<td>Node 78</td>
+		<td>Node 77</td>
+		<td>Node 76</td>
+		<td>Node 75</td>
+		<td>Node 74</td>
+		<td>Node 73</td>
+		<td>Node 72</td>
+	</tr>
+		<tr>
+		<td>14</td>
+		<td>Node 87</td>
+		<td>Node 86</td>
+		<td>Node 85</td>
+		<td>Node 84</td>
+		<td>Node 83</td>
+		<td>Node 82</td>
+		<td>Node 81</td>
+		<td>Node 80</td>
+	</tr>
+		<tr>
+		<td>15</td>
+		<td>Node 95</td>
+		<td>Node 94</td>
+		<td>Node 93</td>
+		<td>Node 92</td>
+		<td>Node 91</td>
+		<td>Node 90</td>
+		<td>Node 89</td>
+		<td>Node 88</td>
+	</tr>
+		<tr>
+		<td>16</td>
+		<td>Node 103</td>
+		<td>Node 102</td>
+		<td>Node 101</td>
+		<td>Node 100</td>
+		<td>Node 99</td>
+		<td>Node 98</td>
+		<td>Node 97</td>
+		<td>Node 96</td>
+	</tr>
+		<tr>
+		<td>17</td>
+		<td>Node 111</td>
+		<td>Node 110</td>
+		<td>Node 109</td>
+		<td>Node 108</td>
+		<td>Node 107</td>
+		<td>Node 106</td>
+		<td>Node 105</td>
+		<td>Node 104</td>
+	</tr>
+		<tr>
+		<td>18</td>
+		<td>Node 119</td>
+		<td>Node 118</td>
+		<td>Node 117</td>
+		<td>Node 116</td>
+		<td>Node 115</td>
+		<td>Node 114</td>
+		<td>Node 113</td>
+		<td>Node 112</td>
+	</tr>
+		<tr>
+		<td>19</td>
+		<td>Node 127</td>
+		<td>Node 126</td>
+		<td>Node 125</td>
+		<td>Node 124</td>
+		<td>Node 123</td>
+		<td>Node 122</td>
+		<td>Node 121</td>
+		<td>Node 120</td>
+	</tr>
+</tbody>
+</table>
+
+
+<br>
+
+<table class="tg">
+<thead>
+	<tr>
+		<th colspan=2>S Offset</th>
+		<th>이름</th>
+		<th colspan=8>설명 or Bit Index</th>
+	</tr>
+</thead>
+
+<tbody>
+	<tr>
+		<td class='powderblued'>시작</td>
+		<td class='powderblued'>크기</td>
+		<td class='powderblued'>릴레이</td>
+		<td class='powderblued'>Bit 7</td>
+		<td class='powderblued'>Bit 6</td>
+		<td class='powderblued'>Bit 5</td>
+		<td class='powderblued'>Bit 4</td>
+		<td class='powderblued'>Bit 3</td>
+		<td class='powderblued'>Bit 2</td>
+		<td class='powderblued'>Bit 1</td>
+		<td class='powderblued'>Bit 0</td>
+	</tr>
+	<tr>
+		<td>0</td>
+		<td>2</td>
+		<td>command</td>
+		<td colspan=8>Get EtherCAT Status = 1018</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>1</td>
+		<td>param. 1</td>
+		<td colspan=8>Slot 번호 = 1 ~ 3</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>1</td>
+		<td>param. 2</td>
+		<td colspan=8>IO 교환 슬레이브 리스트 = 6</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td rowspan=16>16</td>
+		<td rowspan=16>슬레이브 리스트</td>
+		<td>Node 7</td>
+		<td>Node 6</td>
+		<td>Node 5</td>
+		<td>Node 4</td>
+		<td>Node 3</td>
+		<td>Node 2</td>
+		<td>Node 1</td>
+		<td>Node 0</td>
+	</tr>
+	<tr>
+		<td>5</td>
+		<td>Node 15</td>
+		<td>Node 14</td>
+		<td>Node 13</td>
+		<td>Node 12</td>
+		<td>Node 11</td>
+		<td>Node 10</td>
+		<td>Node 9</td>
+		<td>Node 8</td>
+	</tr>
+		<tr>
+		<td>6</td>
+		<td>Node 23</td>
+		<td>Node 22</td>
+		<td>Node 21</td>
+		<td>Node 20</td>
+		<td>Node 19</td>
+		<td>Node 18</td>
+		<td>Node 17</td>
+		<td>Node 16</td>
+	</tr>
+		<tr>
+		<td>7</td>
+		<td>Node 31</td>
+		<td>Node 30</td>
+		<td>Node 29</td>
+		<td>Node 28</td>
+		<td>Node 27</td>
+		<td>Node 26</td>
+		<td>Node 25</td>
+		<td>Node 24</td>
+	</tr>
+		<tr>
+		<td>8</td>
+		<td>Node 39</td>
+		<td>Node 38</td>
+		<td>Node 37</td>
+		<td>Node 36</td>
+		<td>Node 35</td>
+		<td>Node 34</td>
+		<td>Node 33</td>
+		<td>Node 32</td>
+	</tr>
+		<tr>
+		<td>9</td>
+		<td>Node 47</td>
+		<td>Node 46</td>
+		<td>Node 45</td>
+		<td>Node 44</td>
+		<td>Node 43</td>
+		<td>Node 42</td>
+		<td>Node 41</td>
+		<td>Node 40</td>
+	</tr>
+		<tr>
+		<td>10</td>
+		<td>Node 55</td>
+		<td>Node 54</td>
+		<td>Node 53</td>
+		<td>Node 52</td>
+		<td>Node 51</td>
+		<td>Node 50</td>
+		<td>Node 49</td>
+		<td>Node 48</td>
+	</tr>
+		<tr>
+		<td>11</td>
+		<td>Node 63</td>
+		<td>Node 62</td>
+		<td>Node 61</td>
+		<td>Node 60</td>
+		<td>Node 59</td>
+		<td>Node 58</td>
+		<td>Node 57</td>
+		<td>Node 56</td>
+	</tr>
+		<tr>
+		<td>12</td>
+		<td>Node 71</td>
+		<td>Node 70</td>
+		<td>Node 69</td>
+		<td>Node 68</td>
+		<td>Node 67</td>
+		<td>Node 66</td>
+		<td>Node 65</td>
+		<td>Node 64</td>
+	</tr>
+		<tr>
+		<td>13</td>
+		<td>Node 79</td>
+		<td>Node 78</td>
+		<td>Node 77</td>
+		<td>Node 76</td>
+		<td>Node 75</td>
+		<td>Node 74</td>
+		<td>Node 73</td>
+		<td>Node 72</td>
+	</tr>
+		<tr>
+		<td>14</td>
+		<td>Node 87</td>
+		<td>Node 86</td>
+		<td>Node 85</td>
+		<td>Node 84</td>
+		<td>Node 83</td>
+		<td>Node 82</td>
+		<td>Node 81</td>
+		<td>Node 80</td>
+	</tr>
+		<tr>
+		<td>15</td>
+		<td>Node 95</td>
+		<td>Node 94</td>
+		<td>Node 93</td>
+		<td>Node 92</td>
+		<td>Node 91</td>
+		<td>Node 90</td>
+		<td>Node 89</td>
+		<td>Node 88</td>
+	</tr>
+		<tr>
+		<td>16</td>
+		<td>Node 103</td>
+		<td>Node 102</td>
+		<td>Node 101</td>
+		<td>Node 100</td>
+		<td>Node 99</td>
+		<td>Node 98</td>
+		<td>Node 97</td>
+		<td>Node 96</td>
+	</tr>
+		<tr>
+		<td>17</td>
+		<td>Node 111</td>
+		<td>Node 110</td>
+		<td>Node 109</td>
+		<td>Node 108</td>
+		<td>Node 107</td>
+		<td>Node 106</td>
+		<td>Node 105</td>
+		<td>Node 104</td>
+	</tr>
+		<tr>
+		<td>18</td>
+		<td>Node 119</td>
+		<td>Node 118</td>
+		<td>Node 117</td>
+		<td>Node 116</td>
+		<td>Node 115</td>
+		<td>Node 114</td>
+		<td>Node 113</td>
+		<td>Node 112</td>
+	</tr>
+		<tr>
+		<td>19</td>
+		<td>Node 127</td>
+		<td>Node 126</td>
+		<td>Node 125</td>
+		<td>Node 124</td>
+		<td>Node 123</td>
+		<td>Node 122</td>
+		<td>Node 121</td>
+		<td>Node 120</td>
+	</tr>
+</tbody>
+</table>
+
+
+<br>
+
+<table class="tg">
+<thead>
+	<tr>
+		<th colspan=2>S Offset</th>
+		<th>이름</th>
+		<th colspan=8>설명 or Bit Index</th>
+	</tr>
+</thead>
+
+<tbody>
+	<tr>
+		<td class='powderblued'>시작</td>
+		<td class='powderblued'>크기</td>
+		<td class='powderblued'>릴레이</td>
+		<td class='powderblued'>Bit 7</td>
+		<td class='powderblued'>Bit 6</td>
+		<td class='powderblued'>Bit 5</td>
+		<td class='powderblued'>Bit 4</td>
+		<td class='powderblued'>Bit 3</td>
+		<td class='powderblued'>Bit 2</td>
+		<td class='powderblued'>Bit 1</td>
+		<td class='powderblued'>Bit 0</td>
+	</tr>
+	<tr>
+		<td>0</td>
+		<td>2</td>
+		<td>command</td>
+		<td colspan=8>Get EtherCAT Status = 1018</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>1</td>
+		<td>param. 1</td>
+		<td colspan=8>Slot 번호 = 1 ~ 3</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>1</td>
+		<td>param. 2</td>
+		<td colspan=8>진단 슬레이브 리스트 = 7</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td rowspan=16>16</td>
+		<td rowspan=16>슬레이브 리스트</td>
+		<td>Node 7</td>
+		<td>Node 6</td>
+		<td>Node 5</td>
+		<td>Node 4</td>
+		<td>Node 3</td>
+		<td>Node 2</td>
+		<td>Node 1</td>
+		<td>Node 0</td>
+	</tr>
+	<tr>
+		<td>5</td>
+		<td>Node 15</td>
+		<td>Node 14</td>
+		<td>Node 13</td>
+		<td>Node 12</td>
+		<td>Node 11</td>
+		<td>Node 10</td>
+		<td>Node 9</td>
+		<td>Node 8</td>
+	</tr>
+		<tr>
+		<td>6</td>
+		<td>Node 23</td>
+		<td>Node 22</td>
+		<td>Node 21</td>
+		<td>Node 20</td>
+		<td>Node 19</td>
+		<td>Node 18</td>
+		<td>Node 17</td>
+		<td>Node 16</td>
+	</tr>
+		<tr>
+		<td>7</td>
+		<td>Node 31</td>
+		<td>Node 30</td>
+		<td>Node 29</td>
+		<td>Node 28</td>
+		<td>Node 27</td>
+		<td>Node 26</td>
+		<td>Node 25</td>
+		<td>Node 24</td>
+	</tr>
+		<tr>
+		<td>8</td>
+		<td>Node 39</td>
+		<td>Node 38</td>
+		<td>Node 37</td>
+		<td>Node 36</td>
+		<td>Node 35</td>
+		<td>Node 34</td>
+		<td>Node 33</td>
+		<td>Node 32</td>
+	</tr>
+		<tr>
+		<td>9</td>
+		<td>Node 47</td>
+		<td>Node 46</td>
+		<td>Node 45</td>
+		<td>Node 44</td>
+		<td>Node 43</td>
+		<td>Node 42</td>
+		<td>Node 41</td>
+		<td>Node 40</td>
+	</tr>
+		<tr>
+		<td>10</td>
+		<td>Node 55</td>
+		<td>Node 54</td>
+		<td>Node 53</td>
+		<td>Node 52</td>
+		<td>Node 51</td>
+		<td>Node 50</td>
+		<td>Node 49</td>
+		<td>Node 48</td>
+	</tr>
+		<tr>
+		<td>11</td>
+		<td>Node 63</td>
+		<td>Node 62</td>
+		<td>Node 61</td>
+		<td>Node 60</td>
+		<td>Node 59</td>
+		<td>Node 58</td>
+		<td>Node 57</td>
+		<td>Node 56</td>
+	</tr>
+		<tr>
+		<td>12</td>
+		<td>Node 71</td>
+		<td>Node 70</td>
+		<td>Node 69</td>
+		<td>Node 68</td>
+		<td>Node 67</td>
+		<td>Node 66</td>
+		<td>Node 65</td>
+		<td>Node 64</td>
+	</tr>
+		<tr>
+		<td>13</td>
+		<td>Node 79</td>
+		<td>Node 78</td>
+		<td>Node 77</td>
+		<td>Node 76</td>
+		<td>Node 75</td>
+		<td>Node 74</td>
+		<td>Node 73</td>
+		<td>Node 72</td>
+	</tr>
+		<tr>
+		<td>14</td>
+		<td>Node 87</td>
+		<td>Node 86</td>
+		<td>Node 85</td>
+		<td>Node 84</td>
+		<td>Node 83</td>
+		<td>Node 82</td>
+		<td>Node 81</td>
+		<td>Node 80</td>
+	</tr>
+		<tr>
+		<td>15</td>
+		<td>Node 95</td>
+		<td>Node 94</td>
+		<td>Node 93</td>
+		<td>Node 92</td>
+		<td>Node 91</td>
+		<td>Node 90</td>
+		<td>Node 89</td>
+		<td>Node 88</td>
+	</tr>
+		<tr>
+		<td>16</td>
+		<td>Node 103</td>
+		<td>Node 102</td>
+		<td>Node 101</td>
+		<td>Node 100</td>
+		<td>Node 99</td>
+		<td>Node 98</td>
+		<td>Node 97</td>
+		<td>Node 96</td>
+	</tr>
+		<tr>
+		<td>17</td>
+		<td>Node 111</td>
+		<td>Node 110</td>
+		<td>Node 109</td>
+		<td>Node 108</td>
+		<td>Node 107</td>
+		<td>Node 106</td>
+		<td>Node 105</td>
+		<td>Node 104</td>
+	</tr>
+		<tr>
+		<td>18</td>
+		<td>Node 119</td>
+		<td>Node 118</td>
+		<td>Node 117</td>
+		<td>Node 116</td>
+		<td>Node 115</td>
+		<td>Node 114</td>
+		<td>Node 113</td>
+		<td>Node 112</td>
+	</tr>
+		<tr>
+		<td>19</td>
+		<td>Node 127</td>
+		<td>Node 126</td>
+		<td>Node 125</td>
+		<td>Node 124</td>
+		<td>Node 123</td>
+		<td>Node 122</td>
+		<td>Node 121</td>
+		<td>Node 120</td>
+	</tr>
+</tbody>
+</table># 3.4.15 S realy - IP_INFO
+
+<style type="text/css">
+table  {border-collapse:collapse;}
+td {border-color:gray;border-style:solid;border-width:1px;}
+.grayed {background-color:lightgray;}
+</style>
+
+<table class="tg">
+<thead>
+	<tr>
+		<th>S offset</th>
+		<th>field</th>
+		<th>description</th>
+		<th>type</th>
+	</tr>
+</thead>
+
+<tbody>
+	<tr>
+		<td>0</td>
+		<td>command</td>
+		<td>GET_IP_INFO (172)</td>
+		<td>s2</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>param 1</td>
+		<td>LAN (1~3)</td>
+		<td>s2</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td rowspan=6>result</td>
+		<td>IP - 1</td>
+		<td>s2</td>
+	</tr>
+	<tr>
+		<td>6</td>
+		<td>IP - 2</td>
+		<td>s2</td>
+	</tr>
+	<tr>
+		<td>8</td>
+		<td>IP - 3</td>
+		<td>s2</td>
+	</tr>
+	<tr>
+		<td>10</td>
+		<td>IP - 4</td>
+		<td>s2</td>
+	</tr>
+</tbody>
+</table># 3.5 Designating indirect addresses for relays
 
 SW62–SW79 are system memories for designating indirect addresses. Regardless of the relay type, if a value between -2 and -18 is designated for a relay address, the set value will lead to a designated relay address stored in SW62–SW79.
 

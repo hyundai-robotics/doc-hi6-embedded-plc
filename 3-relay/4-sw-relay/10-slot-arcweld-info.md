@@ -1,4 +1,4 @@
-﻿# 3.4.15 S realy - IP_INFO
+﻿# 3.4.10 S realy - ARCWELD_INFO
 
 <style type="text/css">
 table  {border-collapse:collapse;}
@@ -20,35 +20,41 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	<tr>
 		<td>0</td>
 		<td>command</td>
-		<td>GET_IP_INFO (172)</td>
+		<td>GET_ARCTWELD_INFO (3000)</td>
 		<td>s2</td>
 	</tr>
 	<tr>
 		<td>2</td>
 		<td>param 1</td>
-		<td>LAN (1~3)</td>
-		<td>s2</td>
+		<td>welder_no (0~1)</td>
+		<td>s1</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>param 2</td>
+		<td>twin_no (0~1)</td>
+		<td>s1</td>
 	</tr>
 	<tr>
 		<td>4</td>
-		<td rowspan=6>result</td>
-		<td>IP - 1</td>
-		<td>s2</td>
-	</tr>
-	<tr>
-		<td>6</td>
-		<td>IP - 2</td>
-		<td>s2</td>
+		<td rowspan=5>result</td>
+		<td>welding current</td>
+		<td>f4</td>
 	</tr>
 	<tr>
 		<td>8</td>
-		<td>IP - 3</td>
-		<td>s2</td>
+		<td>welding voltage</td>
+		<td>f4</td>
 	</tr>
 	<tr>
-		<td>10</td>
-		<td>IP - 4</td>
-		<td>s2</td>
+		<td>12</td>
+		<td>welder error</td>
+		<td>s4</td>
+	</tr>
+	<tr>
+		<td>16</td>
+		<td>wire feeding speed</td>
+		<td>f4</td>
 	</tr>
 </tbody>
 </table>

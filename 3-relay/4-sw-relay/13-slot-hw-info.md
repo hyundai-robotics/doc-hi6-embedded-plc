@@ -1,4 +1,4 @@
-﻿# 3.4.13 S 릴레이 - HW_INFO
+﻿# 3.4.13 S realy - HW_INFO
 
 <style type="text/css">
 table  {border-collapse:collapse;}
@@ -26,17 +26,17 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	<tr>
 		<td>2</td>
 		<td rowspan=6>result</td>
-		<td>cpu 온도 * 10</td>
+		<td>cpu temperature * 10</td>
 		<td>s2</td>
 	</tr>
 	<tr>
 		<td>4</td>
-		<td>메인보드 온도 * 10</td>
+		<td>main board temperature * 10</td>
 		<td>s2</td>
 	</tr>
 	<tr>
 		<td>6</td>
-		<td>시스템보드 온도 * 10</td>
+		<td>system board temperature * 10</td>
 		<td>s2</td>
 	</tr>
 </tbody>

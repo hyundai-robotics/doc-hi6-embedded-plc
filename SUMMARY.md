@@ -33,6 +33,7 @@
       * [3.4.14.3 EtherNet/IP Master 상태 릴레이](3-relay/4-sw-relay/14-slot-cifx-info/3-slot-ethernet-ip-info.md)
       * [3.4.14.4 Profinet IO Master 상태 릴레이](3-relay/4-sw-relay/14-slot-cifx-info/4-slot-profinet-io-info.md)
       * [3.4.14.5 EtherCAT Master 상태 릴레이](3-relay/4-sw-relay/14-slot-cifx-info/5-slot-ethercat-info.md)
+    * [3.4.15 S 릴레이 - IP_INFO](3-relay/4-sw-relay/15-slot-ip-info.md) 
   * [3.5 릴레이 간접 주소 지정](3-relay/5-relative-addr.md)
 
 * [4. 명령 (instruction)](4-instruction/README.md)

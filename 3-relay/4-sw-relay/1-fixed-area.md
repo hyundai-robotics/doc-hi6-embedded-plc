@@ -46,7 +46,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>On if the label is duplicated</td>
 		<td>On if there are more than 100 labels</td>
 		<td>On if the label is not a constant</td>
-		<td>Y relay direct output allowable if on</td>
+		<td class='grayed'></td>
 		<td>4-sec clock</td>
 		<td>2-sec clock</td>
 		<td></td>

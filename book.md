@@ -525,7 +525,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>Label이 중복될때 on</td>
 		<td>Label이 100개 이상일때 on</td>
 		<td>Label이 상수가 아닐때 on</td>
-		<td>On이면 Y릴레이 직접출력 허용</td>
+		<td class='grayed'></td>
 		<td>4초 clock</td>
 		<td>2초 clock</td>
 		<td></td>

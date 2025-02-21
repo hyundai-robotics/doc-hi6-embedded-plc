@@ -76,3 +76,33 @@ ex 1) Playback speed setting
 </table>
 
 ![](../../_assets/playback_speed.png)
+
+<br>
+<br>
+ex 2) Tool number change
+<table class="tg">
+<thead>
+	<tr>
+		<th>S offset</th>
+		<th>field</th>
+		<th>description</th>
+		<th>type</th>
+	</tr>
+</thead>
+<tbody>
+	<tr>
+		<td>2</td>
+		<td>param 1</td>
+		<td>40 = Tool number</td>
+		<td>s2</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td>param 1</td>
+		<td>value</td>
+		<td>s1</td>
+	</tr>
+</tbody>
+</table>
+
+![](../../_assets/tool_change.png)

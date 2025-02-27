@@ -186,7 +186,7 @@ FB3.DIW21
 
   FB의 일부 영역을 FN0 ~ FN63의 객체명으로 매핑해 사용할 수도 있습니다. FN영역을 설정하는 방법은 아래 링크를 참조하십시오.
 
-  [조작설명서: 7.3.2.12 fn 블럭 할당](https://hrbook-hrc.web.app/#/view/doc-hi6-operation/korean-tp630/7-setting/3-control-parameter/2-io-signal-setting/12-fn-block)
+  [조작설명서: 7.3.2.12 fn 블럭 할당](https://hrbook-hrc.web.app/#/view/doc-hi6-operation/korean-tp630/7-system/3-control-parameter/2-io-signal-setting/12-fn-block)
 
 * relay-type  
 아래와 같이 총 10가지 type이 있습니다.
@@ -1877,6 +1877,37 @@ ex 1) 재생속도 설정
 </table>
 
 ![](../../_assets/playback_speed.png)
+
+
+<br>
+<br>
+ex 2) 툴번호 변경
+<table class="tg">
+<thead>
+	<tr>
+		<th>S offset</th>
+		<th>field</th>
+		<th>description</th>
+		<th>type</th>
+	</tr>
+</thead>
+<tbody>
+	<tr>
+		<td>2</td>
+		<td>param 1</td>
+		<td>40 = 툴번호</td>
+		<td>s2</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td>param 1</td>
+		<td>value</td>
+		<td>s1</td>
+	</tr>
+</tbody>
+</table>
+
+![](../../_assets/tool_change.png)
 # 3.4.13 S 릴레이 - HW_INFO
 
 <style type="text/css">
@@ -7458,7 +7489,60 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>s2</td>
 	</tr>
 </tbody>
-</table># 3.5 릴레이 간접 주소 지정
+</table># 3.4.16 S 릴레이 - MECH_INFO
+
+V60.30-01부터 지원됩니다.
+
+<style type="text/css">
+table  {border-collapse:collapse;}
+td {border-color:gray;border-style:solid;border-width:1px;}
+.grayed {background-color:lightgray;}
+</style>
+
+<table class="tg">
+<thead>
+	<tr>
+		<th>S offset</th>
+		<th>field</th>
+		<th>description</th>
+		<th>type</th>
+	</tr>
+</thead>
+
+<tbody>
+	<tr>
+		<td>0</td>
+		<td>command</td>
+		<td>GET_MECH_INFO (122)</td>
+		<td>s2</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>param. 1</td>
+		<td>type<br>1 = 현재 메커니즘 번호</td>
+		<td>s2</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td>-</td>
+		<td class='grayed'></td>
+		<td class='grayed'></td>
+	</tr>
+	<tr>
+		<td>6</td>
+		<td>-</td>
+		<td class='grayed'></td>
+		<td class='grayed'></td>
+	</tr>
+	<tr>
+		<td>8</td>
+		<td>result</td>
+		<td>현재 메커니즘 번호 (0 ~ 7)</td>
+		<td>s2</td>
+	</tr>
+</tbody>
+</table>
+# 3.5 릴레이 간접 주소 지정
 
 SW62~SW79는 간접 주소 지정을 위한 시스템 메모리입니다. 릴레이 형식에 관계없이 릴레이 번지를 -2 ~ -18 의 값으로 
 지정하면 SW62~SW79에 저장된 값의 번지로 지정됩니다.

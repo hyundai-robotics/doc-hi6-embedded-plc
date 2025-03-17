@@ -1,4 +1,4 @@
-﻿# 3.4.14 S 릴레이 - CIFX 산업용 통신 상태 릴레이
+﻿# 3.4.14 S relay - CIFX PCI Communication Status
 
 <style type="text/css">
 table  {border-collapse:collapse;}
@@ -9,7 +9,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 
 <br>
 
-### 산업용 통신 상태 (CIFX PCI Status) 영역
+### CIFX PCI Common Status
 
 <br>
 
@@ -18,16 +18,16 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 <thead>
 	<tr>
 		<th colspan=2>S Offset</th>
-		<th>이름</th>
-		<th colspan=8>설명 or Bit Index</th>
+		<th>Name</th>
+		<th colspan=8>Description or Bit Index</th>
 	</tr>
 </thead>
 
 <tbody>
 	<tr>
-		<td class='powderblued'>시작</td>
-		<td class='powderblued'>크기</td>
-		<td class='powderblued'>릴레이</td>
+		<td class='powderblued'>Start</td>
+		<td class='powderblued'>Size</td>
+		<td class='powderblued'>Relay</td>
 		<td class='powderblued'>Bit 7</td>
 		<td class='powderblued'>Bit 6</td>
 		<td class='powderblued'>Bit 5</td>
@@ -47,21 +47,21 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>2</td>
 		<td>1</td>
 		<td>param. 1</td>
-		<td colspan=8>Slot 번호 = 1 ~ 3</td>
+		<td colspan=8>Slot Number = 1 ~ 3</td>
 	</tr>
 	<tr>
 		<td>3</td>
 		<td>1</td>
 		<td>param. 2</td>
-		<td colspan=8>상태 1 = 1</td>
+		<td colspan=8>Status 1 = 1</td>
 	</tr>
 	<tr>
 		<td>4</td>
 		<td>4</td>
-		<td>채널 상태</td>
+		<td>Channel Status</td>
 		<td class='grayed'></td>
-		<td>Restart 가능</td>
-		<td>Restart 필요</td>
+		<td>Restart Required Enable</td>
+		<td>Restart Required</td>
 		<td>Config New</td>
 		<td>Config Lock</td>
 		<td>Bus On</td>
@@ -71,19 +71,19 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	<tr>
 		<td>8</td>
 		<td>4</td>
-		<td>통신 상태</td>
+		<td>Communication Status</td>
 		<td colspan=8>0 = Unknown, <br> 1 =  Not Configured, <br> 2 = Stop, <br> 3 = Idle, <br> 4 = Operate</td>
 	</tr>
 	<tr>
 		<td>12</td>
 		<td>4</td>
-		<td>통신 에러 코드</td>
-		<td colspan=8>0 = 정상, <br> 그외 =  Error Code (32Bit Hexa)</td>
+		<td>Communication Error Code</td>
+		<td colspan=8>0 = No Error, <br> Non-zero =  Error Code (32Bit Hexa)</td>
 	</tr>
 	<tr>
 		<td>16</td>
 		<td>2</td>
-		<td>상태 진단 버전</td>
+		<td>Version of Diagnosis Structure</td>
 		<td colspan=8></td>
 	</tr>
 	<tr>
@@ -103,16 +103,16 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 <thead>
 	<tr>
 		<th colspan=2>S Offset</th>
-		<th>이름</th>
-		<th colspan=8>설명 or Bit Index</th>
+		<th>Name</th>
+		<th colspan=8>Description or Bit Index</th>
 	</tr>
 </thead>
 
 <tbody>
 	<tr>
-		<td class='powderblued'>시작</td>
-		<td class='powderblued'>크기</td>
-		<td class='powderblued'>릴레이</td>
+		<td class='powderblued'>Start</td>
+		<td class='powderblued'>Size</td>
+		<td class='powderblued'>Relay</td>
 		<td class='powderblued'>Bit 7</td>
 		<td class='powderblued'>Bit 6</td>
 		<td class='powderblued'>Bit 5</td>
@@ -132,13 +132,13 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>2</td>
 		<td>1</td>
 		<td>param. 1</td>
-		<td colspan=8>Slot 번호 = 1 ~ 3</td>
+		<td colspan=8>Slot Number = 1 ~ 3</td>
 	</tr>
 	<tr>
 		<td>3</td>
 		<td>1</td>
 		<td>param. 2</td>
-		<td colspan=8>상태 2 = 2</td>
+		<td colspan=8>Status 2 = 2</td>
 	</tr>
 	<tr>
 		<td>4</td>
@@ -173,7 +173,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	<tr>
 		<td>12</td>
 		<td>4</td>
-		<td>통신에러 누적 횟수</td>
+		<td>Communication Error Count</td>
 		<td colspan=8></td>
 	</tr>
 	<tr>
@@ -211,16 +211,16 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 <thead>
 	<tr>
 		<th colspan=2>S Offset</th>
-		<th>이름</th>
-		<th colspan=8>설명 or Bit Index</th>
+		<th>Name</th>
+		<th colspan=8>Description or Bit Index</th>
 	</tr>
 </thead>
 
 <tbody>
 	<tr>
-		<td class='powderblued'>시작</td>
-		<td class='powderblued'>크기</td>
-		<td class='powderblued'>릴레이</td>
+		<td class='powderblued'>Start</td>
+		<td class='powderblued'>Size</td>
+		<td class='powderblued'>Relay</td>
 		<td class='powderblued'>Bit 7</td>
 		<td class='powderblued'>Bit 6</td>
 		<td class='powderblued'>Bit 5</td>
@@ -240,13 +240,13 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>2</td>
 		<td>1</td>
 		<td>param. 1</td>
-		<td colspan=8>Slot 번호 = 1 ~ 3</td>
+		<td colspan=8>Slot Number = 1 ~ 3</td>
 	</tr>
 	<tr>
 		<td>3</td>
 		<td>1</td>
 		<td>param. 2</td>
-		<td colspan=8>상태 3 = 3</td>
+		<td colspan=8>Status 3 = 3</td>
 	</tr>
 	<tr>
 		<td>4</td>
@@ -259,7 +259,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 
 <br>
 
-### 산업용 통신 상태 (Master Only) 영역
+### CIFX PCI Master Only
 
 <br>
 
@@ -267,16 +267,16 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 <thead>
 	<tr>
 		<th colspan=2>S Offset</th>
-		<th>이름</th>
-		<th colspan=8>설명 or Bit Index</th>
+		<th>Name</th>
+		<th colspan=8>Description or Bit Index</th>
 	</tr>
 </thead>
 
 <tbody>
 	<tr>
-		<td class='powderblued'>시작</td>
-		<td class='powderblued'>크기</td>
-		<td class='powderblued'>릴레이</td>
+		<td class='powderblued'>Start</td>
+		<td class='powderblued'>Size</td>
+		<td class='powderblued'>Relay</td>
 		<td class='powderblued'>Bit 7</td>
 		<td class='powderblued'>Bit 6</td>
 		<td class='powderblued'>Bit 5</td>
@@ -296,18 +296,18 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>2</td>
 		<td>1</td>
 		<td>param. 1</td>
-		<td colspan=8>Slot 번호 = 1 ~ 3</td>
+		<td colspan=8>Slot Number = 1 ~ 3</td>
 	</tr>
 	<tr>
 		<td>3</td>
 		<td>1</td>
 		<td>param. 2</td>
-		<td colspan=8>상태 4 = 4</td>
+		<td colspan=8>Status 4 = 4</td>
 	</tr>
 	<tr>
 		<td>4</td>
 		<td>4</td>
-		<td>슬레이브 통신 상태</td>
+		<td>Slave Status</td>
 		<td colspan=8>0 = Unknown, <br> 1 = OK, <br> 2 = FAILED</td>
 	</tr>
 	<tr>
@@ -319,13 +319,13 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	<tr>
 		<td>12</td>
 		<td>4</td>
-		<td>연결된 슬레이브 수</td>
+		<td>Number of Configured Slaves</td>
 		<td colspan=8></td>
 	</tr>
 	<tr>
 		<td>16</td>
 		<td>4</td>
-		<td>정상동작 슬레이브 수</td>
+		<td>Number of Active Slaves</td>
 		<td colspan=8></td>
 	</tr>
 </tbody>
@@ -337,16 +337,16 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 <thead>
 	<tr>
 		<th colspan=2>S Offset</th>
-		<th>이름</th>
-		<th colspan=8>설명 or Bit Index</th>
+		<th>Name</th>
+		<th colspan=8>Description or Bit Index</th>
 	</tr>
 </thead>
 
 <tbody>
 	<tr>
-		<td class='powderblued'>시작</td>
-		<td class='powderblued'>크기</td>
-		<td class='powderblued'>릴레이</td>
+		<td class='powderblued'>Start</td>
+		<td class='powderblued'>Size</td>
+		<td class='powderblued'>Relay</td>
 		<td class='powderblued'>Bit 7</td>
 		<td class='powderblued'>Bit 6</td>
 		<td class='powderblued'>Bit 5</td>
@@ -366,18 +366,18 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>2</td>
 		<td>1</td>
 		<td>param. 1</td>
-		<td colspan=8>Slot 번호 = 1 ~ 3</td>
+		<td colspan=8>Slot Number = 1 ~ 3</td>
 	</tr>
 	<tr>
 		<td>3</td>
 		<td>1</td>
 		<td>param. 2</td>
-		<td colspan=8>상태 5 = 5</td>
+		<td colspan=8>Status 5 = 5</td>
 	</tr>
 	<tr>
 		<td>4</td>
 		<td>4</td>
-		<td>진단 슬레이브 수</td>
+		<td>Number of Diagnostic Slaves</td>
 		<td colspan=8></td>
 	</tr>
 	<tr>

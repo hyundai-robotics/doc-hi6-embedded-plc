@@ -1,4 +1,4 @@
-﻿# 3.4.14.5 S 릴레이 - EtherCAT Master 상태 릴레이
+﻿# 3.4.14.5 S relay - EtherCAT Master Status
 
 <style type="text/css">
 table  {border-collapse:collapse;}
@@ -22,16 +22,16 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 <thead>
 	<tr>
 		<th colspan=2>S Offset</th>
-		<th>이름</th>
-		<th colspan=8>설명 or Bit Index</th>
+		<th>Name</th>
+		<th colspan=8>Description or Bit Index</th>
 	</tr>
 </thead>
 
 <tbody>
 	<tr>
-		<td class='powderblued'>시작</td>
-		<td class='powderblued'>크기</td>
-		<td class='powderblued'>릴레이</td>
+		<td class='powderblued'>Start</td>
+		<td class='powderblued'>Size</td>
+		<td class='powderblued'>Relay</td>
 		<td class='powderblued'>Bit 7</td>
 		<td class='powderblued'>Bit 6</td>
 		<td class='powderblued'>Bit 5</td>
@@ -247,16 +247,16 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 <thead>
 	<tr>
 		<th colspan=2>S Offset</th>
-		<th>이름</th>
-		<th colspan=8>설명 or Bit Index</th>
+		<th>Name</th>
+		<th colspan=8>Description or Bit Index</th>
 	</tr>
 </thead>
 
 <tbody>
 	<tr>
-		<td class='powderblued'>시작</td>
-		<td class='powderblued'>크기</td>
-		<td class='powderblued'>릴레이</td>
+		<td class='powderblued'>Start</td>
+		<td class='powderblued'>Size</td>
+		<td class='powderblued'>Relay</td>
 		<td class='powderblued'>Bit 7</td>
 		<td class='powderblued'>Bit 6</td>
 		<td class='powderblued'>Bit 5</td>
@@ -472,16 +472,16 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 <thead>
 	<tr>
 		<th colspan=2>S Offset</th>
-		<th>이름</th>
-		<th colspan=8>설명 or Bit Index</th>
+		<th>Name</th>
+		<th colspan=8>Description or Bit Index</th>
 	</tr>
 </thead>
 
 <tbody>
 	<tr>
-		<td class='powderblued'>시작</td>
-		<td class='powderblued'>크기</td>
-		<td class='powderblued'>릴레이</td>
+		<td class='powderblued'>Start</td>
+		<td class='powderblued'>Size</td>
+		<td class='powderblued'>Relay</td>
 		<td class='powderblued'>Bit 7</td>
 		<td class='powderblued'>Bit 6</td>
 		<td class='powderblued'>Bit 5</td>

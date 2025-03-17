@@ -9,7 +9,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 
 <br>
 
-### 산업용 통신 상태 (CIFX PCI Status) 영역
+### 산업용 통신 상태 (CIFX PCI Common Status) 공통 영역
 
 <br>
 

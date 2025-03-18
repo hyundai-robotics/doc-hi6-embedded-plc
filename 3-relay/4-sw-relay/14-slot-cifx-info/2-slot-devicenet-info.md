@@ -43,21 +43,21 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>2</td>
 		<td>1</td>
 		<td>param. 1</td>
-		<td colspan=8>Slot 번호 = 1 ~ 3</td>
+		<td colspan=8>Slot Number = 1 ~ 3</td>
 	</tr>
 	<tr>
 		<td>3</td>
 		<td>1</td>
 		<td>param. 2</td>
-		<td colspan=8>상태  = 1</td>
+		<td colspan=8>Status  = 1</td>
 	</tr>
 	<tr>
 		<td>4</td>
 		<td>1</td>
 		<td>Global Bits <br> (Profibus Master)</td>
-		<td>중복 MAC ID 확인중</td>
-		<td>중복된 MAC ID</td>
-		<td>Host 준비 안됨</td>
+		<td>Checking Duplicated MAC ID</td>
+		<td>Duplicated MAC ID</td>
+		<td>Host Not Ready</td>
 		<td>Bus Event Error</td>
 		<td>Fatal Error</td>
 		<td>Not Exchange Error</td>
@@ -67,37 +67,37 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	<tr>
 		<td>5</td>
 		<td>1</td>
-		<td>마스터 상태</td>
+		<td>Master Status</td>
 		<td colspan=8>0x00 = Offline, <br> 0x40 = Stop, <br> 0x80 = Idle, <br> 0xC0 = Run</td>
 	</tr>
 	<tr>
 		<td>6</td>
 		<td>1</td>
-		<td>에러 스테이션 번호</td>
+		<td>Error Station Address</td>
 		<td colspan=8></td>
 	</tr>
 	<tr>
 		<td>7</td>
 		<td>1</td>
-		<td>에러 코드</td>
-		<td colspan=8>DeviceNet Master Only <br> 52 = Unknown process data handshake mode, <br> 53 = Baudrate 에러, <br> 54 = MAC ID 에러, <br> 57 = 중복된 MAC ID, <br> 58 = 디바이스 없음, <br> 210 = 통신 설정 없음, <br> 212 = 통신 설정 읽기 실패, <br> 220 = User Watchdog Fail, <br> 221 = User Data 응답 없음, <br> 223 = 마스터 Stop (CAN Bus Off), <br> 226 = 해당 장치가 마스터 장치가 아님</td>
+		<td>Error Code</td>
+		<td colspan=8>DeviceNet Master Only <br> 52 = Unknown process data handshake mode, <br> 53 = Baudrate Error, <br> 54 = MAC ID Error, <br> 57 = Duplicated MAC ID, <br> 58 = No Device, <br> 210 = No Configuration, <br> 212 = Failed to Read Configuration, <br> 220 = User Watchdog Fail, <br> 221 = No Response of User Data, <br> 223 = Master Stop (CAN Bus Off), <br> 226 = The Device is not the Master</td>
 	</tr>
 	<tr>
 		<td>8</td>
 		<td>2</td>
-		<td>Bus Data 송수신 이상 횟수</td>
+		<td>Bus Data Transaction Error Count</td>
 		<td colspan=8></td>
 	</tr>
 	<tr>
 		<td>10</td>
 		<td>2</td>
-		<td>Bus Off 에러 횟수</td>
+		<td>Bus Off Error Count</td>
 		<td colspan=8></td>
 	</tr>
 	<tr>
 		<td>12</td>
 		<td>4</td>
-		<td>Bus 에러 코드</td>
+		<td>Bus Error Code</td>
 		<td colspan=8></td>
 	</tr>
 	<tr>
@@ -113,7 +113,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 <br>
 
 {% hint style="info" %}
-\.      슬레이브의 통신 연결 여부를 모니터링하는 경우 "IO 교환 슬레이브 리스트"를 확인해 주십시오.
+\.		If you want to monitor whether the slave is active, Please check "List of Slaves in IO Exchange".
 {% endhint %}
 
 <br>
@@ -152,18 +152,18 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>2</td>
 		<td>1</td>
 		<td>param. 1</td>
-		<td colspan=8>Slot 번호 = 1 ~ 3</td>
+		<td colspan=8>Slot Number = 1 ~ 3</td>
 	</tr>
 	<tr>
 		<td>3</td>
 		<td>1</td>
 		<td>param. 2</td>
-		<td colspan=8>활성 / 비활성 슬레이브 리스트 = 2</td>
+		<td colspan=8>List of Activated / Inactivated Slaves = 2</td>
 	</tr>
 	<tr>
 		<td>4</td>
 		<td rowspan=8>8</td>
-		<td rowspan=8>활성 슬레이브 리스트</td>
+		<td rowspan=8>List of Activated Slaves</td>
 		<td>Node 7</td>
 		<td>Node 6</td>
 		<td>Node 5</td>
@@ -253,7 +253,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	<tr>
 		<td>12</td>
 		<td rowspan=8>8</td>
-		<td rowspan=8>비활성 슬레이브 리스트</td>
+		<td rowspan=8>List of Inactivated Slaves</td>
 		<td>Node 7</td>
 		<td>Node 6</td>
 		<td>Node 5</td>
@@ -379,18 +379,18 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>2</td>
 		<td>1</td>
 		<td>param. 1</td>
-		<td colspan=8>Slot 번호 = 1 ~ 3</td>
+		<td colspan=8>Slot NUmber = 1 ~ 3</td>
 	</tr>
 	<tr>
 		<td>3</td>
 		<td>1</td>
 		<td>param. 2</td>
-		<td colspan=8>Explicit Message / IO 교환 슬레이브 리스트 = 3</td>
+		<td colspan=8>List of Slaves (Explicit Message / IO Exchange) = 3</td>
 	</tr>
 	<tr>
 		<td>4</td>
 		<td rowspan=8>8</td>
-		<td rowspan=8>Explicit Message 활성 슬레이브 리스트</td>
+		<td rowspan=8>List of Slaves Activated Explicit Message</td>
 		<td>Node 7</td>
 		<td>Node 6</td>
 		<td>Node 5</td>
@@ -480,7 +480,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	<tr>
 		<td>12</td>
 		<td rowspan=8>8</td>
-		<td rowspan=8>IO 교환 슬레이브 리스트</td>
+		<td rowspan=8>List of Slaves in IO Exchange</td>
 		<td>Node 7</td>
 		<td>Node 6</td>
 		<td>Node 5</td>
@@ -606,18 +606,18 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>2</td>
 		<td>1</td>
 		<td>param. 1</td>
-		<td colspan=8>Slot 번호 = 1 ~ 3</td>
+		<td colspan=8>Slot Number = 1 ~ 3</td>
 	</tr>
 	<tr>
 		<td>3</td>
 		<td>1</td>
 		<td>param. 2</td>
-		<td colspan=8>진단 슬레이브 리스트 = 4</td>
+		<td colspan=8>List of Diagnostic Slaves = 4</td>
 	</tr>
 	<tr>
 		<td>4</td>
 		<td rowspan=8>8</td>
-		<td rowspan=8>진단 슬레이브 리스트</td>
+		<td rowspan=8>List of Slaves</td>
 		<td>Node 7</td>
 		<td>Node 6</td>
 		<td>Node 5</td>
@@ -749,18 +749,18 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>2</td>
 		<td>1</td>
 		<td>param. 1</td>
-		<td colspan=8>Slot 번호 = 1 ~ 3</td>
+		<td colspan=8>Slot Number = 1 ~ 3</td>
 	</tr>
 	<tr>
 		<td>3</td>
 		<td>1</td>
 		<td>param. 2</td>
-		<td colspan=8> 연결된 슬레이브 리스트 = 5</td>
+		<td colspan=8> List of Configured Slaves = 5</td>
 	</tr>
 	<tr>
 		<td>4</td>
 		<td rowspan=8>8</td>
-		<td rowspan=8>슬레이브 리스트</td>
+		<td rowspan=8>List of Slaves</td>
 		<td>Node 7</td>
 		<td>Node 6</td>
 		<td>Node 5</td>
@@ -892,18 +892,18 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>2</td>
 		<td>1</td>
 		<td>param. 1</td>
-		<td colspan=8>Slot 번호 = 1 ~ 3</td>
+		<td colspan=8>Slot Number = 1 ~ 3</td>
 	</tr>
 	<tr>
 		<td>3</td>
 		<td>1</td>
 		<td>param. 2</td>
-		<td colspan=8>활성 슬레이브 리스트 = 6</td>
+		<td colspan=8>List of Activated Slaves = 6</td>
 	</tr>
 	<tr>
 		<td>4</td>
 		<td rowspan=8>8</td>
-		<td rowspan=8>슬레이브 리스트</td>
+		<td rowspan=8>List of Slaves</td>
 		<td>Node 7</td>
 		<td>Node 6</td>
 		<td>Node 5</td>
@@ -1035,18 +1035,18 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>2</td>
 		<td>1</td>
 		<td>param. 1</td>
-		<td colspan=8>Slot 번호 = 1 ~ 3</td>
+		<td colspan=8>Slot Number = 1 ~ 3</td>
 	</tr>
 	<tr>
 		<td>3</td>
 		<td>1</td>
 		<td>param. 2</td>
-		<td colspan=8>진단 슬레이브 리스트 = 7</td>
+		<td colspan=8>List of Diagnostic = 7</td>
 	</tr>
 	<tr>
 		<td>4</td>
 		<td rowspan=8>8</td>
-		<td rowspan=8>슬레이브 리스트</td>
+		<td rowspan=8>List of Slaves</td>
 		<td>Node 7</td>
 		<td>Node 6</td>
 		<td>Node 5</td>

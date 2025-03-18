@@ -43,37 +43,37 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>2</td>
 		<td>1</td>
 		<td>param. 1</td>
-		<td colspan=8>Slot 번호 = 1 ~ 3</td>
+		<td colspan=8>Slot Number = 1 ~ 3</td>
 	</tr>
 	<tr>
 		<td>3</td>
 		<td>1</td>
 		<td>param. 2</td>
-		<td colspan=8>상태  = 1</td>
+		<td colspan=8>Status  = 1</td>
 	</tr>
 	<tr>
 		<td>4</td>
 		<td>4</td>
-		<td>알람 횟수</td>
+		<td>Alarm Count</td>
 		<td colspan=8></td>
 	</tr>
 	<tr>
 		<td>8</td>
 		<td>4</td>
-		<td>경고 횟수</td>
+		<td>Warning Count</td>
 		<td colspan=8></td>
 	</tr>
 	<tr>
 		<td>12</td>
 		<td>4</td>
-		<td>에러 횟수</td>
+		<td>Error Count</td>
 		<td colspan=8></td>
 	</tr>
 	<tr>
 		<td>16</td>
 		<td>4</td>
-		<td>에러 레벨</td>
-		<td colspan=8>알람, 경고, 에러</td>
+		<td>Error Level</td>
+		<td colspan=8>Alarm, Warning, Error</td>
 	</tr>
 </tbody>
 </table>
@@ -114,30 +114,30 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>2</td>
 		<td>1</td>
 		<td>param. 1</td>
-		<td colspan=8>Slot 번호 = 1 ~ 3</td>
+		<td colspan=8>Slot Number = 1 ~ 3</td>
 	</tr>
 	<tr>
 		<td>3</td>
 		<td>1</td>
 		<td>param. 2</td>
-		<td colspan=8>상태  = 2</td>
+		<td colspan=8>Status  = 2</td>
 	</tr>
 	<tr>
 		<td>4</td>
 		<td>4</td>
-		<td>에러 코드</td>
+		<td>Error Code</td>
 		<td colspan=8></td>
 	</tr>
 	<tr>
 		<td>8</td>
 		<td>4</td>
-		<td>에러 코드 파라미터</td>
+		<td>Parameter of Error Code</td>
 		<td colspan=8></td>
 	</tr>
 	<tr>
 		<td>12</td>
 		<td>4</td>
-		<td>에러 발생 Source Line</td>
+		<td>Error Occurred Source Line</td>
 		<td colspan=8></td>
 	</tr>
 	<tr>
@@ -185,18 +185,18 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>2</td>
 		<td>1</td>
 		<td>param. 1</td>
-		<td colspan=8>Slot 번호 = 1 ~ 3</td>
+		<td colspan=8>Slot Number = 1 ~ 3</td>
 	</tr>
 	<tr>
 		<td>3</td>
 		<td>1</td>
 		<td>param. 2</td>
-		<td colspan=8>상태  = 3</td>
+		<td colspan=8>Status  = 3</td>
 	</tr>
 	<tr>
 		<td>4</td>
 		<td>12</td>
-		<td>에러 발생 Source Identifier</td>
+		<td>Error Occurred Source Identifier</td>
 		<td colspan=8></td>
 	</tr>
 	<tr>
@@ -212,7 +212,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 <br>
 
 {% hint style="info" %}
-\.      슬레이브의 통신 연결 여부를 모니터링하는 경우 "IO 교환 슬레이브 리스트"를 확인해 주십시오.
+\.		If you want to monitor whether the slave is active, Please check "List of Slaves in IO Exchange".
 {% endhint %}
 
 <br>
@@ -251,18 +251,18 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>2</td>
 		<td>1</td>
 		<td>param. 1</td>
-		<td colspan=8>Slot 번호 = 1 ~ 3</td>
+		<td colspan=8>Slot Number = 1 ~ 3</td>
 	</tr>
 	<tr>
 		<td>3</td>
 		<td>1</td>
 		<td>param. 2</td>
-		<td colspan=8> 연결된 슬레이브 리스트 = 5</td>
+		<td colspan=8> List of Configured Slaves = 5</td>
 	</tr>
 	<tr>
 		<td>4</td>
 		<td rowspan=16>16</td>
-		<td rowspan=16>슬레이브 리스트</td>
+		<td rowspan=16>List of Slaves</td>
 		<td>Node 7</td>
 		<td>Node 6</td>
 		<td>Node 5</td>
@@ -476,18 +476,18 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>2</td>
 		<td>1</td>
 		<td>param. 1</td>
-		<td colspan=8>Slot 번호 = 1 ~ 3</td>
+		<td colspan=8>Slot Number = 1 ~ 3</td>
 	</tr>
 	<tr>
 		<td>3</td>
 		<td>1</td>
 		<td>param. 2</td>
-		<td colspan=8>IO 교환 슬레이브 리스트 = 6</td>
+		<td colspan=8>List of Slaves in IO Exchange = 6</td>
 	</tr>
 	<tr>
 		<td>4</td>
 		<td rowspan=16>16</td>
-		<td rowspan=16>슬레이브 리스트</td>
+		<td rowspan=16>List of Slaves</td>
 		<td>Node 7</td>
 		<td>Node 6</td>
 		<td>Node 5</td>
@@ -701,18 +701,18 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>2</td>
 		<td>1</td>
 		<td>param. 1</td>
-		<td colspan=8>Slot 번호 = 1 ~ 3</td>
+		<td colspan=8>Slot Number = 1 ~ 3</td>
 	</tr>
 	<tr>
 		<td>3</td>
 		<td>1</td>
 		<td>param. 2</td>
-		<td colspan=8>진단 슬레이브 리스트 = 7</td>
+		<td colspan=8>List of Diagnostic Slaves = 7</td>
 	</tr>
 	<tr>
 		<td>4</td>
 		<td rowspan=16>16</td>
-		<td rowspan=16>슬레이브 리스트</td>
+		<td rowspan=16>List of Slaves</td>
 		<td>Node 7</td>
 		<td>Node 6</td>
 		<td>Node 5</td>

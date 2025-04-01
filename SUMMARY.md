@@ -35,6 +35,8 @@
       * [3.4.14.5 EtherCAT Master 상태 릴레이](3-relay/4-sw-relay/14-slot-cifx-info/5-slot-ethercat-info.md)
     * [3.4.15 S 릴레이 - IP_INFO](3-relay/4-sw-relay/15-slot-ip-info.md) 
     * [3.4.16 S 릴레이 - MECH_INFO](3-relay/4-sw-relay/16-slot-mech-info.md)
+    * [3.4.17 S 릴레이 - TOOL_INFO](3-relay/4-sw-relay/17-slot-tool-info.md)
+    * [3.4.18 S 릴레이 - UCRD_INFO](3-relay/4-sw-relay/18-slot-ucrd-info.md)
   * [3.5 릴레이 간접 주소 지정](3-relay/5-relative-addr.md)
 
 * [4. 명령 (instruction)](4-instruction/README.md)

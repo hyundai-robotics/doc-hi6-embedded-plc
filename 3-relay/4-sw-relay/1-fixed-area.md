@@ -185,6 +185,11 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td></td>
 	</tr>
 	<tr>
+		<td>SB39</td>
+		<td>현재 사용자좌표계 번호</td>
+		<td></td>
+	</tr>
+	<tr>
 		<td>SB40</td>
 		<td>현재 툴번호</td>
 		<td></td>

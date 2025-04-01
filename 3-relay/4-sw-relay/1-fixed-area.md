@@ -166,6 +166,16 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	</tr>
 	<tr class='grayed'><td>-</td><td>-</td><td>-</td></tr>
 	<tr>
+		<td>SB30</td>
+		<td>Gun output status</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>SB39</td>
+		<td>Current user coordinate number</td>
+		<td></td>
+	</tr>
+	<tr>
 		<td>SB40</td>
 		<td>Current tool number</td>
 		<td></td>

@@ -1135,7 +1135,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 </table>
 # 3.4.5 S relay - TP_KEYPAD
 
-Supported from V60.30-04
+Supported from V60.30-07
 
 <style type="text/css">
 	table  {border-collapse:collapse;}

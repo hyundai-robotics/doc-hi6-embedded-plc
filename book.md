@@ -1197,7 +1197,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 </table>
 # 3.4.5 S 릴레이 - TP_KEYPAD
 
-V60.30-04부터 지원.
+V60.30-07부터 지원.
 
 <style type="text/css">
 	table  {border-collapse:collapse;}

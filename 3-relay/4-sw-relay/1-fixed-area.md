@@ -71,8 +71,8 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td class='grayed'></td>
 		<td class='grayed'></td>
 		<td class='grayed'></td>
-		<td class='grayed'></td>
-		<td>T/P 부팅 완료시 on</td>
+		<td>자기진단 완료</td>
+		<td>T/P 부팅 완료</td>
 		<td></td>
 	</tr>
 </tbody>

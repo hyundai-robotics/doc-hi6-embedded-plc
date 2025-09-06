@@ -63,6 +63,18 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>On when the scan time exceeds 5 seconds</td>
 		<td></td>
 	</tr>
+	<tr>
+		<td>SB3</td>
+		<td class='grayed'></td>
+		<td class='grayed'></td>
+		<td class='grayed'></td>
+		<td class='grayed'></td>
+		<td class='grayed'></td>
+		<td class='grayed'></td>
+		<td>Self diagnosis completed </td>
+		<td>T/P booting completed</td>
+		<td></td>
+	</tr>
 </tbody>
 </table>
 

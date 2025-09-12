@@ -27,7 +27,7 @@
     * [3.4.11 S Relay - CONVEYOR_INFO](3-relay/4-sw-relay/11-slot-conveyor-info.md)
     * [3.4.12 S Relay - SYSTEM_VARIABLE](3-relay/4-sw-relay/12-slot-sys-var.md)
     * [3.4.13 S Relay - HW_INFO](3-relay/4-sw-relay/13-slot-hw-info.md) 
-    * [3.4.14 S Relay - CIFX PCI Communication Status](3-relay/4-sw-relay/14-slot-cifx-info/README.md)
+    * [3.4.14 S Relay - CIFX PCI Communication](3-relay/4-sw-relay/14-slot-cifx-info/README.md)
       * [3.4.14.1 Common Status](3-relay/4-sw-relay/14-slot-cifx-info/1-slot-common-info.md)
       * [3.4.14.2 Common Control](3-relay/4-sw-relay/14-slot-cifx-info/2-slot-common-control.md)
       * [3.4.14.3 Profibus-DP Master Status](3-relay/4-sw-relay/14-slot-cifx-info/3-slot-profibus-dp-info.md)

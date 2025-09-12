@@ -1,4 +1,4 @@
-﻿# 3.4.14.4 S 릴레이 - Profinet IO Master 상태 릴레이
+﻿# 3.4.14.5 S 릴레이 - EtherNet/IP Master 상태 릴레이
 
 <style type="text/css">
 table  {border-collapse:collapse;}
@@ -7,14 +7,6 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 .powderblued {background-color:powderblue;}
 </style>
 
-
-<br>
-
-<br>
-
-{% hint style="info" %}
-\.      슬레이브의 통신 연결 여부를 모니터링하는 경우 "IO 교환 슬레이브 리스트"를 확인해 주십시오.
-{% endhint %}
 
 <br>
 
@@ -45,7 +37,215 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>0</td>
 		<td>2</td>
 		<td>command</td>
-		<td colspan=8>Get Profinet IO Status = 1016</td>
+		<td colspan=8>Get EtherNet/IP Status = 1014</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>1</td>
+		<td>param. 1</td>
+		<td colspan=8>Slot 번호 = 1 ~ 3</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>1</td>
+		<td>param. 2</td>
+		<td colspan=8>상태  = 1</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td>4</td>
+		<td>알람 횟수</td>
+		<td colspan=8></td>
+	</tr>
+	<tr>
+		<td>8</td>
+		<td>4</td>
+		<td>경고 횟수</td>
+		<td colspan=8></td>
+	</tr>
+	<tr>
+		<td>12</td>
+		<td>4</td>
+		<td>에러 횟수</td>
+		<td colspan=8></td>
+	</tr>
+	<tr>
+		<td>16</td>
+		<td>4</td>
+		<td>에러 레벨</td>
+		<td colspan=8>알람, 경고, 에러</td>
+	</tr>
+</tbody>
+</table>
+
+	
+<br>
+
+<table class="tg">
+<thead>
+	<tr>
+		<th colspan=2>S Offset</th>
+		<th>이름</th>
+		<th colspan=8>설명 or Bit Index</th>
+	</tr>
+</thead>
+
+<tbody>
+	<tr>
+		<td class='powderblued'>시작</td>
+		<td class='powderblued'>크기</td>
+		<td class='powderblued'>릴레이</td>
+		<td class='powderblued'>Bit 7</td>
+		<td class='powderblued'>Bit 6</td>
+		<td class='powderblued'>Bit 5</td>
+		<td class='powderblued'>Bit 4</td>
+		<td class='powderblued'>Bit 3</td>
+		<td class='powderblued'>Bit 2</td>
+		<td class='powderblued'>Bit 1</td>
+		<td class='powderblued'>Bit 0</td>
+	</tr>
+	<tr>
+		<td>0</td>
+		<td>2</td>
+		<td>command</td>
+		<td colspan=8>Get EtherNet/IP Status = 1014</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>1</td>
+		<td>param. 1</td>
+		<td colspan=8>Slot 번호 = 1 ~ 3</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>1</td>
+		<td>param. 2</td>
+		<td colspan=8>상태  = 2</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td>4</td>
+		<td>에러 코드</td>
+		<td colspan=8></td>
+	</tr>
+	<tr>
+		<td>8</td>
+		<td>4</td>
+		<td>에러 코드 파라미터</td>
+		<td colspan=8></td>
+	</tr>
+	<tr>
+		<td>12</td>
+		<td>4</td>
+		<td>에러 발생 Source Line</td>
+		<td colspan=8></td>
+	</tr>
+	<tr>
+		<td>16</td>
+		<td>4</td>
+		<td>Reserved</td>
+		<td colspan=8></td>
+	</tr>
+</tbody>
+</table>
+
+
+<br>
+
+<table class="tg">
+<thead>
+	<tr>
+		<th colspan=2>S Offset</th>
+		<th>이름</th>
+		<th colspan=8>설명 or Bit Index</th>
+	</tr>
+</thead>
+
+<tbody>
+	<tr>
+		<td class='powderblued'>시작</td>
+		<td class='powderblued'>크기</td>
+		<td class='powderblued'>릴레이</td>
+		<td class='powderblued'>Bit 7</td>
+		<td class='powderblued'>Bit 6</td>
+		<td class='powderblued'>Bit 5</td>
+		<td class='powderblued'>Bit 4</td>
+		<td class='powderblued'>Bit 3</td>
+		<td class='powderblued'>Bit 2</td>
+		<td class='powderblued'>Bit 1</td>
+		<td class='powderblued'>Bit 0</td>
+	</tr>
+	<tr>
+		<td>0</td>
+		<td>2</td>
+		<td>command</td>
+		<td colspan=8>Get EtherNet/IP Status = 1014</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>1</td>
+		<td>param. 1</td>
+		<td colspan=8>Slot 번호 = 1 ~ 3</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>1</td>
+		<td>param. 2</td>
+		<td colspan=8>상태  = 3</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td>12</td>
+		<td>에러 발생 Source Identifier</td>
+		<td colspan=8></td>
+	</tr>
+	<tr>
+		<td>16</td>
+		<td>4</td>
+		<td>Reserved</td>
+		<td colspan=8></td>
+	</tr>
+</tbody>
+</table>
+
+
+<br>
+
+{% hint style="info" %}
+\.      슬레이브의 통신 연결 여부를 모니터링하는 경우 "IO 교환 슬레이브 리스트"를 확인해 주십시오.
+{% endhint %}
+
+<br>
+
+
+<table class="tg">
+<thead>
+	<tr>
+		<th colspan=2>S Offset</th>
+		<th>이름</th>
+		<th colspan=8>설명 or Bit Index</th>
+	</tr>
+</thead>
+
+<tbody>
+	<tr>
+		<td class='powderblued'>시작</td>
+		<td class='powderblued'>크기</td>
+		<td class='powderblued'>릴레이</td>
+		<td class='powderblued'>Bit 7</td>
+		<td class='powderblued'>Bit 6</td>
+		<td class='powderblued'>Bit 5</td>
+		<td class='powderblued'>Bit 4</td>
+		<td class='powderblued'>Bit 3</td>
+		<td class='powderblued'>Bit 2</td>
+		<td class='powderblued'>Bit 1</td>
+		<td class='powderblued'>Bit 0</td>
+	</tr>
+	<tr>
+		<td>0</td>
+		<td>2</td>
+		<td>command</td>
+		<td colspan=8>Get EtherNet/IP Status = 1014</td>
 	</tr>
 	<tr>
 		<td>2</td>
@@ -83,7 +283,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>Node 9</td>
 		<td>Node 8</td>
 	</tr>
-		<tr>
+	<tr>
 		<td>6</td>
 		<td>Node 23</td>
 		<td>Node 22</td>
@@ -94,7 +294,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>Node 17</td>
 		<td>Node 16</td>
 	</tr>
-		<tr>
+	<tr>
 		<td>7</td>
 		<td>Node 31</td>
 		<td>Node 30</td>
@@ -105,7 +305,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>Node 25</td>
 		<td>Node 24</td>
 	</tr>
-		<tr>
+	<tr>
 		<td>8</td>
 		<td>Node 39</td>
 		<td>Node 38</td>
@@ -116,7 +316,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>Node 33</td>
 		<td>Node 32</td>
 	</tr>
-		<tr>
+	<tr>
 		<td>9</td>
 		<td>Node 47</td>
 		<td>Node 46</td>
@@ -127,7 +327,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>Node 41</td>
 		<td>Node 40</td>
 	</tr>
-		<tr>
+	<tr>
 		<td>10</td>
 		<td>Node 55</td>
 		<td>Node 54</td>
@@ -138,7 +338,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>Node 49</td>
 		<td>Node 48</td>
 	</tr>
-		<tr>
+	<tr>
 		<td>11</td>
 		<td>Node 63</td>
 		<td>Node 62</td>
@@ -149,7 +349,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>Node 57</td>
 		<td>Node 56</td>
 	</tr>
-		<tr>
+	<tr>
 		<td>12</td>
 		<td>Node 71</td>
 		<td>Node 70</td>
@@ -160,7 +360,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>Node 65</td>
 		<td>Node 64</td>
 	</tr>
-		<tr>
+	<tr>
 		<td>13</td>
 		<td>Node 79</td>
 		<td>Node 78</td>
@@ -171,7 +371,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>Node 73</td>
 		<td>Node 72</td>
 	</tr>
-		<tr>
+	<tr>
 		<td>14</td>
 		<td>Node 87</td>
 		<td>Node 86</td>
@@ -182,7 +382,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>Node 81</td>
 		<td>Node 80</td>
 	</tr>
-		<tr>
+	<tr>
 		<td>15</td>
 		<td>Node 95</td>
 		<td>Node 94</td>
@@ -193,7 +393,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>Node 89</td>
 		<td>Node 88</td>
 	</tr>
-		<tr>
+	<tr>
 		<td>16</td>
 		<td>Node 103</td>
 		<td>Node 102</td>
@@ -204,7 +404,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>Node 97</td>
 		<td>Node 96</td>
 	</tr>
-		<tr>
+	<tr>
 		<td>17</td>
 		<td>Node 111</td>
 		<td>Node 110</td>
@@ -215,7 +415,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>Node 105</td>
 		<td>Node 104</td>
 	</tr>
-		<tr>
+	<tr>
 		<td>18</td>
 		<td>Node 119</td>
 		<td>Node 118</td>
@@ -226,7 +426,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>Node 113</td>
 		<td>Node 112</td>
 	</tr>
-		<tr>
+	<tr>
 		<td>19</td>
 		<td>Node 127</td>
 		<td>Node 126</td>
@@ -270,7 +470,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>0</td>
 		<td>2</td>
 		<td>command</td>
-		<td colspan=8>Get Profinet IO Status = 1016</td>
+		<td colspan=8>Get EtherNet/IP Status = 1014</td>
 	</tr>
 	<tr>
 		<td>2</td>
@@ -308,7 +508,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>Node 9</td>
 		<td>Node 8</td>
 	</tr>
-		<tr>
+	<tr>
 		<td>6</td>
 		<td>Node 23</td>
 		<td>Node 22</td>
@@ -319,7 +519,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>Node 17</td>
 		<td>Node 16</td>
 	</tr>
-		<tr>
+	<tr>
 		<td>7</td>
 		<td>Node 31</td>
 		<td>Node 30</td>
@@ -330,7 +530,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>Node 25</td>
 		<td>Node 24</td>
 	</tr>
-		<tr>
+	<tr>
 		<td>8</td>
 		<td>Node 39</td>
 		<td>Node 38</td>
@@ -341,7 +541,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>Node 33</td>
 		<td>Node 32</td>
 	</tr>
-		<tr>
+	<tr>
 		<td>9</td>
 		<td>Node 47</td>
 		<td>Node 46</td>
@@ -352,7 +552,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>Node 41</td>
 		<td>Node 40</td>
 	</tr>
-		<tr>
+	<tr>
 		<td>10</td>
 		<td>Node 55</td>
 		<td>Node 54</td>
@@ -363,7 +563,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>Node 49</td>
 		<td>Node 48</td>
 	</tr>
-		<tr>
+	<tr>
 		<td>11</td>
 		<td>Node 63</td>
 		<td>Node 62</td>
@@ -374,7 +574,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>Node 57</td>
 		<td>Node 56</td>
 	</tr>
-		<tr>
+	<tr>
 		<td>12</td>
 		<td>Node 71</td>
 		<td>Node 70</td>
@@ -385,7 +585,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>Node 65</td>
 		<td>Node 64</td>
 	</tr>
-		<tr>
+	<tr>
 		<td>13</td>
 		<td>Node 79</td>
 		<td>Node 78</td>
@@ -396,7 +596,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>Node 73</td>
 		<td>Node 72</td>
 	</tr>
-		<tr>
+	<tr>
 		<td>14</td>
 		<td>Node 87</td>
 		<td>Node 86</td>
@@ -407,7 +607,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>Node 81</td>
 		<td>Node 80</td>
 	</tr>
-		<tr>
+	<tr>
 		<td>15</td>
 		<td>Node 95</td>
 		<td>Node 94</td>
@@ -418,7 +618,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>Node 89</td>
 		<td>Node 88</td>
 	</tr>
-		<tr>
+	<tr>
 		<td>16</td>
 		<td>Node 103</td>
 		<td>Node 102</td>
@@ -429,7 +629,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>Node 97</td>
 		<td>Node 96</td>
 	</tr>
-		<tr>
+	<tr>
 		<td>17</td>
 		<td>Node 111</td>
 		<td>Node 110</td>
@@ -440,7 +640,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>Node 105</td>
 		<td>Node 104</td>
 	</tr>
-		<tr>
+	<tr>
 		<td>18</td>
 		<td>Node 119</td>
 		<td>Node 118</td>
@@ -451,7 +651,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>Node 113</td>
 		<td>Node 112</td>
 	</tr>
-		<tr>
+	<tr>
 		<td>19</td>
 		<td>Node 127</td>
 		<td>Node 126</td>
@@ -495,7 +695,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>0</td>
 		<td>2</td>
 		<td>command</td>
-		<td colspan=8>Get Profinet IO Status = 1016</td>
+		<td colspan=8>Get EtherNet/IP Status = 1014</td>
 	</tr>
 	<tr>
 		<td>2</td>
@@ -533,7 +733,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>Node 9</td>
 		<td>Node 8</td>
 	</tr>
-		<tr>
+	<tr>
 		<td>6</td>
 		<td>Node 23</td>
 		<td>Node 22</td>
@@ -544,7 +744,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>Node 17</td>
 		<td>Node 16</td>
 	</tr>
-		<tr>
+	<tr>
 		<td>7</td>
 		<td>Node 31</td>
 		<td>Node 30</td>
@@ -555,7 +755,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>Node 25</td>
 		<td>Node 24</td>
 	</tr>
-		<tr>
+	<tr>
 		<td>8</td>
 		<td>Node 39</td>
 		<td>Node 38</td>
@@ -566,7 +766,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>Node 33</td>
 		<td>Node 32</td>
 	</tr>
-		<tr>
+	<tr>
 		<td>9</td>
 		<td>Node 47</td>
 		<td>Node 46</td>
@@ -577,7 +777,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>Node 41</td>
 		<td>Node 40</td>
 	</tr>
-		<tr>
+	<tr>
 		<td>10</td>
 		<td>Node 55</td>
 		<td>Node 54</td>
@@ -588,7 +788,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>Node 49</td>
 		<td>Node 48</td>
 	</tr>
-		<tr>
+	<tr>
 		<td>11</td>
 		<td>Node 63</td>
 		<td>Node 62</td>
@@ -599,7 +799,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>Node 57</td>
 		<td>Node 56</td>
 	</tr>
-		<tr>
+	<tr>
 		<td>12</td>
 		<td>Node 71</td>
 		<td>Node 70</td>
@@ -610,7 +810,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>Node 65</td>
 		<td>Node 64</td>
 	</tr>
-		<tr>
+	<tr>
 		<td>13</td>
 		<td>Node 79</td>
 		<td>Node 78</td>
@@ -621,7 +821,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>Node 73</td>
 		<td>Node 72</td>
 	</tr>
-		<tr>
+	<tr>
 		<td>14</td>
 		<td>Node 87</td>
 		<td>Node 86</td>
@@ -632,7 +832,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>Node 81</td>
 		<td>Node 80</td>
 	</tr>
-		<tr>
+	<tr>
 		<td>15</td>
 		<td>Node 95</td>
 		<td>Node 94</td>
@@ -643,7 +843,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>Node 89</td>
 		<td>Node 88</td>
 	</tr>
-		<tr>
+	<tr>
 		<td>16</td>
 		<td>Node 103</td>
 		<td>Node 102</td>
@@ -654,7 +854,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>Node 97</td>
 		<td>Node 96</td>
 	</tr>
-		<tr>
+	<tr>
 		<td>17</td>
 		<td>Node 111</td>
 		<td>Node 110</td>
@@ -665,7 +865,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>Node 105</td>
 		<td>Node 104</td>
 	</tr>
-		<tr>
+	<tr>
 		<td>18</td>
 		<td>Node 119</td>
 		<td>Node 118</td>
@@ -676,7 +876,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>Node 113</td>
 		<td>Node 112</td>
 	</tr>
-		<tr>
+	<tr>
 		<td>19</td>
 		<td>Node 127</td>
 		<td>Node 126</td>

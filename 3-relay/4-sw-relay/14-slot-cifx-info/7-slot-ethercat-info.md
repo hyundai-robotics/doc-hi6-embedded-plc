@@ -1,4 +1,4 @@
-﻿# 3.4.14.5 S 릴레이 - EtherCAT Master 상태 릴레이
+﻿# 3.4.14.7 S 릴레이 - EtherCAT Master 상태 릴레이
 
 <style type="text/css">
 table  {border-collapse:collapse;}

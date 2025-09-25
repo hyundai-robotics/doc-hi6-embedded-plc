@@ -577,29 +577,29 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td rowspan=32>BD640T 컨베이어</td>
 		<td rowspan=1>sib42<br>sib43</td>
 		<td></td>
-		<td>ch1 - pulse counter (16bit)</td>
+		<td>ch1 - 펄스 카운터 (16bit)</td>
 	</tr>
 	<tr>
 		<td rowspan=1>sib44<br>sib45</td>
 		<td></td>
-		<td>ch1 - pulse counter (16bit)</td>
+		<td>ch2 - 펄스 카운터 (16bit)</td>
 	</tr>
 	<tr>
 		<td rowspan=4>sib46</td>
 		<td>si368</td>
-		<td>ch1- line error</td>
+		<td>ch1- 펄스라인 이상</td>
 	</tr>
 	<tr>
 		<td>si369</td>
-		<td>ch1- limit swich</td>
+		<td>ch1- 리밋 스위치</td>
 	</tr>
 	<tr>
 		<td>si370</td>
-		<td>ch1- line error</td>
+		<td>ch2- 펄스라인 이상</td>
 	</tr>
 	<tr>
 		<td>si371</td>
-		<td>ch2- limit swich</td>
+		<td>ch2- 리밋 스위치</td>
 	</tr>
 </tbody>
 

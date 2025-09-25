@@ -1380,7 +1380,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	<tr>
 		<td rowspan=1>sib44<br>sib45</td>
 		<td></td>
-		<td>ch1 - pulse counter (16bit)</td>
+		<td>ch2 - pulse counter (16bit)</td>
 	</tr>
 	<tr>
 		<td rowspan=4>sib46</td>
@@ -1393,7 +1393,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	</tr>
 	<tr>
 		<td>si370</td>
-		<td>ch1- line error</td>
+		<td>ch2- line error</td>
 	</tr>
 	<tr>
 		<td>si371</td>

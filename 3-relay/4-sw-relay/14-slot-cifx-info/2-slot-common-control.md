@@ -10,7 +10,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 
 <br>
 
-#### 60.30-07 버전 부터 지원
+#### 지원 버전 미정
 
 <br>
 

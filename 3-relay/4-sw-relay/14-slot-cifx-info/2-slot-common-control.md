@@ -9,7 +9,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 
 <br>
 
-#### Supported from version 60.30-07
+#### Supported version: TBD 
 
 <br>
 

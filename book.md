@@ -20,7 +20,7 @@ The embedded programmable logic controller (PLC) of the Hi6 controller refers to
 
 Ladder programs can be written or edited using the HRLadder, a ladder editing PC software dedicated to the robots of Hyundai Robotics, and downloaded to the Hi6 controller connected via Ethernet. Conversely, the ladder program running on the Hi6 controller can be uploaded to the HRLadder on the PC, and the status, such as the mode of the PLC running on the controller or the values of relays, can be remotely monitored from the HRLadder. 
 
-* You can download the HRLadder from the Hyundai Robotics website (https://www.hyundai-robotics.com) - Customer Support - Application Software screen.
+* You can download the HRLadder from the Hyundai Robotics website (https://www.hd-hyundairobotics.com/) - Customer Support - Application Software screen.
 * For the information on how to use the HRLadder, refer to the function manual linked to the Help menu of the HRLadder.
 * HRLadder can be used for old controller models ranging from Hi4 to Hi5a. Please note that as the ladder program of the Hi6 controller is different from that of the old model controllers, there is no compatibility between them.
 
@@ -3976,7 +3976,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 
 <br>
 
-#### Supported from version 60.30-07
+#### Supported version: TBD 
 
 <br>
 

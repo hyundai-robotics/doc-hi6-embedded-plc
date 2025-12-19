@@ -1,8 +1,8 @@
 ﻿# 3.4 S relays
 
-The values ​​for various states in the Hi6 controller are mapped to the S relays. It is also possible to change the state of Hi6 by writing values ​​to some of the S relays.
+The values ​​for various states in the ${cont_model} controller are mapped to the S relays. It is also possible to change the state of ${cont_model} by writing values ​​to some of the S relays.
 
-Therefore, an external device, such as a process programmable logic controller (PLC) or personal computer (PC), can remotely monitor the states of the Hi6 controller by reading the values of the S relays through fieldbus, Modbus, etc. and can remotely control the Hi6 controller by writing values to the S relays.  
+Therefore, an external device, such as a process programmable logic controller (PLC) or personal computer (PC), can remotely monitor the states of the ${cont_model} controller by reading the values of the S relays through fieldbus, Modbus, etc. and can remotely control the ${cont_model} controller by writing values to the S relays.  
 
 The area of the S relays can be largely divided into two parts as follows.
 

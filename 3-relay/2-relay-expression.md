@@ -1,6 +1,6 @@
 ﻿# 3.2 Designating a relay
 
-The following shows how the relays are designated in the embedded programmable logic controller (PLC) of the Hi6 robot controller.
+The following shows how the relays are designated in the embedded programmable logic controller (PLC) of the ${cont_model} robot controller.
 
 `[FB{block-index}.]{relay-type}[{data-type}]{signal-index}`
 

@@ -1,4 +1,4 @@
-﻿# Hi6 Robot Controller Function Manual - Embedded Progammable Logic Controller (PLC)
+﻿# ${cont_model} Robot Controller Function Manual - Embedded Progammable Logic Controller (PLC)
 
 {% hint style="warning" %}
 The information provided in this product manual is the property of Hyundai Robotics.
@@ -15,25 +15,25 @@ The manual is subject to change without prior notification.
 {% endhint %}
 # 1. Overview
 
-The embedded programmable logic controller (PLC) of the Hi6 controller refers to the functions of the PLC that are installed into the controller in a software-like manner. The user can write and operate ladder programs that are commonly used in PLCs.
+The embedded programmable logic controller (PLC) of the ${cont_model} controller refers to the functions of the PLC that are installed into the controller in a software-like manner. The user can write and operate ladder programs that are commonly used in PLCs.
 
 
-Ladder programs can be written or edited using the HRLadder, a ladder editing PC software dedicated to the robots of Hyundai Robotics, and downloaded to the Hi6 controller connected via Ethernet. Conversely, the ladder program running on the Hi6 controller can be uploaded to the HRLadder on the PC, and the status, such as the mode of the PLC running on the controller or the values of relays, can be remotely monitored from the HRLadder. 
+Ladder programs can be written or edited using the HRLadder, a ladder editing PC software dedicated to the robots of Hyundai Robotics, and downloaded to the ${cont_model} controller connected via Ethernet. Conversely, the ladder program running on the ${cont_model} controller can be uploaded to the HRLadder on the PC, and the status, such as the mode of the PLC running on the controller or the values of relays, can be remotely monitored from the HRLadder. 
 
 * You can download the HRLadder from the Hyundai Robotics website (https://www.hd-hyundairobotics.com/) - Customer Support - Application Software screen.
 * For the information on how to use the HRLadder, refer to the function manual linked to the Help menu of the HRLadder.
-* HRLadder can be used for old controller models ranging from Hi4 to Hi5a. Please note that as the ladder program of the Hi6 controller is different from that of the old model controllers, there is no compatibility between them.
+* HRLadder can be used for old controller models ranging from Hi4 to Hi5a. Please note that as the ladder program of the ${cont_model} controller is different from that of the old model controllers, there is no compatibility between them.
 
 
-The Hi6 controller’s I/O can be connected to the upper-process PLCs with fieldbus masters or to the devices of lower-level fieldbus slaves, both through a fieldbus or remote I/O device. The functions of the embedded PLC are designed to control the signals of the thus connected I/O using ladder logic.
+The ${cont_model} controller’s I/O can be connected to the upper-process PLCs with fieldbus masters or to the devices of lower-level fieldbus slaves, both through a fieldbus or remote I/O device. The functions of the embedded PLC are designed to control the signals of the thus connected I/O using ladder logic.
 
 
-The functions of the Hi6 controller’s embedded PLC are similar to those of the Hi5a controller’s embedded PLC, and the same HRLadder, in other words, the same ladder editor, is used. Therefore, users who are already familiar with the functions of the Hi5a controller’s embedded PLC can quickly learn from this manual by checking only the different parts of the Hi6 controller.
+The functions of the ${cont_model} controller’s embedded PLC are similar to those of the Hi5a controller’s embedded PLC, and the same HRLadder, in other words, the same ladder editor, is used. Therefore, users who are already familiar with the functions of the Hi5a controller’s embedded PLC can quickly learn from this manual by checking only the different parts of the ${cont_model} controller.
 
 
 {% hint style="info" %}
-Therefore, users already familiar with the functions of the Hi5a controller’s embedded PLC can quickly learn from this manual by checking only the different parts of the Hi6 controller. You are kindly required to check the link shown below.
-[5. Difference in the embedded PLC between Hi5a and Hi6 controllers](../5-diff-hi5a-hi6.md)
+Therefore, users already familiar with the functions of the Hi5a controller’s embedded PLC can quickly learn from this manual by checking only the different parts of the ${cont_model} controller. You are kindly required to check the link shown below.
+[5. Difference in the embedded PLC between Hi5a and ${cont_model} controllers](../5-diff-hi5a-hi6.md)
 
 {% endhint %}
 
@@ -161,7 +161,7 @@ The embedded PLC will be executed. R-Run represents a remote state in which chan
 
 The relay state can be monitored by entering “[R2: Window adjustment] - [F1: Selection]”.
 
-For more details, refer to [Hi6 Operation Manual - 6. Monitoring](https://hrbook-hrc.web.app/#/view/doc-hi6-operation/korean-tp630/6-monitoring/README).# 2.3. Scan time
+For more details, refer to [${cont_model} Operation Manual - 6. Monitoring](https://hrbook-hrc.web.app/#/view/doc-hi6-operation/korean-tp630/6-monitoring/README).# 2.3. Scan time
 
 The time taken for the one-cycle execution of the ladder file in the embedded PLC will be indicated as “scan time” on the status bar at the bottom of the HRLadder. As the number of steps in the ladder program increases, the time for execution increases, slowing down the I/O responsiveness accordingly.# 3. Relays
 
@@ -171,7 +171,7 @@ A device in a state equivalent to an on/off contact that determines whether to t
 
 Originally, a relay was a physical device that controls contacts using the magnetic force of a coil. However, a relay in a computerized programmable logic controller (PLC) is a logical concept that is controlled by software. In terms of the meaning, a relay has been used as a variable that can store not only an on/off state consisting of 1 bit but also a byte, word, double word, or real value consisting of several bits.# 3.2 Designating a relay
 
-The following shows how the relays are designated in the embedded programmable logic controller (PLC) of the Hi6 robot controller.
+The following shows how the relays are designated in the embedded programmable logic controller (PLC) of the ${cont_model} robot controller.
 
 `[FB{block-index}.]{relay-type}[{data-type}]{signal-index}`
 
@@ -312,7 +312,7 @@ The fieldbus object name can be partially skipped, as shown below. For example, 
 
 DI and DO are logical inputs and outputs, respectively, and can be accessed through the robot language and I/O assignment.# 3.3 Input/output diagram
 
-The I/O diagram of the Hi6 robot controller is as shown below.
+The I/O diagram of the ${cont_model} robot controller is as shown below.
 
 
 ![](../_assets/io-diagram.png)
@@ -321,21 +321,21 @@ Figure 3.1 I/O diagram
 
 <br><br>
 
-The light green boxes on the right side of the figure are hardware modules inside the Hi6 controller. On the left, there is the main module (COM module) where the main software runs. Meanwhile, on the right, there are Hilscher communication interface (CIF) cards, which are peripheral component interconnect (PCI) cards for the connection to the fieldbus, and serial or Ethernet devices for the connection to the Modbus.
+The light green boxes on the right side of the figure are hardware modules inside the ${cont_model} controller. On the left, there is the main module (COM module) where the main software runs. Meanwhile, on the right, there are Hilscher communication interface (CIF) cards, which are peripheral component interconnect (PCI) cards for the connection to the fieldbus, and serial or Ethernet devices for the connection to the Modbus.
 
-In the main software, there are various relays drawn in the form of small boxes. In the Hi6 controller, there are software elements that access these relays, and they are HRScript (robot language), I/O assignment, and the embedded programmable logic controller (PLC). 
+In the main software, there are various relays drawn in the form of small boxes. In the ${cont_model} controller, there are software elements that access these relays, and they are HRScript (robot language), I/O assignment, and the embedded programmable logic controller (PLC). 
 
 <br>
 
 ## HRScript (robot language)
-The robot language can access User I/O (FB.DI/DO) relays and Memory (M) relays through I/O variables. However, lowercase letters are to be used instead of uppercase letters (e.g., fb3.dow14, mw501.). For details on input/output variables, refer to the [Hi6 Function Manual - Robot Language - I/O Variables](https://hrbook-hrc.web.app/#/view/doc-hrscript/korean/6-external-comm/1-fb-io/1-io-val) section.
+The robot language can access User I/O (FB.DI/DO) relays and Memory (M) relays through I/O variables. However, lowercase letters are to be used instead of uppercase letters (e.g., fb3.dow14, mw501.). For details on input/output variables, refer to the [${cont_model} Function Manual - Robot Language - I/O Variables](https://hrbook-hrc.web.app/#/view/doc-hrscript/korean/6-external-comm/1-fb-io/1-io-val) section.
 
 
 <br>
 
 ## I/O assignment, I/O attributes
 I/O assignment can access FB.DI/DO relays. In addition, negative logic, pulse, etc. can be set in FB.DI/DO by setting the I/O attributes. For example, for the “external stop,” which is an input assignment, if negative logic is set in DI24, the robot will stop when the DI24 signal is 0 (active).
-For more details, refer to the [Hi6 Operation Manual - Input/Output Signal Setting](https://hrbook-hrc.web.app/#/view/doc-hi6-operation/korean-tp630/7-setting/3-control-parameter/2-io-signal-setting/README) section. 
+For more details, refer to the [${cont_model} Operation Manual - Input/Output Signal Setting](https://hrbook-hrc.web.app/#/view/doc-hi6-operation/korean-tp630/7-setting/3-control-parameter/2-io-signal-setting/README) section. 
 
 
 <br>
@@ -350,9 +350,9 @@ FB.DI is an input from the point of view of the robot language, but this input i
 <br>
 
 ## Connection to external communication
-Hilscher CIF cards are to be connected to physical inputs and outputs. For how to map one or multiple fieldbus objects to a specific CIF card, refer to [Hi6 Operation Manual - I/O Signal Setting - DIO Block Assignment](https://hrbook-hrc.web.app/#/view/doc-hi6-operation/korean-tp630/7-setting/3-control-parameter/2-io-signal-setting/9-dio-block-assign).  
+Hilscher CIF cards are to be connected to physical inputs and outputs. For how to map one or multiple fieldbus objects to a specific CIF card, refer to [${cont_model} Operation Manual - I/O Signal Setting - DIO Block Assignment](https://hrbook-hrc.web.app/#/view/doc-hi6-operation/korean-tp630/7-setting/3-control-parameter/2-io-signal-setting/9-dio-block-assign).  
 
-All relays are mapped to the address space of the Modbus slave function. For more details, refer to [Hi6 Function Manual - Modbus](https://hrbook-hrc.web.app/#/view/doc-modbus/korean/README).
+All relays are mapped to the address space of the Modbus slave function. For more details, refer to [${cont_model} Function Manual - Modbus](https://hrbook-hrc.web.app/#/view/doc-modbus/korean/README).
 # 3.3.1 SO - System output
 
 <style type="text/css">
@@ -1404,9 +1404,9 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 </table>
 # 3.4 S relays
 
-The values ​​for various states in the Hi6 controller are mapped to the S relays. It is also possible to change the state of Hi6 by writing values ​​to some of the S relays.
+The values ​​for various states in the ${cont_model} controller are mapped to the S relays. It is also possible to change the state of ${cont_model} by writing values ​​to some of the S relays.
 
-Therefore, an external device, such as a process programmable logic controller (PLC) or personal computer (PC), can remotely monitor the states of the Hi6 controller by reading the values of the S relays through fieldbus, Modbus, etc. and can remotely control the Hi6 controller by writing values to the S relays.  
+Therefore, an external device, such as a process programmable logic controller (PLC) or personal computer (PC), can remotely monitor the states of the ${cont_model} controller by reading the values of the S relays through fieldbus, Modbus, etc. and can remotely control the ${cont_model} controller by writing values to the S relays.  
 
 The area of the S relays can be largely divided into two parts as follows.
 
@@ -12898,10 +12898,10 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 When the input DO36 is active, DOW2 will be bitwise or operated to the value of &H0F0F, and the result value will be set in the internal state relay DIL8.
 
 ![](../_assets/or.png)
-# 5. Difference in the Embedded PLC between Hi5a and Hi6
+# 5. Difference in the Embedded PLC between Hi5a and ${cont_model}
 
-The functions of the Hi6 controller's embedded PLC are similar to those of the Hi5a controller's embedded PLC, and the same HRLadder, or the same ladder editor, is used. 
-Therefore, users who are already familiar with the functions of the Hi5a controller's embedded PLC can quickly learn from this manual by checking only the different parts in the Hi6 controller.
+The functions of the ${cont_model} controller's embedded PLC are similar to those of the Hi5a controller's embedded PLC, and the same HRLadder, or the same ladder editor, is used. 
+Therefore, users who are already familiar with the functions of the Hi5a controller's embedded PLC can quickly learn from this manual by checking only the different parts in the ${cont_model} controller.
 
 The following content includes the list of the different parts.
 
@@ -12909,7 +12909,7 @@ The following content includes the list of the different parts.
 
 ## HRLadder online connection
 
-HRLadder v2.80 or later supports the Hi6 controller.
+HRLadder v2.80 or later supports the ${cont_model} controller.
 Versions of HRLadder earlier than v2.80 allows remote connection through automatic recognition of the controller type when the online button is pressed.
 However, for HRLadder v2.80 or later, you need to select the controller type in the attributes of the project, then press the online button.
 
@@ -12927,7 +12927,7 @@ M relays of MW1–MW1000 are supported.
 A special relay SP exists.
 Dedicated input and output signals are included in SW.
 
-### Hi6
+### ${cont_model}
 
 M relays are largely extended to a range of MW0–MW19998, so you can use them as substitutes for others.
 SP relays are integrated into the area for special flags of [S relay - Fixed area](https://hrbook-hrc.web.app/#/view/doc-hi6-embedded-plc/korean/3-relay/4-sw-relay/1-fixed-area)
@@ -12990,7 +12990,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 
 <br>
 
-### Hi6
+### ${cont_model}
 The index starts with 0.
 The index of word, long and flow will increase by matching the byte location.
 For example, DOW increases in the form of DOW0, DOW2, DOW4, DOW6..., and DOL increases in the form of DOL0, DOL4, DOL8...
@@ -13058,7 +13058,7 @@ However, among the index addresses, SW220–249 are for 10 multipurpose slots, a
 
 <br>
 
-### Hi6
+### ${cont_model}
 
 The area of SB0–SB1999 is the [S Relay Fixed Area](https://hrbook-hrc.web.app/#/view/doc-hi6-embedded-plc/korean/3-relay/4-sw-relay/1-fixed-area), which has a fixed index address for each item just like Hi5a.
 

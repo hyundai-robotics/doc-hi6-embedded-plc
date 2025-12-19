@@ -1,7 +1,7 @@
-﻿# 5. Difference in the Embedded PLC between Hi5a and Hi6
+﻿# 5. Difference in the Embedded PLC between Hi5a and ${cont_model}
 
-The functions of the Hi6 controller's embedded PLC are similar to those of the Hi5a controller's embedded PLC, and the same HRLadder, or the same ladder editor, is used. 
-Therefore, users who are already familiar with the functions of the Hi5a controller's embedded PLC can quickly learn from this manual by checking only the different parts in the Hi6 controller.
+The functions of the ${cont_model} controller's embedded PLC are similar to those of the Hi5a controller's embedded PLC, and the same HRLadder, or the same ladder editor, is used. 
+Therefore, users who are already familiar with the functions of the Hi5a controller's embedded PLC can quickly learn from this manual by checking only the different parts in the ${cont_model} controller.
 
 The following content includes the list of the different parts.
 
@@ -9,7 +9,7 @@ The following content includes the list of the different parts.
 
 ## HRLadder online connection
 
-HRLadder v2.80 or later supports the Hi6 controller.
+HRLadder v2.80 or later supports the ${cont_model} controller.
 Versions of HRLadder earlier than v2.80 allows remote connection through automatic recognition of the controller type when the online button is pressed.
 However, for HRLadder v2.80 or later, you need to select the controller type in the attributes of the project, then press the online button.
 
@@ -27,7 +27,7 @@ M relays of MW1–MW1000 are supported.
 A special relay SP exists.
 Dedicated input and output signals are included in SW.
 
-### Hi6
+### ${cont_model}
 
 M relays are largely extended to a range of MW0–MW19998, so you can use them as substitutes for others.
 SP relays are integrated into the area for special flags of [S relay - Fixed area](https://hrbook-hrc.web.app/#/view/doc-hi6-embedded-plc/korean/3-relay/4-sw-relay/1-fixed-area)
@@ -90,7 +90,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 
 <br>
 
-### Hi6
+### ${cont_model}
 The index starts with 0.
 The index of word, long and flow will increase by matching the byte location.
 For example, DOW increases in the form of DOW0, DOW2, DOW4, DOW6..., and DOL increases in the form of DOL0, DOL4, DOL8...
@@ -158,7 +158,7 @@ However, among the index addresses, SW220–249 are for 10 multipurpose slots, a
 
 <br>
 
-### Hi6
+### ${cont_model}
 
 The area of SB0–SB1999 is the [S Relay Fixed Area](https://hrbook-hrc.web.app/#/view/doc-hi6-embedded-plc/korean/3-relay/4-sw-relay/1-fixed-area), which has a fixed index address for each item just like Hi5a.
 

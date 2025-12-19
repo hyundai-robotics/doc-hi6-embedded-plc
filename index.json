@@ -6,397 +6,397 @@
 	},
 	{
 		"link": "1-intro/README.md",
-		"char_ofs": 276,
-		"byte_ofs": 528
+		"char_ofs": 286,
+		"byte_ofs": 538
 	},
 	{
 		"link": "1-intro/1-ladder-logic.md",
-		"char_ofs": 1386,
-		"byte_ofs": 2750
+		"char_ofs": 1486,
+		"byte_ofs": 2850
 	},
 	{
 		"link": "2-rc-setting/README.md",
-		"char_ofs": 3524,
-		"byte_ofs": 6605
+		"char_ofs": 3624,
+		"byte_ofs": 6705
 	},
 	{
 		"link": "2-rc-setting/1-plc-mode-set.md",
-		"char_ofs": 3537,
-		"byte_ofs": 6633
+		"char_ofs": 3637,
+		"byte_ofs": 6733
 	},
 	{
 		"link": "2-rc-setting/2-tp-relay-mon.md",
-		"char_ofs": 4645,
-		"byte_ofs": 8568
+		"char_ofs": 4745,
+		"byte_ofs": 8668
 	},
 	{
 		"link": "2-rc-setting/3-scan-time.md",
-		"char_ofs": 4851,
-		"byte_ofs": 8904
+		"char_ofs": 4961,
+		"byte_ofs": 9014
 	},
 	{
 		"link": "3-relay/README.md",
-		"char_ofs": 4996,
-		"byte_ofs": 9193
+		"char_ofs": 5106,
+		"byte_ofs": 9303
 	},
 	{
 		"link": "3-relay/1-relay-is.md",
-		"char_ofs": 5014,
-		"byte_ofs": 9222
+		"char_ofs": 5124,
+		"byte_ofs": 9332
 	},
 	{
 		"link": "3-relay/2-relay-expression.md",
-		"char_ofs": 5359,
-		"byte_ofs": 9959
+		"char_ofs": 5469,
+		"byte_ofs": 10069
 	},
 	{
 		"link": "3-relay/3-io-diagram.md",
-		"char_ofs": 9549,
-		"byte_ofs": 15793
+		"char_ofs": 9669,
+		"byte_ofs": 15913
 	},
 	{
 		"link": "3-relay/3-sio/1-so.md",
-		"char_ofs": 11522,
-		"byte_ofs": 19313
+		"char_ofs": 11712,
+		"byte_ofs": 19503
 	},
 	{
 		"link": "3-relay/3-sio/2-si.md",
-		"char_ofs": 17498,
-		"byte_ofs": 26699
+		"char_ofs": 17688,
+		"byte_ofs": 26889
 	},
 	{
 		"link": "3-relay/4-sw-relay/README.md",
-		"char_ofs": 25590,
-		"byte_ofs": 36692
+		"char_ofs": 25780,
+		"byte_ofs": 36882
 	},
 	{
 		"link": "3-relay/4-sw-relay/1-fixed-area.md",
-		"char_ofs": 27926,
-		"byte_ofs": 39740
+		"char_ofs": 28156,
+		"byte_ofs": 39970
 	},
 	{
 		"link": "3-relay/4-sw-relay/2-slot-task-info.md",
-		"char_ofs": 35980,
-		"byte_ofs": 49436
+		"char_ofs": 36210,
+		"byte_ofs": 49666
 	},
 	{
 		"link": "3-relay/4-sw-relay/3-slot-op-time.md",
-		"char_ofs": 36849,
-		"byte_ofs": 50426
+		"char_ofs": 37079,
+		"byte_ofs": 50656
 	},
 	{
 		"link": "3-relay/4-sw-relay/4-slot-axis-info.md",
-		"char_ofs": 37952,
-		"byte_ofs": 51598
+		"char_ofs": 38182,
+		"byte_ofs": 51828
 	},
 	{
 		"link": "3-relay/4-sw-relay/5-slot-tp-keypad.md",
-		"char_ofs": 39872,
-		"byte_ofs": 53926
+		"char_ofs": 40102,
+		"byte_ofs": 54156
 	},
 	{
 		"link": "3-relay/4-sw-relay/6-slot-tp-app.md",
-		"char_ofs": 43790,
-		"byte_ofs": 58087
+		"char_ofs": 44020,
+		"byte_ofs": 58317
 	},
 	{
 		"link": "3-relay/4-sw-relay/7-slot-date-time.md",
-		"char_ofs": 44678,
-		"byte_ofs": 59190
+		"char_ofs": 44908,
+		"byte_ofs": 59420
 	},
 	{
 		"link": "3-relay/4-sw-relay/8-slot-cur-spotgun-no.md",
-		"char_ofs": 45508,
-		"byte_ofs": 60098
+		"char_ofs": 45738,
+		"byte_ofs": 60328
 	},
 	{
 		"link": "3-relay/4-sw-relay/9-slot-spotweld-info.md",
-		"char_ofs": 46976,
-		"byte_ofs": 61828
+		"char_ofs": 47206,
+		"byte_ofs": 62058
 	},
 	{
 		"link": "3-relay/4-sw-relay/10-slot-arcweld-info.md",
-		"char_ofs": 47965,
-		"byte_ofs": 62978
+		"char_ofs": 48195,
+		"byte_ofs": 63208
 	},
 	{
 		"link": "3-relay/4-sw-relay/11-slot-conveyor-info.md",
-		"char_ofs": 55217,
-		"byte_ofs": 71752
+		"char_ofs": 55447,
+		"byte_ofs": 71982
 	},
 	{
 		"link": "3-relay/4-sw-relay/12-slot-sys-var.md",
-		"char_ofs": 57750,
-		"byte_ofs": 74683
+		"char_ofs": 57980,
+		"byte_ofs": 74913
 	},
 	{
 		"link": "3-relay/4-sw-relay/13-slot-hw-info.md",
-		"char_ofs": 59260,
-		"byte_ofs": 76447
+		"char_ofs": 59490,
+		"byte_ofs": 76677
 	},
 	{
 		"link": "3-relay/4-sw-relay/14-slot-cifx-info/README.md",
-		"char_ofs": 59912,
-		"byte_ofs": 77180
+		"char_ofs": 60142,
+		"byte_ofs": 77410
 	},
 	{
 		"link": "3-relay/4-sw-relay/14-slot-cifx-info/1-slot-common-info.md",
-		"char_ofs": 60232,
-		"byte_ofs": 77593
+		"char_ofs": 60462,
+		"byte_ofs": 77823
 	},
 	{
 		"link": "3-relay/4-sw-relay/14-slot-cifx-info/2-slot-common-control.md",
-		"char_ofs": 67071,
-		"byte_ofs": 85180
+		"char_ofs": 67301,
+		"byte_ofs": 85410
 	},
 	{
 		"link": "3-relay/4-sw-relay/14-slot-cifx-info/3-slot-profibus-dp-info.md",
-		"char_ofs": 68797,
-		"byte_ofs": 87113
+		"char_ofs": 69027,
+		"byte_ofs": 87343
 	},
 	{
 		"link": "3-relay/4-sw-relay/14-slot-cifx-info/4-slot-devicenet-info.md",
-		"char_ofs": 97564,
-		"byte_ofs": 118112
+		"char_ofs": 97794,
+		"byte_ofs": 118342
 	},
 	{
 		"link": "3-relay/4-sw-relay/14-slot-cifx-info/5-slot-ethernet-ip-info.md",
-		"char_ofs": 117467,
-		"byte_ofs": 139868
+		"char_ofs": 117697,
+		"byte_ofs": 140098
 	},
 	{
 		"link": "3-relay/4-sw-relay/14-slot-cifx-info/6-slot-profinet-io-info.md",
-		"char_ofs": 132713,
-		"byte_ofs": 156447
+		"char_ofs": 132943,
+		"byte_ofs": 156677
 	},
 	{
 		"link": "3-relay/4-sw-relay/14-slot-cifx-info/7-slot-ethercat-info.md",
-		"char_ofs": 144558,
-		"byte_ofs": 169251
+		"char_ofs": 144788,
+		"byte_ofs": 169481
 	},
 	{
 		"link": "3-relay/4-sw-relay/15-slot-ip-info.md",
-		"char_ofs": 156391,
-		"byte_ofs": 182043
+		"char_ofs": 156621,
+		"byte_ofs": 182273
 	},
 	{
 		"link": "3-relay/4-sw-relay/16-slot-mech-info.md",
-		"char_ofs": 157164,
-		"byte_ofs": 182878
+		"char_ofs": 157394,
+		"byte_ofs": 183108
 	},
 	{
 		"link": "3-relay/4-sw-relay/17-slot-tool-info.md",
-		"char_ofs": 157989,
-		"byte_ofs": 183811
+		"char_ofs": 158219,
+		"byte_ofs": 184041
 	},
 	{
 		"link": "3-relay/4-sw-relay/18-slot-ucrd-info.md",
-		"char_ofs": 158920,
-		"byte_ofs": 184926
+		"char_ofs": 159150,
+		"byte_ofs": 185156
 	},
 	{
 		"link": "3-relay/4-sw-relay/19-slot-monopump.md",
-		"char_ofs": 159780,
-		"byte_ofs": 185968
+		"char_ofs": 160010,
+		"byte_ofs": 186198
 	},
 	{
 		"link": "3-relay/5-relative-addr.md",
-		"char_ofs": 165299,
-		"byte_ofs": 192357
+		"char_ofs": 165529,
+		"byte_ofs": 192587
 	},
 	{
 		"link": "4-instruction/README.md",
-		"char_ofs": 165862,
-		"byte_ofs": 193245
+		"char_ofs": 166092,
+		"byte_ofs": 193475
 	},
 	{
 		"link": "4-instruction/1-inst-list.md",
-		"char_ofs": 167148,
-		"byte_ofs": 195017
+		"char_ofs": 167378,
+		"byte_ofs": 195247
 	},
 	{
 		"link": "4-instruction/2-xic.md",
-		"char_ofs": 173232,
-		"byte_ofs": 202529
+		"char_ofs": 173462,
+		"byte_ofs": 202759
 	},
 	{
 		"link": "4-instruction/3-xio.md",
-		"char_ofs": 174362,
-		"byte_ofs": 203876
+		"char_ofs": 174592,
+		"byte_ofs": 204106
 	},
 	{
 		"link": "4-instruction/4-inv.md",
-		"char_ofs": 175469,
-		"byte_ofs": 205178
+		"char_ofs": 175699,
+		"byte_ofs": 205408
 	},
 	{
 		"link": "4-instruction/5-equ.md",
-		"char_ofs": 175765,
-		"byte_ofs": 205709
+		"char_ofs": 175995,
+		"byte_ofs": 205939
 	},
 	{
 		"link": "4-instruction/6-neq.md",
-		"char_ofs": 176998,
-		"byte_ofs": 207143
+		"char_ofs": 177228,
+		"byte_ofs": 207373
 	},
 	{
 		"link": "4-instruction/7-les.md",
-		"char_ofs": 178237,
-		"byte_ofs": 208587
+		"char_ofs": 178467,
+		"byte_ofs": 208817
 	},
 	{
 		"link": "4-instruction/8-grt.md",
-		"char_ofs": 179500,
-		"byte_ofs": 210059
+		"char_ofs": 179730,
+		"byte_ofs": 210289
 	},
 	{
 		"link": "4-instruction/9-leq.md",
-		"char_ofs": 180764,
-		"byte_ofs": 211526
+		"char_ofs": 180994,
+		"byte_ofs": 211756
 	},
 	{
 		"link": "4-instruction/10-geq.md",
-		"char_ofs": 182044,
-		"byte_ofs": 213025
+		"char_ofs": 182274,
+		"byte_ofs": 213255
 	},
 	{
 		"link": "4-instruction/11-ote.md",
-		"char_ofs": 183330,
-		"byte_ofs": 214532
+		"char_ofs": 183560,
+		"byte_ofs": 214762
 	},
 	{
 		"link": "4-instruction/12-otl.md",
-		"char_ofs": 184440,
-		"byte_ofs": 215841
+		"char_ofs": 184670,
+		"byte_ofs": 216071
 	},
 	{
 		"link": "4-instruction/13-otu.md",
-		"char_ofs": 185588,
-		"byte_ofs": 217228
+		"char_ofs": 185818,
+		"byte_ofs": 217458
 	},
 	{
 		"link": "4-instruction/14-osr.md",
-		"char_ofs": 186740,
-		"byte_ofs": 218619
+		"char_ofs": 186970,
+		"byte_ofs": 218849
 	},
 	{
 		"link": "4-instruction/15-res.md",
-		"char_ofs": 187943,
-		"byte_ofs": 220108
+		"char_ofs": 188173,
+		"byte_ofs": 220338
 	},
 	{
 		"link": "4-instruction/16-ton.md",
-		"char_ofs": 189222,
-		"byte_ofs": 221592
+		"char_ofs": 189452,
+		"byte_ofs": 221822
 	},
 	{
 		"link": "4-instruction/17-ctd.md",
-		"char_ofs": 190928,
-		"byte_ofs": 223621
+		"char_ofs": 191158,
+		"byte_ofs": 223851
 	},
 	{
 		"link": "4-instruction/18-add.md",
-		"char_ofs": 192519,
-		"byte_ofs": 225661
+		"char_ofs": 192749,
+		"byte_ofs": 225891
 	},
 	{
 		"link": "4-instruction/19-sub.md",
-		"char_ofs": 194006,
-		"byte_ofs": 227432
+		"char_ofs": 194236,
+		"byte_ofs": 227662
 	},
 	{
 		"link": "4-instruction/20-mul.md",
-		"char_ofs": 195459,
-		"byte_ofs": 229118
+		"char_ofs": 195689,
+		"byte_ofs": 229348
 	},
 	{
 		"link": "4-instruction/21-div.md",
-		"char_ofs": 196951,
-		"byte_ofs": 230896
+		"char_ofs": 197181,
+		"byte_ofs": 231126
 	},
 	{
 		"link": "4-instruction/22-pow.md",
-		"char_ofs": 198459,
-		"byte_ofs": 232700
+		"char_ofs": 198689,
+		"byte_ofs": 232930
 	},
 	{
 		"link": "4-instruction/23-tod.md",
-		"char_ofs": 199953,
-		"byte_ofs": 234493
+		"char_ofs": 200183,
+		"byte_ofs": 234723
 	},
 	{
 		"link": "4-instruction/24-frd.md",
-		"char_ofs": 201638,
-		"byte_ofs": 236760
+		"char_ofs": 201868,
+		"byte_ofs": 236990
 	},
 	{
 		"link": "4-instruction/25-seg.md",
-		"char_ofs": 203294,
-		"byte_ofs": 238940
+		"char_ofs": 203524,
+		"byte_ofs": 239170
 	},
 	{
 		"link": "4-instruction/26-mov.md",
-		"char_ofs": 205021,
-		"byte_ofs": 241037
+		"char_ofs": 205251,
+		"byte_ofs": 241267
 	},
 	{
 		"link": "4-instruction/27-cop.md",
-		"char_ofs": 206511,
-		"byte_ofs": 242909
+		"char_ofs": 206741,
+		"byte_ofs": 243139
 	},
 	{
 		"link": "4-instruction/28-ccop.md",
-		"char_ofs": 208414,
-		"byte_ofs": 245356
+		"char_ofs": 208644,
+		"byte_ofs": 245586
 	},
 	{
 		"link": "4-instruction/29-rot.md",
-		"char_ofs": 210572,
-		"byte_ofs": 248167
+		"char_ofs": 210802,
+		"byte_ofs": 248397
 	},
 	{
 		"link": "4-instruction/30-for.md",
-		"char_ofs": 213469,
-		"byte_ofs": 251863
+		"char_ofs": 213699,
+		"byte_ofs": 252093
 	},
 	{
 		"link": "4-instruction/31-next.md",
-		"char_ofs": 215836,
-		"byte_ofs": 255188
+		"char_ofs": 216066,
+		"byte_ofs": 255418
 	},
 	{
 		"link": "4-instruction/32-lbl.md",
-		"char_ofs": 216289,
-		"byte_ofs": 256055
+		"char_ofs": 216519,
+		"byte_ofs": 256285
 	},
 	{
 		"link": "4-instruction/33-jmp.md",
-		"char_ofs": 217431,
-		"byte_ofs": 257478
+		"char_ofs": 217661,
+		"byte_ofs": 257708
 	},
 	{
 		"link": "4-instruction/34-call.md",
-		"char_ofs": 219052,
-		"byte_ofs": 259854
+		"char_ofs": 219282,
+		"byte_ofs": 260084
 	},
 	{
 		"link": "4-instruction/35-end.md",
-		"char_ofs": 220528,
-		"byte_ofs": 261991
+		"char_ofs": 220758,
+		"byte_ofs": 262221
 	},
 	{
 		"link": "4-instruction/36-and.md",
-		"char_ofs": 220867,
-		"byte_ofs": 262701
+		"char_ofs": 221097,
+		"byte_ofs": 262931
 	},
 	{
 		"link": "4-instruction/37-or.md",
-		"char_ofs": 222386,
-		"byte_ofs": 264487
+		"char_ofs": 222616,
+		"byte_ofs": 264717
 	},
 	{
 		"link": "5-diff-hi5a-hi6.md",
-		"char_ofs": 223904,
-		"byte_ofs": 266272
+		"char_ofs": 224134,
+		"byte_ofs": 266502
 	}
 ]

@@ -1,6 +1,6 @@
 ﻿# 3.2 릴레이의 표기
 
-Hi6 로봇제어기 내장PLC에서의 릴레이 표기는 아래와 같습니다.
+${cont_model} 로봇제어기 내장PLC에서의 릴레이 표기는 아래와 같습니다.
 
 `[FB{block-index}.]{relay-type}[{data-type}]{signal-index}`
 

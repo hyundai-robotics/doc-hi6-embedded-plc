@@ -1,6 +1,6 @@
 ﻿# Table of contents
 
-* [Hi6 로봇제어기 기능설명서 - 내장PLC (Embedded PLC)](README.md)
+* [${cont_model} 로봇제어기 기능설명서 - 내장PLC (Embedded PLC)](README.md)
 * [1. 개요](1-intro/README.md)
   * [1.1 래더 로직(Ladder Logic)](1-intro/1-ladder-logic.md)
 
@@ -83,4 +83,4 @@
   * [4.36 AND(Bitwise AND) : 비트연산 AND](4-instruction/36-and.md)
   * [4.37 OR(Bitwise OR) : 비트연산 OR](4-instruction/37-or.md)
 
-* [5. Hi5a와 Hi6의 내장PLC 차이점](5-diff-hi5a-hi6.md)
+* [5. Hi5a와 ${cont_model}의 내장PLC 차이점](5-diff-hi5a-hi6.md)

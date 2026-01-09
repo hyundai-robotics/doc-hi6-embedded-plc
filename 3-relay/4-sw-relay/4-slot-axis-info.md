@@ -34,7 +34,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	<tr>
 		<td>4</td>
 		<td>param. 2</td>
-		<td>start axis number (1–)</td>
+		<td>start axis number (1-)</td>
 		<td>s2</td>
 	</tr>
 	<tr>
@@ -92,7 +92,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	<tr>
 		<td>4</td>
 		<td>param. 2</td>
-		<td>start axis number (1–)</td>
+		<td>start axis number (1-)</td>
 		<td>s2</td>
 	</tr>
 	<tr>

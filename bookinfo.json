@@ -1,11 +1,14 @@
-{
+﻿{
     "langCode": "en",
-    "series": "Hyundai Robot Hi7 Controller",
+    "series": "Hi7 Controller",
     "title": "Function Manual - Embedded PLC",
     "publisher": "HD Hyundai Robotics",
     "tocTitle": "Table of Contents",
     "tocTitleElements": "[ \"h1\", \"h2\" ]",
     "variables": {
         "cont_model": "Hi7"
-    }
+    },
+    "references": [
+        { "rpath" : "doc-hi6-operation/english-Hi7-tp630" }
+    ]
 }

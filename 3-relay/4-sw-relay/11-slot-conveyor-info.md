@@ -26,7 +26,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	<tr>
 		<td>2</td>
 		<td>param 1</td>
-		<td>conv_no (0–7)</td>
+		<td>conv_no (0-7)</td>
 		<td>s2</td>
 	</tr>
 	<tr>
@@ -90,7 +90,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	<tr>
 		<td>2</td>
 		<td>param 1</td>
-		<td>conv_no (0–7)</td>
+		<td>conv_no (0-7)</td>
 		<td>s2</td>
 	</tr>
 	<tr>
@@ -129,7 +129,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	<tr>
 		<td>2</td>
 		<td>param 1</td>
-		<td>conv_no (0–7)</td>
+		<td>conv_no (0-7)</td>
 		<td>s2</td>
 	</tr>
 	<tr>
@@ -168,7 +168,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	<tr>
 		<td>2</td>
 		<td>param 1</td>
-		<td>conv_no (0–7)</td>
+		<td>conv_no (0-7)</td>
 		<td>s2</td>
 	</tr>
 	<tr>

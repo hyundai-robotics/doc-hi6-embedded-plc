@@ -2,7 +2,7 @@
 
 
 ### Description
-If the rung is active, the value of “source a” will be multiplied by the value of “source b,” and the result value will be set in the “destination” relay.
+If the rung is active, the value of "source a" will be multiplied by the value of "source b," and the result value will be set in the "destination" relay.
 If the operation result has an overflow, the setting S7=1 will occur.
 
 <br>

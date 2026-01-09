@@ -2,7 +2,7 @@
 
 
 ### Description
-If the rung is active, the value of “source a” and the value of “source b” will be bitwise and operated together, and the result value will be set in the “destination” relay. (Support version is 60.28-00 and HRLadder v2.86b1)
+If the rung is active, the value of "source a" and the value of "source b" will be bitwise and operated together, and the result value will be set in the "destination" relay. (Support version is 60.28-00 and HRLadder v2.86b1)
 
 <br>
 

@@ -2,7 +2,7 @@
 
 
 ### Description
-If the rung is active, the value of “source b” will be subtracted from the value of “source a,” and the result value will be set in the “destination” relay.
+If the rung is active, the value of "source b" will be subtracted from the value of "source a," and the result value will be set in the "destination" relay.
 
 <br>
 

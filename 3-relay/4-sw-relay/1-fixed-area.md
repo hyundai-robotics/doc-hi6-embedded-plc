@@ -1,6 +1,6 @@
 ﻿# 3.4.1 S relay - Fixed area
 
-Please refer to the table shown below for the SB0–SB1999 areas for which fixed items are provided.
+Please refer to the table shown below for the SB0-SB1999 areas for which fixed items are provided.
 
 <style type="text/css">
 table  {border-collapse:collapse;}

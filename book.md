@@ -1,38 +1,24 @@
-﻿# ${cont_model} 로봇제어기 기능설명서 - 내장PLC (Embedded PLC)
-
-{% hint style="warning" %}
-본 제품 설명서에서 제공되는 정보는 현대로보틱스의 자산입니다.
-
-현대로보틱스의 서면에 의한 동의 없이 전부 또는 일부를 무단 전재 및 재배포할 수 없으며, 제3자에게 제공되거나 다른 목적에 사용할 수 없습니다.
-
-
-
-본 설명서는 사전 예고 없이 변경될 수 있습니다.
-
-
-
-**Copyright ⓒ 2022 by Hyundai Robotics**
-{% endhint %}
+﻿# Hi7 로봇제어기 기능설명서 - 내장PLC (Embedded PLC)
 # 1. 개요
 
-${cont_model} 제어기의 내장PLC(Embedded PLC)는 PLC(Programmable Logic Controller)의 기능을 제어기 내부에 소프트웨어적으로 탑재한 것입니다. PLC에서 흔히 사용되는 래더(ladder) 프로그램을 사용자가 작성하여 구동시킬 수 있습니다.
+Hi7 제어기의 내장PLC(Embedded PLC)는 PLC(Programmable Logic Controller)의 기능을 제어기 내부에 소프트웨어적으로 탑재한 것입니다. PLC에서 흔히 사용되는 래더(ladder) 프로그램을 사용자가 작성하여 구동시킬 수 있습니다.
 
-래더(ladder) 프로그램은 현대로봇 전용의 래더 편집 PC 소프트웨어인 HRLadder로 작성/편집하여, 이더넷으로 연결된 ${cont_model}제어기에 다운로드할 수 있습니다. 반대로 ${cont_model} 제어기에서 실행되고 있는 래더 프로그램을 PC의 HRLadder로 업로드 할 수 있으며, 제어기에서 실행되고 있는 PLC 모드나 릴레이 값 등의 상태를 HRLadder에서 원격 모니터링 하는 것도 가능합니다.
+래더(ladder) 프로그램은 현대로봇 전용의 래더 편집 PC 소프트웨어인 HRLadder로 작성/편집하여, 이더넷으로 연결된 Hi7제어기에 다운로드할 수 있습니다. 반대로 Hi7 제어기에서 실행되고 있는 래더 프로그램을 PC의 HRLadder로 업로드 할 수 있으며, 제어기에서 실행되고 있는 PLC 모드나 릴레이 값 등의 상태를 HRLadder에서 원격 모니터링 하는 것도 가능합니다.
 
 * HRLadder는 현대로보틱스 웹사이트(https://www.hd-hyundairobotics.com/) - 고객지원 - 응용소프트웨어 화면에서 다운로드 받으실 수 있습니다.
 * HRLadder의 사용법은 HRLadder의 도움말 메뉴에 연결된 기능설명서를 참조하십시오.
-* HRLadder는 Hi4~Hi5a의 구모델 제어기용으로도 사용 가능합니다. 다만 래더 프로그램은 ${cont_model}와 구모델 간 차이가 있어 호환되지 않음을 유의하십시오.
+* HRLadder는 Hi4~Hi5a의 구모델 제어기용으로도 사용 가능합니다. 다만 래더 프로그램은 Hi7와 구모델 간 차이가 있어 호환되지 않음을 유의하십시오.
 
-${cont_model}제어기의 I/O는 필드버스나 리모트I/O 장치를 통해 필드버스 마스터를 가진 상위 공정PLC, 혹은 하위 필드버스 슬레이브 장치들과 연결할 수 있습니다. 내장PLC 기능은 이렇게 연결된 I/O 신호들을 Ladder Logic으로 제어하는 기능입니다.
+Hi7제어기의 I/O는 필드버스나 리모트I/O 장치를 통해 필드버스 마스터를 가진 상위 공정PLC, 혹은 하위 필드버스 슬레이브 장치들과 연결할 수 있습니다. 내장PLC 기능은 이렇게 연결된 I/O 신호들을 Ladder Logic으로 제어하는 기능입니다.
 
 
-${cont_model}의 내장PLC 기능은 Hi5a의 내장PLC 기능과 유사하며, 동일한 래더 편집기 HRLadder를 사용합니다.
-따라서 이미 Hi5a의 내장PLC 기능에 익숙한 사용자는, ${cont_model}제어기에서 달라진 부분만을 확인하는 방식으로 이 설명서를 빠르게 학습할 수 있습니다.
+Hi7의 내장PLC 기능은 Hi5a의 내장PLC 기능과 유사하며, 동일한 래더 편집기 HRLadder를 사용합니다.
+따라서 이미 Hi5a의 내장PLC 기능에 익숙한 사용자는, Hi7제어기에서 달라진 부분만을 확인하는 방식으로 이 설명서를 빠르게 학습할 수 있습니다.
 
 
 {% hint style="info" %}
-이미 Hi5a의 내장PLC 기능에 익숙한 사용자는, ${cont_model}제어기에서 달라진 부분만을 확인하는 방식으로 이 설명서를 빠르게 학습할 수 있습니다. 아래 링크를 확인하시기 바랍니다.  
-[5. Hi5a와 ${cont_model}의 내장PLC 차이점](../5-diff-hi5a-hi6.md)
+이미 Hi5a의 내장PLC 기능에 익숙한 사용자는, Hi7제어기에서 달라진 부분만을 확인하는 방식으로 이 설명서를 빠르게 학습할 수 있습니다. 아래 링크를 확인하시기 바랍니다.  
+[5. Hi5a와 Hi7의 내장PLC 차이점](../5-diff-hi5a-hi6.md)
 
 {% endhint %}# 1.1 래더 로직(Ladder Logic)
 
@@ -158,7 +144,7 @@ R-Stop, R-Run은 Remote-Stop, Remote-Run, 즉 이더넷으로 연결된 PC의 HR
 
 "[R2: 창조정] - [F1: 선택]"으로 릴레이 상태를 모니터링 할 수 있습니다.
 
-자세한 내용은 [${cont_model} 조작설명서 - 6. 모니터링](https://hrbook-hrc.web.app/#/view/doc-hi6-operation/korean-tp630/6-monitoring/README) 절을 참조하십시오.
+자세한 내용은 [Hi7 조작설명서 - 6. 모니터링](https://hrbook-hrc.web.app/#/view/doc-hi6-operation/korean-tp630/6-monitoring/README) 절을 참조하십시오.
 # 2.3. scan time
 
 내장PLC에서 래더 파일이 1cycle 수행하는데 소요된 시간은 HRLadder의 하단 상태 바에 "scan time"으로 표시됩니다. 래더 프로그램의 스텝수가 증가할 수록 이 시간이 증가하면서 I/O 의 응답성이 느려집니다.
@@ -171,7 +157,7 @@ R-Stop, R-Run은 Remote-Stop, Remote-Run, 즉 이더넷으로 연결된 PC의 HR
 본래 릴레이는 코일(coil)의 자기적인 힘으로 접점을 제어하던 물리적인 장치입니다. 하지만 컴퓨터화된 PLC에서의 릴레이는 소프트웨어에 의해 제어되는 논리적인 개념으로서, 1bit의 ON/OFF 상태 뿐만 아니라 여러 bit로 구성된 byte, word, double word 값이나 실수값까지도 저장할 수 있는 변수와 같은 의미로 사용되고 있습니다.
 # 3.2 릴레이의 표기
 
-${cont_model} 로봇제어기 내장PLC에서의 릴레이 표기는 아래와 같습니다.
+Hi7 로봇제어기 내장PLC에서의 릴레이 표기는 아래와 같습니다.
 
 `[FB{block-index}.]{relay-type}[{data-type}]{signal-index}`
 
@@ -312,7 +298,7 @@ DI, DO는 각기 논리적인 입력과 출력으로서 로봇언어와 입출�
 
 # 3.3 입출력 Diagram
 
-${cont_model} 로봇제어기의 입출력 Diagram은 다음 그림과 같습니다.
+Hi7 로봇제어기의 입출력 Diagram은 다음 그림과 같습니다.
 
 
 ![](../_assets/io-diagram.png)
@@ -321,21 +307,21 @@ ${cont_model} 로봇제어기의 입출력 Diagram은 다음 그림과 같습니
 
 <br><br>
 
-그림 우측의 연두색 박스들은 ${cont_model} 제어기 내부의 하드웨어 모듈들입니다. 좌측에는 main 소프트웨어가 구동되는 main module (COM)이 있습니다.우측에는 필드버스 연결을 위한 PCI 카드인 Hilscher CIF card 들과 MODBUS 연결을 위한 시리얼 혹은 이더넷 디바이스가 있습니다.  
+그림 우측의 연두색 박스들은 Hi7 제어기 내부의 하드웨어 모듈들입니다. 좌측에는 main 소프트웨어가 구동되는 main module (COM)이 있습니다.우측에는 필드버스 연결을 위한 PCI 카드인 Hilscher CIF card 들과 MODBUS 연결을 위한 시리얼 혹은 이더넷 디바이스가 있습니다.  
 
-main 소프트웨어 내에는 각종 릴레이들이 작은 박스의 형태로 그려져 있습니다. ${cont_model}에서 이 릴레이에 접근하는 소프트웨어 요소는 hrscript(로봇언어)와 입출력 할당(I/O assignment), 그리고 내장PLC입니다.
+main 소프트웨어 내에는 각종 릴레이들이 작은 박스의 형태로 그려져 있습니다. Hi7에서 이 릴레이에 접근하는 소프트웨어 요소는 hrscript(로봇언어)와 입출력 할당(I/O assignment), 그리고 내장PLC입니다.
 
 <br>
 
 ## hrscript (로봇언어)
-로봇언어는 입출력 변수를 통해 User I/O (FB.DI/DO) 릴레이와 Memory (M) 릴레이에 접근할 수 있는데, 대문자대신 소문자가 사용됩니다 (e.g. fb3.dow14, mw501). 입출력 변수에 대한 자세한 내용은 [${cont_model} 기능설명서 - 로봇언어 - 입출력변수](https://hrbook-hrc.web.app/#/view/doc-hrscript/korean/6-external-comm/1-fb-io/1-io-val) 절을 참고하십시오.
+로봇언어는 입출력 변수를 통해 User I/O (FB.DI/DO) 릴레이와 Memory (M) 릴레이에 접근할 수 있는데, 대문자대신 소문자가 사용됩니다 (e.g. fb3.dow14, mw501). 입출력 변수에 대한 자세한 내용은 [Hi7 기능설명서 - 로봇언어 - 입출력변수](https://hrbook-hrc.web.app/#/view/doc-hrscript/korean/6-external-comm/1-fb-io/1-io-val) 절을 참고하십시오.
 
 
 <br>
 
 ## 입출력 할당, 입출력 속성
 입출력 할당은 FB.DI/DO 릴레이에 접근할 수 있습니다. 또한 입출력 속성 설정으로 부논리, 펄스 등을 FB.DI/DO에 설정할 수 있습니다. 예를 들어 입력 할당인 "외부 정지"에 DI24가 부논리로 설정되어 있으면, DI24 신호가 0(active)일 때 로봇은 정지합니다.  
-자세한 내용은 [${cont_model} 조작설명서 - 입출력 신호 설정](https://hrbook-hrc.web.app/#/view/doc-hi6-operation/korean-tp630/7-setting/3-control-parameter/2-io-signal-setting/README) 절을 참조하십시오.
+자세한 내용은 [Hi7 조작설명서 - 입출력 신호 설정](https://hrbook-hrc.web.app/#/view/doc-hi6-operation/korean-tp630/7-setting/3-control-parameter/2-io-signal-setting/README) 절을 참조하십시오.
 
 <br>
 
@@ -349,9 +335,9 @@ FB.DI는 로봇언어의 관점에서는 입력이지만, 이 입력은 내장PL
 <br>
 
 ## 외부 통신 연결
-Hilscher CIF card들은 물리적 입출력 I/O와 연결됩니다. 1개 혹은 여러 개의 FB객체를 특정한 CIF card 매핑하는 방법은 [${cont_model} 조작설명서 - 입출력 신호 설정 - DIO 블록 할당](https://hrbook-hrc.web.app/#/view/doc-hi6-operation/korean-tp630/7-setting/3-control-parameter/2-io-signal-setting/9-dio-block-assign)를 참고하십시오.  
+Hilscher CIF card들은 물리적 입출력 I/O와 연결됩니다. 1개 혹은 여러 개의 FB객체를 특정한 CIF card 매핑하는 방법은 [Hi7 조작설명서 - 입출력 신호 설정 - DIO 블록 할당](https://hrbook-hrc.web.app/#/view/doc-hi6-operation/korean-tp630/7-setting/3-control-parameter/2-io-signal-setting/9-dio-block-assign)를 참고하십시오.  
 
-모든 릴레이들은 MODBUS 슬레이브 기능의 주소공간에 매핑되어 있습니다. 자세한 내용은 [${cont_model} 기능설명서 - MODBUS](https://hrbook-hrc.web.app/#/view/doc-modbus/korean/README)를 참고하십시오.
+모든 릴레이들은 MODBUS 슬레이브 기능의 주소공간에 매핑되어 있습니다. 자세한 내용은 [Hi7 기능설명서 - MODBUS](https://hrbook-hrc.web.app/#/view/doc-modbus/korean/README)를 참고하십시오.
 # 3.3.1 SO - 시스템 출력
 
 <style type="text/css">
@@ -1403,9 +1389,9 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 </table>
 # 3.4 S 릴레이
 
-${cont_model} 제어기 내의 다양한 상태값이 S릴레이에 매핑되어 있습니다. 또한 일부 S릴레이에 값을 써서 ${cont_model}의 상태를 바꿀 수 있습니다.
+Hi7 제어기 내의 다양한 상태값이 S릴레이에 매핑되어 있습니다. 또한 일부 S릴레이에 값을 써서 Hi7의 상태를 바꿀 수 있습니다.
 
-따라서, 공정 PLC나 PC 같은 외부 장치는 필드버스, MODBUS 등을 통해 S 릴레이 값을 읽어 ${cont_model} 제어기의 상태를 원격 모니터링할 수 있으며, S 릴레이에 값을 써서 ${cont_model} 제어기를 원격 제어할 수 있습니다. 
+따라서, 공정 PLC나 PC 같은 외부 장치는 필드버스, MODBUS 등을 통해 S 릴레이 값을 읽어 Hi7 제어기의 상태를 원격 모니터링할 수 있으며, S 릴레이에 값을 써서 Hi7 제어기를 원격 제어할 수 있습니다. 
 
 S릴레이 영역은 아래와 같이 크게 2부분으로 나뉩니다.
 
@@ -11811,7 +11797,7 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 
 ### 설명
 Rung이 활성이면, "source"의 값을 BCD로 변환하여 "destination"에 저장합니다.  
-이 명령은 BCD형식으로 7’세그먼트에 값을 표시하는 장치를 사용할 때 편리합니다.  
+이 명령은 BCD형식으로 7"세그먼트에 값을 표시하는 장치를 사용할 때 편리합니다.  
 만일, "destination"의 데이터 타입이 바이트(B) 형식이면, 2개의 디지트로 변환하고, 워드(W) 형식이면, 4개의 디지트로 변환합니다. "source"의 값이 변환하는 디지트 수 보다 크면, S6=1로 설정합니다.
 
 <br>
@@ -11960,8 +11946,8 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 
 
 ### 설명
-Rung이 활성이면, "source"의 값을 7’세그먼트 값(8bit)으로 변환하여 "destination"에 저장합니다.  
-"destination"이 워드(W)형식이면, 2개의 7’세그먼트 값(8bit)을 "destination"에 저장합니다.
+Rung이 활성이면, "source"의 값을 7"세그먼트 값(8bit)으로 변환하여 "destination"에 저장합니다.  
+"destination"이 워드(W)형식이면, 2개의 7"세그먼트 값(8bit)을 "destination"에 저장합니다.
 
 <br>
 
@@ -12459,7 +12445,7 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 ### 설명
 Rung이 활성이면, NEXT까지의 블록을 "init"부터 "final"까지 "idx" 릴레이 값을 "step"씩 증가하면서 반복 실행합니다.  
 FOR문을 실행할 때 무조건 "idx" 릴레이에 "init"값을 대입합니다.  
-FOR/NEXT문은 최대 10개까지 중첩시킬 수 있습니다. → FOR() FOR() FOR() ….NEXT NEXT NEXT  
+FOR/NEXT문은 최대 10개까지 중첩시킬 수 있습니다. → FOR() FOR() FOR() ....NEXT NEXT NEXT  
 "step"이 0보다 큰 경우, "init" 값이 "final" 값보다 크면 실행하지 않고 NEXT로 Jump합니다.  
 "step"이 0보다 작은 경우, "init" 값이 "final" 값보다 작으면 실행하지 않고 NEXT로 Jump합니다.  
 "final"과 "step"은 변수로 지정해도 FOR문을 처음 시작할 때의 값만을 사용합니다.  
@@ -12553,7 +12539,7 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 ### 사용 예
 
 SW62에 1부터 4까지 1씩 증가하면서 {XIC(DO-2), OTL(Y-2)}명령을 반복 실행 합니다.  
-즉, "idx"가 상대어드레싱(SW62~SW79)을 위한 릴레이를 사용하고 있고, 그 XIC의 DO릴레이와 OTL의 Y릴레이가 “-2”이므로 SW62의 값에 있는 번호가 적용되기 때문에, DO1~DO4중 High인 신호번호에 해당하는 Y릴레이 번호만 High로 출력하고 입력되지 않는 번호의 Y출력은 이전상태를 유지합니다.  
+즉, "idx"가 상대어드레싱(SW62~SW79)을 위한 릴레이를 사용하고 있고, 그 XIC의 DO릴레이와 OTL의 Y릴레이가 "-2"이므로 SW62의 값에 있는 번호가 적용되기 때문에, DO1~DO4중 High인 신호번호에 해당하는 Y릴레이 번호만 High로 출력하고 입력되지 않는 번호의 Y출력은 이전상태를 유지합니다.  
 참고) 상대어드레싱이란 어떤 형식의 릴레이든지 그 번지를 -2~-9값으로 설정하면 SW62~SW79에 저장된 값으로 릴레이 번지가 지정되는 방식을 말합니다.
 
 

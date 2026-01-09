@@ -2,8 +2,8 @@
 
 
 ### 설명
-Rung이 활성이면, "source"의 값을 7’세그먼트 값(8bit)으로 변환하여 "destination"에 저장합니다.  
-"destination"이 워드(W)형식이면, 2개의 7’세그먼트 값(8bit)을 "destination"에 저장합니다.
+Rung이 활성이면, "source"의 값을 7"세그먼트 값(8bit)으로 변환하여 "destination"에 저장합니다.  
+"destination"이 워드(W)형식이면, 2개의 7"세그먼트 값(8bit)을 "destination"에 저장합니다.
 
 <br>
 

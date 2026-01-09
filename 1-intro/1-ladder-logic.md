@@ -38,7 +38,7 @@ Classified as a contact instruction, eXamine If Closed (XIC) is a simple instruc
 
 ![](../_assets/ladder-xic.png)
 
-A contact is a switch determining whether to transfer the signal (1) applied to the left along the rung to the right. If the relay DO3’s value is 0 (inactive), the contact will be open, keeping the signal from being transferred. If the DO3’s value is 1 (active), the contact will be closed, allowing the signal to be transferred.
+A contact is a switch determining whether to transfer the signal (1) applied to the left along the rung to the right. If the relay DO3"s value is 0 (inactive), the contact will be open, keeping the signal from being transferred. If the DO3"s value is 1 (active), the contact will be closed, allowing the signal to be transferred.
 
 ![](../_assets/ladder-contact.png)
 

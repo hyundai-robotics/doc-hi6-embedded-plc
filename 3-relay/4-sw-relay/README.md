@@ -1,6 +1,6 @@
 ﻿# 3.4 S relays
 
-The values ​​for various states in the ${cont_model} controller are mapped to the S relays. It is also possible to change the state of ${cont_model} by writing values ​​to some of the S relays.
+The values   for various states in the ${cont_model} controller are mapped to the S relays. It is also possible to change the state of ${cont_model} by writing values   to some of the S relays.
 
 Therefore, an external device, such as a process programmable logic controller (PLC) or personal computer (PC), can remotely monitor the states of the ${cont_model} controller by reading the values of the S relays through fieldbus, Modbus, etc. and can remotely control the ${cont_model} controller by writing values to the S relays.  
 
@@ -19,11 +19,11 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<th>content</th>
 	</tr>
 	<tr>
-		<td>SB00000–SB01999</td>
+		<td>SB00000-SB01999</td>
 		<td>fixed area</td>
 	</tr>
 	<tr>
-		<td>SB02000–SB19999</td>
+		<td>SB02000-SB19999</td>
 		<td>optional items area (slots)</td>
 	</tr>
 </table>

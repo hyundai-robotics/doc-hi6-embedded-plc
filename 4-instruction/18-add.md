@@ -2,7 +2,7 @@
 
 
 ### Description
-If the rung is active, the value of “source a” and the value of “source b” will be added together, and the result value will be set in the “destination” relay. If the operation result has an overflow, the setting S7=1 will occur.
+If the rung is active, the value of "source a" and the value of "source b" will be added together, and the result value will be set in the "destination" relay. If the operation result has an overflow, the setting S7=1 will occur.
 
 <br>
 

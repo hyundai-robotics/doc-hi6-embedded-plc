@@ -3,7 +3,7 @@
 
 ### Description
 If the rung is active, the value of the "source" will be converted to a BCD value, and the converted value will be stored in the "destination."
-This instruction will be convenient when using a device that displays values ​​in a 7-segment display in the BCD format.
+This instruction will be convenient when using a device that displays values in a 7-segment display in the BCD format.
 If the data type for the "destination" is in the byte (B) format, the value of the "source" will be converted to two digits. If it is in the word (W) format, the value of the "source" will be converted to four digits. However, if the value of the "source" is greater than the number of digits to convert to, the setting S6=1 will occur.
 
 <br>
@@ -68,7 +68,7 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 ### Example of use
 
 If the input DO42 is active, the value of XB3 will be converted to a BCD value, and the converted value will be set in the internal state relay MB3. 
-(Note: Binary Coded Decimal (BCD) refers to numbers whose 4-bit code value can have a value ranging from 0 to 9. That is, for BCD numbers, A–F among the numbers 0–F that can be represented with 4 bits are not used.)
+(Note: Binary Coded Decimal (BCD) refers to numbers whose 4-bit code value can have a value ranging from 0 to 9. That is, for BCD numbers, A-F among the numbers 0-F that can be represented with 4 bits are not used.)
 If &H7B(123) is converted to a BCD value, the converted value will be &H23(35), and because &H7B(123) is greater than &H63(99), the setting S6=1 will occur.
 
 

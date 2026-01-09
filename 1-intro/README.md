@@ -10,14 +10,14 @@ Ladder programs can be written or edited using the HRLadder, a ladder editing PC
 * HRLadder can be used for old controller models ranging from Hi4 to Hi5a. Please note that as the ladder program of the ${cont_model} controller is different from that of the old model controllers, there is no compatibility between them.
 
 
-The ${cont_model} controller’s I/O can be connected to the upper-process PLCs with fieldbus masters or to the devices of lower-level fieldbus slaves, both through a fieldbus or remote I/O device. The functions of the embedded PLC are designed to control the signals of the thus connected I/O using ladder logic.
+The ${cont_model} controller"s I/O can be connected to the upper-process PLCs with fieldbus masters or to the devices of lower-level fieldbus slaves, both through a fieldbus or remote I/O device. The functions of the embedded PLC are designed to control the signals of the thus connected I/O using ladder logic.
 
 
-The functions of the ${cont_model} controller’s embedded PLC are similar to those of the Hi5a controller’s embedded PLC, and the same HRLadder, in other words, the same ladder editor, is used. Therefore, users who are already familiar with the functions of the Hi5a controller’s embedded PLC can quickly learn from this manual by checking only the different parts of the ${cont_model} controller.
+The functions of the ${cont_model} controller"s embedded PLC are similar to those of the Hi5a controller"s embedded PLC, and the same HRLadder, in other words, the same ladder editor, is used. Therefore, users who are already familiar with the functions of the Hi5a controller"s embedded PLC can quickly learn from this manual by checking only the different parts of the ${cont_model} controller.
 
 
 {% hint style="info" %}
-Therefore, users already familiar with the functions of the Hi5a controller’s embedded PLC can quickly learn from this manual by checking only the different parts of the ${cont_model} controller. You are kindly required to check the link shown below.
+Therefore, users already familiar with the functions of the Hi5a controller"s embedded PLC can quickly learn from this manual by checking only the different parts of the ${cont_model} controller. You are kindly required to check the link shown below.
 [5. Difference in the embedded PLC between Hi5a and ${cont_model} controllers](../5-diff-hi5a-hi6.md)
 
 {% endhint %}

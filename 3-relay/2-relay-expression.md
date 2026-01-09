@@ -27,9 +27,9 @@ Each will be explained in detail later.
 
   2) Digital Output (DO): This is a logical output signal that can be used in HRScript or for assigning various outputs.
 
-  3) System Input (SI): This is a dedicated input signal that interfaces with the company’s system board.
+  3) System Input (SI): This is a dedicated input signal that interfaces with the company"s system board.
 
-  4) System Output (SO): This is a dedicated output signal that interfaces with the company’s system board.
+  4) System Output (SO): This is a dedicated output signal that interfaces with the company"s system board.
 
   5) X: This is a physical input signal that is inputted from the outside of the controller via a fieldbus device.
 
@@ -46,16 +46,16 @@ Each will be explained in detail later.
 
     | ** Relay name** | ** Number of points ** | ** Relay (bit) ** |** Relay (byte) ** |
     | :--- | :--- | :--- | :--- |
-    | DI | 9600 bits (1280 bytes) | FB0.DI0–FB9.DI959 | FB0.DIB0–FB9.DIB127 |
-    | DO | 9600 bits (1280 bytes) | FB0.DO0–FB9.DO959 | FB0.DOB0–FB9.DOB127 |
-    | SI | 960 bits (128 bytes) | SI0–SI959 | SIB0–SIB127 |
-    | SO | 960 bits (128 bytes) | SO0–SO959 | SOB0–SOB127 |
-    | X | 9600 bits (1280 bytes) | FB0.X0–FB9.X959 | FB0.XB0–FB9.XB127 |
-    | Y | 9600 bits (1280 bytes) | FB0.Y0–FB9.Y959 | FB0.YB0–FB9.YB127 |
-    | M | 160000 bits (20000 bytes) | M0–M159999 | MB0–MB19999 |
-    | S | 160000 bits (20000 bytes) | S0–S159999 | SB0–SB19999 |
-    | R | 960 bits (128 bytes) | R0–R959 | RB0–RB127 |
-    | K | 960 bits (128 bytes) | K0–K959 | KB0–KB127 |
+    | DI | 9600 bits (1280 bytes) | FB0.DI0-FB9.DI959 | FB0.DIB0-FB9.DIB127 |
+    | DO | 9600 bits (1280 bytes) | FB0.DO0-FB9.DO959 | FB0.DOB0-FB9.DOB127 |
+    | SI | 960 bits (128 bytes) | SI0-SI959 | SIB0-SIB127 |
+    | SO | 960 bits (128 bytes) | SO0-SO959 | SOB0-SOB127 |
+    | X | 9600 bits (1280 bytes) | FB0.X0-FB9.X959 | FB0.XB0-FB9.XB127 |
+    | Y | 9600 bits (1280 bytes) | FB0.Y0-FB9.Y959 | FB0.YB0-FB9.YB127 |
+    | M | 160000 bits (20000 bytes) | M0-M159999 | MB0-MB19999 |
+    | S | 160000 bits (20000 bytes) | S0-S159999 | SB0-SB19999 |
+    | R | 960 bits (128 bytes) | R0-R959 | RB0-RB127 |
+    | K | 960 bits (128 bytes) | K0-K959 | KB0-KB127 |
 
 * data-type  
 There are five different types, as shown below.
@@ -67,7 +67,7 @@ There are five different types, as shown below.
   * F: floating-point real, 32 bits
 
   <br>
-  They are just different data types representing the same memory space of 960 bit rather than separate memory spaces. For example, DO[0–15], DOB[0–1], and DOW[0] are all the same output signals.
+  They are just different data types representing the same memory space of 960 bit rather than separate memory spaces. For example, DO[0-15], DOB[0-1], and DOW[0] are all the same output signals.
 
 <br>
 
@@ -81,10 +81,10 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 <tbody>
   <tr>
     <td class="tg-kftd">bit</td>
-    <td>DO0–DO7</td>
-    <td>DO8–DO15</td>
-    <td>DO16–DO23</td>
-    <td>DO24–DO31</td>
+    <td>DO0-DO7</td>
+    <td>DO8-DO15</td>
+    <td>DO16-DO23</td>
+    <td>DO24-DO31</td>
     <td>...</td>
   </tr>
   <tr>
@@ -127,16 +127,16 @@ The fieldbus object name can be partially skipped, as shown below. For example, 
 
 | **Object name** | **DO designation** | **FB.DO designation** |
 | :--- | :--- | :--- |
-| FB0 | DO0–DO959 | FB0.DO0–FB0.DO959 |
-| FB1 | DO960–DO1919 | FB1.DO0–FB1.DO959 |
-| FB2 | DO1920–DO2879 | FB2.DO0–FB2.DO959 |
-| FB3 | DO2880–DO3839 | FB3.DO0–FB3.DO959 |
-| FB4 | DO3840–DO4799 | FB4.DO0–FB4.DO959 |
-| FB5 | DO4800–DO5759 | FB5.DO0–FB5.DO959 |
-| FB6 | DO5760–DO6719 | FB6.DO0–FB6.DO959 |
-| FB7 | DO6720–DO7679 | FB7.DO0–FB7.DO959 |
-| FB8 | DO7680–DO8639 | FB8.DO0–FB8.DO959 |
-| FB9 | DO8640–DO9599 | FB9.DO0–FB9.DO959 |
+| FB0 | DO0-DO959 | FB0.DO0-FB0.DO959 |
+| FB1 | DO960-DO1919 | FB1.DO0-FB1.DO959 |
+| FB2 | DO1920-DO2879 | FB2.DO0-FB2.DO959 |
+| FB3 | DO2880-DO3839 | FB3.DO0-FB3.DO959 |
+| FB4 | DO3840-DO4799 | FB4.DO0-FB4.DO959 |
+| FB5 | DO4800-DO5759 | FB5.DO0-FB5.DO959 |
+| FB6 | DO5760-DO6719 | FB6.DO0-FB6.DO959 |
+| FB7 | DO6720-DO7679 | FB7.DO0-FB7.DO959 |
+| FB8 | DO7680-DO8639 | FB8.DO0-FB8.DO959 |
+| FB9 | DO8640-DO9599 | FB9.DO0-FB9.DO959 |
 
 
 DI and DO are logical inputs and outputs, respectively, and can be accessed through the robot language and I/O assignment.

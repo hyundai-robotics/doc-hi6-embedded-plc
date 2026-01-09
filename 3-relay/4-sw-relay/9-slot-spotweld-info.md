@@ -26,13 +26,13 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	<tr>
 		<td>2</td>
 		<td>param 1</td>
-		<td>task_no (0–7)</td>
+		<td>task_no (0-7)</td>
 		<td>s2</td>
 	</tr>
 	<tr>
 		<td>4</td>
 		<td>param 2</td>
-		<td>gun_no (1–4)</td>
+		<td>gun_no (1-4)</td>
 		<td>s2</td>
 	</tr>
 	<tr>
@@ -43,22 +43,22 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	</tr>
 	<tr>
 		<td>8</td>
-		<td>moving electrode consumption amount × 10</td>
+		<td>moving electrode consumption amount x 10</td>
 		<td>s2</td>
 	</tr>
 	<tr>
 		<td>10</td>
-		<td>fixed electrode consumption amount × 10</td>
+		<td>fixed electrode consumption amount x 10</td>
 		<td>s2</td>
 	</tr>
 	<tr>
 		<td>12</td>
-		<td>squeeze force instruction value × 10</td>
+		<td>squeeze force instruction value x 10</td>
 		<td>s2</td>
 	</tr>
 	<tr>
 		<td>14</td>
-		<td>squeeze force current value × 10</td>
+		<td>squeeze force current value x 10</td>
 		<td>s2</td>
 	</tr>
 </tbody>

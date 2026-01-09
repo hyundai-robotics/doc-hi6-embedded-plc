@@ -2,7 +2,7 @@
 
 
 ### Description
-After the time (timer base × preset × 10) [ms] set by calculating the time during which the rung is active, the relevant timer relay will be in the ON (high) state. However, if the rung is inactive, the relevant timer relay will be cleared (-1) immediately. 
+After the time (timer base x preset x 10) [ms] set by calculating the time during which the rung is active, the relevant timer relay will be in the ON (high) state. However, if the rung is inactive, the relevant timer relay will be cleared (-1) immediately. 
 Note) The value of T is in units of 1 ms.
 
 

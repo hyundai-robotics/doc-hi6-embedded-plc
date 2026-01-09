@@ -1,39 +1,25 @@
-﻿# ${cont_model} Robot Controller Function Manual - Embedded Progammable Logic Controller (PLC)
-
-{% hint style="warning" %}
-The information provided in this product manual is the property of Hyundai Robotics.
-
-It cannot be reproduced or redistributed in part or whole without written consent from Hyundai Robotics, and it cannot be provided to third parties or used for other purposes.
-
-
-
-The manual is subject to change without prior notification.
-
-
-
-**Copyright ⓒ 2022 by Hyundai Robotics**
-{% endhint %}
+﻿# Hi6 Robot Controller Function Manual - Embedded Progammable Logic Controller (PLC)
 # 1. Overview
 
-The embedded programmable logic controller (PLC) of the ${cont_model} controller refers to the functions of the PLC that are installed into the controller in a software-like manner. The user can write and operate ladder programs that are commonly used in PLCs.
+The embedded programmable logic controller (PLC) of the Hi6 controller refers to the functions of the PLC that are installed into the controller in a software-like manner. The user can write and operate ladder programs that are commonly used in PLCs.
 
 
-Ladder programs can be written or edited using the HRLadder, a ladder editing PC software dedicated to the robots of Hyundai Robotics, and downloaded to the ${cont_model} controller connected via Ethernet. Conversely, the ladder program running on the ${cont_model} controller can be uploaded to the HRLadder on the PC, and the status, such as the mode of the PLC running on the controller or the values of relays, can be remotely monitored from the HRLadder. 
+Ladder programs can be written or edited using the HRLadder, a ladder editing PC software dedicated to the robots of Hyundai Robotics, and downloaded to the Hi6 controller connected via Ethernet. Conversely, the ladder program running on the Hi6 controller can be uploaded to the HRLadder on the PC, and the status, such as the mode of the PLC running on the controller or the values of relays, can be remotely monitored from the HRLadder. 
 
 * You can download the HRLadder from the Hyundai Robotics website (https://www.hd-hyundairobotics.com/) - Customer Support - Application Software screen.
 * For the information on how to use the HRLadder, refer to the function manual linked to the Help menu of the HRLadder.
-* HRLadder can be used for old controller models ranging from Hi4 to Hi5a. Please note that as the ladder program of the ${cont_model} controller is different from that of the old model controllers, there is no compatibility between them.
+* HRLadder can be used for old controller models ranging from Hi4 to Hi5a. Please note that as the ladder program of the Hi6 controller is different from that of the old model controllers, there is no compatibility between them.
 
 
-The ${cont_model} controller’s I/O can be connected to the upper-process PLCs with fieldbus masters or to the devices of lower-level fieldbus slaves, both through a fieldbus or remote I/O device. The functions of the embedded PLC are designed to control the signals of the thus connected I/O using ladder logic.
+The Hi6 controller"s I/O can be connected to the upper-process PLCs with fieldbus masters or to the devices of lower-level fieldbus slaves, both through a fieldbus or remote I/O device. The functions of the embedded PLC are designed to control the signals of the thus connected I/O using ladder logic.
 
 
-The functions of the ${cont_model} controller’s embedded PLC are similar to those of the Hi5a controller’s embedded PLC, and the same HRLadder, in other words, the same ladder editor, is used. Therefore, users who are already familiar with the functions of the Hi5a controller’s embedded PLC can quickly learn from this manual by checking only the different parts of the ${cont_model} controller.
+The functions of the Hi6 controller"s embedded PLC are similar to those of the Hi5a controller"s embedded PLC, and the same HRLadder, in other words, the same ladder editor, is used. Therefore, users who are already familiar with the functions of the Hi5a controller"s embedded PLC can quickly learn from this manual by checking only the different parts of the Hi6 controller.
 
 
 {% hint style="info" %}
-Therefore, users already familiar with the functions of the Hi5a controller’s embedded PLC can quickly learn from this manual by checking only the different parts of the ${cont_model} controller. You are kindly required to check the link shown below.
-[5. Difference in the embedded PLC between Hi5a and ${cont_model} controllers](../5-diff-hi5a-hi6.md)
+Therefore, users already familiar with the functions of the Hi5a controller"s embedded PLC can quickly learn from this manual by checking only the different parts of the Hi6 controller. You are kindly required to check the link shown below.
+[5. Difference in the embedded PLC between Hi5a and Hi6 controllers](../5-diff-hi5a-hi6.md)
 
 {% endhint %}
 
@@ -77,7 +63,7 @@ Classified as a contact instruction, eXamine If Closed (XIC) is a simple instruc
 
 ![](../_assets/ladder-xic.png)
 
-A contact is a switch determining whether to transfer the signal (1) applied to the left along the rung to the right. If the relay DO3’s value is 0 (inactive), the contact will be open, keeping the signal from being transferred. If the DO3’s value is 1 (active), the contact will be closed, allowing the signal to be transferred.
+A contact is a switch determining whether to transfer the signal (1) applied to the left along the rung to the right. If the relay DO3"s value is 0 (inactive), the contact will be open, keeping the signal from being transferred. If the DO3"s value is 1 (active), the contact will be closed, allowing the signal to be transferred.
 
 ![](../_assets/ladder-contact.png)
 
@@ -131,16 +117,16 @@ Y20 = DO6 AND (MW8 > 120)
 ![](../_assets/ladder-grt.png)
 # 2. Setting up the controller
 
-# 2.1. Setting the embedded PLC’s mode
+# 2.1. Setting the embedded PLC"s mode
 
-In “[F7: Condition setting] – PLC’s operation mode”, you can select one of the Off, Stop, R-Stop, R-Run, or Run modes as the operation mode of the embedded progammable logic controller (PLC.) 
+In "[F7: Condition setting] - PLC"s operation mode", you can select one of the Off, Stop, R-Stop, R-Run, or Run modes as the operation mode of the embedded progammable logic controller (PLC.) 
 R-Stop and R-Run refer to Remote-Stop and Remote-Run, respectively, and each represents a state in which the mode can be changed remotely from the HRLadder of the PC connected via Ethernet.
 
-![Figure 2.1 Setting the embedded PLC’s mode](../_assets/plc_run_mode.png)
+![Figure 2.1 Setting the embedded PLC"s mode](../_assets/plc_run_mode.png)
 
 <br>
 <br>
-According to the selected mode, the state will be indicated with an icon at the top right of the teach pendant’s screen. That is, in the case of PLC=R-Run or PLC=Run, the PLC icon will be displayed, as shown in the figure above; in the case of PLC=Off, the PLC icon will disappear, as shown in the figure below; and in the case of PLC=Stop, a prohibition mark in red will be indicated on the PLC icon.
+According to the selected mode, the state will be indicated with an icon at the top right of the teach pendant"s screen. That is, in the case of PLC=R-Run or PLC=Run, the PLC icon will be displayed, as shown in the figure above; in the case of PLC=Off, the PLC icon will disappear, as shown in the figure below; and in the case of PLC=Stop, a prohibition mark in red will be indicated on the PLC icon.
 
 ![Figure 2.2 Embedded PLC in Off State](../_assets/plc_mode_off.png)
 
@@ -149,7 +135,7 @@ According to the selected mode, the state will be indicated with an icon at the 
 
 
 * Off  
-The functions of the embedded PLC will be turned off. When this occurs, the logical outputs of the robot controller, FB0.DO0–FB9.DO959, will be automatically outputted as the physical outputs (means bypassing), FB0.Y0–FB9.Y959, and the physical inputs, FB0.X0–FB9.X959, will be automatically inputted as logical inputs, FB0.DI0–FB9.DI595.
+The functions of the embedded PLC will be turned off. When this occurs, the logical outputs of the robot controller, FB0.DO0-FB9.DO959, will be automatically outputted as the physical outputs (means bypassing), FB0.Y0-FB9.Y959, and the physical inputs, FB0.X0-FB9.X959, will be automatically inputted as logical inputs, FB0.DI0-FB9.DI595.
 
 * R-Stop/Stop  
 The operation of the embedded PLC will be stopped. R-Stop represents a remote state in which a change can be made from the HRLadder. If the Stop mode is set, it will be impossible to change the operation mode from the HRLadder. 
@@ -159,11 +145,11 @@ When the embedded PLC is stopped, the DI and Y relays, which are PLC output sign
 The embedded PLC will be executed. R-Run represents a remote state in which changes can be made from the HRLadder. If the Run mode is set, it will be impossible to change the operation mode from the HRLadder. 
 # 2.2. Monitoring the relay state from the teach pendant of the controller
 
-The relay state can be monitored by entering “[R2: Window adjustment] - [F1: Selection]”.
+The relay state can be monitored by entering "[R2: Window adjustment] - [F1: Selection]".
 
-For more details, refer to [${cont_model} Operation Manual - 6. Monitoring](https://hrbook-hrc.web.app/#/view/doc-hi6-operation/korean-tp630/6-monitoring/README).# 2.3. Scan time
+For more details, refer to [Hi6 Operation Manual - 6. Monitoring](https://hrbook-hrc.web.app/#/view/doc-hi6-operation/korean-tp630/6-monitoring/README).# 2.3. Scan time
 
-The time taken for the one-cycle execution of the ladder file in the embedded PLC will be indicated as “scan time” on the status bar at the bottom of the HRLadder. As the number of steps in the ladder program increases, the time for execution increases, slowing down the I/O responsiveness accordingly.# 3. Relays
+The time taken for the one-cycle execution of the ladder file in the embedded PLC will be indicated as "scan time" on the status bar at the bottom of the HRLadder. As the number of steps in the ladder program increases, the time for execution increases, slowing down the I/O responsiveness accordingly.# 3. Relays
 
 # 3.1 The meaning of a relay
 
@@ -171,7 +157,7 @@ A device in a state equivalent to an on/off contact that determines whether to t
 
 Originally, a relay was a physical device that controls contacts using the magnetic force of a coil. However, a relay in a computerized programmable logic controller (PLC) is a logical concept that is controlled by software. In terms of the meaning, a relay has been used as a variable that can store not only an on/off state consisting of 1 bit but also a byte, word, double word, or real value consisting of several bits.# 3.2 Designating a relay
 
-The following shows how the relays are designated in the embedded programmable logic controller (PLC) of the ${cont_model} robot controller.
+The following shows how the relays are designated in the embedded programmable logic controller (PLC) of the Hi6 robot controller.
 
 `[FB{block-index}.]{relay-type}[{data-type}]{signal-index}`
 
@@ -198,9 +184,9 @@ Each will be explained in detail later.
 
   2) Digital Output (DO): This is a logical output signal that can be used in HRScript or for assigning various outputs.
 
-  3) System Input (SI): This is a dedicated input signal that interfaces with the company’s system board.
+  3) System Input (SI): This is a dedicated input signal that interfaces with the company"s system board.
 
-  4) System Output (SO): This is a dedicated output signal that interfaces with the company’s system board.
+  4) System Output (SO): This is a dedicated output signal that interfaces with the company"s system board.
 
   5) X: This is a physical input signal that is inputted from the outside of the controller via a fieldbus device.
 
@@ -217,16 +203,16 @@ Each will be explained in detail later.
 
     | ** Relay name** | ** Number of points ** | ** Relay (bit) ** |** Relay (byte) ** |
     | :--- | :--- | :--- | :--- |
-    | DI | 9600 bits (1280 bytes) | FB0.DI0–FB9.DI959 | FB0.DIB0–FB9.DIB127 |
-    | DO | 9600 bits (1280 bytes) | FB0.DO0–FB9.DO959 | FB0.DOB0–FB9.DOB127 |
-    | SI | 960 bits (128 bytes) | SI0–SI959 | SIB0–SIB127 |
-    | SO | 960 bits (128 bytes) | SO0–SO959 | SOB0–SOB127 |
-    | X | 9600 bits (1280 bytes) | FB0.X0–FB9.X959 | FB0.XB0–FB9.XB127 |
-    | Y | 9600 bits (1280 bytes) | FB0.Y0–FB9.Y959 | FB0.YB0–FB9.YB127 |
-    | M | 160000 bits (20000 bytes) | M0–M159999 | MB0–MB19999 |
-    | S | 160000 bits (20000 bytes) | S0–S159999 | SB0–SB19999 |
-    | R | 960 bits (128 bytes) | R0–R959 | RB0–RB127 |
-    | K | 960 bits (128 bytes) | K0–K959 | KB0–KB127 |
+    | DI | 9600 bits (1280 bytes) | FB0.DI0-FB9.DI959 | FB0.DIB0-FB9.DIB127 |
+    | DO | 9600 bits (1280 bytes) | FB0.DO0-FB9.DO959 | FB0.DOB0-FB9.DOB127 |
+    | SI | 960 bits (128 bytes) | SI0-SI959 | SIB0-SIB127 |
+    | SO | 960 bits (128 bytes) | SO0-SO959 | SOB0-SOB127 |
+    | X | 9600 bits (1280 bytes) | FB0.X0-FB9.X959 | FB0.XB0-FB9.XB127 |
+    | Y | 9600 bits (1280 bytes) | FB0.Y0-FB9.Y959 | FB0.YB0-FB9.YB127 |
+    | M | 160000 bits (20000 bytes) | M0-M159999 | MB0-MB19999 |
+    | S | 160000 bits (20000 bytes) | S0-S159999 | SB0-SB19999 |
+    | R | 960 bits (128 bytes) | R0-R959 | RB0-RB127 |
+    | K | 960 bits (128 bytes) | K0-K959 | KB0-KB127 |
 
 * data-type  
 There are five different types, as shown below.
@@ -238,7 +224,7 @@ There are five different types, as shown below.
   * F: floating-point real, 32 bits
 
   <br>
-  They are just different data types representing the same memory space of 960 bit rather than separate memory spaces. For example, DO[0–15], DOB[0–1], and DOW[0] are all the same output signals.
+  They are just different data types representing the same memory space of 960 bit rather than separate memory spaces. For example, DO[0-15], DOB[0-1], and DOW[0] are all the same output signals.
 
 <br>
 
@@ -252,10 +238,10 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 <tbody>
   <tr>
     <td class="tg-kftd">bit</td>
-    <td>DO0–DO7</td>
-    <td>DO8–DO15</td>
-    <td>DO16–DO23</td>
-    <td>DO24–DO31</td>
+    <td>DO0-DO7</td>
+    <td>DO8-DO15</td>
+    <td>DO16-DO23</td>
+    <td>DO24-DO31</td>
     <td>...</td>
   </tr>
   <tr>
@@ -298,21 +284,21 @@ The fieldbus object name can be partially skipped, as shown below. For example, 
 
 | **Object name** | **DO designation** | **FB.DO designation** |
 | :--- | :--- | :--- |
-| FB0 | DO0–DO959 | FB0.DO0–FB0.DO959 |
-| FB1 | DO960–DO1919 | FB1.DO0–FB1.DO959 |
-| FB2 | DO1920–DO2879 | FB2.DO0–FB2.DO959 |
-| FB3 | DO2880–DO3839 | FB3.DO0–FB3.DO959 |
-| FB4 | DO3840–DO4799 | FB4.DO0–FB4.DO959 |
-| FB5 | DO4800–DO5759 | FB5.DO0–FB5.DO959 |
-| FB6 | DO5760–DO6719 | FB6.DO0–FB6.DO959 |
-| FB7 | DO6720–DO7679 | FB7.DO0–FB7.DO959 |
-| FB8 | DO7680–DO8639 | FB8.DO0–FB8.DO959 |
-| FB9 | DO8640–DO9599 | FB9.DO0–FB9.DO959 |
+| FB0 | DO0-DO959 | FB0.DO0-FB0.DO959 |
+| FB1 | DO960-DO1919 | FB1.DO0-FB1.DO959 |
+| FB2 | DO1920-DO2879 | FB2.DO0-FB2.DO959 |
+| FB3 | DO2880-DO3839 | FB3.DO0-FB3.DO959 |
+| FB4 | DO3840-DO4799 | FB4.DO0-FB4.DO959 |
+| FB5 | DO4800-DO5759 | FB5.DO0-FB5.DO959 |
+| FB6 | DO5760-DO6719 | FB6.DO0-FB6.DO959 |
+| FB7 | DO6720-DO7679 | FB7.DO0-FB7.DO959 |
+| FB8 | DO7680-DO8639 | FB8.DO0-FB8.DO959 |
+| FB9 | DO8640-DO9599 | FB9.DO0-FB9.DO959 |
 
 
 DI and DO are logical inputs and outputs, respectively, and can be accessed through the robot language and I/O assignment.# 3.3 Input/output diagram
 
-The I/O diagram of the ${cont_model} robot controller is as shown below.
+The I/O diagram of the Hi6 robot controller is as shown below.
 
 
 ![](../_assets/io-diagram.png)
@@ -321,27 +307,27 @@ Figure 3.1 I/O diagram
 
 <br><br>
 
-The light green boxes on the right side of the figure are hardware modules inside the ${cont_model} controller. On the left, there is the main module (COM module) where the main software runs. Meanwhile, on the right, there are Hilscher communication interface (CIF) cards, which are peripheral component interconnect (PCI) cards for the connection to the fieldbus, and serial or Ethernet devices for the connection to the Modbus.
+The light green boxes on the right side of the figure are hardware modules inside the Hi6 controller. On the left, there is the main module (COM module) where the main software runs. Meanwhile, on the right, there are Hilscher communication interface (CIF) cards, which are peripheral component interconnect (PCI) cards for the connection to the fieldbus, and serial or Ethernet devices for the connection to the Modbus.
 
-In the main software, there are various relays drawn in the form of small boxes. In the ${cont_model} controller, there are software elements that access these relays, and they are HRScript (robot language), I/O assignment, and the embedded programmable logic controller (PLC). 
+In the main software, there are various relays drawn in the form of small boxes. In the Hi6 controller, there are software elements that access these relays, and they are HRScript (robot language), I/O assignment, and the embedded programmable logic controller (PLC). 
 
 <br>
 
 ## HRScript (robot language)
-The robot language can access User I/O (FB.DI/DO) relays and Memory (M) relays through I/O variables. However, lowercase letters are to be used instead of uppercase letters (e.g., fb3.dow14, mw501.). For details on input/output variables, refer to the [${cont_model} Function Manual - Robot Language - I/O Variables](https://hrbook-hrc.web.app/#/view/doc-hrscript/korean/6-external-comm/1-fb-io/1-io-val) section.
+The robot language can access User I/O (FB.DI/DO) relays and Memory (M) relays through I/O variables. However, lowercase letters are to be used instead of uppercase letters (e.g., fb3.dow14, mw501.). For details on input/output variables, refer to the [Hi6 Function Manual - Robot Language - I/O Variables](https://hrbook-hrc.web.app/#/view/doc-hrscript/korean/6-external-comm/1-fb-io/1-io-val) section.
 
 
 <br>
 
 ## I/O assignment, I/O attributes
-I/O assignment can access FB.DI/DO relays. In addition, negative logic, pulse, etc. can be set in FB.DI/DO by setting the I/O attributes. For example, for the “external stop,” which is an input assignment, if negative logic is set in DI24, the robot will stop when the DI24 signal is 0 (active).
-For more details, refer to the [${cont_model} Operation Manual - Input/Output Signal Setting](https://hrbook-hrc.web.app/#/view/doc-hi6-operation/korean-tp630/7-setting/3-control-parameter/2-io-signal-setting/README) section. 
+I/O assignment can access FB.DI/DO relays. In addition, negative logic, pulse, etc. can be set in FB.DI/DO by setting the I/O attributes. For example, for the "external stop," which is an input assignment, if negative logic is set in DI24, the robot will stop when the DI24 signal is 0 (active).
+For more details, refer to the [Hi6 Operation Manual - Input/Output Signal Setting](https://hrbook-hrc.web.app/#/view/doc-hi6-operation/korean-tp630/7-setting/3-control-parameter/2-io-signal-setting/README) section. 
 
 
 <br>
 
 ## Embedded PLC
-Ladder Logic is drawn in a dotted line inside the embedded PLC box, and this part is connected to the relays on both sides with arrows. Ladder Logic receives inputs from relays, executes arithmetic/logical operations intended by the author, and then transfers the result values ​​to other relays.  
+Ladder Logic is drawn in a dotted line inside the embedded PLC box, and this part is connected to the relays on both sides with arrows. Ladder Logic receives inputs from relays, executes arithmetic/logical operations intended by the author, and then transfers the result values   to other relays.  
 
 As Ladder Logic is connected to Memory, System, Timer, and Counter relays in both directions, it can read values from the relays and write values to them. On the other hand, it is possible only to write values to FB.Y, a physical output, and only to read values from FB.X, a physical input. 
 
@@ -350,9 +336,9 @@ FB.DI is an input from the point of view of the robot language, but this input i
 <br>
 
 ## Connection to external communication
-Hilscher CIF cards are to be connected to physical inputs and outputs. For how to map one or multiple fieldbus objects to a specific CIF card, refer to [${cont_model} Operation Manual - I/O Signal Setting - DIO Block Assignment](https://hrbook-hrc.web.app/#/view/doc-hi6-operation/korean-tp630/7-setting/3-control-parameter/2-io-signal-setting/9-dio-block-assign).  
+Hilscher CIF cards are to be connected to physical inputs and outputs. For how to map one or multiple fieldbus objects to a specific CIF card, refer to [Hi6 Operation Manual - I/O Signal Setting - DIO Block Assignment](https://hrbook-hrc.web.app/#/view/doc-hi6-operation/korean-tp630/7-setting/3-control-parameter/2-io-signal-setting/9-dio-block-assign).  
 
-All relays are mapped to the address space of the Modbus slave function. For more details, refer to [${cont_model} Function Manual - Modbus](https://hrbook-hrc.web.app/#/view/doc-modbus/korean/README).
+All relays are mapped to the address space of the Modbus slave function. For more details, refer to [Hi6 Function Manual - Modbus](https://hrbook-hrc.web.app/#/view/doc-modbus/korean/README).
 # 3.3.1 SO - System output
 
 <style type="text/css">
@@ -1404,9 +1390,9 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 </table>
 # 3.4 S relays
 
-The values ​​for various states in the ${cont_model} controller are mapped to the S relays. It is also possible to change the state of ${cont_model} by writing values ​​to some of the S relays.
+The values   for various states in the Hi6 controller are mapped to the S relays. It is also possible to change the state of Hi6 by writing values   to some of the S relays.
 
-Therefore, an external device, such as a process programmable logic controller (PLC) or personal computer (PC), can remotely monitor the states of the ${cont_model} controller by reading the values of the S relays through fieldbus, Modbus, etc. and can remotely control the ${cont_model} controller by writing values to the S relays.  
+Therefore, an external device, such as a process programmable logic controller (PLC) or personal computer (PC), can remotely monitor the states of the Hi6 controller by reading the values of the S relays through fieldbus, Modbus, etc. and can remotely control the Hi6 controller by writing values to the S relays.  
 
 The area of the S relays can be largely divided into two parts as follows.
 
@@ -1423,11 +1409,11 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<th>content</th>
 	</tr>
 	<tr>
-		<td>SB00000–SB01999</td>
+		<td>SB00000-SB01999</td>
 		<td>fixed area</td>
 	</tr>
 	<tr>
-		<td>SB02000–SB19999</td>
+		<td>SB02000-SB19999</td>
 		<td>optional items area (slots)</td>
 	</tr>
 </table>
@@ -1529,7 +1515,7 @@ This area consists of a total of 900 slots, with each slot of 20 bytes. The conf
 </tbody>
 </table># 3.4.1 S relay - Fixed area
 
-Please refer to the table shown below for the SB0–SB1999 areas for which fixed items are provided.
+Please refer to the table shown below for the SB0-SB1999 areas for which fixed items are provided.
 
 <style type="text/css">
 table  {border-collapse:collapse;}
@@ -1983,7 +1969,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	<tr>
 		<td>2</td>
 		<td>param. 1</td>
-		<td>task_no (0–7)</td>
+		<td>task_no (0-7)</td>
 		<td>s2</td>
 	</tr>
 	<tr>
@@ -2041,7 +2027,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	<tr>
 		<td>2</td>
 		<td>param. 1</td>
-		<td>task_no (0–7)</td>
+		<td>task_no (0-7)</td>
 		<td>s2</td>
 	</tr>
 	<tr>
@@ -2109,7 +2095,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	<tr>
 		<td>4</td>
 		<td>param. 2</td>
-		<td>start axis number (1–)</td>
+		<td>start axis number (1-)</td>
 		<td>s2</td>
 	</tr>
 	<tr>
@@ -2167,7 +2153,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	<tr>
 		<td>4</td>
 		<td>param. 2</td>
-		<td>start axis number (1–)</td>
+		<td>start axis number (1-)</td>
 		<td>s2</td>
 	</tr>
 	<tr>
@@ -2448,25 +2434,25 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	<tr>
 		<td>2</td>
 		<td>get</td>
-		<td>the shortcut key number for the teach pendant’s current app (1–9)</td>
+		<td>the shortcut key number for the teach pendant"s current app (1-9)</td>
 		<td>s2</td>
 	</tr>
 	<tr>
 		<td>4</td>
 		<td>set</td>
-		<td>the shortcut key number for the teach pendant’s target app whose state needs to be read or controlled (1–9)</td>
+		<td>the shortcut key number for the teach pendant"s target app whose state needs to be read or controlled (1-9)</td>
 		<td>s2</td>
 	</tr>
 	<tr>
 		<td>6</td>
 		<td>get</td>
-		<td>the current state value of the teach pendant’s target app<br>(-1=no operation, 0=not executed, 1=activated, 2=inactivated)</td>
+		<td>the current state value of the teach pendant"s target app<br>(-1=no operation, 0=not executed, 1=activated, 2=inactivated)</td>
 		<td>s2</td>
 	</tr>
 	<tr>
 		<td>8</td>
 		<td>set</td>
-		<td>controlling of the teach pendant’s target app<br>
+		<td>controlling of the teach pendant"s target app<br>
 (0: no operation, 1: activated, 2: inactivated, 8: executed, 9:forced ending)<br>
 * will be performed once every time the value changes.</td>
 		<td>s2</td>
@@ -2505,27 +2491,27 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	</tr>
 	<tr>
 		<td>4</td>
-		<td>month (1–12)</td>
+		<td>month (1-12)</td>
 		<td>s2</td>
 	</tr>
 	<tr>
 		<td>6</td>
-		<td>date (1–31)</td>
+		<td>date (1-31)</td>
 		<td>s2</td>
 	</tr>
 	<tr>
 		<td>8</td>
-		<td>hour (0–23)</td>
+		<td>hour (0-23)</td>
 		<td>s2</td>
 	</tr>
 	<tr>
 		<td>10</td>
-		<td>minute (0–59)</td>
+		<td>minute (0-59)</td>
 		<td>s2</td>
 	</tr>
 	<tr>
 		<td>12</td>
-		<td>second (0–59)</td>
+		<td>second (0-59)</td>
 		<td>s2</td>
 	</tr>
 </tbody>
@@ -2557,7 +2543,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	<tr>
 		<td>2</td>
 		<td>param 1</td>
-		<td>task_no (0–7)</td>
+		<td>task_no (0-7)</td>
 		<td>s2</td>
 	</tr>
 	<tr>
@@ -2650,13 +2636,13 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	<tr>
 		<td>2</td>
 		<td>param 1</td>
-		<td>task_no (0–7)</td>
+		<td>task_no (0-7)</td>
 		<td>s2</td>
 	</tr>
 	<tr>
 		<td>4</td>
 		<td>param 2</td>
-		<td>gun_no (1–4)</td>
+		<td>gun_no (1-4)</td>
 		<td>s2</td>
 	</tr>
 	<tr>
@@ -2667,22 +2653,22 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	</tr>
 	<tr>
 		<td>8</td>
-		<td>moving electrode consumption amount × 10</td>
+		<td>moving electrode consumption amount x 10</td>
 		<td>s2</td>
 	</tr>
 	<tr>
 		<td>10</td>
-		<td>fixed electrode consumption amount × 10</td>
+		<td>fixed electrode consumption amount x 10</td>
 		<td>s2</td>
 	</tr>
 	<tr>
 		<td>12</td>
-		<td>squeeze force instruction value × 10</td>
+		<td>squeeze force instruction value x 10</td>
 		<td>s2</td>
 	</tr>
 	<tr>
 		<td>14</td>
-		<td>squeeze force current value × 10</td>
+		<td>squeeze force current value x 10</td>
 		<td>s2</td>
 	</tr>
 </tbody>
@@ -3249,7 +3235,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	<tr>
 		<td>2</td>
 		<td>param 1</td>
-		<td>conv_no (0–7)</td>
+		<td>conv_no (0-7)</td>
 		<td>s2</td>
 	</tr>
 	<tr>
@@ -3313,7 +3299,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	<tr>
 		<td>2</td>
 		<td>param 1</td>
-		<td>conv_no (0–7)</td>
+		<td>conv_no (0-7)</td>
 		<td>s2</td>
 	</tr>
 	<tr>
@@ -3352,7 +3338,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	<tr>
 		<td>2</td>
 		<td>param 1</td>
-		<td>conv_no (0–7)</td>
+		<td>conv_no (0-7)</td>
 		<td>s2</td>
 	</tr>
 	<tr>
@@ -3391,7 +3377,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	<tr>
 		<td>2</td>
 		<td>param 1</td>
-		<td>conv_no (0–7)</td>
+		<td>conv_no (0-7)</td>
 		<td>s2</td>
 	</tr>
 	<tr>
@@ -9810,13 +9796,13 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 </table>
 # 3.5 Designating indirect addresses for relays
 
-SW62–SW79 are system memories for designating indirect addresses. Regardless of the relay type, if a value between -2 and -18 is designated for a relay address, the set value will lead to a designated relay address stored in SW62–SW79.
+SW62-SW79 are system memories for designating indirect addresses. Regardless of the relay type, if a value between -2 and -18 is designated for a relay address, the set value will lead to a designated relay address stored in SW62-SW79.
 
 
 
 ![](../_assets/rel-addr-concept.png)
 
-For example, when some of the values for SW62–SW79 are as below,
+For example, when some of the values for SW62-SW79 are as below,
 
 | **relay** | **value** |
 | :---      | :---      |
@@ -9831,7 +9817,7 @@ the notation of an indirect address can be interpreted as follows.
 *	X-18 -> X56
 *	FB-10.YW-2 -> FB3.YW12
 
-The embedded programmable logic controller (PLC) example presented below is an example in which the operation of outputting signals Y1–Y128 corresponding to input signals X1–X128 is created using the FOR/NEXT instructions and indirect address designation method.
+The embedded programmable logic controller (PLC) example presented below is an example in which the operation of outputting signals Y1-Y128 corresponding to input signals X1-X128 is created using the FOR/NEXT instructions and indirect address designation method.
 
 ![](../_assets/rel-addr-for-next.png)# 4. Instructions
 
@@ -11178,7 +11164,7 @@ If the internal state relay M18 is in the ON state, the timer relay of T28 will 
 
 
 ### Description
-After the time (timer base × preset × 10) [ms] set by calculating the time during which the rung is active, the relevant timer relay will be in the ON (high) state. However, if the rung is inactive, the relevant timer relay will be cleared (-1) immediately. 
+After the time (timer base x preset x 10) [ms] set by calculating the time during which the rung is active, the relevant timer relay will be in the ON (high) state. However, if the rung is inactive, the relevant timer relay will be cleared (-1) immediately. 
 Note) The value of T is in units of 1 ms.
 
 
@@ -11351,7 +11337,7 @@ If the internal state relay M19 switches from the OFF state to the ON state, the
 
 
 ### Description
-If the rung is active, the value of “source a” and the value of “source b” will be added together, and the result value will be set in the “destination” relay. If the operation result has an overflow, the setting S7=1 will occur.
+If the rung is active, the value of "source a" and the value of "source b" will be added together, and the result value will be set in the "destination" relay. If the operation result has an overflow, the setting S7=1 will occur.
 
 <br>
 
@@ -11433,7 +11419,7 @@ When the input DO36 is active, 50 will be added to the value of XB3, and the res
 
 
 ### Description
-If the rung is active, the value of “source b” will be subtracted from the value of “source a,” and the result value will be set in the “destination” relay.
+If the rung is active, the value of "source b" will be subtracted from the value of "source a," and the result value will be set in the "destination" relay.
 
 <br>
 
@@ -11515,7 +11501,7 @@ If the input DO37 is active, 10 will be subtracted from the value of XB3, and th
 
 
 ### Description
-If the rung is active, the value of “source a” will be multiplied by the value of “source b,” and the result value will be set in the “destination” relay.
+If the rung is active, the value of "source a" will be multiplied by the value of "source b," and the result value will be set in the "destination" relay.
 If the operation result has an overflow, the setting S7=1 will occur.
 
 <br>
@@ -11598,8 +11584,8 @@ If the input DO38 is active, the value of XB3 will be multiplied by 3, and the r
 
 
 ### Description
-If the rung is active, the value of “source a” will be divided by the value of “source b,” and the result value will be set in the “destination” relay.
-If the value of “source b” is 0 or the operation result has an overflow, the setting S7=1 will occur.
+If the rung is active, the value of "source a" will be divided by the value of "source b," and the result value will be set in the "destination" relay.
+If the value of "source b" is 0 or the operation result has an overflow, the setting S7=1 will occur.
 
 <br>
 
@@ -11681,7 +11667,7 @@ If the input DO39 is active, the value of XB3 will be divided by 4, and the resu
 
 
 ### Description
-If the rung is active, the value of “source a” will be raised to the power of the value of “source b,” and the result value will be set in the “destination” relay. If the operation result has an overflow, the setting S7=1 will occur.
+If the rung is active, the value of "source a" will be raised to the power of the value of "source b," and the result value will be set in the "destination" relay. If the operation result has an overflow, the setting S7=1 will occur.
 
 <br>
 
@@ -11764,7 +11750,7 @@ If the input DO40 is active, the value of XB3 will be raised to the power of 2, 
 
 ### Description
 If the rung is active, the value of the "source" will be converted to a BCD value, and the converted value will be stored in the "destination."
-This instruction will be convenient when using a device that displays values ​​in a 7-segment display in the BCD format.
+This instruction will be convenient when using a device that displays values in a 7-segment display in the BCD format.
 If the data type for the "destination" is in the byte (B) format, the value of the "source" will be converted to two digits. If it is in the word (W) format, the value of the "source" will be converted to four digits. However, if the value of the "source" is greater than the number of digits to convert to, the setting S6=1 will occur.
 
 <br>
@@ -11829,7 +11815,7 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 ### Example of use
 
 If the input DO42 is active, the value of XB3 will be converted to a BCD value, and the converted value will be set in the internal state relay MB3. 
-(Note: Binary Coded Decimal (BCD) refers to numbers whose 4-bit code value can have a value ranging from 0 to 9. That is, for BCD numbers, A–F among the numbers 0–F that can be represented with 4 bits are not used.)
+(Note: Binary Coded Decimal (BCD) refers to numbers whose 4-bit code value can have a value ranging from 0 to 9. That is, for BCD numbers, A-F among the numbers 0-F that can be represented with 4 bits are not used.)
 If &H7B(123) is converted to a BCD value, the converted value will be &H23(35), and because &H7B(123) is greater than &H63(99), the setting S6=1 will occur.
 
 
@@ -12080,10 +12066,10 @@ If the input DO55 is active, 55 will be set in the internal state relay MB2.
 
 
 ### Description
-If the rung is active, values will be copied from the location of the “source” to the location of the “destination” as many as the number of the “length.”
-If the “source” is a number, the “destination” will be filled with the value of the “source” as much as the number of the “length.” In this case, when the “destination” is in bit format, if the value of the “source” is 0, the “destination” will be filled with OFFs, and if the value of the “source” is not 0, the “destination” will be filled with ONs.
-If the “source” is a relay, the data types of the “source” and “destination” should be the same. That is, if the “source” is in the bit format, the “destination” should be in the bit format; if the “source” is in the byte (B) format, then the “destination” should be in the byte (B) format; if the “source” is in the word (W) format, then the “destination” should also be in the word (W) format.
-If the “source” + “length” is greater than the maximum number of the “source” relays or the “destination” + “length” is greater than the maximum number of “destination” relays, copying will be performed only up to the maximum number of relays.
+If the rung is active, values will be copied from the location of the "source" to the location of the "destination" as many as the number of the "length."
+If the "source" is a number, the "destination" will be filled with the value of the "source" as much as the number of the "length." In this case, when the "destination" is in bit format, if the value of the "source" is 0, the "destination" will be filled with OFFs, and if the value of the "source" is not 0, the "destination" will be filled with ONs.
+If the "source" is a relay, the data types of the "source" and "destination" should be the same. That is, if the "source" is in the bit format, the "destination" should be in the bit format; if the "source" is in the byte (B) format, then the "destination" should be in the byte (B) format; if the "source" is in the word (W) format, then the "destination" should also be in the word (W) format.
+If the "source" + "length" is greater than the maximum number of the "source" relays or the "destination" + "length" is greater than the maximum number of "destination" relays, copying will be performed only up to the maximum number of relays.
 
 
 <br>
@@ -12166,10 +12152,10 @@ If the input DO56 is active, the value corresponding to 8 bytes will be copied f
 
 
 ### Description
-Depending on the state of the rung, values will be copied from the location of the “source a” or “source b” to the location of the “destination” as many as the number of the “length.”
-If the “source” is a number, the “destination” will be filled with the relevant value as much as the value of the “length.”. In this case, when the “destination” is in bit format, if the relevant value is 0, the “destination” will be filled with OFFs, and if the relevant value is not 0, the “destination” will be filled with ONs.
-If the “source” is a relay, the data types of the “source” and “destination” should be the same. That is, if the “source” is in the bit format, the “destination” should be in the bit format; if the “source” is in the byte (B) format, then the “destination” should be in the byte (B) format; if the “source” is in the word (W) format, then the “destination” should also be in the word (W) format.
-If the “source” + “length” is greater than the maximum number of the “source” relays or the “destination” + “length” is greater than the maximum number of “destination” relays, copying will be performed only up to the maximum number of relays.
+Depending on the state of the rung, values will be copied from the location of the "source a" or "source b" to the location of the "destination" as many as the number of the "length."
+If the "source" is a number, the "destination" will be filled with the relevant value as much as the value of the "length.". In this case, when the "destination" is in bit format, if the relevant value is 0, the "destination" will be filled with OFFs, and if the relevant value is not 0, the "destination" will be filled with ONs.
+If the "source" is a relay, the data types of the "source" and "destination" should be the same. That is, if the "source" is in the bit format, the "destination" should be in the bit format; if the "source" is in the byte (B) format, then the "destination" should be in the byte (B) format; if the "source" is in the word (W) format, then the "destination" should also be in the word (W) format.
+If the "source" + "length" is greater than the maximum number of the "source" relays or the "destination" + "length" is greater than the maximum number of "destination" relays, copying will be performed only up to the maximum number of relays.
 
 
 <br>
@@ -12406,8 +12392,8 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 
 ### Example of use
 
-If one or more errors related to the error conditions from 1 to 3 are present, the error number will be stored in MW50–MW55. Here, when the input DO58 is active, the error number generated by the ROT instruction will be stored in MW70 for 2 seconds, while the number will be converted to a BCD value by the TOD instruction and displayed sequentially on the display device connected to YB3.
-If X3, connected for an external error reset signal, has an input signal, the contents of MW51–MW55 where the error numbers are stored will be cleared to 0 and MW70 and MW80 will be also cleared to 0 with the display device indicating 0 accordingly.
+If one or more errors related to the error conditions from 1 to 3 are present, the error number will be stored in MW50-MW55. Here, when the input DO58 is active, the error number generated by the ROT instruction will be stored in MW70 for 2 seconds, while the number will be converted to a BCD value by the TOD instruction and displayed sequentially on the display device connected to YB3.
+If X3, connected for an external error reset signal, has an input signal, the contents of MW51-MW55 where the error numbers are stored will be cleared to 0 and MW70 and MW80 will be also cleared to 0 with the display device indicating 0 accordingly.
 
 ![](../_assets/rot.png)
 # 4.30 FOR (FOR): Repeating the Block
@@ -12416,10 +12402,10 @@ If X3, connected for an external error reset signal, has an input signal, the co
 ### Description
 If the rung is active, the block up to the Next instruction will be executed repeatedly, while the "idx" relay value increase by as much as the "step" value from the "init" value to the "final" value.
 When the FOR instruction is executed, the "init" value should be unconditionally substituted with the "idx' relay.
-The FOR/NEXT instruction can be nested up to 10. For example: → FOR() FOR() FOR() … .NEXT NEXT NEXT
+The FOR/NEXT instruction can be nested up to 10. For example: → FOR() FOR() FOR() ... .NEXT NEXT NEXT
 In a state where the "step" value is greater than 0, if the "init" value is greater than the "final" value, no execution will occur. Instead, jumping to the Next instruction will occur.
 In a state where the "step" value is less than 0, if the "init" value is less than the "final" value, no execution will occur. Instead, jumping to the Next instruction will occur.
-The "final" and "step" can be designated as variables. However, only the values ​​at the point when the FOR instruction started will be used.
+The "final" and "step" can be designated as variables. However, only the values at the point when the FOR instruction started will be used.
 To leave in the middle of a FOR instruction under special circumstances, the JMP (negative number) instruction, which will be described later, can be used (refer to the description of the JMP instruction).
 Caution: The FOR instruction does not have any additional processing for branching.
 Note: For more details on the NEXT instruction, refer to [4.31 NEXT (NEXT)](./31-next)
@@ -12510,8 +12496,8 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 ### Example of use
 
 The instruction {XIC(DO-2), OTL(Y-2)} will be executed in repetition, while the value will increase by 1 from 1 to 4 in SW62.  
-In other words, in a state where “idx” is using a relay for relative addressing (SW62–SW79), and the DO relay of the XIC instruction and the Y relay of the OTL instruction are “-2”, the number in the value of SW62 will be applied. Therefore, the Y relay number corresponding to the number of a signal in the High state among DO1–DO4 will be outputted in the High state, while the Y output of the number that is not inputted will retain its previous state. 
-Note: Relative addressing refers to a method where the relay address will be designated to a value stored in SW62–SW79 if the relevant relay is set to a number ranging from -2 to -9 regardless of the type of relay.
+In other words, in a state where "idx" is using a relay for relative addressing (SW62-SW79), and the DO relay of the XIC instruction and the Y relay of the OTL instruction are "-2", the number in the value of SW62 will be applied. Therefore, the Y relay number corresponding to the number of a signal in the High state among DO1-DO4 will be outputted in the High state, while the Y output of the number that is not inputted will retain its previous state. 
+Note: Relative addressing refers to a method where the relay address will be designated to a value stored in SW62-SW79 if the relevant relay is set to a number ranging from -2 to -9 regardless of the type of relay.
 
 
 ![](../_assets/for.png)
@@ -12738,7 +12724,7 @@ If the input DO22 is inactive, the END instruction will not be executed, allowin
 
 
 ### Description
-If the rung is active, the value of “source a” and the value of “source b” will be bitwise and operated together, and the result value will be set in the “destination” relay. (Support version is 60.28-00 and HRLadder v2.86b1)
+If the rung is active, the value of "source a" and the value of "source b" will be bitwise and operated together, and the result value will be set in the "destination" relay. (Support version is 60.28-00 and HRLadder v2.86b1)
 
 <br>
 
@@ -12820,7 +12806,7 @@ When the input DO36 is active, MB0 will be bitwise and operated to the value of 
 
 
 ### Description
-If the rung is active, the value of “source a” and the value of “source b” will be bitwise or operated together, and the result value will be set in the “destination” relay. (Support version is 60.28-00 and HRLadder v2.86b1)
+If the rung is active, the value of "source a" and the value of "source b" will be bitwise or operated together, and the result value will be set in the "destination" relay. (Support version is 60.28-00 and HRLadder v2.86b1)
 
 <br>
 
@@ -12898,10 +12884,10 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 When the input DO36 is active, DOW2 will be bitwise or operated to the value of &H0F0F, and the result value will be set in the internal state relay DIL8.
 
 ![](../_assets/or.png)
-# 5. Difference in the Embedded PLC between Hi5a and ${cont_model}
+# 5. Difference in the Embedded PLC between Hi5a and Hi6
 
-The functions of the ${cont_model} controller's embedded PLC are similar to those of the Hi5a controller's embedded PLC, and the same HRLadder, or the same ladder editor, is used. 
-Therefore, users who are already familiar with the functions of the Hi5a controller's embedded PLC can quickly learn from this manual by checking only the different parts in the ${cont_model} controller.
+The functions of the Hi6 controller's embedded PLC are similar to those of the Hi5a controller's embedded PLC, and the same HRLadder, or the same ladder editor, is used. 
+Therefore, users who are already familiar with the functions of the Hi5a controller's embedded PLC can quickly learn from this manual by checking only the different parts in the Hi6 controller.
 
 The following content includes the list of the different parts.
 
@@ -12909,7 +12895,7 @@ The following content includes the list of the different parts.
 
 ## HRLadder online connection
 
-HRLadder v2.80 or later supports the ${cont_model} controller.
+HRLadder v2.80 or later supports the Hi6 controller.
 Versions of HRLadder earlier than v2.80 allows remote connection through automatic recognition of the controller type when the online button is pressed.
 However, for HRLadder v2.80 or later, you need to select the controller type in the attributes of the project, then press the online button.
 
@@ -12923,13 +12909,13 @@ However, for HRLadder v2.80 or later, you need to select the controller type in 
 
 ### Hi5a
 
-M relays of MW1–MW1000 are supported.
+M relays of MW1-MW1000 are supported.
 A special relay SP exists.
 Dedicated input and output signals are included in SW.
 
-### ${cont_model}
+### Hi6
 
-M relays are largely extended to a range of MW0–MW19998, so you can use them as substitutes for others.
+M relays are largely extended to a range of MW0-MW19998, so you can use them as substitutes for others.
 SP relays are integrated into the area for special flags of [S relay - Fixed area](https://hrbook-hrc.web.app/#/view/doc-hi6-embedded-plc/korean/3-relay/4-sw-relay/1-fixed-area)
 For dedicated input and output signals, support will be provided with SI and SO. 
 
@@ -12942,7 +12928,7 @@ For dedicated input and output signals, support will be provided with SI and SO.
 ### Hi5a
 The index starts with 1.
 The index for word, long, and float increases by 1. 
-For example, DO16–DO23 are the same as DOW1
+For example, DO16-DO23 are the same as DOW1
 
 
 <style type="text/css">
@@ -12990,11 +12976,11 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 
 <br>
 
-### ${cont_model}
+### Hi6
 The index starts with 0.
 The index of word, long and flow will increase by matching the byte location.
 For example, DOW increases in the form of DOW0, DOW2, DOW4, DOW6..., and DOL increases in the form of DOL0, DOL4, DOL8...
-As shown in the figure below, DO16–DO23 are the same as DOW2.
+As shown in the figure below, DO16-DO23 are the same as DOW2.
 
 Refer to [3.2 Designating a relay](https://hrbook-hrc.web.app/#/view/doc-hi6-embedded-plc/korean/3-relay/2-relay-expression)
 
@@ -13051,18 +13037,18 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 ### Hi5a
 
 In most cases, there is a fixed SW relay index address for each monitoring item.
-However, among the index addresses, SW220–249 are for 10 multipurpose slots, and it is possible to put a desired code, among the codes for system variables, mainboard storage space, analog input/output, date/time, and GE variables, into the desired slot and perform monitoring.
+However, among the index addresses, SW220-249 are for 10 multipurpose slots, and it is possible to put a desired code, among the codes for system variables, mainboard storage space, analog input/output, date/time, and GE variables, into the desired slot and perform monitoring.
 
 - Most items: Fixed area
 - Some items: Optional items area (slot)
 
 <br>
 
-### ${cont_model}
+### Hi6
 
-The area of SB0–SB1999 is the [S Relay Fixed Area](https://hrbook-hrc.web.app/#/view/doc-hi6-embedded-plc/korean/3-relay/4-sw-relay/1-fixed-area), which has a fixed index address for each item just like Hi5a.
+The area of SB0-SB1999 is the [S Relay Fixed Area](https://hrbook-hrc.web.app/#/view/doc-hi6-embedded-plc/korean/3-relay/4-sw-relay/1-fixed-area), which has a fixed index address for each item just like Hi5a.
 
-However, the area of SB2000– is the [Optional items area](https://hrbook-hrc.web.app/#/view/doc-hi6-embedded-plc/korean/3-relay/4-sw-relay/README), which has about 900 multipurpose slots, permitting their use by inserting instructions for desired items.
+However, the area of SB2000- is the [Optional items area](https://hrbook-hrc.web.app/#/view/doc-hi6-embedded-plc/korean/3-relay/4-sw-relay/README), which has about 900 multipurpose slots, permitting their use by inserting instructions for desired items.
 
 
 Nearly most of the items will be montored via the optional items area.

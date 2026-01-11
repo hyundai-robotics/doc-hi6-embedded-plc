@@ -1,26 +1,32 @@
-﻿# Hi7 로봇제어기 기능설명서 - 내장PLC (Embedded PLC)
+﻿
+[__SOURCE](README.md)
+# ${cont_model} 로봇제어기 기능설명서 - 내장PLC (Embedded PLC)
+
+[__SOURCE](1-intro/README.md)
 # 1. 개요
 
-Hi7 제어기의 내장PLC(Embedded PLC)는 PLC(Programmable Logic Controller)의 기능을 제어기 내부에 소프트웨어적으로 탑재한 것입니다. PLC에서 흔히 사용되는 래더(ladder) 프로그램을 사용자가 작성하여 구동시킬 수 있습니다.
+${cont_model} 제어기의 내장PLC(Embedded PLC)는 PLC(Programmable Logic Controller)의 기능을 제어기 내부에 소프트웨어적으로 탑재한 것입니다. PLC에서 흔히 사용되는 래더(ladder) 프로그램을 사용자가 작성하여 구동시킬 수 있습니다.
 
-래더(ladder) 프로그램은 현대로봇 전용의 래더 편집 PC 소프트웨어인 HRLadder로 작성/편집하여, 이더넷으로 연결된 Hi7제어기에 다운로드할 수 있습니다. 반대로 Hi7 제어기에서 실행되고 있는 래더 프로그램을 PC의 HRLadder로 업로드 할 수 있으며, 제어기에서 실행되고 있는 PLC 모드나 릴레이 값 등의 상태를 HRLadder에서 원격 모니터링 하는 것도 가능합니다.
+래더(ladder) 프로그램은 현대로봇 전용의 래더 편집 PC 소프트웨어인 HRLadder로 작성/편집하여, 이더넷으로 연결된 ${cont_model}제어기에 다운로드할 수 있습니다. 반대로 ${cont_model} 제어기에서 실행되고 있는 래더 프로그램을 PC의 HRLadder로 업로드 할 수 있으며, 제어기에서 실행되고 있는 PLC 모드나 릴레이 값 등의 상태를 HRLadder에서 원격 모니터링 하는 것도 가능합니다.
 
 * HRLadder는 현대로보틱스 웹사이트(https://www.hd-hyundairobotics.com/) - 고객지원 - 응용소프트웨어 화면에서 다운로드 받으실 수 있습니다.
 * HRLadder의 사용법은 HRLadder의 도움말 메뉴에 연결된 기능설명서를 참조하십시오.
-* HRLadder는 Hi4~Hi5a의 구모델 제어기용으로도 사용 가능합니다. 다만 래더 프로그램은 Hi7와 구모델 간 차이가 있어 호환되지 않음을 유의하십시오.
+* HRLadder는 Hi4~Hi5a의 구모델 제어기용으로도 사용 가능합니다. 다만 래더 프로그램은 ${cont_model}와 구모델 간 차이가 있어 호환되지 않음을 유의하십시오.
 
-Hi7제어기의 I/O는 필드버스나 리모트I/O 장치를 통해 필드버스 마스터를 가진 상위 공정PLC, 혹은 하위 필드버스 슬레이브 장치들과 연결할 수 있습니다. 내장PLC 기능은 이렇게 연결된 I/O 신호들을 Ladder Logic으로 제어하는 기능입니다.
+${cont_model}제어기의 I/O는 필드버스나 리모트I/O 장치를 통해 필드버스 마스터를 가진 상위 공정PLC, 혹은 하위 필드버스 슬레이브 장치들과 연결할 수 있습니다. 내장PLC 기능은 이렇게 연결된 I/O 신호들을 Ladder Logic으로 제어하는 기능입니다.
 
 
-Hi7의 내장PLC 기능은 Hi5a의 내장PLC 기능과 유사하며, 동일한 래더 편집기 HRLadder를 사용합니다.
-따라서 이미 Hi5a의 내장PLC 기능에 익숙한 사용자는, Hi7제어기에서 달라진 부분만을 확인하는 방식으로 이 설명서를 빠르게 학습할 수 있습니다.
+${cont_model}의 내장PLC 기능은 Hi5a의 내장PLC 기능과 유사하며, 동일한 래더 편집기 HRLadder를 사용합니다.
+따라서 이미 Hi5a의 내장PLC 기능에 익숙한 사용자는, ${cont_model}제어기에서 달라진 부분만을 확인하는 방식으로 이 설명서를 빠르게 학습할 수 있습니다.
 
 
 {% hint style="info" %}
-이미 Hi5a의 내장PLC 기능에 익숙한 사용자는, Hi7제어기에서 달라진 부분만을 확인하는 방식으로 이 설명서를 빠르게 학습할 수 있습니다. 아래 링크를 확인하시기 바랍니다.  
-[5. Hi5a와 Hi7의 내장PLC 차이점](../5-diff-hi5a-hi6.md)
+이미 Hi5a의 내장PLC 기능에 익숙한 사용자는, ${cont_model}제어기에서 달라진 부분만을 확인하는 방식으로 이 설명서를 빠르게 학습할 수 있습니다. 아래 링크를 확인하시기 바랍니다.  
+[5. Hi5a와 ${cont_model}의 내장PLC 차이점](../5-diff-hi5a-hi6.md)
 
-{% endhint %}# 1.1 래더 로직(Ladder Logic)
+{% endhint %}
+[__SOURCE](1-intro/1-ladder-logic.md)
+# 1.1 래더 로직(Ladder Logic)
 
 래더 로직(Ladder Logic)은 내장PLC의 주요 프로그래밍 방식입니다. 이를 래더 다이어그램(Ladder Diagram, 줄여서 LD)이라고도 부릅니다. (LD 외에도 ST, FBD, SFC 같은 다른 방식도 있지만 내장PLC가 지원하지 않으므로 설명하지 않겠습니다.)
 
@@ -112,8 +118,12 @@ Y20 = DO6 AND (MW8 > 120)
 
 
 ![](../_assets/ladder-grt.png)
+
+[__SOURCE](2-rc-setting/README.md)
 # 2. 제어기 설정
 
+
+[__SOURCE](2-rc-setting/1-plc-mode-set.md)
 # 2.1. 내장 PLC의 모드 설정
 
 내장 PLC의 동작모드는 "[F7:조건설정] - PLC 동작 모드" 에서 <Off, Stop, R-Stop, R-Run, Run>중 하나를 선택할 수 있습니다.  
@@ -140,24 +150,34 @@ R-Stop, R-Run은 Remote-Stop, Remote-Run, 즉 이더넷으로 연결된 PC의 HR
 
 * R-Run / Run  
 내장 PLC를 실행시킵니다. R-Run은 HRLadder에서 변경할 수 있는 리모트(Remote)상태를 나타내며, Run으로 설정하면 HRLadder에서 동작모드를 변경할 수 없습니다. 
+
+[__SOURCE](2-rc-setting/2-tp-relay-mon.md)
 # 2.2. 제어기 TP상에서 릴레이 상태 모니터링
 
 "[R2: 창조정] - [F1: 선택]"으로 릴레이 상태를 모니터링 할 수 있습니다.
 
-자세한 내용은 [Hi7 조작설명서 - 6. 모니터링](https://hrbook-hrc.web.app/#/view/doc-hi6-operation/korean-tp630/6-monitoring/README) 절을 참조하십시오.
+자세한 내용은 [${cont_model} 조작설명서 - 6. 모니터링](https://hrbook-hrc.web.app/#/view/doc-hi6-operation/korean-tp630/6-monitoring/README) 절을 참조하십시오.
+
+[__SOURCE](2-rc-setting/3-scan-time.md)
 # 2.3. scan time
 
 내장PLC에서 래더 파일이 1cycle 수행하는데 소요된 시간은 HRLadder의 하단 상태 바에 "scan time"으로 표시됩니다. 래더 프로그램의 스텝수가 증가할 수록 이 시간이 증가하면서 I/O 의 응답성이 느려집니다.
+
+[__SOURCE](3-relay/README.md)
 # 3. 릴레이 (relay)
 
+
+[__SOURCE](3-relay/1-relay-is.md)
 # 3.1 릴레이의 의미
 
 전기신호를 전달할 지, 전달하지 않을 지를 결정하는 ON/OFF 접점(contact) 상태를 가진 장치를 스위치(switch)라고 부릅니다. 릴레이(relay)란 수동이 아닌 전기를 이용해 자동으로 작동시키는 스위치를 의미합니다.  
 
 본래 릴레이는 코일(coil)의 자기적인 힘으로 접점을 제어하던 물리적인 장치입니다. 하지만 컴퓨터화된 PLC에서의 릴레이는 소프트웨어에 의해 제어되는 논리적인 개념으로서, 1bit의 ON/OFF 상태 뿐만 아니라 여러 bit로 구성된 byte, word, double word 값이나 실수값까지도 저장할 수 있는 변수와 같은 의미로 사용되고 있습니다.
+
+[__SOURCE](3-relay/2-relay-expression.md)
 # 3.2 릴레이의 표기
 
-Hi7 로봇제어기 내장PLC에서의 릴레이 표기는 아래와 같습니다.
+${cont_model} 로봇제어기 내장PLC에서의 릴레이 표기는 아래와 같습니다.
 
 `[FB{block-index}.]{relay-type}[{data-type}]{signal-index}`
 
@@ -296,9 +316,11 @@ FB 객체명은 아래와 같이 생략할 수도 있습니다. 예를 들어 DO
 
 DI, DO는 각기 논리적인 입력과 출력으로서 로봇언어와 입출력 할당에서 접근할 수 있습니다.
 
+
+[__SOURCE](3-relay/3-io-diagram.md)
 # 3.3 입출력 Diagram
 
-Hi7 로봇제어기의 입출력 Diagram은 다음 그림과 같습니다.
+${cont_model} 로봇제어기의 입출력 Diagram은 다음 그림과 같습니다.
 
 
 ![](../_assets/io-diagram.png)
@@ -307,21 +329,21 @@ Hi7 로봇제어기의 입출력 Diagram은 다음 그림과 같습니다.
 
 <br><br>
 
-그림 우측의 연두색 박스들은 Hi7 제어기 내부의 하드웨어 모듈들입니다. 좌측에는 main 소프트웨어가 구동되는 main module (COM)이 있습니다.우측에는 필드버스 연결을 위한 PCI 카드인 Hilscher CIF card 들과 MODBUS 연결을 위한 시리얼 혹은 이더넷 디바이스가 있습니다.  
+그림 우측의 연두색 박스들은 ${cont_model} 제어기 내부의 하드웨어 모듈들입니다. 좌측에는 main 소프트웨어가 구동되는 main module (COM)이 있습니다.우측에는 필드버스 연결을 위한 PCI 카드인 Hilscher CIF card 들과 MODBUS 연결을 위한 시리얼 혹은 이더넷 디바이스가 있습니다.  
 
-main 소프트웨어 내에는 각종 릴레이들이 작은 박스의 형태로 그려져 있습니다. Hi7에서 이 릴레이에 접근하는 소프트웨어 요소는 hrscript(로봇언어)와 입출력 할당(I/O assignment), 그리고 내장PLC입니다.
+main 소프트웨어 내에는 각종 릴레이들이 작은 박스의 형태로 그려져 있습니다. ${cont_model}에서 이 릴레이에 접근하는 소프트웨어 요소는 hrscript(로봇언어)와 입출력 할당(I/O assignment), 그리고 내장PLC입니다.
 
 <br>
 
 ## hrscript (로봇언어)
-로봇언어는 입출력 변수를 통해 User I/O (FB.DI/DO) 릴레이와 Memory (M) 릴레이에 접근할 수 있는데, 대문자대신 소문자가 사용됩니다 (e.g. fb3.dow14, mw501). 입출력 변수에 대한 자세한 내용은 [Hi7 기능설명서 - 로봇언어 - 입출력변수](https://hrbook-hrc.web.app/#/view/doc-hrscript/korean/6-external-comm/1-fb-io/1-io-val) 절을 참고하십시오.
+로봇언어는 입출력 변수를 통해 User I/O (FB.DI/DO) 릴레이와 Memory (M) 릴레이에 접근할 수 있는데, 대문자대신 소문자가 사용됩니다 (e.g. fb3.dow14, mw501). 입출력 변수에 대한 자세한 내용은 [${cont_model} 기능설명서 - 로봇언어 - 입출력변수](https://hrbook-hrc.web.app/#/view/doc-hrscript/korean/6-external-comm/1-fb-io/1-io-val) 절을 참고하십시오.
 
 
 <br>
 
 ## 입출력 할당, 입출력 속성
 입출력 할당은 FB.DI/DO 릴레이에 접근할 수 있습니다. 또한 입출력 속성 설정으로 부논리, 펄스 등을 FB.DI/DO에 설정할 수 있습니다. 예를 들어 입력 할당인 "외부 정지"에 DI24가 부논리로 설정되어 있으면, DI24 신호가 0(active)일 때 로봇은 정지합니다.  
-자세한 내용은 [Hi7 조작설명서 - 입출력 신호 설정](https://hrbook-hrc.web.app/#/view/doc-hi6-operation/korean-tp630/7-setting/3-control-parameter/2-io-signal-setting/README) 절을 참조하십시오.
+자세한 내용은 [${cont_model} 조작설명서 - 입출력 신호 설정](https://hrbook-hrc.web.app/#/view/doc-hi6-operation/korean-tp630/7-setting/3-control-parameter/2-io-signal-setting/README) 절을 참조하십시오.
 
 <br>
 
@@ -335,9 +357,11 @@ FB.DI는 로봇언어의 관점에서는 입력이지만, 이 입력은 내장PL
 <br>
 
 ## 외부 통신 연결
-Hilscher CIF card들은 물리적 입출력 I/O와 연결됩니다. 1개 혹은 여러 개의 FB객체를 특정한 CIF card 매핑하는 방법은 [Hi7 조작설명서 - 입출력 신호 설정 - DIO 블록 할당](https://hrbook-hrc.web.app/#/view/doc-hi6-operation/korean-tp630/7-setting/3-control-parameter/2-io-signal-setting/9-dio-block-assign)를 참고하십시오.  
+Hilscher CIF card들은 물리적 입출력 I/O와 연결됩니다. 1개 혹은 여러 개의 FB객체를 특정한 CIF card 매핑하는 방법은 [${cont_model} 조작설명서 - 입출력 신호 설정 - DIO 블록 할당](https://hrbook-hrc.web.app/#/view/doc-hi6-operation/korean-tp630/7-setting/3-control-parameter/2-io-signal-setting/9-dio-block-assign)를 참고하십시오.  
 
-모든 릴레이들은 MODBUS 슬레이브 기능의 주소공간에 매핑되어 있습니다. 자세한 내용은 [Hi7 기능설명서 - MODBUS](https://hrbook-hrc.web.app/#/view/doc-modbus/korean/README)를 참고하십시오.
+모든 릴레이들은 MODBUS 슬레이브 기능의 주소공간에 매핑되어 있습니다. 자세한 내용은 [${cont_model} 기능설명서 - MODBUS](https://hrbook-hrc.web.app/#/view/doc-modbus/korean/README)를 참고하십시오.
+
+[__SOURCE](3-relay/3-sio/1-so.md)
 # 3.3.1 SO - 시스템 출력
 
 <style type="text/css">
@@ -781,6 +805,8 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 </tbody>
 
 </table>
+
+[__SOURCE](3-relay/3-sio/2-si.md)
 # 3.3.2 SI - 시스템 입력
 
 <style type="text/css">
@@ -1387,11 +1413,13 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 </tbody>
 
 </table>
+
+[__SOURCE](3-relay/4-sw-relay/README.md)
 # 3.4 S 릴레이
 
-Hi7 제어기 내의 다양한 상태값이 S릴레이에 매핑되어 있습니다. 또한 일부 S릴레이에 값을 써서 Hi7의 상태를 바꿀 수 있습니다.
+${cont_model} 제어기 내의 다양한 상태값이 S릴레이에 매핑되어 있습니다. 또한 일부 S릴레이에 값을 써서 ${cont_model}의 상태를 바꿀 수 있습니다.
 
-따라서, 공정 PLC나 PC 같은 외부 장치는 필드버스, MODBUS 등을 통해 S 릴레이 값을 읽어 Hi7 제어기의 상태를 원격 모니터링할 수 있으며, S 릴레이에 값을 써서 Hi7 제어기를 원격 제어할 수 있습니다. 
+따라서, 공정 PLC나 PC 같은 외부 장치는 필드버스, MODBUS 등을 통해 S 릴레이 값을 읽어 ${cont_model} 제어기의 상태를 원격 모니터링할 수 있으며, S 릴레이에 값을 써서 ${cont_model} 제어기를 원격 제어할 수 있습니다. 
 
 S릴레이 영역은 아래와 같이 크게 2부분으로 나뉩니다.
 
@@ -1512,7 +1540,9 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>...</td>
 	</tr>
 </tbody>
-</table># 3.4.1 S 릴레이 - 고정영역
+</table>
+[__SOURCE](3-relay/4-sw-relay/1-fixed-area.md)
+# 3.4.1 S 릴레이 - 고정영역
 
 항목이 고정 제공되는 SB0 ~ SB1999 영역은 아래 표를 참고하십시오.
 
@@ -1989,7 +2019,9 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td></td>
 	</tr>
 </tbody>
-</table># 3.4.2 S 릴레이 - TASK_INFO
+</table>
+[__SOURCE](3-relay/4-sw-relay/2-slot-task-info.md)
+# 3.4.2 S 릴레이 - TASK_INFO
 
 <style type="text/css">
 table  {border-collapse:collapse;}
@@ -2047,7 +2079,9 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>s2</td>
 	</tr>	
 </tbody>
-</table># 3.4.3 S 릴레이 - OP_TIME
+</table>
+[__SOURCE](3-relay/4-sw-relay/3-slot-op-time.md)
+# 3.4.3 S 릴레이 - OP_TIME
 
 <style type="text/css">
 table  {border-collapse:collapse;}
@@ -2107,7 +2141,9 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>s4</td>
 	</tr>
 </tbody>
-</table># 3.4.4 S 릴레이 - AXIS_INFO
+</table>
+[__SOURCE](3-relay/4-sw-relay/4-slot-axis-info.md)
+# 3.4.4 S 릴레이 - AXIS_INFO
 
 <style type="text/css">
 table  {border-collapse:collapse;}
@@ -2230,6 +2266,8 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	</tr>
 </tbody>
 </table>
+
+[__SOURCE](3-relay/4-sw-relay/5-slot-tp-keypad.md)
 # 3.4.5 S 릴레이 - TP_KEYPAD
 
 V60.30-07부터 지원.
@@ -2456,6 +2494,8 @@ V60.30-07부터 지원.
 	</tr>
 </tbody>
 </table>
+
+[__SOURCE](3-relay/4-sw-relay/6-slot-tp-app.md)
 # 3.4.6 S 릴레이 - TP_APP
 
 <style type="text/css">
@@ -2508,7 +2548,9 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>s2</td>
 	</tr>
 </tbody>
-</table># 3.4.7 S 릴레이 - DATE_TIME
+</table>
+[__SOURCE](3-relay/4-sw-relay/7-slot-date-time.md)
+# 3.4.7 S 릴레이 - DATE_TIME
 
 <style type="text/css">
 table  {border-collapse:collapse;}
@@ -2565,7 +2607,9 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>s2</td>
 	</tr>
 </tbody>
-</table># 3.4.8 S 릴레이 - CUR_SPOTGUN_NO
+</table>
+[__SOURCE](3-relay/4-sw-relay/8-slot-cur-spotgun-no.md)
+# 3.4.8 S 릴레이 - CUR_SPOTGUN_NO
 
 <style type="text/css">
 table  {border-collapse:collapse;}
@@ -2658,7 +2702,9 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>s1</td>
 	</tr>
 </tbody>
-</table># 3.4.9 S 릴레이 - SPOTWELD_INFO
+</table>
+[__SOURCE](3-relay/4-sw-relay/9-slot-spotweld-info.md)
+# 3.4.9 S 릴레이 - SPOTWELD_INFO
 
 <style type="text/css">
 table  {border-collapse:collapse;}
@@ -2722,7 +2768,9 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>s2</td>
 	</tr>
 </tbody>
-</table># 3.4.10 S 릴레이 - ARCWELD_INFO
+</table>
+[__SOURCE](3-relay/4-sw-relay/10-slot-arcweld-info.md)
+# 3.4.10 S 릴레이 - ARCWELD_INFO
 
 <style type="text/css">
 table  {border-collapse:collapse;}
@@ -3255,6 +3303,8 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	</tr>
 </tbody>
 </table>
+
+[__SOURCE](3-relay/4-sw-relay/11-slot-conveyor-info.md)
 # 3.4.11 S 릴레이 - CONVEYOR_INFO
 
 <style type="text/css">
@@ -3446,6 +3496,8 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	</tr>
 </tbody>
 </table>
+
+[__SOURCE](3-relay/4-sw-relay/12-slot-sys-var.md)
 # 3.4.12 S 릴레이 - SYSTEM_VARIABLE
 
 <style type="text/css">
@@ -3555,6 +3607,8 @@ ex 2) 툴번호 변경
 </table>
 
 ![](../../_assets/tool_change.png)
+
+[__SOURCE](3-relay/4-sw-relay/13-slot-hw-info.md)
 # 3.4.13 S 릴레이 - HW_INFO
 
 <style type="text/css">
@@ -3597,7 +3651,9 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>s2</td>
 	</tr>
 </tbody>
-</table># 3.4.14 S 릴레이 - CIFX 산업용 통신 릴레이
+</table>
+[__SOURCE](3-relay/4-sw-relay/14-slot-cifx-info/README.md)
+# 3.4.14 S 릴레이 - CIFX 산업용 통신 릴레이
 
 ## CIFX 산업용 통신 공통 릴레이
 ### command 1000: 통신 상태
@@ -3611,6 +3667,8 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 ### command 1014: EtherNet/IP Master
 ### command 1016: Profinet IO Master
 ### command 1018: EtherCAT Master
+
+[__SOURCE](3-relay/4-sw-relay/14-slot-cifx-info/1-slot-common-info.md)
 # 3.4.14.1 S 릴레이 - CIFX 산업용 통신 상태 릴레이 (공통)
 
 <style type="text/css">
@@ -4000,7 +4058,9 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td colspan=8></td>
 	</tr>
 </tbody>
-</table>	# 3.4.14.2 S 릴레이 - CIFX 산업용 통신 제어 릴레이 (공통)
+</table>	
+[__SOURCE](3-relay/4-sw-relay/14-slot-cifx-info/2-slot-common-control.md)
+# 3.4.14.2 S 릴레이 - CIFX 산업용 통신 제어 릴레이 (공통)
 
 <style type="text/css">
 table  {border-collapse:collapse;}
@@ -4100,7 +4160,9 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td colspan=8></td>
 	</tr>
 </tbody>
-</table># 3.4.14.3 S 릴레이 - Profibus-DP Master 상태 릴레이
+</table>
+[__SOURCE](3-relay/4-sw-relay/14-slot-cifx-info/3-slot-profibus-dp-info.md)
+# 3.4.14.3 S 릴레이 - Profibus-DP Master 상태 릴레이
 
 <style type="text/css">
 table  {border-collapse:collapse;}
@@ -5785,7 +5847,9 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>Node 120</td>
 	</tr>
 </tbody>
-</table># 3.4.14.4 S 릴레이 - DeviceNet Master 상태 릴레이
+</table>
+[__SOURCE](3-relay/4-sw-relay/14-slot-cifx-info/4-slot-devicenet-info.md)
+# 3.4.14.4 S 릴레이 - DeviceNet Master 상태 릴레이
 
 <style type="text/css">
 table  {border-collapse:collapse;}
@@ -6927,7 +6991,9 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td colspan=8></td>
 	</tr>
 </tbody>
-</table># 3.4.14.5 S 릴레이 - EtherNet/IP Master 상태 릴레이
+</table>
+[__SOURCE](3-relay/4-sw-relay/14-slot-cifx-info/5-slot-ethernet-ip-info.md)
+# 3.4.14.5 S 릴레이 - EtherNet/IP Master 상태 릴레이
 
 <style type="text/css">
 table  {border-collapse:collapse;}
@@ -7817,7 +7883,9 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>Node 120</td>
 	</tr>
 </tbody>
-</table># 3.4.14.6 S 릴레이 - Profinet IO Master 상태 릴레이
+</table>
+[__SOURCE](3-relay/4-sw-relay/14-slot-cifx-info/6-slot-profinet-io-info.md)
+# 3.4.14.6 S 릴레이 - Profinet IO Master 상태 릴레이
 
 <style type="text/css">
 table  {border-collapse:collapse;}
@@ -8507,7 +8575,9 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>Node 120</td>
 	</tr>
 </tbody>
-</table># 3.4.14.7 S 릴레이 - EtherCAT Master 상태 릴레이
+</table>
+[__SOURCE](3-relay/4-sw-relay/14-slot-cifx-info/7-slot-ethercat-info.md)
+# 3.4.14.7 S 릴레이 - EtherCAT Master 상태 릴레이
 
 <style type="text/css">
 table  {border-collapse:collapse;}
@@ -9197,7 +9267,9 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>Node 120</td>
 	</tr>
 </tbody>
-</table># 3.4.15 S 릴레이 - IP_INFO
+</table>
+[__SOURCE](3-relay/4-sw-relay/15-slot-ip-info.md)
+# 3.4.15 S 릴레이 - IP_INFO
 
 <style type="text/css">
 table  {border-collapse:collapse;}
@@ -9250,7 +9322,9 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>s2</td>
 	</tr>
 </tbody>
-</table># 3.4.16 S 릴레이 - MECH_INFO
+</table>
+[__SOURCE](3-relay/4-sw-relay/16-slot-mech-info.md)
+# 3.4.16 S 릴레이 - MECH_INFO
 
 V60.30-01부터 지원됩니다.
 
@@ -9303,6 +9377,8 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	</tr>
 </tbody>
 </table>
+
+[__SOURCE](3-relay/4-sw-relay/17-slot-tool-info.md)
 # 3.4.17 S 릴레이 - TOOL_INFO
 
 툴 데이터에 설정된 정보를 얻습니다. <br>
@@ -9366,6 +9442,8 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	</tr>
 </tbody>
 </table>
+
+[__SOURCE](3-relay/4-sw-relay/18-slot-ucrd-info.md)
 # 3.4.18 S 릴레이 - UCRD_INFO
 
 V60.30-01부터 지원됩니다.
@@ -9423,6 +9501,8 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	</tr>
 </tbody>
 </table>
+
+[__SOURCE](3-relay/4-sw-relay/19-slot-monopump.md)
 # 3.4.19 S 릴레이 - MONOPUMP
 
 <style type="text/css">
@@ -9842,6 +9922,8 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	</tr>
 </tbody>
 </table>
+
+[__SOURCE](3-relay/5-relative-addr.md)
 # 3.5 릴레이 간접 주소 지정
 
 SW62~SW79는 간접 주소 지정을 위한 시스템 메모리입니다. 릴레이 형식에 관계없이 릴레이 번지를 -2 ~ -18 의 값으로 
@@ -9866,7 +9948,9 @@ SW62~SW79는 간접 주소 지정을 위한 시스템 메모리입니다. 릴레
 
 아래 내장 PLC 예제는 X1~X128까지의 입력 신호에 해당하는 Y1~128신호를 출력하는 동작을 FOR/NEXT 문과 간접 주소 지정방식을 활용해 작성한 예입니다.
 
-![](../_assets/rel-addr-for-next.png)# 4. 명령 (instruction)
+![](../_assets/rel-addr-for-next.png)
+[__SOURCE](4-instruction/README.md)
+# 4. 명령 (instruction)
 
 
 래더 프로그램은 다수의 rung으로 구성되며, 각 rung은 다수의 명령들로 구성됩니다.
@@ -9951,6 +10035,8 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 </table>
 
 
+
+[__SOURCE](4-instruction/1-inst-list.md)
 # 4.1 명령어 일람
 
 
@@ -10356,7 +10442,9 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>Rung이 활성이면, sub-ladder end.</td>
 	</tr>
 </tbody>
-</table># 4.2 XIC(Examine if Closed) : Close 검사
+</table>
+[__SOURCE](4-instruction/2-xic.md)
+# 4.2 XIC(Examine if Closed) : Close 검사
 
 
 ### 설명
@@ -10414,6 +10502,8 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 A접점 입력 X2인 가동 스위치가 눌린 상태(1=Active)이고, 내부상태 M5가 정상(1)이면 "가동 중 (RUN)" 램프 출력 Y5를 on합니다.
 
 ![](../_assets/xic.png)
+
+[__SOURCE](4-instruction/3-xio.md)
 # 4.3 XIO(Examine if Open) : Open 검사
 
 
@@ -10472,6 +10562,8 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 B접점 입력 X1인 "중지(PAUSE)" 버튼이 눌린 상태(0=Active)이면, 브레이크 출력 Y8을 on합니다.
 
 ![](../_assets/xio.png)
+
+[__SOURCE](4-instruction/4-inv.md)
 # 4.4 INV(Inverting) : 인버팅
 
 
@@ -10486,6 +10578,8 @@ Rung의 이전까지의 결과를 반전(활성 <-> 비활성)시킵니다.
 즉, (X1+X2+X3) = /(/X1x/X2x/X3)이므로 하기 두 rung의 로직은 같은 결과가 됩니다.
 
 ![](../_assets/inv.png)
+
+[__SOURCE](4-instruction/5-equ.md)
 # 4.5 EQU(Equal) : 같은지 검사
 
 
@@ -10556,6 +10650,8 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 입력 XB3의 값이 100과 같으면 출력 Y7를 on하고, 다르면 off 합니다.
 
 ![](../_assets/equ.png)
+
+[__SOURCE](4-instruction/6-neq.md)
 # 4.6 NEQ(Not Equal) : 다른지 검사
 
 
@@ -10626,6 +10722,8 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 입력 XB4의 값이 50과 다르면 출력 Y8를 on하고, 같으면 off 합니다.
 
 ![](../_assets/neq.png)
+
+[__SOURCE](4-instruction/7-les.md)
 # 4.7 LES(Less Than) : 작은지 검사
 
 
@@ -10696,6 +10794,8 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 입력 XB7의 값이 70보다 작으면 출력 Y9를 on하고, 크거나 같으면 off 합니다.
 
 ![](../_assets/les.png)
+
+[__SOURCE](4-instruction/8-grt.md)
 # 4.8 GRT(Greater Than) : 큰지 검사
 
 
@@ -10766,6 +10866,8 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 입력 XB8의 값이 80보다 크면 출력 Y10를 on하고, 작거나 같으면 off 합니다.
 
 ![](../_assets/grt.png)
+
+[__SOURCE](4-instruction/9-leq.md)
 # 4.9 LEQ(Less Than or Equal) : 작거나 같은지 검사
 
 
@@ -10836,6 +10938,8 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 입력 XB9의 값이 90보다 작거나 같으면 출력 Y11를 on하고, 크면 off 합니다.
 
 ![](../_assets/leq.png)
+
+[__SOURCE](4-instruction/10-geq.md)
 # 4.10 GEQ(Greater Than or Equal) : 크거나 같은지 검사
 
 
@@ -10906,6 +11010,8 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 입력 XB9의 값이 100보다 크거나 같으면 출력 Y12를 on하고, 작으면 off 합니다.
 
 ![](../_assets/geq.png)
+
+[__SOURCE](4-instruction/11-ote.md)
 # 4.11 OTE(Output Energize) : 일반 출력
 
 
@@ -10964,6 +11070,8 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 입력 DO12의 상태로 Y12를 출력합니다.
 
 ![](../_assets/ote.png)
+
+[__SOURCE](4-instruction/12-otl.md)
 # 4.12 OTL(Output Latch) : 래치 출력
 
 
@@ -11022,6 +11130,8 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 입력 DO13이 on되면 Y13를 on합니다. 이후 DO13이 off 되더라도 Y13은 on을 계속 유지합니다.
 
 ![](../_assets/otl.png)
+
+[__SOURCE](4-instruction/13-otu.md)
 # 4.13 OTU(Output Unlatch) : 언래치 출력
 
 
@@ -11080,6 +11190,8 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 입력 DO14이 on되면 Y14를 off합니다. 이후 DO14이 off 되더라도 Y14은 off을 계속 유지합니다.
 
 ![](../_assets/otu.png)
+
+[__SOURCE](4-instruction/14-osr.md)
 # 4.14 OSR(One Shot Rising) : 원 샷 출력
 
 
@@ -11139,6 +11251,8 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 입력 X17이 on되면 내부 상태 M17를 on합니다. M17은 해당 scan이 종료할 때 까지만 on을 유지하고 새로운 scan이 시작되면 off 됩니다.
 
 ![](../_assets/osr.png)
+
+[__SOURCE](4-instruction/15-res.md)
 # 4.15 RES(Reset) : 리셋
 
 
@@ -11207,6 +11321,8 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 내부 상태 M18이 on되면 T28의 타이머 릴레이를 -1로 클리어 합니다.
 
 ![](../_assets/res.png)
+
+[__SOURCE](4-instruction/16-ton.md)
 # 4.16 TON(Time On Delay) : 타이머
 
 
@@ -11299,6 +11415,8 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 입력 DO34가 on된 후 1초가 경과하면 T32의 타이머 릴레이가 on 됩니다. 이때 출력 Y34가 on 됩니다. 
 
 ![](../_assets/ton.png)
+
+[__SOURCE](4-instruction/17-ctd.md)
 # 4.17 CTD(Count Down) : 카운터
 
 
@@ -11379,6 +11497,8 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 내부 상태 M19가 off에서 on으로 변경되면 C20의 값이 3에서 시작해서 1씩 감소합니다. C20의 값이 0이 되면 카운터 릴레이가 on 됩니다. 이때 출력 Y35가 on 됩니다. 
 
 ![](../_assets/ctd.png)
+
+[__SOURCE](4-instruction/18-add.md)
 # 4.18 ADD(Add) : 더하기
 
 
@@ -11462,6 +11582,8 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 입력 DO36이 활성화 되면 XB3의 값에 50을 더해서 그 결과를 내부 상태 MB3에 설정합니다.
 
 ![](../_assets/add.png)
+
+[__SOURCE](4-instruction/19-sub.md)
 # 4.19 SUB(Subtract) : 빼기
 
 
@@ -11544,6 +11666,8 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 입력 DO37이 활성화 되면 XB3의 값에 10을 빼서 그 결과를 내부 상태 MB3에 설정합니다.
 
 ![](../_assets/sub.png)
+
+[__SOURCE](4-instruction/20-mul.md)
 # 4.20 MUL(Multiply) : 곱하기
 
 
@@ -11627,6 +11751,8 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 입력 DO38이 활성화 되면 XB3의 값에 3을 곱해서 그 결과를 내부 상태 MB3에 설정합니다.
 
 ![](../_assets/mul.png)
+
+[__SOURCE](4-instruction/21-div.md)
 # 4.21 DIV(Divide) : 나누기
 
 
@@ -11710,6 +11836,8 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 입력 DO39이 활성화 되면 XB3의 값에서 4로 나누어 그 결과를 내부 상태 MB3에 설정합니다.
 
 ![](../_assets/div.png)
+
+[__SOURCE](4-instruction/22-pow.md)
 # 4.22 POW(Power) : 거듭제곱
 
 
@@ -11792,6 +11920,8 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 입력 DO40이 활성화 되면 XB3의 값을 2로 거듭제곱하여 그 결과를 내부 상태 MB3에 설정합니다.
 
 ![](../_assets/pow.png)
+
+[__SOURCE](4-instruction/23-tod.md)
 # 4.23 TOD(Convert to BCD) : BCD값으로 변환
 
 
@@ -11867,6 +11997,8 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 
 
 ![](../_assets/tod.png)
+
+[__SOURCE](4-instruction/24-frd.md)
 # 4.24 FRD(Convert from BCD to Integer) : integer로 변환
 
 
@@ -11942,6 +12074,8 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 
 
 ![](../_assets/frd.png)
+
+[__SOURCE](4-instruction/25-seg.md)
 # 4.25 SEG(7'Segment) : 7'세그먼트 값으로 변환
 
 
@@ -12033,6 +12167,8 @@ SEGM_F = 0x20<br>
 SEGM_G = 0x40<br>
 SEGM_DP = 0x80<br>
 
+
+[__SOURCE](4-instruction/26-mov.md)
 # 4.26 MOV(Move) : 이동
 
 
@@ -12106,6 +12242,8 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 입력 DO55가 활성화되면 내부 상태 MB2에 55가 설정됩니다.
 
 ![](../_assets/mov.png)
+
+[__SOURCE](4-instruction/27-cop.md)
 # 4.27 COP(Copy data) : 복사
 
 
@@ -12191,6 +12329,8 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 입력 DO56이 활성화되면 입력 DOB2부터 8바이트에 해당하는 값을 출력 YB2부터 8바이트로 복사합니다.
 
 ![](../_assets/cop.png)
+
+[__SOURCE](4-instruction/28-ccop.md)
 # 4.28 CCOP(Conditional copy data) : 조건별 복사
 
 
@@ -12289,6 +12429,8 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 입력 DO57이 활성화되면 입력 DOB2부터 4바이트에 해당하는 값을 출력 YB2부터 4바이트로 복사합니다. 그렇지 않고 입력 DO57이 비활성화되면 입력 DOB12부터 4바이트에 해당하는 값을 출력 YB2부터 4바이트로 복사합니다.
 
 ![](../_assets/ccop.png)
+
+[__SOURCE](4-instruction/29-rot.md)
 # 4.29 ROT(Rotating Output) : 순차 출력
 
 
@@ -12439,6 +12581,8 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 만일, 외부 에러리셋에 연결된 X3에 신호가 입력되면, 에러번호가 저장된 MW51~MW55의 내용이 0으로 클리어 되고, MW70과 MW80도 0으로 클리어 되어, 표시장치에 0이 표시됩니다. 
 
 ![](../_assets/rot.png)
+
+[__SOURCE](4-instruction/30-for.md)
 # 4.30 FOR(FOR) : 블록 반복
 
 
@@ -12544,6 +12688,8 @@ SW62에 1부터 4까지 1씩 증가하면서 {XIC(DO-2), OTL(Y-2)}명령을 반�
 
 
 ![](../_assets/for.png)
+
+[__SOURCE](4-instruction/31-next.md)
 # 4.31 NEXT(NEXT) : 블록 next
 
 
@@ -12561,6 +12707,8 @@ FOR/NEXT명령은 브랜치를 위한 별도의 처리를 하지 않고 있으�
 ### 사용 예
 
 FOR 명령의 사용예를 참고합니다.
+
+[__SOURCE](4-instruction/32-lbl.md)
 # 4.32 LBL(Label) : 레이블 지정
 
 
@@ -12619,6 +12767,8 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 ### 사용 예
 
 JMP명령과 함께 사용하므로 JMP명령 설명을 참고하십시오.
+
+[__SOURCE](4-instruction/33-jmp.md)
 # 4.33 JMP(Jump) : 점프
 
 
@@ -12685,6 +12835,8 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 
 
 ![](../_assets/jmp.png)
+
+[__SOURCE](4-instruction/34-call.md)
 # 4.34 CALL(Call) : 서브래더 호출
 
 
@@ -12747,6 +12899,8 @@ CALL명령 실행결과, 해당 번호의 서브래더가 존재하지 않거나
 
 
 ![](../_assets/call.png)
+
+[__SOURCE](4-instruction/35-end.md)
 # 4.35 END(End) : 래더 종료
 
 
@@ -12763,6 +12917,8 @@ Rung이 활성이면, 현재 실행되고 있는 래더를 종료합니다.
 
 
 ![](../_assets/end.png)
+
+[__SOURCE](4-instruction/36-and.md)
 # 4.36 AND(Bitwise AND) : 비트연산 AND
 
 
@@ -12845,6 +13001,8 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 입력 DO36이 활성화 되면 XB0의 값에 &HFF을 비트연산 AND해서 그 결과를 내부 상태 MW8에 설정합니다.
 
 ![](../_assets/and.png)
+
+[__SOURCE](4-instruction/37-or.md)
 # 4.37 OR(Bitwise OR) : 비트연산 OR
 
 
@@ -12927,6 +13085,8 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 입력 DO36이 활성화 되면 DOW2의 값과 &H0F0F를 비트연산 OR해서 그 결과를 내부 상태 DIL8에 설정합니다.
 
 ![](../_assets/or.png)
+
+[__SOURCE](5-diff-hi5a-hi6.md)
 # 5. Hi5a와 Hi6의 내장PLC 차이점
 
 Hi6의 내장PLC 기능은 Hi5a의 내장PLC 기능과 유사하며, 동일한 래더 편집기 HRLadder를 사용합니다.

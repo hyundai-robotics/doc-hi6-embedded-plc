@@ -1,6 +1,6 @@
 ﻿
 [__SOURCE](README.md)
-# ${cont_model} 로봇제어기 기능설명서 - 내장PLC (Embedded PLC)
+# ${cont_model} 제어기 기능설명서 - 내장PLC (Embedded PLC)
 
 [__SOURCE](1-intro/README.md)
 # 1. 개요
@@ -156,7 +156,7 @@ R-Stop, R-Run은 Remote-Stop, Remote-Run, 즉 이더넷으로 연결된 PC의 HR
 
 "[R2: 창조정] - [F1: 선택]"으로 릴레이 상태를 모니터링 할 수 있습니다.
 
-자세한 내용은 [${cont_model} 조작설명서 - 6. 모니터링](https://hrbook-hrc.web.app/#/view/doc-hi6-operation/korean-tp630/6-monitoring/README) 절을 참조하십시오.
+자세한 내용은 [${cont_model} 조작설명서 - 6. 모니터링](https://hrbook-hrc.web.app/#/view/doc-hi6-operation/ko-tp630/6-monitoring/README) 절을 참조하십시오.
 
 [__SOURCE](2-rc-setting/3-scan-time.md)
 # 2.3. scan time
@@ -192,7 +192,7 @@ FB3.DIW21
 
   FB의 일부 영역을 FN0 ~ FN63의 객체명으로 매핑해 사용할 수도 있습니다. FN영역을 설정하는 방법은 아래 링크를 참조하십시오.
 
-  [조작설명서: 7.3.2.12 fn 블럭 할당](https://hrbook-hrc.web.app/#/view/doc-hi6-operation/korean-tp630/7-system/3-control-parameter/2-io-signal-setting/12-fn-block)
+  [조작설명서: 7.3.2.12 fn 블럭 할당](https://hrbook-hrc.web.app/#/view/doc-hi6-operation/ko-tp630/7-system/3-control-parameter/2-io-signal-setting/12-fn-block?cont_model=${cont_model})
 
 * relay-type  
 아래와 같이 총 10가지 type이 있습니다.
@@ -336,14 +336,14 @@ main 소프트웨어 내에는 각종 릴레이들이 작은 박스의 형태로
 <br>
 
 ## hrscript (로봇언어)
-로봇언어는 입출력 변수를 통해 User I/O (FB.DI/DO) 릴레이와 Memory (M) 릴레이에 접근할 수 있는데, 대문자대신 소문자가 사용됩니다 (e.g. fb3.dow14, mw501). 입출력 변수에 대한 자세한 내용은 [${cont_model} 기능설명서 - 로봇언어 - 입출력변수](https://hrbook-hrc.web.app/#/view/doc-hrscript/korean/6-external-comm/1-fb-io/1-io-val) 절을 참고하십시오.
+로봇언어는 입출력 변수를 통해 User I/O (FB.DI/DO) 릴레이와 Memory (M) 릴레이에 접근할 수 있는데, 대문자대신 소문자가 사용됩니다 (e.g. fb3.dow14, mw501). 입출력 변수에 대한 자세한 내용은 [${cont_model} 기능설명서 - 로봇언어 - 입출력변수](https://hrbook-hrc.web.app/#/view/doc-hrscript/ko/6-external-comm/1-fb-io/1-io-val?cont_model=${cont_model}) 절을 참고하십시오.
 
 
 <br>
 
 ## 입출력 할당, 입출력 속성
 입출력 할당은 FB.DI/DO 릴레이에 접근할 수 있습니다. 또한 입출력 속성 설정으로 부논리, 펄스 등을 FB.DI/DO에 설정할 수 있습니다. 예를 들어 입력 할당인 "외부 정지"에 DI24가 부논리로 설정되어 있으면, DI24 신호가 0(active)일 때 로봇은 정지합니다.  
-자세한 내용은 [${cont_model} 조작설명서 - 입출력 신호 설정](https://hrbook-hrc.web.app/#/view/doc-hi6-operation/korean-tp630/7-setting/3-control-parameter/2-io-signal-setting/README) 절을 참조하십시오.
+자세한 내용은 [${cont_model} 조작설명서 - 입출력 신호 설정](https://hrbook-hrc.web.app/#/view/doc-hi6-operation/ko-tp630/7-setting/3-control-parameter/2-io-signal-setting/README?cont_model=${cont_model}) 절을 참조하십시오.
 
 <br>
 
@@ -357,9 +357,9 @@ FB.DI는 로봇언어의 관점에서는 입력이지만, 이 입력은 내장PL
 <br>
 
 ## 외부 통신 연결
-Hilscher CIF card들은 물리적 입출력 I/O와 연결됩니다. 1개 혹은 여러 개의 FB객체를 특정한 CIF card 매핑하는 방법은 [${cont_model} 조작설명서 - 입출력 신호 설정 - DIO 블록 할당](https://hrbook-hrc.web.app/#/view/doc-hi6-operation/korean-tp630/7-setting/3-control-parameter/2-io-signal-setting/9-dio-block-assign)를 참고하십시오.  
+Hilscher CIF card들은 물리적 입출력 I/O와 연결됩니다. 1개 혹은 여러 개의 FB객체를 특정한 CIF card 매핑하는 방법은 [${cont_model} 조작설명서 - 입출력 신호 설정 - DIO 블록 할당](https://hrbook-hrc.web.app/#/view/doc-hi6-operation/ko-tp630/7-setting/3-control-parameter/2-io-signal-setting/9-dio-block-assign?cont_model=${cont_model})를 참고하십시오.  
 
-모든 릴레이들은 MODBUS 슬레이브 기능의 주소공간에 매핑되어 있습니다. 자세한 내용은 [${cont_model} 기능설명서 - MODBUS](https://hrbook-hrc.web.app/#/view/doc-modbus/korean/README)를 참고하십시오.
+모든 릴레이들은 MODBUS 슬레이브 기능의 주소공간에 매핑되어 있습니다. 자세한 내용은 [${cont_model} 기능설명서 - MODBUS](https://hrbook-hrc.web.app/#/view/doc-modbus/ko/README?cont_model=${cont_model})를 참고하십시오.
 
 [__SOURCE](3-relay/3-sio/1-so.md)
 # 3.3.1 SO - 시스템 출력
@@ -13087,10 +13087,10 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 ![](../_assets/or.png)
 
 [__SOURCE](5-diff-hi5a-hi6.md)
-# 5. Hi5a와 Hi6의 내장PLC 차이점
+# 5. Hi5a와 Hi6/Hi7의 내장PLC 차이점
 
-Hi6의 내장PLC 기능은 Hi5a의 내장PLC 기능과 유사하며, 동일한 래더 편집기 HRLadder를 사용합니다.
-따라서 이미 Hi5a의 내장PLC 기능에 익숙한 사용자는, Hi6제어기에서 달라진 부분만을 확인하는 방식으로 이 설명서를 빠르게 학습할 수 있습니다.
+Hi6/Hi7의 내장PLC 기능은 Hi5a의 내장PLC 기능과 유사하며, 동일한 래더 편집기 HRLadder를 사용합니다.
+따라서 이미 Hi5a의 내장PLC 기능에 익숙한 사용자는, Hi6/Hi7 제어기에서 달라진 부분만을 확인하는 방식으로 이 설명서를 빠르게 학습할 수 있습니다.
 
 아래는 달라진 부분의 리스트입니다.
 
@@ -13116,10 +13116,10 @@ M릴레이는 MW1~1000을 지원합니다.
 특수릴레이 SP가 존재합니다.
 전용입력, 전용출력 신호가 SW에 포함되어 있습니다.
 
-### Hi6
+### Hi6, Hi7
 
 M릴레이가 MW0~MW19998 로 대폭 확대되었으므로, M릴레이로 대체하여 사용하십시오.
-SP릴레이는 [S 릴레이 - 고정영역](https://hrbook-hrc.web.app/#/view/doc-hi6-embedded-plc/korean/3-relay/4-sw-relay/1-fixed-area)의 특수 플래그 영역로서 통합되었습니다.  
+SP릴레이는 [S 릴레이 - 고정영역](https://hrbook-hrc.web.app/#/view/doc-hi6-embedded-plc/ko/3-relay/4-sw-relay/1-fixed-area?cont_model=${cont_model})의 특수 플래그 영역로서 통합되었습니다.  
 전용입력, 전용출력 신호에 대해 SI, SO로 지원됩니다.
 
 
@@ -13179,13 +13179,13 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 
 <br>
 
-### Hi6
+### Hi6, Hi7
 index가 0부터 시작합니다.
 word, long, float 의 index가 byte 위치에 맞추어 증가합니다.
 가령 DOW는 DOW0, DOW2, DOW4, DOW6...의 식으로 증가하고, DOL은 DOL0, DOL4, DOL8...의 식의 증가합니다.
 아래 그림에서, 볼 수 있듯이 DO16~DO23은 DOW2와 같습니다.
 
-[3.2 릴레이의 표기](https://hrbook-hrc.web.app/#/view/doc-hi6-embedded-plc/korean/3-relay/2-relay-expression)를 참조하십시오.
+[3.2 릴레이의 표기](https://hrbook-hrc.web.app/#/view/doc-hi6-embedded-plc/ko/3-relay/2-relay-expression?cont_model=${cont_model})를 참조하십시오.
 
 <br>
 
@@ -13247,11 +13247,11 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 
 <br>
 
-### Hi6
+### Hi6, Hi7
 
-SB0~SB1999 영역은 Hi5a와 같이 항목마다 정해진 인덱스 주소를 갖는 [S 릴레이 고정 영역](https://hrbook-hrc.web.app/#/view/doc-hi6-embedded-plc/korean/3-relay/4-sw-relay/1-fixed-area)입니다.
+SB0~SB1999 영역은 Hi5a와 같이 항목마다 정해진 인덱스 주소를 갖는 [S 릴레이 고정 영역](https://hrbook-hrc.web.app/#/view/doc-hi6-embedded-plc/ko/3-relay/4-sw-relay/1-fixed-area?cont_model=${cont_model})입니다.
 
-반면 SB2000~ 의 영역의 900개의 다용도 슬롯(slot)으로 구성되어 있어서 원하는 항목의 command를 넣어 사용할 수 있는 [선택 항목 영역](https://hrbook-hrc.web.app/#/view/doc-hi6-embedded-plc/korean/3-relay/4-sw-relay/README)입니다.  
+반면 SB2000~ 의 영역의 900개의 다용도 슬롯(slot)으로 구성되어 있어서 원하는 항목의 command를 넣어 사용할 수 있는 [선택 항목 영역](https://hrbook-hrc.web.app/#/view/doc-hi6-embedded-plc/ko/3-relay/4-sw-relay/README?cont_model=${cont_model})입니다.  
 거의 대부분의 항목을 선택 항목 영역을 통해 모니터링합니다.
 
 - 대부분 항목 : 선택 항목 영역 (slot)

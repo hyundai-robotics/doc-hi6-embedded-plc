@@ -2,4 +2,4 @@
 
 The relay state can be monitored by entering "[R2: Window adjustment] - [F1: Selection]".
 
-For more details, refer to [${cont_model} Operation Manual - 6. Monitoring](https://hrbook-hrc.web.app/#/view/doc-hi6-operation/korean-tp630/6-monitoring/README).
+For more details, refer to [${cont_model} Operation Manual - 6. Monitoring](https://hrbook-hrc.web.app/#/view/doc-hi6-operation/ko-tp630/6-monitoring/README?cont_model=${cont_model}).

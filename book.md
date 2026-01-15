@@ -1,6 +1,6 @@
 ﻿
 [__SOURCE](README.md)
-# ${cont_model} Robot Controller Function Manual - Embedded Progammable Logic Controller (PLC)
+# ${cont_model} Controller Function Manual - Embedded Progammable Logic Controller (PLC)
 
 [__SOURCE](1-intro/README.md)
 # 1. Overview
@@ -159,7 +159,7 @@ The embedded PLC will be executed. R-Run represents a remote state in which chan
 
 The relay state can be monitored by entering "[R2: Window adjustment] - [F1: Selection]".
 
-For more details, refer to [${cont_model} Operation Manual - 6. Monitoring](https://hrbook-hrc.web.app/#/view/doc-hi6-operation/korean-tp630/6-monitoring/README).
+For more details, refer to [${cont_model} Operation Manual - 6. Monitoring](https://hrbook-hrc.web.app/#/view/doc-hi6-operation/ko-tp630/6-monitoring/README?cont_model=${cont_model}).
 [__SOURCE](2-rc-setting/3-scan-time.md)
 # 2.3. Scan time
 
@@ -193,7 +193,7 @@ The size of one fieldbus block is 120 bytes (=960 bits) for the input and output
   You can also map some areas of FB to object names from FN0 to FN63.
   See the link below for instructions on how to set up the FN region.
 
-  [Operation manual: 7.3.2.12 fn block allocation](https://hrbook-hrc.web.app/#/view/doc-hi6-operation/english-tp630/7-system/3-control-parameter/2-io-signal-setting/12-fn-block)
+  [Operation manual: 7.3.2.12 fn block allocation](https://hrbook-hrc.web.app/#/view/doc-hi6-operation/en-tp630/7-system/3-control-parameter/2-io-signal-setting/12-fn-block?cont_model=${cont_model})
 
 
 * relay-type  
@@ -336,14 +336,14 @@ In the main software, there are various relays drawn in the form of small boxes.
 <br>
 
 ## HRScript (robot language)
-The robot language can access User I/O (FB.DI/DO) relays and Memory (M) relays through I/O variables. However, lowercase letters are to be used instead of uppercase letters (e.g., fb3.dow14, mw501.). For details on input/output variables, refer to the [${cont_model} Function Manual - Robot Language - I/O Variables](https://hrbook-hrc.web.app/#/view/doc-hrscript/korean/6-external-comm/1-fb-io/1-io-val) section.
+The robot language can access User I/O (FB.DI/DO) relays and Memory (M) relays through I/O variables. However, lowercase letters are to be used instead of uppercase letters (e.g., fb3.dow14, mw501.). For details on input/output variables, refer to the [${cont_model} Function Manual - Robot Language - I/O Variables](https://hrbook-hrc.web.app/#/view/doc-hrscript/ko/6-external-comm/1-fb-io/1-io-val?cont_model=${cont_model}) section.
 
 
 <br>
 
 ## I/O assignment, I/O attributes
 I/O assignment can access FB.DI/DO relays. In addition, negative logic, pulse, etc. can be set in FB.DI/DO by setting the I/O attributes. For example, for the "external stop," which is an input assignment, if negative logic is set in DI24, the robot will stop when the DI24 signal is 0 (active).
-For more details, refer to the [${cont_model} Operation Manual - Input/Output Signal Setting](https://hrbook-hrc.web.app/#/view/doc-hi6-operation/korean-tp630/7-setting/3-control-parameter/2-io-signal-setting/README) section. 
+For more details, refer to the [${cont_model} Operation Manual - Input/Output Signal Setting](https://hrbook-hrc.web.app/#/view/doc-hi6-operation/ko-tp630/7-setting/3-control-parameter/2-io-signal-setting/README?cont_model=${cont_model}) section. 
 
 
 <br>
@@ -358,9 +358,9 @@ FB.DI is an input from the point of view of the robot language, but this input i
 <br>
 
 ## Connection to external communication
-Hilscher CIF cards are to be connected to physical inputs and outputs. For how to map one or multiple fieldbus objects to a specific CIF card, refer to [${cont_model} Operation Manual - I/O Signal Setting - DIO Block Assignment](https://hrbook-hrc.web.app/#/view/doc-hi6-operation/korean-tp630/7-setting/3-control-parameter/2-io-signal-setting/9-dio-block-assign).  
+Hilscher CIF cards are to be connected to physical inputs and outputs. For how to map one or multiple fieldbus objects to a specific CIF card, refer to [${cont_model} Operation Manual - I/O Signal Setting - DIO Block Assignment](https://hrbook-hrc.web.app/#/view/doc-hi6-operation/ko-tp630/7-setting/3-control-parameter/2-io-signal-setting/9-dio-block-assign?cont_model=${cont_model}).  
 
-All relays are mapped to the address space of the Modbus slave function. For more details, refer to [${cont_model} Function Manual - Modbus](https://hrbook-hrc.web.app/#/view/doc-modbus/korean/README).
+All relays are mapped to the address space of the Modbus slave function. For more details, refer to [${cont_model} Function Manual - Modbus](https://hrbook-hrc.web.app/#/view/doc-modbus/ko/README?cont_model=${cont_model}).
 
 [__SOURCE](3-relay/3-sio/1-so.md)
 # 3.3.1 SO - System output
@@ -13044,10 +13044,10 @@ When the input DO36 is active, DOW2 will be bitwise or operated to the value of 
 ![](../_assets/or.png)
 
 [__SOURCE](5-diff-hi5a-hi6.md)
-# 5. Difference in the Embedded PLC between Hi5a and ${cont_model}
+# 5. Difference in the Embedded PLC between Hi5a and Hi6/Hi7
 
-The functions of the ${cont_model} controller's embedded PLC are similar to those of the Hi5a controller's embedded PLC, and the same HRLadder, or the same ladder editor, is used. 
-Therefore, users who are already familiar with the functions of the Hi5a controller's embedded PLC can quickly learn from this manual by checking only the different parts in the ${cont_model} controller.
+The functions of the Hi6/Hi7 controller's embedded PLC are similar to those of the Hi5a controller's embedded PLC, and the same HRLadder, or the same ladder editor, is used. 
+Therefore, users who are already familiar with the functions of the Hi5a controller's embedded PLC can quickly learn from this manual by checking only the different parts in the Hi6/Hi7 controller.
 
 The following content includes the list of the different parts.
 
@@ -13055,7 +13055,7 @@ The following content includes the list of the different parts.
 
 ## HRLadder online connection
 
-HRLadder v2.80 or later supports the ${cont_model} controller.
+HRLadder v2.80 or later supports the Hi6/Hi7 controller.
 Versions of HRLadder earlier than v2.80 allows remote connection through automatic recognition of the controller type when the online button is pressed.
 However, for HRLadder v2.80 or later, you need to select the controller type in the attributes of the project, then press the online button.
 
@@ -13073,10 +13073,10 @@ M relays of MW1-MW1000 are supported.
 A special relay SP exists.
 Dedicated input and output signals are included in SW.
 
-### ${cont_model}
+### Hi6/Hi7
 
 M relays are largely extended to a range of MW0-MW19998, so you can use them as substitutes for others.
-SP relays are integrated into the area for special flags of [S relay - Fixed area](https://hrbook-hrc.web.app/#/view/doc-hi6-embedded-plc/korean/3-relay/4-sw-relay/1-fixed-area)
+SP relays are integrated into the area for special flags of [S relay - Fixed area](https://hrbook-hrc.web.app/#/view/doc-hi6-embedded-plc/en/3-relay/4-sw-relay/1-fixed-area?cont_model=${cont_model})
 For dedicated input and output signals, support will be provided with SI and SO. 
 
 
@@ -13136,13 +13136,13 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 
 <br>
 
-### ${cont_model}
+### Hi6/Hi7
 The index starts with 0.
 The index of word, long and flow will increase by matching the byte location.
 For example, DOW increases in the form of DOW0, DOW2, DOW4, DOW6..., and DOL increases in the form of DOL0, DOL4, DOL8...
 As shown in the figure below, DO16-DO23 are the same as DOW2.
 
-Refer to [3.2 Designating a relay](https://hrbook-hrc.web.app/#/view/doc-hi6-embedded-plc/korean/3-relay/2-relay-expression)
+Refer to [3.2 Designating a relay](https://hrbook-hrc.web.app/#/view/doc-hi6-embedded-plc/en/3-relay/2-relay-expression?cont_model=${cont_model})
 
 <br>
 
@@ -13204,11 +13204,11 @@ However, among the index addresses, SW220-249 are for 10 multipurpose slots, and
 
 <br>
 
-### ${cont_model}
+### Hi6/Hi7
 
-The area of SB0-SB1999 is the [S Relay Fixed Area](https://hrbook-hrc.web.app/#/view/doc-hi6-embedded-plc/korean/3-relay/4-sw-relay/1-fixed-area), which has a fixed index address for each item just like Hi5a.
+The area of SB0-SB1999 is the [S Relay Fixed Area](https://hrbook-hrc.web.app/#/view/doc-hi6-embedded-plc/en/3-relay/4-sw-relay/1-fixed-area?cont_model=${cont_model}), which has a fixed index address for each item just like Hi5a.
 
-However, the area of SB2000- is the [Optional items area](https://hrbook-hrc.web.app/#/view/doc-hi6-embedded-plc/korean/3-relay/4-sw-relay/README), which has about 900 multipurpose slots, permitting their use by inserting instructions for desired items.
+However, the area of SB2000- is the [Optional items area](https://hrbook-hrc.web.app/#/view/doc-hi6-embedded-plc/en/3-relay/4-sw-relay/README?cont_model=${cont_model}), which has about 900 multipurpose slots, permitting their use by inserting instructions for desired items.
 
 
 Nearly most of the items will be montored via the optional items area.

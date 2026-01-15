@@ -9,7 +9,7 @@ Hi6/Hi7의 내장PLC 기능은 Hi5a의 내장PLC 기능과 유사하며, 동일�
 
 ## HRLadder online 연결
 
-HRLadder v2.80부터 Hi6제어기를 지원합니다.  
+HRLadder v2.80부터 Hi6/Hi7제어기를 지원합니다.  
 HRLadder v2.80 미만 버전에서는 online 버튼을 누르면 제어기 종류(Hi4~Hi5a)를 자동 인식하여 원격 연결이 수행합니다.  
 반면 HRLadder v2.80 이상 버전에서는 먼저 프로젝트의 속성에서 제어기 종류를 선택한 후 online 버튼을 누르십시오.
 
@@ -27,7 +27,7 @@ M릴레이는 MW1~1000을 지원합니다.
 특수릴레이 SP가 존재합니다.
 전용입력, 전용출력 신호가 SW에 포함되어 있습니다.
 
-### Hi6, Hi7
+### Hi6/Hi7
 
 M릴레이가 MW0~MW19998 로 대폭 확대되었으므로, M릴레이로 대체하여 사용하십시오.
 SP릴레이는 [S 릴레이 - 고정영역](https://hrbook-hrc.web.app/#/view/doc-hi6-embedded-plc/ko/3-relay/4-sw-relay/1-fixed-area?cont_model=${cont_model})의 특수 플래그 영역로서 통합되었습니다.  
@@ -90,7 +90,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 
 <br>
 
-### Hi6, Hi7
+### Hi6/Hi7
 index가 0부터 시작합니다.
 word, long, float 의 index가 byte 위치에 맞추어 증가합니다.
 가령 DOW는 DOW0, DOW2, DOW4, DOW6...의 식으로 증가하고, DOL은 DOL0, DOL4, DOL8...의 식의 증가합니다.
@@ -158,7 +158,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 
 <br>
 
-### Hi6, Hi7
+### Hi6/Hi7
 
 SB0~SB1999 영역은 Hi5a와 같이 항목마다 정해진 인덱스 주소를 갖는 [S 릴레이 고정 영역](https://hrbook-hrc.web.app/#/view/doc-hi6-embedded-plc/ko/3-relay/4-sw-relay/1-fixed-area?cont_model=${cont_model})입니다.
 

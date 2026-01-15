@@ -1,6 +1,6 @@
 ﻿# Table of Contents
 
-* [${cont_model} Robot Controller Function Manual - Embedded PLC](README.md)
+* [${cont_model} Controller Function Manual - Embedded PLC](README.md)
 * [1. Overview](1-intro/README.md)
   * [1.1 Ladder Logic](1-intro/1-ladder-logic.md)
 
@@ -83,4 +83,4 @@
   * [4.36 AND (Bitwise AND): Bit operation and](4-instruction/36-and.md)
   * [4.37 OR (Bitwise OR): Bit operation or](4-instruction/37-or.md)
 
-* [5. Difference in the Embedded PLC between Hi5a and ${cont_model}](5-diff-hi5a-hi6.md)
+* [5. Difference in the Embedded PLC between Hi5a and Hi6/Hi7](5-diff-hi5a-hi6.md)

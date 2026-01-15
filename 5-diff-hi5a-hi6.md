@@ -30,7 +30,7 @@ Dedicated input and output signals are included in SW.
 ### ${cont_model}
 
 M relays are largely extended to a range of MW0-MW19998, so you can use them as substitutes for others.
-SP relays are integrated into the area for special flags of [S relay - Fixed area](https://hrbook-hrc.web.app/#/view/doc-hi6-embedded-plc/korean/3-relay/4-sw-relay/1-fixed-area)
+SP relays are integrated into the area for special flags of [S relay - Fixed area](https://hrbook-hrc.web.app/#/view/doc-hi6-embedded-plc/en/3-relay/4-sw-relay/1-fixed-area?cont_model=${cont_model})
 For dedicated input and output signals, support will be provided with SI and SO. 
 
 
@@ -96,7 +96,7 @@ The index of word, long and flow will increase by matching the byte location.
 For example, DOW increases in the form of DOW0, DOW2, DOW4, DOW6..., and DOL increases in the form of DOL0, DOL4, DOL8...
 As shown in the figure below, DO16-DO23 are the same as DOW2.
 
-Refer to [3.2 Designating a relay](https://hrbook-hrc.web.app/#/view/doc-hi6-embedded-plc/korean/3-relay/2-relay-expression)
+Refer to [3.2 Designating a relay](https://hrbook-hrc.web.app/#/view/doc-hi6-embedded-plc/en/3-relay/2-relay-expression?cont_model=${cont_model})
 
 <br>
 
@@ -160,9 +160,9 @@ However, among the index addresses, SW220-249 are for 10 multipurpose slots, and
 
 ### ${cont_model}
 
-The area of SB0-SB1999 is the [S Relay Fixed Area](https://hrbook-hrc.web.app/#/view/doc-hi6-embedded-plc/korean/3-relay/4-sw-relay/1-fixed-area), which has a fixed index address for each item just like Hi5a.
+The area of SB0-SB1999 is the [S Relay Fixed Area](https://hrbook-hrc.web.app/#/view/doc-hi6-embedded-plc/en/3-relay/4-sw-relay/1-fixed-area?cont_model=${cont_model}), which has a fixed index address for each item just like Hi5a.
 
-However, the area of SB2000- is the [Optional items area](https://hrbook-hrc.web.app/#/view/doc-hi6-embedded-plc/korean/3-relay/4-sw-relay/README), which has about 900 multipurpose slots, permitting their use by inserting instructions for desired items.
+However, the area of SB2000- is the [Optional items area](https://hrbook-hrc.web.app/#/view/doc-hi6-embedded-plc/en/3-relay/4-sw-relay/README?cont_model=${cont_model}), which has about 900 multipurpose slots, permitting their use by inserting instructions for desired items.
 
 
 Nearly most of the items will be montored via the optional items area.

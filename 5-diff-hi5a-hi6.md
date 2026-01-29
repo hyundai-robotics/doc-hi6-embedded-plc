@@ -7,7 +7,7 @@ Hi6/Hi7의 내장PLC 기능은 Hi5a의 내장PLC 기능과 유사하며, 동일�
 
 <br>
 
-## HRLadder online 연결
+### HRLadder online 연결
 
 HRLadder v2.80부터 Hi6/Hi7제어기를 지원합니다.  
 HRLadder v2.80 미만 버전에서는 online 버튼을 누르면 제어기 종류(Hi4~Hi5a)를 자동 인식하여 원격 연결이 수행합니다.  
@@ -19,15 +19,15 @@ HRLadder v2.80 미만 버전에서는 online 버튼을 누르면 제어기 종�
 
 <br>
 
-## 릴레이 종류
+### 릴레이 종류
 
-### Hi5a
+#### Hi5a
 
 M릴레이는 MW1~1000을 지원합니다.
 특수릴레이 SP가 존재합니다.
 전용입력, 전용출력 신호가 SW에 포함되어 있습니다.
 
-### Hi6/Hi7
+#### Hi6/Hi7
 
 M릴레이가 MW0~MW19998 로 대폭 확대되었으므로, M릴레이로 대체하여 사용하십시오.
 SP릴레이는 [S 릴레이 - 고정영역](https://hrbook-hrc.web.app/#/view/doc-hi6-embedded-plc/ko/3-relay/4-sw-relay/1-fixed-area?cont_model=${cont_model})의 특수 플래그 영역로서 통합되었습니다.  
@@ -37,9 +37,9 @@ SP릴레이는 [S 릴레이 - 고정영역](https://hrbook-hrc.web.app/#/view/do
 <br>
 
 
-## 인덱스(index)
+### 인덱스(index)
 
-### Hi5a
+#### Hi5a
 index가 1부터 시작합니다.
 word, long, float 의 index가 1씩 증가합니다. 
 예를 들어 DOW1 따라서, DO16~DO23은 DOW1과 같습니다.
@@ -90,7 +90,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 
 <br>
 
-### Hi6/Hi7
+#### Hi6/Hi7
 index가 0부터 시작합니다.
 word, long, float 의 index가 byte 위치에 맞추어 증가합니다.
 가령 DOW는 DOW0, DOW2, DOW4, DOW6...의 식으로 증가하고, DOL은 DOL0, DOL4, DOL8...의 식의 증가합니다.
@@ -146,9 +146,9 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 <br>
 
 
-## 시스템 릴레이 (SW relay)
+### 시스템 릴레이 (SW relay)
 
-### Hi5a
+#### Hi5a
 
 거의 모니터링 항목에 각기 정해진 SW릴레이 인덱스 주소가 있습니다.  
 단, 인덱스 주소 중 SW220~249는 10개의 다용도 슬롯(slot)이며, 시스템변수, 메인보드 저장공간, 아날로그 입출력, 날짜/시간, GE변수 중 원하는 코드를 원하는 슬롯에 넣어 모니터링합니다.
@@ -158,7 +158,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 
 <br>
 
-### Hi6/Hi7
+#### Hi6/Hi7
 
 SB0~SB1999 영역은 Hi5a와 같이 항목마다 정해진 인덱스 주소를 갖는 [S 릴레이 고정 영역](https://hrbook-hrc.web.app/#/view/doc-hi6-embedded-plc/ko/3-relay/4-sw-relay/1-fixed-area?cont_model=${cont_model})입니다.
 

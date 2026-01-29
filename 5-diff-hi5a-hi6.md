@@ -7,7 +7,7 @@ The following content includes the list of the different parts.
 
 <br>
 
-## HRLadder online connection
+#### HRLadder online connection
 
 HRLadder v2.80 or later supports the Hi6/Hi7 controller.
 Versions of HRLadder earlier than v2.80 allows remote connection through automatic recognition of the controller type when the online button is pressed.
@@ -19,15 +19,15 @@ However, for HRLadder v2.80 or later, you need to select the controller type in 
 
 <br>
 
-## Type of relay
+#### Type of relay
 
-### Hi5a
+##### Hi5a
 
 M relays of MW1-MW1000 are supported.
 A special relay SP exists.
 Dedicated input and output signals are included in SW.
 
-### Hi6/Hi7
+##### Hi6/Hi7
 
 M relays are largely extended to a range of MW0-MW19998, so you can use them as substitutes for others.
 SP relays are integrated into the area for special flags of [S relay - Fixed area](https://hrbook-hrc.web.app/#/view/doc-hi6-embedded-plc/en/3-relay/4-sw-relay/1-fixed-area?cont_model=${cont_model})
@@ -37,9 +37,9 @@ For dedicated input and output signals, support will be provided with SI and SO.
 <br>
 
 
-## Index
+#### Index
 
-### Hi5a
+##### Hi5a
 The index starts with 1.
 The index for word, long, and float increases by 1. 
 For example, DO16-DO23 are the same as DOW1
@@ -90,7 +90,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 
 <br>
 
-### Hi6/Hi7
+##### Hi6/Hi7
 The index starts with 0.
 The index of word, long and flow will increase by matching the byte location.
 For example, DOW increases in the form of DOW0, DOW2, DOW4, DOW6..., and DOL increases in the form of DOL0, DOL4, DOL8...
@@ -146,9 +146,9 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 <br>
 
 
-## System relay (SW relay)
+#### System relay (SW relay)
 
-### Hi5a
+##### Hi5a
 
 In most cases, there is a fixed SW relay index address for each monitoring item.
 However, among the index addresses, SW220-249 are for 10 multipurpose slots, and it is possible to put a desired code, among the codes for system variables, mainboard storage space, analog input/output, date/time, and GE variables, into the desired slot and perform monitoring.
@@ -158,7 +158,7 @@ However, among the index addresses, SW220-249 are for 10 multipurpose slots, and
 
 <br>
 
-### Hi6/Hi7
+##### Hi6/Hi7
 
 The area of SB0-SB1999 is the [S Relay Fixed Area](https://hrbook-hrc.web.app/#/view/doc-hi6-embedded-plc/en/3-relay/4-sw-relay/1-fixed-area?cont_model=${cont_model}), which has a fixed index address for each item just like Hi5a.
 

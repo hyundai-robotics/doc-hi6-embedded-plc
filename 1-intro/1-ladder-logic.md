@@ -32,7 +32,7 @@ Instructions of an embedded PLC can be classified into multiple instruction grou
 
 <br>
 
-## Contact instruction
+### Contact instruction
 
 Classified as a contact instruction, eXamine If Closed (XIC) is a simple instruction with only one operand. This instruction will be indicated on the rung with an operand marked on the -| |- symbol.
 
@@ -56,7 +56,7 @@ X1 AND (X2 OR (NOT X3))
 <br>
 
 
-## Output-coil instruction
+### Output-coil instruction
 
 OuTput Energize (OTE) is classified as an output coil instruction. It is always placed at the rightmost end of the rung and indicated by the -( )- symbol. This instruction allows the value transferred from the left to be outputted to the operand relay.
 
@@ -71,7 +71,7 @@ Y8 = X1 AND (X2 OR (NOT X3))
 
 <br>
 
-## Function instruction
+### Function instruction
 
 When the left side becomes active, a specific operation for the given operand will be executed. For example, in the diagram below, when DO3 becomes active, the arithmetic operation ADD (+) of adding the values of MW5 and DOW2 relays and then substituting the thus acquired sum into the MW6 relay will be executed.
 

@@ -63,7 +63,7 @@ Instructions of an embedded PLC can be classified into multiple instruction grou
 
 <br>
 
-## Contact instruction
+### Contact instruction
 
 Classified as a contact instruction, eXamine If Closed (XIC) is a simple instruction with only one operand. This instruction will be indicated on the rung with an operand marked on the -| |- symbol.
 
@@ -87,7 +87,7 @@ X1 AND (X2 OR (NOT X3))
 <br>
 
 
-## Output-coil instruction
+### Output-coil instruction
 
 OuTput Energize (OTE) is classified as an output coil instruction. It is always placed at the rightmost end of the rung and indicated by the -( )- symbol. This instruction allows the value transferred from the left to be outputted to the operand relay.
 
@@ -102,7 +102,7 @@ Y8 = X1 AND (X2 OR (NOT X3))
 
 <br>
 
-## Function instruction
+### Function instruction
 
 When the left side becomes active, a specific operation for the given operand will be executed. For example, in the diagram below, when DO3 becomes active, the arithmetic operation ADD (+) of adding the values of MW5 and DOW2 relays and then substituting the thus acquired sum into the MW6 relay will be executed.
 
@@ -335,20 +335,20 @@ In the main software, there are various relays drawn in the form of small boxes.
 
 <br>
 
-## HRScript (robot language)
+### HRScript (robot language)
 The robot language can access User I/O (FB.DI/DO) relays and Memory (M) relays through I/O variables. However, lowercase letters are to be used instead of uppercase letters (e.g., fb3.dow14, mw501.). For details on input/output variables, refer to the [${cont_model} Function Manual - Robot Language - I/O Variables](https://hrbook-hrc.web.app/#/view/doc-hrscript/ko/6-external-comm/1-fb-io/1-io-val?cont_model=${cont_model}) section.
 
 
 <br>
 
-## I/O assignment, I/O attributes
+### I/O assignment, I/O attributes
 I/O assignment can access FB.DI/DO relays. In addition, negative logic, pulse, etc. can be set in FB.DI/DO by setting the I/O attributes. For example, for the "external stop," which is an input assignment, if negative logic is set in DI24, the robot will stop when the DI24 signal is 0 (active).
 For more details, refer to the [${cont_model} Operation Manual - Input/Output Signal Setting](https://hrbook-hrc.web.app/#/view/doc-hi6-operation/ko-tp630/7-setting/3-control-parameter/2-io-signal-setting/README?cont_model=${cont_model}) section. 
 
 
 <br>
 
-## Embedded PLC
+### Embedded PLC
 Ladder Logic is drawn in a dotted line inside the embedded PLC box, and this part is connected to the relays on both sides with arrows. Ladder Logic receives inputs from relays, executes arithmetic/logical operations intended by the author, and then transfers the result values   to other relays.  
 
 As Ladder Logic is connected to Memory, System, Timer, and Counter relays in both directions, it can read values from the relays and write values to them. On the other hand, it is possible only to write values to FB.Y, a physical output, and only to read values from FB.X, a physical input. 
@@ -357,7 +357,7 @@ FB.DI is an input from the point of view of the robot language, but this input i
 
 <br>
 
-## Connection to external communication
+### Connection to external communication
 Hilscher CIF cards are to be connected to physical inputs and outputs. For how to map one or multiple fieldbus objects to a specific CIF card, refer to [${cont_model} Operation Manual - I/O Signal Setting - DIO Block Assignment](https://hrbook-hrc.web.app/#/view/doc-hi6-operation/ko-tp630/7-setting/3-control-parameter/2-io-signal-setting/9-dio-block-assign?cont_model=${cont_model}).  
 
 All relays are mapped to the address space of the Modbus slave function. For more details, refer to [${cont_model} Function Manual - Modbus](https://hrbook-hrc.web.app/#/view/doc-modbus/ko/README?cont_model=${cont_model}).
@@ -3606,18 +3606,18 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 [__SOURCE](3-relay/4-sw-relay/14-slot-cifx-info/README.md)
 # 3.4.14 S relay - CIFX PCI Communication
 
-## CIFX PCI Communication Common Relay
-### command 1000: Common Status
-### command 1001: Common Control
+#### CIFX PCI Communication Common Relay
+* command 1000: Common Status
+* command 1001: Common Control
 
 <br>
 
-## CIFX PCI Communication Protocol Relay
-### command 1010: Profibus-DP Master
-### command 1012: DeviceNet Master
-### command 1014: EtherNet/IP Master
-### command 1016: Profinet IO Master
-### command 1018: EtherCAT Master
+#### CIFX PCI Communication Protocol Relay
+* command 1010: Profibus-DP Master
+* command 1012: DeviceNet Master
+* command 1014: EtherNet/IP Master
+* command 1016: Profinet IO Master
+* command 1018: EtherCAT Master
 
 [__SOURCE](3-relay/4-sw-relay/14-slot-cifx-info/1-slot-common-info.md)
 # 3.4.14.1 S relay - CIFX PCI Communication Status
@@ -13053,7 +13053,7 @@ The following content includes the list of the different parts.
 
 <br>
 
-## HRLadder online connection
+#### HRLadder online connection
 
 HRLadder v2.80 or later supports the Hi6/Hi7 controller.
 Versions of HRLadder earlier than v2.80 allows remote connection through automatic recognition of the controller type when the online button is pressed.
@@ -13065,15 +13065,15 @@ However, for HRLadder v2.80 or later, you need to select the controller type in 
 
 <br>
 
-## Type of relay
+#### Type of relay
 
-### Hi5a
+##### Hi5a
 
 M relays of MW1-MW1000 are supported.
 A special relay SP exists.
 Dedicated input and output signals are included in SW.
 
-### Hi6/Hi7
+##### Hi6/Hi7
 
 M relays are largely extended to a range of MW0-MW19998, so you can use them as substitutes for others.
 SP relays are integrated into the area for special flags of [S relay - Fixed area](https://hrbook-hrc.web.app/#/view/doc-hi6-embedded-plc/en/3-relay/4-sw-relay/1-fixed-area?cont_model=${cont_model})
@@ -13083,9 +13083,9 @@ For dedicated input and output signals, support will be provided with SI and SO.
 <br>
 
 
-## Index
+#### Index
 
-### Hi5a
+##### Hi5a
 The index starts with 1.
 The index for word, long, and float increases by 1. 
 For example, DO16-DO23 are the same as DOW1
@@ -13136,7 +13136,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 
 <br>
 
-### Hi6/Hi7
+##### Hi6/Hi7
 The index starts with 0.
 The index of word, long and flow will increase by matching the byte location.
 For example, DOW increases in the form of DOW0, DOW2, DOW4, DOW6..., and DOL increases in the form of DOL0, DOL4, DOL8...
@@ -13192,9 +13192,9 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 <br>
 
 
-## System relay (SW relay)
+#### System relay (SW relay)
 
-### Hi5a
+##### Hi5a
 
 In most cases, there is a fixed SW relay index address for each monitoring item.
 However, among the index addresses, SW220-249 are for 10 multipurpose slots, and it is possible to put a desired code, among the codes for system variables, mainboard storage space, analog input/output, date/time, and GE variables, into the desired slot and perform monitoring.
@@ -13204,7 +13204,7 @@ However, among the index addresses, SW220-249 are for 10 multipurpose slots, and
 
 <br>
 
-### Hi6/Hi7
+##### Hi6/Hi7
 
 The area of SB0-SB1999 is the [S Relay Fixed Area](https://hrbook-hrc.web.app/#/view/doc-hi6-embedded-plc/en/3-relay/4-sw-relay/1-fixed-area?cont_model=${cont_model}), which has a fixed index address for each item just like Hi5a.
 

@@ -1,6 +1,9 @@
 ﻿# Table of Contents
 
 * [${cont_model} Controller Function Manual - Embedded PLC](README.md)
+
+* [Precautions](0-about-this-manual/precautions.md)
+
 * [1. Overview](1-intro/README.md)
   * [1.1 Ladder Logic](1-intro/1-ladder-logic.md)
 

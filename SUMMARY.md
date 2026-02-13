@@ -1,6 +1,9 @@
 ﻿# Table of contents
 
 * [${cont_model} 제어기 기능설명서 - 내장PLC (Embedded PLC)](README.md)
+
+* [사전 주의사항](0-about-this-manual/precautions.md)
+
 * [1. 개요](1-intro/README.md)
   * [1.1 래더 로직(Ladder Logic)](1-intro/1-ladder-logic.md)
 

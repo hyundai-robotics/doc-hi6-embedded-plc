@@ -1,13 +1,12 @@
-﻿# 4.2 XIC (Examine if Closed): Examining if Closed
+﻿# 4.2 XIC (检查是否关闭): 检查是否关闭
 
-
-### Description
-If the bit value of the operand is 1, the rung will be made active. If 0, it will be made inactive.
+### 描述
+如果操作数的位值为1，则该梯级将被激活。如果为0，则将被禁用。
 
 <br>
 
-### Types that can be used as an operand
-(not possible for X)
+### 可用作操作数的类型
+(不适用于X)
 <style type="text/css">
 table  {border-collapse:collapse;}
 th {background-color:#efefef; border-style:solid;border-width:1px;color:black;text-align:center;}
@@ -18,19 +17,19 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 <table>
 <thead>
   <tr>
-    <th>relay type</th>
-    <th colspan="2">input<br>X, DO</th>
-    <th colspan="2">output<br>Y, DI, R, K</th>
-    <th colspan="2">memory<br>M, S</th>
-    <th>const.<br>32bit</th>
+    <th>继电器类型</th>
+    <th colspan="2">输入<br>X, DO</th>
+    <th colspan="2">输出<br>Y, DI, R, K</th>
+    <th colspan="2">内存<br>M, S</th>
+    <th>常数<br>32位</th>
   </tr>
   <tr>
-    <th>data type</th>
-    <th>bit</th>
+    <th>数据类型</th>
+    <th>位</th>
     <th>B,W,L,F</th>
-    <th>bit</th>
+    <th>位</th>
     <th>B,W,L,F</th>
-    <th>bit</th>
+    <th>位</th>
     <th>B,W,L,F</th>
     <th>L,F</th>
   </tr>
@@ -48,11 +47,10 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
   </tr>
 </tbody>
 </table>
-
 <br>
 
-### Example of use
+### 使用示例
 
-When the Run switch, which is the contact A of input X2, is in the pressed state (1 = active) and the internal state relay M5 is normal (1), the "Run" lamp output Y5 will be switched on. 
+当运行开关，即输入 X2 的接点 A，处于按下状态 (1 = 激活) 且内部状态继电器 M5 正常 (1) 时，"运行" 灯输出 Y5 将会开启。 
 
 ![](../_assets/xic.png)

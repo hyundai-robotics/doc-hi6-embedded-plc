@@ -1,17 +1,14 @@
-﻿# 4.26 MOV (Move): Moving
+# 4.26 MOV (移动): 移动
 
-
-### Description
-If the rung is active, the value of the "source" will be copied to the "destination."
-If the "source" is in the word (W) format, and the "destination" is in the byte (B) format, only the lower byte of the value of the "source" will be copied to the "destination." 
-Because all data of the embedded programmable logic controller (PLC) is processed as signed data, if the "source" is in the byte (B) format and its value is -1(&Hff), this value will be copied to the "destination," which is in the word (W) format, as -1(&HFFFF) (&H00ff becomes the value of 255.)
-
-
+### 描述
+如果梯级处于活动状态，则“源”的值将被复制到“目标”。
+如果“源”是字（W）格式，且“目标”是字节（B）格式，则“源”值的低字节将被复制到“目标”。
+由于嵌入式可编程逻辑控制器（PLC）的所有数据都作为有符号数据处理，如果“源”是字节（B）格式且其值为-1（&Hff），则该值将以-1（&HFFFF）复制到“目标”，该“目标”为字（W）格式（&H00ff变为255的值）。
 
 <br>
 
-### Types that can be used as an operand
-(not possible for X)
+### 可以作为操作数使用的类型
+（X不可能）
 <style type="text/css">
 table  {border-collapse:collapse;}
 th {background-color:#efefef; border-style:solid;border-width:1px;color:black;text-align:center;}
@@ -22,38 +19,38 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 <table>
 <thead>
   <tr>
-    <th>relay type</th>
-    <th colspan="2">input<br>X, DO</th>
-    <th colspan="2">output<br>Y, DI, R, K</th>
-    <th colspan="2">memory<br>M, S</th>
-    <th>const.<br>32bit</th>
+    <th>继电器类型</th>
+    <th colspan="2">输入<br>X, DO</th>
+    <th colspan="2">输出<br>Y, DI, R, K</th>
+    <th colspan="2">内存<br>M, S</th>
+    <th>常量<br>32位</th>
   </tr>
   <tr>
-    <th>data type</th>
-    <th>bit</th>
+    <th>数据类型</th>
+    <th>比特</th>
     <th>B,W,L,F</th>
-    <th>bit</th>
+    <th>比特</th>
     <th>B,W,L,F</th>
-    <th>bit</th>
+    <th>比特</th>
     <th>B,W,L,F</th>
     <th>L,F</th>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td class='hd'>source</td>
+    <td class='hd'>源</td>
     <td>X</td>
     <td></td>
     <td>X</td>
     <td></td>
     <td>X</td>
     <td></td>
-    <td></td>
+<td></td>
   </tr>
 </tbody>
 <tbody>
   <tr>
-    <td class='hd'>destination</td>
+    <td class='hd'>目标</td>
     <td>X</td>
     <td>X</td>
     <td>X</td>
@@ -67,8 +64,8 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 
 <br>
 
-### Example of use
+### 使用示例
 
-If the input DO55 is active, 55 will be set in the internal state relay MB2.
+如果输入DO55处于活动状态，则将55设置在内部状态继电器MB2中。
 
 ![](../_assets/mov.png)

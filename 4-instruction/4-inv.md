@@ -1,14 +1,13 @@
-﻿# 4.4 INV (Inverting): Inverting
+﻿# 4.4 INV (反转): 反转
 
 
-### Description
-Inverts (active <-> inactive) the previous result of the rung.
+### 描述
+反转（活动 <-> 非活动）梯级的先前结果。
 
 <br>
 
-### Example of use
+### 使用示例
 
-According to DeMorgand's law, processing an invert will make /(AxB) equal to /A+/B or /(A+B) equal to /Ax/B, allowing a simple configuration that uses the AND logic that has no branches instead of a configuration that uses the OR logic, which has multiple branches.
-As such, the logic of the two rungs below will have the same result because (X1+X2+X3) equals to /(/X1x/X2x/X3).
+根据德摩根定律，处理反转将使 /(AxB) 等于 /A+/B 或 /(A+B) 等于 /Ax/B，从而允许使用没有分支的AND逻辑的简单配置，而不是使用具有多个分支的OR逻辑配置。因此，下面两个梯级的逻辑将具有相同的结果，因为 (X1+X2+X3) 等于 /(/X1x/X2x/X3)。
 
 ![](../_assets/inv.png)

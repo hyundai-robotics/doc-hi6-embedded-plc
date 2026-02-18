@@ -1,15 +1,13 @@
-﻿# 4.25 SEG (7-segment): Converting to an 7-segment Value
+﻿# 4.25 SEG (7段): 转换为7段值
 
-
-### Description
-If the rung is active, the value of the "source" will be converted to a 7-segment value (8 bits), and the converted value will be stored in the "destination."
-If the "destination" is in the word (W) format, two values in a 7-segment format (8 bits) will be stored in the "destination."
-
+### 描述
+如果梯级处于活动状态，则“源”的值将被转换为7段值（8位），并将转换后的值存储在“目标”中。
+如果“目标”处于字（W）格式，则两个7段格式（8位）的值将存储在“目标”中。
 
 <br>
 
-### Types that can be used as an operand
-(not possible for X, unsigned integers for u)
+### 可用作操作数的类型
+（X、无符号整数u不适用）
 <style type="text/css">
 table  {border-collapse:collapse;}
 th {background-color:#efefef; border-style:solid;border-width:1px;color:black;text-align:center;}
@@ -20,26 +18,26 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 <table>
 <thead>
   <tr>
-    <th>relay type</th>
-    <th colspan="2">input<br>X, DO</th>
-    <th colspan="2">output<br>Y, DI, R, K</th>
-    <th colspan="2">memory<br>M, S</th>
-    <th>const.<br>32bit</th>
+    <th>继电器类型</th>
+    <th colspan="2">输入<br>X, DO</th>
+    <th colspan="2">输出<br>Y, DI, R, K</th>
+    <th colspan="2">内存<br>M, S</th>
+    <th>常量<br>32位</th>
   </tr>
   <tr>
-    <th>data type</th>
-    <th>bit</th>
+    <th>数据类型</th>
+    <th>位</th>
     <th>B,W,L,F</th>
-    <th>bit</th>
+    <th>位</th>
     <th>B,W,L,F</th>
-    <th>bit</th>
+    <th>位</th>
     <th>B,W,L,F</th>
     <th>L,F</th>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td class='hd'>source</td>
+    <td class='hd'>源</td>
     <td>X</td>
     <td>u</td>
     <td>X</td>
@@ -48,10 +46,9 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
     <td>u</td>
     <td>u</td>
   </tr>
-</tbody>
 <tbody>
   <tr>
-    <td class='hd'>destination</td>
+    <td class='hd'>目的地</td>
     <td>X</td>
     <td>X</td>
     <td>X</td>
@@ -65,11 +62,11 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 
 <br>
 
-### Example of use
+### 使用示例
 
-If the input DO44 is active, the 7-segment value corresponding to the value of XB3 will be set in the internal state relay MW3.
-For &H17, the value &H0607 combining SEGD_1(SEGM_B|SEGM_C = 0x02|0x04 = 0x06)=&H06 and 
-SEGD_7(SEGM_A|SEGM_B|SEGM_C = 0x01|0x02|0x04 = 0x07)=&H07 will be stored in the internal state relay MW3.
+如果输入的DO44处于活动状态，则与XB3的值相对应的7段数值将被设置在内部状态继电器MW3中。
+对于&H17，值&H0607结合了SEGD_1(SEGM_B|SEGM_C = 0x02|0x04 = 0x06)=&H06和 
+SEGD_7(SEGM_A|SEGM_B|SEGM_C = 0x01|0x02|0x04 = 0x07)=&H07，将被存储在内部状态继电器MW3中。
 
 
 ![](../_assets/seg.png)
@@ -77,7 +74,7 @@ SEGD_7(SEGM_A|SEGM_B|SEGM_C = 0x01|0x02|0x04 = 0x07)=&H07 will be stored in the 
 
 <br>
 
-### 7-segment data
+### 7段数据
 
 ![](../_assets/seg_data.png)
 
@@ -89,4 +86,3 @@ SEGM_E = 0x10<br>
 SEGM_F = 0x20<br>
 SEGM_G = 0x40<br>
 SEGM_DP = 0x80<br>
-

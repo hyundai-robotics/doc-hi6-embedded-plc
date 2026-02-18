@@ -1,6 +1,6 @@
-﻿# 3.4.1 S relay - Fixed area
+﻿# 3.4.1 S 继电器 - 固定区域
 
-Please refer to the table shown below for the SB0-SB1999 areas for which fixed items are provided.
+请参考下表中提供的 SB0-SB1999 区域的固定项目。
 
 <style type="text/css">
 table  {border-collapse:collapse;}
@@ -9,12 +9,12 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 .bit { width: 10%; }
 </style>
 
-### Area for special flags
+### 特殊标志区域
 
 <table class="tg">
 <thead>
 	<tr>
-		<th class='bit'>Relay</th>
+		<th class='bit'>继电器</th>
 		<th class='bit'>bit7</th>
 		<th class='bit'>bit6</th>
 		<th class='bit'>bit5</th>
@@ -23,32 +23,32 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<th class='bit'>bit2</th>
 		<th class='bit'>bit1</th>
 		<th class='bit'>bit0</th>		
-		<th class='bit'>Remark</th>
+		<th class='bit'>备注</th>
 	</tr>
 </thead>
 <tbody>
 	<tr>
 		<td>SB0</td>
-		<td>On if carry occurs in the operation</td>
-		<td>On if BCD operation is impossible</td>
-		<td>1-sec clock</td>
-		<td>0.2-sec clock</td>
-		<td>0.1-sec clock</td>
-		<td>On only for one scan</td>
-		<td>Always off</td>
-		<td>Always on</td>		
+		<td>如果在操作中发生进位则开启</td>
+		<td>如果无法进行 BCD 操作则开启</td>
+		<td>1秒时钟</td>
+		<td>0.2秒时钟</td>
+		<td>0.1秒时钟</td>
+		<td>仅在一个扫描周期内开启</td>
+		<td>始终关闭</td>
+		<td>始终开启</td>		
 		<td></td>
 	</tr>
 	<tr>
 		<td>SB1</td>
 		<td class='grayed'></td>
-		<td>On when the label is 0 or below or when there is no label to jump to</td>
-		<td>On if the label is duplicated</td>
-		<td>On if there are more than 100 labels</td>
-		<td>On if the label is not a constant</td>
+		<td>当标签为 0 或更低时，或没有跳转标签时则开启</td>
+		<td>如果标签重复则开启</td>
+		<td>如果标签数量超过 100 则开启</td>
+		<td>如果标签不是常数则开启</td>
 		<td class='grayed'></td>
-		<td>4-sec clock</td>
-		<td>2-sec clock</td>
+		<td>4秒时钟</td>
+<td>2秒时钟</td>
 		<td></td>
 	</tr>
 	<tr>
@@ -59,8 +59,8 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td class='grayed'></td>
 		<td class='grayed'></td>
 		<td class='grayed'></td>
-		<td>On if there is no subladder to be called by Call</td>
-		<td>On when the scan time exceeds 5 seconds</td>
+		<td>当没有通过Call调用的子梯形图时开启</td>
+		<td>当扫描时间超过5秒时开启</td>
 		<td></td>
 	</tr>
 	<tr>
@@ -71,8 +71,8 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td class='grayed'></td>
 		<td class='grayed'></td>
 		<td class='grayed'></td>
-		<td>Self diagnosis completed </td>
-		<td>T/P booting completed</td>
+		<td>自我诊断完成</td>
+		<td>T/P启动完成</td>
 		<td></td>
 	</tr>
 </tbody>
@@ -80,198 +80,198 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 
 <br>
 
-### Area for basic information
+### 基本信息区域
 
 <table class="tg">
 <thead>
 	<tr>
-		<th>Relay</th>
-		<th>Description</th>
-		<th>Remark</th>
+		<th>继电器</th>
+		<th>描述</th>
+		<th>备注</th>
 	</tr>
 </thead>
 
 <tbody>
 	<tr>
 		<td>SB4</th>
-		<td>PLC execution mode<br>
-		(0=stop, 1=R.stop, 2=R.run, 3= run, 4=off, 5=no program)</td>
+		<td>PLC执行模式<br>
+		(0=停止, 1=R.停止, 2=R.运行, 3=运行, 4=关闭, 5=无程序)</td>
 		<td></td>
 	</tr>
-	<tr class='grayed'><td>-</td><td>-</td><td>-</td></tr>
-	<tr>
-		<td>SW6</td>
-		<td>Date/Time: Year</td>
-	</tr>
-	<tr>
-		<td>SB8</td>
-		<td>Date/Time: Month</td>
-		<td></td>
-	</tr>
-	<tr>
-		<td>SB9</td>
-		<td>Date/Time: Date</td>
-		<td></td>
-	</tr>	
-	<tr>
-		<td>SB10</td>
-		<td>Date/Time: Hour</td>
-		<td></td>
-	</tr>	
-	<tr>
-		<td>SB11</td>
-		<td>Date/Time: Minute</td>
-		<td></td>
-	</tr>	
-	<tr>
-		<td>SB12</td>
-		<td>Date/Time: Second</td>
-		<td></td>
-	</tr>	
-	<tr class='grayed'><td>-</td><td>-</td><td>-</td></tr>
-	<tr>
-		<td>SB14</td>
-		<td>Software version: First<br>
-		e.g., In the case of V60.05-08, SB14:60, SB15:5, SB16:8</td>
-		<td></td>
-	</tr>
-	<tr>
-		<td>SB15</td>
-		<td>Software version: Second</td>
-		<td></td>
-	</tr>
-	<tr>
-		<td>SB16</td>
-		<td>Software version: Small-fix</td>
-		<td></td>
-	</tr>
-	<tr class='grayed'><td>-</td><td>-</td><td>-</td></tr>
-	<tr>
-		<td>SW18</td>
-		<td>Scan time</td>
-		<td>ms</td>
-	</tr>
-	<tr>
-		<td>SW20</td>
-		<td>Assignment time</td>
-		<td>us</td>
-	</tr>
-	<tr>
-		<td>SW22</td>
-		<td>Maximum occupancy time</td>
-		<td>ms</td>
-	</tr>
-	<tr>
-		<td>SW24</td>
-		<td>Average occupancy time</td>
-		<td>ms</td>
-	</tr>
-	<tr>
-		<td>SW26</td>
-		<td>Total number of the steps in the Ladder</td>
-		<td></td>
-	</tr>
-	<tr>
-		<td>SW28</td>
-		<td>Occupancy ratio</td>
-		<td>%</td>
-	</tr>
-	<tr class='grayed'><td>-</td><td>-</td><td>-</td></tr>
-	<tr>
-		<td>SB30</td>
-		<td>Gun output status</td>
-		<td></td>
-	</tr>
-	<tr>
-		<td>SB39</td>
-		<td>Current user coordinate number</td>
-		<td></td>
-	</tr>
-	<tr>
-		<td>SB40</td>
-		<td>Current tool number</td>
-		<td></td>
-	</tr>
-	<tr>
-		<td>SB41</td>
-		<td>Robot state (0=stop, 1=run, 2=wait)</td>
-		<td></td>
-	</tr>
-	<tr>
-		<td>SB42</td>
-		<td>Playback speed</td>
+<tr class='grayed'><td>-</td><td>-</td><td>-</td></tr>
+<tr>
+	<td>SW6</td>
+	<td>日期/时间：年份</td>
+</tr>
+<tr>
+	<td>SB8</td>
+	<td>日期/时间：月份</td>
+	<td></td>
+</tr>
+<tr>
+	<td>SB9</td>
+	<td>日期/时间：日期</td>
+	<td></td>
+</tr>	
+<tr>
+	<td>SB10</td>
+	<td>日期/时间：小时</td>
+	<td></td>
+</tr>	
+<tr>
+	<td>SB11</td>
+	<td>日期/时间：分钟</td>
+	<td></td>
+</tr>	
+<tr>
+	<td>SB12</td>
+	<td>日期/时间：秒</td>
+	<td></td>
+</tr>	
+<tr class='grayed'><td>-</td><td>-</td><td>-</td></tr>
+<tr>
+	<td>SB14</td>
+	<td>软件版本：第一<br>
+	例如，在 V60.05-08 的情况下，SB14:60, SB15:5, SB16:8</td>
+	<td></td>
+</tr>
+<tr>
+	<td>SB15</td>
+	<td>软件版本：第二</td>
+	<td></td>
+</tr>
+<tr>
+	<td>SB16</td>
+	<td>软件版本：小修复</td>
+	<td></td>
+</tr>
+<tr class='grayed'><td>-</td><td>-</td><td>-</td></tr>
+<tr>
+	<td>SW18</td>
+<td>扫描时间</td>
+<td>毫秒</td>
+</tr>
+<tr>
+<td>SW20</td>
+<td>分配时间</td>
+<td>微秒</td>
+</tr>
+<tr>
+<td>SW22</td>
+<td>最大占用时间</td>
+<td>毫秒</td>
+</tr>
+<tr>
+<td>SW24</td>
+<td>平均占用时间</td>
+<td>毫秒</td>
+</tr>
+<tr>
+<td>SW26</td>
+<td>梯子中的总步骤数</td>
+<td></td>
+</tr>
+<tr>
+<td>SW28</td>
+<td>占用比例</td>
+<td>%</td>
+</tr>
+<tr class='grayed'><td>-</td><td>-</td><td>-</td></tr>
+<tr>
+<td>SB30</td>
+<td>枪输出状态</td>
+<td></td>
+</tr>
+<tr>
+<td>SB39</td>
+<td>当前用户坐标号</td>
+<td></td>
+</tr>
+<tr>
+<td>SB40</td>
+<td>当前工具编号</td>
+<td></td>
+</tr>
+<tr>
+<td>SB41</td>
+<td>机器人状态 (0=停止, 1=运行, 2=等待)</td>
+<td></td>
+</tr>
+<tr>
+<td>SB42</td>
+		<td>播放速度</td>
 		<td>%</td>
 	</tr>
 	<tr class='grayed'><td>-</td><td>-</td><td>-</td></tr>
 	<tr>
 		<td>SW44</td>
-		<td>Manual speed</td>
+		<td>手动速度</td>
 		<td>mm/s</td>
 	</tr>
 	<tr>
 		<td>SW46</td>
-		<td>Tool tip movement speed</td>
+		<td>工具尖端移动速度</td>
 		<td>mm/s</td>
 	</tr>
 	<tr>
 		<td>SW48</td>
-		<td>Error/warning number</td>
+		<td>错误/警告编号</td>
 		<td></td>
 	</tr>
 	<tr>
 		<td>SW50</td>
-		<td>Error/warning auxiliary information</td>
+		<td>错误/警告辅助信息</td>
 		<td></td>
 	</tr>
 	<tr class='grayed'><td>-</td><td>-</td><td>-</td></tr>
 	<tr>
 		<td>SW60</td>
-		<td>Indirect address designation 1</td>
+		<td>间接地址指定 1</td>
 		<td></td>
 	</tr>
 	<tr>
 		<td>SW62</td>
-		<td>Indirect address designation 2</td>
+		<td>间接地址指定 2</td>
 		<td></td>
 	</tr>
 	<tr>
 		<td>SW64</td>
-		<td>Indirect address designation 3</td>
+		<td>间接地址指定 3</td>
 		<td></td>
 	</tr>
 	<tr>
 		<td>SW66</td>
-		<td>Indirect address designation 4</td>
+		<td>间接地址指定 4</td>
 		<td></td>
 	</tr>
 	<tr>
 		<td>SW68</td>
-		<td>Indirect address designation 5</td>
+		<td>间接地址指定 5</td>
 		<td></td>
-	</tr>
+</tr>
 	<tr>
 		<td>SW70</td>
-		<td>Indirect address designation 6</td>
+		<td>间接地址指定 6</td>
 		<td></td>
 	</tr>
 	<tr>
 		<td>SW72</td>
-		<td>Indirect address designation 7</td>
+		<td>间接地址指定 7</td>
 		<td></td>
 	</tr>
 	<tr>
 		<td>SW74</td>
-		<td>Indirect address designation 8</td>
+		<td>间接地址指定 8</td>
 		<td></td>
 	</tr>
 	<tr>
 		<td>SW76</td>
-		<td>Indirect address designation 9</td>
+		<td>间接地址指定 9</td>
 		<td></td>
 	</tr>
 	<tr>
 		<td>SW78</td>
-		<td>Indirect address designation 10</td>
+		<td>间接地址指定 10</td>
 		<td></td>
 	</tr>
 	<tr class='grayed'><td>-</td><td>-</td><td>-</td></tr>
@@ -279,151 +279,155 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>SB88</br>
 		...</br>
 		SB99</td>
-		<td>Teach pendant key input state</td>
+		<td>教学挂件按键输入状态</td>
 		<td></td>
 	</tr>
 	<tr class='grayed'><td>-</td><td>-</td><td>-</td></tr>
 	<tr>
 		<td>SW100</td>
-		<td>Main program number</td>
-		<td>Main task</td>
+		<td>主程序编号</td>
+		<td>主任务</td>
 	</tr>
 	<tr>
 		<td>SW102</td>
-		<td>Step number</td>
-		<td>Main task</td>
+		<td>步骤编号</td>
+		<td>主任务</td>
 	</tr>
 	<tr>
 		<td>SW104</td>
-		<td>Function number</td>
-		<td>Main task</td>
+		<td>功能编号</td>
+		<td>主任务</td>
 	</tr>
-	<tr>
+<tr>
 		<td>SW106</td>
-		<td>Main program number</td>
-		<td>Main task</td>
+		<td>主程序编号</td>
+		<td>主任务</td>
 	</tr>
 	<tr class='grayed'><td>-</td><td>-</td><td>-</td></tr>
 	<tr>
 		<td>SB109</td>
-		<td>Run time selection<br>
-		(1=Total (after initialization), 2=Total (after power input), 3=Last cycle, 4=Current cycle)</td>
+		<td>运行时间选择<br>
+		(1=总计（初始化后），2=总计（电源输入后），3=上一个周期，4=当前周期)</td>
 		<td></td>
 	</tr>
 	<tr>
 		<td>SL110</td>
-		<td>Motor on (day)</td>
+		<td>电机开启（天）</td>
 		<td></td>
 	</tr>
 	<tr>
 		<td>SL114</td>
-		<td>Motor on (ms)</td>
+		<td>电机开启（毫秒）</td>
 		<td></td>
 	</tr>
 	<tr>
 		<td>SL118</td>
-		<td>Run time (day)</td>
+		<td>运行时间（天）</td>
 		<td></td>
 	</tr>
 	<tr>
 		<td>SL122</td>
-		<td>Run time (ms)</td>
+		<td>运行时间（毫秒）</td>
 		<td></td>
 	</tr>
 	<tr>
 		<td>SL126</td>
-		<td>Movement time (day)</td>
+		<td>移动时间（天）</td>
 		<td></td>
 	</tr>
 	<tr>
 		<td>SL130</td>
-		<td>Movement time (ms)</td>
+		<td>移动时间（毫秒）</td>
 		<td></td>
 	</tr>
 	<tr>
 		<td>SL134</td>
-		<td>Cycle count</td>
+		<td>周期计数</td>
 		<td></td>
 	</tr>
 	<tr>
 		<td>SL138</td>
-		<td>wait, di wait time (day)</td>
-		<td></td>
+		<td>等待，二进制等待时间（天）</td>
+```html
+<td></td>
 	</tr>
 	<tr>
 		<td>SL142</td>
-		<td>wait, di wait time (ms)</td>
+		<td>等待，延迟时间 (毫秒)</td>
 		<td></td>
 	</tr>
 	<tr>
 		<td>SL146</td>
-		<td>delay wait time (day)</td>
+		<td>延迟等待时间 (天)</td>
 		<td></td>
 	</tr>
 	<tr>
 		<td>SL150</td>
-		<td>delay wait time (ms)</td>
+		<td>延迟等待时间 (毫秒)</td>
 		<td></td>
 	</tr>
 	<tr class='grayed'><td>-</td><td>-</td><td>-</td></tr>
 	<tr>
 		<td>SB159</td>
-		<td>Axis information selection<br>
-		1=Current position (axis angle), 2=Current position (base coordinate), 3=Current position (base/user coordinate), <br> 6=Axis speed, 7=Motor speed<br>
-		 10=Load factor(I/Ir), 11=Load factor(I/Ip), 13=Load factor(continuous),<br> 15=Encoder temperature<br>
-		 18=Accumulated distance for each axis)</td>
+		<td>轴信息选择<br>
+		1=当前的位置 (轴角度)， 2=当前的位置 (基坐标)， 3=当前的位置 (基/用户坐标)，<br> 6=轴速度， 7=电机速度<br>
+		 10=负载因子(I/Ir)， 11=负载因子(I/Ip)， 13=负载因子（连续），<br> 15=编码器温度<br>
+		 18=每个轴的累计距离)</td>
 		<td></td>
 	</tr>
 	<tr>
 		<td>SF160</td>
-		<td>Relevant value for Axis 1</td>
+		<td>轴 1 的相关值</td>
 		<td></td>
 	</tr>
 	<tr>
 		<td>SF164</td>
-		<td>Relevant value for Axis 2</td>
+		<td>轴 2 的相关值</td>
 		<td></td>
 	</tr>
 	<tr>
 		<td>SF168</td>
-		<td>Relevant value for Axis 3</td>
+		<td>轴 3 的相关值</td>
 		<td></td>
 	</tr>
 	<tr>
 		<td>SF172</td>
-		<td>Relevant value for Axis 4</td>
+		<td>轴 4 的相关值</td>
 		<td></td>
 	</tr>
 	<tr>
 		<td>SF176</td>
-		<td>Relevant value for Axis 5</td>
+		<td>轴 5 的相关值</td>
 		<td></td>
-	</tr>
+```
+```html
+</tr>
 	<tr>
 		<td>SF180</td>
-		<td>Relevant value for Axis 6</td>
+		<td>轴 6 的相关值</td>
 		<td></td>
 	</tr>
 	<tr>
 		<td>SF184</td>
-		<td>Relevant value for Axis 7</td>
+		<td>轴 7 的相关值</td>
 		<td></td>
 	</tr>
 	<tr>
 		<td>SF188</td>
-		<td>Relevant value for Axis 8</td>
+		<td>轴 8 的相关值</td>
 		<td></td>
 	</tr>
 	<tr>
 		<td>SF192</td>
-		<td>Relevant value for Axis 9</td>
+		<td>轴 9 的相关值</td>
 		<td></td>
 	</tr>
 	<tr>
 		<td>SF196</td>
-		<td>Relevant value for Axis 10</td>
+		<td>轴 10 的相关值</td>
 		<td></td>
 	</tr>
 	<tr class='grayed'><td>-</td><td>-</td><td>-</td></tr>
 </tbody>
 </table>
+```

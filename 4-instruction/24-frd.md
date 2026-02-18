@@ -1,16 +1,15 @@
-﻿# 4.24 FRD (Convert from BCD to Integer): Converting to an Integer
+﻿# 4.24 FRD (从 BCD 转换为整数)：转换为整数
 
-
-### Description
-If the rung is active, the BCD value of the "source" will be converted to an integer, and the converted value will be stored in the "destination." 
-This instruction can be conveniently used when the value of the cam switch outputted in BCD format is received as an input.
-If the value of the "source" is not a BCD value, the setting S6=1 will occur.
-In addition, if the "source" is in the word (W) format, and the "destination" is in the byte (B) format, the maximum value of the "source" to be converted will be &H9999. Therefore, the result of the conversion to an integer will be 9999 (&H270F), which will cause the byte range &Hff to be exceeded and, accordingly, an overflow to occur. In this case, the setting S=6 will occur.
+### 描述
+如果梯级处于活动状态，“源”的 BCD 值将被转换为整数，并且转换后的值将存储在“目标”中。 
+当以 BCD 格式接收到凸轮开关输出值作为输入时，此指令可以方便地使用。
+如果“源”的值不是 BCD 值，将发生设置 S6=1。
+此外，如果“源”以字 (W) 格式表示，而“目标”以字节 (B) 格式表示，则要转换的“源”的最大值为 &H9999。因此，转换为整数的结果将是 9999 (&H270F)，这将导致字节范围 &Hff 被超出，从而发生溢出。在这种情况下，将发生设置 S=6。
 
 <br>
 
-### Types that can be used as an operand
-(not possible for X, unsigned integers for u)
+### 可以作为操作数使用的类型
+(对于 X 不可能，u 的无符号整数)
 <style type="text/css">
 table  {border-collapse:collapse;}
 th {background-color:#efefef; border-style:solid;border-width:1px;color:black;text-align:center;}
@@ -21,26 +20,26 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 <table>
 <thead>
   <tr>
-    <th>relay type</th>
-    <th colspan="2">input<br>X, DO</th>
-    <th colspan="2">output<br>Y, DI, R, K</th>
-    <th colspan="2">memory<br>M, S</th>
-    <th>const.<br>32bit</th>
+    <th>继电器类型</th>
+    <th colspan="2">输入<br>X, DO</th>
+    <th colspan="2">输出<br>Y, DI, R, K</th>
+    <th colspan="2">内存<br>M, S</th>
+    <th>常量<br>32位</th>
   </tr>
   <tr>
-    <th>data type</th>
-    <th>bit</th>
+    <th>数据类型</th>
+    <th>位</th>
     <th>B,W,L,F</th>
-    <th>bit</th>
+    <th>位</th>
     <th>B,W,L,F</th>
-    <th>bit</th>
+    <th>位</th>
     <th>B,W,L,F</th>
     <th>L,F</th>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td class='hd'>source</td>
+    <td class='hd'>源</td>
     <td>X</td>
     <td>u</td>
     <td>X</td>
@@ -48,11 +47,11 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
     <td>X</td>
     <td>u</td>
     <td>u</td>
-  </tr>
+</tr>
 </tbody>
 <tbody>
   <tr>
-    <td class='hd'>destination</td>
+    <td class='hd'>目标</td>
     <td>X</td>
     <td>X</td>
     <td>X</td>
@@ -66,11 +65,9 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 
 <br>
 
-### Example of use
+### 使用示例
 
-If the input DO43 is active, the value (BCD) of XB3 will be converted to an integer, and the converted value will be set in the internal state relay MB3.
-If &H23(35) is converted to an integer, the integer will be &H17(23).
-
-
+如果输入的 DO43 处于活动状态，则 XB3 的值（BCD）将转换为整数，转换后的值将设置在内部状态继电器 MB3 中。
+如果 &H23(35) 被转换为整数，则该整数将是 &H17(23)。
 
 ![](../_assets/frd.png)

@@ -1,6 +1,6 @@
 ﻿# 3.4.5 S relay - TP_KEYPAD
 
-Supported from V60.30-07
+支持从 V60.30-07
 
 <style type="text/css">
 	table  {border-collapse:collapse;}
@@ -48,63 +48,66 @@ Supported from V60.30-07
 	<tr>
 		<th>SB offset</th>
 		<th>byte\bit</th>
-		<th>7</th>
-		<th>6</th>
-		<th>5</th>
-		<th>4</th>
-		<th>3</th>
-		<th>2</th>
-		<th>1</th>
-		<th>0</th>
-		<th>type</th>
-	</tr>
+```html
+<th>7</th>
+<th>6</th>
+<th>5</th>
+<th>4</th>
+<th>3</th>
+<th>2</th>
+<th>1</th>
+<th>0</th>
+<th>类型</th>
+</tr>
 </thead>
 
 <tbody>
-	<tr>
-		<td>0</td>
-		<td>command</td>
-		<td colspan='8'>GET_TP_KEYPAD (130)</td>
-		<td>s2</td>
-	</tr>
-	<tr>
-		<td>2</td>
-		<td>-</td>
-		<td colspan='8'></td>
-		<td></td>
-	</tr>
-	<tr>
-		<td>3</td>
-		<td>[0]</td>
-		<td class='jog'>J4-</td>
-		<td class='jog'>J5-</td>
-		<td class='jog'>J1-</td>
-		<td class='jog'>J2-</td>
-		<td class='jog'>J3-</td>
-		<td class='jog'>J1+</td>
-		<td class='jog'>J2+</td>
-		<td class='jog'>J3+</td>
-		<td>u1</td>
-	</tr>
-	<tr>
-		<td>4</td>
-		<td>[1]</td>
-		<td class='ent'>SHIFT</td>
-		<td class='arrow'>&larr;</td>
-		<td class='jog'>J6-</td>
-		<td class='jog'>J4+</td>
-		<td class='jog'>J5+</td>
-		<td class='jog'>J6+</td>
-		<td class='jog'>Step<br>FWD</td>
-		<td class='jog'>Step<br>BWD</td>
-		<td>u1</td>
+<tr>
+<td>0</td>
+<td>命令</td>
+<td colspan='8'>GET_TP_KEYPAD (130)</td>
+<td>s2</td>
+</tr>
+<tr>
+<td>2</td>
+<td>-</td>
+<td colspan='8'></td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>[0]</td>
+<td class='jog'>J4-</td>
+<td class='jog'>J5-</td>
+<td class='jog'>J1-</td>
+<td class='jog'>J2-</td>
+<td class='jog'>J3-</td>
+<td class='jog'>J1+</td>
+<td class='jog'>J2+</td>
+<td class='jog'>J3+</td>
+<td>u1</td>
+</tr>
+<tr>
+<td>4</td>
+<td>[1]</td>
+<td class='ent'>SHIFT</td>
+<td class='arrow'>&larr;</td>
+<td class='jog'>J6-</td>
+<td class='jog'>J4+</td>
+<td class='jog'>J5+</td>
+<td class='jog'>J6+</td>
+<td class='jog'>步骤<br>前进</td>
+<td class='jog'>步骤<br>后退</td>
+<td>u1</td>
+```
+```
 	</tr>
 	<tr>
 		<td>5</td>
 		<td>[2]</td>
-		<td>Setup</td>
+		<td>设置</td>
 		<td></td>
-		<td>robot<br>move</td>
+		<td>机器人<br>移动</td>
 		<td></td>
 		<td></td>
 		<td>SHIFT+1</td>
@@ -128,14 +131,14 @@ Supported from V60.30-07
 	<tr>
 		<td>7</td>
 		<td>[4]</td>
-		<td>Backspace</td>
-		<td>Virtual<br>TP</td>
+		<td>退格</td>
+		<td>虚拟<br>TP</td>
 		<td class='ent'>CTRL</td>
-		<td class='opkey'>mode2</td>
-		<td class='opkey'>mode1</td>
-		<td class='opkey'>stop</td>
-		<td class='opkey'>start</td>
-		<td class='opkey'>motor<br>on</td>
+		<td class='opkey'>模式2</td>
+		<td class='opkey'>模式1</td>
+		<td class='opkey'>停止</td>
+		<td class='opkey'>开始</td>
+		<td class='opkey'>电机<br>开启</td>
 		<td>u1</td>
 	</tr>
 	<tr>
@@ -148,7 +151,8 @@ Supported from V60.30-07
 		<td class='num'>3</td>
 		<td class='num'>2</td>
 		<td class='num'>1</td>
-		<td class='num'>0</td>
+```
+<td class='num'>0</td>
 		<td>u1</td>
 	</tr>
 	<tr>
@@ -158,8 +162,8 @@ Supported from V60.30-07
 		<td class='arrow'>&uarr;</td>
 		<td class='arrow'>&rarr;</td>
 		<td class='ent'>R</td>
-		<td class='ent'>ENTER</td>
-		<td class='ent'>ESC</td>
+		<td class='ent'>进入</td>
+		<td class='ent'>退出</td>
 		<td class='num'>9</td>
 		<td class='num'>8</td>
 		<td>u1</td>
@@ -167,23 +171,23 @@ Supported from V60.30-07
 	<tr>
 		<td>10</td>
 		<td>[7]</td>
-		<td class='spkey'>SPEED<br>.LOW</td>
-		<td class='spkey'>SPEED<br>.HI</td>
-		<td class='spkey'>REC</td>
-		<td class='spkey'>STEP</td>
-		<td class='spkey'>MECH</td>
-		<td class='spkey'>GUN</td>
-		<td class='spkey'>COORD</td>
+		<td class='spkey'>速度<br>.低</td>
+		<td class='spkey'>速度<br>.高</td>
+		<td class='spkey'>录制</td>
+		<td class='spkey'>步进</td>
+		<td class='spkey'>机械</td>
+		<td class='spkey'>枪</td>
+		<td class='spkey'>坐标</td>
 		<td></td>
 		<td>u1</td>
 	</tr>
 	<tr>
 		<td>11</td>
 		<td>[8]</td>
-		<td class='spkey'>HISTORY</td>
+		<td class='spkey'>历史</td>
 		<td class='num'>.</td>
 		<td></td>
-		<td>align<br>move</td>
+		<td>对齐<br>移动</td>
 		<td class='jog'>J8+</td>
 		<td class='jog'>J8-</td>
 		<td class='jog'>J7+</td>
@@ -198,7 +202,7 @@ Supported from V60.30-07
 		<td></td>
 		<td></td>
 		<td></td>
-		<td></td>
+<td></td>
 		<td></td>
 		<td></td>
 		<td>u1</td>
@@ -219,7 +223,7 @@ Supported from V60.30-07
 	<tr>
 		<td>14</td>
 		<td>[11]</td>
-		<td colspan='8'>serial no.</td>
+		<td colspan='8'>序列号</td>
 		<td>u1</td>
 	</tr>
 </tbody>

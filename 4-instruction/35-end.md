@@ -1,16 +1,14 @@
-﻿# 4.35 END (End): Ending the Ladder Program
+﻿# 4.35 结束 (End): 结束梯形程序
 
-
-### Description
-If the rung is active, the ladder program currently being executed will be ended. 
-If the current ladder program is a sub-ladder program, returning to the main ladder program will occur. However, if the current ladder program is the main ladder program, its execution will be ended, and the main ladder program will be executed again from the beginning.
+### 描述
+如果梯级处于活动状态，当前正在执行的梯形程序将被结束。 
+如果当前梯形程序是子梯形程序，将返回主梯形程序。然而，如果当前梯形程序是主梯形程序，其执行将被结束，然后从头开始再次执行主梯形程序。
 
 <br>
 
-### Example of use
+### 使用示例
 
-If the input DO22 is active, the ladder program will be ended by the END instruction, and the instructions of the rung written afterward will not be executed.
-If the input DO22 is inactive, the END instruction will not be executed, allowing the instructions of the rung written afterward to be executed naturally.
-
+如果输入 DO22 处于活动状态，梯形程序将通过 END 指令结束，随后的梯级指令将不会被执行。
+如果输入 DO22 处于非活动状态，END 指令将不会被执行，允许后续的梯级指令自然地被执行。
 
 ![](../_assets/end.png)

@@ -1,4 +1,4 @@
-﻿# 4.1 List of Instructions
+﻿# 4.1 指令列表
 
 
 <style type="text/css">
@@ -8,163 +8,160 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 .tg-kftd{background-color:#efefef;}
 </style>
 
-### * Rung and branch
+### * 梯子和分支
 <br>
 
 <table>
 <thead>
   <tr>
-    <th>Mnemonic</th>
-    <th>Name</th>
-    <th>Symbol</th>
-    <th>Description</th>
+    <th>助记符</th>
+    <th>名称</th>
+    <th>符号</th>
+    <th>描述</th>
   </tr>
 </thead>
 <tbody>
   <tr>
     <td>RUNG</td>
-    <td>Rung</td>
+    <td>梯级</td>
     <td>├─┤</td>
-    <td>rung</td>
+    <td>梯级</td>
   </tr>
   <tr>
     <td>BST</td>
-    <td>Branch Start</td>
+    <td>分支开始</td>
     <td>┬─</td>
-    <td>start of a branch</td>
+    <td>分支的开始</td>
   </tr>
   <tr>
     <td>BND</td>
-    <td>Branch End</td>
+    <td>分支结束</td>
     <td>─┬</td>
-    <td>end of a branch</td>
+    <td>分支的结束</td>
   </tr>
   <tr>
     <td>NXB</td>
-    <td>Nested Branch</td>
+    <td>嵌套分支</td>
     <td>└,├</td>
-    <td>nest of a branch</td>
+    <td>分支的嵌套</td>
   </tr>
 </tbody>
 </table>
-
-<br><br>  
-
-### * Logic examination instructions: If the examination result is true, the rung is active. If false, the rung is inactive. 
+### * 逻辑检查说明：如果检查结果为真，则梯级处于活动状态。如果为假，则梯级处于非活动状态。 
 <br>
 
 <table>
 <thead>
 	<tr>
-		<th>Mnemonic</th>
-		<th>Name</th>
-		<th>Symbol</th>
-		<th>Description</th>
+		<th>助记符</th>
+		<th>名称</th>
+		<th>符号</th>
+		<th>描述</th>
 	</tr>
 </thead>
 <tbody>
 	<tr>
 		<td>XIC</td>
-		<td>Examine if Closed</td>
+		<td>检查是否关闭</td>
 		<td>-| |-</td>
-		<td>examines if the contact is closed (contact A)</td>
+		<td>检查接触点是否关闭（接触点 A）</td>
 	</tr>
 	<tr>
 		<td>XIO</td>
-		<td>Examine if Open</td>
+		<td>检查是否打开</td>
 		<td>-|/|-</td>
-		<td>examines if the contact is open (contact B)</td>
+		<td>检查接触点是否打开（接触点 B）</td>
 	</tr>
 	<tr>
 		<td>INV</td>
-		<td>Inverting</td>
+		<td>反转</td>
 		<td>-//-</td>
-		<td>inverts the result of the rung (inverting)</td>
+		<td>反转梯级的结果（反转）</td>
 	</tr>
 	<tr>
 		<td>EQU</td>
-		<td>Inverting</td>
+		<td>反转</td>
 		<td>-[&nbsp;&nbsp;&nbsp;]-</td>
-		<td>examines if equal (=)</td>
+		<td>检查是否相等 (=)</td>
 	</tr>
 	<tr>
 		<td>NEQ</td>
-		<td>Inverting</td>
+		<td>反转</td>
 		<td>-[&nbsp;&nbsp;&nbsp;]-</td>
-		<td>examines if not equal (<>)</td>
+		<td>检查是否不相等 (<>)</td>
 	</tr>
 	<tr>
 		<td>LES</td>
-		<td>Less Than</td>
+		<td>小于</td>
 		<td>-[&nbsp;&nbsp;&nbsp;]-</td>
-		<td>examines if less than (<)</td>
-	</tr>
+		<td>检查是否小于 (<)</td>
+</tr>
 	<tr>
 		<td>GRT</td>
-		<td>Greater Than</td>
+		<td>大于</td>
 		<td>-[&nbsp;&nbsp;&nbsp;]-</td>
-		<td>examines if greater than (>)</td>
+		<td>检查是否大于 (>)</td>
 	</tr>
 	<tr>
 		<td>LEQ</td>
-		<td>Less Than or Equal</td>
+		<td>小于或等于</td>
 		<td>-[&nbsp;&nbsp;&nbsp;]-</td>
-		<td>examines if less than or equal (<=)</td>
+		<td>检查是否小于或等于 (<=)</td>
 	</tr>
 	<tr>
 		<td>GEQ</td>
-		<td>Greater Than or Equal</td>
+		<td>大于或等于</td>
 		<td>-[&nbsp;&nbsp;&nbsp;]-</td>
-		<td>examines if greater than or equal (>=)</td>
+		<td>检查是否大于或等于 (>=)</td>
 	</tr>
 </tbody>
 </table>
 
 <br><br>  
 
-### * Output instructions
+### * 输出说明
 
 <br>
 
 <table>
 <thead>
 	<tr>
-		<th>Mnemonic</th>
-		<th>Name</th>
-		<th>Symbol</th>
-		<th>Description</th>
+		<th>助记符</th>
+		<th>名称</th>
+		<th>符号</th>
+		<th>描述</th>
 	</tr>
 </thead>
 <tbody>
 	<tr>
 		<td>OTE</td>
-		<td>Output Energize</td>
+		<td>输出激活</td>
 		<td>-( )-</td>
-		<td>the state of the rung (active: ON/inactive: OFF) will be outputted</td>
+		<td>梯级的状态 (激活: ON/未激活: OFF) 将被输出</td>
 	</tr>
 	<tr>
 		<td>OTL</td>
-		<td>Output Latch</td>
+		<td>输出锁存</td>
 		<td>-(L)-</td>
-		<td>if the rung is active, the output signal will be outputted in the ON (high) state</td>
+		<td>如果梯级是激活的，输出信号将以 ON (高) 状态输出</td>
 	</tr>
-	<tr>
+<tr>
 		<td>OTU</td>
-		<td>Output Unlatch</td>
+		<td>输出解锁</td>
 		<td>-(U)-</td>
-		<td>if the rung is active, the output signal will be outputted in the OFF (low) state</td>
+		<td>如果梯级处于活动状态，则输出信号将以关闭（低）状态输出</td>
 	</tr>
 	<tr>
 		<td>OSR</td>
-		<td>One Shot Rising</td>
+		<td>单次上升</td>
 		<td>-(OSR)-</td>
-		<td>if the rung is active, the output signal will be outputed in the ON state only for the duration of one scan</td>
+		<td>如果梯级处于活动状态，则输出信号仅在一次扫描的持续时间内以开启状态输出</td>
 	</tr>
 	<tr>
 		<td>RES</td>
-		<td>Reset</td>
+		<td>重置</td>
 		<td>-(RES)-</td>
-		<td>if the rung is active, the timer or counter will be reset</td>
+		<td>如果梯级处于活动状态，则定时器或计数器将被重置</td>
 	</tr>
 </tbody>
 </table>
@@ -173,93 +170,93 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 
 <br><br>  
 
-### * Timer and counter instructions
+### * 定时器和计数器指令
 
 <br>
 
 <table>
 <thead>
 	<tr>
-		<th>Mnemonic</th>
-		<th>Name</th>
-		<th>Symbol</th>
-		<th>Description</th>
+		<th>助记符</th>
+		<th>名称</th>
+		<th>符号</th>
+		<th>描述</th>
 	</tr>
 </thead>
 <tbody>
 	<tr>
 		<td>TON</td>
-		<td>Time ON delay</td>
+		<td>定时开启延迟</td>
 		<td>-[&nbsp;&nbsp;&nbsp;]-</td>
-		<td>the timer operates only while the rung is active</td>
+		<td>定时器仅在梯级处于活动状态时工作</td>
 	</tr>
 	<tr>
 		<td>CTD</td>
-		<td>Count Down</td>
+		<td>倒计时</td>
 		<td>-[&nbsp;&nbsp;&nbsp;]-</td>
-		<td>the rung's activation (inactive -> active) will be counted down</td>
-	</tr>
+		<td>梯级的激活（非活动 -> 活动）将被倒计时</td>
+</tr>
 </tbody>
 </table>
 
 
 <br><br>  
 
-### * Arithmetic operation instructions
+### * 算术操作说明
 
 <br>
 
 <table>
 <thead>
 	<tr>
-		<th>Mnemonic</th>
-		<th>Name</th>
-		<th>Symbol</th>
-		<th>Description</th>
+		<th>助记符</th>
+		<th>名称</th>
+		<th>符号</th>
+		<th>描述</th>
 	</tr>
 </thead>
 <tbody>
 	<tr>
 		<td>ADD</td>
-		<td>Add</td>
+		<td>加法</td>
 		<td>-[&nbsp;&nbsp;&nbsp;]-</td>
-		<td>addition (+) operation if the rung is active</td>
+		<td>在梯级活跃时进行加法 (+) 操作</td>
 	</tr>
 	<tr>
 		<td>SUB</td>
-		<td>Subtract</td>
+		<td>减法</td>
 		<td>-[&nbsp;&nbsp;&nbsp;]-</td>
-		<td>subtraction (-) operation if the rung is active</td>
+		<td>在梯级活跃时进行减法 (-) 操作</td>
 	</tr>
 	<tr>
 		<td>MUL</td>
-		<td>Multiply</td>
+		<td>乘法</td>
 		<td>-[&nbsp;&nbsp;&nbsp;]-</td>
-		<td>multiplication (x) operation if the rung is active</td>
+		<td>在梯级活跃时进行乘法 (x) 操作</td>
 	</tr>
 	<tr>
 		<td>DIV</td>
-		<td>Divide</td>
+		<td>除法</td>
 		<td>-[&nbsp;&nbsp;&nbsp;]-</td>
-		<td>division (/) operation if the rung is active</td>
+		<td>在梯级活跃时进行除法 (/) 操作</td>
 	</tr>
 	<tr>
 		<td>POW</td>
-		<td>Power</td>
+		<td>幂</td>
 		<td>-[&nbsp;&nbsp;&nbsp;]-</td>
-		<td>power (^) operation if the rung is active</td>
+		<td>在梯级活跃时进行幂 (^) 操作</td>
+</tr>
+	<tr>
+		<td>与</td>
+		<td>按位与</td>
+		<td>-[&nbsp;&nbsp;&nbsp;]-</td>
+		<td>如果梯级处于活动状态，则执行按位与 (&) 操作</td>
 	</tr>
 	<tr>
-		<td>AND</td>
-		<td>Bitwise AND</td>
+		<td>或</td>
+		<td>按位或</td>
 		<td>-[&nbsp;&nbsp;&nbsp;]-</td>
-		<td>bitwise and (&) operation if the rung is active</td>
-	</tr>
-	<tr>
-		<td>OR</td>
-		<td>Bitwise OR</td>
-		<td>-[&nbsp;&nbsp;&nbsp;]-</td>
-		<td>bitwise or (|) operation if the rung is active</td>
+		<td>如果梯级处于活动状态，则执行按位或 (|) 操作</td>
 	</tr>
 </tbody>
 </table>
@@ -269,37 +266,37 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 
 <br><br>  
 
-### * Data conversion instructions
+### * 数据转换说明
 
 <br>
 
 <table>
 <thead>
 	<tr>
-		<th>Mnemonic</th>
-		<th>Name</th>
-		<th>Symbol</th>
-		<th>Description</th>
+		<th>助记符</th>
+		<th>名称</th>
+		<th>符号</th>
+		<th>描述</th>
 	</tr>
 </thead>
 <tbody>
 	<tr>
 		<td>TOD</td>
-		<td>convert an integer to BCD</td>
+		<td>将整数转换为BCD</td>
 		<td>-[&nbsp;&nbsp;&nbsp;]-</td>
-		<td>if the rung is active, the integer will be converted to BCD</td>
+		<td>如果梯级处于活动状态，则整数将被转换为BCD</td>
 	</tr>
 	<tr>
 		<td>FRD</td>
-		<td>convert BCD to an inetger</td>
+		<td>将BCD转换为整数</td>
 		<td>-[&nbsp;&nbsp;&nbsp;]-</td>
-		<td>if the rung is active, BCD will be converted to an integer</td>
+		<td>如果梯级处于活动状态，则BCD将被转换为整数</td>
 	</tr>
 	<tr>
 		<td>SEG</td>
-		<td>7-segment</td>
-		<td>-[&nbsp;&nbsp;&nbsp;]-</td>
-		<td>if the rung is active, conversion to a 7-segment value will occur</td>
+		<td>7段</td>
+<td>-[&nbsp;&nbsp;&nbsp;]-</td>
+		<td>如果梯级处于激活状态，则将转换为7段值</td>
 	</tr>
 </tbody>
 </table>
@@ -307,100 +304,96 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 
 <br><br>  
 
-### * Move and Copy instructions
+### * 移动和复制指令
 
 <br>
 
 <table>
 <thead>
 	<tr>
-		<th>Mnemonic</th>
-		<th>Name</th>
-		<th>Symbol</th>
-		<th>Description</th>
+		<th>助记符</th>
+		<th>名称</th>
+		<th>符号</th>
+		<th>描述</th>
 	</tr>
 </thead>
 <tbody>
 	<tr>
 		<td>MOV</td>
-		<td>Move</td>
+		<td>移动</td>
 		<td>-[&nbsp;&nbsp;&nbsp;]-</td>
-		<td>if the rung is active, one piece of data will be copied</td>
+		<td>如果梯级处于激活状态，则将复制一条数据</td>
 	</tr>
 	<tr>
 		<td>COP</td>
-		<td>Copy data</td>
+		<td>复制数据</td>
 		<td>-[&nbsp;&nbsp;&nbsp;]-</td>
-		<td>if the rung is active, multiple pieces of data will be copied</td>
+		<td>如果梯级处于激活状态，则将复制多条数据</td>
 	</tr>
 	<tr>
 		<td>CCOP</td>
-		<td>Conditional copy data</td>
+		<td>条件复制数据</td>
 		<td>-[&nbsp;&nbsp;&nbsp;]-</td>
-		<td>multiple pieces of data will be copied depending on the state of the rung</td>
+		<td>根据梯级的状态将复制多条数据</td>
 	</tr>
 	<tr>
 		<td>ROT</td>
-		<td>Rotating output</td>
+		<td>旋转输出</td>
 		<td>-[&nbsp;&nbsp;&nbsp;]-</td>
-		<td>if the rung is active, sequential outputting will occur</td>
+		<td>如果梯级处于激活状态，则将进行顺序输出</td>
 	</tr>
 </tbody>
 </table>
-
-<br><br>  
-
-
-### * Block control instructions
+### * 阻塞控制指令
 
 <br>
 
 <table>
 <thead>
 	<tr>
-		<th>Mnemonic</th>
-		<th>Name</th>
-		<th>Symbol</th>
-		<th>Description</th>
+		<th>助记符</th>
+		<th>名称</th>
+		<th>符号</th>
+		<th>描述</th>
 	</tr>
 </thead>
 <tbody>
 	<tr>
 		<td>FOR</td>
-		<td>FOR loop</td>
+		<td>FOR 循环</td>
 		<td>-[&nbsp;&nbsp;&nbsp;]-</td>
-		<td>if the rung is active, execution in repetition will occur until Next</td>
+		<td>如果梯级处于活动状态，将进行重复执行，直到 Next</td>
 	</tr>
 	<tr>
 		<td>NEXT</td>
-		<td>NEXT loop</td>
+		<td>NEXT 循环</td>
 		<td>-[&nbsp;&nbsp;&nbsp;]-</td>
-		<td>jumping to the FOR instruction will occur if the count is within the repetition count</td>
+		<td>如果计数在重复计数范围内，将跳转到 FOR 指令</td>
 	</tr>
 	<tr>
 		<td>LBL</td>
-		<td>LabeL</td>
+		<td>标签</td>
 		<td>-[&nbsp;&nbsp;&nbsp;]-</td>
-		<td>a position to jump to according to the JMP instruction will be designated</td>
+		<td>根据 JMP 指令指定一个跳转位置</td>
 	</tr>
 	<tr>
 		<td>JMP</td>
-		<td>Jump</td>
+		<td>跳转</td>
 		<td>-[&nbsp;&nbsp;&nbsp;]-</td>
-		<td>if the rung is active, jumping to the LBL position will occur<br>
-		(skipping to -n NEXTs if Label&lt;0)</td>
+		<td>如果梯级处于活动状态，将跳转到 LBL 位置<br>
+		(如果 Label&lt;0，跳过 -n NEXTs)</td>
 	</tr>
 	<tr>
 		<td>CALL</td>
-		<td>Call</td>
+		<td>调用</td>
 		<td>-[&nbsp;&nbsp;&nbsp;]-</td>
-		<td>if the rung is active, a sub-ladder will be called</td>
+		<td>如果梯级处于活动状态，将调用一个子梯级</td>
 	</tr>
 	<tr>
 		<td>END</td>
-		<td>End</td>
+<td>结束</td>
 		<td>-[&nbsp;&nbsp;&nbsp;]-</td>
-		<td>if the rung is active, the sub-ladder will end</td>
+		<td>如果梯级处于活动状态，从梯子将结束</td>
 	</tr>
 </tbody>
 </table>

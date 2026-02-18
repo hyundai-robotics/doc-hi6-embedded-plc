@@ -1,26 +1,25 @@
-﻿# 2.1. Setting the embedded PLC"s mode
+﻿# 2.1. 设置嵌入式PLC的模式
 
-In "[F7: Condition setting] - PLC"s operation mode", you can select one of the Off, Stop, R-Stop, R-Run, or Run modes as the operation mode of the embedded progammable logic controller (PLC.) 
-R-Stop and R-Run refer to Remote-Stop and Remote-Run, respectively, and each represents a state in which the mode can be changed remotely from the HRLadder of the PC connected via Ethernet.
+在 "[F7: Condition setting] - PLC的操作模式" 中，您可以选择嵌入式可编程逻辑控制器（PLC）的操作模式，包括 Off、Stop、R-Stop、R-Run 或 Run 模式。 R-Stop 和 R-Run 分别指代远程停止和远程运行，每个状态都表示该模式可以通过以太网连接的PC上的HRLadder远程更改。
 
-![Figure 2.1 Setting the embedded PLC"s mode](../_assets/plc_run_mode.png)
+![图 2.1 设置嵌入式PLC的模式](../_assets/plc_run_mode.png)
 
 <br>
 <br>
-According to the selected mode, the state will be indicated with an icon at the top right of the teach pendant"s screen. That is, in the case of PLC=R-Run or PLC=Run, the PLC icon will be displayed, as shown in the figure above; in the case of PLC=Off, the PLC icon will disappear, as shown in the figure below; and in the case of PLC=Stop, a prohibition mark in red will be indicated on the PLC icon.
+根据所选模式，状态将在教学挂件屏幕的右上角用图标指示。即在PLC=R-Run或PLC=Run的情况下，将显示如上图所示的PLC图标；在PLC=Off的情况下，PLC图标将消失，如下图所示；在PLC=Stop的情况下，PLC图标上将显示红色禁止标记。
 
-![Figure 2.2 Embedded PLC in Off State](../_assets/plc_mode_off.png)
+![图 2.2 嵌入式PLC在关闭状态](../_assets/plc_mode_off.png)
 
  
-![Figure 2.3 Embedded PLC in Stop State](../_assets/plc_mode_stop.png)
+![图 2.3 嵌入式PLC在停止状态](../_assets/plc_mode_stop.png)
 
 
 * Off  
-The functions of the embedded PLC will be turned off. When this occurs, the logical outputs of the robot controller, FB0.DO0-FB9.DO959, will be automatically outputted as the physical outputs (means bypassing), FB0.Y0-FB9.Y959, and the physical inputs, FB0.X0-FB9.X959, will be automatically inputted as logical inputs, FB0.DI0-FB9.DI595.
+嵌入式PLC的功能将被关闭。当这种情况发生时，机器人控制器的逻辑输出FB0.DO0-FB9.DO959将自动作为物理输出（意味着旁路）输出，FB0.Y0-FB9.Y959，物理输入FB0.X0-FB9.X959将自动作为逻辑输入FB0.DI0-FB9.DI595输入。
 
 * R-Stop/Stop  
-The operation of the embedded PLC will be stopped. R-Stop represents a remote state in which a change can be made from the HRLadder. If the Stop mode is set, it will be impossible to change the operation mode from the HRLadder. 
-When the embedded PLC is stopped, the DI and Y relays, which are PLC output signals, will become 0 automatically. *(DI is an input from the perspective of robot language or assignment, but it is an output from the perspective of the embedded PLC.)*  
+嵌入式PLC的操作将被停止。R-Stop表示一种远程状态，可以通过HRLadder进行更改。如果设置了Stop模式，将无法通过HRLadder更改操作模式。 
+当嵌入式PLC停止时，PLC输出信号的DI和Y继电器将自动变为0。 *(DI从机器人语言或分配的角度来看是输入，但从嵌入式PLC的角度来看是输出。)*  
 
 * R-Run/Run  
-The embedded PLC will be executed. R-Run represents a remote state in which changes can be made from the HRLadder. If the Run mode is set, it will be impossible to change the operation mode from the HRLadder. 
+嵌入式PLC将被执行。R-Run表示一种远程状态，可以通过HRLadder进行更改。如果设置了Run模式，将无法通过HRLadder更改操作模式。

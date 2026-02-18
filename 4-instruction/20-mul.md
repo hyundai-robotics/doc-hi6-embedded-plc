@@ -1,14 +1,12 @@
-﻿# 4.20 Multiply (MUL): Multiplying
+﻿# 4.20 乘法 (MUL)：乘法
 
-
-### Description
-If the rung is active, the value of "source a" will be multiplied by the value of "source b," and the result value will be set in the "destination" relay.
-If the operation result has an overflow, the setting S7=1 will occur.
+### 描述
+如果梯级处于活动状态，"源 a" 的值将乘以 "源 b" 的值，结果值将设置在 "目标" 继电器中。如果操作结果发生溢出，将发生设置 S7=1。
 
 <br>
 
-### Types that can be used as an operand
-(not possible for X)
+### 可用作为操作数的类型
+(不适用于 X)
 <style type="text/css">
 table  {border-collapse:collapse;}
 th {background-color:#efefef; border-style:solid;border-width:1px;color:black;text-align:center;}
@@ -19,26 +17,26 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 <table>
 <thead>
   <tr>
-    <th>relay type</th>
-    <th colspan="2">input<br>X, DO</th>
-    <th colspan="2">output<br>Y, DI, R, K</th>
-    <th colspan="2">memory<br>M, S</th>
-    <th>const.<br>32bit</th>
+    <th>继电器类型</th>
+    <th colspan="2">输入<br>X, DO</th>
+    <th colspan="2">输出<br>Y, DI, R, K</th>
+    <th colspan="2">内存<br>M, S</th>
+    <th>常数<br>32位</th>
   </tr>
   <tr>
-    <th>data-type</th>
-    <th>bit</th>
+    <th>数据类型</th>
+    <th>位</th>
     <th>B,W,L,F</th>
-    <th>bit</th>
+    <th>位</th>
     <th>B,W,L,F</th>
-    <th>bit</th>
+    <th>位</th>
     <th>B,W,L,F</th>
     <th>L,F</th>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td class='hd'>source a</td>
+    <td class='hd'>源 a</td>
     <td>X</td>
     <td></td>
     <td>X</td>
@@ -50,7 +48,7 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 </tbody>
 <tbody>
   <tr>
-    <td class='hd'>source b</td>
+    <td class='hd'>源 b</td>
     <td>X</td>
     <td></td>
     <td>X</td>
@@ -62,7 +60,7 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 </tbody>
 <tbody>
   <tr>
-    <td class='hd'>destination</td>
+    <td class='hd'>目的地</td>
     <td>X</td>
     <td>X</td>
     <td>X</td>
@@ -76,8 +74,8 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 
 <br>
 
-### Example of use
+### 使用示例
 
-If the input DO38 is active, the value of XB3 will be multiplied by 3, and the result value will be set in the internal state relay MB3.
+如果输入DO38处于活动状态，XB3的值将乘以3，结果值将设置在内部状态继电器MB3中。
 
 ![](../_assets/mul.png)

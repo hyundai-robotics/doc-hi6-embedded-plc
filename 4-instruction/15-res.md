@@ -1,13 +1,13 @@
-﻿# 4.15 Reset (RES): Resetting
+﻿# 4.15 重置 (RES)：重置
 
 
-### Description
- If the rung is active, the timer (T) or counter (C) relay value will be cleared (-1).
+### 描述
+ 如果该梯级处于活动状态，则定时器 (T) 或计数器 (C) 继电器值将被清除 (-1)。
 
 <br>
 
-### Types that can be used as an operand
-(not possible for X)
+### 可用作操作数的类型
+(不适用于 X)
 <style type="text/css">
 table  {border-collapse:collapse;}
 th {background-color:#efefef; border-style:solid;border-width:1px;color:black;text-align:center;}
@@ -18,25 +18,25 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 <table>
 <thead>
   <tr>
-    <th>relay type</th>
-    <th colspan="2">input<br>X, DO</th>
-    <th colspan="2">output<br>Y, DI, R, K</th>
-    <th colspan="2">memory<br>M, S</th>
-    <th colspan="2">timer<br>T</th>
-    <th colspan="2">count<br>C</th>
-    <th>const.<br>32bit</th>
+    <th>继电器类型</th>
+    <th colspan="2">输入<br>X, DO</th>
+    <th colspan="2">输出<br>Y, DI, R, K</th>
+    <th colspan="2">内存<br>M, S</th>
+    <th colspan="2">定时器<br>T</th>
+    <th colspan="2">计数<br>C</th>
+    <th>常量<br>32位</th>
   </tr>
   <tr>
-    <th>data-type</th>
-    <th>bit</th>
+    <th>数据类型</th>
+    <th>位</th>
     <th>B,W,L,F</th>
-    <th>bit</th>
+    <th>位</th>
     <th>B,W,L,F</th>
-    <th>bit</th>
+    <th>位</th>
     <th>B,W,L,F</th>
-    <th>bit</th>
+    <th>位</th>
     <th>B,W,L,F</th>
-    <th>bit</th>
+    <th>位</th>
     <th>B,W,L,F</th>
     <th>L,F</th>
   </tr>
@@ -48,7 +48,7 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
     <td>X</td>
     <td>X</td>
     <td>X</td>
-    <td>X</td>
+<td>X</td>
     <td>X</td>
     <td></td>
     <td>X</td>
@@ -61,8 +61,8 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 
 <br>
 
-### Example of use
+### 使用示例
 
-If the internal state relay M18 is in the ON state, the timer relay of T28 will be cleared to -1.
+如果内部状态继电器 M18 处于开启状态，则 T28 的定时器继电器将被重置为 -1。
 
 ![](../_assets/res.png)

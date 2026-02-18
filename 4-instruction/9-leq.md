@@ -1,13 +1,12 @@
-﻿# 4.9 LEQ (Less Than or Equal): Examining if Less Than or Equal
+# 4.9 LEQ（小于或等于）：检查是否小于或等于
 
-
-### Description
-If the value of "source a" is less than or equal to the value of "source b," the rung will be made active (contact active).
+### 描述
+如果“源 a”的值小于或等于“源 b”的值，则该 rung 将被激活（接触活动）。
 
 <br>
 
-### Types that can be used as an operand
-(not possible for X)
+### 可用作操作数的类型
+（对 X 不可能）
 <style type="text/css">
 table  {border-collapse:collapse;}
 th {background-color:#efefef; border-style:solid;border-width:1px;color:black;text-align:center;}
@@ -18,26 +17,26 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 <table>
 <thead>
   <tr>
-    <th>relay type</th>
-    <th colspan="2">input<br>X, DO</th>
-    <th colspan="2">output<br>Y, DI, R, K</th>
-    <th colspan="2">memory<br>M, S</th>
-    <th>const.<br>32bit</th>
+    <th>继电器类型</th>
+    <th colspan="2">输入<br>X, DO</th>
+    <th colspan="2">输出<br>Y, DI, R, K</th>
+    <th colspan="2">内存<br>M, S</th>
+    <th>常量<br>32位</th>
   </tr>
   <tr>
-    <th>data type</th>
-    <th>bit</th>
+    <th>数据类型</th>
+    <th>位</th>
     <th>B,W,L,F</th>
-    <th>bit</th>
+    <th>位</th>
     <th>B,W,L,F</th>
-    <th>bit</th>
+    <th>位</th>
     <th>B,W,L,F</th>
     <th>L,F</th>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td class='hd'>source a</td>
+    <td class='hd'>源 a</td>
     <td>X</td>
     <td></td>
     <td>X</td>
@@ -48,8 +47,8 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
   </tr>
 </tbody>
 <tbody>
-  <tr>
-    <td class='hd'>source b</td>
+<tr>
+    <td class='hd'>源 b</td>
     <td>X</td>
     <td></td>
     <td>X</td>
@@ -63,8 +62,8 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 
 <br>
 
-### Example of use
+### 使用示例
 
-If the value of the input XB9 is less than or equal to 90, the output Y11 will be switched on. If it is greather than 90, the output will be switched off.
+如果输入 XB9 的值小于或等于 90，则输出 Y11 将被打开。如果大于 90，输出将被关闭。
 
 ![](../_assets/leq.png)

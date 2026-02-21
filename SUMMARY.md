@@ -1,7 +1,7 @@
 ﻿# Table of contents
 
-          * [${cont_model} 控制器功能手册 - 嵌入式可编程逻辑控制器 (PLC)](README.md)
-          * [注意事项](0-about-this-manual/precautions.md)
+* [${cont_model} 控制器功能手册 - 嵌入式可编程逻辑控制器 (PLC)](README.md)
+* [注意事项](0-about-this-manual/precautions.md)
 * [1. 概述](1-intro/README.md)
   * [1.1 梯形逻辑](1-intro/1-ladder-logic.md)
 * [2. 设置控制器](2-rc-setting/README.md)

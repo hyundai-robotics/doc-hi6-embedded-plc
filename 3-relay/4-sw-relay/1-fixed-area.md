@@ -207,7 +207,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	<tr class='grayed'><td>-</td><td>-</td><td>-</td></tr>
 	<tr>
 		<td>SW44</td>
-		<td>수동속도</td>
+		<td>스텝 전/후진시 최고속</td>
 		<td>mm/s</td>
 	</tr>
 	<tr>

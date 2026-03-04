@@ -77,8 +77,6 @@ ex 1) 재생속도 설정
 
 ![](../../_assets/playback_speed.png)
 
-
-<br>
 <br>
 ex 2) 툴번호 변경
 <table class="tg">
@@ -107,3 +105,32 @@ ex 2) 툴번호 변경
 </table>
 
 ![](../../_assets/tool_change.png)
+
+<br>
+ex 3) 스텝 전/후진시 최고속 변경
+<table class="tg">
+<thead>
+	<tr>
+		<th>S offset</th>
+		<th>field</th>
+		<th>description</th>
+		<th>type</th>
+	</tr>
+</thead>
+<tbody>
+	<tr>
+		<td>2</td>
+		<td>param 1</td>
+		<td>44 = 스텝 전/후진시 최고속</td>
+		<td>s2</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td>param 1</td>
+		<td>value</td>
+		<td>s2</td>
+	</tr>
+</tbody>
+</table>
+
+![](../../_assets/manual_speed.png)

@@ -78,7 +78,6 @@ ex 1) Playback speed setting
 ![](../../_assets/playback_speed.png)
 
 <br>
-<br>
 ex 2) Tool number change
 <table class="tg">
 <thead>
@@ -106,3 +105,32 @@ ex 2) Tool number change
 </table>
 
 ![](../../_assets/tool_change.png)
+
+<br>
+ex 3) Step go/back max speed change
+<table class="tg">
+<thead>
+	<tr>
+		<th>S offset</th>
+		<th>field</th>
+		<th>description</th>
+		<th>type</th>
+	</tr>
+</thead>
+<tbody>
+	<tr>
+		<td>2</td>
+		<td>param 1</td>
+		<td>44 = Step go/back max speed</td>
+		<td>s2</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td>param 1</td>
+		<td>value</td>
+		<td>s2</td>
+	</tr>
+</tbody>
+</table>
+
+![](../../_assets/manual_speed.png)

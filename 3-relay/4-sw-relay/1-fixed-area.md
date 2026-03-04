@@ -205,7 +205,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	<tr class='grayed'><td>-</td><td>-</td><td>-</td></tr>
 	<tr>
 		<td>SW44</td>
-		<td>Manual speed</td>
+		<td>Step go/back max speed</td>
 		<td>mm/s</td>
 	</tr>
 	<tr>

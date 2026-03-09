@@ -46,6 +46,7 @@
     * [3.4.18 S 릴레이 - UCRD_INFO](3-relay/4-sw-relay/18-slot-ucrd-info.md)
     * [3.4.19 S 릴레이 - MONOPUMP](3-relay/4-sw-relay/19-slot-monopump.md)
   * [3.5 릴레이 간접 주소 지정](3-relay/5-relative-addr.md)
+  * [3.6 타이머 & 카운더 릴레이](3-relay/6-timer-counter.md)
 
 * [4. 명령 (instruction)](4-instruction/README.md)
   * [4.1 명령어 일람](4-instruction/1-inst-list.md)

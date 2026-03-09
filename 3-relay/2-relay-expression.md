@@ -20,7 +20,7 @@ The size of one fieldbus block is 120 bytes (=960 bits) for the input and output
 
 
 * relay-type  
-There are 10 different types, as shown below.
+There are 12 different types, as shown below.
 Each will be explained in detail later.
 
   1) Digital Input (DI): This is a logical input signal that can be used in HRScript or for assigning various inputs.
@@ -39,10 +39,13 @@ Each will be explained in detail later.
 
   8) System (S): This is used to read or write system values in the controller. Refer to [3.4 S relay](./4-sw-relay/README.md).
 
-  9) AuxiliaRy (R): This is an auxiliary relay for temporarily storing the Obsolete. value and is provided for the convenience of porting the Hi5a ladder file. It is recommended to use the M relay in new ladder files.
+  9) AuxiliaRy (R): This is an auxiliary relay for temporarily storing.
 
-  10) Keep (K): This is an auxiliary relay for temporarily storing the Obsolete. value. The value will be stored even when the power is turned off. This is provided for the convenience of porting the Hi5a ladder file. It is recommended to use the M relay in new ladder files.
+  10) Keep (K): This is an auxiliary relay for temporarily storing. The value will be stored even when the power is turned off. 
 
+  11) Timer (T): Relays for timer operation, the contact is On when the value is 0. 
+
+  12) Counter (C): Relays for counter operation, the contact is On when the value is 0. 
 
     | ** Relay name** | ** Number of points ** | ** Relay (bit) ** |** Relay (byte) ** |
     | :--- | :--- | :--- | :--- |
@@ -56,6 +59,8 @@ Each will be explained in detail later.
     | S | 160000 bits (20000 bytes) | S0-S159999 | SB0-SB19999 |
     | R | 960 bits (128 bytes) | R0-R959 | RB0-RB127 |
     | K | 960 bits (128 bytes) | K0-K959 | KB0-KB127 |
+    | T | 256 DWORD (1024 bytes) | T0-T255 | - |
+    | C | 256 DWORD (1024 bytes) | C0-C255 | - |
 
 * data-type  
 There are five different types, as shown below.

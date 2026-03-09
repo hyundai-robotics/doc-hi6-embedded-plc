@@ -46,6 +46,7 @@
     * [3.4.18 S Relay - UCRD_INFO](3-relay/4-sw-relay/18-slot-ucrd-info.md)
     * [3.4.19 S Relay - MONOPUMP](3-relay/4-sw-relay/19-slot-monopump.md)
   * [3.5 Designating Indirect Addresses for Relays](3-relay/5-relative-addr.md)
+  * [3.6 Timer & Counter relay](3-relay/6-timer-counter.md)
 
 * [4. Instructions](4-instruction/README.md)
   * [4.1 List of instructions](4-instruction/1-inst-list.md)

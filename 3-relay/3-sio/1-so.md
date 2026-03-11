@@ -18,7 +18,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 
 <tbody>
 	<tr>
-		<td rowspan=32>BD630</td>
+		<td rowspan=15>BD630</td>
 		<td rowspan=4>sob0</td>
 		<td>so0</td>
 		<td>모터 ON(TP)</td>
@@ -85,7 +85,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 
 <tbody>
 	<tr>
-		<td rowspan=32>BD640 - 1</td>
+		<td rowspan=19>BD640 - 1</td>
 		<td rowspan=8>sob4</td>
 		<td>so32</td>
 		<td>브레이크제어 1</td>
@@ -161,7 +161,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>사용자 8 (BD640T)</td>
 	</tr>
 	<tr>
-		<td rowspan=1>sob7</td>
+		<td>sob7</td>
 		<td>so56</td>
 		<td>자기진단 완료</td>
 	</tr>
@@ -169,7 +169,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 
 <tbody>
 	<tr>
-		<td rowspan=32>BD640 - 2</td>
+		<td rowspan=19>BD640 - 2</td>
 		<td rowspan=8>sob8</td>
 		<td>so64</td>
 		<td>브레이크제어 1</td>
@@ -245,7 +245,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>사용자 8 (BD640T)</td>
 	</tr>
 	<tr>
-		<td rowspan=1>sob11</td>
+		<td>sob11</td>
 		<td>so88</td>
 		<td>자기진단 완료</td>
 	</tr>
@@ -329,7 +329,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>사용자 8 (BD640T)</td>
 	</tr>
 	<tr>
-		<td rowspan=1>sob15</td>
+		<td>sob15</td>
 		<td>so120</td>
 		<td>자기진단 완료</td>
 	</tr>
@@ -337,7 +337,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 
 <tbody>
 	<tr>
-		<td rowspan=32>BD640 - 4</td>
+		<td rowspan=19>BD640 - 4</td>
 		<td rowspan=8>sob16</td>
 		<td>so128</td>
 		<td>브레이크제어 1</td>
@@ -413,15 +413,12 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>사용자 8 (BD640T)</td>
 	</tr>
 	<tr>
-		<td rowspan=1>sob19</td>
+		<td>sob19</td>
 		<td>so152</td>
 		<td>자기진단 완료</td>
 	</tr>
-</tbody>
-
-<tbody>
 	<tr>
-		<td rowspan=32>BD640T 컨베이어</td>
+		<td rowspan=4>BD640T 컨베이어</td>
 		<td rowspan=4>sob20</td>
 		<td>so160</td>
 		<td>ch1 - 펄스 카운팅 타입 (0=up, 1=up/down)</td>

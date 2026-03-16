@@ -5,7 +5,7 @@
 [__SOURCE](0-about-this-manual/precautions.md)
 # 사전 주의사항
 
-{% include url="https://hrcontentsrelay-bmgae5hdbzapc4bc.koreacentral-01.azurewebsites.net/api/proxy?path=doc-common-pages/ko/precautions.md" %}
+{% include file="ko/precautions.md" %}
 
 [__SOURCE](1-intro/README.md)
 # 1. 개요
@@ -794,7 +794,13 @@ td {
 
 <style type="text/css">
 table  {border-collapse:collapse;}
-td {border-color:gray;border-style:solid;border-width:1px;}
+td {
+	border-color:gray;
+	border-style:solid;
+	border-width:1px;
+	padding: 1px 4px;
+	height: auto !important;
+}
 .grayed {background-color:lightgray;}
 </style>
 
@@ -1369,12 +1375,12 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td rowspan=32>BD640T 컨베이어</td>
 		<td rowspan=1>sib42<br>sib43</td>
 		<td></td>
-		<td>ch1 - 펄스 카운터 (16bit)</td>
+		<td>ch1 - 펄스 카운터<br>(16bit)</td>
 	</tr>
 	<tr>
 		<td rowspan=1>sib44<br>sib45</td>
 		<td></td>
-		<td>ch2 - 펄스 카운터 (16bit)</td>
+		<td>ch2 - 펄스 카운터<br>(16bit)</td>
 	</tr>
 	<tr>
 		<td rowspan=4>sib46</td>
@@ -1428,12 +1434,10 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	</tr>
 </table>
 
-<br>
-
 #### 고정 영역 (fixed area)
 자주 사용되는 기본적인 항목들이 미리 정해진 주소로 배치되어 있습니다. 설정을 통한 항목 변경과 배치가 불가능합니다. 다음 절에서 고정영역의 맵이 설명됩니다.
 
-<br>
+<div class="page-break"></div>
 
 #### 선택 항목 영역 (optional items area)
 20byte 크기의 slot들 900개로 구성되어 있습니다. 각 slot은 선두 word에 어떤 command 값을 넣느냐에 따라 구성이 결정됩니다. 각 command별 맵이 이어지는 절에서 설명됩니다.
@@ -1524,16 +1528,25 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	</tr>
 </tbody>
 </table>
+
+<div class="page-break"></div>
 [__SOURCE](3-relay/4-sw-relay/1-fixed-area.md)
 # 3.4.1 S 릴레이 - 고정영역
 
 항목이 고정 제공되는 SB0 ~ SB1999 영역은 아래 표를 참고하십시오.
 
 <style type="text/css">
-table  {border-collapse:collapse;}
-td {border-color:gray;border-style:solid;border-width:1px;}
+table  {
+	border-collapse:collapse;
+}
+td {
+	border-color:gray;
+	border-style:solid;
+	border-width:1px;
+	padding: 1px 4px;
+	height: auto !important;
+}
 .grayed {background-color:lightgray;}
-.bit { width: 10%; }
 </style>
 
 ### 특수 플래그 (special flags) 영역
@@ -1569,7 +1582,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	<tr>
 		<td>SB1</td>
 		<td class='grayed'></td>
-		<td>Label이 0이하, Jump할 Label이 없을때 on</td>
+		<td>Label이 0이하, <br>Jump할 Label이 없을때 on</td>
 		<td>Label이 중복될때 on</td>
 		<td>Label이 100개 이상일때 on</td>
 		<td>Label이 상수가 아닐때 on</td>
@@ -1605,25 +1618,23 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 </tbody>
 </table>
 
-<br>
+<div class="page-break"></div>
 
 ### 기본 정보 (basic information) 영역
-
 <table class="tg">
 <thead>
 	<tr>
 		<th>릴레이</th>
-		<th>설명</th>
-		<th>비고</th>
+        <th>설명</th>
+        <th>비고</th>
 	</tr>
 </thead>
-
 <tbody>
 	<tr>
 		<td>SB4</th>
-		<td>PLC실행모드<br>
-		(0=stop, 1=R.stop, 2=R.run, 3= run, 4=off, 5=프로그램 없음)</td>
-		<td></td>
+		<td>PLC실행모드</td>
+		<td>0=stop, 1=R.stop, 2=R.run,<br> 
+		3= run, 4=off, 5=프로그램 없음</td>
 	</tr>
 	<tr class='grayed'><td>-</td><td>-</td><td>-</td></tr>
 	<tr>
@@ -1659,18 +1670,17 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	<tr>
 		<td>SB14</td>
 		<td>소프트웨어 버전 : first<br>
-		e.g. V60.05-08인 경우, SB14:60, SB15:5, SB16:8</td>
-		<td></td>
+		<td>e.g. V60.05-08인 경우, 60</td>
 	</tr>
 	<tr>
 		<td>SB15</td>
 		<td>소프트웨어 버전 : second</td>
-		<td></td>
+		<td>e.g. V60.05-08인 경우, 5</td>
 	</tr>
 	<tr>
 		<td>SB16</td>
 		<td>소프트웨어 버전 : small-fix</td>
-		<td></td>
+		<td>e.g. V60.05-08인 경우, 8</td>
 	</tr>
 	<tr class='grayed'><td>-</td><td>-</td><td>-</td></tr>
 	<tr>
@@ -1723,8 +1733,8 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	</tr>
 	<tr>
 		<td>SB41</td>
-		<td>로봇 상태 (0=stop, 1=run, 2=wait)</td>
-		<td></td>
+		<td>로봇 상태</td>
+		<td>0=stop, 1=run, 2=wait</td>
 	</tr>
 	<tr>
 		<td>SB42</td>
@@ -1753,6 +1763,12 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td></td>
 	</tr>
 	<tr class='grayed'><td>-</td><td>-</td><td>-</td></tr>
+</tbody>
+</table>
+
+<div class="page-break"></div>
+<table class="tg">
+<tbody>
 	<tr>
 		<td>SW62</td>
 		<td>간접주소지정 (relay-2)</td>
@@ -1809,9 +1825,10 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	<tr class='grayed'><td>-</td><td>-</td><td>-</td></tr>
 	<tr>
 		<td>SB111</td>
-		<td>가동시간 선택<br>
-		(1=통산(초기화 후), 2=통산(전원투입 후), 3=마지막사이클, 4=현재사이클</td>
-		<td></td>
+		<td>가동시간 선택</td>
+		<td>1=통산(초기화 후),<br>
+			2=통산(전원투입 후),<br>
+		 	3=마지막사이클, 4=현재사이클</td>
 	</tr>
 	<tr>
 		<td>SL112</td>
@@ -1869,13 +1886,25 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td></td>
 	</tr>
 	<tr class='grayed'><td>-</td><td>-</td><td>-</td></tr>
+</tbody>
+</table>
+
+<div class="page-break"></div>
+<table class="tg">
+<tbody>
 	<tr>
 		<td>SB159</td>
-		<td>축정보 선택<br>
-		1=현재위치(축각도), 2=현재위치(베이스좌표), 3=현재위치(베이스좌표/User좌표),<br> 6=축속도, 7=모터속도, <br>
-		 10=부하율(I/Ir), 11=부하율(I/Ip), 13=부하율(연속),<br> 15=엔코더온도<br>
-		 18=축별누적거리</td>
-		<td></td>
+		<td>축정보 선택</td>
+		<td>1=현재위치(축각도),<br>
+			2=현재위치(베이스좌표),<br>
+			3=현재위치(베이스좌표/User좌표),<br>
+			6=축속도, <br>
+			7=모터속도, <br>
+			10=부하율(I/Ir), <br>
+			11=부하율(I/Ip), <br>
+			13=부하율(연속),<br>
+			 15=엔코더온도<br>
+			18=축별누적거리</td>
 	</tr>
 	<tr>
 		<td>SF160</td>
@@ -1930,7 +1959,8 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	<tr class='grayed'><td>-</td><td>-</td><td>-</td></tr>
 	<tr>
 		<td>SL200</td>
-		<td>각 축별 제어상태 (0=off, 1=on)</td>
+		<td>각 축별 제어상태<br>
+		(0=off, 1=on)</td>
 		<td></td>
 	</tr>
 	<tr class='grayed'><td>-</td><td>-</td><td>-</td></tr>
@@ -1938,37 +1968,47 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>SW210</br>
 		...</br>
 		SW280</td>
-		<td>프로그램 번호</br>
-		(main task = sw210, subtask 1 = sw220, subtask 2 = sw230, subtask 3 = sw240,</br>
-		subtask 4 = sw250, subtask 5 = sw260, subtask 6 = sw270, subtask 7 = sw280)</td>
-		<td></td>
+		<td>프로그램 번호
+		<td>(main task = sw210, subtask 1 = sw220,<br>
+		subtask 2 = sw230, subtask 3 = sw240,<br>
+		subtask 4 = sw250, subtask 5 = sw260,<br>
+		subtask 6 = sw270, subtask 7 = sw280)</td>
 	</tr>
 	<tr>
 		<td>SW212</br>
 		...</br>
 		SW282</td>
-		<td>스텝 번호</br>
-		(main task = sw212, subtask 1 = sw222, subtask 2 = sw232, subtask 3 = sw242,</br>
-		subtask 4 = sw252, subtask 5 = sw262, subtask 6 = sw272, subtask 7 = sw282)</td>
-		<td></td>
+		<td>스텝 번호</td>
+		<td>(main task = sw212, subtask 1 = sw222,<br>
+		subtask 2 = sw232, subtask 3 = sw242,<br>
+		subtask 4 = sw252, subtask 5 = sw262,<br>
+		subtask 6 = sw272, subtask 7 = sw282)</td></td>
 	</tr>
+</tbody>
+</table>
+
+<div class="page-break"></div>
+<table class="tg">
+<tbody>
 	<tr>
 		<td>SW214</br>
 		...</br>
 		SW284</td>
-		<td>펑션 번호</br>
-		(main task = sw214, subtask 1 = sw224, subtask 2 = sw234, subtask 3 = sw244,</br>
-		subtask 4 = sw254, subtask 5 = sw264, subtask 6 = sw274, subtask 7 = sw284)</td>
-		<td></td>
+		<td>펑션 번호</td>
+		<td>(main task = sw214, subtask 1 = sw224,<br>
+		 subtask 2 = sw234, subtask 3 = sw244,<br>
+		subtask 4 = sw254, subtask 5 = sw264,<br>
+		subtask 6 = sw274, subtask 7 = sw284)</td>
 	</tr>
 	<tr>
 		<td>SW216</br>
 		...</br>
 		SW286</td>
-		<td>메인 프로그램 번호</br>
-		(main task = sw216, subtask 1 = sw226, subtask 2 = sw236, subtask 3 = sw246,</br>
-		subtask 4 = sw256, subtask 5 = sw266, subtask 6 = sw276, subtask 7 = sw286)</td>
-		<td></td>
+		<td>메인 프로그램 번호</td>
+		<td>(main task = sw216, subtask 1 = sw226,<br>
+		 subtask 2 = sw236, subtask 3 = sw246,<br>
+		subtask 4 = sw256, subtask 5 = sw266,<br>
+		subtask 6 = sw276, subtask 7 = sw286)</td>
 	</tr>
 	<tr class='grayed'><td>-</td><td>-</td><td>-</td></tr>
 	<tr>
@@ -2003,6 +2043,9 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	</tr>
 </tbody>
 </table>
+
+<div class="page-break"></div>
+
 [__SOURCE](3-relay/4-sw-relay/2-slot-task-info.md)
 # 3.4.2 S 릴레이 - TASK_INFO
 
@@ -2125,12 +2168,21 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	</tr>
 </tbody>
 </table>
+
+<div class="page-break"></div>
+
 [__SOURCE](3-relay/4-sw-relay/4-slot-axis-info.md)
 # 3.4.4 S 릴레이 - AXIS_INFO
 
 <style type="text/css">
 table  {border-collapse:collapse;}
-td {border-color:gray;border-style:solid;border-width:1px;}
+td {
+	border-color:gray;
+	border-style:solid;
+	border-width:1px;
+	padding: 1px 4px;
+	height: auto !important;
+}
 .grayed {background-color:lightgray;}
 </style>
 
@@ -2154,9 +2206,15 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	<tr>
 		<td>2</td>
 		<td>param. 1</td>
-		<td>type<br>1 = 현재위치(축각도), 2 = 현재위치(베이스좌표), 3 = 현재위치(베이스좌표/User좌표), <br> 6 = 축속도,
-7 = 모터속도, 8 = 부가축 속도제어시 모터속도(rpm) 지령값, <br> 10 = 부하율(I/Ir), 11 = 부하율(I/Ip), 12 = 부하율(연속), <br>
-15 = 엔코더(온도), <br> 18 = 축별누적거리</td>
+		<td>type<br>
+			1 = 현재위치(축각도), 2 = 현재위치(베이스좌표), 3 = 현재위치(베이스좌표/User좌표), <br>
+			6 = 축속도, 7 = 모터속도, <br>
+			8 = 부가축 속도제어시 모터속도(rpm) 지령값, <br>
+			10 = 부하율(I/Ir),  <br>
+			11 = 부하율(I/Ip), <br>
+			12 = 부하율(연속), <br>
+			15 = 엔코더(온도), <br>
+			18 = 축별누적거리</td>
 		<td>s2</td>
 	</tr>
 	<tr>
@@ -2249,6 +2307,8 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	</tr>
 </tbody>
 </table>
+
+<div class="page-break"></div>
 
 [__SOURCE](3-relay/4-sw-relay/5-slot-tp-keypad.md)
 # 3.4.5 S 릴레이 - TP_KEYPAD
@@ -2478,6 +2538,8 @@ V60.30-07부터 지원.
 </tbody>
 </table>
 
+<div class="page-break"></div>
+
 [__SOURCE](3-relay/4-sw-relay/6-slot-tp-app.md)
 # 3.4.6 S 릴레이 - TP_APP
 
@@ -2532,6 +2594,9 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	</tr>
 </tbody>
 </table>
+  
+<div class="page-break"></div>
+  
 [__SOURCE](3-relay/4-sw-relay/7-slot-date-time.md)
 # 3.4.7 S 릴레이 - DATE_TIME
 
@@ -2591,6 +2656,9 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	</tr>
 </tbody>
 </table>
+  
+<div class="page-break"></div>
+
 [__SOURCE](3-relay/4-sw-relay/8-slot-cur-spotgun-no.md)
 # 3.4.8 S 릴레이 - CUR_SPOTGUN_NO
 
@@ -2686,6 +2754,9 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	</tr>
 </tbody>
 </table>
+  
+<div class="page-break"></div>
+
 [__SOURCE](3-relay/4-sw-relay/9-slot-spotweld-info.md)
 # 3.4.9 S 릴레이 - SPOTWELD_INFO
 
@@ -2752,6 +2823,9 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	</tr>
 </tbody>
 </table>
+  
+<div class="page-break"></div>
+
 [__SOURCE](3-relay/4-sw-relay/10-slot-arcweld-info.md)
 # 3.4.10 S 릴레이 - ARCWELD_INFO
 
@@ -2815,6 +2889,9 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 </table>
 
 <br>
+  
+<div class="page-break"></div>
+
 하기의 서비스는 V60.32-00 이후부터 지원합니다.
 <br>
 <table class="tg">
@@ -2925,6 +3002,9 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 </table>
 
 <br>
+  
+<div class="page-break"></div>
+
 <table class="tg">
 <thead>
 	<tr>
@@ -2986,6 +3066,9 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 </table>
 
 <br>
+  
+<div class="page-break"></div>
+
 <table class="tg">
 <thead>
 	<tr>
@@ -3045,6 +3128,9 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 </table>
 
 <br>
+  
+<div class="page-break"></div>
+
 <table class="tg">
 <thead>
 	<tr>
@@ -3099,6 +3185,9 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 </table>
 
 <br>
+  
+<div class="page-break"></div>
+
 <table class="tg">
 <thead>
 	<tr>
@@ -3158,6 +3247,9 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 </table>
 
 <br>
+
+<div class="page-break"></div>
+
 <table class="tg">
 <thead>
 	<tr>
@@ -3228,6 +3320,8 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 </table>
 
 <br>
+  
+<div class="page-break"></div>
 
 <table class="tg">
 <thead>
@@ -3286,6 +3380,8 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	</tr>
 </tbody>
 </table>
+  
+<div class="page-break"></div>
 
 [__SOURCE](3-relay/4-sw-relay/11-slot-conveyor-info.md)
 # 3.4.11 S 릴레이 - CONVEYOR_INFO
@@ -3479,6 +3575,8 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	</tr>
 </tbody>
 </table>
+  
+<div class="page-break"></div>
 
 [__SOURCE](3-relay/4-sw-relay/12-slot-sys-var.md)
 # 3.4.12 S 릴레이 - SYSTEM_VARIABLE
@@ -3617,6 +3715,8 @@ ex 3) 스텝 전/후진시 최고속 변경
 </table>
 
 ![](../../_assets/manual_speed.png)
+  
+<div class="page-break"></div>
 
 [__SOURCE](3-relay/4-sw-relay/13-slot-hw-info.md)
 # 3.4.13 S 릴레이 - HW_INFO
@@ -3662,6 +3762,9 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	</tr>
 </tbody>
 </table>
+  
+<div class="page-break"></div>
+
 [__SOURCE](3-relay/4-sw-relay/14-slot-cifx-info/README.md)
 # 3.4.14 S 릴레이 - CIFX 산업용 통신 릴레이
 
@@ -3677,6 +3780,8 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 * command 1014: EtherNet/IP Master
 * command 1016: Profinet IO Master
 * command 1018: EtherCAT Master
+  
+<div class="page-break"></div>
 
 [__SOURCE](3-relay/4-sw-relay/14-slot-cifx-info/1-slot-common-info.md)
 # 3.4.14.1 S 릴레이 - CIFX 산업용 통신 상태 릴레이 (공통)
@@ -3777,7 +3882,8 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 </table>
 
 
-<br>
+<div class="page-break"></div>
+
 
 
 <table class="tg">
@@ -3885,7 +3991,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 </table>
 
 
-<br>
+<div class="page-break"></div>
 
 
 <table class="tg">
@@ -3938,7 +4044,8 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 </tbody>
 </table>
 
-<br>
+<div class="page-break"></div>
+
 
 #### 산업용 통신 상태 (Master Only) 영역
 
@@ -4012,7 +4119,8 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 </tbody>
 </table>
 
-<br>
+<div class="page-break"></div>
+
 
 <table class="tg">
 <thead>
@@ -4069,6 +4177,9 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	</tr>
 </tbody>
 </table>	
+  
+<div class="page-break"></div>
+  
 [__SOURCE](3-relay/4-sw-relay/14-slot-cifx-info/2-slot-common-control.md)
 # 3.4.14.2 S 릴레이 - CIFX 산업용 통신 제어 릴레이 (공통)
 
@@ -4171,6 +4282,8 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	</tr>
 </tbody>
 </table>
+  
+<div class="page-break"></div>
 [__SOURCE](3-relay/4-sw-relay/14-slot-cifx-info/3-slot-profibus-dp-info.md)
 # 3.4.14.3 S 릴레이 - Profibus-DP Master 상태 릴레이
 
@@ -4285,7 +4398,8 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 {% endhint %}
 
 <br>
-
+  
+<div class="page-break"></div>
 
 <table class="tg">
 <thead>
@@ -4511,6 +4625,8 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 
 
 <br>
+  
+<div class="page-break"></div>
 
 <table class="tg">
 <thead>
@@ -4736,6 +4852,8 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 
 
 <br>
+  
+<div class="page-break"></div>
 
 <table class="tg">
 <thead>
@@ -4961,6 +5079,8 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 
 
 <br>
+  
+<div class="page-break"></div>
 
 <table class="tg">
 <thead>
@@ -5186,6 +5306,8 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 
 
 <br>
+  
+<div class="page-break"></div>
 
 <table class="tg">
 <thead>
@@ -5411,6 +5533,8 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 
 
 <br>
+  
+<div class="page-break"></div>
 
 <table class="tg">
 <thead>
@@ -5636,6 +5760,8 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 
 
 <br>
+  
+<div class="page-break"></div>
 
 <table class="tg">
 <thead>
@@ -5978,7 +6104,8 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 {% endhint %}
 
 <br>
-
+  
+<div class="page-break"></div>
 
 <table class="tg">
 <thead>
@@ -6206,6 +6333,8 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 
 
 <br>
+  
+<div class="page-break"></div>
 
 <table class="tg">
 <thead>
@@ -6433,6 +6562,8 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 
 
 <br>
+  
+<div class="page-break"></div>
 
 <table class="tg">
 <thead>
@@ -6576,6 +6707,8 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 
 
 <br>
+  
+<div class="page-break"></div>
 
 <table class="tg">
 <thead>
@@ -6719,6 +6852,8 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 
 
 <br>
+  
+<div class="page-break"></div>
 
 <table class="tg">
 <thead>
@@ -6862,6 +6997,8 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 
 
 <br>
+  
+<div class="page-break"></div>
 
 <table class="tg">
 <thead>
@@ -7002,6 +7139,9 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	</tr>
 </tbody>
 </table>
+  
+<div class="page-break"></div>
+  
 [__SOURCE](3-relay/4-sw-relay/14-slot-cifx-info/5-slot-ethernet-ip-info.md)
 # 3.4.14.5 S 릴레이 - EtherNet/IP Master 상태 릴레이
 
@@ -7221,7 +7361,8 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 {% endhint %}
 
 <br>
-
+  
+<div class="page-break"></div>
 
 <table class="tg">
 <thead>
@@ -7447,7 +7588,9 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 
 
 <br>
-
+  
+<div class="page-break"></div>
+  
 <table class="tg">
 <thead>
 	<tr>
@@ -7672,6 +7815,8 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 
 
 <br>
+  
+<div class="page-break"></div>
 
 <table class="tg">
 <thead>
@@ -7894,6 +8039,9 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	</tr>
 </tbody>
 </table>
+
+  
+<div class="page-break"></div>
 [__SOURCE](3-relay/4-sw-relay/14-slot-cifx-info/6-slot-profinet-io-info.md)
 # 3.4.14.6 S 릴레이 - Profinet IO Master 상태 릴레이
 
@@ -7914,7 +8062,9 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 {% endhint %}
 
 <br>
-
+  
+<div class="page-break"></div>
+  
 <table class="tg">
 <thead>
 	<tr>
@@ -8139,7 +8289,9 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 
 
 <br>
-
+  
+<div class="page-break"></div>
+  
 <table class="tg">
 <thead>
 	<tr>
@@ -8364,7 +8516,9 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 
 
 <br>
-
+  
+<div class="page-break"></div> 
+  
 <table class="tg">
 <thead>
 	<tr>
@@ -8586,6 +8740,9 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	</tr>
 </tbody>
 </table>
+
+  
+<div class="page-break"></div>
 [__SOURCE](3-relay/4-sw-relay/14-slot-cifx-info/7-slot-ethercat-info.md)
 # 3.4.14.7 S 릴레이 - EtherCAT Master 상태 릴레이
 
@@ -8831,7 +8988,9 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 
 
 <br>
-
+  
+<div class="page-break"></div>
+  
 <table class="tg">
 <thead>
 	<tr>
@@ -9056,7 +9215,9 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 
 
 <br>
-
+  
+<div class="page-break"></div>
+  
 <table class="tg">
 <thead>
 	<tr>
@@ -9278,6 +9439,9 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	</tr>
 </tbody>
 </table>
+
+  
+<div class="page-break"></div>
 [__SOURCE](3-relay/4-sw-relay/15-slot-ip-info.md)
 # 3.4.15 S 릴레이 - IP_INFO
 
@@ -9333,6 +9497,9 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	</tr>
 </tbody>
 </table>
+
+  
+<div class="page-break"></div>
 [__SOURCE](3-relay/4-sw-relay/16-slot-mech-info.md)
 # 3.4.16 S 릴레이 - MECH_INFO
 
@@ -9388,6 +9555,8 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 </tbody>
 </table>
 
+  
+<div class="page-break"></div>
 [__SOURCE](3-relay/4-sw-relay/17-slot-tool-info.md)
 # 3.4.17 S 릴레이 - TOOL_INFO
 
@@ -9452,6 +9621,8 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	</tr>
 </tbody>
 </table>
+  
+<div class="page-break"></div>
 
 [__SOURCE](3-relay/4-sw-relay/18-slot-ucrd-info.md)
 # 3.4.18 S 릴레이 - UCRD_INFO
@@ -9511,7 +9682,8 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	</tr>
 </tbody>
 </table>
-
+  
+<div class="page-break"></div>
 [__SOURCE](3-relay/4-sw-relay/19-slot-monopump.md)
 # 3.4.19 S 릴레이 - MONOPUMP
 
@@ -11320,6 +11492,7 @@ Rung이 활성이면, 타이머(T)나 카운터(C) 릴레이 값을 클리어(-1
 
 ### 오퍼랜드로 사용할 수 있는 type
 (X는 불가)
+  
 <style type="text/css">
 table  {border-collapse:collapse;}
 th {background-color:#efefef; border-style:solid;border-width:1px;color:black;text-align:center;}

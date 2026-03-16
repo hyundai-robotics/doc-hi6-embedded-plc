@@ -96,7 +96,8 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 </table>
 
 
-<br>
+<div class="page-break"></div>
+
 
 
 <table class="tg">
@@ -204,7 +205,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 </table>
 
 
-<br>
+<div class="page-break"></div>
 
 
 <table class="tg">
@@ -257,7 +258,8 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 </tbody>
 </table>
 
-<br>
+<div class="page-break"></div>
+
 
 #### 산업용 통신 상태 (Master Only) 영역
 
@@ -331,7 +333,8 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 </tbody>
 </table>
 
-<br>
+<div class="page-break"></div>
+
 
 <table class="tg">
 <thead>
@@ -388,3 +391,6 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	</tr>
 </tbody>
 </table>	
+  
+<div class="page-break"></div>
+  

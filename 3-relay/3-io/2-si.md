@@ -2,7 +2,13 @@
 
 <style type="text/css">
 table  {border-collapse:collapse;}
-td {border-color:gray;border-style:solid;border-width:1px;}
+td {
+	border-color:gray;
+	border-style:solid;
+	border-width:1px;
+	padding: 1px 4px;
+	height: auto !important;
+}
 .grayed {background-color:lightgray;}
 </style>
 

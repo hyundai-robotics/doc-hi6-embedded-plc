@@ -8,6 +8,7 @@ Rung이 활성이면, 타이머(T)나 카운터(C) 릴레이 값을 클리어(-1
 
 ### 오퍼랜드로 사용할 수 있는 type
 (X는 불가)
+  
 <style type="text/css">
 table  {border-collapse:collapse;}
 th {background-color:#efefef; border-style:solid;border-width:1px;color:black;text-align:center;}

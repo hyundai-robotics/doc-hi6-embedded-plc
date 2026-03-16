@@ -577,12 +577,12 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td rowspan=32>BD640T 컨베이어</td>
 		<td rowspan=1>sib42<br>sib43</td>
 		<td></td>
-		<td>ch1 - 펄스 카운터 (16bit)</td>
+		<td>ch1 - 펄스 카운터<br>(16bit)</td>
 	</tr>
 	<tr>
 		<td rowspan=1>sib44<br>sib45</td>
 		<td></td>
-		<td>ch2 - 펄스 카운터 (16bit)</td>
+		<td>ch2 - 펄스 카운터<br>(16bit)</td>
 	</tr>
 	<tr>
 		<td rowspan=4>sib46</td>

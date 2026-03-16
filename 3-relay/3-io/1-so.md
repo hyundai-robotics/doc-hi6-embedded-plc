@@ -2,7 +2,13 @@
 
 <style type="text/css">
 table  {border-collapse:collapse;}
-td {border-color:gray;border-style:solid;border-width:1px;}
+td {
+	border-color:gray;
+	border-style:solid;
+	border-width:1px;
+	padding: 1px 4px;
+	height: auto !important;
+}
 .grayed {background-color:lightgray;}
 </style>
 
@@ -436,5 +442,6 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>ch2- 통신방식 (0=라인드라이브, 1=오픈콜렉터)</td>
 	</tr>
 </tbody>
-
 </table>
+
+<div class="page-break"></div>

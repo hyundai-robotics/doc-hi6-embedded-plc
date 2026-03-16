@@ -191,7 +191,7 @@ ${cont_model} 로봇제어기 내장PLC에서의 릴레이 표기는 아래와 �
 Y1501
 FB3.DIW21
 
-* block-index  
+### block-index  
 입출력 릴레이(DI, DO, X, Y)는 객체명이 FB0 ~ FB9인 10개의 필드버스 블럭(fieldbus block)으로 그룹핑되어 있습니다. 물리적인 입출력의 경우 각 블럭은 각기 개별적인 필드버스 장치에 매핑됩니다.
 하나의 FB의 크기는 입출력 각각 120 바이트(=960 bit)입니다.
 
@@ -199,45 +199,39 @@ FB3.DIW21
 
   [조작설명서: 7.3.2.12 fn 블럭 할당](https://hrbook-hrc.web.app/#/view/doc-hi6-operation/ko-tp630/7-system/3-control-parameter/2-io-signal-setting/12-fn-block?cont_model=${cont_model})
 
-* relay-type  
+### relay-type  
 아래와 같이 총 10가지 type이 있습니다.
 각각의 type은 뒤에서 자세히 설명됩니다.
 
-  1) DI (Digital Input) : HRScript나 각종 입력 할당에서 사용할 수 있는 논리적인 입력(Logical Input) 신호입니다.
+-  DI (Digital Input) : HRScript나 각종 입력 할당에서 사용할 수 있는 논리적인 입력(Logical Input) 신호입니다.
+-  DO (Digital Output) : HRScript나 각종 출력 할당에서 사용할 수 있는 논리적인 출력(Logical Output) 신호입니다.
+-  SI (System Input) : 당사 시스템 보드와 인터페이스 되는 전용입력 신호입니다.
+-  SO (System Output) : 당사 시스템 보드와 인터페이스 되는 전용출력 신호입니다.
+-  X : 필드버스 장치를 통해 제어기 외부로부터 입력되는 물리적인 입력(Physical Input) 신호입니다.
+- Y : 필드버스 장치를 통해 제어기 외부로 출력되는 물리적인 출력(Physical Output) 신호입니다. 
+- M (Memory) : Data를 저장할 때 사용하며, HRScript에서도 access할 수 있습니다.
+- S (System) : 제어기 내의 시스템 값을 읽거나 쓰는 용도입니다. [3.4 S 릴레이](./4-sw-relay/README.md)를 참조하세요.
+- R (auxiliaRy) : 값을 임시로 보관하기 위한 보조 릴레이입니다. 
+- K (Keep) : 값을 임시로 보관하기 위한 보조 릴레이이며 전원을 꺼도 값이 보관됩니다. 
+- T (Timer) : 타이머 동작을 위한 릴레이며, 값이 0일 때 접점이 On됩니다. 
+- C (Counter) : 카운터 동작을 위한 릴레이며, 값이 0일 때 접점이 On 됩니다.  
+  
+|릴레이 명칭|점 수|릴레이(bit)|릴레이(byte)|
+| :--- | :--- | :--- | :--- |
+| DI | 9600 bit (1280 byte) | FB0.DI0 ~ FB9.DI959 | FB0.DIB0 ~ FB9.DIB127 |
+| DO | 9600 bit (1280 byte) | FB0.DO0 ~ FB9.DO959 | FB0.DOB0 ~ FB9.DOB127 |
+| SI | 960 bit (128 byte) | SI0 ~ SI959 | SIB0 ~ SIB127 |
+| SO | 960 bit (128 byte) | SO0 ~ SO959 | SOB0 ~ SOB127 |
+| X | 9600 bit (1280 byte) | FB0.X0 ~ FB9.X959 | FB0.XB0 ~ FB9.XB127 |
+| Y | 9600 bit (1280 byte) | FB0.Y0 ~ FB9.Y959 | FB0.YB0 ~ FB9.YB127 |
+| M | 160000 bit (20000 byte) | M0 ~ M159999 | MB0 ~ MB19999 |
+| S | 160000 bit (20000 byte) | S0 ~ S159999 | SB0 ~ SB19999 |
+| R | 960 bit (128 byte) | R0 ~ R959 | RB0 ~ RB127 |
+| K | 960 bit (128 byte) | K0 ~ K959 | KB0 ~ KB127 |
+| T | 256 DWORD (1024 byte) | T0 ~ T255 | - |
+| C | 256 DWORD (1024 byte) | C0 ~ C255 | - |
 
-  2) DO (Digital Output) : HRScript나 각종 출력 할당에서 사용할 수 있는 논리적인 출력(Logical Output) 신호입니다.
-
-  3) SI (System Input) : 당사 시스템 보드와 인터페이스 되는 전용입력 신호입니다.
-
-  4) SO (System Output) : 당사 시스템 보드와 인터페이스 되는 전용출력 신호입니다.
-
-  5) X : 필드버스 장치를 통해 제어기 외부로부터 입력되는 물리적인 입력(Physical Input) 신호입니다.
-
-  6) Y : 필드버스 장치를 통해 제어기 외부로 출력되는 물리적인 출력(Physical Output) 신호입니다. 
-
-  7) M (Memory) : Data를 저장할 때 사용하며, HRScript에서도 access할 수 있습니다.
-
-  8) S (System) : 제어기 내의 시스템 값을 읽거나 쓰는 용도입니다. [3.4 S 릴레이](./4-sw-relay/README.md)를 참조하세요.
-
-  9) R (auxiliaRy) : Obsolete. 값을 임시로 보관하기 위한 보조 릴레이입니다. Hi5a 래더파일의 이식 편의를 위해 제공됩니다. 신규 래더 파일에서는 M 릴레이 사용을 권장합니다.
-
-  10) K (Keep) : Obsolete. 값을 임시로 보관하기 위한 보조 릴레이이며 전원을 꺼도 값이 보관됩니다. Hi5a 래더파일의 이식 편의를 위해 제공됩니다. 신규 래더 파일에서는 M 릴레이 사용을 권장합니다.
-
-
-    | ** 릴레이 명칭** | ** 점 수 ** | ** 릴레이(bit) ** |** 릴레이(byte) ** |
-    | :--- | :--- | :--- | :--- |
-    | DI | 9600 bit (1280 byte) | FB0.DI0 ~ FB9.DI959 | FB0.DIB0 ~ FB9.DIB127 |
-    | DO | 9600 bit (1280 byte) | FB0.DO0 ~ FB9.DO959 | FB0.DOB0 ~ FB9.DOB127 |
-    | SI | 960 bit (128 byte) | SI0 ~ SI959 | SIB0 ~ SIB127 |
-    | SO | 960 bit (128 byte) | SO0 ~ SO959 | SOB0 ~ SOB127 |
-    | X | 9600 bit (1280 byte) | FB0.X0 ~ FB9.X959 | FB0.XB0 ~ FB9.XB127 |
-    | Y | 9600 bit (1280 byte) | FB0.Y0 ~ FB9.Y959 | FB0.YB0 ~ FB9.YB127 |
-    | M | 160000 bit (20000 byte) | M0 ~ M159999 | MB0 ~ MB19999 |
-    | S | 160000 bit (20000 byte) | S0 ~ S159999 | SB0 ~ SB19999 |
-    | R | 960 bit (128 byte) | R0 ~ R959 | RB0 ~ RB127 |
-    | K | 960 bit (128 byte) | K0 ~ K959 | KB0 ~ KB127 |
-
-* data-type  
+### data-type  
 아래와 같이 5가지 type이 있습니다.
 
   * 표기없음 : 비트 (bit), 1bit
@@ -246,10 +240,7 @@ FB3.DIW21
   * L : 부호있는 롱 (signed-long), 32bit
   * F : 부동소수점 실수 (floating-point real), 32bit
 
-  <br>
   이들은 별개의 메모리 공간이 아니라 같은 960 bit의 공간을 서로 다른 데이터형으로 표현한 것입니다. 예를 들어 DO[0~15]와 DOB[0~1], DOW[0]은 모두 동일한 출력신호입니다.
-
-<br>
 
 <style type="text/css">
 table  {border-collapse:collapse;}
@@ -294,14 +285,9 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 </tbody>
 </table>
 
-<br>
-
-* signal-index
+### signal-index
 relay-type 내에서의 0-based 인덱스입니다.  
 인덱스는 DO는 bit단위, DOB, DOW, DOL, DOF는 byte단위로 매겨집니다.
-
-<br>
-<br>
 
 FB 객체명은 아래와 같이 생략할 수도 있습니다. 예를 들어 DO961은 FB1.DO1과 동일한 표기입니다.
 
@@ -318,60 +304,55 @@ FB 객체명은 아래와 같이 생략할 수도 있습니다. 예를 들어 DO
 | FB8 | DO7680 ~ DO8639 | FB8.DO0 ~ FB8.DO959 |
 | FB9 | DO8640 ~ DO9599 | FB9.DO0 ~ FB9.DO959 |
 
-
 DI, DO는 각기 논리적인 입력과 출력으로서 로봇언어와 입출력 할당에서 접근할 수 있습니다.
 
 
-[__SOURCE](3-relay/3-io-diagram.md)
-# 3.3 입출력 Diagram
+[__SOURCE](3-relay/3-io/README.md)
+# 3.3 입출력
 
 ${cont_model} 로봇제어기의 입출력 Diagram은 다음 그림과 같습니다.
 
 
-![](../_assets/io-diagram.png)
+![](../../_assets/io-diagram.png)
 
-그림 3.1 입출력 Diagram
-
-<br><br>
+그림 3.1 입출력 Diagram  
 
 그림 우측의 연두색 박스들은 ${cont_model} 제어기 내부의 하드웨어 모듈들입니다. 좌측에는 main 소프트웨어가 구동되는 main module (COM)이 있습니다.우측에는 필드버스 연결을 위한 PCI 카드인 Hilscher CIF card 들과 MODBUS 연결을 위한 시리얼 혹은 이더넷 디바이스가 있습니다.  
 
 main 소프트웨어 내에는 각종 릴레이들이 작은 박스의 형태로 그려져 있습니다. ${cont_model}에서 이 릴레이에 접근하는 소프트웨어 요소는 hrscript(로봇언어)와 입출력 할당(I/O assignment), 그리고 내장PLC입니다.
-
-<br>
-
+  
 ### hrscript (로봇언어)
 로봇언어는 입출력 변수를 통해 User I/O (FB.DI/DO) 릴레이와 Memory (M) 릴레이에 접근할 수 있는데, 대문자대신 소문자가 사용됩니다 (e.g. fb3.dow14, mw501). 입출력 변수에 대한 자세한 내용은 [${cont_model} 기능설명서 - 로봇언어 - 입출력변수](https://hrbook-hrc.web.app/#/view/doc-hrscript/ko/6-external-comm/1-fb-io/1-io-val?cont_model=${cont_model}) 절을 참고하십시오.
-
-
-<br>
-
+  
 ### 입출력 할당, 입출력 속성
 입출력 할당은 FB.DI/DO 릴레이에 접근할 수 있습니다. 또한 입출력 속성 설정으로 부논리, 펄스 등을 FB.DI/DO에 설정할 수 있습니다. 예를 들어 입력 할당인 "외부 정지"에 DI24가 부논리로 설정되어 있으면, DI24 신호가 0(active)일 때 로봇은 정지합니다.  
 자세한 내용은 [${cont_model} 조작설명서 - 입출력 신호 설정](https://hrbook-hrc.web.app/#/view/doc-hi6-operation/ko-tp630/7-setting/3-control-parameter/2-io-signal-setting/README?cont_model=${cont_model}) 절을 참조하십시오.
-
-<br>
-
+  
 ### 내장PLC
-내장PLC 박스 안쪽에 점선으로 Ladder Logic이 그려져 있고 양 옆의 릴레이들과는 화살표로 연결되어 있습니다. Ladder Logic은 릴레이들의 입력을 받아 작성자가 의도한 산술적/논리적 연산을 수행한 후 다른 릴레이로 값을 전달합니다.  
-
-Ladder Logic은 Memory와 System, Timer, Counter 릴레이와는 양방향으로 연결되어 있어 이들 릴레이에 값의 읽기와 쓰기를 모두 할 수 있습니다. 반면 물리적 출력인 FB.Y에는 쓰기만 가능하고 물리적 입력인 FB.X에는 읽기만 가능합니다.  
-
+내장PLC 박스 안쪽에 점선으로 Ladder Logic이 그려져 있고 양 옆의 릴레이들과는 화살표로 연결되어 있습니다. Ladder Logic은 릴레이들의 입력을 받아 작성자가 의도한 산술적/논리적 연산을 수행한 후 다른 릴레이로 값을 전달합니다.
+  
+Ladder Logic은 Memory와 System, Timer, Counter 릴레이와는 양방향으로 연결되어 있어 이들 릴레이에 값의 읽기와 쓰기를 모두 할 수 있습니다. 반면 물리적 출력인 FB.Y에는 쓰기만 가능하고 물리적 입력인 FB.X에는 읽기만 가능합니다.
+  
 FB.DI는 로봇언어의 관점에서는 입력이지만, 이 입력은 내장PLC를 거쳐서 들어오는 제어기 내부의 논리적 입력입니다. 즉, 내장PLC의 관점에서는 출력이며 따라서 Ladder Logic은 여기에 쓰기만 할 수 있습니다. 마찬가지로 FB.DO는 내장PLC 관점에서는 입력이기 때문에 Ladder Logic은 읽기만 할 수 있습니다.
-
-<br>
-
+  
 ### 외부 통신 연결
-Hilscher CIF card들은 물리적 입출력 I/O와 연결됩니다. 1개 혹은 여러 개의 FB객체를 특정한 CIF card 매핑하는 방법은 [${cont_model} 조작설명서 - 입출력 신호 설정 - DIO 블록 할당](https://hrbook-hrc.web.app/#/view/doc-hi6-operation/ko-tp630/7-setting/3-control-parameter/2-io-signal-setting/9-dio-block-assign?cont_model=${cont_model})를 참고하십시오.  
-
+Hilscher CIF card들은 물리적 입출력 I/O와 연결됩니다. 1개 혹은 여러 개의 FB객체를 특정한 CIF card 매핑하는 방법은 [${cont_model} 조작설명서 - 입출력 신호 설정 - DIO 블록 할당](https://hrbook-hrc.web.app/#/view/doc-hi6-operation/ko-tp630/7-setting/3-control-parameter/2-io-signal-setting/9-dio-block-assign?cont_model=${cont_model})를 참고하십시오.
+  
 모든 릴레이들은 MODBUS 슬레이브 기능의 주소공간에 매핑되어 있습니다. 자세한 내용은 [${cont_model} 기능설명서 - MODBUS](https://hrbook-hrc.web.app/#/view/doc-modbus/ko/README?cont_model=${cont_model})를 참고하십시오.
-
-[__SOURCE](3-relay/3-sio/1-so.md)
+  
+<div class="page-break"></div>
+[__SOURCE](3-relay/3-io/1-so.md)
 # 3.3.1 SO - 시스템 출력
 
 <style type="text/css">
 table  {border-collapse:collapse;}
-td {border-color:gray;border-style:solid;border-width:1px;}
+td {
+	border-color:gray;
+	border-style:solid;
+	border-width:1px;
+	padding: 1px 4px;
+	height: auto !important;
+}
 .grayed {background-color:lightgray;}
 </style>
 
@@ -387,7 +368,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 
 <tbody>
 	<tr>
-		<td rowspan=32>BD630</td>
+		<td rowspan=15>BD630</td>
 		<td rowspan=4>sob0</td>
 		<td>so0</td>
 		<td>모터 ON(TP)</td>
@@ -454,7 +435,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 
 <tbody>
 	<tr>
-		<td rowspan=32>BD640 - 1</td>
+		<td rowspan=19>BD640 - 1</td>
 		<td rowspan=8>sob4</td>
 		<td>so32</td>
 		<td>브레이크제어 1</td>
@@ -530,7 +511,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>사용자 8 (BD640T)</td>
 	</tr>
 	<tr>
-		<td rowspan=1>sob7</td>
+		<td>sob7</td>
 		<td>so56</td>
 		<td>자기진단 완료</td>
 	</tr>
@@ -538,7 +519,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 
 <tbody>
 	<tr>
-		<td rowspan=32>BD640 - 2</td>
+		<td rowspan=19>BD640 - 2</td>
 		<td rowspan=8>sob8</td>
 		<td>so64</td>
 		<td>브레이크제어 1</td>
@@ -614,7 +595,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>사용자 8 (BD640T)</td>
 	</tr>
 	<tr>
-		<td rowspan=1>sob11</td>
+		<td>sob11</td>
 		<td>so88</td>
 		<td>자기진단 완료</td>
 	</tr>
@@ -698,7 +679,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>사용자 8 (BD640T)</td>
 	</tr>
 	<tr>
-		<td rowspan=1>sob15</td>
+		<td>sob15</td>
 		<td>so120</td>
 		<td>자기진단 완료</td>
 	</tr>
@@ -706,7 +687,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 
 <tbody>
 	<tr>
-		<td rowspan=32>BD640 - 4</td>
+		<td rowspan=19>BD640 - 4</td>
 		<td rowspan=8>sob16</td>
 		<td>so128</td>
 		<td>브레이크제어 1</td>
@@ -782,15 +763,12 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>사용자 8 (BD640T)</td>
 	</tr>
 	<tr>
-		<td rowspan=1>sob19</td>
+		<td>sob19</td>
 		<td>so152</td>
 		<td>자기진단 완료</td>
 	</tr>
-</tbody>
-
-<tbody>
 	<tr>
-		<td rowspan=32>BD640T 컨베이어</td>
+		<td rowspan=4>BD640T 컨베이어</td>
 		<td rowspan=4>sob20</td>
 		<td>so160</td>
 		<td>ch1 - 펄스 카운팅 타입 (0=up, 1=up/down)</td>
@@ -808,10 +786,10 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>ch2- 통신방식 (0=라인드라이브, 1=오픈콜렉터)</td>
 	</tr>
 </tbody>
-
 </table>
 
-[__SOURCE](3-relay/3-sio/2-si.md)
+<div class="page-break"></div>
+[__SOURCE](3-relay/3-io/2-si.md)
 # 3.3.2 SI - 시스템 입력
 
 <style type="text/css">
@@ -1756,7 +1734,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	<tr class='grayed'><td>-</td><td>-</td><td>-</td></tr>
 	<tr>
 		<td>SW44</td>
-		<td>수동속도</td>
+		<td>스텝 전/후진시 최고속</td>
 		<td>mm/s</td>
 	</tr>
 	<tr>
@@ -3582,8 +3560,6 @@ ex 1) 재생속도 설정
 
 ![](../../_assets/playback_speed.png)
 
-
-<br>
 <br>
 ex 2) 툴번호 변경
 <table class="tg">
@@ -3612,6 +3588,35 @@ ex 2) 툴번호 변경
 </table>
 
 ![](../../_assets/tool_change.png)
+
+<br>
+ex 3) 스텝 전/후진시 최고속 변경
+<table class="tg">
+<thead>
+	<tr>
+		<th>S offset</th>
+		<th>field</th>
+		<th>description</th>
+		<th>type</th>
+	</tr>
+</thead>
+<tbody>
+	<tr>
+		<td>2</td>
+		<td>param 1</td>
+		<td>44 = 스텝 전/후진시 최고속</td>
+		<td>s2</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td>param 1</td>
+		<td>value</td>
+		<td>s2</td>
+	</tr>
+</tbody>
+</table>
+
+![](../../_assets/manual_speed.png)
 
 [__SOURCE](3-relay/4-sw-relay/13-slot-hw-info.md)
 # 3.4.13 S 릴레이 - HW_INFO
@@ -9954,6 +9959,53 @@ SW62~SW79는 간접 주소 지정을 위한 시스템 메모리입니다. 릴레
 아래 내장 PLC 예제는 X1~X128까지의 입력 신호에 해당하는 Y1~128신호를 출력하는 동작을 FOR/NEXT 문과 간접 주소 지정방식을 활용해 작성한 예입니다.
 
 ![](../_assets/rel-addr-for-next.png)
+[__SOURCE](3-relay/6-timer-counter.md)
+# 3.6 타이머 & 카운터 릴레이
+
+(1) 타이머와 카운터 릴레이는 전부 down-counting만을 지원합니다.  
+*	타이머 베이스는 10msec단위로 사용자가 설정할 수 있습니다.  
+*	타이머 값은 내부적으로 32bit 의 값으로 처리되기 때문에 2,147,483,647 msec (약 597 시간)까지 counting 할 수 있습니다. 
+<br>
+<br>
+
+(2) 타이머 / 카운터의 값은 다음과 같은 의미가 있습니다.  
+<table class="tg">
+<thead>
+	<tr>
+		<th>타이머 & 카운터 값</th>
+		<th>설명</th>
+	</tr>
+</thead>
+<tbody>
+	<tr>
+		<td>0</td>
+		<td>접점 On (=counting완료)</td>
+	</tr>
+	<tr>
+		<td>-1</td>
+		<td>접점 Off</td>
+	</tr>
+	<tr>
+		<td>그 외</td>
+		<td>접점 Off; timing & counting (진행중)</td>
+	</tr>
+</tbody>
+</table>
+<br>
+
+(3) 타이머 / 카운터 릴레이가 연결된 Rung이 비활성이면,  
+*	TON: TL(타이머)의 값을 -1로 됩니다.  
+*	CTD: CL(카운터)의 값은 계속 유지합니다. 
+<br>
+<br>
+
+(4) 타이머 / 카운터 릴레이가 연결된 Rung이 활성화되어 있는 동안, 
+*	TON <br>
+만일 TL의 값이 0보다 작으면, TL의 초기값은 "타이머 베이스 x 프리셋 x 10"이 저장되고, TL값이 0보다 크면, 5msec 마다 5씩 감소합니다. 
+*	CTD <br> 
+만일 CL값이 0보다 작으면, CL의 초기값은 프리셋 값이 되고, 만일 CL값이 0보다 크면, 비활성에서 활성으로 변할 때마다 1씩 감소합니다. 
+
+
 [__SOURCE](4-instruction/README.md)
 # 4. 명령 (instruction)
 

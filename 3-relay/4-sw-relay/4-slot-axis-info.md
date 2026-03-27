@@ -26,9 +26,16 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	<tr>
 		<td>2</td>
 		<td>param. 1</td>
-		<td>type<br>1 = current position (axis angle), 2 = current position (base coordinate), 3 = current position (base/user coordinate), <br> 6 = axis speed,
-7 = motor speed, 8 = motor speed command when speed control(rpm)<br> 10 = load factor (I/Ir), 11 = load factor (I/Ip), 12 = load factor (continuous), <br>
-15 = encoder (temperature), <br> 18 = accumulated distance for each axis</td>
+		<td>type<br>
+		1 = Current position (axis angle), 2 = Current position (base coordinate), 3 = Current position (base/user coordinate)<br>
+		6 = Axis speed, 7 = Motor speed<br>
+		8 = Motor speed command when speed control(rpm)<br>
+		10 = Load factor(I/Ir), 11 = Load factor(I/Ip), 13 = Load factor(continuous)<br>
+		15 = Encoder temperature<br>
+		18 = Accumulated distance for each axis<br>
+		111 = Position deviation(current), 112 = Position deviation(maximum)<br>
+		124 = Encoder communication failure count<br>
+	    </td>
 		<td>s2</td>
 	</tr>
 	<tr>

@@ -5,7 +5,7 @@
 [__SOURCE](0-about-this-manual/precautions.md)
 # Precautions
 
-{% include url="https://hrcontentsrelay-bmgae5hdbzapc4bc.koreacentral-01.azurewebsites.net/api/proxy?path=doc-common-pages/en/precautions.md" %}
+{% include file="en/precautions.md" %}
 
 [__SOURCE](1-intro/README.md)
 # 1. Overview
@@ -202,7 +202,7 @@ The size of one fieldbus block is 120 bytes (=960 bits) for the input and output
 
 
 * relay-type  
-There are 10 different types, as shown below.
+There are 12 different types, as shown below.
 Each will be explained in detail later.
 
   1) Digital Input (DI): This is a logical input signal that can be used in HRScript or for assigning various inputs.
@@ -221,10 +221,13 @@ Each will be explained in detail later.
 
   8) System (S): This is used to read or write system values in the controller. Refer to [3.4 S relay](./4-sw-relay/README.md).
 
-  9) AuxiliaRy (R): This is an auxiliary relay for temporarily storing the Obsolete. value and is provided for the convenience of porting the Hi5a ladder file. It is recommended to use the M relay in new ladder files.
+  9) AuxiliaRy (R): This is an auxiliary relay for temporarily storing.
 
-  10) Keep (K): This is an auxiliary relay for temporarily storing the Obsolete. value. The value will be stored even when the power is turned off. This is provided for the convenience of porting the Hi5a ladder file. It is recommended to use the M relay in new ladder files.
+  10) Keep (K): This is an auxiliary relay for temporarily storing. The value will be stored even when the power is turned off. 
 
+  11) Timer (T): Relays for timer operation, the contact is On when the value is 0. 
+
+  12) Counter (C): Relays for counter operation, the contact is On when the value is 0. 
 
     | ** Relay name** | ** Number of points ** | ** Relay (bit) ** |** Relay (byte) ** |
     | :--- | :--- | :--- | :--- |
@@ -238,6 +241,8 @@ Each will be explained in detail later.
     | S | 160000 bits (20000 bytes) | S0-S159999 | SB0-SB19999 |
     | R | 960 bits (128 bytes) | R0-R959 | RB0-RB127 |
     | K | 960 bits (128 bytes) | K0-K959 | KB0-KB127 |
+    | T | 256 DWORD (1024 bytes) | T0-T255 | - |
+    | C | 256 DWORD (1024 bytes) | C0-C255 | - |
 
 * data-type  
 There are five different types, as shown below.
@@ -1755,7 +1760,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	<tr class='grayed'><td>-</td><td>-</td><td>-</td></tr>
 	<tr>
 		<td>SW44</td>
-		<td>Manual speed</td>
+		<td>Step go/back max speed</td>
 		<td>mm/s</td>
 	</tr>
 	<tr>
@@ -1919,9 +1924,15 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	<tr>
 		<td>SB159</td>
 		<td>Axis information selection<br>
-		1=Current position (axis angle), 2=Current position (base coordinate), 3=Current position (base/user coordinate), <br> 6=Axis speed, 7=Motor speed<br>
-		 10=Load factor(I/Ir), 11=Load factor(I/Ip), 13=Load factor(continuous),<br> 15=Encoder temperature<br>
-		 18=Accumulated distance for each axis)</td>
+		1 = Current position (axis angle), 2 = Current position (base coordinate), 3 = Current position (base/user coordinate)<br>
+		6 = Axis speed, 7 = Motor speed<br>
+		8 = Motor speed command when speed control(rpm)<br>
+		10 = Load factor(I/Ir), 11 = Load factor(I/Ip), 13 = Load factor(continuous)<br>
+		15 = Encoder temperature<br>
+		18 = Accumulated distance for each axis<br>
+		111 = Position deviation(current), 112 = Position deviation(maximum)<br>
+		124 = Encoder communication failure count<br>
+		</td>
 		<td></td>
 	</tr>
 	<tr>
@@ -2128,9 +2139,16 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	<tr>
 		<td>2</td>
 		<td>param. 1</td>
-		<td>type<br>1 = current position (axis angle), 2 = current position (base coordinate), 3 = current position (base/user coordinate), <br> 6 = axis speed,
-7 = motor speed, 8 = motor speed command when speed control(rpm)<br> 10 = load factor (I/Ir), 11 = load factor (I/Ip), 12 = load factor (continuous), <br>
-15 = encoder (temperature), <br> 18 = accumulated distance for each axis</td>
+		<td>type<br>
+		1 = Current position (axis angle), 2 = Current position (base coordinate), 3 = Current position (base/user coordinate)<br>
+		6 = Axis speed, 7 = Motor speed<br>
+		8 = Motor speed command when speed control(rpm)<br>
+		10 = Load factor(I/Ir), 11 = Load factor(I/Ip), 13 = Load factor(continuous)<br>
+		15 = Encoder temperature<br>
+		18 = Accumulated distance for each axis<br>
+		111 = Position deviation(current), 112 = Position deviation(maximum)<br>
+		124 = Encoder communication failure count<br>
+	    </td>
 		<td>s2</td>
 	</tr>
 	<tr>
@@ -3535,7 +3553,6 @@ ex 1) Playback speed setting
 ![](../../_assets/playback_speed.png)
 
 <br>
-<br>
 ex 2) Tool number change
 <table class="tg">
 <thead>
@@ -3563,6 +3580,35 @@ ex 2) Tool number change
 </table>
 
 ![](../../_assets/tool_change.png)
+
+<br>
+ex 3) Step go/back max speed change
+<table class="tg">
+<thead>
+	<tr>
+		<th>S offset</th>
+		<th>field</th>
+		<th>description</th>
+		<th>type</th>
+	</tr>
+</thead>
+<tbody>
+	<tr>
+		<td>2</td>
+		<td>param 1</td>
+		<td>44 = Step go/back max speed</td>
+		<td>s2</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td>param 1</td>
+		<td>value</td>
+		<td>s2</td>
+	</tr>
+</tbody>
+</table>
+
+![](../../_assets/manual_speed.png)
 
 [__SOURCE](3-relay/4-sw-relay/13-slot-hw-info.md)
 # 3.4.13 S realy - HW_INFO
@@ -9907,6 +9953,54 @@ the notation of an indirect address can be interpreted as follows.
 The embedded programmable logic controller (PLC) example presented below is an example in which the operation of outputting signals Y1-Y128 corresponding to input signals X1-X128 is created using the FOR/NEXT instructions and indirect address designation method.
 
 ![](../_assets/rel-addr-for-next.png)
+[__SOURCE](3-relay/6-timer-counter.md)
+# 3.6 Timer & Counter relay
+
+(1) All timer and counter relays support down-counting only.  
+*	The timer base can be set by the user in 10msec units.  
+*	Since the timer value is internally processed as a 32-bit value, it can count up to 2,147,483,647 [msec] (approximately 597 hours). 
+<br>
+<br>
+
+(2) The values   of the Timer & Counter have the following meanings:  
+<table class="tg">
+<thead>
+	<tr>
+		<th>Timer & Counter value</th>
+		<th>Description</th>
+	</tr>
+</thead>
+<tbody>
+	<tr>
+		<td>0</td>
+		<td>Contact On (=counting completed)</td>
+	</tr>
+	<tr>
+		<td>-1</td>
+		<td>Contact Off</td>
+	</tr>
+	<tr>
+		<td>Others</td>
+		<td>Contact Off; timing & counting (in progress)</td>
+	</tr>
+</tbody>
+</table>
+<br>
+
+(3) If the rung to which the Timer & Counter relay is connected is inactive,  
+*	TON: The value of TL(Timer) become -1.  
+*	CTD: The value of CL(Counter) is maintained continuously. 
+<br>
+<br>
+
+(4) While the rung to which the Timer & Counter relay is connected is active, 
+*	TON <br> 
+    If the value of TL is less than 0, the initial value of TL is stored as "timer base x preset x 10", and if the value of TL is greater than 0, it decreases by 5 every 5 msec. 
+
+*	CTD <br>
+    If the CL value is less than 0, the initial CL value becomes the preset value. If the CL value is greater than 0, the value decreases by 1 each time the CL changes from inactive to active. 
+
+
 [__SOURCE](4-instruction/README.md)
 # 4. Instructions
 

@@ -369,9 +369,15 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	<tr>
 		<td>SB159</td>
 		<td>Axis information selection<br>
-		1=Current position (axis angle), 2=Current position (base coordinate), 3=Current position (base/user coordinate), <br> 6=Axis speed, 7=Motor speed<br>
-		 10=Load factor(I/Ir), 11=Load factor(I/Ip), 13=Load factor(continuous),<br> 15=Encoder temperature<br>
-		 18=Accumulated distance for each axis)</td>
+		1 = Current position (axis angle), 2 = Current position (base coordinate), 3 = Current position (base/user coordinate)<br>
+		6 = Axis speed, 7 = Motor speed<br>
+		8 = Motor speed command when speed control(rpm)<br>
+		10 = Load factor(I/Ir), 11 = Load factor(I/Ip), 13 = Load factor(continuous)<br>
+		15 = Encoder temperature<br>
+		18 = Accumulated distance for each axis<br>
+		111 = Position deviation(current), 112 = Position deviation(maximum)<br>
+		124 = Encoder communication failure count<br>
+		</td>
 		<td></td>
 	</tr>
 	<tr>

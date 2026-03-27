@@ -3581,7 +3581,6 @@ ex 2) Tool number change
 
 ![](../../_assets/tool_change.png)
 
-<br>
 ex 3) Step go/back max speed change
 <table class="tg">
 <thead>
@@ -9962,7 +9961,7 @@ The embedded programmable logic controller (PLC) example presented below is an e
 <br>
 <br>
 
-(2) The values   of the Timer & Counter have the following meanings:  
+(2) The values ​​of the Timer & Counter have the following meanings:  
 <table class="tg">
 <thead>
 	<tr>

@@ -106,7 +106,6 @@ ex 2) Tool number change
 
 ![](../../_assets/tool_change.png)
 
-<br>
 ex 3) Step go/back max speed change
 <table class="tg">
 <thead>

@@ -1,8 +1,25 @@
 ﻿# 3.4.14.1 S 릴레이 - CIFX 산업용 통신 상태 릴레이 (공통)
 
-<style type="text/css">
-table  {border-collapse:collapse;}
-td {border-color:gray;border-style:solid;border-width:1px;}
+<style>
+.my-custom-table table  {border-collapse:collapse;}
+.my-custom-table td {border-color:gray;border-style:solid;border-width:1px;font-size: 11px}
+.my-custom-table th:nth-child(1)
+{
+    width: 2%;
+} 
+.my-custom-table th:nth-child(2)
+{
+    width: 3%;
+} 
+.relay-table td:nth-child(1) {
+    width: 1%;
+}
+.relay-table td:nth-child(2) {
+    width: 1%;
+}
+.relay-table td:nth-child(3) {
+    width: 3%;
+}
 .grayed {background-color:lightgray;}
 .powderblued {background-color:powderblue;}
 </style>
@@ -14,7 +31,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 <br>
 
 
-<table class="tg">
+<table class="my-custom-table">
 <thead>
 	<tr>
 		<th colspan=2>S Offset</th>
@@ -100,7 +117,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 
 
 
-<table class="tg">
+<table class="my-custom-table">
 <thead>
 	<tr>
 		<th colspan=2>S Offset</th>
@@ -208,7 +225,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 <div class="page-break"></div>
 
 
-<table class="tg">
+<table class="my-custom-table">
 <thead>
 	<tr>
 		<th colspan=2>S Offset</th>
@@ -265,7 +282,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 
 <br>
 
-<table class="tg">
+<table class="my-custom-table">
 <thead>
 	<tr>
 		<th colspan=2>S Offset</th>
@@ -336,7 +353,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 <div class="page-break"></div>
 
 
-<table class="tg">
+<table class="my-custom-table">
 <thead>
 	<tr>
 		<th colspan=2>S Offset</th>

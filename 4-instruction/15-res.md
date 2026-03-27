@@ -10,7 +10,7 @@ Rung이 활성이면, 타이머(T)나 카운터(C) 릴레이 값을 클리어(-1
 (X는 불가)
   
 <style type="text/css">
-table  {border-collapse:collapse;}
+table  {border-collapse:collapse;table-layout: fixed;}
 th {background-color:#efefef; border-style:solid;border-width:1px;color:black;text-align:center;}
 td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 .hd{background-color:#efefef;color:black;font-weight:bold;}
@@ -19,7 +19,7 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 <table>
 <thead>
   <tr>
-    <th>relay type</th>
+    <th>relay<br>type</th>
     <th colspan="2">input<br>X, DO</th>
     <th colspan="2">output<br>Y, DI, R, K</th>
     <th colspan="2">memory<br>M, S</th>
@@ -28,17 +28,17 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
     <th>const.<br>32bit</th>
   </tr>
   <tr>
-    <th>data-type</th>
+    <th>data<br>type</th>
     <th>bit</th>
-    <th>B,W,L,F</th>
+    <th>B,W<br>L,F</th>
     <th>bit</th>
-    <th>B,W,L,F</th>
+    <th>B,W<br>L,F</th>
     <th>bit</th>
-    <th>B,W,L,F</th>
+    <th>B,W<br>L,F</th>
     <th>bit</th>
-    <th>B,W,L,F</th>
+    <th>B,W<br>L,F</th>
     <th>bit</th>
-    <th>B,W,L,F</th>
+    <th>B,W<br>L,F</th>
     <th>L,F</th>
   </tr>
 </thead>

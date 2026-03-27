@@ -2208,7 +2208,7 @@ td {
 			1 = 현재위치(축각도), 2 = 현재위치(베이스좌표),	3 = 현재위치(베이스좌표/User좌표) <br>
 			6 = 축속도, 7 = 모터속도 <br>
 			8 = 부가축 속도제어시 모터속도(rpm) 지령값 <br>
-			10 = 부하율(I/Ir), 11 = 부하율(I/Ip), 12 = 부하율(연속) <br>
+			10 = 부하율(I/Ir), 11 = 부하율(I/Ip), 13 = 부하율(연속) <br>
 			15 = 엔코더(온도) <br>
 			18 = 축별누적거리<br>
 			111 = 위치편차(현재치), 112 = 위치편차(최대치)<br>
@@ -3785,9 +3785,26 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 [__SOURCE](3-relay/4-sw-relay/14-slot-cifx-info/1-slot-common-info.md)
 # 3.4.14.1 S 릴레이 - CIFX 산업용 통신 상태 릴레이 (공통)
 
-<style type="text/css">
-table  {border-collapse:collapse;}
-td {border-color:gray;border-style:solid;border-width:1px;}
+<style>
+.my-custom-table table  {border-collapse:collapse;}
+.my-custom-table td {border-color:gray;border-style:solid;border-width:1px;font-size: 11px}
+.my-custom-table th:nth-child(1)
+{
+    width: 2%;
+} 
+.my-custom-table th:nth-child(2)
+{
+    width: 3%;
+} 
+.relay-table td:nth-child(1) {
+    width: 1%;
+}
+.relay-table td:nth-child(2) {
+    width: 1%;
+}
+.relay-table td:nth-child(3) {
+    width: 3%;
+}
 .grayed {background-color:lightgray;}
 .powderblued {background-color:powderblue;}
 </style>
@@ -3799,7 +3816,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 <br>
 
 
-<table class="tg">
+<table class="my-custom-table">
 <thead>
 	<tr>
 		<th colspan=2>S Offset</th>
@@ -3885,7 +3902,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 
 
 
-<table class="tg">
+<table class="my-custom-table">
 <thead>
 	<tr>
 		<th colspan=2>S Offset</th>
@@ -3993,7 +4010,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 <div class="page-break"></div>
 
 
-<table class="tg">
+<table class="my-custom-table">
 <thead>
 	<tr>
 		<th colspan=2>S Offset</th>
@@ -4050,7 +4067,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 
 <br>
 
-<table class="tg">
+<table class="my-custom-table">
 <thead>
 	<tr>
 		<th colspan=2>S Offset</th>
@@ -4121,7 +4138,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 <div class="page-break"></div>
 
 
-<table class="tg">
+<table class="my-custom-table">
 <thead>
 	<tr>
 		<th colspan=2>S Offset</th>
@@ -4182,9 +4199,26 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 [__SOURCE](3-relay/4-sw-relay/14-slot-cifx-info/2-slot-common-control.md)
 # 3.4.14.2 S 릴레이 - CIFX 산업용 통신 제어 릴레이 (공통)
 
-<style type="text/css">
-table  {border-collapse:collapse;}
-td {border-color:gray;border-style:solid;border-width:1px;}
+<style>
+.my-custom-table table  {border-collapse:collapse;}
+.my-custom-table td {border-color:gray;border-style:solid;border-width:1px;font-size: 11px}
+.my-custom-table th:nth-child(1)
+{
+    width: 2%;
+} 
+.my-custom-table th:nth-child(2)
+{
+    width: 3%;
+} 
+.relay-table td:nth-child(1) {
+    width: 1%;
+}
+.relay-table td:nth-child(2) {
+    width: 1%;
+}
+.relay-table td:nth-child(3) {
+    width: 3%;
+}
 .grayed {background-color:lightgray;}
 .powderblued {background-color:powderblue;}
 </style>
@@ -4196,7 +4230,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 
 <br>
 
-<table class="tg">
+<table class="my-custom-table">
 <thead>
 	<tr>
 		<th colspan=2>S Offset</th>
@@ -4286,17 +4320,31 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 [__SOURCE](3-relay/4-sw-relay/14-slot-cifx-info/3-slot-profibus-dp-info.md)
 # 3.4.14.3 S 릴레이 - Profibus-DP Master 상태 릴레이
 
-<style type="text/css">
-table  {border-collapse:collapse;}
-td {border-color:gray;border-style:solid;border-width:1px;}
+<style>
+.my-custom-table table  {border-collapse:collapse;}
+.my-custom-table td {border-color:gray;border-style:solid;border-width:1px;font-size: 11px}
+.my-custom-table th:nth-child(1)
+{
+    width: 2%;
+} 
+.my-custom-table th:nth-child(2)
+{
+    width: 3%;
+} 
+.relay-table td:nth-child(1) {
+    width: 1%;
+}
+.relay-table td:nth-child(2) {
+    width: 1%;
+}
+.relay-table td:nth-child(3) {
+    width: 3%;
+}
 .grayed {background-color:lightgray;}
 .powderblued {background-color:powderblue;}
 </style>
 
-
-<br>
-
-<table class="tg">
+<table class="my-custom-table">
 <thead>
 	<tr>
 		<th colspan=2>S Offset</th>
@@ -4400,7 +4448,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
   
 <div class="page-break"></div>
 
-<table class="tg">
+<table class="my-custom-table">
 <thead>
 	<tr>
 		<th colspan=2>S Offset</th>
@@ -4627,7 +4675,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
   
 <div class="page-break"></div>
 
-<table class="tg">
+<table class="my-custom-table">
 <thead>
 	<tr>
 		<th colspan=2>S Offset</th>
@@ -4854,7 +4902,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
   
 <div class="page-break"></div>
 
-<table class="tg">
+<table class="my-custom-table">
 <thead>
 	<tr>
 		<th colspan=2>S Offset</th>
@@ -5081,7 +5129,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
   
 <div class="page-break"></div>
 
-<table class="tg">
+<table class="my-custom-table">
 <thead>
 	<tr>
 		<th colspan=2>S Offset</th>
@@ -5308,7 +5356,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
   
 <div class="page-break"></div>
 
-<table class="tg">
+<table class="my-custom-table">
 <thead>
 	<tr>
 		<th colspan=2>S Offset</th>
@@ -5535,7 +5583,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
   
 <div class="page-break"></div>
 
-<table class="tg">
+<table class="my-custom-table">
 <thead>
 	<tr>
 		<th colspan=2>S Offset</th>
@@ -5762,7 +5810,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
   
 <div class="page-break"></div>
 
-<table class="tg">
+<table class="my-custom-table">
 <thead>
 	<tr>
 		<th colspan=2>S Offset</th>
@@ -5983,12 +6031,32 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	</tr>
 </tbody>
 </table>
+
+<div class="page-break"></div>
+
 [__SOURCE](3-relay/4-sw-relay/14-slot-cifx-info/4-slot-devicenet-info.md)
 # 3.4.14.4 S 릴레이 - DeviceNet Master 상태 릴레이
 
-<style type="text/css">
-table  {border-collapse:collapse;}
-td {border-color:gray;border-style:solid;border-width:1px;}
+<style>
+.my-custom-table table  {border-collapse:collapse;}
+.my-custom-table td {border-color:gray;border-style:solid;border-width:1px;font-size: 11px}
+.my-custom-table th:nth-child(1)
+{
+    width: 2%;
+} 
+.my-custom-table th:nth-child(2)
+{
+    width: 3%;
+} 
+.relay-table td:nth-child(1) {
+    width: 1%;
+}
+.relay-table td:nth-child(2) {
+    width: 1%;
+}
+.relay-table td:nth-child(3) {
+    width: 3%;
+}
 .grayed {background-color:lightgray;}
 .powderblued {background-color:powderblue;}
 </style>
@@ -5996,7 +6064,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 
 <br>
 
-<table class="tg">
+<table class="my-custom-table">
 <thead>
 	<tr>
 		<th colspan=2>S Offset</th>
@@ -6106,7 +6174,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
   
 <div class="page-break"></div>
 
-<table class="tg">
+<table class="my-custom-table">
 <thead>
 	<tr>
 		<th colspan=2>S Offset</th>
@@ -6335,7 +6403,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
   
 <div class="page-break"></div>
 
-<table class="tg">
+<table class="my-custom-table">
 <thead>
 	<tr>
 		<th colspan=2>S Offset</th>
@@ -6564,7 +6632,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
   
 <div class="page-break"></div>
 
-<table class="tg">
+<table class="my-custom-table">
 <thead>
 	<tr>
 		<th colspan=2>S Offset</th>
@@ -6709,7 +6777,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
   
 <div class="page-break"></div>
 
-<table class="tg">
+<table class="my-custom-table">
 <thead>
 	<tr>
 		<th colspan=2>S Offset</th>
@@ -6854,7 +6922,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
   
 <div class="page-break"></div>
 
-<table class="tg">
+<table class="my-custom-table">
 <thead>
 	<tr>
 		<th colspan=2>S Offset</th>
@@ -6999,7 +7067,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
   
 <div class="page-break"></div>
 
-<table class="tg">
+<table class="my-custom-table">
 <thead>
 	<tr>
 		<th colspan=2>S Offset</th>
@@ -7144,9 +7212,26 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 [__SOURCE](3-relay/4-sw-relay/14-slot-cifx-info/5-slot-ethernet-ip-info.md)
 # 3.4.14.5 S 릴레이 - EtherNet/IP Master 상태 릴레이
 
-<style type="text/css">
-table  {border-collapse:collapse;}
-td {border-color:gray;border-style:solid;border-width:1px;}
+<style>
+.my-custom-table table  {border-collapse:collapse;}
+.my-custom-table td {border-color:gray;border-style:solid;border-width:1px;font-size: 11px}
+.my-custom-table th:nth-child(1)
+{
+    width: 2%;
+} 
+.my-custom-table th:nth-child(2)
+{
+    width: 3%;
+} 
+.relay-table td:nth-child(1) {
+    width: 1%;
+}
+.relay-table td:nth-child(2) {
+    width: 1%;
+}
+.relay-table td:nth-child(3) {
+    width: 3%;
+}
 .grayed {background-color:lightgray;}
 .powderblued {background-color:powderblue;}
 </style>
@@ -7154,7 +7239,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 
 <br>
 
-<table class="tg">
+<table class="my-custom-table">
 <thead>
 	<tr>
 		<th colspan=2>S Offset</th>
@@ -7225,7 +7310,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	
 <br>
 
-<table class="tg">
+<table class="my-custom-table">
 <thead>
 	<tr>
 		<th colspan=2>S Offset</th>
@@ -7296,7 +7381,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 
 <br>
 
-<table class="tg">
+<table class="my-custom-table">
 <thead>
 	<tr>
 		<th colspan=2>S Offset</th>
@@ -7363,7 +7448,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
   
 <div class="page-break"></div>
 
-<table class="tg">
+<table class="my-custom-table">
 <thead>
 	<tr>
 		<th colspan=2>S Offset</th>
@@ -7590,7 +7675,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
   
 <div class="page-break"></div>
   
-<table class="tg">
+<table class="my-custom-table">
 <thead>
 	<tr>
 		<th colspan=2>S Offset</th>
@@ -7817,7 +7902,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
   
 <div class="page-break"></div>
 
-<table class="tg">
+<table class="my-custom-table">
 <thead>
 	<tr>
 		<th colspan=2>S Offset</th>
@@ -8044,13 +8129,29 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 [__SOURCE](3-relay/4-sw-relay/14-slot-cifx-info/6-slot-profinet-io-info.md)
 # 3.4.14.6 S 릴레이 - Profinet IO Master 상태 릴레이
 
-<style type="text/css">
-table  {border-collapse:collapse;}
-td {border-color:gray;border-style:solid;border-width:1px;}
+<style>
+.my-custom-table table  {border-collapse:collapse;}
+.my-custom-table td {border-color:gray;border-style:solid;border-width:1px;font-size: 11px}
+.my-custom-table th:nth-child(1)
+{
+    width: 2%;
+} 
+.my-custom-table th:nth-child(2)
+{
+    width: 3%;
+} 
+.relay-table td:nth-child(1) {
+    width: 1%;
+}
+.relay-table td:nth-child(2) {
+    width: 1%;
+}
+.relay-table td:nth-child(3) {
+    width: 3%;
+}
 .grayed {background-color:lightgray;}
 .powderblued {background-color:powderblue;}
 </style>
-
 
 <br>
 
@@ -8064,7 +8165,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
   
 <div class="page-break"></div>
   
-<table class="tg">
+<table class="my-custom-table">
 <thead>
 	<tr>
 		<th colspan=2>S Offset</th>
@@ -8291,7 +8392,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
   
 <div class="page-break"></div>
   
-<table class="tg">
+<table class="my-custom-table">
 <thead>
 	<tr>
 		<th colspan=2>S Offset</th>
@@ -8518,7 +8619,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
   
 <div class="page-break"></div> 
   
-<table class="tg">
+<table class="my-custom-table">
 <thead>
 	<tr>
 		<th colspan=2>S Offset</th>
@@ -8745,13 +8846,29 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 [__SOURCE](3-relay/4-sw-relay/14-slot-cifx-info/7-slot-ethercat-info.md)
 # 3.4.14.7 S 릴레이 - EtherCAT Master 상태 릴레이
 
-<style type="text/css">
-table  {border-collapse:collapse;}
-td {border-color:gray;border-style:solid;border-width:1px;}
+<style>
+.my-custom-table table  {border-collapse:collapse;}
+.my-custom-table td {border-color:gray;border-style:solid;border-width:1px;font-size: 11px}
+.my-custom-table th:nth-child(1)
+{
+    width: 2%;
+} 
+.my-custom-table th:nth-child(2)
+{
+    width: 3%;
+} 
+.relay-table td:nth-child(1) {
+    width: 1%;
+}
+.relay-table td:nth-child(2) {
+    width: 1%;
+}
+.relay-table td:nth-child(3) {
+    width: 3%;
+}
 .grayed {background-color:lightgray;}
 .powderblued {background-color:powderblue;}
 </style>
-
 
 <br>
 
@@ -8763,7 +8880,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 
 <br>
 
-<table class="tg">
+<table class="my-custom-table">
 <thead>
 	<tr>
 		<th colspan=2>S Offset</th>
@@ -8990,7 +9107,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
   
 <div class="page-break"></div>
   
-<table class="tg">
+<table class="my-custom-table">
 <thead>
 	<tr>
 		<th colspan=2>S Offset</th>
@@ -9217,7 +9334,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
   
 <div class="page-break"></div>
   
-<table class="tg">
+<table class="my-custom-table">
 <thead>
 	<tr>
 		<th colspan=2>S Offset</th>
@@ -11493,7 +11610,7 @@ Rung이 활성이면, 타이머(T)나 카운터(C) 릴레이 값을 클리어(-1
 (X는 불가)
   
 <style type="text/css">
-table  {border-collapse:collapse;}
+table  {border-collapse:collapse;table-layout: fixed;}
 th {background-color:#efefef; border-style:solid;border-width:1px;color:black;text-align:center;}
 td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 .hd{background-color:#efefef;color:black;font-weight:bold;}
@@ -11502,7 +11619,7 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 <table>
 <thead>
   <tr>
-    <th>relay type</th>
+    <th>relay<br>type</th>
     <th colspan="2">input<br>X, DO</th>
     <th colspan="2">output<br>Y, DI, R, K</th>
     <th colspan="2">memory<br>M, S</th>
@@ -11511,17 +11628,17 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
     <th>const.<br>32bit</th>
   </tr>
   <tr>
-    <th>data-type</th>
+    <th>data<br>type</th>
     <th>bit</th>
-    <th>B,W,L,F</th>
+    <th>B,W<br>L,F</th>
     <th>bit</th>
-    <th>B,W,L,F</th>
+    <th>B,W<br>L,F</th>
     <th>bit</th>
-    <th>B,W,L,F</th>
+    <th>B,W<br>L,F</th>
     <th>bit</th>
-    <th>B,W,L,F</th>
+    <th>B,W<br>L,F</th>
     <th>bit</th>
-    <th>B,W,L,F</th>
+    <th>B,W<br>L,F</th>
     <th>L,F</th>
   </tr>
 </thead>

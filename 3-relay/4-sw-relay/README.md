@@ -38,6 +38,8 @@ Basic items that are frequently used are allocated to predetermined addresses. I
 ### Optional items area
 This area consists of a total of 900 slots, with each slot of 20 bytes. The configuration of each slot will be determined by what command value is to be put into the leading word. The map for each command is described in the following section.
 
+<div class="page-break"></div>
+
 <table class="tg">
 <thead>
 	<tr>

@@ -4,10 +4,17 @@ Please refer to the table shown below for the SB0-SB1999 areas for which fixed i
 
 <style type="text/css">
 table  {border-collapse:collapse;}
-td {border-color:gray;border-style:solid;border-width:1px;}
+td {
+    border-color:gray;
+    border-style:solid;
+    border-width:1px;
+    padding: 1px 4px;
+    height: auto !important;
+}
 .grayed {background-color:lightgray;}
-.bit { width: 10%; }
 </style>
+
+<div class="page-break"></div>
 
 ### Area for special flags
 
@@ -78,7 +85,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 </tbody>
 </table>
 
-<br>
+<div class="page-break"></div>
 
 ### Area for basic information
 
@@ -213,6 +220,13 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>Tool tip movement speed</td>
 		<td>mm/s</td>
 	</tr>
+</tbody>
+</table>
+
+<div class="page-break"></div>
+
+<table class="tg">
+<tbody>
 	<tr>
 		<td>SW48</td>
 		<td>Error/warning number</td>
@@ -320,6 +334,13 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>Motor on (ms)</td>
 		<td></td>
 	</tr>
+</tbody>
+</table>
+
+<div class="page-break"></div>
+
+<table class="tg">
+<tbody>
 	<tr>
 		<td>SL118</td>
 		<td>Run time (day)</td>
@@ -433,3 +454,5 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	<tr class='grayed'><td>-</td><td>-</td><td>-</td></tr>
 </tbody>
 </table>
+
+<div class="page-break"></div>

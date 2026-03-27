@@ -9,7 +9,7 @@ For example, relays can be designated as below.
 Y1501
 FB3.DIW21
 
-* block-index  
+### block-index  
 Input and output relays (DI, DO, X, Y) are grouped into 10 fieldbus blocks with their object names ranging from FB0 to FB9. For physical inputs and outputs, each block will be mapped to each fieldbus device.
 The size of one fieldbus block is 120 bytes (=960 bits) for the input and output, respectively.
 
@@ -19,50 +19,145 @@ The size of one fieldbus block is 120 bytes (=960 bits) for the input and output
   [Operation manual: 7.3.2.12 fn block allocation](https://hrbook-hrc.web.app/#/view/doc-hi6-operation/en-tp630/7-system/3-control-parameter/2-io-signal-setting/12-fn-block?cont_model=${cont_model})
 
 
-* relay-type  
+### relay-type  
 There are 12 different types, as shown below.
 Each will be explained in detail later.
 
-  1) Digital Input (DI): This is a logical input signal that can be used in HRScript or for assigning various inputs.
+- Digital Input (DI): This is a logical input signal that can be used in HRScript or for assigning various inputs.
+- Digital Output (DO): This is a logical output signal that can be used in HRScript or for assigning various outputs.
+- System Input (SI): This is a dedicated input signal that interfaces with the company"s system board.
+- System Output (SO): This is a dedicated output signal that interfaces with the company"s system board.
+- X: This is a physical input signal that is inputted from the outside of the controller via a fieldbus device.
+- Y: This is a physical output signal that is outputted to the outside of the controller via a fieldbus device. 
+- Memory (M): This can be used for storing data and can be accessed from HRScript.
+- System (S): This is used to read or write system values in the controller. Refer to [3.4 S relay](./4-sw-relay/README.md).
+- AuxiliaRy (R): This is an auxiliary relay for temporarily storing.
+- Keep (K): This is an auxiliary relay for temporarily storing. The value will be stored even when the power is turned off. 
+- Timer (T): Relays for timer operation, the contact is On when the value is 0. 
+- Counter (C): Relays for counter operation, the contact is On when the value is 0. 
 
-  2) Digital Output (DO): This is a logical output signal that can be used in HRScript or for assigning various outputs.
+<style type="text/css">
+  .relay-table {
+    border-collapse: collapse;
+    /* width를 지정하지 않거나 auto로 두면 내용물에 폭이 딱 맞춰집니다 */
+    width: auto; 
+    font-family: sans-serif;
+    font-size: 13px;
+  }
+  
+  .relay-table th, 
+  .relay-table td {
+    border: 1px solid #a0a0a0;
+    /* 상하 패딩 6px, 좌우 패딩 2px (완전 0보다 가독성을 위해 2px 추천) */
+    padding: 6px 2px;
+    text-align: center;
+    /* 내용이 길어도 줄바꿈되지 않고 한 줄로 나오게 하여 폭을 압축 */
+    white-space: nowrap; 
+  }
 
-  3) System Input (SI): This is a dedicated input signal that interfaces with the company"s system board.
+  .relay-table th {
+    background-color: #efefef;
+    color: black;
+    font-weight: bold;
+  }
 
-  4) System Output (SO): This is a dedicated output signal that interfaces with the company"s system board.
+  /* 홀수 줄 배경색 (선택사항: 가독성 향상) */
+  .relay-table tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+  }
+  .relay-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+</style>
 
-  5) X: This is a physical input signal that is inputted from the outside of the controller via a fieldbus device.
+<table class="relay-table">
+  <thead>
+    <tr>
+      <th>Relay name</th>
+      <th>Number of points</th>
+      <th>Relay (bit)</th>
+      <th>Relay (byte)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>DI</td>
+      <td>9600 bits (1280 bytes)</td>
+      <td>FB0.DI0-FB9.DI959</td>
+      <td>FB0.DIB0-FB9.DIB127</td>
+    </tr>
+    <tr>
+      <td>DO</td>
+      <td>9600 bits (1280 bytes)</td>
+      <td>FB0.DO0-FB9.DO959</td>
+      <td>FB0.DOB0-FB9.DOB127</td>
+    </tr>
+    <tr>
+      <td>SI</td>
+      <td>960 bits (128 bytes)</td>
+      <td>SI0-SI959</td>
+      <td>SIB0-SIB127</td>
+    </tr>
+    <tr>
+      <td>SO</td>
+      <td>960 bits (128 bytes)</td>
+      <td>SO0-SO959</td>
+      <td>SOB0-SOB127</td>
+    </tr>
+    <tr>
+      <td>X</td>
+      <td>9600 bits (1280 bytes)</td>
+      <td>FB0.X0-FB9.X959</td>
+      <td>FB0.XB0-FB9.XB127</td>
+    </tr>
+    <tr>
+      <td>Y</td>
+      <td>9600 bits (1280 bytes)</td>
+      <td>FB0.Y0-FB9.Y959</td>
+      <td>FB0.YB0-FB9.YB127</td>
+    </tr>
+    <tr>
+      <td>M</td>
+      <td>160000 bits (20000 bytes)</td>
+      <td>M0-M159999</td>
+      <td>MB0-MB19999</td>
+    </tr>
+    <tr>
+      <td>S</td>
+      <td>160000 bits (20000 bytes)</td>
+      <td>S0-S159999</td>
+      <td>SB0-SB19999</td>
+    </tr>
+    <tr>
+      <td>R</td>
+      <td>960 bits (128 bytes)</td>
+      <td>R0-R959</td>
+      <td>RB0-RB127</td>
+    </tr>
+    <tr>
+      <td>K</td>
+      <td>960 bits (128 bytes)</td>
+      <td>K0-K959</td>
+      <td>KB0-KB127</td>
+    </tr>
+    <tr>
+      <td>T</td>
+      <td>256 DWORD (1024 bytes)</td>
+      <td>T0-T255</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>C</td>
+      <td>256 DWORD (1024 bytes)</td>
+      <td>C0-C255</td>
+      <td>-</td>
+    </tr>
+  </tbody>
+</table>
 
-  6) Y: This is a physical output signal that is outputted to the outside of the controller via a fieldbus device. 
+<div class="page-break"></div>
 
-  7) Memory (M): This can be used for storing data and can be accessed from HRScript.
-
-  8) System (S): This is used to read or write system values in the controller. Refer to [3.4 S relay](./4-sw-relay/README.md).
-
-  9) AuxiliaRy (R): This is an auxiliary relay for temporarily storing.
-
-  10) Keep (K): This is an auxiliary relay for temporarily storing. The value will be stored even when the power is turned off. 
-
-  11) Timer (T): Relays for timer operation, the contact is On when the value is 0. 
-
-  12) Counter (C): Relays for counter operation, the contact is On when the value is 0. 
-
-    | ** Relay name** | ** Number of points ** | ** Relay (bit) ** |** Relay (byte) ** |
-    | :--- | :--- | :--- | :--- |
-    | DI | 9600 bits (1280 bytes) | FB0.DI0-FB9.DI959 | FB0.DIB0-FB9.DIB127 |
-    | DO | 9600 bits (1280 bytes) | FB0.DO0-FB9.DO959 | FB0.DOB0-FB9.DOB127 |
-    | SI | 960 bits (128 bytes) | SI0-SI959 | SIB0-SIB127 |
-    | SO | 960 bits (128 bytes) | SO0-SO959 | SOB0-SOB127 |
-    | X | 9600 bits (1280 bytes) | FB0.X0-FB9.X959 | FB0.XB0-FB9.XB127 |
-    | Y | 9600 bits (1280 bytes) | FB0.Y0-FB9.Y959 | FB0.YB0-FB9.YB127 |
-    | M | 160000 bits (20000 bytes) | M0-M159999 | MB0-MB19999 |
-    | S | 160000 bits (20000 bytes) | S0-S159999 | SB0-SB19999 |
-    | R | 960 bits (128 bytes) | R0-R959 | RB0-RB127 |
-    | K | 960 bits (128 bytes) | K0-K959 | KB0-KB127 |
-    | T | 256 DWORD (1024 bytes) | T0-T255 | - |
-    | C | 256 DWORD (1024 bytes) | C0-C255 | - |
-
-* data-type  
+### data-type  
 There are five different types, as shown below.
 
   * No designation: bit, 1 bit
@@ -119,9 +214,9 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 </tbody>
 </table>
 
-<br>
+<div class="page-break"></div>
 
-* signal-index
+### signal-index
 
  This is a 0-based index within the relay type. The index will be given in bit units for DO and in byte units for DOB, DOW, DOL, and DOF.
 

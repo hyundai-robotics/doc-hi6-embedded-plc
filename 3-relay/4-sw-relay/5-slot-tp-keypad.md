@@ -224,3 +224,6 @@ Supported from V60.30-07
 	</tr>
 </tbody>
 </table>
+
+<div class="page-break"></div>
+

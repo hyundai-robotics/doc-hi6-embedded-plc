@@ -96,7 +96,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 </table>
 
 
-<br>
+<div class="page-break"></div>
 
 
 <table class="tg">
@@ -203,10 +203,6 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 </tbody>
 </table>
 
-
-<br>
-
-
 <table class="tg">
 <thead>
 	<tr>
@@ -257,7 +253,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 </tbody>
 </table>
 
-<br>
+<div class="page-break"></div>
 
 ### CIFX PCI Master Only
 
@@ -331,8 +327,6 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 </tbody>
 </table>
 
-<br>
-
 <table class="tg">
 <thead>
 	<tr>
@@ -388,3 +382,5 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	</tr>
 </tbody>
 </table>	
+
+<div class="page-break"></div>

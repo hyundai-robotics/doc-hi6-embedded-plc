@@ -3587,14 +3587,50 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 </style>
 
 
-### 시스템 변수 (system variable) 설정
+### 시스템 변수 (system variable) 얻기 및 설정
 
 {% hint style="info" %}
-시스템 변수 설정을 위해서는 command 가 변경된 것을 확인하고 동작합니다. <br>
+V70.00-00 미만의 버전에서는
+시스템 변수 설정을 위해서 command 가 변경된 것을 확인하고 동작합니다. <br>
 즉, command 값이 161로 변경된 순간에 1회 동작합니다.  
 
 {% endhint %}
 
+#### 시스템 변수 얻기 
+<table class="tg">
+<thead>
+	<tr>
+		<th>S offset</th>
+		<th>field</th>
+		<th>description</th>
+		<th>type</th>
+	</tr>
+</thead>
+
+<tbody>
+	<tr>
+		<td>0</td>
+		<td>command</td>
+		<td>GET_SYS_VAR (160)</td>
+		<td>s2</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>param 1</td>
+		<td>item (of set data)</td>
+		<td>s2</td>
+	</tr>
+	<tr>
+		<td>4 ~ 18</td>
+		<td>param n</td>
+		<td>get value</td>
+		<td></td>
+	</tr>
+</tbody>
+</table>
+<br>
+
+#### 시스템 변수 설정 
 <table class="tg">
 <thead>
 	<tr>
@@ -3621,15 +3657,15 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	<tr>
 		<td>4 ~ 18</td>
 		<td>param n</td>
-		<td>value</td>
+		<td>set value</td>
 		<td></td>
 	</tr>
 </tbody>
 </table>
+<br>
+<br>
 
-<br>
-<br>
-ex 1) 재생속도 설정
+#### <mark style="color:green;">재생속도</mark>
 <table class="tg">
 <thead>
 	<tr>
@@ -3654,11 +3690,11 @@ ex 1) 재생속도 설정
 	</tr>
 </tbody>
 </table>
-
-![](../../_assets/playback_speed.png)
-
+참고) <br>
+- V70.00-00 미만의 버전에서 얻기는 지원하지 않습니다. <br>
 <br>
-ex 2) 툴번호 변경
+
+#### <mark style="color:green;">현재 툴번호</mark>
 <table class="tg">
 <thead>
 	<tr>
@@ -3683,11 +3719,11 @@ ex 2) 툴번호 변경
 	</tr>
 </tbody>
 </table>
-
-![](../../_assets/tool_change.png)
-
+참고) <br>
+- V70.00-00 미만의 버전에서 얻기는 지원하지 않습니다. <br>
 <br>
-ex 3) 스텝 전/후진시 최고속 변경
+
+#### <mark style="color:green;">스텝 전/후진시 최고속</mark>
 <table class="tg">
 <thead>
 	<tr>
@@ -3712,9 +3748,11 @@ ex 3) 스텝 전/후진시 최고속 변경
 	</tr>
 </tbody>
 </table>
+참고) <br>
+- V70.00-00 미만의 버전에서 얻기는 지원하지 않습니다. <br>
+- V60.32-07 미만의 버전에서 설정을 지원하지 않습니다. <br>
+<br>
 
-![](../../_assets/manual_speed.png)
-  
 <div class="page-break"></div>
 
 [__SOURCE](3-relay/4-sw-relay/13-slot-hw-info.md)

@@ -428,7 +428,7 @@ DI and DO are logical inputs and outputs, respectively, and can be accessed thro
 The I/O diagram of the ${cont_model} robot controller is as shown below.
 
 
-![](../_assets/io-diagram.png)
+![](../../_assets/io-diagram.png)
 
 Figure 3.1 I/O diagram
 

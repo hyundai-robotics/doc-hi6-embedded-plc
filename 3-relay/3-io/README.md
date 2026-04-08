@@ -1,9 +1,9 @@
-# 3.3 Input/output
+﻿# 3.3 Input/output
 
 The I/O diagram of the ${cont_model} robot controller is as shown below.
 
 
-![](../_assets/io-diagram.png)
+![](../../_assets/io-diagram.png)
 
 Figure 3.1 I/O diagram
 

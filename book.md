@@ -2312,9 +2312,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 </tbody>
 </table>
 
-<br>
-<br>
-<br>
+<div class="page-break"></div>
 
 <table class="tg">
 <thead>
@@ -9786,7 +9784,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 <div class="page-break"></div>
 
 [__SOURCE](3-relay/4-sw-relay/19-slot-monopump.md)
-# 3.4.19 S 릴레이 - MONOPUMP
+# 3.4.19 S relay - MONOPUMP
 
 <style type="text/css">
 table  {border-collapse:collapse;}
@@ -10382,7 +10380,6 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 </style>
 
 ### * Rung and branch
-<br>
 
 <table>
 <thead>
@@ -10421,10 +10418,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 </tbody>
 </table>
 
-<br><br>  
-
 ### * Logic examination instructions: If the examination result is true, the rung is active. If false, the rung is inactive. 
-<br>
 
 <table>
 <thead>
@@ -10493,11 +10487,9 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 </tbody>
 </table>
 
-<br><br>  
+<div class="page-break"></div>
 
 ### * Output instructions
-
-<br>
 
 <table>
 <thead>
@@ -10542,13 +10534,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 </tbody>
 </table>
 
-
-
-<br><br>  
-
 ### * Timer and counter instructions
-
-<br>
 
 <table>
 <thead>
@@ -10575,12 +10561,9 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 </tbody>
 </table>
 
-
-<br><br>  
+<div class="page-break"></div>
 
 ### * Arithmetic operation instructions
-
-<br>
 
 <table>
 <thead>
@@ -10637,14 +10620,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 </tbody>
 </table>
 
-
-
-
-<br><br>  
-
 ### * Data conversion instructions
-
-<br>
 
 <table>
 <thead>
@@ -10677,12 +10653,9 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 </tbody>
 </table>
 
-
-<br><br>  
+<div class="page-break"></div>
 
 ### * Move and Copy instructions
-
-<br>
 
 <table>
 <thead>
@@ -10721,12 +10694,9 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 </tbody>
 </table>
 
-<br><br>  
-
+<div class="page-break"></div>
 
 ### * Block control instructions
-
-<br>
 
 <table>
 <thead>

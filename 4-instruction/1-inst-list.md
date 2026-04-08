@@ -9,7 +9,6 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 </style>
 
 ### * Rung and branch
-<br>
 
 <table>
 <thead>
@@ -48,10 +47,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 </tbody>
 </table>
 
-<br><br>  
-
 ### * Logic examination instructions: If the examination result is true, the rung is active. If false, the rung is inactive. 
-<br>
 
 <table>
 <thead>
@@ -120,11 +116,9 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 </tbody>
 </table>
 
-<br><br>  
+<div class="page-break"></div>
 
 ### * Output instructions
-
-<br>
 
 <table>
 <thead>
@@ -169,13 +163,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 </tbody>
 </table>
 
-
-
-<br><br>  
-
 ### * Timer and counter instructions
-
-<br>
 
 <table>
 <thead>
@@ -202,12 +190,9 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 </tbody>
 </table>
 
-
-<br><br>  
+<div class="page-break"></div>
 
 ### * Arithmetic operation instructions
-
-<br>
 
 <table>
 <thead>
@@ -264,14 +249,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 </tbody>
 </table>
 
-
-
-
-<br><br>  
-
 ### * Data conversion instructions
-
-<br>
 
 <table>
 <thead>
@@ -304,12 +282,9 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 </tbody>
 </table>
 
-
-<br><br>  
+<div class="page-break"></div>
 
 ### * Move and Copy instructions
-
-<br>
 
 <table>
 <thead>
@@ -348,12 +323,9 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 </tbody>
 </table>
 
-<br><br>  
-
+<div class="page-break"></div>
 
 ### * Block control instructions
-
-<br>
 
 <table>
 <thead>

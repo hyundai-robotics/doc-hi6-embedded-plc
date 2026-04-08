@@ -69,9 +69,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 </tbody>
 </table>
 
-<br>
-<br>
-<br>
+<div class="page-break"></div>
 
 <table class="tg">
 <thead>

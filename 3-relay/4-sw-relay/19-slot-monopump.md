@@ -1,4 +1,4 @@
-﻿# 3.4.19 S 릴레이 - MONOPUMP
+﻿# 3.4.19 S relay - MONOPUMP
 
 <style type="text/css">
 table  {border-collapse:collapse;}

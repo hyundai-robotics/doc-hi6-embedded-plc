@@ -1759,9 +1759,9 @@ td {
 <tbody>
 	<tr>
 		<td>SB4</th>
-		<td>PLC execution mode<br>
-		(0=stop, 1=R.stop, 2=R.run, 3= run, 4=off, 5=no program)</td>
-		<td></td>
+		<td>PLC execution mode</td>
+		<td>0=stop, 1=R.stop, 2=R.run,<br>
+		 3= run, 4=off, 5=no program</td>
 	</tr>
 	<tr class='grayed'><td>-</td><td>-</td><td>-</td></tr>
 	<tr>
@@ -1796,19 +1796,18 @@ td {
 	<tr class='grayed'><td>-</td><td>-</td><td>-</td></tr>
 	<tr>
 		<td>SB14</td>
-		<td>Software version: First<br>
-		e.g., In the case of V60.05-08, SB14:60, SB15:5, SB16:8</td>
-		<td></td>
+		<td>Software version: First</td>
+		<td>e.g., In the case of V60.05-08, 60</td>
 	</tr>
 	<tr>
 		<td>SB15</td>
 		<td>Software version: Second</td>
-		<td></td>
+		<td>e.g., In the case of V60.05-08, 5</td>
 	</tr>
 	<tr>
 		<td>SB16</td>
 		<td>Software version: Small-fix</td>
-		<td></td>
+		<td>e.g., In the case of V60.05-08, 8</td>
 	</tr>
 	<tr class='grayed'><td>-</td><td>-</td><td>-</td></tr>
 	<tr>
@@ -1859,8 +1858,8 @@ td {
 	</tr>
 	<tr>
 		<td>SB41</td>
-		<td>Robot state (0=stop, 1=run, 2=wait)</td>
-		<td></td>
+		<td>Robot state</td>
+		<td>0=stop, 1=run, 2=wait</td>
 	</tr>
 	<tr>
 		<td>SB42</td>
@@ -1868,6 +1867,13 @@ td {
 		<td>%</td>
 	</tr>
 	<tr class='grayed'><td>-</td><td>-</td><td>-</td></tr>
+	</tbody>
+</table>
+
+<div class="page-break"></div>
+
+<table class="tg">
+<tbody>
 	<tr>
 		<td>SW44</td>
 		<td>Step go/back max speed</td>
@@ -1878,13 +1884,6 @@ td {
 		<td>Tool tip movement speed</td>
 		<td>mm/s</td>
 	</tr>
-</tbody>
-</table>
-
-<div class="page-break"></div>
-
-<table class="tg">
-<tbody>
 	<tr>
 		<td>SW48</td>
 		<td>Error/warning number</td>
@@ -1955,44 +1954,51 @@ td {
 		<td></td>
 	</tr>
 	<tr class='grayed'><td>-</td><td>-</td><td>-</td></tr>
-	<tr>
-		<td>SW100</td>
-		<td>Main program number</td>
-		<td>Main task</td>
+		<tr>
+		<td>SB111</td>
+		<td>Run time selection</td>
+		<td>1=Total (after initialization),<br>
+		2=Total (after power input),<br>
+		3=Last cycle,<br>
+		4=Current cycle
+			</td>
 	</tr>
 	<tr>
-		<td>SW102</td>
-		<td>Step number</td>
-		<td>Main task</td>
-	</tr>
-	<tr>
-		<td>SW104</td>
-		<td>Function number</td>
-		<td>Main task</td>
-	</tr>
-	<tr>
-		<td>SW106</td>
-		<td>Main program number</td>
-		<td>Main task</td>
-	</tr>
-	<tr class='grayed'><td>-</td><td>-</td><td>-</td></tr>
-	<tr>
-		<td>SB109</td>
-		<td>Run time selection<br>
-		(1=Total (after initialization), 2=Total (after power input), 3=Last cycle, 4=Current cycle)</td>
-		<td></td>
-	</tr>
-	<tr>
-		<td>SL110</td>
+		<td>SL112</td>
 		<td>Motor on (day)</td>
 		<td></td>
 	</tr>
 	<tr>
-		<td>SL114</td>
+		<td>SL116</td>
 		<td>Motor on (ms)</td>
 		<td></td>
 	</tr>
-</tbody>
+	<tr>
+		<td>SL120</td>
+		<td>Run time (day)</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>SL124</td>
+		<td>Run time (ms)</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>SL128</td>
+		<td>Movement time (day)</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>SL132</td>
+		<td>Movement time (ms)</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>SL136</td>
+		<td>Cycle count</td>
+		<td></td>
+	</tr>
+	</tbody>
 </table>
 
 <div class="page-break"></div>
@@ -2000,64 +2006,42 @@ td {
 <table class="tg">
 <tbody>
 	<tr>
-		<td>SL118</td>
-		<td>Run time (day)</td>
-		<td></td>
-	</tr>
-	<tr>
-		<td>SL122</td>
-		<td>Run time (ms)</td>
-		<td></td>
-	</tr>
-	<tr>
-		<td>SL126</td>
-		<td>Movement time (day)</td>
-		<td></td>
-	</tr>
-	<tr>
-		<td>SL130</td>
-		<td>Movement time (ms)</td>
-		<td></td>
-	</tr>
-	<tr>
-		<td>SL134</td>
-		<td>Cycle count</td>
-		<td></td>
-	</tr>
-	<tr>
-		<td>SL138</td>
+		<td>SL140</td>
 		<td>wait, di wait time (day)</td>
 		<td></td>
 	</tr>
 	<tr>
-		<td>SL142</td>
+		<td>SL144</td>
 		<td>wait, di wait time (ms)</td>
 		<td></td>
 	</tr>
 	<tr>
-		<td>SL146</td>
+		<td>SL148</td>
 		<td>delay wait time (day)</td>
 		<td></td>
 	</tr>
 	<tr>
-		<td>SL150</td>
+		<td>SL152</td>
 		<td>delay wait time (ms)</td>
 		<td></td>
 	</tr>
 	<tr class='grayed'><td>-</td><td>-</td><td>-</td></tr>
 	<tr>
 		<td>SB159</td>
-		<td>Axis information selection<br>
-		1 = Current position (axis angle), 2 = Current position (base coordinate), 3 = Current position (base/user coordinate)<br>
+		<td>Axis information selection</td>
+		<td>1 = Current position (axis angle),<br>
+		2 = Current position (base coordinate),<br>
+		3 = Current position (base/user coordinate)<br>
 		6 = Axis speed, 7 = Motor speed<br>
-		8 = Motor speed command when speed control(rpm)<br>
-		10 = Load factor(I/Ir), 11 = Load factor(I/Ip), 13 = Load factor(continuous)<br>
+		8 = Motor speed command <br>when speed control(rpm)<br>
+		10 = Load factor(I/Ir),<br>
+		11 = Load factor(I/Ip),<br>
+		13 = Load factor(continuous)<br>
 		15 = Encoder temperature<br>
 		18 = Accumulated distance for each axis<br>
-		111 = Position deviation(current), 112 = Position deviation(maximum)<br>
-		124 = Encoder communication failure count<br>
-		</td>
-		<td></td>
+		111 = Position deviation(current),<br>
+		112 = Position deviation(maximum)<br>
+		124 = Encoder communication failure count</td>
 	</tr>
 	<tr>
 		<td>SF160</td>
@@ -2110,6 +2094,93 @@ td {
 		<td></td>
 	</tr>
 	<tr class='grayed'><td>-</td><td>-</td><td>-</td></tr>
+		<tr>
+		<td>SL200</td>
+		<td>Control status of each axis<br>
+		(0=off, 1=on)</td>
+		<td></td>
+	</tr>
+	<tr class='grayed'><td>-</td><td>-</td><td>-</td></tr>
+	</tbody>
+</table>
+
+<div class="page-break"></div>
+
+<table class="tg">
+<tbody>
+	<tr>
+		<td>SW210</br>
+		...</br>
+		SW280</td>
+		<td>Program Number
+		<td>(main task = sw210, subtask 1 = sw220,<br>
+		subtask 2 = sw230, subtask 3 = sw240,<br>
+		subtask 4 = sw250, subtask 5 = sw260,<br>
+		subtask 6 = sw270, subtask 7 = sw280)</td>
+	</tr>
+	<tr>
+		<td>SW212</br>
+		...</br>
+		SW282</td>
+		<td>Step Number</td>
+		<td>(main task = sw212, subtask 1 = sw222,<br>
+		subtask 2 = sw232, subtask 3 = sw242,<br>
+		subtask 4 = sw252, subtask 5 = sw262,<br>
+		subtask 6 = sw272, subtask 7 = sw282)</td></td>
+	</tr>
+	<tr>
+		<td>SW214</br>
+		...</br>
+		SW284</td>
+		<td>Function Number</td>
+		<td>(main task = sw214, subtask 1 = sw224,<br>
+		 subtask 2 = sw234, subtask 3 = sw244,<br>
+		subtask 4 = sw254, subtask 5 = sw264,<br>
+		subtask 6 = sw274, subtask 7 = sw284)</td>
+	</tr>
+	<tr>
+		<td>SW216</br>
+		...</br>
+		SW286</td>
+		<td>Main Program Number</td>
+		<td>(main task = sw216, subtask 1 = sw226,<br>
+		 subtask 2 = sw236, subtask 3 = sw246,<br>
+		subtask 4 = sw256, subtask 5 = sw266,<br>
+		subtask 6 = sw276, subtask 7 = sw286)</td>
+	</tr>
+	<tr class='grayed'><td>-</td><td>-</td><td>-</td></tr>
+	<tr>
+		<td>SW500</td>
+		<td>Gun Number</td>
+		<td>0=Currently selected gun, 1-16</td>
+	</tr>
+	<tr>
+		<td>SW502</td>
+		<td>Gun Search Status</td>
+		<td>1=Complete, 0=Incomplete</td>
+	</tr>
+	<tr>
+		<td>SW504</td>
+		<td>Moving Electrode<br>Wear Amount x 100</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>SW506</td>
+		<td>Fixed Electrode<br>Wear Amount x 100</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>SW508</td>
+		<td>Pressurizing Force<br>Command Value x 10</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>SW510</td>
+		<td>Pressurizing Force<br>Current Value x 10</td>
+		<td></td>
+	</tr>
+</tbody>
+</table>
 </tbody>
 </table>
 

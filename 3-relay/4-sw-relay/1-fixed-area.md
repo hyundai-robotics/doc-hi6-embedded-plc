@@ -209,6 +209,13 @@ td {
 		<td>%</td>
 	</tr>
 	<tr class='grayed'><td>-</td><td>-</td><td>-</td></tr>
+	</tbody>
+</table>
+
+<div class="page-break"></div>
+
+<table class="tg">
+<tbody>
 	<tr>
 		<td>SW44</td>
 		<td>Step go/back max speed</td>
@@ -333,6 +340,13 @@ td {
 		<td>Cycle count</td>
 		<td></td>
 	</tr>
+	</tbody>
+</table>
+
+<div class="page-break"></div>
+
+<table class="tg">
+<tbody>
 	<tr>
 		<td>SL140</td>
 		<td>wait, di wait time (day)</td>
@@ -422,6 +436,98 @@ td {
 		<td></td>
 	</tr>
 	<tr class='grayed'><td>-</td><td>-</td><td>-</td></tr>
+		<tr>
+		<td>SL200</td>
+		<td>Control status of each axis<br>
+		(0=off, 1=on)</td>
+		<td></td>
+	</tr>
+	<tr class='grayed'><td>-</td><td>-</td><td>-</td></tr>
+	</tbody>
+</table>
+
+<div class="page-break"></div>
+
+<table class="tg">
+<tbody>
+	<tr>
+		<td>SW210</br>
+		...</br>
+		SW280</td>
+		<td>Program Number
+		<td>(main task = sw210, subtask 1 = sw220,<br>
+		subtask 2 = sw230, subtask 3 = sw240,<br>
+		subtask 4 = sw250, subtask 5 = sw260,<br>
+		subtask 6 = sw270, subtask 7 = sw280)</td>
+	</tr>
+	<tr>
+		<td>SW212</br>
+		...</br>
+		SW282</td>
+		<td>Step Number</td>
+		<td>(main task = sw212, subtask 1 = sw222,<br>
+		subtask 2 = sw232, subtask 3 = sw242,<br>
+		subtask 4 = sw252, subtask 5 = sw262,<br>
+		subtask 6 = sw272, subtask 7 = sw282)</td></td>
+	</tr>
+	<tr>
+		<td>SW214</br>
+		...</br>
+		SW284</td>
+		<td>Function Number</td>
+		<td>(main task = sw214, subtask 1 = sw224,<br>
+		 subtask 2 = sw234, subtask 3 = sw244,<br>
+		subtask 4 = sw254, subtask 5 = sw264,<br>
+		subtask 6 = sw274, subtask 7 = sw284)</td>
+	</tr>
+	<tr>
+		<td>SW216</br>
+		...</br>
+		SW286</td>
+		<td>Main Program Number</td>
+		<td>(main task = sw216, subtask 1 = sw226,<br>
+		 subtask 2 = sw236, subtask 3 = sw246,<br>
+		subtask 4 = sw256, subtask 5 = sw266,<br>
+		subtask 6 = sw276, subtask 7 = sw286)</td>
+	</tr>
+	<tr class='grayed'><td>-</td><td>-</td><td>-</td></tr>
+	<tr>
+		<td>SW500</td>
+		<td>Gun Number</td>
+		<td>0=Currently selected gun,<br>
+		1-16</td>
+	</tr>
+	<tr>
+		<td>SW502</td>
+		<td>Gun Search Status</td>
+		<td>1=Complete, 0=Incomplete</td>
+	</tr>
+	<tr>
+		<td>SW504</td>
+		<td>Moving Electrode<br>
+		Wear Amount x 100</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>SW506</td>
+		<td>Fixed Electrode<br>
+		Wear Amount x 100</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>SW508</td>
+		<td>Pressurizing Force<br>
+		Command Value x 10</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>SW510</td>
+		<td>Pressurizing Force<br>
+		Current Value x 10</td>
+		<td></td>
+	</tr>
+</tbody>
+</table>
 </tbody>
 </table>
 

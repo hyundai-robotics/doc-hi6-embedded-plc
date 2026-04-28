@@ -34,20 +34,20 @@ FB3.DIW21
 - T (Timer) : 타이머 동작을 위한 릴레이며, 값이 0일 때 접점이 On됩니다. 
 - C (Counter) : 카운터 동작을 위한 릴레이며, 값이 0일 때 접점이 On 됩니다.  
   
-|릴레이 명칭|점 수|릴레이(bit)|릴레이(byte)|
-| :--- | :--- | :--- | :--- |
-| DI | 9600 bit (1280 byte) | FB0.DI0 ~ FB9.DI959 | FB0.DIB0 ~ FB9.DIB127 |
-| DO | 9600 bit (1280 byte) | FB0.DO0 ~ FB9.DO959 | FB0.DOB0 ~ FB9.DOB127 |
-| SI | 960 bit (128 byte) | SI0 ~ SI959 | SIB0 ~ SIB127 |
-| SO | 960 bit (128 byte) | SO0 ~ SO959 | SOB0 ~ SOB127 |
-| X | 9600 bit (1280 byte) | FB0.X0 ~ FB9.X959 | FB0.XB0 ~ FB9.XB127 |
-| Y | 9600 bit (1280 byte) | FB0.Y0 ~ FB9.Y959 | FB0.YB0 ~ FB9.YB127 |
-| M | 160000 bit (20000 byte) | M0 ~ M159999 | MB0 ~ MB19999 |
-| S | 160000 bit (20000 byte) | S0 ~ S159999 | SB0 ~ SB19999 |
-| R | 960 bit (128 byte) | R0 ~ R959 | RB0 ~ RB127 |
-| K | 960 bit (128 byte) | K0 ~ K959 | KB0 ~ KB127 |
-| T | 256 DWORD (1024 byte) | T0 ~ T255 | - |
-| C | 256 DWORD (1024 byte) | C0 ~ C255 | - |
+|릴레이 명칭|점 수|릴레이(bit)|릴레이(byte)|릴레이(word)|
+| :--- | :--- | :--- | :--- | :--- |
+| DI | 9600 bit (1280 byte) | FB0.DI0 ~ FB9.DI959 | FB0.DIB0 ~ FB9.DIB119 | FB0.DIW0 ~ FB9.DIW118 |
+| DO | 9600 bit (1280 byte) | FB0.DO0 ~ FB9.DO959 | FB0.DOB0 ~ FB9.DOB119 | FB0.DOW0 ~ FB9.DOW118 |
+| SI | 960 bit (128 byte) | SI0 ~ SI959 | SIB0 ~ SIB119 | SIW0 ~ SIW118 |
+| SO | 960 bit (128 byte) | SO0 ~ SO959 | SOB0 ~ SOB119 | SOW0 ~ SOW118 |
+| X | 9600 bit (1280 byte) | FB0.X0 ~ FB9.X959 | FB0.XB0 ~ FB9.XB119 | FB0.XW0 ~ FB9.XW118 |
+| Y | 9600 bit (1280 byte) | FB0.Y0 ~ FB9.Y959 | FB0.YB0 ~ FB9.YB119 | FB0.YW0 ~ FB9.YW118 |
+| M | 160000 bit (20000 byte) | M0 ~ M159999 | MB0 ~ MB19999 | MW0 ~ MW19998 |
+| S | 160000 bit (20000 byte) | S0 ~ S159999 | SB0 ~ SB19999 | SW0 ~ SW19998 |
+| R | 960 bit (128 byte) | R0 ~ R959 | RB0 ~ RB119 | RW0 ~ RW118 |
+| K | 960 bit (128 byte) | K0 ~ K959 | KB0 ~ KB119 | KW0 ~ KW118 |
+| T | 256 DWORD (1024 byte) | T0 ~ T255 | - | - |
+| C | 256 DWORD (1024 byte) | C0 ~ C255 | - | - |
 
 ### data-type  
 아래와 같이 5가지 type이 있습니다.

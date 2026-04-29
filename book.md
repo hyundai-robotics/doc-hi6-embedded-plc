@@ -216,20 +216,88 @@ FB3.DIW21
 - T (Timer) : 타이머 동작을 위한 릴레이며, 값이 0일 때 접점이 On됩니다. 
 - C (Counter) : 카운터 동작을 위한 릴레이며, 값이 0일 때 접점이 On 됩니다.  
   
-|릴레이 명칭|점 수|릴레이(bit)|릴레이(byte)|
-| :--- | :--- | :--- | :--- |
-| DI | 9600 bit (1280 byte) | FB0.DI0 ~ FB9.DI959 | FB0.DIB0 ~ FB9.DIB127 |
-| DO | 9600 bit (1280 byte) | FB0.DO0 ~ FB9.DO959 | FB0.DOB0 ~ FB9.DOB127 |
-| SI | 960 bit (128 byte) | SI0 ~ SI959 | SIB0 ~ SIB127 |
-| SO | 960 bit (128 byte) | SO0 ~ SO959 | SOB0 ~ SOB127 |
-| X | 9600 bit (1280 byte) | FB0.X0 ~ FB9.X959 | FB0.XB0 ~ FB9.XB127 |
-| Y | 9600 bit (1280 byte) | FB0.Y0 ~ FB9.Y959 | FB0.YB0 ~ FB9.YB127 |
-| M | 160000 bit (20000 byte) | M0 ~ M159999 | MB0 ~ MB19999 |
-| S | 160000 bit (20000 byte) | S0 ~ S159999 | SB0 ~ SB19999 |
-| R | 960 bit (128 byte) | R0 ~ R959 | RB0 ~ RB127 |
-| K | 960 bit (128 byte) | K0 ~ K959 | KB0 ~ KB127 |
-| T | 256 DWORD (1024 byte) | T0 ~ T255 | - |
-| C | 256 DWORD (1024 byte) | C0 ~ C255 | - |
+<style type="text/css">
+  .relay-table {
+    border-collapse: collapse;
+    /* width를 지정하지 않거나 auto로 두면 내용물에 폭이 딱 맞춰집니다 */
+    width: auto; 
+    font-family: sans-serif;
+    font-size: 12px;
+  }
+  
+  .relay-table th, 
+  .relay-table td {
+    border: 1px solid #a0a0a0;
+    /* 상하 패딩 6px, 좌우 패딩 2px (완전 0보다 가독성을 위해 2px 추천) */
+    padding: 6px 2px;
+    text-align: center;
+    /* 내용이 길어도 줄바꿈되지 않고 한 줄로 나오게 하여 폭을 압축 */
+    white-space: nowrap; 
+    font-size: 12px;
+  }
+
+  .relay-table th {
+    background-color: #efefef;
+    color: black;
+    font-weight: bold;
+  }
+
+  /* 홀수 줄 배경색 (선택사항: 가독성 향상) */
+  .relay-table tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+  }
+  .relay-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+</style>
+
+<table class="relay-table">
+  <thead>
+    <tr>
+      <th>릴레이 <br>명칭</th>      <th>점 수</th>      <th>릴레이 <br>(bit)</th>      <th>릴레이 <br>(byte)</th>      <th>릴레이 <br>(word)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>DI</td>      <td>9600 bits (1280 bytes)</td>      <td>FB0.DI0-FB9.DI959</td>      <td>FB0.DIB0 ~ FB9.DIB119</td>      <td>FB0.DIW0 ~ FB9.DIW118</td> 
+    </tr>
+    <tr>
+      <td>DO</td>      <td>9600 bits (1280 bytes)</td>      <td>FB0.DO0-FB9.DO959</td>      <td>FB0.DOB0 ~ FB9.DOB119</td>      <td>FB0.DOW0 ~ FB9.DOW118</td>
+    </tr>
+    <tr>
+      <td>SI</td>      <td>960 bits (128 bytes)</td>      <td>SI0-SI959</td>      <td>SIB0 ~ SIB119</td>      <td>SIW0 ~ SIW118</td>
+    </tr>
+    <tr>
+      <td>SO</td>      <td>960 bits (128 bytes)</td>      <td>SO0-SO959</td>      <td>SOB0 ~ SOB119</td>      <td>SOW0 ~ SOW118</td>
+    </tr>
+    <tr>
+      <td>X</td>      <td>9600 bits (1280 bytes)</td>      <td>FB0.X0-FB9.X959</td>      <td>FB0.XB0 ~ FB9.XB119</td>      <td>FB0.XW0 ~ FB9.XW118</td>
+      </tr>      
+    <tr>
+      <td>Y</td>      <td>9600 bits (1280 bytes)</td>      <td>FB0.Y0-FB9.Y959</td>      <td>FB0.YB0 ~ FB9.YB119</td>      <td>FB0.YW0 ~ FB9.YW118</td>
+    </tr>
+    <tr>
+      <td>M</td>      <td>160000 bits (20000 bytes)</td>      <td>M0-M159999</td>      <td>MB0-MB19999</td>      <td>MW0 ~ MW19998</td>
+    </tr>
+    <tr>
+      <td>S</td>      <td>160000 bits (20000 bytes)</td>      <td>S0-S159999</td>      <td>SB0-SB19999</td>      <td>SW0 ~ SW19998</td>
+    </tr>
+    <tr>
+      <td>R</td>      <td>960 bits (128 bytes)</td>      <td>R0-R959</td>      <td>RB0 ~ RB119</td>      <td>RW0 ~ RW118</td>
+    </tr>
+    <tr>
+      <td>K</td>      <td>960 bits (128 bytes)</td>      <td>K0-K959</td>      <td>KB0 ~ KB119</td>      <td>KW0 ~ KW118</td>
+    </tr>
+    <tr>
+      <td>T</td>      <td>256 DWORD (1024 bytes)</td>      <td>T0-T255</td>      <td>-</td>      <td>-</td>
+    </tr>
+    <tr>
+      <td>C</td>      <td>256 DWORD (1024 bytes)</td>      <td>C0-C255</td>      <td>-</td>      <td>-</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="page-break"></div>
 
 ### data-type  
 아래와 같이 5가지 type이 있습니다.

@@ -224,7 +224,7 @@ Each will be explained in detail later.
     /* width를 지정하지 않거나 auto로 두면 내용물에 폭이 딱 맞춰집니다 */
     width: auto; 
     font-family: sans-serif;
-    font-size: 13px;
+    font-size: 12px;
   }
   
   .relay-table th, 
@@ -235,6 +235,7 @@ Each will be explained in detail later.
     text-align: center;
     /* 내용이 길어도 줄바꿈되지 않고 한 줄로 나오게 하여 폭을 압축 */
     white-space: nowrap; 
+    font-size: 12px;
   }
 
   .relay-table th {
@@ -255,84 +256,45 @@ Each will be explained in detail later.
 <table class="relay-table">
   <thead>
     <tr>
-      <th>Relay name</th>
-      <th>Number of points</th>
-      <th>Relay (bit)</th>
-      <th>Relay (byte)</th>
+      <th>Relay<br>name</th>      <th>Number of points</th>      <th>Relay <br>(bit)</th>      <th>Relay <br>(byte)</th>      <th>Relay <br>(word)</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>DI</td>
-      <td>9600 bits (1280 bytes)</td>
-      <td>FB0.DI0-FB9.DI959</td>
-      <td>FB0.DIB0-FB9.DIB127</td>
+      <td>DI</td>      <td>9600 bits (1280 bytes)</td>      <td>FB0.DI0-FB9.DI959</td>      <td>FB0.DIB0 ~ FB9.DIB119</td>      <td>FB0.DIW0 ~ FB9.DIW118</td> 
     </tr>
     <tr>
-      <td>DO</td>
-      <td>9600 bits (1280 bytes)</td>
-      <td>FB0.DO0-FB9.DO959</td>
-      <td>FB0.DOB0-FB9.DOB127</td>
+      <td>DO</td>      <td>9600 bits (1280 bytes)</td>      <td>FB0.DO0-FB9.DO959</td>      <td>FB0.DOB0 ~ FB9.DOB119</td>      <td>FB0.DOW0 ~ FB9.DOW118</td>
     </tr>
     <tr>
-      <td>SI</td>
-      <td>960 bits (128 bytes)</td>
-      <td>SI0-SI959</td>
-      <td>SIB0-SIB127</td>
+      <td>SI</td>      <td>960 bits (128 bytes)</td>      <td>SI0-SI959</td>      <td>SIB0 ~ SIB119</td>      <td>SIW0 ~ SIW118</td>
     </tr>
     <tr>
-      <td>SO</td>
-      <td>960 bits (128 bytes)</td>
-      <td>SO0-SO959</td>
-      <td>SOB0-SOB127</td>
+      <td>SO</td>      <td>960 bits (128 bytes)</td>      <td>SO0-SO959</td>      <td>SOB0 ~ SOB119</td>      <td>SOW0 ~ SOW118</td>
     </tr>
     <tr>
-      <td>X</td>
-      <td>9600 bits (1280 bytes)</td>
-      <td>FB0.X0-FB9.X959</td>
-      <td>FB0.XB0-FB9.XB127</td>
+      <td>X</td>      <td>9600 bits (1280 bytes)</td>      <td>FB0.X0-FB9.X959</td>      <td>FB0.XB0 ~ FB9.XB119</td>      <td>FB0.XW0 ~ FB9.XW118</td>
+      </tr>      
+    <tr>
+      <td>Y</td>      <td>9600 bits (1280 bytes)</td>      <td>FB0.Y0-FB9.Y959</td>      <td>FB0.YB0 ~ FB9.YB119</td>      <td>FB0.YW0 ~ FB9.YW118</td>
     </tr>
     <tr>
-      <td>Y</td>
-      <td>9600 bits (1280 bytes)</td>
-      <td>FB0.Y0-FB9.Y959</td>
-      <td>FB0.YB0-FB9.YB127</td>
+      <td>M</td>      <td>160000 bits (20000 bytes)</td>      <td>M0-M159999</td>      <td>MB0-MB19999</td>      <td>MW0 ~ MW19998</td>
     </tr>
     <tr>
-      <td>M</td>
-      <td>160000 bits (20000 bytes)</td>
-      <td>M0-M159999</td>
-      <td>MB0-MB19999</td>
+      <td>S</td>      <td>160000 bits (20000 bytes)</td>      <td>S0-S159999</td>      <td>SB0-SB19999</td>      <td>SW0 ~ SW19998</td>
     </tr>
     <tr>
-      <td>S</td>
-      <td>160000 bits (20000 bytes)</td>
-      <td>S0-S159999</td>
-      <td>SB0-SB19999</td>
+      <td>R</td>      <td>960 bits (128 bytes)</td>      <td>R0-R959</td>      <td>RB0 ~ RB119</td>      <td>RW0 ~ RW118</td>
     </tr>
     <tr>
-      <td>R</td>
-      <td>960 bits (128 bytes)</td>
-      <td>R0-R959</td>
-      <td>RB0-RB127</td>
+      <td>K</td>      <td>960 bits (128 bytes)</td>      <td>K0-K959</td>      <td>KB0 ~ KB119</td>      <td>KW0 ~ KW118</td>
     </tr>
     <tr>
-      <td>K</td>
-      <td>960 bits (128 bytes)</td>
-      <td>K0-K959</td>
-      <td>KB0-KB127</td>
+      <td>T</td>      <td>256 DWORD (1024 bytes)</td>      <td>T0-T255</td>      <td>-</td>      <td>-</td>
     </tr>
     <tr>
-      <td>T</td>
-      <td>256 DWORD (1024 bytes)</td>
-      <td>T0-T255</td>
-      <td>-</td>
-    </tr>
-    <tr>
-      <td>C</td>
-      <td>256 DWORD (1024 bytes)</td>
-      <td>C0-C255</td>
-      <td>-</td>
+      <td>C</td>      <td>256 DWORD (1024 bytes)</td>      <td>C0-C255</td>      <td>-</td>      <td>-</td>
     </tr>
   </tbody>
 </table>

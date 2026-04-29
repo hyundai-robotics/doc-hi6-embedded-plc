@@ -4,7 +4,7 @@
 [__SOURCE](0-about-this-manual/precautions.md)
 # 注意事项
 
-{% include url="https://hrcontentsrelay-bmgae5hdbzapc4bc.koreacentral-01.azurewebsites.net/api/proxy?path=doc-common-pages/zh/precautions.md" %}
+{% include file="zh/precautions.md" %}
 [__SOURCE](1-intro/README.md)
 # 1. 概述
 
@@ -203,18 +203,84 @@ FB3.DIW21
 
 10) 保持 (K): 这是一个辅助继电器，用于临时存储过时的值。即使在断电时，值也会被存储。为方便移植 Hi5a 梯形图文件而提供。建议在新的梯形图文件中使用 M 继电器。
 
-| **继电器名称** | **点数** | **继电器 (位)** | **继电器 (字节)** |
-| :--- | :--- | :--- | :--- |
-| DI | 9600 位 (1280 字节) | FB0.DI0-FB9.DI959 | FB0.DIB0-FB9.DIB127 |
-| DO | 9600 位 (1280 字节) | FB0.DO0-FB9.DO959 | FB0.DOB0-FB9.DOB127 |
-| SI | 960 位 (128 字节) | SI0-SI959 | SIB0-SIB127 |
-    | SO | 960 位 (128 字节) | SO0-SO959 | SOB0-SOB127 |
-    | X | 9600 位 (1280 字节) | FB0.X0-FB9.X959 | FB0.XB0-FB9.XB127 |
-    | Y | 9600 位 (1280 字节) | FB0.Y0-FB9.Y959 | FB0.YB0-FB9.YB127 |
-    | M | 160000 位 (20000 字节) | M0-M159999 | MB0-MB19999 |
-    | S | 160000 位 (20000 字节) | S0-S159999 | SB0-SB19999 |
-    | R | 960 位 (128 字节) | R0-R959 | RB0-RB127 |
-    | K | 960 位 (128 字节) | K0-K959 | KB0-KB127 |
+<style type="text/css">
+  .relay-table {
+    border-collapse: collapse;
+    width: auto; 
+    font-family: sans-serif;
+    font-size: 12px;
+  }
+  
+  .relay-table th, 
+  .relay-table td {
+    border: 1px solid #a0a0a0;
+    padding: 6px 2px;
+    text-align: center;
+    white-space: nowrap; 
+    font-size: 12px;
+  }
+
+  .relay-table th {
+    background-color: #efefef;
+    color: black;
+    font-weight: bold;
+  }
+
+  .relay-table tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+  }
+  .relay-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+</style>
+
+<table class="relay-table">
+  <thead>
+    <tr>
+      <th>继电器名称</th>      <th>点数</th>      <th>继电器 <br>(位)</th>      <th>继电器 <br>(字节)</th>      <th>继电器 <br>(字)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>DI</td>      <td>9600 位 (1280 字节)</td>      <td>FB0.DI0-FB9.DI959</td>      <td>FB0.DIB0 ~ FB9.DIB119</td>      <td>FB0.DIW0 ~ FB9.DIW118</td> 
+    </tr>
+    <tr>
+      <td>DO</td>      <td>9600 位 (1280 字节)</td>      <td>FB0.DO0-FB9.DO959</td>      <td>FB0.DOB0 ~ FB9.DOB119</td>      <td>FB0.DOW0 ~ FB9.DOW118</td>
+    </tr>
+    <tr>
+      <td>SI</td>      <td>960 位 (128 字节)</td>      <td>SI0-SI959</td>      <td>SIB0 ~ SIB119</td>      <td>SIW0 ~ SIW118</td>
+    </tr>
+    <tr>
+      <td>SO</td>      <td>960 位 (128 字节)</td>      <td>SO0-SO959</td>      <td>SOB0 ~ SOB119</td>      <td>SOW0 ~ SOW118</td>
+    </tr>
+    <tr>
+      <td>X</td>      <td>9600 位 (1280 字节)</td>      <td>FB0.X0-FB9.X959</td>      <td>FB0.XB0 ~ FB9.XB119</td>      <td>FB0.XW0 ~ FB9.XW118</td>
+      </tr>      
+    <tr>
+      <td>Y</td>      <td>9600 位 (1280 字节)</td>      <td>FB0.Y0-FB9.Y959</td>      <td>FB0.YB0 ~ FB9.YB119</td>      <td>FB0.YW0 ~ FB9.YW118</td>
+    </tr>
+    <tr>
+      <td>M</td>      <td>160000 位 (20000 字节)</td>      <td>M0-M159999</td>      <td>MB0-MB19999</td>      <td>MW0 ~ MW19998</td>
+    </tr>
+    <tr>
+      <td>S</td>      <td>160000 位 (20000 字节)</td>      <td>S0-S159999</td>      <td>SB0-SB19999</td>      <td>SW0 ~ SW19998</td>
+    </tr>
+    <tr>
+      <td>R</td>      <td>960 位 (128 字节)</td>      <td>R0-R959</td>      <td>RB0 ~ RB119</td>      <td>RW0 ~ RW118</td>
+    </tr>
+    <tr>
+      <td>K</td>      <td>960 位 (128 字节)</td>      <td>K0-K959</td>      <td>KB0 ~ KB119</td>      <td>KW0 ~ KW118</td>
+    </tr>
+    <tr>
+      <td>T</td>      <td>256 DWORD (1024 字节)</td>      <td>T0-T255</td>      <td>-</td>      <td>-</td>
+    </tr>
+    <tr>
+      <td>C</td>      <td>256 DWORD (1024 字节)</td>      <td>C0-C255</td>      <td>-</td>      <td>-</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="page-break"></div>
 
 * 数据类型  
 有五种不同类型，如下所示。
@@ -273,14 +339,11 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 </tbody>
 </table>
 
-<br>
+<div class="page-break"></div>
 
 * 信号索引
 
 这是继电器类型内的0基索引。该索引将以位为单位给出用于DO，并以字节为单位给出用于DOB、DOW、DOL和DOF。
-
-<br>
-<br>
 
 字段总线对象名称可以部分省略，如下所示。例如，DO961与FB1.DO1是相同的标识。
 

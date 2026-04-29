@@ -101,10 +101,10 @@ FB3.DIW21
       <td>S</td>      <td>160000 bits (20000 bytes)</td>      <td>S0-S159999</td>      <td>SB0-SB19999</td>      <td>SW0 ~ SW19998</td>
     </tr>
     <tr>
-      <td>R</td>      <td>1024 bits (128 bytes)</td>      <td>R0-R959</td>      <td>RB0 ~ RB127</td>      <td>RW0 ~ RW126</td>
+      <td>R</td>      <td>1024 bits (128 bytes)</td>      <td>R0-R1023</td>      <td>RB0 ~ RB127</td>      <td>RW0 ~ RW126</td>
     </tr>
     <tr>
-      <td>K</td>      <td>1024 bits (128 bytes)</td>      <td>K0-K959</td>      <td>KB0 ~ KB127</td>      <td>KW0 ~ KW126</td>
+      <td>K</td>      <td>1024 bits (128 bytes)</td>      <td>K0-K1023</td>      <td>KB0 ~ KB127</td>      <td>KW0 ~ KW126</td>
     </tr>
     <tr>
       <td>T</td>      <td>256 DWORD (1024 bytes)</td>      <td>T0-T255</td>      <td>-</td>      <td>-</td>

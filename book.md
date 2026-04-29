@@ -242,22 +242,22 @@ FB3.DIW21
   </thead>
   <tbody>
     <tr>
-      <td>DI</td>      <td>9600 位 (1280 字节)</td>      <td>FB0.DI0-FB9.DI959</td>      <td>FB0.DIB0 ~ FB9.DIB119</td>      <td>FB0.DIW0 ~ FB9.DIW118</td> 
+      <td>DI</td>      <td>9600 位 (1200 字节)</td>      <td>FB0.DI0-FB9.DI959</td>      <td>FB0.DIB0 ~ FB9.DIB119</td>      <td>FB0.DIW0 ~ FB9.DIW118</td> 
     </tr>
     <tr>
-      <td>DO</td>      <td>9600 位 (1280 字节)</td>      <td>FB0.DO0-FB9.DO959</td>      <td>FB0.DOB0 ~ FB9.DOB119</td>      <td>FB0.DOW0 ~ FB9.DOW118</td>
+      <td>DO</td>      <td>9600 位 (1200 字节)</td>      <td>FB0.DO0-FB9.DO959</td>      <td>FB0.DOB0 ~ FB9.DOB119</td>      <td>FB0.DOW0 ~ FB9.DOW118</td>
     </tr>
     <tr>
-      <td>SI</td>      <td>960 位 (128 字节)</td>      <td>SI0-SI959</td>      <td>SIB0 ~ SIB119</td>      <td>SIW0 ~ SIW118</td>
+      <td>SI</td>      <td>960 位 (120 字节)</td>      <td>SI0-SI959</td>      <td>SIB0 ~ SIB119</td>      <td>SIW0 ~ SIW118</td>
     </tr>
     <tr>
-      <td>SO</td>      <td>960 位 (128 字节)</td>      <td>SO0-SO959</td>      <td>SOB0 ~ SOB119</td>      <td>SOW0 ~ SOW118</td>
+      <td>SO</td>      <td>960 位 (120 字节)</td>      <td>SO0-SO959</td>      <td>SOB0 ~ SOB119</td>      <td>SOW0 ~ SOW118</td>
     </tr>
     <tr>
-      <td>X</td>      <td>9600 位 (1280 字节)</td>      <td>FB0.X0-FB9.X959</td>      <td>FB0.XB0 ~ FB9.XB119</td>      <td>FB0.XW0 ~ FB9.XW118</td>
+      <td>X</td>      <td>9600 位 (1200 字节)</td>      <td>FB0.X0-FB9.X959</td>      <td>FB0.XB0 ~ FB9.XB119</td>      <td>FB0.XW0 ~ FB9.XW118</td>
       </tr>      
     <tr>
-      <td>Y</td>      <td>9600 位 (1280 字节)</td>      <td>FB0.Y0-FB9.Y959</td>      <td>FB0.YB0 ~ FB9.YB119</td>      <td>FB0.YW0 ~ FB9.YW118</td>
+      <td>Y</td>      <td>9600 位 (1200 字节)</td>      <td>FB0.Y0-FB9.Y959</td>      <td>FB0.YB0 ~ FB9.YB119</td>      <td>FB0.YW0 ~ FB9.YW118</td>
     </tr>
     <tr>
       <td>M</td>      <td>160000 位 (20000 字节)</td>      <td>M0-M159999</td>      <td>MB0-MB19999</td>      <td>MW0 ~ MW19998</td>
@@ -266,10 +266,10 @@ FB3.DIW21
       <td>S</td>      <td>160000 位 (20000 字节)</td>      <td>S0-S159999</td>      <td>SB0-SB19999</td>      <td>SW0 ~ SW19998</td>
     </tr>
     <tr>
-      <td>R</td>      <td>960 位 (128 字节)</td>      <td>R0-R959</td>      <td>RB0 ~ RB119</td>      <td>RW0 ~ RW118</td>
+      <td>R</td>      <td>1024 位 (128 字节)</td>      <td>R0-R959</td>      <td>RB0 ~ RB127</td>      <td>RW0 ~ RW126</td>
     </tr>
     <tr>
-      <td>K</td>      <td>960 位 (128 字节)</td>      <td>K0-K959</td>      <td>KB0 ~ KB119</td>      <td>KW0 ~ KW118</td>
+      <td>K</td>      <td>1024 位 (128 字节)</td>      <td>K0-K959</td>      <td>KB0 ~ KB127</td>      <td>KW0 ~ KW126</td>
     </tr>
     <tr>
       <td>T</td>      <td>256 DWORD (1024 字节)</td>      <td>T0-T255</td>      <td>-</td>      <td>-</td>

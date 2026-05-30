@@ -1,4 +1,10 @@
-﻿# Table of contents
+﻿<script id="page-config" type="application/json">
+{
+	"permittedStrs": ["Hi6", "Hi7"]
+}
+</script>
+
+# Table of contents
 
 * [${cont_model} 제어기 기능설명서 - 내장PLC (Embedded PLC)](README.md)
 

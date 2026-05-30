@@ -6,7 +6,7 @@
 <br>
 <br>
 
-(2) The values ​​of the Timer & Counter have the following meanings:  
+(2) The values   of the Timer & Counter have the following meanings:  
 <table class="tg">
 <thead>
 	<tr>

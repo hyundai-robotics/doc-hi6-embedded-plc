@@ -1,4 +1,10 @@
-﻿# 5. Difference in the Embedded PLC between Hi5a and Hi6/Hi7
+﻿<script id="page-config" type="application/json">
+{
+	"permittedStrs": ["Hi6", "Hi7"]
+}
+</script>
+
+# 5. Difference in the Embedded PLC between Hi5a and Hi6/Hi7
 
 The functions of the Hi6/Hi7 controller's embedded PLC are similar to those of the Hi5a controller's embedded PLC, and the same HRLadder, or the same ladder editor, is used. 
 Therefore, users who are already familiar with the functions of the Hi5a controller's embedded PLC can quickly learn from this manual by checking only the different parts in the Hi6/Hi7 controller.

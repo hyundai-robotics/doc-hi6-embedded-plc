@@ -1,4 +1,10 @@
-﻿# 5. Hi5a와 Hi6/Hi7의 내장PLC 차이점
+﻿<script id="page-config" type="application/json">
+{
+	"permittedStrs": ["Hi6", "Hi7"]
+}
+</script>
+
+# 5. Hi5a와 Hi6/Hi7의 내장PLC 차이점
 
 Hi6/Hi7의 내장PLC 기능은 Hi5a의 내장PLC 기능과 유사하며, 동일한 래더 편집기 HRLadder를 사용합니다.
 따라서 이미 Hi5a의 내장PLC 기능에 익숙한 사용자는, Hi6/Hi7 제어기에서 달라진 부분만을 확인하는 방식으로 이 설명서를 빠르게 학습할 수 있습니다.

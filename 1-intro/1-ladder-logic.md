@@ -1,51 +1,49 @@
-﻿# 1.1 Ladder logic
+﻿# 1.1 梯形逻辑
 
-Ladder Logic, or Ladder Diagram (LD), is the main programming method for embedded PLCs. [Besides LD, there are other methods such as Structured Text (ST), Function Block Diagram (FBD), and Sequential Function Chart (SFC), but embedded PLCs do not support them and will not be further discussed.]
+梯形逻辑，或称梯形图（LD），是嵌入式PLC的主要编程方法。[除了LD，还有其他方法，如结构化文本（ST）、功能块图（FBD）和顺序功能图（SFC），但嵌入式PLC不支持它们，因此不再进一步讨论。]
 
-The reason the ladder program is so named is that the architecture of the program resembles a ladder. The horizontal connection line through which signals flow in a ladder-like structure is called a rung, which includes multiple instructions.
+梯形程序之所以如此命名，是因为程序的结构类似梯子。信号在梯形结构中流动的水平连接线称为梯级，包含多个指令。
 
 ![](../_assets/ladder-sample2.png)
 
-
-A robot teaching project can include one or multiple ladder diagrams, and each diagram may consist of tens to hundreds of rungs.
-When the programmable logic controller (PLC) is switched to RUN mode, LD will be executed repeatedly. The time taken to complete one cycle is called scan time and usually ranges from a few milliseconds to several tens of milliseconds.
-
+一个机器人教学项目可以包含一个或多个梯形图，每个图可能由十到几百个梯级组成。
+当可编程逻辑控制器（PLC）切换到运行模式时，LD将被反复执行。完成一个周期所需的时间称为扫描时间，通常从几毫秒到几十毫秒不等。
 
 <br>
 
-An instruction consists of a mnemonic, which is the name of the instruction, and an operand, which is the argument to be transferred to the instruction.
+指令由助记符组成，即指令的名称，以及操作数，即要传递给指令的参数。
 
-  For example, the ADD (+) instruction in the figure below is configured as follows.
+ 例如，下图中的添加（ADD (+)）指令配置如下。
 
 ![](../_assets/ladder-add.png)
 
-* Mnemonic: ADD
-* Operand1: MW5
-* Operand2: DOW2
-* Operand3: MW6
+* 助记符：ADD
+* 操作数1：MW5
+* 操作数2：DOW2
+* 操作数3：MW6
 
 <br>
 
-Instructions of an embedded PLC can be classified into multiple instruction groups, as described below. As every instruction will be explained in Section 4, the instructions in this section will be explained as examples for understanding the concept of ladder logic.
+嵌入式PLC的指令可以分为多个指令组，如下所述。由于每个指令将在第4节中进行解释，因此本节中的指令将作为理解梯形逻辑概念的示例进行解释。
 
 ---
 
 <br>
 
-### Contact instruction
+### 接触指令
 
-Classified as a contact instruction, eXamine If Closed (XIC) is a simple instruction with only one operand. This instruction will be indicated on the rung with an operand marked on the -| |- symbol.
+被分类为接触指令的检查是否关闭（XIC）是一个只有一个操作数的简单指令。该指令将在梯级上以标有-| |-符号的操作数表示。
 
 ![](../_assets/ladder-xic.png)
 
-A contact is a switch determining whether to transfer the signal (1) applied to the left along the rung to the right. If the relay DO3"s value is 0 (inactive), the contact will be open, keeping the signal from being transferred. If the DO3"s value is 1 (active), the contact will be closed, allowing the signal to be transferred.
+接触是一个开关，决定是否将应用于左侧的信号（1）沿梯级传递到右侧。如果继电器DO3的值为0（非活跃），则接触将处于开放状态，不会传递信号。如果DO3的值为1（活跃），则接触将关闭，允许信号传递。
 
 ![](../_assets/ladder-contact.png)
 
 <br>
 
-When several XIC contacts are connected in series or parallel in the form of a branch, logical operational expressions such as AND, OR, and NOT can be created.
-(![](../_assets/ladder-not.png) shows an Inverting (INV) instruction that is designed to transfer the opposite value of the logical value on the left to the right and has no operand.)
+当多个XIC接触以串联或并联的形式相连时，可以创建逻辑运算表达式，例如AND、OR和NOT。
+(![](../_assets/ladder-not.png)显示了一个反向（INV）指令，旨在将左侧的逻辑值的相反值传递到右侧，并且没有操作数。)
 
 ```
 X1 AND (X2 OR (NOT X3))
@@ -55,12 +53,11 @@ X1 AND (X2 OR (NOT X3))
 
 <br>
 
+### 输出线圈指令
 
-### Output-coil instruction
+输出使能（OTE）被分类为输出线圈指令。它总是放置在梯级的最右端，并由-( )-符号表示。该指令允许从左侧传递的值输出到操作数继电器。
 
-OuTput Energize (OTE) is classified as an output coil instruction. It is always placed at the rightmost end of the rung and indicated by the -( )- symbol. This instruction allows the value transferred from the left to be outputted to the operand relay.
-
-If the result of the logical operation expression described above is outputted to the Y8 relay, it will be in the form shown below.
+如果上述逻辑运算表达式的结果输出到Y8继电器，则将以如下形式表示。
 
 ```
 Y8 = X1 AND (X2 OR (NOT X3))
@@ -68,12 +65,11 @@ Y8 = X1 AND (X2 OR (NOT X3))
 
 ![](../_assets/ladder-ote.png)
 
-
 <br>
 
-### Function instruction
+### 功能指令
 
-When the left side becomes active, a specific operation for the given operand will be executed. For example, in the diagram below, when DO3 becomes active, the arithmetic operation ADD (+) of adding the values of MW5 and DOW2 relays and then substituting the thus acquired sum into the MW6 relay will be executed.
+当左侧变为活跃时，将对给定的操作数执行特定操作。例如，在下图中，当DO3变为活跃时，将执行对MW5和DOW2继电器的值进行加法运算ADD (+)，然后将获得的和替换为MW6继电器。
 
 ```
 IF DO3:
@@ -82,11 +78,10 @@ IF DO3:
 
 ![](../_assets/ladder-add2.png)
 
-The compare instruction also transfers the operation result to the right side. For example, in the diagram below, if DO6 becomes active and MW8 exceeds 120, Y20 will be activated.
+比较指令也将操作结果传递到右侧。例如，在下图中，如果DO6变为活跃且MW8超过120，则Y20将被激活。
 
 ```
 Y20 = DO6 AND (MW8 > 120)
 ```
-
 
 ![](../_assets/ladder-grt.png)

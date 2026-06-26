@@ -1,4 +1,4 @@
-﻿# 3.4.11 S relay - CONVEYOR_INFO
+# 3.4.11 S relay - CONVEYOR_INFO
 
 <style type="text/css">
 table  {border-collapse:collapse;}
@@ -20,7 +20,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	<tr>
 		<td>0</td>
 		<td>command</td>
-		<td>GET_CONVEYOR_INFO (4000)</td>
+		<td>获取输送带信息 (4000)</td>
 		<td>s2</td>
 	</tr>
 	<tr>
@@ -32,37 +32,37 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	<tr>
 		<td>4</td>
 		<td rowspan=7>result</td>
-		<td>conveyor pulse</td>
+		<td>输送带脉冲</td>
 		<td>s2</td>
 	</tr>
 	<tr>
 		<td>6</td>
-		<td>workpiece position</td>
+		<td>工件位置</td>
 		<td>s2</td>
 	</tr>
 	<tr>
 		<td>8</td>
-		<td>conveyor speed</td>
+		<td>输送带速度</td>
 		<td>s2</td>
 	</tr>
 	<tr>
 		<td>10</td>
-		<td>workpiece count</td>
+		<td>工件数量</td>
 		<td>s2</td>
 	</tr>
 	<tr>
 		<td>12</td>
-		<td>limit switch input</td>
+		<td>限位开关输入</td>
 		<td>s2</td>
 	</tr>
 	<tr>
 		<td>14</td>
-		<td>raw pulse</td>
+		<td>原始脉冲</td>
 		<td>s2</td>
 	</tr>
 	<tr>
 		<td>14</td>
-		<td>encoder resolution</td>
+		<td>编码器分辨率</td>
 		<td>s4</td>
 	</tr>
 </tbody>
@@ -84,7 +84,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	<tr>
 		<td>0</td>
 		<td>command</td>
-		<td>GET_CONVEYOR_INFO_LIN (4010)</td>
+		<td>获取输送带信息_LIN (4010)</td>
 		<td>s2</td>
 	</tr>
 	<tr>
@@ -96,12 +96,12 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	<tr>
 		<td>4</td>
 		<td rowspan=2>result</td>
-		<td>linear conveyor horizontal angle</td>
+		<td>线性输送带水平角度</td>
 		<td>f4</td>
 	</tr>
 	<tr>
 		<td>8</td>
-		<td>linear conveyor vertical angle</td>
+		<td>线性输送带垂直角度</td>
 		<td>f4</td>
 	</tr>
 </tbody>
@@ -123,7 +123,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	<tr>
 		<td>0</td>
 		<td>command</td>
-		<td>GET_CONVEYOR_INFO_CIR (4020)</td>
+		<td>获取输送带信息_CIR (4020)</td>
 		<td>s2</td>
 	</tr>
 	<tr>
@@ -135,12 +135,12 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	<tr>
 		<td>4</td>
 		<td rowspan=2>result</td>
-		<td>circular conveyor angle (X axis)</td>
+		<td>圆形输送带角度 (X 轴)</td>
 		<td>f4</td>
 	</tr>
 	<tr>
 		<td>8</td>
-		<td>circular conveyor angle (Y axis)</td>
+		<td>圆形输送带角度 (Y 轴)</td>
 		<td>f4</td>
 	</tr>
 </tbody>
@@ -162,7 +162,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	<tr>
 		<td>0</td>
 		<td>command</td>
-		<td>GET_CONVEYOR_INFO_CIR2 (4040)</td>
+		<td>获取输送带信息_CIR2 (4040)</td>
 		<td>s2</td>
 	</tr>
 	<tr>
@@ -174,17 +174,17 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	<tr>
 		<td>4</td>
 		<td rowspan=3>result</td>
-		<td>circular conveyor center (X)</td>
+		<td>圆形输送带中心 (X)</td>
 		<td>f4</td>
 	</tr>
 	<tr>
 		<td>8</td>
-		<td>circular conveyor center (Y)</td>
+		<td>圆形输送带中心 (Y)</td>
 		<td>f4</td>
 	</tr>
 	<tr>
 		<td>12</td>
-		<td>circular conveyor center (Z)</td>
+		<td>圆形输送带中心 (Z)</td>
 		<td>f4</td>
 	</tr>
 </tbody>

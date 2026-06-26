@@ -1,13 +1,12 @@
-﻿# 4.8 GRT (Greater Than): Examining if Greater Than
-
+# 4.8 GRT (大于): 检查是否大于
 
 ### Description
-If the value of "source a" is greater than the value of "source b," the rung will be made active (contact active).
+如果“源 a”的值大于“源 b”的值，则该行将被激活（接触激活）。
 
 <br>
 
 ### Types that can be used as an operand
-(not possible for X)
+(不适用于 X)
 <style type="text/css">
 table  {border-collapse:collapse;}
 th {background-color:#efefef; border-style:solid;border-width:1px;color:black;text-align:center;}
@@ -65,6 +64,6 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 
 ### Example of use
 
-If the value of the input XB8 is greater than 80, the output Y10 will be switched on. If it is less than or equal to 80, the output will be switched off.
+如果输入 XB8 的值大于 80，则输出 Y10 将被打开。如果小于或等于 80，则输出将被关闭。
 
 ![](../_assets/grt.png)

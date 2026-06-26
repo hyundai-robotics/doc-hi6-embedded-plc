@@ -1,1 +1,1 @@
-﻿# ${cont_model} Controller Function Manual - Embedded Progammable Logic Controller (PLC)
+# ${cont_model} 控制器功能手册 - 嵌入式可编程逻辑控制器 (PLC)

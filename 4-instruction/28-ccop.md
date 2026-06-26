@@ -1,17 +1,15 @@
-﻿# 4.28 Conditional Copy Data (CCOP): Conditional Copying
+﻿# 4.28 条件复制数据 (CCOP)：条件复制
 
-
-### Description
-Depending on the state of the rung, values will be copied from the location of the "source a" or "source b" to the location of the "destination" as many as the number of the "length."
-If the "source" is a number, the "destination" will be filled with the relevant value as much as the value of the "length.". In this case, when the "destination" is in bit format, if the relevant value is 0, the "destination" will be filled with OFFs, and if the relevant value is not 0, the "destination" will be filled with ONs.
-If the "source" is a relay, the data types of the "source" and "destination" should be the same. That is, if the "source" is in the bit format, the "destination" should be in the bit format; if the "source" is in the byte (B) format, then the "destination" should be in the byte (B) format; if the "source" is in the word (W) format, then the "destination" should also be in the word (W) format.
-If the "source" + "length" is greater than the maximum number of the "source" relays or the "destination" + "length" is greater than the maximum number of "destination" relays, copying will be performed only up to the maximum number of relays.
-
+### 描述
+根据梯级的状态，将从“源 a”或“源 b”的位置复制值到“目标”的位置，数量与“长度”相等。
+如果“源”是数字，则“目标”将根据“长度”的值填充相应的值。在这种情况下，当“目标”处于位格式时，如果相应的值为0，“目标”将填充为OFF；如果相应的值不为0，“目标”将填充为ON。
+如果“源”是继电器，则“源”和“目标”的数据类型应相同。也就是说，如果“源”是位格式，则“目标”应该是位格式；如果“源”是字节（B）格式，则“目标”应该是字节（B）格式；如果“源”是字（W）格式，则“目标”也应该是字（W）格式。
+如果“源” + “长度”大于“源”继电器的最大数量，或者“目标” + “长度”大于“目标”继电器的最大数量，则复制将仅执行到最大继电器的数量。
 
 <br>
 
-### Types that can be used as an operant
-(not possible for X)
+### 可以用作操作数的类型
+(对于 X 不可能)
 <style type="text/css">
 table  {border-collapse:collapse;}
 th {background-color:#efefef; border-style:solid;border-width:1px;color:black;text-align:center;}
@@ -22,26 +20,26 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 <table>
 <thead>
   <tr>
-    <th>relay type</th>
-    <th colspan="2">input<br>X, DO</th>
-    <th colspan="2">output<br>Y, DI, R, K</th>
-    <th colspan="2">memory<br>M, S</th>
-    <th>const.<br>32bit</th>
+    <th>继电器类型</th>
+    <th colspan="2">输入<br>X, DO</th>
+    <th colspan="2">输出<br>Y, DI, R, K</th>
+    <th colspan="2">内存<br>M, S</th>
+    <th>常量<br>32位</th>
   </tr>
   <tr>
-    <th>data-type</th>
-    <th>bit</th>
+    <th>数据类型</th>
+    <th>位</th>
     <th>B,W,L,F</th>
-    <th>bit</th>
+    <th>位</th>
     <th>B,W,L,F</th>
-    <th>bit</th>
+    <th>位</th>
     <th>B,W,L,F</th>
     <th>L,F</th>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td class='hd'>source a</td>
+    <td class='hd'>源 a</td>
     <td></td>
     <td></td>
     <td></td>
@@ -53,7 +51,7 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 </tbody>
 <tbody>
   <tr>
-    <td class='hd'>source b</td>
+    <td class='hd'>源 b</td>
     <td></td>
     <td></td>
     <td></td>
@@ -65,7 +63,7 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 </tbody>
 <tbody>
   <tr>
-    <td class='hd'>destination</td>
+    <td class='hd'>目标</td>
     <td>X</td>
     <td>X</td>
     <td></td>
@@ -77,7 +75,7 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 </tbody>
 <tbody>
   <tr>
-    <td class='hd'>length</td>
+    <td class='hd'>长度</td>
     <td>X</td>
     <td></td>
     <td>X</td>
@@ -91,8 +89,8 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 
 <br>
 
-### Example of use
+### 使用示例
 
-If the input DO57 is active, the value corresponding to 4 bytes will be copied from the input DOB2 to the output YB2 as a value corresponding to 4 bytes. On the contrary, if the input DO57 is active, the value corresponding to 4 bytes will be copied from the input DOB12 to the output YB2 as a value corresponding to 4 bytes.
+如果输入 DO57 被激活，则相应于 4 字节的值将从输入 DOB2 复制到输出 YB2，作为相应于 4 字节的值。相反，如果输入 DO57 被激活，则相应于 4 字节的值将从输入 DOB12 复制到输出 YB2，作为相应于 4 字节的值。
 
 ![](../_assets/ccop.png)

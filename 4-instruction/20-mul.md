@@ -1,9 +1,8 @@
-﻿# 4.20 Multiply (MUL): Multiplying
-
+# 4.20 Multiply (MUL): 乘法
 
 ### Description
-If the rung is active, the value of "source a" will be multiplied by the value of "source b," and the result value will be set in the "destination" relay.
-If the operation result has an overflow, the setting S7=1 will occur.
+如果 rung 是活动的，"source a" 的值将乘以 "source b" 的值，结果值将设置在 "destination" 继电器中。
+如果操作结果发生溢出，将会设置 S7=1。
 
 <br>
 
@@ -78,6 +77,6 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 
 ### Example of use
 
-If the input DO38 is active, the value of XB3 will be multiplied by 3, and the result value will be set in the internal state relay MB3.
+如果输入 DO38 是活动的，XB3 的值将乘以 3，结果值将设置在内部状态继电器 MB3 中。
 
 ![](../_assets/mul.png)

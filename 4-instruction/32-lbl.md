@@ -1,15 +1,15 @@
-﻿# 4.32 LBL (Label): Designating a Label
+﻿# 4.32 LBL (标签): 指定标签
 
 
-### Description
-The location of the label to jump to with the JMP instruction will be designated as a number (const) greater than 0. 
-The LBL instruction will designate the location regardless of whether the rung is active or inactive.
-Note: For more details on the JMP instruction, refer to [4.33 JMP (Jump)](./33-jmp)
+### 描述
+使用JMP指令跳转的标签位置将指定为一个大于0的数字（const）。 
+LBL指令将指定该位置，无论梯级是否处于活动状态。
+注意：有关JMP指令的更多详情，请参阅 [4.33 JMP (跳转)](./33-jmp)
 
 <br>
 
-### Types that can be used as an operand
-(not possible for X)
+### 可以用作操作数的类型
+（X不可用）
 <style type="text/css">
 table  {border-collapse:collapse;}
 th {background-color:#efefef; border-style:solid;border-width:1px;color:black;text-align:center;}
@@ -20,26 +20,26 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 <table>
 <thead>
   <tr>
-    <th>relay type</th>
-    <th colspan="2">input<br>X, DO</th>
-    <th colspan="2">output<br>Y, DI, R, K</th>
-    <th colspan="2">memory<br>M, S</th>
-    <th>const.<br>32bit</th>
+    <th>继电器类型</th>
+    <th colspan="2">输入<br>X, DO</th>
+    <th colspan="2">输出<br>Y, DI, R, K</th>
+    <th colspan="2">内存<br>M, S</th>
+    <th>const.<br>32位</th>
   </tr>
   <tr>
-    <th>data type</th>
-    <th>bit</th>
+    <th>数据类型</th>
+    <th>位</th>
     <th>B,W,L,F</th>
-    <th>bit</th>
+    <th>位</th>
     <th>B,W,L,F</th>
-    <th>bit</th>
+    <th>位</th>
     <th>B,W,L,F</th>
     <th>L,F</th>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td class='hd'>label</td>
+    <td class='hd'>标签</td>
     <td>X</td>
     <td>X</td>
     <td>X</td>
@@ -53,6 +53,6 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 
 <br>
 
-### Example of use
+### 使用示例
 
-Because these instructions will be used together with the JMP command, refer to the description of the JMP instructions.
+因为这些指令将与JMP命令一起使用，所以请参考JMP指令的描述。

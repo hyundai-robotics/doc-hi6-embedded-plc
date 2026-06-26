@@ -20,23 +20,23 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	<tr>
 		<td>0</td>
 		<td>command</td>
-		<td>GET_HW_INFO (170)</td>
+		<td>获取硬件信息 (170)</td>
 		<td>s2</td>
 	</tr>
 	<tr>
 		<td>2</td>
 		<td rowspan=6>result</td>
-		<td>cpu temperature * 10</td>
+		<td>cpu 温度 * 10</td>
 		<td>s2</td>
 	</tr>
 	<tr>
 		<td>4</td>
-		<td>main board temperature * 10</td>
+		<td>主板温度 * 10</td>
 		<td>s2</td>
 	</tr>
 	<tr>
 		<td>6</td>
-		<td>system board temperature * 10</td>
+		<td>系统板温度 * 10</td>
 		<td>s2</td>
 	</tr>
 </tbody>

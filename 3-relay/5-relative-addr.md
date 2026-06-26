@@ -1,26 +1,26 @@
-﻿# 3.5 Designating indirect addresses for relays
+﻿# 3.5 为继电器指定间接地址
 
-SW62-SW79 are system memories for designating indirect addresses. Regardless of the relay type, if a value between -2 and -18 is designated for a relay address, the set value will lead to a designated relay address stored in SW62-SW79.
+SW62-SW79 是用于指定间接地址的系统内存。无论继电器类型如何，如果在继电器地址中指定的值介于 -2 和 -18 之间，则设置的值将导致存储在 SW62-SW79 中的指定继电器地址。
 
 
 
 ![](../_assets/rel-addr-concept.png)
 
-For example, when some of the values for SW62-SW79 are as below,
+例如，当 SW62-SW79 的某些值如下时，
 
-| **relay** | **value** |
+| **继电器** | **值** |
 | :---      | :---      |
 | SW62      | 12        |
 | SW70      | 3         |
 | SW78      | 56        |
 
-the notation of an indirect address can be interpreted as follows.
+间接地址的表示可以解释如下。
 
 *	MW-2 -> MW12
 *	FB-10.X3 -> FB3.X3
 *	X-18 -> X56
 *	FB-10.YW-2 -> FB3.YW12
 
-The embedded programmable logic controller (PLC) example presented below is an example in which the operation of outputting signals Y1-Y128 corresponding to input signals X1-X128 is created using the FOR/NEXT instructions and indirect address designation method.
+下面呈现的嵌入式可编程逻辑控制器 (PLC) 示例是使用 FOR/NEXT 指令和间接地址指定方法创建的，将输出信号 Y1-Y128 对应于输入信号 X1-X128。
 
 ![](../_assets/rel-addr-for-next.png)

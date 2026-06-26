@@ -1,3 +1,3 @@
-﻿# 2.3. Scan time
+# 2.3. 扫描时间
 
-The time taken for the one-cycle execution of the ladder file in the embedded PLC will be indicated as "scan time" on the status bar at the bottom of the HRLadder. As the number of steps in the ladder program increases, the time for execution increases, slowing down the I/O responsiveness accordingly.
+嵌入式PLC中阶梯文件单次循环执行所需的时间将在HRLadder底部状态栏中显示为“扫描时间”。随着阶梯程序中步骤数量的增加，执行所需的时间也会增加，从而降低I/O响应速度。

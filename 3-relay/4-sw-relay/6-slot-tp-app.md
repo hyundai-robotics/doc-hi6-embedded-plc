@@ -1,4 +1,4 @@
-﻿# 3.4.6 S relay - TP_APP
+# 3.4.6 S relay - TP_APP
 
 <style type="text/css">
 table  {border-collapse:collapse;}
@@ -26,27 +26,27 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	<tr>
 		<td>2</td>
 		<td>get</td>
-		<td>the shortcut key number for the teach pendant"s current app (1-9)</td>
+		<td>当前教导挂件应用程序的快捷键编号（1-9）</td>
 		<td>s2</td>
 	</tr>
 	<tr>
 		<td>4</td>
 		<td>set</td>
-		<td>the shortcut key number for the teach pendant"s target app whose state needs to be read or controlled (1-9)</td>
+		<td>需要读取或控制的教导挂件目标应用程序的快捷键编号（1-9）</td>
 		<td>s2</td>
 	</tr>
 	<tr>
 		<td>6</td>
 		<td>get</td>
-		<td>the current state value of the teach pendant"s target app<br>(-1=no operation, 0=not executed, 1=activated, 2=inactivated)</td>
+		<td>教导挂件目标应用程序的当前状态值<br>(-1=无操作, 0=未执行, 1=已激活, 2=已停用)</td>
 		<td>s2</td>
 	</tr>
 	<tr>
 		<td>8</td>
 		<td>set</td>
-		<td>controlling of the teach pendant"s target app<br>
-(0: no operation, 1: activated, 2: inactivated, 8: executed, 9:forced ending)<br>
-* will be performed once every time the value changes.</td>
+		<td>对教导挂件目标应用程序的控制<br>
+(0: 无操作, 1: 已激活, 2: 已停用, 8: 已执行, 9: 强制结束)<br>
+* 每次值变化时将执行一次。</td>
 		<td>s2</td>
 	</tr>
 </tbody>

@@ -1,40 +1,39 @@
-﻿# 3.2 Designating a relay
+﻿# 3.2 指定继电器
 
-The following shows how the relays are designated in the embedded programmable logic controller (PLC) of the ${cont_model} robot controller.
+以下显示了如何在 ${cont_model} 机器人控制器的嵌入式可编程逻辑控制器 (PLC) 中指定继电器。
 
 `[FB{block-index}.]{relay-type}[{data-type}]{signal-index}`
 
-For example, relays can be designated as below.
+例如，继电器可以如下指定。
 
-Y1501
+Y1501  
 FB3.DIW21
 
 ### block-index  
-Input and output relays (DI, DO, X, Y) are grouped into 10 fieldbus blocks with their object names ranging from FB0 to FB9. For physical inputs and outputs, each block will be mapped to each fieldbus device.
-The size of one fieldbus block is 120 bytes (=960 bits) for the input and output, respectively.
+输入和输出继电器 (DI, DO, X, Y) 被分组为 10 个现场总线块，对象名称范围从 FB0 到 FB9。对于物理输入和输出，每个块将映射到每个现场总线设备。  
+一个现场总线块的大小为 120 字节 (=960 位)。
 
-  You can also map some areas of FB to object names from FN0 to FN63.
-  See the link below for instructions on how to set up the FN region.
+您还可以将 FB 的某些区域映射到对象名称，从 FN0 到 FN63。  
+请参见下面的链接以获取有关如何设置 FN 区域的说明。
 
-  [Operation manual: 7.3.2.12 fn block allocation](https://hrbook-hrc.web.app/#/view/doc-hi6-operation/en-tp630/7-system/3-control-parameter/2-io-signal-setting/12-fn-block?cont_model=${cont_model})
-
+[操作手册：7.3.2.12 fn 块分配](https://hrbook-hrc.web.app/#/view/doc-hi6-operation/zh-tp630/7-system/3-control-parameter/2-io-signal-setting/12-fn-block?cont_model=${cont_model})
 
 ### relay-type  
-There are 12 different types, as shown below.
-Each will be explained in detail later.
+有 12 种不同的类型，如下所示。  
+每一种将在后面详细解释。
 
-- Digital Input (DI): This is a logical input signal that can be used in HRScript or for assigning various inputs.
-- Digital Output (DO): This is a logical output signal that can be used in HRScript or for assigning various outputs.
-- System Input (SI): This is a dedicated input signal that interfaces with the company"s system board.
-- System Output (SO): This is a dedicated output signal that interfaces with the company"s system board.
-- X: This is a physical input signal that is inputted from the outside of the controller via a fieldbus device.
-- Y: This is a physical output signal that is outputted to the outside of the controller via a fieldbus device. 
-- Memory (M): This can be used for storing data and can be accessed from HRScript.
-- System (S): This is used to read or write system values in the controller. Refer to [3.4 S relay](./4-sw-relay/README.md).
-- AuxiliaRy (R): This is an auxiliary relay for temporarily storing.
-- Keep (K): This is an auxiliary relay for temporarily storing. The value will be stored even when the power is turned off. 
-- Timer (T): Relays for timer operation, the contact is On when the value is 0. 
-- Counter (C): Relays for counter operation, the contact is On when the value is 0. 
+- 数字输入 (DI)：这是可以在 HRScript 中使用或用于分配各种输入的逻辑输入信号。
+- 数字输出 (DO)：这是可以在 HRScript 中使用或用于分配各种输出的逻辑输出信号。
+- 系统输入 (SI)：这是与公司的系统板接口的专用输入信号。
+- 系统输出 (SO)：这是与公司的系统板接口的专用输出信号。
+- X：这是通过现场总线设备从控制器外部输入的物理输入信号。
+- Y：这是通过现场总线设备输出到控制器外部的物理输出信号。
+- 内存 (M)：这可用于存储数据，并且可以从 HRScript 访问。
+- 系统 (S)：这用于读取或写入控制器中的系统值。参见 [3.4 S 继电器](./4-sw-relay/README.md)。
+- 辅助 (R)：这是用于临时存储的辅助继电器。
+- 保持 (K)：这是用于临时存储的辅助继电器。即使断电值也会被存储。
+- 定时器 (T)：用于定时器操作的继电器，当值为 0 时接点为打开。
+- 计数器 (C)：用于计数器操作的继电器，当值为 0 时接点为打开。
 
 <style type="text/css">
   .relay-table {
@@ -74,45 +73,45 @@ Each will be explained in detail later.
 <table class="relay-table">
   <thead>
     <tr>
-      <th>Relay<br>name</th>      <th>Number of points</th>      <th>Relay <br>(bit)</th>      <th>Relay <br>(byte)</th>      <th>Relay <br>(word)</th>
+      <th>继电器<br>名称</th>      <th>点数</th>      <th>继电器 <br>(位)</th>      <th>继电器 <br>(字节)</th>      <th>继电器 <br>(字)</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>DI</td>      <td>9600 bits (1200 bytes)</td>      <td>FB0.DI0-FB9.DI959</td>      <td>FB0.DIB0 ~ FB9.DIB119</td>      <td>FB0.DIW0 ~ FB9.DIW118</td> 
+      <td>DI</td>      <td>9600 位 (1200 字节)</td>      <td>FB0.DI0-FB9.DI959</td>      <td>FB0.DIB0 ~ FB9.DIB119</td>      <td>FB0.DIW0 ~ FB9.DIW118</td> 
     </tr>
     <tr>
-      <td>DO</td>      <td>9600 bits (1200 bytes)</td>      <td>FB0.DO0-FB9.DO959</td>      <td>FB0.DOB0 ~ FB9.DOB119</td>      <td>FB0.DOW0 ~ FB9.DOW118</td>
+      <td>DO</td>      <td>9600 位 (1200 字节)</td>      <td>FB0.DO0-FB9.DO959</td>      <td>FB0.DOB0 ~ FB9.DOB119</td>      <td>FB0.DOW0 ~ FB9.DOW118</td>
     </tr>
     <tr>
-      <td>SI</td>      <td>960 bits (120 bytes)</td>      <td>SI0-SI959</td>      <td>SIB0 ~ SIB119</td>      <td>SIW0 ~ SIW118</td>
+      <td>SI</td>      <td>960 位 (120 字节)</td>      <td>SI0-SI959</td>      <td>SIB0 ~ SIB119</td>      <td>SIW0 ~ SIW118</td>
     </tr>
     <tr>
-      <td>SO</td>      <td>960 bits (120 bytes)</td>      <td>SO0-SO959</td>      <td>SOB0 ~ SOB119</td>      <td>SOW0 ~ SOW118</td>
+      <td>SO</td>      <td>960 位 (120 字节)</td>      <td>SO0-SO959</td>      <td>SOB0 ~ SOB119</td>      <td>SOW0 ~ SOW118</td>
     </tr>
     <tr>
-      <td>X</td>      <td>9600 bits (1200 bytes)</td>      <td>FB0.X0-FB9.X959</td>      <td>FB0.XB0 ~ FB9.XB119</td>      <td>FB0.XW0 ~ FB9.XW118</td>
+      <td>X</td>      <td>9600 位 (1200 字节)</td>      <td>FB0.X0-FB9.X959</td>      <td>FB0.XB0 ~ FB9.XB119</td>      <td>FB0.XW0 ~ FB9.XW118</td>
       </tr>      
     <tr>
-      <td>Y</td>      <td>9600 bits (1200 bytes)</td>      <td>FB0.Y0-FB9.Y959</td>      <td>FB0.YB0 ~ FB9.YB119</td>      <td>FB0.YW0 ~ FB9.YW118</td>
+      <td>Y</td>      <td>9600 位 (1200 字节)</td>      <td>FB0.Y0-FB9.Y959</td>      <td>FB0.YB0 ~ FB9.YB119</td>      <td>FB0.YW0 ~ FB9.YW118</td>
     </tr>
     <tr>
-      <td>M</td>      <td>160000 bits (20000 bytes)</td>      <td>M0-M159999</td>      <td>MB0-MB19999</td>      <td>MW0 ~ MW19998</td>
+      <td>M</td>      <td>160000 位 (20000 字节)</td>      <td>M0-M159999</td>      <td>MB0-MB19999</td>      <td>MW0 ~ MW19998</td>
     </tr>
     <tr>
-      <td>S</td>      <td>160000 bits (20000 bytes)</td>      <td>S0-S159999</td>      <td>SB0-SB19999</td>      <td>SW0 ~ SW19998</td>
+      <td>S</td>      <td>160000 位 (20000 字节)</td>      <td>S0-S159999</td>      <td>SB0-SB19999</td>      <td>SW0 ~ SW19998</td>
     </tr>
     <tr>
-      <td>R</td>      <td>1024 bits (128 bytes)</td>      <td>R0-R1023</td>      <td>RB0 ~ RB127</td>      <td>RW0 ~ RW126</td>
+      <td>R</td>      <td>1024 位 (128 字节)</td>      <td>R0-R1023</td>      <td>RB0 ~ RB127</td>      <td>RW0 ~ RW126</td>
     </tr>
     <tr>
-      <td>K</td>      <td>1024 bits (128 bytes)</td>      <td>K0-K1023</td>      <td>KB0 ~ KB127</td>      <td>KW0 ~ KW126</td>
+      <td>K</td>      <td>1024 位 (128 字节)</td>      <td>K0-K1023</td>      <td>KB0 ~ KB127</td>      <td>KW0 ~ KW126</td>
     </tr>
     <tr>
-      <td>T</td>      <td>256 DWORD (1024 bytes)</td>      <td>T0-T255</td>      <td>-</td>      <td>-</td>
+      <td>T</td>      <td>256 DWORD (1024 字节)</td>      <td>T0-T255</td>      <td>-</td>      <td>-</td>
     </tr>
     <tr>
-      <td>C</td>      <td>256 DWORD (1024 bytes)</td>      <td>C0-C255</td>      <td>-</td>      <td>-</td>
+      <td>C</td>      <td>256 DWORD (1024 字节)</td>      <td>C0-C255</td>      <td>-</td>      <td>-</td>
     </tr>
   </tbody>
 </table>
@@ -120,16 +119,16 @@ Each will be explained in detail later.
 <div class="page-break"></div>
 
 ### data-type  
-There are five different types, as shown below.
+有五种不同的类型，如下所示。
 
-  * No designation: bit, 1 bit
-  * B: signed-byte, 8 bits
-  * W: signed-word, 16 bits
-  * L: signed-long, 32 bits
-  * F: floating-point real, 32 bits
+* 无指定：位，1 位
+* B：有符号字节，8 位
+* W：有符号字，16 位
+* L：有符号长，32 位
+* F：浮点实数，32 位
 
-  <br>
-  They are just different data types representing the same memory space of 960 bit rather than separate memory spaces. For example, DO[0-15], DOB[0-1], and DOW[0] are all the same output signals.
+<br>  
+它们只是表示相同内存空间的不同数据类型，而不是单独的内存空间。例如，DO[0-15]、DOB[0-1]和DOW[0]都是相同的输出信号。
 
 <br>
 
@@ -142,7 +141,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 <table class="tg">
 <tbody>
   <tr>
-    <td class="tg-kftd">bit</td>
+    <td class="tg-kftd">位</td>
     <td>DO0-DO7</td>
     <td>DO8-DO15</td>
     <td>DO16-DO23</td>
@@ -150,7 +149,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
     <td>...</td>
   </tr>
   <tr>
-    <td class="tg-kftd">byte</td>
+    <td class="tg-kftd">字节</td>
     <td>DOB0</td>
     <td>DOB1</td>
     <td>DOB2</td>
@@ -158,18 +157,18 @@ td {border-color:gray;border-style:solid;border-width:1px;}
     <td>...</td>
   </tr>
   <tr>
-    <td class="tg-kftd">word</td>
+    <td class="tg-kftd">字</td>
     <td colspan="2">DOW0</td>
     <td colspan="2">DOW2</td>
     <td>...</td>
   </tr>
   <tr>
-    <td class="tg-kftd">long</td>
+    <td class="tg-kftd">长</td>
     <td colspan="4">DOL0</td>
     <td>...</td>
   </tr>
   <tr>
-    <td class="tg-kftd">float</td>
+    <td class="tg-kftd">浮点</td>
     <td colspan="4">DOF0</td>
     <td>...</td>
   </tr>
@@ -180,14 +179,14 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 
 ### signal-index
 
- This is a 0-based index within the relay type. The index will be given in bit units for DO and in byte units for DOB, DOW, DOL, and DOF.
+这是继电器类型内的基于 0 的索引。DO 的索引以位为单位给出，而 DOB、DOW、DOL 和 DOF 的索引以字节为单位给出。
 
 <br>
 <br>
 
-The fieldbus object name can be partially skipped, as shown below. For example, DO961 is the same designation as FB1.DO1.
+字段总线对象名称可以部分跳过，如下所示。例如，DO961 与 FB1.DO1 具有相同的指定。
 
-| **Object name** | **DO designation** | **FB.DO designation** |
+| **对象名称** | **DO 指定** | **FB.DO 指定** |
 | :--- | :--- | :--- |
 | FB0 | DO0-DO959 | FB0.DO0-FB0.DO959 |
 | FB1 | DO960-DO1919 | FB1.DO0-FB1.DO959 |
@@ -200,5 +199,4 @@ The fieldbus object name can be partially skipped, as shown below. For example, 
 | FB8 | DO7680-DO8639 | FB8.DO0-FB8.DO959 |
 | FB9 | DO8640-DO9599 | FB9.DO0-FB9.DO959 |
 
-
-DI and DO are logical inputs and outputs, respectively, and can be accessed through the robot language and I/O assignment.
+DI 和 DO 分别是逻辑输入和输出，可以通过机器人语言和 I/O 分配访问。

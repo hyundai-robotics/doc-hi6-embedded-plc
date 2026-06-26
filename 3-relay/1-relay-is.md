@@ -1,5 +1,5 @@
-﻿# 3.1 The meaning of a relay
+﻿# 3.1 继电器的意义
 
-A device in a state equivalent to an on/off contact that determines whether to transfer an electrical signal is called a switch. Meanwhile, a relay is a switch that can operate automatically by using electricity rather than manually.  
+一种状态相当于开/关接触的设备，用于确定是否传输电信号，被称为开关。同时，继电器是一种可以自动操作的开关，它是通过电力而非手动进行操作的。
 
-Originally, a relay was a physical device that controls contacts using the magnetic force of a coil. However, a relay in a computerized programmable logic controller (PLC) is a logical concept that is controlled by software. In terms of the meaning, a relay has been used as a variable that can store not only an on/off state consisting of 1 bit but also a byte, word, double word, or real value consisting of several bits.
+最初，继电器是一种使用线圈的磁力控制接触的物理设备。然而，在计算机化的可编程逻辑控制器（PLC）中，继电器是一个由软件控制的逻辑概念。从意义上讲，继电器被用作一种变量，它不仅可以存储由1位组成的开/关状态，还可以存储由多个位组成的字节、字、双字或实值。

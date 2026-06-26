@@ -1,4 +1,4 @@
-﻿# 3.4.16 S relay - MECH_INFO
+# 3.4.16 S 继电器 - MECH_INFO
 
 Supported from V60.30-01.
 
@@ -11,24 +11,24 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 <table class="tg">
 <thead>
 	<tr>
-		<th>S offset</th>
-		<th>field</th>
-		<th>description</th>
-		<th>type</th>
+		<th>S 偏移</th>
+		<th>字段</th>
+		<th>描述</th>
+		<th>类型</th>
 	</tr>
 </thead>
 
 <tbody>
 	<tr>
 		<td>0</td>
-		<td>command</td>
+		<td>命令</td>
 		<td>GET_MECH_INFO (122)</td>
 		<td>s2</td>
 	</tr>
 	<tr>
 		<td>2</td>
-		<td>param. 1</td>
-		<td>type<br>1 = current mechanism #</td>
+		<td>参数 1</td>
+		<td>类型<br>1 = 当前机制 #</td>
 		<td>s2</td>
 	</tr>
 	<tr>
@@ -45,8 +45,8 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	</tr>
 	<tr>
 		<td>8</td>
-		<td>result</td>
-		<td>current mechanism # (0 ~ 7)</td>
+		<td>结果</td>
+		<td>当前机制 # (0 ~ 7)</td>
 		<td>s2</td>
 	</tr>
 </tbody>

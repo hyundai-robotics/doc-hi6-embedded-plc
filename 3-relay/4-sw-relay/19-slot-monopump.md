@@ -32,27 +32,27 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	<tr>
 		<td>4</td>
 		<td rowspan=5>result</td>
-		<td>flow rate (cc/s)</td>
+		<td>流量 (cc/s)</td>
 		<td>f4</td>
 	</tr>
 	<tr>
 		<td>8</td>
-		<td>rpm command</td>
+		<td>rpm 命令</td>
 		<td>s2</td>
 	</tr>
 	<tr>
 		<td>10</td>
-		<td>rpm current</td>
+		<td>rpm 当前值</td>
 		<td>s2</td>
 	</tr>
 	<tr>
 		<td>12</td>
-		<td>pressure (bar)</td>
+		<td>压力 (bar)</td>
 		<td>f4</td>
 	</tr>
 	<tr>
 		<td>16</td>
-		<td>flow amount (cc) - total value for vehicle type</td>
+		<td>流量总量 (cc) - 车辆类型的总值</td>
 		<td>f4</td>
 	</tr>
 </tbody>
@@ -86,22 +86,22 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	<tr>
 		<td>4</td>
 		<td rowspan=4>result</td>
-		<td>flow rate (cc/s)</td>
+		<td>流量 (cc/s)</td>
 		<td>f4</td>
 	</tr>
 	<tr>
 		<td>8</td>
-		<td>flow amount(fixed amount mode) (cc)</td>
+		<td>流量 (固定量模式) (cc)</td>
 		<td>f4</td>
 	</tr>
 	<tr>
 		<td>12</td>
-		<td>suckback flow rate (cc/s)</td>
+		<td>回吸流量 (cc/s)</td>
 		<td>f4</td>
 	</tr>
 	<tr>
 		<td>16</td>
-		<td>suckback time (s)</td>
+		<td>回吸时间 (s)</td>
 		<td>f4</td>
 	</tr>
 </tbody>
@@ -135,17 +135,17 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	<tr>
 		<td>4</td>
 		<td rowspan=4>result</td>
-		<td>delay time (s)</td>
+		<td>延迟时间 (s)</td>
 		<td>f4</td>
 	</tr>
 	<tr>
 		<td>8</td>
-		<td>refill flow rate (cc/s)</td>
+		<td>补充流量 (cc/s)</td>
 		<td>f4</td>
 	</tr>
 	<tr>
 		<td>12</td>
-		<td>refill time (s)</td>
+		<td>补充时间 (s)</td>
 		<td>f4</td>
 	</tr>
 	<tr>
@@ -184,27 +184,27 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	<tr>
 		<td>4</td>
 		<td>param 2</td>
-		<td>item of set data <br>
-		1 = flow rate (cc/s) <br>
-		2 = flow amount(fixed amount mode) (cc) <br>
-		3 = suckback flow rate (cc/s) <br>
-		4 = suckback time (s) <br>
-		5 = delay time (s) <br>
-		6 = refill flow rate (cc/s) <br>
-		7 = refill time (s)
+		<td>设置数据的项 <br>
+		1 = 流量 (cc/s) <br>
+		2 = 流量 (固定量模式) (cc) <br>
+		3 = 回吸流量 (cc/s) <br>
+		4 = 回吸时间 (s) <br>
+		5 = 延迟时间 (s) <br>
+		6 = 补充流量 (cc/s) <br>
+		7 = 补充时间 (s)
 		</td>
 		<td>s2</td>
 	</tr>
 	<tr>
 		<td>6</td>
 		<td>param 3</td>
-		<td>value</td>
+		<td>值</td>
 		<td>f4</td>
 	</tr>
 	<tr>
 		<td>10</td>
 		<td>param 4</td>
-		<td>set = 1, force initialization to 0 after setting the value</td>
+		<td>设置 = 1, 设置值后强制初始化为 0</td>
 		<td>s1</td>
 	</tr>
 </tbody>
@@ -238,11 +238,11 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	<tr>
 		<td>4</td>
 		<td>param 2</td>
-		<td>item of operation <br>
-		1 = fixed speed discharge <br>
-		2 = fixed amount discharge <br>
-		3 = stop discharge <br>
-		force initialization to 0 after starting the operation <br>
+		<td>操作项 <br>
+		1 = 固定速度放料 <br>
+		2 = 固定量放料 <br>
+		3 = 停止放料 <br>
+		启动操作后强制初始化为 0 <br>
 		</td>
 		<td>s2</td>
 	</tr>
@@ -288,17 +288,17 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	</tr>
 	<tr>
 		<td>8</td>
-		<td>flow amount(fixed amount mode) (cc)</td>
+		<td>流量 (固定量模式) (cc)</td>
 		<td>f4</td>
 	</tr>
 	<tr>
 		<td>12</td>
-		<td>suckback flow rate (cc/s)</td>
+		<td>回吸流量 (cc/s)</td>
 		<td>f4</td>
 	</tr>
 	<tr>
 		<td>16</td>
-		<td>suckback time (s)</td>
+		<td>回吸时间 (s)</td>
 		<td>f4</td>
 	</tr>
 </tbody>
@@ -338,17 +338,17 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	<tr>
 		<td>4</td>
 		<td rowspan=4>result</td>
-		<td>delay time (s)</td>
+		<td>延迟时间 (s)</td>
 		<td>f4</td>
 	</tr>
 	<tr>
 		<td>8</td>
-		<td>refill flow rate (cc/s)</td>
+		<td>补充流量 (cc/s)</td>
 		<td>f4</td>
 	</tr>
 	<tr>
 		<td>12</td>
-		<td>refill time (s)</td>
+		<td>补充时间 (s)</td>
 		<td>f4</td>
 	</tr>
 	<tr>
@@ -393,28 +393,27 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	<tr>
 		<td>4</td>
 		<td>param 2</td>
-		<td>item of set data <br>
-		2 = flow amount(fixed amount mode) (cc) <br>
-		3 = suckback flow rate (cc/s) <br>
-		4 = suckback time (s) <br>
-		5 = delay time (s) <br>
-		6 = refill flow rate (cc/s) <br>
-		7 = refill time (s)
+		<td>设置数据的项 <br>
+		2 = 流量 (固定量模式) (cc) <br>
+		3 = 回吸流量 (cc/s) <br>
+		4 = 回吸时间 (s) <br>
+		5 = 延迟时间 (s) <br>
+		6 = 补充流量 (cc/s) <br>
+		7 = 补充时间 (s)
 		</td>
 		<td>s2</td>
 	</tr>
 	<tr>
 		<td>6</td>
 		<td>param 3</td>
-		<td>value</td>
+		<td>值</td>
 		<td>f4</td>
 	</tr>
 	<tr>
 		<td>10</td>
 		<td>param 4</td>
-		<td>set = 1, force initialization to 0 after setting the value</td>
+		<td>设置 = 1, 设置值后强制初始化为 0</td>
 		<td>s1</td>
 	</tr>
 </tbody>
 </table>
-

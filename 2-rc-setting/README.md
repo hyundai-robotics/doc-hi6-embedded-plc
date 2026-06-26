@@ -1,2 +1,1 @@
-﻿# 2. Setting up the controller
-
+# 2. 设置控制器

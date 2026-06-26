@@ -7,15 +7,15 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 </style>
 
 
-### Getting and Setting system variables
+### 获取和设置系统变量
 
 {% hint style="info" %}
-In versions lower than V70.00-00 to set system variables, check that the command has changed and operate. <br>
-In other words, it operates once at the moment the command value changes to 161.  
+在版本低于 V70.00-00 的情况下，要设置系统变量，请检查命令是否已更改并操作。 <br>
+换句话说，当命令值更改为 161 时，它将立即运行。  
 
 {% endhint %}
 
-#### Get system variables
+#### 获取系统变量
 <table class="tg">
 <thead>
 	<tr>
@@ -36,20 +36,20 @@ In other words, it operates once at the moment the command value changes to 161.
 	<tr>
 		<td>2</td>
 		<td>param 1</td>
-		<td>item (of set data)</td>
+		<td>项（设置数据的）</td>
 		<td>s2</td>
 	</tr>
 	<tr>
 		<td>4 ~ 18</td>
 		<td>param n</td>
-		<td>get value</td>
+		<td>获取值</td>
 		<td></td>
 	</tr>
 </tbody>
 </table>
 <br>
 
-#### Set system variables
+#### 设置系统变量
 <table class="tg">
 <thead>
 	<tr>
@@ -70,13 +70,13 @@ In other words, it operates once at the moment the command value changes to 161.
 	<tr>
 		<td>2</td>
 		<td>param 1</td>
-		<td>item (of set data)</td>
+		<td>项（设置数据的）</td>
 		<td>s2</td>
 	</tr>
 	<tr>
 		<td>4 ~ 18</td>
 		<td>param n</td>
-		<td>set value</td>
+		<td>设置值</td>
 		<td></td>
 	</tr>
 </tbody>
@@ -84,7 +84,7 @@ In other words, it operates once at the moment the command value changes to 161.
 <br>
 <br>
 
-#### <mark style="color:green;">Playback speed</mark>
+#### <mark style="color:green;">播放速度</mark>
 <table class="tg">
 <thead>
 	<tr>
@@ -98,22 +98,22 @@ In other words, it operates once at the moment the command value changes to 161.
 	<tr>
 		<td>2</td>
 		<td>param 1</td>
-		<td>42 = Playback speed</td>
+		<td>42 = 播放速度</td>
 		<td>s2</td>
 	</tr>
 	<tr>
 		<td>4</td>
 		<td>param 1</td>
-		<td>value</td>
+		<td>值</td>
 		<td>s1</td>
 	</tr>
 </tbody>
 </table>
-Info) <br>
-- Getting it on versions lower than V70.00-00 is not supported. <br>
+信息） <br>
+- 在版本低于 V70.00-00 的情况下不支持获取。 <br>
 <br>
 
-#### <mark style="color:green;">Current tool number</mark>
+#### <mark style="color:green;">当前工具编号</mark>
 <table class="tg">
 <thead>
 	<tr>
@@ -127,22 +127,22 @@ Info) <br>
 	<tr>
 		<td>2</td>
 		<td>param 1</td>
-		<td>40 = Tool number</td>
+		<td>40 = 工具编号</td>
 		<td>s2</td>
 	</tr>
 	<tr>
 		<td>4</td>
 		<td>param 1</td>
-		<td>value</td>
+		<td>值</td>
 		<td>s1</td>
 	</tr>
 </tbody>
 </table>
-Info) <br>
-- Getting it on versions lower than V70.00-00 is not supported. <br>
+信息） <br>
+- 在版本低于 V70.00-00 的情况下不支持获取。 <br>
 <br>
 
-#### <mark style="color:green;">Step go/back max speed</mark>
+#### <mark style="color:green;">步进前进/后退最大速度</mark>
 <table class="tg">
 <thead>
 	<tr>
@@ -156,20 +156,20 @@ Info) <br>
 	<tr>
 		<td>2</td>
 		<td>param 1</td>
-		<td>44 = Step go/back max speed</td>
+		<td>44 = 步进前进/后退最大速度</td>
 		<td>s2</td>
 	</tr>
 	<tr>
 		<td>4</td>
 		<td>param 1</td>
-		<td>value</td>
+		<td>值</td>
 		<td>s2</td>
 	</tr>
 </tbody>
 </table>
-Info) <br>
-- Getting it on versions lower than V70.00-00 is not supported. <br>
-- Settings are not supported on versions lower than V60.32-07. <br>
+信息） <br>
+- 在版本低于 V70.00-00 的情况下不支持获取。 <br>
+- 在版本低于 V60.32-07 的情况下不支持设置。 <br>
 <br>
 
 <div class="page-break"></div>

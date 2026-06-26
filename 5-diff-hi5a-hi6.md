@@ -1,23 +1,23 @@
-﻿<script id="page-config" type="application/json">
+<script id="page-config" type="application/json">
 {
 	"permittedStrs": ["Hi6", "Hi7"]
 }
 </script>
 
-# 5. Difference in the Embedded PLC between Hi5a and Hi6/Hi7
+# 5. Hi5a与Hi6/Hi7之间嵌入式PLC的区别
 
-The functions of the Hi6/Hi7 controller's embedded PLC are similar to those of the Hi5a controller's embedded PLC, and the same HRLadder, or the same ladder editor, is used. 
-Therefore, users who are already familiar with the functions of the Hi5a controller's embedded PLC can quickly learn from this manual by checking only the different parts in the Hi6/Hi7 controller.
+Hi6/Hi7控制器的嵌入式PLC功能与Hi5a控制器的嵌入式PLC功能相似，并且使用相同的HRLadder或相同的梯形编辑器。 
+因此，已经熟悉Hi5a控制器嵌入式PLC功能的用户可以仅通过查看Hi6/Hi7控制器中的不同部分快速从本手册中学习。
 
-The following content includes the list of the different parts.
+以下内容包含不同部分的列表。
 
 <br>
 
-#### HRLadder online connection
+#### HRLadder在线连接
 
-HRLadder v2.80 or later supports the Hi6/Hi7 controller.
-Versions of HRLadder earlier than v2.80 allows remote connection through automatic recognition of the controller type when the online button is pressed.
-However, for HRLadder v2.80 or later, you need to select the controller type in the attributes of the project, then press the online button.
+HRLadder v2.80或更高版本支持Hi6/Hi7控制器。
+HRLadder早于v2.80的版本在按下在线按钮时通过自动识别控制器类型来允许远程连接。
+但是，对于HRLadder v2.80或更高版本，您需要在项目的属性中选择控制器类型，然后按下在线按钮。
 
 ![](_assets/hrladder-prj-prop.png)
 
@@ -25,31 +25,28 @@ However, for HRLadder v2.80 or later, you need to select the controller type in 
 
 <br>
 
-#### Type of relay
+#### 继电器类型
 
 ##### Hi5a
 
-M relays of MW1-MW1000 are supported.
-A special relay SP exists.
-Dedicated input and output signals are included in SW.
+支持MW1-MW1000的M继电器。
+存在特殊继电器SP。
+专用输入和输出信号包含在SW中。
 
 ##### Hi6/Hi7
 
-M relays are largely extended to a range of MW0-MW19998, so you can use them as substitutes for others.
-SP relays are integrated into the area for special flags of [S relay - Fixed area](https://hrbook-hrc.web.app/#/view/doc-hi6-embedded-plc/en/3-relay/4-sw-relay/1-fixed-area?cont_model=${cont_model})
-For dedicated input and output signals, support will be provided with SI and SO. 
-
+M继电器大幅扩展至MW0-MW19998，因此您可以将其用作其他继电器的替代品。
+SP继电器集成在[S继电器-固定区域](https://hrbook-hrc.web.app/#/view/doc-hi6-embedded-plc/zh/3-relay/4-sw-relay/1-fixed-area?cont_model=${cont_model})的特殊标志区域中。
+对于专用输入和输出信号，将提供SI和SO支持。
 
 <br>
 
-
-#### Index
+#### 索引
 
 ##### Hi5a
-The index starts with 1.
-The index for word, long, and float increases by 1. 
-For example, DO16-DO23 are the same as DOW1
-
+索引从1开始。
+字、长和浮动的索引增加1。 
+例如，DO16-DO23与DOW1相同。
 
 <style type="text/css">
 table  {border-collapse:collapse;}
@@ -97,12 +94,12 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 <br>
 
 ##### Hi6/Hi7
-The index starts with 0.
-The index of word, long and flow will increase by matching the byte location.
-For example, DOW increases in the form of DOW0, DOW2, DOW4, DOW6..., and DOL increases in the form of DOL0, DOL4, DOL8...
-As shown in the figure below, DO16-DO23 are the same as DOW2.
+索引从0开始。
+字、长和浮动的索引将通过匹配字节位置增加。
+例如，DOW以DOW0、DOW2、DOW4、DOW6...的形式增加，而DOL以DOL0、DOL4、DOL8...的形式增加。
+如下面的图所示，DO16-DO23与DOW2相同。
 
-Refer to [3.2 Designating a relay](https://hrbook-hrc.web.app/#/view/doc-hi6-embedded-plc/en/3-relay/2-relay-expression?cont_model=${cont_model})
+参见[3.2 指定继电器](https://hrbook-hrc.web.app/#/view/doc-hi6-embedded-plc/zh/3-relay/2-relay-expression?cont_model=${cont_model})
 
 <br>
 
@@ -151,27 +148,25 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 
 <br>
 
-
-#### System relay (SW relay)
+#### 系统继电器（SW 继电器）
 
 ##### Hi5a
 
-In most cases, there is a fixed SW relay index address for each monitoring item.
-However, among the index addresses, SW220-249 are for 10 multipurpose slots, and it is possible to put a desired code, among the codes for system variables, mainboard storage space, analog input/output, date/time, and GE variables, into the desired slot and perform monitoring.
+在大多数情况下，每个监控项目都有一个固定的SW继电器索引地址。
+然而，在索引地址中，SW220-249用于10个多功能插槽，并且可以将所需代码（在系统变量、主板存储空间、模拟输入/输出、日期/时间和GE变量的代码中）放入所需插槽并进行监控。
 
-- Most items: Fixed area
-- Some items: Optional items area (slot)
+- 大多数项目: 固定区域
+- 一些项目: 可选项目区域（插槽）
 
 <br>
 
 ##### Hi6/Hi7
 
-The area of SB0-SB1999 is the [S Relay Fixed Area](https://hrbook-hrc.web.app/#/view/doc-hi6-embedded-plc/en/3-relay/4-sw-relay/1-fixed-area?cont_model=${cont_model}), which has a fixed index address for each item just like Hi5a.
+SB0-SB1999的区域是[S继电器固定区域](https://hrbook-hrc.web.app/#/view/doc-hi6-embedded-plc/zh/3-relay/4-sw-relay/1-fixed-area?cont_model=${cont_model})，每个项目都有固定的索引地址，与Hi5a一样。
 
-However, the area of SB2000- is the [Optional items area](https://hrbook-hrc.web.app/#/view/doc-hi6-embedded-plc/en/3-relay/4-sw-relay/README?cont_model=${cont_model}), which has about 900 multipurpose slots, permitting their use by inserting instructions for desired items.
+然而，SB2000-的区域是[可选项目区域](https://hrbook-hrc.web.app/#/view/doc-hi6-embedded-plc/zh/3-relay/4-sw-relay/README?cont_model=${cont_model})，其中有大约900个多功能插槽，允许通过插入所需项目的指令进行使用。
 
+几乎所有项目都将通过可选项目区域进行监控。
 
-Nearly most of the items will be montored via the optional items area.
-
-- Most items: Optional items area (slot)
-- Some items: Fixed area
+- 大多数项目: 可选项目区域（插槽）
+- 一些项目: 固定区域

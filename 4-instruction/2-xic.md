@@ -1,13 +1,12 @@
-﻿# 4.2 XIC (Examine if Closed): Examining if Closed
-
+# 4.2 XIC (检查是否关闭): Examining if Closed
 
 ### Description
-If the bit value of the operand is 1, the rung will be made active. If 0, it will be made inactive.
+如果操作数的位值为 1，则梯级将被激活。如果为 0，则将被停用。
 
 <br>
 
 ### Types that can be used as an operand
-(not possible for X)
+(不适用于 X)
 <style type="text/css">
 table  {border-collapse:collapse;}
 th {background-color:#efefef; border-style:solid;border-width:1px;color:black;text-align:center;}
@@ -53,6 +52,6 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 
 ### Example of use
 
-When the Run switch, which is the contact A of input X2, is in the pressed state (1 = active) and the internal state relay M5 is normal (1), the "Run" lamp output Y5 will be switched on. 
+当运行开关，也就是输入 X2 的接点 A，处于按下状态 (1 = 激活) 时，内部状态继电器 M5 正常 (1)，则“运行”指示灯输出 Y5 将被打开。
 
 ![](../_assets/xic.png)

@@ -1,13 +1,13 @@
-﻿# 4.11 OTE (Output Energize): Energized Output
+# 4.11 OTE (Output Energize): 激活输出
 
 
 ### Description
-The output signal will be outputted according to the state of the rung. In other words, if the rung is active, the output signal will be outputted in the ON (high) state, but if the rung is inactive, the output signal will be outputted in the OFF (low) state.
+输出信号将根据梯级的状态进行输出。换句话说，如果梯级处于激活状态，则输出信号将以 ON（高）状态输出；如果梯级处于非激活状态，则输出信号将以 OFF（低）状态输出。
 
 <br>
 
 ### Types that can be used as an operand
-(not possible for X, DO bit is supported from V60.30-07)
+(不适用于 X，DO 位支持从 V60.30-07)
 <style type="text/css">
 table  {border-collapse:collapse;}
 th {background-color:#efefef; border-style:solid;border-width:1px;color:black;text-align:center;}
@@ -53,6 +53,6 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 
 ### Example of use
 
-Y12 will be outputted in the state of the input DO12.
+Y12 将在输入 DO12 的状态下输出。
 
 ![](../_assets/ote.png)

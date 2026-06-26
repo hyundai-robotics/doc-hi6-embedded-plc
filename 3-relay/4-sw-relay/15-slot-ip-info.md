@@ -20,13 +20,13 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	<tr>
 		<td>0</td>
 		<td>command</td>
-		<td>GET_IP_INFO (172)</td>
+		<td>获取_IP_信息 (172)</td>
 		<td>s2</td>
 	</tr>
 	<tr>
 		<td>2</td>
 		<td>param 1</td>
-		<td>LAN (1~3)</td>
+		<td>局域网 (1~3)</td>
 		<td>s2</td>
 	</tr>
 	<tr>

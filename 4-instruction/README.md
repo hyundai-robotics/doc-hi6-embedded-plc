@@ -1,5 +1,4 @@
-﻿# 4. Instructions
-
+# 4. Instructions
 
 A ladder program consists of multiple rungs, and each rung consists of multiple instructions.
 
@@ -14,38 +13,38 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 <table>
 <thead>
   <tr>
-    <td rowspan="11">ladder project</td>
-    <td rowspan="7">ladder program</td>
-    <td rowspan="3">rung</td>
-    <td>instruction</td>
+    <td rowspan="11">梯子项目</td>
+    <td rowspan="7">梯子程序</td>
+    <td rowspan="3">横档</td>
+    <td>指令</td>
   </tr>
   <tr>
-    <td>instruction</td>
-  </tr>
-  <tr>
-    <td>...</td>
-  </tr>
-  <tr>
-    <td rowspan="3">rung</td>
-    <td>instruction</td>
-  </tr>
-  <tr>
-    <td>instruction</td>
+    <td>指令</td>
   </tr>
   <tr>
     <td>...</td>
   </tr>
   <tr>
+    <td rowspan="3">横档</td>
+    <td>指令</td>
+  </tr>
+  <tr>
+    <td>指令</td>
+  </tr>
+  <tr>
+    <td>...</td>
+  </tr>
+  <tr>
     <td>...</td>
     <td>...</td>
   </tr>
   <tr>
-    <td rowspan="3">ladder program</td>
-    <td rowspan="2">rung</td>
-    <td>instruction</td>
+    <td rowspan="3">梯子程序</td>
+    <td rowspan="2">横档</td>
+    <td>指令</td>
   </tr>
   <tr>
-    <td>instruction</td>
+    <td>指令</td>
   </tr>
   <tr>
     <td>...</td>
@@ -61,26 +60,23 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 
 <br><br>
 
-
 An instruction consists of three elements, as shown below.
 
 <table>
 <thead>
   <tr>
-    <th>instruction (mnemonic)</th>
-    <th>type of operation</th>
+    <th>指令 (助记符)</th>
+    <th>操作类型</th>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td>operand</td>
-    <td>Argument of an operation.<br>Depending on the instruction, one or multiple operands can be designated, but some instructions do not have operands.</td>
+    <td>操作数</td>
+    <td>操作的参数。<br>根据指令，可以指定一个或多个操作数，但有些指令没有操作数。</td>
   </tr>
   <tr>
-    <td>comments</td>
-    <td>Description attached for the readability of a program. Comments do not affect operations.</td>
+    <td>注释</td>
+    <td>为程序的可读性附加的描述。注释不会影响操作。</td>
   </tr>
 </tbody>
 </table>
-
-

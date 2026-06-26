@@ -1,4 +1,4 @@
-﻿# 3.4.14.7 S relay - EtherCAT Master Status
+# 3.4.14.7 S relay - EtherCAT Master Status
 
 <style>
 .my-custom-table table  {border-collapse:collapse;}
@@ -27,7 +27,7 @@
 <br>
 
 {% hint style="info" %}
-\.		If you want to monitor whether the slave is active, Please check "List of Slaves in IO Exchange".
+\.		如果您想监控从设备是否处于活动状态，请检查“IO交互中的从设备列表”。
 {% endhint %}
 
 <br>
@@ -35,48 +35,48 @@
 <table class="my-custom-table">
 <thead>
 	<tr>
-		<th colspan=2>S Offset</th>
-		<th>Name</th>
-		<th colspan=8>Description or Bit Index</th>
+		<th colspan=2>S 偏移量</th>
+		<th>名称</th>
+		<th colspan=8>描述或位索引</th>
 	</tr>
 </thead>
 
 <tbody>
 	<tr>
-		<td class='powderblued'>Start</td>
-		<td class='powderblued'>Size</td>
-		<td class='powderblued'>Relay</td>
-		<td class='powderblued'>Bit 7</td>
-		<td class='powderblued'>Bit 6</td>
-		<td class='powderblued'>Bit 5</td>
-		<td class='powderblued'>Bit 4</td>
-		<td class='powderblued'>Bit 3</td>
-		<td class='powderblued'>Bit 2</td>
-		<td class='powderblued'>Bit 1</td>
-		<td class='powderblued'>Bit 0</td>
+		<td class='powderblued'>开始</td>
+		<td class='powderblued'>大小</td>
+		<td class='powderblued'>继电器</td>
+		<td class='powderblued'>位 7</td>
+		<td class='powderblued'>位 6</td>
+		<td class='powderblued'>位 5</td>
+		<td class='powderblued'>位 4</td>
+		<td class='powderblued'>位 3</td>
+		<td class='powderblued'>位 2</td>
+		<td class='powderblued'>位 1</td>
+		<td class='powderblued'>位 0</td>
 	</tr>
 	<tr>
 		<td>0</td>
 		<td>2</td>
 		<td>command</td>
-		<td colspan=8>Get EtherCAT Status = 1018</td>
+		<td colspan=8>获取EtherCAT状态 = 1018</td>
 	</tr>
 	<tr>
 		<td>2</td>
 		<td>1</td>
 		<td>param. 1</td>
-		<td colspan=8>Slot Number = 1 ~ 3</td>
+		<td colspan=8>插槽编号 = 1 ~ 3</td>
 	</tr>
 	<tr>
 		<td>3</td>
 		<td>1</td>
 		<td>param. 2</td>
-		<td colspan=8> List of Configured Slaves = 5</td>
+		<td colspan=8>已配置的从设备列表 = 5</td>
 	</tr>
 	<tr>
 		<td>4</td>
 		<td rowspan=16>16</td>
-		<td rowspan=16>List of Slaves</td>
+		<td rowspan=16>从设备列表</td>
 		<td>Node 7</td>
 		<td>Node 6</td>
 		<td>Node 5</td>
@@ -259,48 +259,48 @@
 <table class="my-custom-table">
 <thead>
 	<tr>
-		<th colspan=2>S Offset</th>
-		<th>Name</th>
-		<th colspan=8>Description or Bit Index</th>
+		<th colspan=2>S 偏移量</th>
+		<th>名称</th>
+		<th colspan=8>描述或位索引</th>
 	</tr>
 </thead>
 
 <tbody>
 	<tr>
-		<td class='powderblued'>Start</td>
-		<td class='powderblued'>Size</td>
-		<td class='powderblued'>Relay</td>
-		<td class='powderblued'>Bit 7</td>
-		<td class='powderblued'>Bit 6</td>
-		<td class='powderblued'>Bit 5</td>
-		<td class='powderblued'>Bit 4</td>
-		<td class='powderblued'>Bit 3</td>
-		<td class='powderblued'>Bit 2</td>
-		<td class='powderblued'>Bit 1</td>
-		<td class='powderblued'>Bit 0</td>
+		<td class='powderblued'>开始</td>
+		<td class='powderblued'>大小</td>
+		<td class='powderblued'>继电器</td>
+		<td class='powderblued'>位 7</td>
+		<td class='powderblued'>位 6</td>
+		<td class='powderblued'>位 5</td>
+		<td class='powderblued'>位 4</td>
+		<td class='powderblued'>位 3</td>
+		<td class='powderblued'>位 2</td>
+		<td class='powderblued'>位 1</td>
+		<td class='powderblued'>位 0</td>
 	</tr>
 	<tr>
 		<td>0</td>
 		<td>2</td>
 		<td>command</td>
-		<td colspan=8>Get EtherCAT Status = 1018</td>
+		<td colspan=8>获取EtherCAT状态 = 1018</td>
 	</tr>
 	<tr>
 		<td>2</td>
 		<td>1</td>
 		<td>param. 1</td>
-		<td colspan=8>Slot Number = 1 ~ 3</td>
+		<td colspan=8>插槽编号 = 1 ~ 3</td>
 	</tr>
 	<tr>
 		<td>3</td>
 		<td>1</td>
 		<td>param. 2</td>
-		<td colspan=8>List of Slaves in IO Exchange = 6</td>
+		<td colspan=8>IO交互中的从设备列表 = 6</td>
 	</tr>
 	<tr>
 		<td>4</td>
 		<td rowspan=16>16</td>
-		<td rowspan=16>List of Slaves</td>
+		<td rowspan=16>从设备列表</td>
 		<td>Node 7</td>
 		<td>Node 6</td>
 		<td>Node 5</td>
@@ -483,48 +483,48 @@
 <table class="my-custom-table">
 <thead>
 	<tr>
-		<th colspan=2>S Offset</th>
-		<th>Name</th>
-		<th colspan=8>Description or Bit Index</th>
+		<th colspan=2>S 偏移量</th>
+		<th>名称</th>
+		<th colspan=8>描述或位索引</th>
 	</tr>
 </thead>
 
 <tbody>
 	<tr>
-		<td class='powderblued'>Start</td>
-		<td class='powderblued'>Size</td>
-		<td class='powderblued'>Relay</td>
-		<td class='powderblued'>Bit 7</td>
-		<td class='powderblued'>Bit 6</td>
-		<td class='powderblued'>Bit 5</td>
-		<td class='powderblued'>Bit 4</td>
-		<td class='powderblued'>Bit 3</td>
-		<td class='powderblued'>Bit 2</td>
-		<td class='powderblued'>Bit 1</td>
-		<td class='powderblued'>Bit 0</td>
+		<td class='powderblued'>开始</td>
+		<td class='powderblued'>大小</td>
+		<td class='powderblued'>继电器</td>
+		<td class='powderblued'>位 7</td>
+		<td class='powderblued'>位 6</td>
+		<td class='powderblued'>位 5</td>
+		<td class='powderblued'>位 4</td>
+		<td class='powderblued'>位 3</td>
+		<td class='powderblued'>位 2</td>
+		<td class='powderblued'>位 1</td>
+		<td class='powderblued'>位 0</td>
 	</tr>
 	<tr>
 		<td>0</td>
 		<td>2</td>
 		<td>command</td>
-		<td colspan=8>Get EtherCAT Status = 1018</td>
+		<td colspan=8>获取EtherCAT状态 = 1018</td>
 	</tr>
 	<tr>
 		<td>2</td>
 		<td>1</td>
 		<td>param. 1</td>
-		<td colspan=8>Slot Number = 1 ~ 3</td>
+		<td colspan=8>插槽编号 = 1 ~ 3</td>
 	</tr>
 	<tr>
 		<td>3</td>
 		<td>1</td>
 		<td>param. 2</td>
-		<td colspan=8>List of Diagnostic Slaves = 7</td>
+		<td colspan=8>诊断从设备列表 = 7</td>
 	</tr>
 	<tr>
 		<td>4</td>
 		<td rowspan=16>16</td>
-		<td rowspan=16>List of Slaves</td>
+		<td rowspan=16>从设备列表</td>
 		<td>Node 7</td>
 		<td>Node 6</td>
 		<td>Node 5</td>
@@ -701,5 +701,4 @@
 	</tr>
 </tbody>
 </table>
-
 <div class="page-break"></div>

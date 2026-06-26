@@ -1,13 +1,12 @@
-﻿# 4.13 OTU (Output Unlatch): Unlatched Output
+# 4.13 OTU (输出取消): 取消输出
 
-
-### Description
-If the rung is active, the output signal will be outputted in the OFF (low) state. However, if the rung is inactive, the output will remain the same. 
+### 描述
+如果梯级处于活动状态，输出信号将以关闭（低）状态输出。如果梯级处于非活动状态，输出将保持不变。
 
 <br>
 
-### Types that can be used as an operand
-(not possible for X, DO bit is supported from V60.30-07)
+### 可以用作操作数的类型
+（对于 X，不可能，DO 位从 V60.30-07 支持）
 <style type="text/css">
 table  {border-collapse:collapse;}
 th {background-color:#efefef; border-style:solid;border-width:1px;color:black;text-align:center;}
@@ -18,19 +17,19 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 <table>
 <thead>
   <tr>
-    <th>relay type</th>
-    <th colspan="2">input<br>X, DO</th>
-    <th colspan="2">output<br>Y, DI, R, K</th>
-    <th colspan="2">memory<br>M, S</th>
-    <th>const.<br>32bit</th>
+    <th>继电器类型</th>
+    <th colspan="2">输入<br>X, DO</th>
+    <th colspan="2">输出<br>Y, DI, R, K</th>
+    <th colspan="2">内存<br>M, S</th>
+    <th>常量<br>32位</th>
   </tr>
   <tr>
-    <th>data type</th>
-    <th>bit</th>
+    <th>数据类型</th>
+    <th>位</th>
     <th>B,W,L,F</th>
-    <th>bit</th>
+    <th>位</th>
     <th>B,W,L,F</th>
-    <th>bit</th>
+    <th>位</th>
     <th>B,W,L,F</th>
     <th>L,F</th>
   </tr>
@@ -51,8 +50,8 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 
 <br>
 
-### Example of use
+### 使用示例
 
-When the input DO14 is in the ON state, Y14 will be in the OFF state. Even if DO14 is switched to the OFF state afterward, Y14 will remain in the OFF state.
+当输入 DO14 处于 ON 状态时，Y14 将处于 OFF 状态。即使 DO14 随后切换到 OFF 状态，Y14 也将保持在 OFF 状态。
 
 ![](../_assets/otu.png)

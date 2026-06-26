@@ -1,13 +1,13 @@
-﻿# 4.12 OTL (Output Latch): Latched Output
+﻿# 4.12 OTL (输出锁存): 锁存输出
 
 
-### Description
-If the rung is active, the output signal will be outputted in the ON (high) state. However, if the rung is inactive, the output will remain the same. 
+### 描述
+如果梯级处于活动状态，输出信号将输出为 ON（高）状态。但是，如果梯级处于非活动状态，输出将保持不变。
 
 <br>
 
-### Types that can be used as an operand
-(not possible for X, DO bit is supported from V60.30-07)
+### 可以作为操作数使用的类型
+（对于 X，不可能，DO 位支持从 V60.30-07）
 <style type="text/css">
 table  {border-collapse:collapse;}
 th {background-color:#efefef; border-style:solid;border-width:1px;color:black;text-align:center;}
@@ -18,19 +18,19 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 <table>
 <thead>
   <tr>
-    <th>relay type</th>
-    <th colspan="2">input<br>X, DO</th>
-    <th colspan="2">output<br>Y, DI, R, K</th>
-    <th colspan="2">memory<br>M, S</th>
-    <th>const.<br>32bit</th>
+    <th>继电器类型</th>
+    <th colspan="2">输入<br>X, DO</th>
+    <th colspan="2">输出<br>Y, DI, R, K</th>
+    <th colspan="2">内存<br>M, S</th>
+    <th>常量<br>32bit</th>
   </tr>
   <tr>
-    <th>data type</th>
-    <th>bit</th>
+    <th>数据类型</th>
+    <th>位</th>
     <th>B,W,L,F</th>
-    <th>bit</th>
+    <th>位</th>
     <th>B,W,L,F</th>
-    <th>bit</th>
+    <th>位</th>
     <th>B,W,L,F</th>
     <th>L,F</th>
   </tr>
@@ -51,8 +51,8 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 
 <br>
 
-### Example of use
+### 使用示例
 
-If the input DO13 is in the ON state, Y13 will be in the ON state. Even if DO13 is switched to the OFF state afterward, Y13 will remain in the ON state.
+如果输入 DO13 处于 ON 状态，Y13 将处于 ON 状态。即使之后 DO13 切换到 OFF 状态，Y13 仍将保持在 ON 状态。
 
 ![](../_assets/otl.png)

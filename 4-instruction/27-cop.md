@@ -1,17 +1,17 @@
-﻿# 4.27 Copy Data (COP): Copying
+# 4.27 复制数据 (COP)：复制
 
 
-### Description
-If the rung is active, values will be copied from the location of the "source" to the location of the "destination" as many as the number of the "length."
-If the "source" is a number, the "destination" will be filled with the value of the "source" as much as the number of the "length." In this case, when the "destination" is in bit format, if the value of the "source" is 0, the "destination" will be filled with OFFs, and if the value of the "source" is not 0, the "destination" will be filled with ONs.
-If the "source" is a relay, the data types of the "source" and "destination" should be the same. That is, if the "source" is in the bit format, the "destination" should be in the bit format; if the "source" is in the byte (B) format, then the "destination" should be in the byte (B) format; if the "source" is in the word (W) format, then the "destination" should also be in the word (W) format.
-If the "source" + "length" is greater than the maximum number of the "source" relays or the "destination" + "length" is greater than the maximum number of "destination" relays, copying will be performed only up to the maximum number of relays.
+### 描述
+如果梯形图的 rung 是活动的，将从“源”位置复制值到“目标”位置，复制的数量为“长度”的数量。
+如果“源”是一个数字，则“目标”将根据“长度”的数量填充“源”的值。在这种情况下，当“目标”处于位格式时，如果“源”的值为 0，则“目标”将填充为 OFF；如果“源”的值不为 0，则“目标”将填充为 ON。
+如果“源”是一个继电器，则“源”和“目标”的数据类型应该相同。也就是说，如果“源”是位格式，则“目标”也应该是位格式；如果“源”是字节 (B) 格式，则“目标”也应该是字节 (B) 格式；如果“源”是字 (W) 格式，则“目标”也应该是字 (W) 格式。
+如果“源”+“长度”大于“源”继电器的最大数量，或者“目标”+“长度”大于“目标”继电器的最大数量，则仅会复制到继电器的最大数量。
 
 
 <br>
 
-### Types that can be used as an operand
-(not possible for X)
+### 可用作操作数的类型
+(对 X 不可能)
 <style type="text/css">
 table  {border-collapse:collapse;}
 th {background-color:#efefef; border-style:solid;border-width:1px;color:black;text-align:center;}
@@ -22,26 +22,26 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 <table>
 <thead>
   <tr>
-    <th>relay type</th>
-    <th colspan="2">input<br>X, DO</th>
-    <th colspan="2">output<br>Y, DI, R, K</th>
-    <th colspan="2">memory<br>M, S</th>
-    <th>const.<br>32bit</th>
+    <th>继电器类型</th>
+    <th colspan="2">输入<br>X, DO</th>
+    <th colspan="2">输出<br>Y, DI, R, K</th>
+    <th colspan="2">内存<br>M, S</th>
+    <th>常量<br>32位</th>
   </tr>
   <tr>
-    <th>data-type</th>
-    <th>bit</th>
+    <th>数据类型</th>
+    <th>位</th>
     <th>B,W,L,F</th>
-    <th>bit</th>
+    <th>位</th>
     <th>B,W,L,F</th>
-    <th>bit</th>
+    <th>位</th>
     <th>B,W,L,F</th>
     <th>L,F</th>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td class='hd'>source</td>
+    <td class='hd'>源</td>
     <td></td>
     <td></td>
     <td></td>
@@ -53,7 +53,7 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 </tbody>
 <tbody>
   <tr>
-    <td class='hd'>destination</td>
+    <td class='hd'>目标</td>
     <td>X</td>
     <td>X</td>
     <td></td>
@@ -65,7 +65,7 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 </tbody>
 <tbody>
   <tr>
-    <td class='hd'>length</td>
+    <td class='hd'>长度</td>
     <td>X</td>
     <td></td>
     <td>X</td>
@@ -79,8 +79,8 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 
 <br>
 
-### Example of use
+### 使用示例
 
-If the input DO56 is active, the value corresponding to 8 bytes will be copied from the input DOB2 to the output YB2 as a value corresponding to 8 bytes.
+如果输入 DO56 激活，则从输入 DOB2 复制与 8 字节对应的值到输出 YB2，作为与 8 字节对应的值。
 
 ![](../_assets/cop.png)

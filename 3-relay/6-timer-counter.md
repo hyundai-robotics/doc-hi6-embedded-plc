@@ -1,46 +1,45 @@
-﻿# 3.6 Timer & Counter relay
+﻿# 3.6 定时器与计数器继电器
 
-(1) All timer and counter relays support down-counting only.  
-*	The timer base can be set by the user in 10msec units.  
-*	Since the timer value is internally processed as a 32-bit value, it can count up to 2,147,483,647 [msec] (approximately 597 hours). 
+(1) 所有定时器和计数器继电器仅支持向下计数。  
+*	定时器基准可以由用户以10毫秒单位设置。  
+*	由于定时器值在内部处理为32位值，因此可以计数到2,147,483,647 [毫秒]（大约597小时）。 
 <br>
 <br>
 
-(2) The values   of the Timer & Counter have the following meanings:  
+(2) 定时器与计数器的值具有以下含义：  
 <table class="tg">
 <thead>
 	<tr>
-		<th>Timer & Counter value</th>
-		<th>Description</th>
+		<th>定时器与计数器值</th>
+		<th>描述</th>
 	</tr>
 </thead>
 <tbody>
 	<tr>
 		<td>0</td>
-		<td>Contact On (=counting completed)</td>
+		<td>接触开启（=计数完成）</td>
 	</tr>
 	<tr>
 		<td>-1</td>
-		<td>Contact Off</td>
+		<td>接触关闭</td>
 	</tr>
 	<tr>
-		<td>Others</td>
-		<td>Contact Off; timing & counting (in progress)</td>
+		<td>其他</td>
+		<td>接触关闭；定时与计数（进行中）</td>
 	</tr>
 </tbody>
 </table>
 <br>
 
-(3) If the rung to which the Timer & Counter relay is connected is inactive,  
-*	TON: The value of TL(Timer) become -1.  
-*	CTD: The value of CL(Counter) is maintained continuously. 
+(3) 如果定时器与计数器继电器连接的 rung 处于非活动状态，  
+*	TON: TL（定时器）的值变为-1。  
+*	CTD: CL（计数器）的值持续保持。 
 <br>
 <br>
 
-(4) While the rung to which the Timer & Counter relay is connected is active, 
+(4) 当定时器与计数器继电器连接的 rung 处于活动状态时， 
 *	TON <br> 
-    If the value of TL is less than 0, the initial value of TL is stored as "timer base x preset x 10", and if the value of TL is greater than 0, it decreases by 5 every 5 msec. 
+    如果 TL 的值小于0，则 TL 的初始值存储为“定时器基准 x 预设 x 10”，如果 TL 的值大于0，则每5毫秒减少5。 
 
 *	CTD <br>
-    If the CL value is less than 0, the initial CL value becomes the preset value. If the CL value is greater than 0, the value decreases by 1 each time the CL changes from inactive to active. 
-
+    如果 CL 的值小于0，则初始 CL 值为预设值。如果 CL 的值大于0，则每次 CL 从非活动变为活动时，值减少1。 

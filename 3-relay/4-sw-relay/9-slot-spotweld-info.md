@@ -26,39 +26,39 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	<tr>
 		<td>2</td>
 		<td>param 1</td>
-		<td>task_no (0-7)</td>
+		<td>任务编号 (0-7)</td>
 		<td>s2</td>
 	</tr>
 	<tr>
 		<td>4</td>
 		<td>param 2</td>
-		<td>gun_no (1-4)</td>
+		<td>枪编号 (1-4)</td>
 		<td>s2</td>
 	</tr>
 	<tr>
 		<td>6</td>
 		<td rowspan=5>result</td>
-		<td>gun search state (1=complete, 0=incomplete)</td>
+		<td>枪搜索状态 (1=完成, 0=未完成)</td>
 		<td>s2</td>
 	</tr>
 	<tr>
 		<td>8</td>
-		<td>moving electrode consumption amount x 10</td>
+		<td>移动电极消耗量 x 10</td>
 		<td>s2</td>
 	</tr>
 	<tr>
 		<td>10</td>
-		<td>fixed electrode consumption amount x 10</td>
+		<td>固定电极消耗量 x 10</td>
 		<td>s2</td>
 	</tr>
 	<tr>
 		<td>12</td>
-		<td>squeeze force instruction value x 10</td>
+		<td>挤压力指令值 x 10</td>
 		<td>s2</td>
 	</tr>
 	<tr>
 		<td>14</td>
-		<td>squeeze force current value x 10</td>
+		<td>挤压力电流值 x 10</td>
 		<td>s2</td>
 	</tr>
 </tbody>

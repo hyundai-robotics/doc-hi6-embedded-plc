@@ -1,17 +1,16 @@
-﻿# 4.31 NEXT (NEXT): Next Block
+﻿# 4.31 NEXT (NEXT): 下一个块
 
-
-### Description
-The operation will be performed according to the "step" of the FOR instructions.
-If the "step" value is greater than 0, the execution will occur repeatedly until the "idx" relay value becomes less than or equal to the "final" value.
-If the "step" value is less than 0, the execution will occur repeatedly until the "idx" relay value becomes greater than or equal to the "final" value.
-If a NEXT instruction is executed without a FOR instruction, the NEXT instruction will be ignored.
-Caution:  
-The FOR/NEXT instruction does not have any additional processing for branching. As such, if a FOR instruction is recorded inside a branch, and a NEXT instruction is recorded outside the branch or inside another branch, the FOR instructions will not operate correctly.
-Note: For more details on the FOR instructions, refer to [4.30 FOR (FOR)](./30-for)
+### 描述
+该操作将根据 FOR 指令的“步长”执行。  
+如果“步长”值大于 0，执行将重复进行，直到“idx”继电器值小于或等于“final”值。  
+如果“步长”值小于 0，执行将重复进行，直到“idx”继电器值大于或等于“final”值。  
+如果在没有 FOR 指令的情况下执行 NEXT 指令，则会忽略 NEXT 指令。  
+注意：  
+FOR/NEXT 指令没有用于分支的任何额外处理。因此，如果 FOR 指令记录在分支内，而 NEXT 指令记录在分支外或另一个分支内，FOR 指令将无法正确工作。  
+注意：有关 FOR 指令的更多详细信息，请参考 [4.30 FOR (FOR)](./30-for)
 
 <br>
 
-### Example of use
+### 使用示例
 
-Refer to the example on the use of the FOR instructions.
+请参阅 FOR 指令使用的示例。

@@ -1,8 +1,8 @@
-﻿# 4.22 Power (POW): Power
+# 4.22 Power (POW): 功率
 
 
 ### Description
-If the rung is active, the value of "source a" will be raised to the power of the value of "source b," and the result value will be set in the "destination" relay. If the operation result has an overflow, the setting S7=1 will occur.
+如果梯级处于活动状态，"source a"的值将被提升到"source b"的值的幂，结果值将被设置在"destination"继电器中。如果操作结果发生溢出，将设置S7=1。
 
 <br>
 
@@ -77,6 +77,6 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 
 ### Use of example
 
-If the input DO40 is active, the value of XB3 will be raised to the power of 2, and the result value will be set in the internal state relay MB3. 
+如果输入DO40处于活动状态，XB3的值将被提升到2的幂，结果值将被设置在内部状态继电器MB3中。 
 
 ![](../_assets/pow.png)

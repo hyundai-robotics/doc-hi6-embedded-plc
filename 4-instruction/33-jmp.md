@@ -1,19 +1,17 @@
-﻿# 4.33 JMP (Jump): Jumping
+﻿# 4.33 JMP (Jump): 跳转
 
-
-### Description
-If the rung is active, there will be a jump to the location where the LBL instruction matching the value of the label designated in "label" is located. 
-In particular, if "label" is specified as a value less than 0, it can be used as a feature for leaving the middle of a FOR instruction (skips according to the number specified in a negative number.)
-Caution 1:  
-If the location of the label is above the JMP instruction and there is no condition in front of the JMP instruction, infinite looping may occur, which will require your attention. When this occurs, the setting will be S16=1 because the scan time exceeded 5 seconds.
-Caution 2:  
-Leaving the block by using the JMP (positive number) instruction within the FOR/NEXT instruction block may cause the block control to go wrong. In that case, programming a way to skip to the NEXT instruction by using the JMP instruction (negative number) will be required.
-Note: For more details on the LBL instruction, refer to [4.32 LBL (Label)](./32-lbl)
+### 描述
+如果该 rung 是活动状态，则会跳转到与“label”中指定的标签值匹配的 LBL 指令所在的位置。特别地，如果“label”指定为小于 0 的值，则可以作为离开 FOR 指令中间的特性使用（按负数指定的数量跳过）。
+注意事项 1：  
+如果标签的位置在 JMP 指令的上方，并且在 JMP 指令前没有条件，则可能会发生无限循环，这将需要您的注意。当发生此情况时，设置将是 S16=1，因为扫描时间超过 5 秒。
+注意事项 2：  
+在 FOR/NEXT 指令块中使用 JMP（正数）指令离开该块可能会导致块控制出错。在这种情况下，需要编写一种方法，通过使用 JMP 指令（负数）跳转到 NEXT 指令。
+注意：有关 LBL 指令的更多详情，请参阅 [4.32 LBL (Label)](./32-lbl)
 
 <br>
 
-### Types that can be used as an operand
-(not possible for X)
+### 可用作操作数的类型
+(不适用于 X)
 <style type="text/css">
 table  {border-collapse:collapse;}
 th {background-color:#efefef; border-style:solid;border-width:1px;color:black;text-align:center;}
@@ -24,19 +22,19 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 <table>
 <thead>
   <tr>
-    <th>relay type</th>
-    <th colspan="2">input<br>X, DO</th>
-    <th colspan="2">output<br>Y, DI, R, K</th>
-    <th colspan="2">memory<br>M, S</th>
-    <th>const.<br>32bit</th>
+    <th>继电器类型</th>
+    <th colspan="2">输入<br>X, DO</th>
+    <th colspan="2">输出<br>Y, DI, R, K</th>
+    <th colspan="2">内存<br>M, S</th>
+    <th>常量<br>32位</th>
   </tr>
   <tr>
-    <th>data type</th>
-    <th>bit</th>
+    <th>数据类型</th>
+    <th>位</th>
     <th>B,W,L,F</th>
-    <th>bit</th>
+    <th>位</th>
     <th>B,W,L,F</th>
-    <th>bit</th>
+    <th>位</th>
     <th>B,W,L,F</th>
     <th>L,F</th>
   </tr>
@@ -57,10 +55,10 @@ td {border-color:gray;border-style:solid;border-width:1px;text-align:center;}
 
 <br>
 
-### Example of use
+### 使用示例
 
-If the input DO19 is active, there will be a jump to the relevant LBL instruction according to the "label 99" of the JMP instruction. It means the instruction {XIC(DO20), OTE(Y20)} will not be executed.  
-If the input DO19 is inactive, the JMP instruction will not be executed, so the {XIC(DO20), OTE(Y20)} instruction written in the next rung will be exeucted.
+如果输入 DO19 是活动的，将会根据 JMP 指令的“label 99”跳转到相关的 LBL 指令。这意味着指令 {XIC(DO20), OTE(Y20)} 将不会被执行。  
+如果输入 DO19 是非活动的，则 JMP 指令将不会被执行，因此在下一个 rung 中写的 {XIC(DO20), OTE(Y20)} 指令将被执行。
 
 
 ![](../_assets/jmp.png)

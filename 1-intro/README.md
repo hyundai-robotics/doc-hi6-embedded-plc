@@ -1,24 +1,19 @@
-﻿# 1. Overview
+﻿# 1. 概述
 
-The embedded programmable logic controller (PLC) of the ${cont_model} controller refers to the functions of the PLC that are installed into the controller in a software-like manner. The user can write and operate ladder programs that are commonly used in PLCs.
+${cont_model} 控制器的嵌入式可编程逻辑控制器 (PLC) 是指已像软件一样安装到控制器中的 PLC 功能。用户可以编写和操作通常在 PLC 中使用的梯形图程序。
 
+梯形图程序可以使用 HRLadder 编写或编辑，HRLadder 是专门为现代机器人设计的梯形图编辑 PC 软件，并通过以太网下载到连接的 ${cont_model} 控制器。相反，运行在 ${cont_model} 控制器上的梯形图程序可以上传到 PC 上的 HRLadder，并且可以从 HRLadder 远程监控控制器上运行的 PLC 的状态，例如模式或继电器的值。
 
-Ladder programs can be written or edited using the HRLadder, a ladder editing PC software dedicated to the robots of Hyundai Robotics, and downloaded to the ${cont_model} controller connected via Ethernet. Conversely, the ladder program running on the ${cont_model} controller can be uploaded to the HRLadder on the PC, and the status, such as the mode of the PLC running on the controller or the values of relays, can be remotely monitored from the HRLadder. 
+* 您可以从现代机器人网站下载 HRLadder (https://www.hd-hyundairobotics.com/) - 客户支持 - 应用软件界面。
+* 有关如何使用 HRLadder 的信息，请参考与 HRLadder 帮助菜单链接的功能手册。
+* HRLadder 可用于从 Hi4 到 Hi5a 的旧控制器型号。请注意，由于 ${cont_model} 控制器的梯形图程序与旧型号控制器不同，它们之间没有兼容性。
 
-* You can download the HRLadder from the Hyundai Robotics website (https://www.hd-hyundairobotics.com/) - Customer Support - Application Software screen.
-* For the information on how to use the HRLadder, refer to the function manual linked to the Help menu of the HRLadder.
-* HRLadder can be used for old controller models ranging from Hi4 to Hi5a. Please note that as the ladder program of the ${cont_model} controller is different from that of the old model controllers, there is no compatibility between them.
+${cont_model} 控制器的 I/O 可以通过现场总线或远程 I/O 设备连接到上游 PLC 的现场总线主机或下游现场总线从设备。嵌入式 PLC 的功能旨在使用梯形逻辑控制连接的 I/O 信号。
 
-
-The ${cont_model} controller"s I/O can be connected to the upper-process PLCs with fieldbus masters or to the devices of lower-level fieldbus slaves, both through a fieldbus or remote I/O device. The functions of the embedded PLC are designed to control the signals of the thus connected I/O using ladder logic.
-
-
-The functions of the ${cont_model} controller"s embedded PLC are similar to those of the Hi5a controller"s embedded PLC, and the same HRLadder, in other words, the same ladder editor, is used. Therefore, users who are already familiar with the functions of the Hi5a controller"s embedded PLC can quickly learn from this manual by checking only the different parts of the ${cont_model} controller.
-
+${cont_model} 控制器的嵌入式 PLC 的功能与 Hi5a 控制器的嵌入式 PLC 类似，并且使用相同的 HRLadder，换句话说，使用相同的梯形图编辑器。因此，已经熟悉 Hi5a 控制器嵌入式 PLC 功能的用户可以通过仅检查 ${cont_model} 控制器的不同部分快速学习本手册。
 
 {% hint style="info" %}
-Therefore, users already familiar with the functions of the Hi5a controller"s embedded PLC can quickly learn from this manual by checking only the different parts of the ${cont_model} controller. You are kindly required to check the link shown below.
-[5. Difference in the embedded PLC between Hi5a and ${cont_model} controllers](../5-diff-hi5a-hi6.md)
+因此，已经熟悉 Hi5a 控制器嵌入式 PLC 功能的用户可以通过仅检查 ${cont_model} 控制器的不同部分快速学习本手册。请您查看下面显示的链接。
+[5. Hi5a 和 ${cont_model} 控制器之间的嵌入式 PLC 差异](../5-diff-hi5a-hi6.md)
 
 {% endhint %}
-

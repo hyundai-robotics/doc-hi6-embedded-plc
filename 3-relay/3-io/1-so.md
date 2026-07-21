@@ -1,4 +1,4 @@
-﻿# 3.3.1 SO - 시스템 출력
+﻿# 3.3.1 SO - 시스템 출력 (Hi6)
 
 <style type="text/css">
 table  {border-collapse:collapse;}

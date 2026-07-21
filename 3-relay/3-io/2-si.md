@@ -1,4 +1,4 @@
-﻿# 3.3.2 SI - 시스템 입력
+﻿# 3.3.2 SI - 시스템 입력 (Hi6)
 
 <style type="text/css">
 table  {border-collapse:collapse;}

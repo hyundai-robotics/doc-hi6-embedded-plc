@@ -1,10 +1,19 @@
 ﻿# 3.3.4 SI - System input (Hi7)
 
+
 <style type="text/css">
-table  {border-collapse:collapse;}
-td {border-color:gray;border-style:solid;border-width:1px;}
-.grayed {background-color:lightgray;}
+table {
+    page-break-inside: auto;
+}
+
+tr {
+    page-break-inside: avoid;
+}
 </style>
+
+<table class="tg">
+
+
 
 <table class="tg">
 <thead>
@@ -378,7 +387,6 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>AC voltage down</td>
 	</tr>
 </tbody>
-
 <tbody>
 	<tr>
 		<td rowspan=32>BD682 Conveyor</td>
@@ -410,161 +418,6 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	</tr>
 </tbody>
 
-<tbody>
-	<tr>
-		<td rowspan=4>BD642<br>Def Safety Input</td>
-		<td rowspan=4>sib56</td>
-		<td>si448</td>
-		<td>Def Safety Input 0</td>
-	</tr>
-	<tr><td>si449</td><td>Def Safety Input 1</td></tr>
-	<tr><td>si450</td><td>Def Safety Input 2</td></tr>
-	<tr><td>si451</td><td>Def Safety Input 3</td></tr>
-</tbody>
-
-<tbody>
-	<tr>
-		<td rowspan=8>BD680<br>Add Safety Input</td>
-		<td rowspan=8>sib57</td>
-		<td>si456</td>
-		<td>Add Safety Input 0</td>
-	</tr>
-	<tr>
-		<td>si457</td>
-		<td>Add Safety Input 1</td>
-	</tr>
-	<tr>
-		<td>si458</td>
-		<td>Add Safety Input 2</td>
-	</tr>
-	<tr>
-		<td>si459</td>
-		<td>Add Safety Input 3</td>
-	</tr>
-	<tr>
-		<td>si460</td>
-		<td>Add Safety Input 4</td>
-	</tr>
-	<tr>
-		<td>si461</td>
-		<td>Add Safety Input 5</td>
-	</tr>
-	<tr>
-		<td>si462</td>
-		<td>Add Safety Input 6</td>
-	</tr>
-	<tr>
-		<td>si463</td>
-		<td>Add Safety Input 7</td>
-	</tr>
-</tbody>
-
-<tbody>
-    <!-- sib64 -->
-    <tr>
-        <td rowspan="64">Safety Comm Input</td>
-        <td rowspan="8">sib64</td>
-        <td>si512</td>
-        <td>Safety Comm Input 0</td>
-    </tr>
-    <tr><td>si513</td><td>Safety Comm Input 1</td></tr>
-    <tr><td>si514</td><td>Safety Comm Input 2</td></tr>
-    <tr><td>si515</td><td>Safety Comm Input 3</td></tr>
-    <tr><td>si516</td><td>Safety Comm Input 4</td></tr>
-    <tr><td>si517</td><td>Safety Comm Input 5</td></tr>
-    <tr><td>si518</td><td>Safety Comm Input 6</td></tr>
-    <tr><td>si519</td><td>Safety Comm Input 7</td></tr>
-    <!-- sib65 -->
-    <tr>
-        <td rowspan="8">sib65</td>
-        <td>si520</td>
-        <td>Safety Comm Input 8</td>
-    </tr>
-    <tr><td>si521</td><td>Safety Comm Input 9</td></tr>
-    <tr><td>si522</td><td>Safety Comm Input 10</td></tr>
-    <tr><td>si523</td><td>Safety Comm Input 11</td></tr>
-    <tr><td>si524</td><td>Safety Comm Input 12</td></tr>
-    <tr><td>si525</td><td>Safety Comm Input 13</td></tr>
-    <tr><td>si526</td><td>Safety Comm Input 14</td></tr>
-    <tr><td>si527</td><td>Safety Comm Input 15</td></tr>
-    <!-- sib66 -->
-    <tr>
-        <td rowspan="8">sib66</td>
-        <td>si528</td>
-        <td>Safety Comm Input 16</td>
-    </tr>
-    <tr><td>si529</td><td>Safety Comm Input 17</td></tr>
-    <tr><td>si530</td><td>Safety Comm Input 18</td></tr>
-    <tr><td>si531</td><td>Safety Comm Input 19</td></tr>
-    <tr><td>si532</td><td>Safety Comm Input 20</td></tr>
-    <tr><td>si533</td><td>Safety Comm Input 21</td></tr>
-    <tr><td>si534</td><td>Safety Comm Input 22</td></tr>
-    <tr><td>si535</td><td>Safety Comm Input 23</td></tr>
-    <!-- sib67 -->
-    <tr>
-        <td rowspan="8">sib67</td>
-        <td>si536</td>
-        <td>Safety Comm Input 24</td>
-    </tr>
-    <tr><td>si537</td><td>Safety Comm Input 25</td></tr>
-    <tr><td>si538</td><td>Safety Comm Input 26</td></tr>
-    <tr><td>si539</td><td>Safety Comm Input 27</td></tr>
-    <tr><td>si540</td><td>Safety Comm Input 28</td></tr>
-    <tr><td>si541</td><td>Safety Comm Input 29</td></tr>
-    <tr><td>si542</td><td>Safety Comm Input 30</td></tr>
-    <tr><td>si543</td><td>Safety Comm Input 31</td></tr>
-    <!-- sib68 -->
-    <tr>
-        <td rowspan="8">sib68</td>
-        <td>si544</td>
-        <td>Safety Comm Input 32</td>
-    </tr>
-    <tr><td>si545</td><td>Safety Comm Input 33</td></tr>
-    <tr><td>si546</td><td>Safety Comm Input 34</td></tr>
-    <tr><td>si547</td><td>Safety Comm Input 35</td></tr>
-    <tr><td>si548</td><td>Safety Comm Input 36</td></tr>
-    <tr><td>si549</td><td>Safety Comm Input 37</td></tr>
-    <tr><td>si550</td><td>Safety Comm Input 38</td></tr>
-    <tr><td>si551</td><td>Safety Comm Input 39</td></tr>
-    <!-- sib69 -->
-    <tr>
-        <td rowspan="8">sib69</td>
-        <td>si552</td>
-        <td>Safety Comm Input 40</td>
-    </tr>
-    <tr><td>si553</td><td>Safety Comm Input 41</td></tr>
-    <tr><td>si554</td><td>Safety Comm Input 42</td></tr>
-    <tr><td>si555</td><td>Safety Comm Input 43</td></tr>
-    <tr><td>si556</td><td>Safety Comm Input 44</td></tr>
-    <tr><td>si557</td><td>Safety Comm Input 45</td></tr>
-    <tr><td>si558</td><td>Safety Comm Input 46</td></tr>
-    <tr><td>si559</td><td>Safety Comm Input 47</td></tr>
-    <!-- sib70 -->
-    <tr>
-        <td rowspan="8">sib70</td>
-        <td>si560</td>
-        <td>Safety Comm Input 48</td>
-    </tr>
-    <tr><td>si561</td><td>Safety Comm Input 49</td></tr>
-    <tr><td>si562</td><td>Safety Comm Input 50</td></tr>
-    <tr><td>si563</td><td>Safety Comm Input 51</td></tr>
-    <tr><td>si564</td><td>Safety Comm Input 52</td></tr>
-    <tr><td>si565</td><td>Safety Comm Input 53</td></tr>
-    <tr><td>si566</td><td>Safety Comm Input 54</td></tr>
-    <tr><td>si567</td><td>Safety Comm Input 55</td></tr>
-    <!-- sib71 -->
-    <tr>
-        <td rowspan="8">sib71</td>
-        <td>si568</td>
-        <td>Safety Comm Input 56</td>
-    </tr>
-    <tr><td>si569</td><td>Safety Comm Input 57</td></tr>
-    <tr><td>si570</td><td>Safety Comm Input 58</td></tr>
-    <tr><td>si571</td><td>Safety Comm Input 59</td></tr>
-    <tr><td>si572</td><td>Safety Comm Input 60</td></tr>
-    <tr><td>si573</td><td>Safety Comm Input 61</td></tr>
-    <tr><td>si574</td><td>Safety Comm Input 62</td></tr>
-    <tr><td>si575</td><td>Safety Comm Input 63</td></tr>
-</tbody>
-
 </table>
+
+<div class="page-break"></div>

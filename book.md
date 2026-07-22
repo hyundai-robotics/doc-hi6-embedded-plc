@@ -1496,19 +1496,10 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 
 </table>
 
+<div class="page-break"></div>
+
 [__SOURCE](3-relay/3-io/3-so-hi7.md)
 # 3.3.3 SO - System output (Hi7)
-
-<style type="text/css">
-table  {border-collapse:collapse;}
-td {
-    border-color:gray;
-    border-style:solid;
-    border-width:1px;
-    padding: 1px 4px;
-    height: auto !important;
-}
-</style>
 
 <table class="tg">
 <thead>
@@ -1519,10 +1510,9 @@ td {
 		<th>Name</th>
 	</tr>
 </thead>
-
 <tbody>
 	<tr>
-		<td rowspan=32>BD642<br>System output</td>
+		<td rowspan=32>BD642</td>
 		<td rowspan=4>sob0</td>
 		<td>so0</td>
 		<td>Motor ON (TP)</td>
@@ -1586,7 +1576,6 @@ td {
 		<td>Self diagnosis ok</td>
 	</tr>	
 </tbody>
-
 <tbody>
 	<tr>
 		<td rowspan=32>Servo - 1</td>
@@ -1637,7 +1626,6 @@ td {
 		<td>Self diagnosis ok</td>
 	</tr>
 </tbody>
-
 <tbody>
 	<tr>
 		<td rowspan=32>Servo - 2</td>
@@ -1688,7 +1676,6 @@ td {
 		<td>Self diagnosis ok</td>
 	</tr>
 </tbody>
-
 <tbody>
 	<tr>
 		<td rowspan=32>Servo - 3</td>
@@ -1739,7 +1726,6 @@ td {
 		<td>Self diagnosis ok</td>
 	</tr>
 </tbody>
-
 <tbody>
 	<tr>
 		<td rowspan=32>BD682<br>Conveyor</td>
@@ -1761,171 +1747,28 @@ td {
 	</tr>
 </tbody>
 
-<tbody>
-	<tr>
-		<td rowspan=1>BD642<br>Def Safety Output</td>
-		<td rowspan=1>sob56</td>
-		<td>so448</td>
-		<td>Def Safety Output 0</td>
-	</tr>
-</tbody>
-
-<tbody>
-	<tr>
-		<td rowspan=8>BD680<br>Add Safety Output</td>
-		<td rowspan=8>sob57</td>
-		<td>so456</td>
-		<td>Add Safety Output 0</td>
-	</tr>
-	<tr>
-		<td>so457</td>
-		<td>Add Safety Output 1</td>
-	</tr>
-	<tr>
-		<td>so458</td>
-		<td>Add Safety Output 2</td>
-	</tr>
-	<tr>
-		<td>so459</td>
-		<td>Add Safety Output 3</td>
-	</tr>
-	<tr>
-		<td>so460</td>
-		<td>Add Safety Output 4</td>
-	</tr>
-	<tr>
-		<td>so461</td>
-		<td>Add Safety Output 5</td>
-	</tr>
-	<tr>
-		<td>so462</td>
-		<td>Add Safety Output 6</td>
-	</tr>
-	<tr>
-		<td>so463</td>
-		<td>Add Safety Output 7</td>
-	</tr>
-</tbody>
-
-<tbody>
-    <!-- sob64 -->
-    <tr>
-        <td rowspan="64">Safety Comm<br>Output</td>
-        <td rowspan="8">sob64</td>
-        <td>so512</td>
-        <td>Safety Comm Output 0</td>
-    </tr>
-    <tr><td>so513</td><td>Safety Comm Output 1</td></tr>
-    <tr><td>so514</td><td>Safety Comm Output 2</td></tr>
-    <tr><td>so515</td><td>Safety Comm Output 3</td></tr>
-    <tr><td>so516</td><td>Safety Comm Output 4</td></tr>
-    <tr><td>so517</td><td>Safety Comm Output 5</td></tr>
-    <tr><td>so518</td><td>Safety Comm Output 6</td></tr>
-    <tr><td>so519</td><td>Safety Comm Output 7</td></tr>
-    <!-- sob65 -->
-    <tr>
-        <td rowspan="8">sob65</td>
-        <td>so520</td>
-        <td>Safety Comm Output 8</td>
-    </tr>
-    <tr><td>so521</td><td>Safety Comm Output 9</td></tr>
-    <tr><td>so522</td><td>Safety Comm Output 10</td></tr>
-    <tr><td>so523</td><td>Safety Comm Output 11</td></tr>
-    <tr><td>so524</td><td>Safety Comm Output 12</td></tr>
-    <tr><td>so525</td><td>Safety Comm Output 13</td></tr>
-    <tr><td>so526</td><td>Safety Comm Output 14</td></tr>
-    <tr><td>so527</td><td>Safety Comm Output 15</td></tr>
-    <!-- sob66 -->
-    <tr>
-        <td rowspan="8">sob66</td>
-        <td>so528</td>
-        <td>Safety Comm Output 16</td>
-    </tr>
-    <tr><td>so529</td><td>Safety Comm Output 17</td></tr>
-    <tr><td>so530</td><td>Safety Comm Output 18</td></tr>
-    <tr><td>so531</td><td>Safety Comm Output 19</td></tr>
-    <tr><td>so532</td><td>Safety Comm Output 20</td></tr>
-    <tr><td>so533</td><td>Safety Comm Output 21</td></tr>
-    <tr><td>so534</td><td>Safety Comm Output 22</td></tr>
-    <tr><td>so535</td><td>Safety Comm Output 23</td></tr>
-    <!-- sob67 -->
-    <tr>
-        <td rowspan="8">sob67</td>
-        <td>so536</td>
-        <td>Safety Comm Output 24</td>
-    </tr>
-    <tr><td>so537</td><td>Safety Comm Output 25</td></tr>
-    <tr><td>so538</td><td>Safety Comm Output 26</td></tr>
-    <tr><td>so539</td><td>Safety Comm Output 27</td></tr>
-    <tr><td>so540</td><td>Safety Comm Output 28</td></tr>
-    <tr><td>so541</td><td>Safety Comm Output 29</td></tr>
-    <tr><td>so542</td><td>Safety Comm Output 30</td></tr>
-    <tr><td>so543</td><td>Safety Comm Output 31</td></tr>
-    <!-- sob68 -->
-    <tr>
-        <td rowspan="8">sob68</td>
-        <td>so544</td>
-        <td>Safety Comm Output 32</td>
-    </tr>
-    <tr><td>so545</td><td>Safety Comm Output 33</td></tr>
-    <tr><td>so546</td><td>Safety Comm Output 34</td></tr>
-    <tr><td>so547</td><td>Safety Comm Output 35</td></tr>
-    <tr><td>so548</td><td>Safety Comm Output 36</td></tr>
-    <tr><td>so549</td><td>Safety Comm Output 37</td></tr>
-    <tr><td>so550</td><td>Safety Comm Output 38</td></tr>
-    <tr><td>so551</td><td>Safety Comm Output 39</td></tr>
-    <!-- sob69 -->
-    <tr>
-        <td rowspan="8">sob69</td>
-        <td>so552</td>
-        <td>Safety Comm Output 40</td>
-    </tr>
-    <tr><td>so553</td><td>Safety Comm Output 41</td></tr>
-    <tr><td>so554</td><td>Safety Comm Output 42</td></tr>
-    <tr><td>so555</td><td>Safety Comm Output 43</td></tr>
-    <tr><td>so556</td><td>Safety Comm Output 44</td></tr>
-    <tr><td>so557</td><td>Safety Comm Output 45</td></tr>
-    <tr><td>so558</td><td>Safety Comm Output 46</td></tr>
-    <tr><td>so559</td><td>Safety Comm Output 47</td></tr>
-    <!-- sob70 -->
-    <tr>
-        <td rowspan="8">sob70</td>
-        <td>so560</td>
-        <td>Safety Comm Output 48</td>
-    </tr>
-    <tr><td>so561</td><td>Safety Comm Output 49</td></tr>
-    <tr><td>so562</td><td>Safety Comm Output 50</td></tr>
-    <tr><td>so563</td><td>Safety Comm Output 51</td></tr>
-    <tr><td>so564</td><td>Safety Comm Output 52</td></tr>
-    <tr><td>so565</td><td>Safety Comm Output 53</td></tr>
-    <tr><td>so566</td><td>Safety Comm Output 54</td></tr>
-    <tr><td>so567</td><td>Safety Comm Output 55</td></tr>
-    <!-- sob71 -->
-    <tr>
-        <td rowspan="8">sob71</td>
-        <td>so568</td>
-        <td>Safety Comm Output 56</td>
-    </tr>
-    <tr><td>so569</td><td>Safety Comm Output 57</td></tr>
-    <tr><td>so570</td><td>Safety Comm Output 58</td></tr>
-    <tr><td>so571</td><td>Safety Comm Output 59</td></tr>
-    <tr><td>so572</td><td>Safety Comm Output 60</td></tr>
-    <tr><td>so573</td><td>Safety Comm Output 61</td></tr>
-    <tr><td>so574</td><td>Safety Comm Output 62</td></tr>
-    <tr><td>so575</td><td>Safety Comm Output 63</td></tr>
-</tbody>
-
 </table>
 
 <div class="page-break"></div>
+
+
 [__SOURCE](3-relay/3-io/4-si-hi7.md)
 # 3.3.4 SI - System input (Hi7)
 
+
 <style type="text/css">
-table  {border-collapse:collapse;}
-td {border-color:gray;border-style:solid;border-width:1px;}
-.grayed {background-color:lightgray;}
+table {
+    page-break-inside: auto;
+}
+
+tr {
+    page-break-inside: avoid;
+}
 </style>
+
+<table class="tg">
+
+
 
 <table class="tg">
 <thead>
@@ -2035,7 +1878,6 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>-</td>
 	</tr>	
 </tbody>
-
 <tbody>
 	<tr>
 		<td rowspan=32>Servo - 1</td>
@@ -2123,7 +1965,6 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>AC voltage down</td>
 	</tr>
 </tbody>
-
 <tbody>
 	<tr>
 		<td rowspan=32>Servo - 2</td>
@@ -2299,7 +2140,6 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 		<td>AC voltage down</td>
 	</tr>
 </tbody>
-
 <tbody>
 	<tr>
 		<td rowspan=32>BD682 Conveyor</td>
@@ -2331,6 +2171,84 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	</tr>
 </tbody>
 
+</table>
+
+<div class="page-break"></div>
+[__SOURCE](3-relay/3-io/5-safety-out-hi7.md)
+# 3.3.5 Safety output (Hi7)
+
+<table class="tg">
+<thead>
+	<tr>
+		<th>System board</th>
+		<th>Byte</th>
+		<th>Bit</th>
+		<th>Name</th>
+	</tr>
+</thead>
+
+<tbody>
+	<tr>
+		<td rowspan=1>BD642<br>Def Safety Output</td>
+		<td rowspan=1>sob56</td>
+		<td>so448</td>
+		<td>Def Safety Output 0</td>
+	</tr>
+</tbody>
+<tbody>
+	<tr>
+		<td rowspan=8>BD680<br>Add Safety Output</td>
+		<td rowspan=8>sob57</td>
+		<td>so456</td>
+		<td>Add Safety Output 0</td>
+	</tr>
+	<tr>
+		<td>so457</td>
+		<td>Add Safety Output 1</td>
+	</tr>
+	<tr>
+		<td>so458</td>
+		<td>Add Safety Output 2</td>
+	</tr>
+	<tr>
+		<td>so459</td>
+		<td>Add Safety Output 3</td>
+	</tr>
+	<tr>
+		<td>so460</td>
+		<td>Add Safety Output 4</td>
+	</tr>
+	<tr>
+		<td>so461</td>
+		<td>Add Safety Output 5</td>
+	</tr>
+	<tr>
+		<td>so462</td>
+		<td>Add Safety Output 6</td>
+	</tr>
+	<tr>
+		<td>so463</td>
+		<td>Add Safety Output 7</td>
+	</tr>
+</tbody>
+
+</table>
+
+
+
+[__SOURCE](3-relay/3-io/6-safety-in-hi7.md)
+# 3.3.6 Safety input (Hi7)
+
+<table class="tg">
+<thead>
+	<tr>
+		<th>System board</th>
+		<th>Byte</th>
+		<th>Bit</th>
+		<th>Name</th>
+	</tr>
+</thead>
+
 <tbody>
 	<tr>
 		<td rowspan=4>BD642<br>Def Safety Input</td>
@@ -2342,7 +2260,6 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	<tr><td>si450</td><td>Def Safety Input 2</td></tr>
 	<tr><td>si451</td><td>Def Safety Input 3</td></tr>
 </tbody>
-
 <tbody>
 	<tr>
 		<td rowspan=8>BD680<br>Add Safety Input</td>
@@ -2380,112 +2297,264 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	</tr>
 </tbody>
 
+</table>
+
+[__SOURCE](3-relay/3-io/7-safety-comm-out.md)
+# 3.3.7 Safety Communication output (Hi7)
+
+<table class="tg">
+<thead>
+<tr>
+    <th>System board</th>
+    <th>Byte</th>
+    <th>Bit</th>
+    <th>Name</th>
+</tr>
+</thead>
+
+<tbody>
+    <!-- sob64 -->
+    <tr>
+        <td rowspan="8">Safety Comm<br>Output Byte 0</td>
+        <td rowspan="8">sob64</td>
+        <td>so512</td>
+        <td>Ch. 0</td>
+    </tr>
+    <tr><td>so513</td><td>Ch. 1</td></tr>
+    <tr><td>so514</td><td>Ch. 2</td></tr>
+    <tr><td>so515</td><td>Ch. 3</td></tr>
+    <tr><td>so516</td><td>Ch. 4</td></tr>
+    <tr><td>so517</td><td>Ch. 5</td></tr>
+    <tr><td>so518</td><td>Ch. 6</td></tr>
+    <tr><td>so519</td><td>Ch. 7</td></tr>
+    <!-- sob65 -->
+    <tr>
+        <td rowspan="8">Safety Comm<br>Output Byte 1</td>
+        <td rowspan="8">sob65</td>
+        <td>so520</td>
+        <td>Ch. 8</td>
+    </tr>
+    <tr><td>so521</td><td>Ch. 9</td></tr>
+    <tr><td>so522</td><td>Ch. 10</td></tr>
+    <tr><td>so523</td><td>Ch. 11</td></tr>
+    <tr><td>so524</td><td>Ch. 12</td></tr>
+    <tr><td>so525</td><td>Ch. 13</td></tr>
+    <tr><td>so526</td><td>Ch. 14</td></tr>
+    <tr><td>so527</td><td>Ch. 15</td></tr>
+    <!-- sob66 -->
+    <tr>
+        <td rowspan="8">Safety Comm<br>Output Byte 2</td>
+        <td rowspan="8">sob66</td>
+        <td>so528</td>
+        <td>Ch. 16</td>
+    </tr>
+    <tr><td>so529</td><td>Ch. 17</td></tr>
+    <tr><td>so530</td><td>Ch. 18</td></tr>
+    <tr><td>so531</td><td>Ch. 19</td></tr>
+    <tr><td>so532</td><td>Ch. 20</td></tr>
+    <tr><td>so533</td><td>Ch. 21</td></tr>
+    <tr><td>so534</td><td>Ch. 22</td></tr>
+    <tr><td>so535</td><td>Ch. 23</td></tr>
+    <!-- sob67 -->
+    <tr>
+        <td rowspan="8">Safety Comm<br>Output Byte 3</td>
+        <td rowspan="8">sob67</td>
+        <td>so536</td>
+        <td>Ch. 24</td>
+    </tr>
+    <tr><td>so537</td><td>Ch. 25</td></tr>
+    <tr><td>so538</td><td>Ch. 26</td></tr>
+    <tr><td>so539</td><td>Ch. 27</td></tr>
+    <tr><td>so540</td><td>Ch. 28</td></tr>
+    <tr><td>so541</td><td>Ch. 29</td></tr>
+    <tr><td>so542</td><td>Ch. 30</td></tr>
+    <tr><td>so543</td><td>Ch. 31</td></tr>
+    <!-- sob68 -->
+    <tr>
+        <td rowspan="8">Safety Comm<br>Output Byte 4</td>
+        <td rowspan="8">sob68</td>
+        <td>so544</td>
+        <td>Ch. 32</td>
+    </tr>
+    <tr><td>so545</td><td>Ch. 33</td></tr>
+    <tr><td>so546</td><td>Ch. 34</td></tr>
+    <tr><td>so547</td><td>Ch. 35</td></tr>
+    <tr><td>so548</td><td>Ch. 36</td></tr>
+    <tr><td>so549</td><td>Ch. 37</td></tr>
+    <tr><td>so550</td><td>Ch. 38</td></tr>
+    <tr><td>so551</td><td>Ch. 39</td></tr>
+    <!-- sob69 -->
+    <tr>
+        <td rowspan="8">Safety Comm<br>Output Byte 5</td>
+        <td rowspan="8">sob69</td>
+        <td>so552</td>
+        <td>Ch. 40</td>
+    </tr>
+    <tr><td>so553</td><td>Ch. 41</td></tr>
+    <tr><td>so554</td><td>Ch. 42</td></tr>
+    <tr><td>so555</td><td>Ch. 43</td></tr>
+    <tr><td>so556</td><td>Ch. 44</td></tr>
+    <tr><td>so557</td><td>Ch. 45</td></tr>
+    <tr><td>so558</td><td>Ch. 46</td></tr>
+    <tr><td>so559</td><td>Ch. 47</td></tr>
+    <!-- sob70 -->
+    <tr>
+        <td rowspan="8">Safety Comm<br>Output Byte 6</td>
+        <td rowspan="8">sob70</td>
+        <td>so560</td>
+        <td>Ch. 48</td>
+    </tr>
+    <tr><td>so561</td><td>Ch. 49</td></tr>
+    <tr><td>so562</td><td>Ch. 50</td></tr>
+    <tr><td>so563</td><td>Ch. 51</td></tr>
+    <tr><td>so564</td><td>Ch. 52</td></tr>
+    <tr><td>so565</td><td>Ch. 53</td></tr>
+    <tr><td>so566</td><td>Ch. 54</td></tr>
+    <tr><td>so567</td><td>Ch. 55</td></tr>
+    <!-- sob71 -->
+    <tr>
+        <td rowspan="8">Safety Comm<br>Output Byte 7</td>
+        <td rowspan="8">sob71</td>
+        <td>so568</td>
+        <td>Ch. 56</td>
+    </tr>
+    <tr><td>so569</td><td>Ch. 57</td></tr>
+    <tr><td>so570</td><td>Ch. 58</td></tr>
+    <tr><td>so571</td><td>Ch. 59</td></tr>
+    <tr><td>so572</td><td>Ch. 60</td></tr>
+    <tr><td>so573</td><td>Ch. 61</td></tr>
+    <tr><td>so574</td><td>Ch. 62</td></tr>
+    <tr><td>so575</td><td>Ch. 63</td></tr>
+</tbody>
+
+</table>
+
+[__SOURCE](3-relay/3-io/8-safety-comm-in.md)
+# 3.3.8 Safety Communication input (Hi7)
+
+<table class="tg">
+<thead>
+	<tr>
+		<th>System board</th>
+		<th>Byte</th>
+		<th>Bit</th>
+		<th>Name</th>
+	</tr>
+</thead>
+
 <tbody>
     <!-- sib64 -->
     <tr>
-        <td rowspan="64">Safety Comm Input</td>
+        <td rowspan="8">Safety Comm<br>Input Byte 0</td>
         <td rowspan="8">sib64</td>
         <td>si512</td>
-        <td>Safety Comm Input 0</td>
+        <td>Ch. 0</td>
     </tr>
-    <tr><td>si513</td><td>Safety Comm Input 1</td></tr>
-    <tr><td>si514</td><td>Safety Comm Input 2</td></tr>
-    <tr><td>si515</td><td>Safety Comm Input 3</td></tr>
-    <tr><td>si516</td><td>Safety Comm Input 4</td></tr>
-    <tr><td>si517</td><td>Safety Comm Input 5</td></tr>
-    <tr><td>si518</td><td>Safety Comm Input 6</td></tr>
-    <tr><td>si519</td><td>Safety Comm Input 7</td></tr>
+    <tr><td>si513</td><td>Ch. 1</td></tr>
+    <tr><td>si514</td><td>Ch. 2</td></tr>
+    <tr><td>si515</td><td>Ch. 3</td></tr>
+    <tr><td>si516</td><td>Ch. 4</td></tr>
+    <tr><td>si517</td><td>Ch. 5</td></tr>
+    <tr><td>si518</td><td>Ch. 6</td></tr>
+    <tr><td>si519</td><td>Ch. 7</td></tr>
     <!-- sib65 -->
     <tr>
+        <td rowspan="8">Safety Comm<br>Input Byte 1</td>
         <td rowspan="8">sib65</td>
         <td>si520</td>
-        <td>Safety Comm Input 8</td>
+        <td>Ch. 8</td>
     </tr>
-    <tr><td>si521</td><td>Safety Comm Input 9</td></tr>
-    <tr><td>si522</td><td>Safety Comm Input 10</td></tr>
-    <tr><td>si523</td><td>Safety Comm Input 11</td></tr>
-    <tr><td>si524</td><td>Safety Comm Input 12</td></tr>
-    <tr><td>si525</td><td>Safety Comm Input 13</td></tr>
-    <tr><td>si526</td><td>Safety Comm Input 14</td></tr>
-    <tr><td>si527</td><td>Safety Comm Input 15</td></tr>
+    <tr><td>si521</td><td>Ch. 9</td></tr>
+    <tr><td>si522</td><td>Ch. 10</td></tr>
+    <tr><td>si523</td><td>Ch. 11</td></tr>
+    <tr><td>si524</td><td>Ch. 12</td></tr>
+    <tr><td>si525</td><td>Ch. 13</td></tr>
+    <tr><td>si526</td><td>Ch. 14</td></tr>
+    <tr><td>si527</td><td>Ch. 15</td></tr>
     <!-- sib66 -->
     <tr>
+        <td rowspan="8">Safety Comm<br>Input Byte 2</td>
         <td rowspan="8">sib66</td>
         <td>si528</td>
-        <td>Safety Comm Input 16</td>
+        <td>Ch. 16</td>
     </tr>
-    <tr><td>si529</td><td>Safety Comm Input 17</td></tr>
-    <tr><td>si530</td><td>Safety Comm Input 18</td></tr>
-    <tr><td>si531</td><td>Safety Comm Input 19</td></tr>
-    <tr><td>si532</td><td>Safety Comm Input 20</td></tr>
-    <tr><td>si533</td><td>Safety Comm Input 21</td></tr>
-    <tr><td>si534</td><td>Safety Comm Input 22</td></tr>
-    <tr><td>si535</td><td>Safety Comm Input 23</td></tr>
+    <tr><td>si529</td><td>Ch. 17</td></tr>
+    <tr><td>si530</td><td>Ch. 18</td></tr>
+    <tr><td>si531</td><td>Ch. 19</td></tr>
+    <tr><td>si532</td><td>Ch. 20</td></tr>
+    <tr><td>si533</td><td>Ch. 21</td></tr>
+    <tr><td>si534</td><td>Ch. 22</td></tr>
+    <tr><td>si535</td><td>Ch. 23</td></tr>
     <!-- sib67 -->
     <tr>
+        <td rowspan="8">Safety Comm<br>Input Byte 3</td>
         <td rowspan="8">sib67</td>
         <td>si536</td>
-        <td>Safety Comm Input 24</td>
+        <td>Ch. 24</td>
     </tr>
-    <tr><td>si537</td><td>Safety Comm Input 25</td></tr>
-    <tr><td>si538</td><td>Safety Comm Input 26</td></tr>
-    <tr><td>si539</td><td>Safety Comm Input 27</td></tr>
-    <tr><td>si540</td><td>Safety Comm Input 28</td></tr>
-    <tr><td>si541</td><td>Safety Comm Input 29</td></tr>
-    <tr><td>si542</td><td>Safety Comm Input 30</td></tr>
-    <tr><td>si543</td><td>Safety Comm Input 31</td></tr>
+    <tr><td>si537</td><td>Ch. 25</td></tr>
+    <tr><td>si538</td><td>Ch. 26</td></tr>
+    <tr><td>si539</td><td>Ch. 27</td></tr>
+    <tr><td>si540</td><td>Ch. 28</td></tr>
+    <tr><td>si541</td><td>Ch. 29</td></tr>
+    <tr><td>si542</td><td>Ch. 30</td></tr>
+    <tr><td>si543</td><td>Ch. 31</td></tr>
     <!-- sib68 -->
     <tr>
+        <td rowspan="8">Safety Comm<br>Input Byte 4</td>
         <td rowspan="8">sib68</td>
         <td>si544</td>
-        <td>Safety Comm Input 32</td>
+        <td>Ch. 32</td>
     </tr>
-    <tr><td>si545</td><td>Safety Comm Input 33</td></tr>
-    <tr><td>si546</td><td>Safety Comm Input 34</td></tr>
-    <tr><td>si547</td><td>Safety Comm Input 35</td></tr>
-    <tr><td>si548</td><td>Safety Comm Input 36</td></tr>
-    <tr><td>si549</td><td>Safety Comm Input 37</td></tr>
-    <tr><td>si550</td><td>Safety Comm Input 38</td></tr>
-    <tr><td>si551</td><td>Safety Comm Input 39</td></tr>
+    <tr><td>si545</td><td>Ch. 33</td></tr>
+    <tr><td>si546</td><td>Ch. 34</td></tr>
+    <tr><td>si547</td><td>Ch. 35</td></tr>
+    <tr><td>si548</td><td>Ch. 36</td></tr>
+    <tr><td>si549</td><td>Ch. 37</td></tr>
+    <tr><td>si550</td><td>Ch. 38</td></tr>
+    <tr><td>si551</td><td>Ch. 39</td></tr>
     <!-- sib69 -->
     <tr>
+        <td rowspan="8">Safety Comm<br>Input Byte 5</td>
         <td rowspan="8">sib69</td>
         <td>si552</td>
-        <td>Safety Comm Input 40</td>
+        <td>Ch. 40</td>
     </tr>
-    <tr><td>si553</td><td>Safety Comm Input 41</td></tr>
-    <tr><td>si554</td><td>Safety Comm Input 42</td></tr>
-    <tr><td>si555</td><td>Safety Comm Input 43</td></tr>
-    <tr><td>si556</td><td>Safety Comm Input 44</td></tr>
-    <tr><td>si557</td><td>Safety Comm Input 45</td></tr>
-    <tr><td>si558</td><td>Safety Comm Input 46</td></tr>
-    <tr><td>si559</td><td>Safety Comm Input 47</td></tr>
+    <tr><td>si553</td><td>Ch. 41</td></tr>
+    <tr><td>si554</td><td>Ch. 42</td></tr>
+    <tr><td>si555</td><td>Ch. 43</td></tr>
+    <tr><td>si556</td><td>Ch. 44</td></tr>
+    <tr><td>si557</td><td>Ch. 45</td></tr>
+    <tr><td>si558</td><td>Ch. 46</td></tr>
+    <tr><td>si559</td><td>Ch. 47</td></tr>
     <!-- sib70 -->
     <tr>
+        <td rowspan="8">Safety Comm<br>Input Byte 6</td>
         <td rowspan="8">sib70</td>
         <td>si560</td>
-        <td>Safety Comm Input 48</td>
+        <td>Ch. 48</td>
     </tr>
-    <tr><td>si561</td><td>Safety Comm Input 49</td></tr>
-    <tr><td>si562</td><td>Safety Comm Input 50</td></tr>
-    <tr><td>si563</td><td>Safety Comm Input 51</td></tr>
-    <tr><td>si564</td><td>Safety Comm Input 52</td></tr>
-    <tr><td>si565</td><td>Safety Comm Input 53</td></tr>
-    <tr><td>si566</td><td>Safety Comm Input 54</td></tr>
-    <tr><td>si567</td><td>Safety Comm Input 55</td></tr>
+    <tr><td>si561</td><td>Ch. 49</td></tr>
+    <tr><td>si562</td><td>Ch. 50</td></tr>
+    <tr><td>si563</td><td>Ch. 51</td></tr>
+    <tr><td>si564</td><td>Ch. 52</td></tr>
+    <tr><td>si565</td><td>Ch. 53</td></tr>
+    <tr><td>si566</td><td>Ch. 54</td></tr>
+    <tr><td>si567</td><td>Ch. 55</td></tr>
     <!-- sib71 -->
     <tr>
+        <td rowspan="8">Safety Comm<br>Input Byte 7</td>
         <td rowspan="8">sib71</td>
         <td>si568</td>
-        <td>Safety Comm Input 56</td>
+        <td>Ch. 56</td>
     </tr>
-    <tr><td>si569</td><td>Safety Comm Input 57</td></tr>
-    <tr><td>si570</td><td>Safety Comm Input 58</td></tr>
-    <tr><td>si571</td><td>Safety Comm Input 59</td></tr>
-    <tr><td>si572</td><td>Safety Comm Input 60</td></tr>
-    <tr><td>si573</td><td>Safety Comm Input 61</td></tr>
-    <tr><td>si574</td><td>Safety Comm Input 62</td></tr>
-    <tr><td>si575</td><td>Safety Comm Input 63</td></tr>
+    <tr><td>si569</td><td>Ch. 57</td></tr>
+    <tr><td>si570</td><td>Ch. 58</td></tr>
+    <tr><td>si571</td><td>Ch. 59</td></tr>
+    <tr><td>si572</td><td>Ch. 60</td></tr>
+    <tr><td>si573</td><td>Ch. 61</td></tr>
+    <tr><td>si574</td><td>Ch. 62</td></tr>
+    <tr><td>si575</td><td>Ch. 63</td></tr>
 </tbody>
 
 </table>

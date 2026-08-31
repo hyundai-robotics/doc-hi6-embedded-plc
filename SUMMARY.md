@@ -53,6 +53,7 @@
     * [3.4.17 S Relay - TOOL_INFO](3-relay/4-sw-relay/17-slot-tool-info.md)
     * [3.4.18 S Relay - UCRD_INFO](3-relay/4-sw-relay/18-slot-ucrd-info.md)
     * [3.4.19 S Relay - MONOPUMP](3-relay/4-sw-relay/19-slot-monopump.md)
+    * [3.4.20 S Relay - FORCE_CTRL](3-relay/4-sw-relay/20-slot-force-ctrl.md)
   * [3.5 Designating Indirect Addresses for Relays](3-relay/5-relative-addr.md)
   * [3.6 Timer & Counter relay](3-relay/6-timer-counter.md)
 

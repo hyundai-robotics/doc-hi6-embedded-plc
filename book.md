@@ -3213,6 +3213,14 @@ td {
 	</tr>
 	<tr class='grayed'><td>-</td><td>-</td><td>-</td></tr>
 	<tr>
+		<td>SB499</td>
+		<td>기능 사용여부</td>
+		<td>b0 (S3992) = 축별 충돌검지,<br>
+		    b1 (S3993) = 모델기반 충돌검지
+		</td>
+	</tr>
+	<tr class='grayed'><td>-</td><td>-</td><td>-</td></tr>
+	<tr>
 		<td>SW500</td>
 		<td>건번호 (0=현재 선택된 건번호, 1~16)</td>
 		<td></td>

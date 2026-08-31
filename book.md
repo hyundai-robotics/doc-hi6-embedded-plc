@@ -1878,6 +1878,7 @@ tr {
 		<td>-</td>
 	</tr>	
 </tbody>
+
 <tbody>
 	<tr>
 		<td rowspan=32>Servo - 1</td>
@@ -1965,6 +1966,7 @@ tr {
 		<td>AC voltage down</td>
 	</tr>
 </tbody>
+
 <tbody>
 	<tr>
 		<td rowspan=32>Servo - 2</td>
@@ -3201,6 +3203,14 @@ td {
 		subtask 7 = sw286)</td>
 	</tr>
 	<tr class='grayed'><td>-</td><td>-</td><td>-</td></tr>
+	<tr>
+		<td>SB499</td>
+		<td>Function enables</td>
+		<td>b0 (S3992) = Axis collision detection,<br>
+		    b1 (S3993) = Model-based impact detection
+		</td>
+	</tr>
+	<tr class='grayed'><td>-</td><td>-</td><td>-</td></tr>	
 	<tr>
 		<td>SW500</td>
 		<td>Gun Number</td>

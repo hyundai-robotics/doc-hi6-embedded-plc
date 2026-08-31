@@ -53,6 +53,7 @@
     * [3.4.17 S 릴레이 - TOOL_INFO](3-relay/4-sw-relay/17-slot-tool-info.md)
     * [3.4.18 S 릴레이 - UCRD_INFO](3-relay/4-sw-relay/18-slot-ucrd-info.md)
     * [3.4.19 S 릴레이 - MONOPUMP](3-relay/4-sw-relay/19-slot-monopump.md)
+    * [3.4.20 S 릴레이 - FORCE_CTRL](3-relay/4-sw-relay/20-slot-force-ctrl.md)
   * [3.5 릴레이 간접 주소 지정](3-relay/5-relative-addr.md)
   * [3.6 타이머 & 카운더 릴레이](3-relay/6-timer-counter.md)
 

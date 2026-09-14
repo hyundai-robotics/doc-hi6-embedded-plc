@@ -3025,6 +3025,18 @@ td {
 		<td>T/P키 입력상태</td>
 		<td></td>
 	</tr>
+	<tr>
+		<td>SB100</td>
+		<td>산업용 통신 에러 경고 출력 제어</td>
+		<td>V70.04-00 부터 지원<br>
+			<br>
+			bit 1 : CIFX PCI 슬롯 1<br>
+			bit 2 : CIFX PCI 슬롯 2<br>
+		 	bit 3 : CIFX PCI 슬롯 3<br>
+			<br>
+			0 = 출력 활성화 (기본값)<br>
+			1 = 출력 비활성화</td>
+	</tr>
 	<tr class='grayed'><td>-</td><td>-</td><td>-</td></tr>
 	<tr>
 		<td>SB111</td>
@@ -5471,11 +5483,6 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 .grayed {background-color:lightgray;}
 .powderblued {background-color:powderblue;}
 </style>
-
-
-<br>
-
-#### 지원 버전 미정
 
 <br>
 

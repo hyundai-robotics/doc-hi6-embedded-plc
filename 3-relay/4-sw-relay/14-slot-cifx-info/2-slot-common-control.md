@@ -24,11 +24,6 @@
 .powderblued {background-color:powderblue;}
 </style>
 
-
-<br>
-
-#### 지원 버전 미정
-
 <br>
 
 <table class="my-custom-table">

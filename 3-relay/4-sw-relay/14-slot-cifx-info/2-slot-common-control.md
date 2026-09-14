@@ -9,11 +9,6 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 
 <br>
 
-#### Supported version: TBD 
-
-<br>
-
-
 <table class="tg">
 <thead>
 	<tr>

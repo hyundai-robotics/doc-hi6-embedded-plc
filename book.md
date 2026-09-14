@@ -2983,6 +2983,18 @@ td {
 		<td>Teach pendant key input state</td>
 		<td></td>
 	</tr>
+	<tr>
+		<td>SB100</td>
+		<td>Industrial communication error/warning output control</td>
+		<td>Supported form V70.04-00<br>
+			<br>
+			bit 1 : CIFX PCI slot 1<br>
+			bit 2 : CIFX PCI slot 2<br>
+		 	bit 3 : CIFX PCI slot 3<br>
+			<br>
+			0 = Output enabled (default)<br>
+			1 = Output disabled</td>
+	</tr>
 	<tr class='grayed'><td>-</td><td>-</td><td>-</td></tr>
 		<tr>
 		<td>SB111</td>
@@ -5406,11 +5418,6 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 </style>
 
 <br>
-
-#### Supported version: TBD 
-
-<br>
-
 
 <table class="tg">
 <thead>

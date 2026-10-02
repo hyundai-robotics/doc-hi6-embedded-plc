@@ -3216,6 +3216,13 @@ td {
 	</tr>
 	<tr class='grayed'><td>-</td><td>-</td><td>-</td></tr>
 	<tr>
+		<td>SB498</td>
+		<td>Function enables</td>
+		<td>b0 (S3984) = Spot welding,<br>
+		    b1 (S3985) = Arc welding
+		</td>
+	</tr>
+	<tr>
 		<td>SB499</td>
 		<td>Function enables</td>
 		<td>b0 (S3992) = Axis collision detection,<br>

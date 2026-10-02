@@ -489,6 +489,13 @@ td {
 	</tr>
 	<tr class='grayed'><td>-</td><td>-</td><td>-</td></tr>
 	<tr>
+		<td>SB498</td>
+		<td>기능 사용여부</td>
+		<td>b0 (S3984) = 스폿 용접,<br>
+		    b1 (S3985) = 아크 용접
+		</td>
+	</tr>
+	<tr>
 		<td>SB499</td>
 		<td>기능 사용여부</td>
 		<td>b0 (S3992) = 축별 충돌검지,<br>

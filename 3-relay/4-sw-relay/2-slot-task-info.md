@@ -31,7 +31,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	</tr>
 	<tr>
 		<td>4</td>
-		<td rowspan=5>result</td>
+		<td rowspan=7>result</td>
 		<td>task 활성화 상태</td>
 		<td>s2</td>
 	</tr>
@@ -53,6 +53,16 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	<tr>
 		<td>12</td>
 		<td>task 메인 프로그램 번호</td>
+		<td>s2</td>
+	</tr>
+	<tr>
+		<td>14</td>
+		<td>task 동작 상태 (job-state)<br>(V70.06-00부터 지원)</td>
+		<td>s2</td>
+	</tr>
+	<tr>
+		<td>16</td>
+		<td>task 작업 상태 (job-sub-state)<br>(V70.06-00부터 지원)</td>
 		<td>s2</td>
 	</tr>	
 </tbody>

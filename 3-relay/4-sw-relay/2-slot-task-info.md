@@ -31,7 +31,7 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	</tr>
 	<tr>
 		<td>4</td>
-		<td rowspan=5>result</td>
+		<td rowspan=7>result</td>
 		<td>task in activated state</td>
 		<td>s2</td>
 	</tr>
@@ -53,6 +53,16 @@ td {border-color:gray;border-style:solid;border-width:1px;}
 	<tr>
 		<td>12</td>
 		<td>task main program number</td>
+		<td>s2</td>
+	</tr>
+	<tr>
+		<td>14</td>
+		<td>task operation (job-state)<br>(since V70.06-00)</td>
+		<td>s2</td>
+	</tr>
+	<tr>
+		<td>16</td>
+		<td>task job sub state<br>(since V70.06-00)</td>
 		<td>s2</td>
 	</tr>	
 </tbody>
